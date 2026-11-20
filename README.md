@@ -22,6 +22,7 @@ Each one has a README that says what it shows and how to run it.
 - [Chest](examples/chest/): tools that appear and disappear while the agent runs.
 - [Tickets](examples/tickets/): working a support-ticket queue through an HTTP API.
 - [Office](examples/office/): thirty tools at once, which makes each step two-phase.
+- [Load API](examples/load-api/): a tool that reads an OpenAPI document and adds one tool per endpoint.
 - [Graph](examples/graph/): riding a transit map from one station to another.
 - [Tree](examples/tree/): filing an item by walking a taxonomy of a few hundred categories.
 - [Wikipedia](examples/wikipedia/): getting from one article to another by following links.
