@@ -3,10 +3,11 @@
  *
  *   npm run example:wikipedia:demo -- --from Linux --to Helsinki --out docs/media
  *
- * It runs the same agent as `main.ts`, by default replayed from the recordings in tests/cassettes (no network, no
- * key), and draws one frame per moment of each step with headless Chromium: the article the agent is on and the links it
- * may follow, the question asked, the tool call it chose and what came back. ffmpeg then makes the MP4, WebM and APNG.
- * Needs Playwright's Chromium and ffmpeg. Article text is from Wikipedia (CC BY-SA 4.0).
+ * It runs the same agent as `main.ts`, by default replayed from the recordings in tests/cassettes (no key), then opens
+ * each article the agent visited on en.wikipedia.org at the pinned revision and screenshots it with headless Chromium:
+ * first the page, then the links the agent may follow boxed, then the link it chose circled, with the tool call as a
+ * caption. ffmpeg makes the MP4, WebM and APNG. Needs network access to Wikipedia, Playwright's Chromium and ffmpeg.
+ * Screenshots show Wikipedia (CC BY-SA 4.0).
  */
 import { execFileSync } from "node:child_process";
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
@@ -18,7 +19,7 @@ import { wikipediaFetch } from "./http.js";
 import { createWikipedia, instructionsFor } from "./wikipedia.js";
 
 type Step = { n: number; title: string; lead: string; options: Record<string, string>; tool: string; args: Record<string, unknown>; summary: string; /** The trail before the tool ran, and after. */ before: string[]; trail: string[] };
-type Frame = { html: string; seconds: number };
+type Shot = { file: string; seconds: number };
 
 const { values } = parseArgs({
   options: {
@@ -33,7 +34,7 @@ const from = values.from!;
 const to = values.to!;
 
 /** Runs the agent and keeps, per step, what a viewer needs to see. */
-async function capture(): Promise<{ steps: Step[]; reached: boolean }> {
+async function capture(): Promise<{ steps: Step[]; reached: boolean; revisions: Map<string, number> }> {
   const wiki = await createWikipedia({ start: from, fetch: wikipediaFetch({ dir: "tests/cassettes/wikipedia-http", mode: values.live ? "passthrough" : "replay" }) });
   const model = values.live ? new JevModel({ apiKey: process.env.TYPESAFE_API_KEY }) : new CassetteModel({ dir: "tests/cassettes/wikipedia" });
   const steps: Step[] = [];
@@ -53,109 +54,153 @@ async function capture(): Promise<{ steps: Step[]; reached: boolean }> {
       if (e.type === "tool_result") steps.push({ ...(pending as Step), summary: e.summary ?? e.error ?? "", trail: wiki.trail() });
     },
   }).run();
-  return { steps, reached: result.status === "ended" && wiki.current().title === to };
+  return { steps, reached: result.status === "ended" && wiki.current().title === to, revisions: new Map(wiki.pages().map((p) => [p.title, p.revision])) };
 }
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
-const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s);
 
-const css = `
+const introHtml = () => `<style>
 *{box-sizing:border-box;margin:0}
-body{width:1280px;height:720px;background:#0f1419;color:#e6edf3;font:20px/1.4 Inter,system-ui,sans-serif;display:flex;flex-direction:column}
-header{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid #263040;font-size:20px}
-header b{color:#7ee0a8;font-weight:600}header span{color:#8b98a9}
-main{flex:1;display:flex;gap:24px;padding:24px 32px;min-height:0}
-.card{background:#171e27;border:1px solid #263040;border-radius:14px;padding:22px 24px}
-.article{flex:1.45;display:flex;flex-direction:column;gap:14px}
-.agent{flex:1;display:flex;flex-direction:column;gap:14px}
-h1{font:600 34px/1.15 "Linux Libertine",Georgia,serif;border-bottom:1px solid #263040;padding-bottom:10px}
-.lead{font:19px/1.45 Georgia,serif;color:#c7d1dc}
-.label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8b98a9;margin-bottom:8px}
-.chips{display:flex;flex-wrap:wrap;gap:7px}
-.chip{font-size:16px;padding:3px 10px;border-radius:999px;background:#1f2a37;color:#9fb3c8;border:1px solid #2c3a4b}
-.chip.pick{background:#143d2a;color:#7ee0a8;border-color:#2f9e63;font-weight:600;box-shadow:0 0 0 3px #2f9e6355}
-.more{font-size:15px;color:#6b7a8c;margin-top:8px}
-.q{font-size:18px;color:#c7d1dc}.q code{color:#f0c674}
-.tools{display:flex;gap:8px}
-.tool{font:16px "DejaVu Sans Mono",monospace;padding:6px 12px;border-radius:8px;background:#1f2a37;color:#8b98a9;border:1px solid #2c3a4b}
-.tool.pick{background:#143d2a;color:#7ee0a8;border-color:#2f9e63}
-pre{font:19px/1.5 "DejaVu Sans Mono",monospace;color:#7ee0a8;white-space:pre-wrap}
-.res{font-size:18px;color:#c7d1dc}
-.dim{opacity:.35}
-footer{height:84px;border-top:1px solid #263040;padding:0 32px;display:flex;align-items:center;gap:10px;flex-wrap:nowrap;overflow:hidden}
-.crumb{padding:6px 14px;border-radius:8px;background:#1f2a37;font-size:18px;white-space:nowrap}
-.crumb.now{background:#143d2a;color:#7ee0a8;font-weight:600}.arrow{color:#566377}
-.big{font:600 48px/1.2 Inter,sans-serif}.goal{font:600 40px/1.25 Georgia,serif;color:#7ee0a8}
-.center{align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:18px;flex:1;display:flex}
-`;
+body{width:1280px;height:720px;background:#0f1419;color:#e6edf3;font:20px/1.4 Inter,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:22px}
+b{font-size:22px;color:#7ee0a8;font-weight:600}.big{font:600 52px/1.2 Inter,sans-serif}.goal{color:#7ee0a8}.q{max-width:900px;color:#c7d1dc;font-size:22px}.dim{color:#8b98a9;font-size:18px;max-width:820px}
+</style><b>de-harness · Wikipedia navigation</b><div class="big">${esc(from)} <span style="color:#566377">→</span> <span class="goal">${esc(to)}</span></div><div class="q">“${esc(instructionsFor(from, to))}”</div><div class="dim">The model never writes text. At every step it answers closed questions: which tool, which link.</div>`;
 
-const page = (header: string, body: string, trail: string[]) =>
-  `<style>${css}</style><header><div><b>de-harness</b> <span>· Wikipedia navigation</span></div><span>${esc(header)}</span></header>${body}` +
-  `<footer>${trail.length ? `<span class="label" style="margin:0">Trail</span>` + trail.map((t, i) => `<span class="crumb${i === trail.length - 1 ? " now" : ""}">${esc(clip(t, 26))}</span>`).join('<span class="arrow">›</span>') : ""}</footer>`;
+/** Runs in the page: hides page furniture that is not part of the article. */
+const TIDY_CSS = ".mw-revision,.vector-sticky-header,#vector-appearance-pinned-container,.vector-appearance-landmark{display:none!important}";
 
-function introFrame(): string {
-  return page("", `<main><div class="center"><div class="big">${esc(from)} <span style="color:#566377">→</span> <span class="goal" style="font-family:Inter">${esc(to)}</span></div><div class="q" style="max-width:900px">“${esc(instructionsFor(from, to))}”</div><div class="label">The model never writes text. At every step it answers closed questions: which tool, which link.</div></div></main>`, []);
-}
+type Overlay = { caption: [string, string]; ring?: string; candidates?: string[]; green?: boolean };
 
-function chips(options: Record<string, string>, pick?: string): string {
-  const names = Object.keys(options);
-  const shown = names.slice(0, 26);
-  if (pick && names.includes(pick) && !shown.includes(pick)) shown[shown.length - 1] = pick;
-  const hidden = names.length - shown.length;
-  return `<div class="chips">${shown.map((n) => `<span class="chip${n === pick ? " pick" : ""}">${esc(clip(n, 30))}</span>`).join("")}</div>${hidden > 0 ? `<div class="more">… and ${hidden} more links offered</div>` : ""}`;
-}
-
-function stepFrame(s: Step, total: number, decided: boolean): string {
-  const link = typeof s.args.link === "string" ? s.args.link : undefined;
-  const tools = ["open_link", "go_back", "end"].filter((t) => t !== "go_back" || s.before.length > 1);
-  const article = `<div class="card article"><h1>${esc(s.title)}</h1><div class="lead">${esc(clip(s.lead, 330))}</div><div><div class="label">Links the agent may follow (${Object.keys(s.options).length})</div>${chips(s.options, decided ? link : undefined)}</div></div>`;
-  const question = `<div class="card"><div class="label">Questions asked of the model</div><div class="q"><code>__tool__</code> which tool?<div class="tools" style="margin-top:8px">${tools.map((t) => `<span class="tool${decided && t === s.tool ? " pick" : ""}">${t}</span>`).join("")}</div></div><div class="q" style="margin-top:14px"><code>open_link.link</code> which linked article is the best next step towards “${esc(to)}”?</div></div>`;
-  const call = decided
-    ? `<div class="card"><div class="label">Tool call</div><pre>${esc(s.tool)}(${link ? `link: "${esc(link)}"` : ""})</pre><div class="res">→ ${esc(s.summary)}</div></div>`
-    : `<div class="card dim"><div class="label">Tool call</div><pre>…</pre></div>`;
-  return page(`step ${s.n} of ${total}`, `<main>${article}<div class="agent">${question}${call}</div></main>`, decided ? s.trail : s.before);
-}
-
-function endFrame(s: Step, reached: boolean, count: number): string {
-  const trail = s.trail;
-  return page(`done in ${count} steps`, `<main><div class="center"><div class="label">The model chose <span style="color:#7ee0a8">end</span></div><div class="goal">${reached ? "Reached" : "Stopped on"} “${esc(trail.at(-1) ?? to)}”</div><div class="q">${count} steps, ${trail.length - 1} link${trail.length === 2 ? "" : "s"} followed</div></div></main>`, trail);
+/** Runs in the page: draws the caption, the boxes around the links offered and the circle around the chosen one. */
+function draw(o: Overlay): { found: boolean } {
+  document.getElementById("de-overlay")?.remove();
+  const root = document.createElement("div");
+  root.id = "de-overlay";
+  document.body.append(root);
+  const el = (css: string) => {
+    const d = document.createElement("div");
+    d.style.cssText = "position:fixed;pointer-events:none;z-index:2147483647;" + css;
+    root.append(d);
+    return d;
+  };
+  const body = document.querySelector("#mw-content-text .mw-parser-output") ?? document.body;
+  const skipped = "table,sup,figure,.hatnote,.navbox,.thumb,.reflist,.infobox,.sidebar,.toc,.mw-references-wrap";
+  const titleOf = (a: HTMLAnchorElement) => {
+    try {
+      const u = new URL(a.href);
+      return u.pathname.startsWith("/wiki/") && !u.pathname.includes(":", 6) ? decodeURIComponent(u.pathname.slice(6)).replace(/_/g, " ") : null;
+    } catch {
+      return null;
+    }
+  };
+  const anchors = [...body.querySelectorAll<HTMLAnchorElement>("a[href]")].filter((a) => !a.closest(skipped) && titleOf(a));
+  const inView = (r: DOMRect) => r.width > 0 && r.top >= 0 && r.bottom <= innerHeight - 100 && r.left >= 0 && r.right <= innerWidth;
+  if (o.candidates) {
+    const wanted = new Set(o.candidates);
+    const seen = new Set<string>();
+    for (const a of anchors) {
+      const t = titleOf(a)!;
+      const r = a.getClientRects()[0];
+      if (!r || !wanted.has(t) || seen.has(t) || !inView(r)) continue;
+      seen.add(t);
+      el(`left:${r.left - 4}px;top:${r.top - 2}px;width:${r.width + 8}px;height:${r.height + 4}px;border:2px solid #f0a500;border-radius:6px;background:#f0a50022`);
+    }
+  }
+  let found = true;
+  if (o.ring) {
+    const a = anchors.find((x) => titleOf(x) === o.ring && x.getClientRects()[0]);
+    const r = a?.getClientRects()[0];
+    found = !!r;
+    if (r) el(`left:${r.left - 16}px;top:${r.top - 11}px;width:${r.width + 32}px;height:${r.height + 22}px;border:4px solid #e5383b;border-radius:50%;transform:rotate(-1.5deg);box-shadow:0 0 0 2px #fff,0 0 14px #e5383b99`);
+  }
+  const bar = el(`left:0;right:0;bottom:0;height:96px;background:${o.green ? "#0f3d27" : "#0f1419"};color:#e6edf3;padding:14px 32px;font:600 24px/1.3 Inter,system-ui,sans-serif;border-top:3px solid ${o.green ? "#2f9e63" : "#263040"}`);
+  const l1 = document.createElement("div");
+  l1.style.cssText = "font:600 26px/1.3 'DejaVu Sans Mono',monospace;color:#7ee0a8";
+  l1.textContent = o.caption[0];
+  const l2 = document.createElement("div");
+  l2.style.cssText = "font:400 21px/1.4 Inter,system-ui,sans-serif;color:#c7d1dc;margin-top:4px";
+  l2.textContent = o.caption[1];
+  bar.append(l1, l2);
+  return { found };
 }
 
 async function main() {
-  const { steps, reached } = await capture();
+  const { steps, reached, revisions } = await capture();
   if (!reached) throw new Error(`the run did not reach "${to}": ${steps.map((s) => s.tool).join(", ")}`);
-  const frames: Frame[] = [{ html: introFrame(), seconds: 3 }];
-  for (const s of steps) {
-    if (s.tool === "end") frames.push({ html: endFrame(s, reached, steps.length), seconds: 4 });
-    else {
-      frames.push({ html: stepFrame(s, steps.length, false), seconds: 2.2 }, { html: stepFrame(s, steps.length, true), seconds: 3 });
-    }
-  }
-
   const out = values.out!;
   const work = join(out, ".frames");
   rmSync(work, { recursive: true, force: true });
   mkdirSync(work, { recursive: true });
   const browser = await chromium.launch();
   const context = await browser.newContext({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1 });
+  await context.addInitScript("globalThis.__name = (f) => f;"); // tsx wraps functions in a helper the page does not have
   const tab = await context.newPage();
-  const list: string[] = [];
-  for (const [i, f] of frames.entries()) {
-    await tab.setContent(f.html);
-    const file = join(work, `f${String(i).padStart(3, "0")}.png`);
+  const shots: Shot[] = [];
+  const shoot = async (seconds: number) => {
+    const file = join(work, `f${String(shots.length).padStart(3, "0")}.png`);
     await tab.screenshot({ path: file });
-    list.push(`file '${file.replace(/^.*\/\.frames\//, "")}'`, `duration ${f.seconds}`);
+    shots.push({ file: file.slice(work.length + 1), seconds });
+  };
+  const show = (o: Overlay) => tab.evaluate(draw, o);
+  const settle = async () => {
+    await tab.waitForLoadState("networkidle", { timeout: 8000 }).catch(() => undefined);
+    await tab.waitForTimeout(400);
+  };
+
+  await tab.setContent(introHtml());
+  await shoot(3);
+
+  const total = steps.length;
+  for (const s of steps) {
+    const revision = revisions.get(s.title);
+    if (revision === undefined) throw new Error(`no revision recorded for "${s.title}"`);
+    await tab.goto(`https://en.wikipedia.org/w/index.php?title=${encodeURIComponent(s.title)}&oldid=${revision}`, { waitUntil: "load", timeout: 60_000 });
+    await tab.addStyleTag({ content: TIDY_CSS });
+    await settle();
+    const where = `step ${s.n} of ${total} · on “${s.title}”`;
+    const asked = `Asked: which of ${Object.keys(s.options).length} links is the best next step towards “${to}”?`;
+    if (s.tool === "end") {
+      await show({ caption: [`step ${s.n} of ${total} · end`, `Reached “${s.title}” after ${total - 1} links.`], green: true });
+      await shoot(4.5);
+      continue;
+    }
+    const link = String(s.args.link);
+    await show({ caption: [where, asked] });
+    await shoot(1.6);
+    // Scroll the chosen link to the upper part of the screen; the first mention in the body is the one drawn.
+    const ok = await tab.evaluate((t) => {
+      const body = document.querySelector("#mw-content-text .mw-parser-output")!;
+      const a = [...body.querySelectorAll<HTMLAnchorElement>("a[href]")].find((x) => {
+        if (x.closest("table,sup,figure,.hatnote,.navbox,.thumb,.reflist,.infobox,.sidebar,.toc")) return false;
+        try {
+          const u = new URL(x.href);
+          return u.pathname.startsWith("/wiki/") && decodeURIComponent(u.pathname.slice(6)).replace(/_/g, " ") === t;
+        } catch {
+          return false;
+        }
+      });
+      if (!a) return false;
+      window.scrollTo(0, window.scrollY + a.getBoundingClientRect().top - innerHeight * 0.3);
+      return true;
+    }, link);
+    if (!ok) throw new Error(`the link "${link}" is not in the body of "${s.title}"`);
+    await settle();
+    await show({ caption: [where, `${asked.replace("Asked:", "Asked:")} The links it may follow are boxed.`], candidates: Object.keys(s.options) });
+    await shoot(2.4);
+    await show({ caption: [`step ${s.n} of ${total} · open_link(link: "${link}")`, `→ ${s.summary}`], ring: link });
+    await shoot(3);
   }
   await browser.close();
+
+  const list = shots.flatMap((f) => [`file '${f.file}'`, `duration ${f.seconds}`]);
   list.push(list[list.length - 2]!); // the concat demuxer ignores the duration of the last file unless it is repeated
   writeFileSync(join(work, "frames.txt"), list.join("\n") + "\n");
 
   const ff = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", join(work, "frames.txt"), ...args], { stdio: "inherit" });
-  ff("-vf", "fps=30,format=yuv420p", "-c:v", "libx264", "-crf", "20", "-movflags", "+faststart", join(out, "wikipedia-demo.mp4"));
-  ff("-vf", "fps=30", "-c:v", "libvpx-vp9", "-crf", "34", "-b:v", "0", join(out, "wikipedia-demo.webm"));
-  ff("-vf", "scale=800:-1:flags=lanczos,fps=5", "-plays", "0", "-f", "apng", join(out, "wikipedia-demo.png"));
+  ff("-vf", "fps=30,format=yuv420p", "-c:v", "libx264", "-crf", "26", "-movflags", "+faststart", join(out, "wikipedia-demo.mp4"));
+  ff("-vf", "fps=30", "-c:v", "libvpx-vp9", "-crf", "42", "-b:v", "0", "-cpu-used", "4", join(out, "wikipedia-demo.webm"));
+  ff("-vf", "scale=800:-1:flags=lanczos", "-fps_mode", "vfr", "-plays", "0", "-f", "apng", join(out, "wikipedia-demo.png"));
   rmSync(work, { recursive: true, force: true });
-  console.log(`${from} > ${to}: ${steps.length} steps, ${frames.length} frames, written to ${out}`);
+  console.log(`${from} > ${to}: ${steps.length} steps, ${shots.length} frames, written to ${out}`);
 }
 
 await main();
