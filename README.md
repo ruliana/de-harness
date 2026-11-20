@@ -28,6 +28,7 @@ Each one has a README that says what it shows and how to run it.
 - [Wikipedia](examples/wikipedia/): getting from one article to another by following links.
 - [Screen](examples/screen/): a sign-up form seen only as a picture, with a box around the button to click.
 - [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
+- [Page overlay](examples/page-overlay/): an assistant panel laid over a page: you tell it what to do, and it operates the page behind it.
 
 ## How it works
 
@@ -140,7 +141,7 @@ await browser.close();
 | `go_back` | | goes back one page in the browser history and the page settles; reports "no previous page" when there is none |
 
 For verification and use-case code: `browser.text()` (whole page), `browser.visibleText()` (what is in the viewport right now),
-`browser.boxOf(selector)` (the Box a perfect answer would be), `browser.textIn(box, grow?)` (the characters the page shows inside a Box: the model points at a price, code reads it), `browser.evaluate(fn, arg)`, `browser.screenshot()`, `browser.info()`.
+`browser.boxOf(selector)` (the Box a perfect answer would be), `browser.textIn(box, grow?)` (the characters the page shows inside a Box: the model points at a price, code reads it), `browser.evaluate(fn, arg)`, `browser.screenshot()` (what the model sees; `{ everything: true }` keeps in what `hide` / `hideFromModel` hides), `browser.info()`.
 The no-change guard (a tool that changed nothing three times in a row is not offered) does not count what the pointer lit up (a hover colour, an underline) as a change. Clicks that open a new tab move the agent to it, dialogs are dismissed, and `allowedHosts` aborts every request to any other host
 (an address outside it fails `navigate` with an error and a click on such a link leaves the page where it was). Question wording is in
 one place (`src/browser/tools.ts`) and can be replaced per tool with `questions`. Playwright is an optional peer dependency:
@@ -148,6 +149,8 @@ one place (`src/browser/tools.ts`) and can be replaced per tool with `questions`
 `npm run example:browser -- --url <address> "<what to do>"` runs it live. Tests: `tests/acceptance/browser/` against a site on
 loopback (`tests/support/browser-site.ts`, bundled fonts so screenshots are stable); `npm test` replays Jev from cassettes and runs
 the real browser, so CI installs Chromium.
+
+An assistant that lives *on* the page (`PageOverlay`, `src/browser/overlay.ts`) puts a chat panel over it: the person types an instruction there, the agent operates the page behind it, and the panel shows the steps, the questions (`overlay.input` is an `InputProvider`, so `ctx.input.ask` holds the loop until the person answers in the panel) and the result. The panel is hidden from every screenshot and zoom the model sees (`hide` / `hideFromModel` on the session), lets the pointer through to the page while the agent works, and keeps its transcript across navigations. See [examples/page-overlay](examples/page-overlay/).
 
 | Where | What |
 | - | - |
@@ -167,6 +170,8 @@ the real browser, so CI installs Chromium.
 | `examples/office/` | thirty tools, the many-tools domain |
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
+| `src/browser/overlay.ts` | `PageOverlay`: the assistant panel over a page (`install`, `say`, `working`, `nextInstruction`, `input`), hidden from the model's screenshots |
+| `examples/page-overlay/` | an assistant panel over a checkout page that fills in a form, asks a question and places the order (`npm run example:page-overlay`) |
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
 
