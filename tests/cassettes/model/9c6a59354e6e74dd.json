@@ -1,0 +1,43 @@
+{
+  "hash": "9c6a59354e6e74dd",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "message": "hi"
+      },
+      "questions": {
+        "tone": {
+          "type": "choice",
+          "instructions": "What is the tone of `message`?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 422,
+    "contentType": "application/json",
+    "body": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "questions",
+            "tone",
+            "choice",
+            "criteria"
+          ],
+          "msg": "Field required",
+          "input": "{\"type\":\"choice\",\"instructions\":\"What is the tone of `message`?\"}"
+        }
+      ]
+    }
+  }
+}
