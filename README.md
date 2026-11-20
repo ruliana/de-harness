@@ -3,12 +3,31 @@
 A harness for decision models. The agent has tools; the model (Jev by default) is used only to call them, one
 question per tool name and per parameter. See `CLAUDE.md` for principles and commands.
 
+![The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled](docs/media/wikipedia-demo.png)
+
 ```sh
 npm ci
 npm run typecheck
 npm test            # replay mode, no network
 npm run test:live   # live Jev, re-records cassettes
 ```
+
+## Examples
+
+Each one has a README that says what it shows and how to run it.
+
+- [Rooms](examples/rooms/): the smallest agent, a hall with coloured doors, to see the core loop.
+- [Pizza](examples/pizza/): ordering from a menu, with choices, sets and an optional parameter.
+- [Coffee](examples/coffee/): a tool that holds the loop and waits for the customer to answer.
+- [Chest](examples/chest/): tools that appear and disappear while the agent runs.
+- [Tickets](examples/tickets/): working a support-ticket queue through an HTTP API.
+- [Office](examples/office/): thirty tools at once, which makes each step two-phase.
+- [Load API](examples/load-api/): a tool that reads an OpenAPI document and adds one tool per endpoint.
+- [Graph](examples/graph/): riding a transit map from one station to another.
+- [Tree](examples/tree/): filing an item by walking a taxonomy of a few hundred categories.
+- [Wikipedia](examples/wikipedia/): getting from one article to another by following links.
+- [Screen](examples/screen/): a sign-up form seen only as a picture, with a box around the button to click.
+- [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
 
 ## How it works
 
@@ -134,6 +153,7 @@ the real browser, so CI installs Chromium.
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
 | `src/tools/` | `defineTool`, `param.*`, `ToolRegistry`, built-in `end`, `delegate` |
+| `src/openapi/` | `openApiTools(spec, { baseUrl })`: one tool per operation of an OpenAPI 3 document, parameters mapped to Choice / Noul / Set, ids taken from earlier list responses |
 | `src/questions/` | the question map for a step and answer parsing (the `__tool__` wording lives here) |
 | `src/state/` | the state document, slot merging, previous-actions window |
 | `src/loop/` | `createAgent(config).run()` |
@@ -143,6 +163,7 @@ the real browser, so CI installs Chromium.
 | `examples/rooms/`, `examples/pizza/` | the example domains |
 | `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |
 | `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
+| `examples/load-api/` | a tool that loads tools: `load_api` reads an OpenAPI document, adds one tool per endpoint and removes itself (`npm run example:load-api`) |
 | `examples/office/` | thirty tools, the many-tools domain |
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
@@ -151,9 +172,7 @@ the real browser, so CI installs Chromium.
 
 ## Example: Wikipedia navigation
 
-![The agent goes from Telescope to Jupiter, one link at a time](docs/media/wikipedia-demo.png)
-
-*Telescope to Jupiter in four steps: each step shows the article, the links on offer, the tool the model chose and what came back. Also as [MP4](docs/media/wikipedia-demo.mp4) and [WebM](docs/media/wikipedia-demo.webm), rendered from a recorded run by `npm run example:wikipedia:demo` (needs ffmpeg and Chromium; article text from Wikipedia, CC BY-SA 4.0).*
+*The animation at the top of this page: Telescope to Jupiter in four steps, on the real Wikipedia pages (revisions pinned at the snapshot). At each step the links the agent may follow are boxed and the one it chose is circled, with the tool call underneath. Also as [MP4](docs/media/wikipedia-demo.mp4). Made from a recorded run by `npm run example:wikipedia:demo` (needs network access to Wikipedia, Chromium and ffmpeg; screenshots show Wikipedia, CC BY-SA 4.0).*
 
 `npm run example:wikipedia -- --from "Alan Turing" --to "Enigma machine"` walks from one article to another by following
 links and prints the path. `open_link(link)` offers the links of the article body (references, info boxes, navboxes,

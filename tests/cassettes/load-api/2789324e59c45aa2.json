@@ -1,0 +1,313 @@
+{
+  "hash": "2789324e59c45aa2",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Find the open ticket assigned to Ana and close it",
+        "state": {
+          "loaded": {
+            "api": "helpdesk",
+            "tools": [
+              "list_tickets",
+              "get_ticket",
+              "update_ticket",
+              "delete_ticket",
+              "close_ticket"
+            ],
+            "not_loaded": [
+              "create_ticket: parameter \"title\" is free text, which the model cannot write, and no candidates were supplied"
+            ]
+          },
+          "api": {
+            "list_tickets": [
+              {
+                "id": 4,
+                "title": "Badge reader at the front door is offline",
+                "status": "open",
+                "assignee": "ana"
+              }
+            ]
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "load_api",
+            "args": {
+              "api": "helpdesk"
+            },
+            "summary": "loaded the helpdesk API: 5 tools"
+          },
+          {
+            "tool": "list_tickets",
+            "args": {
+              "status": "open",
+              "assignee": "ana"
+            },
+            "summary": "GET /tickets -> list_tickets"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out.",
+            "list_tickets": "List tickets (GET /tickets). Lists the tickets, newest last. Each has an id, title, status and assignee. The response is put in `state.api.list_tickets`.",
+            "get_ticket": "Read a ticket (GET /tickets/{id}). Returns one ticket with its labels, priority and resolution. The response is put in `state.api.get_ticket`.",
+            "update_ticket": "Reassign or label a ticket (PATCH /tickets/{id}). Changes who a ticket is assigned to, or which labels it carries. The response is put in `state.api.update_ticket`.",
+            "delete_ticket": "Delete a ticket (DELETE /tickets/{id}). Removes the ticket for good. The response is put in `state.api.delete_ticket`.",
+            "close_ticket": "Close a ticket (POST /tickets/{id}/close). Marks an open ticket as closed. Closing a closed ticket is a conflict. The response is put in `state.api.close_ticket`."
+          }
+        },
+        "list_tickets.status": {
+          "type": "choice",
+          "instructions": "For the action \"List tickets\", which `status` (open or closed) do `instructions` call for?",
+          "criteria": {
+            "open": "",
+            "closed": ""
+          }
+        },
+        "list_tickets.status?stated": {
+          "type": "noul",
+          "instructions": "For the action \"List tickets\", do `instructions` state `status` (open or closed)?"
+        },
+        "list_tickets.assignee": {
+          "type": "choice",
+          "instructions": "For the action \"List tickets\", which `assignee` (who the ticket is assigned to) do `instructions` call for?",
+          "criteria": {
+            "ana": "",
+            "ben": "",
+            "carla": ""
+          }
+        },
+        "list_tickets.assignee?stated": {
+          "type": "noul",
+          "instructions": "For the action \"List tickets\", do `instructions` state `assignee` (who the ticket is assigned to)?"
+        },
+        "get_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Read a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana"
+          }
+        },
+        "update_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Reassign or label a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana"
+          }
+        },
+        "update_ticket.assignee": {
+          "type": "choice",
+          "instructions": "For the action \"Reassign or label a ticket\", which `assignee` (who the ticket is assigned to) do `instructions` call for?",
+          "criteria": {
+            "ana": "",
+            "ben": "",
+            "carla": ""
+          }
+        },
+        "update_ticket.assignee?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` state `assignee` (who the ticket is assigned to)?"
+        },
+        "update_ticket.labels[billing]": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` call for billing as `labels` (the labels the ticket should carry)?"
+        },
+        "update_ticket.labels[bug]": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` call for bug as `labels` (the labels the ticket should carry)?"
+        },
+        "update_ticket.labels[urgent]": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` call for urgent as `labels` (the labels the ticket should carry)?"
+        },
+        "update_ticket.labels?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` state `labels` (the labels the ticket should carry)?"
+        },
+        "delete_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Delete a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana"
+          }
+        },
+        "close_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Close a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana"
+          }
+        },
+        "close_ticket.resolution": {
+          "type": "choice",
+          "instructions": "For the action \"Close a ticket\", which `resolution` (how the ticket was resolved) do `instructions` call for?",
+          "criteria": {
+            "fixed": "",
+            "wontfix": "",
+            "duplicate": ""
+          }
+        },
+        "close_ticket.resolution?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Close a ticket\", do `instructions` state `resolution` (how the ticket was resolved)?"
+        },
+        "close_ticket.notify": {
+          "type": "noul",
+          "instructions": "For the action \"Close a ticket\", do `instructions` call for this: email the requester that the ticket is closed?"
+        },
+        "close_ticket.notify?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Close a ticket\", do `instructions` state `notify` (email the requester that the ticket is closed)?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "close_ticket",
+          "confidence": 1,
+          "probabilities": {
+            "end": 0,
+            "list_tickets": 0,
+            "get_ticket": 0,
+            "update_ticket": 0,
+            "delete_ticket": 0,
+            "close_ticket": 1
+          }
+        },
+        "list_tickets.status": {
+          "type": "choice",
+          "choice": "open",
+          "confidence": 1,
+          "probabilities": {
+            "open": 1,
+            "closed": 0
+          }
+        },
+        "list_tickets.status?stated": {
+          "type": "noul",
+          "noul": 0.92
+        },
+        "list_tickets.assignee": {
+          "type": "choice",
+          "choice": "ana",
+          "confidence": 1,
+          "probabilities": {
+            "ana": 1,
+            "ben": 0,
+            "carla": 0
+          }
+        },
+        "list_tickets.assignee?stated": {
+          "type": "noul",
+          "noul": 0.9
+        },
+        "get_ticket.id": {
+          "type": "choice",
+          "choice": "4",
+          "confidence": 1,
+          "probabilities": {
+            "4": 1
+          }
+        },
+        "update_ticket.id": {
+          "type": "choice",
+          "choice": "4",
+          "confidence": 1,
+          "probabilities": {
+            "4": 1
+          }
+        },
+        "update_ticket.assignee": {
+          "type": "choice",
+          "choice": "ana",
+          "confidence": 1,
+          "probabilities": {
+            "ana": 1,
+            "ben": 0,
+            "carla": 0
+          }
+        },
+        "update_ticket.assignee?stated": {
+          "type": "noul",
+          "noul": 0.65
+        },
+        "update_ticket.labels[billing]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "update_ticket.labels[bug]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "update_ticket.labels[urgent]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "update_ticket.labels?stated": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "delete_ticket.id": {
+          "type": "choice",
+          "choice": "4",
+          "confidence": 1,
+          "probabilities": {
+            "4": 1
+          }
+        },
+        "close_ticket.id": {
+          "type": "choice",
+          "choice": "4",
+          "confidence": 1,
+          "probabilities": {
+            "4": 1
+          }
+        },
+        "close_ticket.resolution": {
+          "type": "choice",
+          "choice": "fixed",
+          "confidence": 0.98,
+          "probabilities": {
+            "fixed": 0.99,
+            "wontfix": 0.01,
+            "duplicate": 0
+          }
+        },
+        "close_ticket.resolution?stated": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "close_ticket.notify": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "close_ticket.notify?stated": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "usage": {
+        "input_tokens": 1678,
+        "output_tokens": 532
+      }
+    }
+  }
+}
