@@ -147,10 +147,7 @@ the real browser, so CI installs Chromium.
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
-| `examples/storefront-browser/` | the same shopping task by sight: a headless browser, screenshots, boxes to click and to point at the price (`npm run example:storefront-browser`) |
-| `examples/storefront-by-sight/` | the one-sentence shopping task by sight, with a deciding level (picks a tactic from the screenshot) and a navigating level (carries it out with a Box); `npm run example:by-sight`, and the tactic probe `npm run example:probe` |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
-| `examples/storefront/` | shopping in a real Shopify shop (aloyoga.com): menu, colour filter, product, size, price (`npm run example:storefront`) |
 
 ## Example: Wikipedia navigation
 
@@ -160,53 +157,3 @@ other namespaces and redlinks are left out in code, and the list is cut to a bud
 described by their anchor text; `go_back` returns to the previous article and never offers the abandoned one again.
 Articles are fetched as they were at a fixed snapshot (`SNAPSHOT` in `examples/wikipedia/client.ts`), so a recording
 never goes stale. Wikipedia rate-limits shared addresses: the live run waits as asked and keeps what is already recorded.
-
-## Example: shopping on aloyoga.com
-
-`npm run example:storefront` runs "Find a blue sweatshirt in the shop, select size large, and get the price" on the live
-https://www.aloyoga.com and prints the steps and what it found (never touching the cart or checkout). The shop is a Shopify
-storefront, so the example reads the public JSON every such shop serves (the home page menu, `/collections/<h>/products.json`,
-`/products/<h>.js`), with an identifying `agent-initiated` User-Agent, no browser, and nothing beyond reads. Tools:
-`open_collection` (the shop menu, described by where each entry sits), `filter_colour` (a `param.set`: one yes/no question per colour
-of the collection, "Is {} a shade of the colour that `instructions` ask for?", and code keeps the colours above the threshold),
-`open_product`, `select_colour` (only for a product sold in several colours), `select_size` (sold out sizes are described as such),
-`read_price`, `go_back`, `end`. The model only picks from closed sets; code builds every list, applies the filter and looks the
-price up. Responses are trimmed before they are recorded, so `npm test` replays the whole shop and Jev offline.
-
-## Example: aloyoga.com by sight (headless browser, screenshots, boxes)
-
-`npm run example:storefront-browser -- --site live` does the shopping task again, but the way a person would: a headless Chromium
-opens https://www.aloyoga.com, the page is only a screenshot, and Jev points with Boxes (`hover` the WOMEN menu, `click` Sweatshirts & Hoodies,
-`click` a blue sweatshirt, `click` size L, `read_price` on the price). The model never reads a character: for `read_price` it points at the price
-and code reads the text inside the box (`browser.textIn`), accepting exactly one distinct amount. Code also decides the one address `navigate` offers
-and that nothing is added to the bag. `--runs N` repeats it, `--plain` uses the one-sentence wording, `--out dir` saves the final screenshots.
-The browser may only talk to aloyoga.com and the hosts it needs to draw itself (its menu, pictures, fonts); ads and trackers are aborted.
-
-`npm test` runs the same agent against a look-alike shop on loopback (`examples/storefront-browser/shop-site.ts`: a menu that opens on hover, a grid whose
-blue items are below the fold, a size picker, an "Add to bag" trap), replaying Jev from `tests/cassettes/storefront-browser`, and checks the result against the
-shop's own price list: a blue sweatshirt, size L selected, the price it read equals the listed price, nothing in the bag.
-
-Spelled-out steps matter a lot. Measured on 2026-11-20, 5 runs each:
-
-| Instructions | look-alike shop | real aloyoga.com |
-| - | - | - |
-| steps spelled out (default, `stepInstructions`) | 5 of 5 (9 to 12 steps) | 5 of 5 (8 to 11 steps) |
-| one sentence (`plainInstructions`) | 0 of 5 (step limit) | 0 of 5 (step limit) |
-
-With the one sentence Jev either scrolls up and down forever or repeats one action (pressing Enter 12 times); nothing in it says where to look first.
-Hover is the missing piece for menus: clicking WOMEN on aloyoga.com goes to a page with no sweatshirt entry, so `browserTools(..., { hover: true })` offers `hover(target)`.
-
-## Example: the one-sentence task by sight, in two levels
-
-`npm run example:by-sight -- --site live|fixture [--runs N] [--no-rules]` runs "Go to the shop, find a blue sweatshirt, select size large, and get the price" with nothing
-spelled out and nothing but pictures reaching Jev: no page text, address or title, in either level.
-
-- **Deciding level** (`examples/storefront-by-sight/planner.ts`): an agent whose tools are nine generic tactics (`open_menu`, `pick_menu_entry`, `scroll`, `click_item`, `select_option`,
-  `read_value`, `go_back`, `close_overlay`, `end`; wording in `tactics.ts`). Its state is the screenshot, `state.judgments` (five yes/no or choice questions about that screenshot: item visible,
-  menu open, option chosen, price visible, kind of page), `state.done` (what code recorded as done) and `state.last_try` (what did not work). Jev never writes a goal: the tactic list is the choice.
-- **Navigating level**: each tactic starts a child agent (`ctx.runAgent`) with the task, a one-step goal and only the browser tools that tactic needs. It makes one move and stops by itself (a target it cannot find is not a move,
-  so it may look again, three steps at most). Code then checks the new screenshot (it must differ, and the judgments must show the tactic worked) before writing `done`.
-- **Code decides**: which tactics make sense now (`rules`: no menu entry before a menu, no option or value before an item, no `end` before the value was read), that a tactic that changed nothing is not offered again on the same screenshot,
-  and, in `src/browser`, that a tool that changed nothing three times is not offered.
-
-Before building it, `examples/storefront-by-sight/probe.ts` replayed the screenshots of runs that worked (spelled-out steps) and asked the deciding level what to do at each one (`npm run example:probe`).
