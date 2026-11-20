@@ -1,0 +1,118 @@
+{
+  "hash": "539bf17af09bd0f7",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "You are at Westfield station. Get to Harbour station by riding the lines, then stop.",
+        "state": {
+          "network": {
+            "Red line": [
+              "Airport",
+              "Northgate",
+              "Central",
+              "Riverside",
+              "Harbour"
+            ],
+            "Blue line": [
+              "Westfield",
+              "Museum",
+              "Central",
+              "Market",
+              "Stadium"
+            ],
+            "Green line": [
+              "Northgate",
+              "Museum",
+              "Old Town",
+              "Market",
+              "Southpark"
+            ],
+            "Yellow line": [
+              "Riverside",
+              "Old Town",
+              "Hillcrest"
+            ]
+          },
+          "location": {
+            "station": "Harbour",
+            "next": {}
+          },
+          "visited": [
+            "Westfield",
+            "Museum",
+            "Central",
+            "Riverside",
+            "Harbour"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "move",
+            "args": {
+              "station": "Museum"
+            },
+            "summary": "rode the Blue line to Museum"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Central"
+            },
+            "summary": "rode the Blue line to Central"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Riverside"
+            },
+            "summary": "rode the Red line to Riverside"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Harbour"
+            },
+            "summary": "rode the Red line to Harbour"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "end",
+          "confidence": 1,
+          "probabilities": {
+            "end": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 702,
+        "output_tokens": 28
+      }
+    }
+  }
+}
