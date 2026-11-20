@@ -122,16 +122,16 @@
         "__tool__": {
           "type": "choice",
           "choice": "hover",
-          "confidence": 0.82,
+          "confidence": 0.85,
           "probabilities": {
             "navigate": 0,
-            "click": 0.02,
-            "hover": 0.84,
-            "scroll": 0.12,
+            "click": 0.03,
+            "hover": 0.87,
+            "scroll": 0.09,
             "press_key": 0,
             "go_back": 0,
             "read_price": 0,
-            "end": 0.02
+            "end": 0.01
           }
         },
         "navigate.url": {
@@ -148,53 +148,53 @@
             "top": 0.1,
             "bottom": 0.13,
             "left": 0.22,
-            "right": 0.3
+            "right": 0.29
           },
           "confidence": 0.63
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.18
+          "noul": 0.24
         },
         "hover.target": {
           "type": "box",
           "box": {
             "top": 0.09,
             "bottom": 0.13,
-            "left": 0.21,
-            "right": 0.31
+            "left": 0.2,
+            "right": 0.3
           },
-          "confidence": 0.6
+          "confidence": 0.64
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.71
+          "noul": 0.67
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.74,
+          "confidence": 0.7,
           "probabilities": {
-            "down": 0.87,
-            "bottom": 0.13
+            "down": 0.85,
+            "bottom": 0.15
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Tab",
-          "confidence": 0.73,
+          "confidence": 0.72,
           "probabilities": {
-            "Enter": 0.07,
-            "Tab": 0.82,
-            "Escape": 0.11
+            "Enter": 0.1,
+            "Tab": 0.81,
+            "Escape": 0.09
           }
         },
         "read_price.target": {
           "type": "box",
           "box": {
-            "top": 0.05,
+            "top": 0.1,
             "bottom": 0.53,
-            "left": 0.22,
+            "left": 0.21,
             "right": 0.33
           },
           "confidence": 0.05
