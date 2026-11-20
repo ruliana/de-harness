@@ -2,7 +2,8 @@
 // Drives a headless Chromium with the generic browser tools: the page is only a screenshot, Jev points with boxes.
 // The browser may only talk to the host of --url, so a click cannot walk the agent off the site.
 import { writeFileSync } from "node:fs";
-import { BrowserSession, JevModel, browserTools, createAgent } from "../../src/index.js";
+import { JevModel, createAgent } from "../../src/index.js";
+import { BrowserSession, browserTools } from "../../src/browser/index.js";
 
 const args = process.argv.slice(2);
 const take = (flag: string): string[] => {

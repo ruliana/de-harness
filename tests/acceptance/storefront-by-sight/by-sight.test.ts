@@ -10,7 +10,8 @@
  * model: no page text, address or title in any request of either level.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { CassetteModel, cassetteMode, type BrowserSession, type DecisionRequest, type HarnessEvent } from "../../../src/index.js";
+import { CassetteModel, cassetteMode, type DecisionRequest, type HarnessEvent } from "../../../src/index.js";
+import type { BrowserSession } from "../../../src/browser/index.js";
 import { FIXTURE_PORT, launchFixture, problems, startFixture } from "../../../examples/storefront-browser/run.js";
 import type { Outcome } from "../../../examples/storefront-browser/run.js";
 import type { ShopSite } from "../../../examples/storefront-browser/shop-site.js";

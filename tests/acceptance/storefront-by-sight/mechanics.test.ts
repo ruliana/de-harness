@@ -3,7 +3,8 @@
  * is offered, what code does with a tactic that did not work, and that the navigating level does one thing and stops.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { ScriptedModel, TOOL_QUESTION, say, type BrowserSession, type DecisionRequest } from "../../../src/index.js";
+import { ScriptedModel, TOOL_QUESTION, say, type DecisionRequest } from "../../../src/index.js";
+import type { BrowserSession } from "../../../src/browser/index.js";
 import { launchFixture, startFixture } from "../../../examples/storefront-browser/run.js";
 import type { ShopSite } from "../../../examples/storefront-browser/shop-site.js";
 import { runBySight } from "../../../examples/storefront-by-sight/run.js";

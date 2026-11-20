@@ -3,7 +3,8 @@
  * candidates. The site is on loopback with a fixed port, so the address in the state, and with it every recorded request, is stable.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { BrowserSession, browserTools, createAgent, type Box, type RunResult } from "../../../src/index.js";
+import { createAgent, type Box, type RunResult } from "../../../src/index.js";
+import { BrowserSession, browserTools } from "../../../src/browser/index.js";
 import { startBrowserSite, type BrowserSite } from "../../support/browser-site.js";
 import { jevFor } from "../../support/models.js";
 

@@ -3,7 +3,8 @@
  * look only at screenshots. The test and the runner (`main.ts`) share it, and so does the check of the result with the one-sentence
  * run of examples/storefront-browser (`pageFacts`, `problems`).
  */
-import { createAgent, type BrowserSession, type DecisionModel } from "../../src/index.js";
+import { createAgent, type DecisionModel } from "../../src/index.js";
+import type { BrowserSession } from "../../src/browser/index.js";
 import { pageFacts, type Outcome, type SiteKind } from "../storefront-browser/run.js";
 import { plainTask } from "../storefront-browser/shopping.js";
 import { judgeScreen, sightTools } from "./planner.js";

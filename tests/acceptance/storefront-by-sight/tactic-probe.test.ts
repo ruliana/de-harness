@@ -8,7 +8,8 @@
  * runs and prints the match rates. The real aloyoga.com is measured by hand: `npm run example:probe -- --site live`.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { CassetteModel, cassetteMode, type BrowserSession, type DecisionModel, type DecisionRequest } from "../../../src/index.js";
+import { CassetteModel, cassetteMode, type DecisionModel, type DecisionRequest } from "../../../src/index.js";
+import type { BrowserSession } from "../../../src/browser/index.js";
 import { launchFixture, runOnce, startFixture } from "../../../examples/storefront-browser/run.js";
 import { plainTask } from "../../../examples/storefront-browser/shopping.js";
 import type { ShopSite } from "../../../examples/storefront-browser/shop-site.js";

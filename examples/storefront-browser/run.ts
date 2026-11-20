@@ -2,7 +2,8 @@
  * One run of the browser shopping task, on the live shop or on the local fixture, and the facts that judge it.
  * The test and the runner (`main.ts`) share this, so what the PR reports is what the test checks.
  */
-import { BrowserSession, createAgent, type DecisionModel, type RunResult } from "../../src/index.js";
+import { createAgent, type DecisionModel, type RunResult } from "../../src/index.js";
+import { BrowserSession } from "../../src/browser/index.js";
 import { listingFor, startShopSite, type ShopSite } from "./shop-site.js";
 import { SHOPPING_STEPS, shoppingTools, stepInstructions } from "./shopping.js";
 

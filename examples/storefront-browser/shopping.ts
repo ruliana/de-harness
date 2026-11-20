@@ -12,7 +12,8 @@
  * Code decides what the model cannot write: the address it may open, the click point (the box's centre), the price's characters
  * (the text of the page inside the box) and, in the test and the runner, whether the run found the right thing (`pageFacts`).
  */
-import { browserTools, defineTool, param, type AnyTool, type BrowserSession } from "../../src/index.js";
+import { defineTool, param, type AnyTool } from "../../src/index.js";
+import { browserTools, type BrowserSession } from "../../src/browser/index.js";
 
 /** Every question this example asks, in one place (the generic click, hover and scroll questions live in `src/browser/tools.ts`). */
 export const QUESTIONS = {

@@ -3,18 +3,18 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { ScriptedInput, ScriptedModel, TOOL_QUESTION, createAgent, defineTool, delegateTool, type HarnessEvent } from "../../../src/index.js";
+import { ScriptedInput, ScriptedModel, TOOL_QUESTION, createAgent, defineTool, delegate, type HarnessEvent } from "../../../src/index.js";
 
 const noop = defineTool({ name: "noop", description: "Does nothing.", run: () => ({ summary: "did nothing" }) });
 const tasks = { "Do the chores": "The helper does the chores" };
-const delegate = (agent: Parameters<typeof delegateTool>[0]["agent"], result?: Parameters<typeof delegateTool>[0]["result"]) => delegateTool({ tasks, agent, ...(result ? { result } : {}) });
+const helper = (agent: Parameters<typeof delegate>[0]["agent"], result?: Parameters<typeof delegate>[0]["result"]) => delegate({ tasks, agent, ...(result ? { result } : {}) });
 const slotOf = (request: { state?: unknown }) => (request.state as { state: Record<string, any> }).state.delegated;
 
 describe("sub-agents", () => {
   it("returns { status: 'step_limit' } into the parent's state when the child runs out of steps, and the parent keeps running", async () => {
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }, { [TOOL_QUESTION]: "end" }]);
     const child = new ScriptedModel([{ [TOOL_QUESTION]: "noop" }]);
-    const result = await createAgent({ model: parent, instructions: "Delegate", tools: [delegate(() => ({ model: child, instructions: "Chores", tools: [noop], maxSteps: 2 }))] }).run();
+    const result = await createAgent({ model: parent, instructions: "Delegate", tools: [helper(() => ({ model: child, instructions: "Chores", tools: [noop], maxSteps: 2 }))] }).run();
     expect(child.requests).toHaveLength(2);
     expect(slotOf(parent.requests[1]!)).toMatchObject({ task: "Do the chores", status: "step_limit", steps: 2 });
     expect(result.status).toBe("ended");
@@ -23,7 +23,7 @@ describe("sub-agents", () => {
 
   it("uses the parent's model when the child brings none", async () => {
     const model = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }, { [TOOL_QUESTION]: "end" }, { [TOOL_QUESTION]: "end" }]);
-    const result = await createAgent({ model, instructions: "Delegate", tools: [delegate(() => ({ instructions: "Chores", tools: [noop] }))] }).run();
+    const result = await createAgent({ model, instructions: "Delegate", tools: [helper(() => ({ instructions: "Chores", tools: [noop] }))] }).run();
     expect(result.status).toBe("ended");
     expect(model.requests).toHaveLength(3); // parent, child, parent
     expect(slotOf(model.requests[2]!)).toMatchObject({ status: "ended", steps: 1 });
@@ -32,7 +32,7 @@ describe("sub-agents", () => {
   it("keeps the child's tools out of the parent's requests and the parent's out of the child's", async () => {
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }, { [TOOL_QUESTION]: "end" }]);
     const child = new ScriptedModel([{ [TOOL_QUESTION]: "end" }]);
-    await createAgent({ model: parent, instructions: "Delegate", tools: [delegate(() => ({ model: child, instructions: "Chores", tools: [noop] }))] }).run();
+    await createAgent({ model: parent, instructions: "Delegate", tools: [helper(() => ({ model: child, instructions: "Chores", tools: [noop] }))] }).run();
     const tools = (m: ScriptedModel) => m.requests.map((r) => Object.keys((r.questions[TOOL_QUESTION] as { criteria: object }).criteria));
     expect(tools(parent)).toEqual([["delegate", "end"], ["delegate", "end"]]);
     expect(tools(child)).toEqual([["noop", "end"]]);
@@ -43,8 +43,8 @@ describe("sub-agents", () => {
     const grandchild = new ScriptedModel([{ [TOOL_QUESTION]: "end" }]);
     const child = new ScriptedModel([{ [TOOL_QUESTION]: "noop" }, { [TOOL_QUESTION]: "delegate" }, { [TOOL_QUESTION]: "end" }]);
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "noop" }, { [TOOL_QUESTION]: "delegate" }, { [TOOL_QUESTION]: "end" }]);
-    const inner = delegate(() => ({ model: grandchild, instructions: "Deep chore", tools: [noop] }));
-    const outer = delegate(() => ({ model: child, instructions: "Chores", tools: [noop, inner] }));
+    const inner = helper(() => ({ model: grandchild, instructions: "Deep chore", tools: [noop] }));
+    const outer = helper(() => ({ model: child, instructions: "Chores", tools: [noop, inner] }));
     const result = await createAgent({ model: parent, instructions: "Delegate", tools: [noop, outer], trace: path }).run();
     expect(result.status).toBe("ended");
 
@@ -75,7 +75,7 @@ describe("sub-agents", () => {
     }]);
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }]);
     let childStatus: string | undefined;
-    const tool = delegate(() => ({ model: child, instructions: "Chores", tools: [noop] }), (_task, r) => ({ status: (childStatus = r.status) }));
+    const tool = helper(() => ({ model: child, instructions: "Chores", tools: [noop] }), (_task, r) => ({ status: (childStatus = r.status) }));
     const result = await createAgent({ model: parent, instructions: "Delegate", tools: [tool], signal: controller.signal, maxSteps: 5 }).run();
     expect(result.status).toBe("aborted");
     expect(childStatus).toBe("aborted");
@@ -99,7 +99,7 @@ describe("sub-agents", () => {
     const child = new ScriptedModel([{ [TOOL_QUESTION]: "wait_for_user" }]);
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }]);
     let childRun: { status: string; steps: number } | undefined;
-    const tool = delegate(() => ({ model: child, instructions: "Wait", tools: [waiting] }), (_task, r) => ({ status: (childRun = { status: r.status, steps: r.steps.length }).status }));
+    const tool = helper(() => ({ model: child, instructions: "Wait", tools: [waiting] }), (_task, r) => ({ status: (childRun = { status: r.status, steps: r.steps.length }).status }));
     const result = await createAgent({ model: parent, instructions: "Delegate", tools: [tool], signal: controller.signal }).run();
     expect(result.status).toBe("aborted");
     expect(childRun?.status).toBe("aborted");
@@ -129,7 +129,7 @@ describe("sub-agents", () => {
     const input = new ScriptedInput(["large please"]);
     const child = new ScriptedModel([{ [TOOL_QUESTION]: "ask_size" }, { [TOOL_QUESTION]: "end" }]);
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }, { [TOOL_QUESTION]: "end" }]);
-    const result = await createAgent({ model: parent, instructions: "Delegate", input, tools: [delegate(() => ({ model: child, instructions: "Ask", tools: [ask] }))] }).run();
+    const result = await createAgent({ model: parent, instructions: "Delegate", input, tools: [helper(() => ({ model: child, instructions: "Ask", tools: [ask] }))] }).run();
     expect(result.status).toBe("ended");
     expect(input.asked).toEqual(["What size?"]);
     expect(slotOf(parent.requests[1]!)).toMatchObject({ status: "ended", output: { user_reply: "large please" } });
