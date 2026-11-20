@@ -54,6 +54,24 @@ const delegate = delegateTool({
 
 Try it live: `npm run example:rooms -- "Leave the room through the red door"`.
 
+### Sets, optional values and thresholds
+
+```ts
+params: {
+  size: param.choice({ question: "Which size from `state.menu.sizes` do `instructions` order?", options: ["small", "medium", "large"] }),
+  // one Noul per member (`{}` is the member); the value is the members at or above the yes threshold
+  toppings: param.set({ question: "Do `instructions` ask for {} on the pizza?", members: ["mushrooms", "olives", "basil"] }),
+  // one extra Noul asks whether the value is stated at all; `undefined` unless it is
+  delivery_time: param.choice({ question: "Which slot do `instructions` ask for?", options: slots, optional: { stated: "Do `instructions` say when to deliver?" } }),
+  // thresholds per parameter (default yes 0.7 / no 0.3): `true`, `false` or 'unsure'
+  gift: param.noul({ question: "Is it a gift?", thresholds: { yes: 0.6, no: 0.4 } }),
+}
+```
+
+`members` can be a function of the state. 'unsure' never counts as a member or as stated; the raw probabilities are in
+`ctx.answers` (`toppings[olives]`, `delivery_time?stated`) for code that wants another rule. Try it:
+`npm run example:pizza -- "A large pizza with mushrooms and olives, deliver at 7pm"`.
+
 | Where | What |
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
@@ -63,5 +81,5 @@ Try it live: `npm run example:rooms -- "Leave the room through the red door"`.
 | `src/loop/` | `createAgent(config).run()` |
 | `src/input/` | `ctx.input.ask` holds the loop until an `InputProvider` replies: `StdinInput` (terminal), `ScriptedInput` (tests) |
 | `src/events/` | typed events and the JSONL trace |
-| `examples/rooms/` | the example domain |
+| `examples/rooms/`, `examples/pizza/` | the example domains |
 | `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |

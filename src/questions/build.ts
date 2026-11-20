@@ -3,17 +3,21 @@
  * The wording of the tool question is fixed here; the wording of each parameter question lives with its tool.
  */
 import type { Answer, Question } from "../model/types.js";
-import { normalizeOptions, type ParamContext, type ParamSpec } from "../tools/param.js";
+import { MEMBER, defaultThresholds, normalizeOptions, readNoul, type ParamContext, type ParamSpec } from "../tools/param.js";
 import type { AnyTool } from "../tools/tool.js";
 
 export const TOOL_QUESTION = "__tool__";
 export const questionId = (tool: string, param: string) => `${tool}.${param}`;
+/** Question key (without the tool) of one member of a set parameter: `toppings[olives]`. */
+export const memberKey = (param: string, member: string) => `${param}[${member}]`;
+/** Question key (without the tool) of the "is it stated at all" Noul of an optional parameter: `delivery_time?stated`. */
+export const statedKey = (param: string) => `${param}?stated`;
 
 /** Most options a Choice accepts. */
 const MAX_OPTIONS = 255;
 
-/** Noul above `yes` reads as yes, below `no` as no, in between as 'unsure'. */
-export const thresholds = { yes: 0.7, no: 0.3 };
+/** Default thresholds of every Noul-based answer: at or above `yes` reads as yes, at or below `no` as no, in between as 'unsure'. */
+export const thresholds = defaultThresholds;
 
 export type QueryPlan = {
   questions: Record<string, Question>;
@@ -23,11 +27,14 @@ export type QueryPlan = {
   skipped: { tool: string; reason: string }[];
   /** Resolved choice options per question id, to validate answers. */
   options: Record<string, string[]>;
+  /** Resolved members per set question key (`<tool>.<param>`), to read the answers back. */
+  members: Record<string, string[]>;
 };
 
 export function buildQuestions(tools: AnyTool[], ctx: ParamContext): QueryPlan {
   const questions: Record<string, Question> = {};
   const options: Record<string, string[]> = {};
+  const members: Record<string, string[]> = {};
   const used: AnyTool[] = [];
   const skipped: QueryPlan["skipped"] = [];
 
@@ -48,9 +55,20 @@ export function buildQuestions(tools: AnyTool[], ctx: ParamContext): QueryPlan {
         options[id] = keys;
       } else if (spec.kind === "noul") {
         own[id] = { type: "noul", instructions: spec.question, ...(spec.criteria ? { criteria: spec.criteria } : {}) };
+      } else if (spec.kind === "set") {
+        const list = [...(typeof spec.members === "function" ? spec.members(ctx) : spec.members)];
+        if (list.length === 0) {
+          reason = `parameter "${name}" has no members`;
+          break;
+        }
+        if (new Set(list).size !== list.length) throw new Error(`Parameter "${name}" of tool "${tool.name}" has duplicate members: ${list.join(", ")}`);
+        // one yes / no question per member, so members never split a probability between them
+        for (const member of list) own[questionId(tool.name, memberKey(name, member))] = { type: "noul", instructions: spec.question.replaceAll(MEMBER, member) };
+        members[id] = list;
       } else {
         own[id] = { type: "score", instructions: spec.question, criteria: Object.values(spec.levels) as string[] };
       }
+      if (spec.optional) own[questionId(tool.name, statedKey(name))] = { type: "noul", instructions: spec.optional.stated };
     }
     if (reason) skipped.push({ tool: tool.name, reason });
     else {
@@ -71,6 +89,7 @@ export function buildQuestions(tools: AnyTool[], ctx: ParamContext): QueryPlan {
     tools: used,
     skipped,
     options,
+    members,
   };
 }
 
@@ -85,30 +104,44 @@ export function pickedTool(answers: Record<string, Answer>, plan: QueryPlan): An
   return tool;
 }
 
-/** Typed arguments of the picked tool; only its answers are read. */
+/** Typed arguments of the picked tool; only its answers are read. Raw answers are keyed like the questions, without the tool name. */
 export function parseArgs(tool: AnyTool, answers: Record<string, Answer>, plan: QueryPlan): { args: Record<string, unknown>; raw: Record<string, Answer> } {
   const args: Record<string, unknown> = {};
   const raw: Record<string, Answer> = {};
-  for (const [name, spec] of Object.entries((tool.params ?? {}) as Record<string, ParamSpec>)) {
-    const id = questionId(tool.name, name);
+  const take = (key: string, type: Answer["type"]): Answer => {
+    const id = questionId(tool.name, key);
     const a = answers[id];
     if (!a) throw new AnswerError(`The model did not answer "${id}"`);
-    raw[name] = a;
+    if (a.type !== type) throw new AnswerError(`"${id}" should be a ${type} answer`);
+    raw[key] = a;
+    return a;
+  };
+  for (const [name, spec] of Object.entries((tool.params ?? {}) as Record<string, ParamSpec>)) {
+    const id = questionId(tool.name, name);
+    let value: unknown;
     if (spec.kind === "choice") {
-      if (a.type !== "choice") throw new AnswerError(`"${id}" should be a choice answer`);
+      const a = take(name, "choice") as Extract<Answer, { type: "choice" }>;
       if (!plan.options[id]?.includes(a.choice)) throw new AnswerError(`The model chose "${a.choice}" for "${id}", which is not one of its options`);
-      args[name] = a.choice;
+      value = a.choice;
     } else if (spec.kind === "noul") {
-      if (a.type !== "noul") throw new AnswerError(`"${id}" should be a noul answer`);
-      args[name] = a.noul >= thresholds.yes ? true : a.noul <= thresholds.no ? false : "unsure";
+      value = readNoul((take(name, "noul") as Extract<Answer, { type: "noul" }>).noul, spec.thresholds);
+    } else if (spec.kind === "set") {
+      const list = plan.members[id] ?? [];
+      value = list.filter((member) => readNoul((take(memberKey(name, member), "noul") as Extract<Answer, { type: "noul" }>).noul, spec.thresholds) === true);
     } else {
-      if (a.type !== "score") throw new AnswerError(`"${id}" should be a score answer`);
+      const a = take(name, "score") as Extract<Answer, { type: "score" }>;
       const labels = Object.keys(spec.levels);
       const top = Object.entries(a.probabilities).reduce((best, e) => (e[1] > best[1] ? e : best), ["0", -1] as [string, number]);
       const label = labels[Number(top[0])];
       if (label === undefined) throw new AnswerError(`The model scored "${id}" at level ${top[0]}, which does not exist`);
-      args[name] = label;
+      value = label;
     }
+    // optional: the value counts only when the model says it is stated (at or above `yes`); 'unsure' counts as not stated
+    if (spec.optional) {
+      const stated = readNoul((take(statedKey(name), "noul") as Extract<Answer, { type: "noul" }>).noul, spec.optional.thresholds);
+      if (stated !== true) value = undefined;
+    }
+    args[name] = value;
   }
   return { args, raw };
 }
