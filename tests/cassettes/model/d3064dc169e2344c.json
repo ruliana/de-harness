@@ -1,0 +1,40 @@
+{
+  "hash": "d3064dc169e2344c",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "message": "Please find attached invoice 4471 for March, payable within 30 days."
+      },
+      "questions": {
+        "greeting": {
+          "type": "noul",
+          "instructions": "Is `message` a greeting?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "greeting": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "usage": {
+        "input_tokens": 298,
+        "output_tokens": 22
+      }
+    }
+  }
+}
