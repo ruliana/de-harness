@@ -1,0 +1,101 @@
+{
+  "hash": "2b4becb10f3f4c85",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Take the customer's coffee order: ask which size they want, then place the order",
+        "state": {
+          "user_reply": "large please"
+        },
+        "previous_actions": [
+          {
+            "tool": "ask_customer",
+            "args": {
+              "question": "What size would you like: small, medium or large?"
+            },
+            "summary": "asked \"What size would you like: small, medium or large?\" and the customer replied"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "ask_customer": "Asks the customer one question and waits for the reply, which is saved in `state.user_reply`. Use it for what the order still lacks.",
+            "place_order": "Places the coffee order, once the customer has replied with the size they want.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "ask_customer.question": {
+          "type": "choice",
+          "instructions": "Which question should be asked next to take the order described in `instructions`, given what `state.user_reply` already says?",
+          "criteria": {
+            "What size would you like: small, medium or large?": "The size of the coffee is not known yet",
+            "What name should I put on the order?": "The name for the order is not known yet",
+            "Would you like anything with your coffee?": "The customer may want something to eat or drink with the coffee"
+          }
+        },
+        "place_order.size": {
+          "type": "choice",
+          "instructions": "Which size did the customer ask for in `state.user_reply`?",
+          "criteria": {
+            "small": "The reply asks for a small coffee",
+            "medium": "The reply asks for a medium coffee",
+            "large": "The reply asks for a large coffee"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "place_order",
+          "confidence": 0.94,
+          "probabilities": {
+            "ask_customer": 0.04,
+            "place_order": 0.96,
+            "end": 0
+          }
+        },
+        "ask_customer.question": {
+          "type": "choice",
+          "choice": "What name should I put on the order?",
+          "confidence": 0.66,
+          "probabilities": {
+            "What size would you like: small, medium or large?": 0.01,
+            "What name should I put on the order?": 0.77,
+            "Would you like anything with your coffee?": 0.22
+          }
+        },
+        "place_order.size": {
+          "type": "choice",
+          "choice": "large",
+          "confidence": 1,
+          "probabilities": {
+            "small": 0,
+            "medium": 0,
+            "large": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 720,
+        "output_tokens": 153
+      }
+    }
+  }
+}
