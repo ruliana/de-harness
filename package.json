@@ -4,6 +4,10 @@
   "description": "A harness for decision models: agents whose model is used only to call tools",
   "type": "module",
   "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./browser": "./src/browser/index.ts"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=22"

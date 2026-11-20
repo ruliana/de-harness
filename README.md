@@ -42,11 +42,11 @@ slot, registry unchanged). See `examples/chest/`.
 A tool can run a whole nested agent with `ctx.runAgent(config)` and the loop simply waits for it. The child has its own
 tools, instructions and step limit, uses the parent's model unless it brings one, stops when the parent run is aborted,
 and its events are written to the parent's trace as `child` events under the step that called it (deeper children nest
-further). `delegateTool` is the ready-made version: the parent *picks* the task from candidates (Jev cannot write it), the
+further). `delegate` is the ready-made version: the parent *picks* the task from candidates (Jev cannot write it), the
 child runs, and its `{ task, status, steps, output }` lands in a state slot, also when the child hit its step limit.
 
 ```ts
-const delegate = delegateTool({
+const helper = delegate({
   tasks: { "Leave the room through the red door": "The helper finds the red door and walks out through it" },
   agent: (task) => ({ instructions: task, tools: rooms.tools, initialState: rooms.initialState, maxSteps: 4 }),
 });
@@ -93,7 +93,7 @@ A tool can put a picture into the state with `image(pngOrJpegBytes)` (PNG 280-15
 
 ### A browser as the state
 
-`BrowserSession` (a headless Chromium through Playwright) and `browserTools(session, options)` let an agent use a web page that it
+`BrowserSession` (a headless Chromium through Playwright) and `browserTools(session, options)` live in their own module, imported from `src/browser/index.js` (`de-harness/browser`; Playwright stays an optional peer dependency and the core never loads it). They let an agent use a web page that it
 only *sees*: every tool that changes the page puts a fresh screenshot into `state.screen` and `{ url, title, scroll }` into
 `state.page`. The model points with Boxes and chooses from candidates that code supplies; nothing is generated.
 
@@ -118,7 +118,7 @@ await browser.close();
 | `type_text(text)` | one of `texts` (candidates), typed into the focused field | reports "typed nothing" when no field is focused; the tool only exists when `texts` is given |
 | `press_key(key)` | one of `keys` (default Enter, Tab, Escape) | |
 | `navigate(url)` | one of `urls` (candidates) | the tool only exists when `urls` is given; it is the only one offered before a first page is open |
-| `go_back` | | |
+| `go_back` | | goes back one page in the browser history and the page settles; reports "no previous page" when there is none |
 
 For verification and use-case code: `browser.text()` (whole page), `browser.visibleText()` (what is in the viewport right now),
 `browser.boxOf(selector)` (the Box a perfect answer would be), `browser.textIn(box, grow?)` (the characters the page shows inside a Box: the model points at a price, code reads it), `browser.evaluate(fn, arg)`, `browser.screenshot()`, `browser.info()`.
@@ -133,7 +133,7 @@ the real browser, so CI installs Chromium.
 | Where | What |
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
-| `src/tools/` | `defineTool`, `param.*`, `ToolRegistry`, built-in `end`, `delegateTool` |
+| `src/tools/` | `defineTool`, `param.*`, `ToolRegistry`, built-in `end`, `delegate` |
 | `src/questions/` | the question map for a step and answer parsing (the `__tool__` wording lives here) |
 | `src/state/` | the state document, slot merging, previous-actions window |
 | `src/loop/` | `createAgent(config).run()` |

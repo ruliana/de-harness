@@ -5,7 +5,7 @@ export { defineTool, type Tool, type AnyTool, type ToolContext, type ToolResult,
 export { param, readNoul, type BoxSpec, defaultThresholds, type ParamSpec, type Params, type ArgsOf, type Options, type ParamContext, type Thresholds, type Optional } from "./tools/param.js";
 export * from "./input/index.js";
 export { ToolRegistry, type ToolChange } from "./tools/registry.js";
-export { delegateTool, type DelegateOptions } from "./tools/delegate.js";
+export { delegate, type DelegateOptions } from "./tools/delegate.js";
 export { endTool } from "./tools/builtin.js";
 export { TOOL_QUESTION, questionId, memberKey, statedKey, presentKey, thresholds } from "./questions/build.js";
 export type { HarnessEvent } from "./events/events.js";
@@ -13,4 +13,3 @@ export type { Json, StateView } from "./state/state.js";
 export { DEFAULT_CONTEXT_BUDGET, CHARS_PER_TOKEN, estimateTokens, requestTokens, BudgetError } from "./budget/budget.js";
 export type { Phase } from "./events/events.js";
 export { image, imageFile, isImageValue, IMAGE_LIMITS, type ImageValue } from "./state/images.js";
-export * from "./browser/index.js";
