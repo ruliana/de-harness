@@ -113,6 +113,7 @@ await browser.close();
 | Tool | The model decides | Code decides |
 | - | - | - |
 | `click(target)` | the Box around the element to click, or that it is not in the screenshot | the click point: the box's centre, in viewport pixels (screenshots are viewport-sized at scale 1) |
+| `hover(target)` | the Box of the element to point the mouse at (menus that open on hover) | only offered with `hover: true`; the pointer goes to the box's centre and the page settles |
 | `scroll(direction)` | `down` / `up` / `top` / `bottom` | only the directions that move the page are offered (from `state.page.scroll`); gone on a page that fits one screen; steps are 80% of a viewport |
 | `type_text(text)` | one of `texts` (candidates), typed into the focused field | reports "typed nothing" when no field is focused; the tool only exists when `texts` is given |
 | `press_key(key)` | one of `keys` (default Enter, Tab, Escape) | |
@@ -120,7 +121,7 @@ await browser.close();
 | `go_back` | | |
 
 For verification and use-case code: `browser.text()` (whole page), `browser.visibleText()` (what is in the viewport right now),
-`browser.boxOf(selector)` (the Box a perfect answer would be), `browser.evaluate(fn, arg)`, `browser.screenshot()`, `browser.info()`.
+`browser.boxOf(selector)` (the Box a perfect answer would be), `browser.textIn(box, grow?)` (the characters the page shows inside a Box: the model points at a price, code reads it), `browser.evaluate(fn, arg)`, `browser.screenshot()`, `browser.info()`.
 Clicks that open a new tab move the agent to it, dialogs are dismissed, and `allowedHosts` aborts every request to any other host
 (an address outside it fails `navigate` with an error and a click on such a link leaves the page where it was). Question wording is in
 one place (`src/browser/tools.ts`) and can be replaced per tool with `questions`. Playwright is an optional peer dependency:
@@ -146,6 +147,7 @@ the real browser, so CI installs Chromium.
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`) |
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
+| `examples/storefront-browser/` | the same shopping task by sight: a headless browser, screenshots, boxes to click and to point at the price (`npm run example:storefront-browser`) |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
 | `examples/storefront/` | shopping in a real Shopify shop (aloyoga.com): menu, colour filter, product, size, price (`npm run example:storefront`) |
 
@@ -169,3 +171,26 @@ of the collection, "Is {} a shade of the colour that `instructions` ask for?", a
 `open_product`, `select_colour` (only for a product sold in several colours), `select_size` (sold out sizes are described as such),
 `read_price`, `go_back`, `end`. The model only picks from closed sets; code builds every list, applies the filter and looks the
 price up. Responses are trimmed before they are recorded, so `npm test` replays the whole shop and Jev offline.
+
+## Example: aloyoga.com by sight (headless browser, screenshots, boxes)
+
+`npm run example:storefront-browser -- --site live` does the shopping task again, but the way a person would: a headless Chromium
+opens https://www.aloyoga.com, the page is only a screenshot, and Jev points with Boxes (`hover` the WOMEN menu, `click` Sweatshirts & Hoodies,
+`click` a blue sweatshirt, `click` size L, `read_price` on the price). The model never reads a character: for `read_price` it points at the price
+and code reads the text inside the box (`browser.textIn`), accepting exactly one distinct amount. Code also decides the one address `navigate` offers
+and that nothing is added to the bag. `--runs N` repeats it, `--plain` uses the one-sentence wording, `--out dir` saves the final screenshots.
+The browser may only talk to aloyoga.com and the hosts it needs to draw itself (its menu, pictures, fonts); ads and trackers are aborted.
+
+`npm test` runs the same agent against a look-alike shop on loopback (`examples/storefront-browser/shop-site.ts`: a menu that opens on hover, a grid whose
+blue items are below the fold, a size picker, an "Add to bag" trap), replaying Jev from `tests/cassettes/storefront-browser`, and checks the result against the
+shop's own price list: a blue sweatshirt, size L selected, the price it read equals the listed price, nothing in the bag.
+
+Spelled-out steps matter a lot. Measured on 2026-11-20, 5 runs each:
+
+| Instructions | look-alike shop | real aloyoga.com |
+| - | - | - |
+| steps spelled out (default, `stepInstructions`) | 5 of 5 (9 to 12 steps) | 5 of 5 (8 to 11 steps) |
+| one sentence (`plainInstructions`) | 0 of 5 (step limit) | 0 of 5 (step limit) |
+
+With the one sentence Jev either scrolls up and down forever or repeats one action (pressing Enter 12 times); nothing in it says where to look first.
+Hover is the missing piece for menus: clicking WOMEN on aloyoga.com goes to a page with no sweatshirt entry, so `browserTools(..., { hover: true })` offers `hover(target)`.

@@ -4,6 +4,7 @@
  *
  *   navigate(url)       url  = one of the addresses in `urls`                  (only when `urls` is given)
  *   click(target)       target = the box around the element to click, or null when it is not in the screenshot
+ *   hover(target)       target = the box around the element to move the pointer onto (menus that open when hovered; only when `hover` is true)
  *   scroll(direction)   down / up / top / bottom, only the directions the scroll position allows
  *   type_text(text)     text = one of the candidates in `texts`, typed into the focused field (only when `texts` is given)
  *   press_key(key)      key  = one of `keys` (default Enter, Tab, Escape)
@@ -25,12 +26,14 @@ export type BrowserToolsOptions = {
   urls?: Candidates;
   /** Texts the agent may type, as `text` or `text -> when to use it`. Without it there is no `type_text` tool. */
   texts?: Candidates;
+  /** Offer `hover(target)`, a Box like `click`'s that moves the pointer instead of pressing: for menus that open on hover. Default false. */
+  hover?: boolean;
   /** Keys the agent may press. Default Enter, Tab and Escape. */
   keys?: Options;
   /** The state slot that holds the screenshot. Default `screen`. */
   screen?: string;
   /** Replace the wording of any question (every question names state by path and asks for one judgment). */
-  questions?: Partial<Record<"navigate" | "click" | "clickPresent" | "scroll" | "typeText" | "pressKey", string>>;
+  questions?: Partial<Record<"navigate" | "click" | "clickPresent" | "hover" | "hoverPresent" | "scroll" | "typeText" | "pressKey", string>>;
 };
 
 const DIRECTIONS: Record<ScrollDirection, string> = {
@@ -92,6 +95,27 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
         return { state, summary: `clicked ${clicked.element} at (${clicked.x}, ${clicked.y})${note}` };
       },
     }),
+    ...(options.hover
+      ? [
+          defineTool({
+            name: "hover",
+            description: `Moves the mouse pointer onto one element of the web page, which is the picture in \`${ref}\`, without clicking: menus open this way.`,
+            available: ({ state }) => hasScreen(state),
+            params: {
+              target: param.box({
+                question: q.hover ?? `the element that \`instructions\` say to point the mouse at, in \`${ref}\``,
+                image: ref,
+                present: q.hoverPresent ?? `Is the element that \`instructions\` say to point the mouse at visible in \`${ref}\`?`,
+              }),
+            },
+            run: async ({ target }) => {
+              if (!target) return { summary: "found nothing to point at: the element is not visible in the screenshot" };
+              const pointed = await browser.hoverBox(target);
+              return { state: await browser.snapshot(slot), summary: `pointed at ${pointed.element} at (${pointed.x}, ${pointed.y})` };
+            },
+          }),
+        ]
+      : []),
     defineTool({
       name: "scroll",
       description: "Scrolls the web page in the browser to see another part of it.",

@@ -1,0 +1,66 @@
+{
+  "hash": "34089879a16aeccc",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Go to the shop, find a blue sweatshirt, select size large, and get the price. Do it in these steps: 1. Open the shop's home page. 2. Point the mouse at a menu entry at the top of the page so that its menu opens, then click the entry for sweatshirts in that menu. 3. Scroll down the list until you see a blue sweatshirt, then click it. 4. On the product page, click the size L button. 5. Point at the price to read it into `state.price`. 6. Stop. Never add anything to the bag and never open the checkout.",
+        "state": {},
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "navigate": "Opens one of the web addresses in the options in the browser.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "navigate.url": {
+          "type": "choice",
+          "instructions": "Which address do `instructions` say to open in the browser next?",
+          "criteria": {
+            "http://127.0.0.1:47214/": "the home page of the shop"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "navigate",
+          "confidence": 0.98,
+          "probabilities": {
+            "navigate": 0.99,
+            "end": 0.01
+          }
+        },
+        "navigate.url": {
+          "type": "choice",
+          "choice": "http://127.0.0.1:47214/",
+          "confidence": 1,
+          "probabilities": {
+            "http://127.0.0.1:47214/": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 577,
+        "output_tokens": 91
+      }
+    }
+  }
+}
