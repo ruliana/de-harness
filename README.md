@@ -83,3 +83,4 @@ params: {
 | `src/events/` | typed events and the JSONL trace |
 | `examples/rooms/`, `examples/pizza/` | the example domains |
 | `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |
+| `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
