@@ -25,7 +25,8 @@ const toolsOf = (model: ScriptedModel, request: number) => Object.keys(criteria(
 const around = (b: Box, grow = 0): Box => ({ top: b.top - grow, bottom: b.bottom + grow, left: b.left - grow, right: b.right + grow });
 
 /** Opens `path`, runs the agent over it with the browser tools, and returns what is needed to judge it. */
-async function run(path: string, script: Script | ((box: (selector: string) => Promise<Box>) => Promise<Script>), options: BrowserToolsOptions = {}) {
+async function run(path: string, script: Script | ((box: (selector: string) => Promise<Box>) => Promise<Script>), options: BrowserToolsOptions = {}, session: BrowserSession = browser) {
+  const browser = session;
   if (path !== "") await browser.goto(site.url + path);
   const box = async (selector: string) => (await browser.boxOf(selector))!;
   const model = new ScriptedModel(typeof script === "function" ? await script(box) : script);
@@ -179,6 +180,63 @@ describe("browser: moving between pages", () => {
     const { result } = await run("/popup", async (box): Promise<Script> => [{ [TOOL_QUESTION]: "click", "click.target": say.box(await box("#out")), "click.target?present": 0.95 }, { [TOOL_QUESTION]: "end" }]);
     expect(result.state.page).toMatchObject({ url: `${site.url}/pricing`, title: "Pricing" });
   });
+
+  // Each of these needs a browser whose history starts empty: the shared one remembers every page the tests above opened.
+  const withFreshBrowser = async <T>(use: (fresh: BrowserSession) => Promise<T>): Promise<T> => {
+    const fresh = await BrowserSession.launch({ allowedHosts: ["127.0.0.1"], settleMs: 100 });
+    try {
+      return await use(fresh);
+    } finally {
+      await fresh.close();
+    }
+  };
+
+  it("does not go back to a blank page from the first page: the page stays, the step says so, and the run goes on", () =>
+    withFreshBrowser(async (fresh) => {
+      const goBack = { [TOOL_QUESTION]: "go_back" };
+      const { model, result } = await run("/", [goBack, { [TOOL_QUESTION]: "click", "click.target": say.box({ top: 0.9, bottom: 0.95, left: 0.9, right: 0.95 }), "click.target?present": 0.95 }, goBack, { [TOOL_QUESTION]: "end" }], {}, fresh);
+      expect(result.status).toBe("ended");
+      expect(result.steps[0]!.summary).toMatch(/there is no previous page to go back to/);
+      expect(result.state.page).toMatchObject({ url: `${site.url}/`, title: "Acme Studio" });
+      expect((await fresh.info()).url).toBe(`${site.url}/`);
+      expect(await fresh.visibleText()).toContain("Pick a colour");
+      expect(Object.keys(model.requests[1]!.images!)).toHaveLength(1); // the model still sees the page, not an empty screenshot
+    }));
+
+  it("stops offering go_back after three tries on a page with nothing before it, like any tool that changes nothing", () =>
+    withFreshBrowser(async (fresh) => {
+      const goBack = { [TOOL_QUESTION]: "go_back" };
+      const { model, result } = await run("/", [goBack, goBack, goBack, { [TOOL_QUESTION]: "end" }], {}, fresh);
+      expect(toolsOf(model, 2)).toContain("go_back");
+      expect(toolsOf(model, 3)).not.toContain("go_back");
+      expect((result.state.page as { url: string }).url).toBe(`${site.url}/`);
+    }));
+
+  it("goes back to the page before a link that loaded another page, and not past the first one", () =>
+    withFreshBrowser(async (fresh) => {
+      const goBack = { [TOOL_QUESTION]: "go_back" };
+      const { result } = await run("/", async (box): Promise<Script> => [{ [TOOL_QUESTION]: "click", "click.target": say.box(around(await box("nav a[href='/pricing']"), 0.01)), "click.target?present": 0.95 }, goBack, goBack, { [TOOL_QUESTION]: "end" }], {}, fresh);
+      expect(result.steps[0]!.summary).toMatch(/clicked/);
+      expect(result.steps[1]!.summary).toBe("went back to the previous page");
+      expect(result.steps[2]!.summary).toMatch(/there is no previous page/);
+      expect((result.state.page as { url: string }).url).toBe(`${site.url}/`);
+    }));
+
+  it("goes back after the page changed its view without loading a page (in-page navigation)", () =>
+    withFreshBrowser(async (fresh) => {
+      const { result } = await run("/views", async (box): Promise<Script> => [{ [TOOL_QUESTION]: "click", "click.target": say.box(await box("#next")), "click.target?present": 0.95 }, { [TOOL_QUESTION]: "go_back" }, { [TOOL_QUESTION]: "end" }], {}, fresh);
+      expect(result.steps[1]!.summary).toBe("went back to the previous page");
+      expect(result.state.page).toMatchObject({ url: `${site.url}/views` });
+      expect(await fresh.text()).toContain("View one");
+    }));
+
+  it("returns from a tab that a link opened to the tab it was opened from, and no further", () =>
+    withFreshBrowser(async (fresh) => {
+      const { result } = await run("/popup", async (box): Promise<Script> => [{ [TOOL_QUESTION]: "click", "click.target": say.box(await box("#out")), "click.target?present": 0.95 }, { [TOOL_QUESTION]: "go_back" }, { [TOOL_QUESTION]: "go_back" }, { [TOOL_QUESTION]: "end" }], {}, fresh);
+      expect(result.steps[1]!.summary).toBe("went back to the previous page");
+      expect(result.steps[2]!.summary).toMatch(/there is no previous page/);
+      expect(result.state.page).toMatchObject({ url: `${site.url}/popup`, title: "Popup" });
+    }));
 
   it("refuses an address on a host that is not allowed, as an error the agent sees, and stays where it was", async () => {
     await browser.goto(`${site.url}/short`);

@@ -61,11 +61,11 @@
         "__tool__": {
           "type": "choice",
           "choice": "click_item",
-          "confidence": 0.87,
+          "confidence": 0.9,
           "probabilities": {
             "open_menu": 0,
-            "scroll": 0.1,
-            "click_item": 0.9,
+            "scroll": 0.08,
+            "click_item": 0.92,
             "go_back": 0,
             "close_overlay": 0
           }

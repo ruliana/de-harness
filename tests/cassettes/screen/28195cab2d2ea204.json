@@ -66,25 +66,25 @@
         "__tool__": {
           "type": "choice",
           "choice": "end",
-          "confidence": 0.92,
+          "confidence": 0.96,
           "probabilities": {
-            "click": 0.04,
-            "end": 0.96
+            "click": 0.02,
+            "end": 0.98
           }
         },
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.34,
+            "top": 0.35,
             "bottom": 0.66,
             "left": 0.09,
             "right": 0.91
           },
-          "confidence": 0.87
+          "confidence": 0.53
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.03
         }
       },
       "usage": {

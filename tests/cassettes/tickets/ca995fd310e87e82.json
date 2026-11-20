@@ -185,13 +185,13 @@
       "answers": {
         "__tool__": {
           "type": "choice",
-          "choice": "set_status",
-          "confidence": 0.33,
+          "choice": "open_ticket",
+          "confidence": 0.27,
           "probabilities": {
-            "open_ticket": 0.36,
-            "assign": 0.14,
-            "set_status": 0.5,
-            "tag": 0
+            "open_ticket": 0.45,
+            "assign": 0.15,
+            "set_status": 0.39,
+            "tag": 0.01
           }
         },
         "open_ticket.ticket": {
@@ -205,10 +205,10 @@
         "assign.team": {
           "type": "choice",
           "choice": "technical",
-          "confidence": 0.87,
+          "confidence": 0.77,
           "probabilities": {
-            "billing": 0.08,
-            "technical": 0.9,
+            "billing": 0.15,
+            "technical": 0.83,
             "accounts": 0,
             "general": 0.02
           }
@@ -220,11 +220,11 @@
         "set_status.status": {
           "type": "choice",
           "choice": "closed",
-          "confidence": 0.92,
+          "confidence": 0.91,
           "probabilities": {
-            "open": 0.05,
+            "open": 0.06,
             "pending": 0,
-            "closed": 0.95
+            "closed": 0.94
           }
         },
         "set_status.repeats_another": {
@@ -234,12 +234,12 @@
         "tag.tag": {
           "type": "choice",
           "choice": "bug",
-          "confidence": 1,
+          "confidence": 0.99,
           "probabilities": {
-            "refund": 0,
+            "refund": 0.01,
             "urgent": 0,
             "vip": 0,
-            "bug": 1
+            "bug": 0.99
           }
         }
       },

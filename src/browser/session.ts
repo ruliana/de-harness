@@ -55,6 +55,8 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 export class BrowserSession {
   readonly viewport: { width: number; height: number };
   private page: Page;
+  /** The tabs the agent left behind by following a link that opened a new one, oldest first: where `back` returns when the new tab has no history. */
+  private readonly openers: Page[] = [];
   private blockedUrl: string | null = null;
   private readonly allowed: string[] | undefined;
   private readonly opts: Required<Pick<BrowserOptions, "settleMs" | "networkIdleMs" | "navigationTimeoutMs">>;
@@ -73,11 +75,18 @@ export class BrowserSession {
     const watch = (p: Page) => {
       p.on("dialog", (d) => void d.dismiss().catch(() => {})); // an alert must never freeze the agent
       p.setDefaultTimeout(this.opts.navigationTimeoutMs);
+      // A tab that closes itself (`window.close()`) must not leave the agent on a dead page: it returns to the tab it came from.
+      p.on("close", () => {
+        const at = this.openers.indexOf(p);
+        if (at >= 0) this.openers.splice(at, 1);
+        if (this.page === p) this.page = this.openers.pop() ?? this.page;
+      });
     };
     watch(page);
     // A click that opens a new tab moves the agent to that tab: the model only ever sees one page.
     context.on("page", (p) => {
       watch(p);
+      this.openers.push(this.page);
       this.page = p;
     });
   }
@@ -121,10 +130,41 @@ export class BrowserSession {
     await this.settle();
   }
 
+  /**
+   * Go to the previous page, like the back button, and say whether there was one. It never lands on a blank page: the
+   * `about:blank` the browser starts from (and an error page, which is shown for a blocked address) is not a page to go back to.
+   *   - on a tab with earlier pages in its history (also pages of in-page navigation, which Playwright's `goBack` reports as `null`): go back there;
+   *   - on a tab that a link opened and that has no earlier page: close it and return to the tab the link was in;
+   *   - otherwise: do nothing and return false, the page stays.
+   */
   async back(): Promise<boolean> {
-    const response = await this.page.goBack({ waitUntil: "load", timeout: this.opts.navigationTimeoutMs });
+    const steps = await this.stepsBack();
+    for (let i = 0; i < steps; i++) await this.page.goBack({ waitUntil: "load", timeout: this.opts.navigationTimeoutMs });
+    if (steps > 0) {
+      await this.settle();
+      return true;
+    }
+    const opener = this.openers.filter((p) => !p.isClosed()).pop();
+    if (!opener) return false;
+    const leaving = this.page;
+    this.openers.splice(this.openers.lastIndexOf(opener), 1);
+    this.page = opener;
+    await leaving.close().catch(() => {});
+    await opener.bringToFront();
     await this.settle();
-    return response !== null;
+    return true;
+  }
+
+  /** How many history entries lie between the page and the nearest earlier real page: 0 when there is none. */
+  private async stepsBack(): Promise<number> {
+    const cdp = await this.context.newCDPSession(this.page);
+    try {
+      const { currentIndex, entries } = await cdp.send("Page.getNavigationHistory");
+      for (let i = currentIndex - 1; i >= 0; i--) if (!/^(about:blank|chrome-error:)/.test(entries[i]!.url)) return currentIndex - i;
+      return 0;
+    } finally {
+      await cdp.detach().catch(() => {});
+    }
   }
 
   /** The viewport pixel at the centre of a Box (fractions of the screenshot), clamped to the viewport. */

@@ -201,29 +201,29 @@
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#5 App crashes when I open the settings page",
-          "confidence": 0.47,
+          "confidence": 0.4,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.08,
-            "#3 Refund for my cancelled subscription": 0.21,
+            "#2 Password reset email never arrives": 0.11,
+            "#3 Refund for my cancelled subscription": 0.15,
             "#4 How do I export my data to CSV?": 0,
-            "#5 App crashes when I open the settings page": 0.58,
-            "#8 Password reset email never arrives": 0.13
+            "#5 App crashes when I open the settings page": 0.52,
+            "#8 Password reset email never arrives": 0.22
           }
         },
         "assign.team": {
           "type": "choice",
           "choice": "technical",
-          "confidence": 0.85,
+          "confidence": 0.93,
           "probabilities": {
-            "billing": 0.08,
-            "technical": 0.89,
+            "billing": 0.04,
+            "technical": 0.95,
             "accounts": 0,
-            "general": 0.03
+            "general": 0.01
           }
         },
         "assign.instructed": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.05
         },
         "set_status.status": {
           "type": "choice",

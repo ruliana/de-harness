@@ -73,10 +73,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "descend",
-          "confidence": 1,
+          "confidence": 0.98,
           "probabilities": {
-            "descend": 1,
-            "end": 0
+            "descend": 0.99,
+            "end": 0.01
           }
         },
         "descend.child": {

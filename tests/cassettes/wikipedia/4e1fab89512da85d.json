@@ -258,7 +258,7 @@
         "open_link.link": {
           "type": "choice",
           "choice": "Enigma machine",
-          "confidence": 0.94,
+          "confidence": 0.95,
           "probabilities": {
             "Logic": 0,
             "Theoretical computer science": 0,
@@ -267,7 +267,7 @@
             "Turing machine": 0,
             "Cryptanalysis": 0.01,
             "Allies of World War II": 0,
-            "Enigma machine": 0.94,
+            "Enigma machine": 0.95,
             "Turing test": 0,
             "Philosophy of artificial intelligence": 0,
             "Turing pattern": 0,
@@ -281,7 +281,7 @@
             "Codebreaking": 0,
             "Hut 8": 0,
             "Bomba (cryptography)": 0,
-            "Cryptanalysis of the Enigma": 0.04,
+            "Cryptanalysis of the Enigma": 0.03,
             "Ultra (cryptography)": 0,
             "Battle of the Atlantic": 0,
             "National Physical Laboratory (United Kingdom)": 0,

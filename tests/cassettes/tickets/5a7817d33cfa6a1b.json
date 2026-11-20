@@ -165,34 +165,34 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_ticket",
-          "confidence": 0.82,
+          "confidence": 0.8,
           "probabilities": {
-            "open_ticket": 0.88,
-            "set_status": 0.12,
+            "open_ticket": 0.87,
+            "set_status": 0.13,
             "tag": 0
           }
         },
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#7 App crashes when I open the settings page",
-          "confidence": 0.5,
+          "confidence": 0.42,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.16,
-            "#3 Refund for my cancelled subscription": 0.1,
+            "#2 Password reset email never arrives": 0.07,
+            "#3 Refund for my cancelled subscription": 0.3,
             "#4 How do I export my data to CSV?": 0,
-            "#5 App crashes when I open the settings page": 0.1,
-            "#7 App crashes when I open the settings page": 0.58,
-            "#8 Password reset email never arrives": 0.06
+            "#5 App crashes when I open the settings page": 0.04,
+            "#7 App crashes when I open the settings page": 0.52,
+            "#8 Password reset email never arrives": 0.07
           }
         },
         "set_status.status": {
           "type": "choice",
           "choice": "open",
-          "confidence": 0.94,
+          "confidence": 0.92,
           "probabilities": {
-            "open": 0.96,
+            "open": 0.95,
             "pending": 0,
-            "closed": 0.04
+            "closed": 0.05
           }
         },
         "set_status.repeats_another": {
@@ -201,13 +201,13 @@
         },
         "tag.tag": {
           "type": "choice",
-          "choice": "urgent",
-          "confidence": 0.24,
+          "choice": "refund",
+          "confidence": 0.28,
           "probabilities": {
-            "refund": 0.41,
-            "urgent": 0.43,
+            "refund": 0.46,
+            "urgent": 0.37,
             "vip": 0.03,
-            "bug": 0.13
+            "bug": 0.14
           }
         }
       },

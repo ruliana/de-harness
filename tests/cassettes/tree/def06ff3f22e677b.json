@@ -76,11 +76,11 @@
         "__tool__": {
           "type": "choice",
           "choice": "descend",
-          "confidence": 0.99,
+          "confidence": 0.97,
           "probabilities": {
-            "descend": 0.99,
+            "descend": 0.98,
             "ascend": 0,
-            "select": 0.01,
+            "select": 0.02,
             "end": 0
           }
         },

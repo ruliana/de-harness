@@ -52,12 +52,12 @@
         "tactic": {
           "type": "choice",
           "choice": "click_item",
-          "confidence": 0.83,
+          "confidence": 0.81,
           "probabilities": {
-            "open_menu": 0,
+            "open_menu": 0.01,
             "pick_menu_entry": 0,
-            "scroll": 0.05,
-            "click_item": 0.85,
+            "scroll": 0.06,
+            "click_item": 0.83,
             "select_option": 0.03,
             "read_value": 0.05,
             "go_back": 0,

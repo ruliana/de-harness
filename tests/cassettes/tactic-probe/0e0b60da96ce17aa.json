@@ -52,17 +52,17 @@
         "tactic": {
           "type": "choice",
           "choice": "read_value",
-          "confidence": 0.8,
+          "confidence": 0.84,
           "probabilities": {
             "open_menu": 0,
             "pick_menu_entry": 0,
             "scroll": 0,
             "click_item": 0,
             "select_option": 0,
-            "read_value": 0.82,
+            "read_value": 0.86,
             "go_back": 0,
             "close_overlay": 0,
-            "end": 0.18
+            "end": 0.14
           }
         }
       },

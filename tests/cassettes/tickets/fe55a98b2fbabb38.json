@@ -152,10 +152,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_ticket",
-          "confidence": 0.92,
+          "confidence": 0.96,
           "probabilities": {
-            "open_ticket": 0.96,
-            "tag": 0.04
+            "open_ticket": 0.98,
+            "tag": 0.02
           }
         },
         "open_ticket.ticket": {
@@ -171,12 +171,12 @@
         "tag.tag": {
           "type": "choice",
           "choice": "bug",
-          "confidence": 0.37,
+          "confidence": 0.35,
           "probabilities": {
-            "refund": 0.34,
-            "urgent": 0.12,
+            "refund": 0.35,
+            "urgent": 0.13,
             "vip": 0.01,
-            "bug": 0.53
+            "bug": 0.51
           }
         }
       },

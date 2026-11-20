@@ -65,9 +65,9 @@
           "confidence": 0.94,
           "probabilities": {
             "open_menu": 0.95,
-            "pick_menu_entry": 0,
+            "pick_menu_entry": 0.01,
             "scroll": 0.04,
-            "click_item": 0.01,
+            "click_item": 0,
             "select_option": 0,
             "read_value": 0,
             "go_back": 0,
