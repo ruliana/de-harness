@@ -1,0 +1,7590 @@
+{
+  "hash": "0a83be8268cbe4ca",
+  "request": {
+    "method": "GET",
+    "url": "https://www.aloyoga.com/collections/womens-sweatshirts-hoodies/products.json?limit=250&page=1",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "products": [
+        {
+          "handle": "m3349r-waffle-chenille-edition-hoodie-black-womens",
+          "title": "Waffle Chenille Edition Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-paradise-pink",
+          "title": "Cropped Accolade Crewneck - Paradise Pink",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Paradise Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3039r-make-waves-hoodie-charcoal-green-tonal",
+          "title": "Make Waves Hoodie - Charcoal Green Tonal",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Charcoal Green Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4702r-cropped-mountain-peak-full-zip-hoodie-ivory",
+          "title": "Cropped Mountain Peak Full-Zip Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-black",
+          "title": "Cropped Serenity Coverup - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3041rg-accolade-full-zip-hoodie-athletic-heather-grey",
+          "title": "Accolade Full Zip Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-espresso",
+          "title": "Accolade Crew Neck Pullover - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3032rg-accolade-hoodie-navy",
+          "title": "Accolade Hoodie - Navy",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-black",
+          "title": "Accolade 1/4 Zip Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3039r-accolade-wave-hoodie-gravel-bone-ivory",
+          "title": "Make Waves Hoodie - Ivory/Bone/Gravel",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory/Bone/Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4702r-cropped-mountain-peak-full-zip-hoodie-black",
+          "title": "Cropped Mountain Peak Full-Zip Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3438r-muse-hoodie-gravel-heather",
+          "title": "Muse Hoodie - Gravel Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3045r-new-class-cashmere-crewneck-sweater-black",
+          "title": "Unisex Wool Cashmere New Class Crewneck Sweater - Black",
+          "product_type": "Women:Outerwear:Coverups:Sweaters",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "298",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3032rg-accolade-hoodie-bone",
+          "title": "Accolade Hoodie - Bone",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3295r-soho-pullover-ivory",
+          "title": "Soho Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3048r-make-waves-crew-neck-pullover-sunset-pink-tonal",
+          "title": "Make Waves Crew Neck Pullover - Sunset Pink Tonal",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Sunset Pink Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3814r-bae-hoodie-ivory",
+          "title": "Bae Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3041rg-accolade-full-zip-hoodie-black",
+          "title": "Accolade Full Zip Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3438r-muse-hoodie-ivory",
+          "title": "Muse Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3046r-new-class-cashmere-full-zip-hoodie-platinum-grey",
+          "title": "Wool Cashmere New Class Full Zip Hoodie - Platinum Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Platinum Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3045r-new-class-cashmere-crewneck-sweater-platinum-grey",
+          "title": "Unisex Wool Cashmere New Class Crewneck Sweater - Platinum Grey",
+          "product_type": "Women:Outerwear:Coverups:Sweaters",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Platinum Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "298",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3039r-make-waves-hoodie-sunset-pink-tonal",
+          "title": "Make Waves Hoodie - Sunset Pink Tonal",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Sunset Pink Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3859r-sweet-escape-zip-up-hoodie-athletic-heather-grey",
+          "title": "Sweet Escape Zip Up Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-black",
+          "title": "Cropped Accolade Crewneck - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3694r-alosoft-1-2-zip-rapid-pullover-black",
+          "title": "Alosoft 1/2 Zip Rapid Pullover - Black",
+          "product_type": "Women:Tops:Long Sleeves",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-athletic-heather-grey",
+          "title": "Accolade 1/4 Zip Pullover - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-black",
+          "title": "Accolade Crew Neck Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3046r-new-class-cashmere-full-zip-hoodie-black",
+          "title": "Wool Cashmere New Class Full Zip Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-athletic-heather-grey",
+          "title": "Accolade Crew Neck Pullover - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3845r-hazy-mock-neck-pullover-ivory",
+          "title": "Hazy Mock Neck Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3845r-hazy-mock-neck-pullover-black",
+          "title": "Hazy Mock Neck Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3550rg-accolade-hoodie-black",
+          "title": "Accolade Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-gravel-1",
+          "title": "Accolade Crew Neck Pullover - Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3295r-soho-pullover-black",
+          "title": "Soho Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3887r-cashmere-plush-waffle-1-4-zip-pullover-dark-heather-grey",
+          "title": "Cashmere Plush Waffle 1/4 Zip Pullover - Dark Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Dark Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "338",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3032rg-accolade-hoodie-espresso",
+          "title": "Accolade Hoodie - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3438r-muse-hoodie-navy",
+          "title": "Muse Hoodie - Navy",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3550rg-accolade-hoodie-athletic-heather-grey",
+          "title": "Accolade Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3438r-muse-hoodie-black",
+          "title": "Muse Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3039r-make-waves-hoodie-navy-tonal",
+          "title": "Make Waves Hoodie - Navy Tonal",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3814r-bae-hoodie-black",
+          "title": "Bae Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3694r-alosoft-1-2-zip-rapid-pullover-white",
+          "title": "Alosoft 1/2 Zip Rapid Pullover - White",
+          "product_type": "Women:Tops:Long Sleeves",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3438r-muse-hoodie-athletic-heather-grey",
+          "title": "Muse Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3032rg-accolade-hoodie-ivory",
+          "title": "Accolade Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3783r-cable-knit-winter-bliss-hoodie-black",
+          "title": "Cable Knit Winter Bliss Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3207r-chill-crew-black-womens",
+          "title": "Chill Crew Neck Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3887r-cashmere-plush-waffle-1-4-zip-pullover-ivory",
+          "title": "Cashmere Plush Waffle 1/4 Zip Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "338",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3859r-sweet-escape-zip-up-hoodie-ivory",
+          "title": "Sweet Escape Zip Up Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3039r-accolade-wave-hoodie-espresso-tonal",
+          "title": "Make Waves Hoodie - Espresso Tonal",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3026r-scholar-hooded-sweater-espresso",
+          "title": "Scholar Hooded Sweater - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "218",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3814r-bae-hoodie-athletic-heather-grey",
+          "title": "Bae Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3039r-accolade-wave-hoodie-athletic-heather-grey-tonal",
+          "title": "Make Waves Hoodie - Athletic Heather Grey Tonal",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3678r-thermal-weekend-escape-mock-neck-long-sleeve-black",
+          "title": "Waffle Weekend Escape Mock Neck Long Sleeve - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3859r-sweet-escape-zip-up-hoodie-black",
+          "title": "Sweet Escape Zip Up Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3032rg-accolade-hoodie-white",
+          "title": "Accolade Hoodie - White",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3254r-chill-vintage-wash-hoodie-gravel-wash-womens",
+          "title": "Chill Vintage Wash Hoodie - Gravel Wash",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel Wash"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3295r-soho-pullover-athletic-heather-grey",
+          "title": "Soho Pullover - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3039r-make-waves-hoodie-vintage-black-tonal",
+          "title": "Make Waves Hoodie - Vintage Black Tonal",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Vintage Black Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3047r-new-class-cashmere-hoodie-platinum-grey",
+          "title": "Wool Cashmere New Class Hoodie - Platinum Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Platinum Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3242r-triumph-restore-crew-neck-sweatshirt-black-womens-1",
+          "title": "Triumph Restore Crew Neck Sweatshirt - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3047r-new-class-cashmere-hoodie-celestial-blue-granite-heather",
+          "title": "Wool Cashmere New Class Hoodie - Celestial Blue Granite Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Celestial Blue Granite Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3047r-new-class-cashmere-hoodie-black",
+          "title": "Wool Cashmere New Class Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3207r-chill-crew-athletic-heather-grey-womens",
+          "title": "Chill Crew Neck Pullover - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3887r-cashmere-plush-waffle-1-4-zip-pullover-black",
+          "title": "Cashmere Plush Waffle 1/4 Zip Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "338",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3245r-double-take-hoodie-black-womens",
+          "title": "Double Take Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3207r-chill-crew-bone-womens",
+          "title": "Chill Crew Neck Pullover - Bone",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3026r-scholar-hooded-sweater-ivory",
+          "title": "Scholar Hooded Sweater - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "218",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3013r-renown-hoodie-athletic-heather-grey",
+          "title": "Renown Heavy Weight Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u4011r-renown-full-zip-hoodie-athletic-heather-grey",
+          "title": "Renown Heavy Weight Full Zip Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3013r-renown-hoodie-black",
+          "title": "Renown Heavy Weight Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-white",
+          "title": "Cropped 1/4 Zip Alumni Pullover - White",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3026r-scholar-hooded-sweater-black",
+          "title": "Scholar Hooded Sweater - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "218",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3245r-double-take-hoodie-bone-womens",
+          "title": "Double Take Hoodie - Bone",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3243r-triumph-restore-hoodie-black-womens-1",
+          "title": "Triumph Restore Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3243r-triumph-restore-hoodie-bone-womens",
+          "title": "Triumph Restore Hoodie - Bone",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3259r-light-weight-takeaway-track-pullover-black-womens",
+          "title": "Light Weight Takeaway Track Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3243r-triumph-restore-hoodie-grey-triblend-womens",
+          "title": "Triumph Restore Hoodie - Grey Triblend",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Grey Triblend"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3242r-triumph-restore-crew-neck-sweatshirt-grey-triblend-womens",
+          "title": "Triumph Restore Crew Neck Sweatshirt - Grey Triblend",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Grey Triblend"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "98",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3741r-cashmere-summer-daze-full-zp-hd-ivory",
+          "title": "Cashmere Plush Waffle Full Zip Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3741r-cashmere-plush-waffle-full-zip-hoodie-athletic-heather-grey",
+          "title": "Cashmere Plush Waffle Full Zip Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3741r-cashmere-summer-daze-full-zp-hd-black",
+          "title": "Cashmere Plush Waffle Full Zip Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3254r-chill-vintage-wash-hoodie-black-wash-womens",
+          "title": "Chill Vintage Wash Hoodie - Black Wash",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black Wash"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3783r-cable-knit-winter-bliss-hoodie-ivory",
+          "title": "Cable Knit Winter Bliss Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3845r-hazy-mock-neck-pullover-athletic-heather-grey",
+          "title": "Hazy Mock Neck Pullover - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3259r-light-weight-takeaway-track-pullover-navy-womens",
+          "title": "Light Weight Takeaway Track Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-black",
+          "title": "Cropped 1/4 Zip Alumni Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3694r-alosoft-1-2-zip-rapid-pullover-anthracite",
+          "title": "Alosoft 1/2 Zip Rapid Pullover - Anthracite",
+          "product_type": "Women:Tops:Long Sleeves",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Anthracite"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-oatmeal-heather",
+          "title": "Accolade Crew Neck Pullover - Oatmeal Heather",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Oatmeal Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3254r-chill-vintage-wash-hoodie-woodrose-wash-womens",
+          "title": "Chill Vintage Wash Hoodie - Woodrose Wash",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Woodrose Wash"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "76",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-bluestone",
+          "title": "Accolade Crew Neck Pullover - Bluestone",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bluestone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3678r-thermal-weekend-escape-mock-neck-long-sleeve-ivory",
+          "title": "Waffle Weekend Escape Mock Neck Long Sleeve - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u4011r-renown-full-zip-hoodie-gravel",
+          "title": "Renown Full Zip Hoodie - Gravel",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u4011r-renown-full-zip-hoodie-black",
+          "title": "Renown Heavy Weight Full Zip Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-ivory",
+          "title": "Cropped Serenity Coverup - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3210r-chill-hoodie-black-womens",
+          "title": "Chill Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3210r-chill-hoodie-athletic-heather-grey-womens",
+          "title": "Chill Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3048r-make-waves-crew-neck-pullover-dark-heather-grey-tonal",
+          "title": "Make Waves Crew Neck Pullover - Dark Heather Grey Tonal",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Dark Heather Grey Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3210r-chill-hoodie-navy-womens",
+          "title": "Chill Hoodie - Navy",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3048r-make-waves-crew-neck-pullover-athletic-heather-grey-tonal",
+          "title": "Make Waves Crew Neck Pullover - Athletic Heather Grey Tonal",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey Tonal"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3048r-make-waves-crew-neck-pullover-ivory-bone-gravel",
+          "title": "Make Waves Crew Neck Pullover - Ivory/Bone/Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory/Bone/Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS WOMEN/XXS MEN",
+                "S WOMEN/XS MEN",
+                "M WOMEN/S MEN",
+                "L WOMEN/M MEN",
+                "XL WOMEN/L MEN",
+                "2XL WOMEN/XL MEN",
+                "3XL WOMEN/2XL MEN"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3741r-cashmere-plush-waffle-full-zip-hoodie-macadamia-blush",
+          "title": "Cashmere Plush Waffle Full Zip Hoodie - Macadamia Blush",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Macadamia Blush"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3946r-sheer-cashmere-cropped-cardigan-black",
+          "title": "Sheer Cashmere Cropped Cardigan - Black",
+          "product_type": "Women:Outerwear:Coverups:Sweaters",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "268",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3946r-sheer-cashmere-cropped-cardigan-ivory",
+          "title": "Sheer Cashmere Cropped Cardigan - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Sweaters",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "268",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3937r-cropped-sway-crew-neck-pullover-black",
+          "title": "Cropped Sway Crew Neck Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3937r-cropped-sway-crew-neck-pullover-athletic-heather-grey",
+          "title": "Cropped Sway Crew Neck Pullover - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-navy",
+          "title": "Accolade 1/4 Zip Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-athletic-heather-grey",
+          "title": "Cropped Serenity Coverup - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-navy",
+          "title": "Cropped Accolade Crewneck - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-white",
+          "title": "Cropped Accolade Crewneck - White",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-ivory",
+          "title": "Cropped Accolade Crewneck - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3047r-new-class-short-sleeve-cashmere-hoodie-bone-heather",
+          "title": "Wool Cashmere New Class Hoodie - Bone Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3290r-double-take-long-sleeve-1-4-zip-bone-womens",
+          "title": "Double Take Long Sleeve 1/4 Zip - Bone",
+          "product_type": "Women:Tops:Long Sleeves",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-navy",
+          "title": "Accolade Crew Neck Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-navy",
+          "title": "Cropped Serenity Coverup - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3887r-cashmere-plush-waffle-1-4-zip-pullover-burgundy",
+          "title": "Cashmere Plush Waffle 1/4 Zip Pullover - Burgundy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Burgundy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "338",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3290r-double-take-long-sleeve-1-4-zip-espresso-womens",
+          "title": "Double Take Long Sleeve 1/4 Zip - Espresso",
+          "product_type": "Women:Tops:Long Sleeves",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3290r-double-take-long-sleeve-1-4-zip-black-womens",
+          "title": "Double Take Long Sleeve 1/4 Zip - Black",
+          "product_type": "Women:Tops:Long Sleeves",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-bone",
+          "title": "Accolade Crew Neck Pullover - Bone",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3783r-cable-knit-winter-bliss-hoodie-light-cocoa",
+          "title": "Cable Knit Winter Bliss Hoodie - Light Cocoa",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Light Cocoa"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3845r-hazy-mock-neck-pullover-espresso",
+          "title": "Hazy Mock Neck Pullover - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-light-cocoa",
+          "title": "Cropped Serenity Coverup - Light Cocoa",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Light Cocoa"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3026r-scholar-hooded-sweater-light-cocoa",
+          "title": "Scholar Hooded Sweater - Light Cocoa",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Light Cocoa"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "218",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3026r-scholar-hooded-sweater-burgundy",
+          "title": "Scholar Hooded Sweater - Burgundy",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Burgundy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "218",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-bluestone",
+          "title": "Accolade 1/4 Zip Pullover - Bluestone",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bluestone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w3783r-cable-knit-winter-bliss-hoodie-athletic-heather-grey-2",
+          "title": "Cable Knit Winter Bliss Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3950r-muse-crew-neck-pullover-black",
+          "title": "Muse Crew Neck Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3950r-muse-crew-neck-pullover-navy",
+          "title": "Muse Crew Neck Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-winter-frost",
+          "title": "Cropped Accolade Crewneck - Winter Frost",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Winter Frost"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-winter-frost",
+          "title": "Cropped Serenity Coverup - Winter Frost",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Winter Frost"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31007r-polar-fleece-retreat-cover-up-black",
+          "title": "Polar Fleece Retreat Cover Up - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31007r-polar-fleece-retreat-cover-up-white-heather-grey",
+          "title": "Polar Fleece Retreat Cover Up - White Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3783r-cable-knit-winter-bliss-hoodie-winter-frost",
+          "title": "Cable Knit Winter Bliss Hoodie - Winter Frost",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Winter Frost"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "158",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3987r-polar-fleece-hazy-pullover-ivory",
+          "title": "Polar Fleece Hazy Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-black",
+          "title": "Sway Full Zip Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-brownstone",
+          "title": "Sway Full Zip Hoodie - Brownstone",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Brownstone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31022r-cashmere-ribbed-noble-full-zip-hoodie-black",
+          "title": "Wool Cashmere Ribbed Noble Full Zip Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31022r-cashmere-ribbed-noble-full-zip-hoodie-platinum-grey",
+          "title": "Wool Cashmere Ribbed Noble Full Zip Hoodie - Platinum Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Platinum Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31022r-cashmere-ribbed-noble-full-zip-hoodie-chai-latte",
+          "title": "Wool Cashmere Ribbed Noble Full Zip Hoodie - Chai Latte",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Chai Latte"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3047r-new-class-cashmere-hoodie-winter-frost",
+          "title": "Wool Cashmere New Class Hoodie - Winter Frost",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Winter Frost"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3013r-renown-heavy-weight-hoodie-winter-frost",
+          "title": "Renown Heavy Weight Hoodie - Winter Frost",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Winter Frost"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-espresso",
+          "title": "Cropped Serenity Coverup - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3056r-new-class-cashmere-1-4-zip-pullover-black",
+          "title": "Wool Cashmere New Class 1/4 Zip Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Sweaters",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "388",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3051r-pinstripe-hoodie-black-pinstripe",
+          "title": "Pinstripe Hoodie - Black Pinstripe",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black Pinstripe"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3051r-pinstripe-hoodie-espresso-pinstripe",
+          "title": "Pinstripe Hoodie - Espresso Pinstripe",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso Pinstripe"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3210r-chill-hoodie-brownstone-womens",
+          "title": "Chill Hoodie - Brownstone",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Brownstone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3056r-new-class-cashmere-1-4-zip-pullover-navy",
+          "title": "Wool Cashmere New Class 1/4 Zip Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Sweaters",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "388",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-bright-red",
+          "title": "Cropped Accolade Crewneck - Bright Red",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bright Red"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-anthracite",
+          "title": "Cropped Accolade Crewneck - Anthracite",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Anthracite"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3845r-hazy-mock-neck-pullover-anthracite",
+          "title": "Hazy Mock Neck Pullover - Anthracite",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Anthracite"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3937r-cropped-sway-crew-neck-pullover-navy",
+          "title": "Cropped Sway Crew Neck Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31057r-cashmere-new-class-crewneck-sweater-navy",
+          "title": "Wool Cashmere Cropped New Class Crewneck Sweater - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "288",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-athletic-heather-grey",
+          "title": "Sway Full Zip Hoodie - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-candlelight-yellow",
+          "title": "Cropped Accolade Crewneck - Candlelight Yellow",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Candlelight Yellow"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3014r-renown-crew-neck-pullover-bone",
+          "title": "Renown Heavy Weight Crew Neck Pullover - Bone",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3014r-renown-crew-neck-pullover-athletic-heather-grey",
+          "title": "Renown Heavy Weight Crew Neck Pullover - Athletic Heather Grey",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Athletic Heather Grey"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3245r-double-take-hoodie-anthracite-womens",
+          "title": "Double Take Hoodie - Anthracite",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Anthracite"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3026r-scholar-hooded-sweater-anthracite",
+          "title": "Scholar Hooded Sweater - Anthracite",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Anthracite"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "218",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-candy-heart-pink",
+          "title": "Cropped Accolade Crewneck - Candy Heart Pink",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Candy Heart Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4736r-alosoft-sincere-fitted-jacket-candy-heart-pink",
+          "title": "Alosoft Sincere Fitted Jacket - Candy Heart Pink",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Candy Heart Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4736r-alosoft-sincere-fitted-jacket-black",
+          "title": "Alosoft Sincere Fitted Jacket - Black",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-plum-kiss",
+          "title": "Sway Full Zip Hoodie - Plum Kiss",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Plum Kiss"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-espresso",
+          "title": "Sway Full Zip Hoodie - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-plum-kiss",
+          "title": "Accolade Crew Neck Pullover - Plum Kiss",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Plum Kiss"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3026r-scholar-hooded-sweater-gravel",
+          "title": "Scholar Hooded Sweater - Gravel",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "218",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3051r-pinstripe-hoodie-bone-pinstripe",
+          "title": "Pinstripe Hoodie - Bone Pinstripe",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bone Pinstripe"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3245r-double-take-hoodie-gravel-womens",
+          "title": "Double Take Hoodie - Gravel",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3041rg-accolade-full-zip-hoodie-olive-tree",
+          "title": "Accolade Full Zip Hoodie - Olive Tree",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Olive Tree"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w3845r-hazy-mock-neck-pullover-olive-tree",
+          "title": "Hazy Mock Neck Pullover - Olive Tree",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Olive Tree"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-olive-tree",
+          "title": "Cropped Serenity Coverup - Olive Tree",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Olive Tree"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3937r-cropped-sway-crew-neck-pullover-olive-tree",
+          "title": "Cropped Sway Crew Neck Pullover - Olive Tree",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Olive Tree"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w31007r-polar-fleece-retreat-cover-up-olive-tree",
+          "title": "Polar Fleece Retreat Cover Up - Olive Tree",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Olive Tree"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-vintage-pink",
+          "title": "Accolade Crew Neck Pullover - Vintage Pink",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Vintage Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3859r-sweet-escape-zip-up-hoodie-vintage-pink",
+          "title": "Sweet Escape Zip Up Hoodie - Vintage Pink",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Vintage Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-vintage-pink",
+          "title": "Cropped Accolade Crewneck - Vintage Pink",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Vintage Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-oatmeal-heather",
+          "title": "Accolade 1/4 Zip Pullover - Oatmeal Heather",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Oatmeal Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "u3041rg-accolade-full-zip-hoodie-gravel",
+          "title": "Accolade Full Zip Hoodie - Gravel",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-oatmeal-heather",
+          "title": "Cropped Serenity Coverup - Oatmeal Heather",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Oatmeal Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4601r-scholar-knit-cropped-full-zip-jacket-oatmeal-heather",
+          "title": "Scholar Knit Cropped Full Zip Jacket - Oatmeal Heather",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Oatmeal Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-sunshine",
+          "title": "Cropped Accolade Crewneck - Sunshine",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Sunshine"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "u3055r-take-it-easy-long-sleeve-henley-pullover-black",
+          "title": "Take It Easy Long Sleeve Henley Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3055r-take-it-easy-long-sleeve-henley-pullover-white",
+          "title": "Take It Easy Long Sleeve Henley Pullover - White",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-sunshine",
+          "title": "Cropped 1/4 Zip Alumni Pullover - Sunshine",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Sunshine"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-sunshine",
+          "title": "Accolade Crew Neck Pullover - Sunshine",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Sunshine"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3046r-wool-cashmere-new-class-full-zip-hoodie-oatmeal-heather",
+          "title": "Wool Cashmere New Class Full Zip Hoodie - Oatmeal Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Oatmeal Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3056r-wool-cashmere-new-class-1-4-zip-pullover-oatmeal-heather",
+          "title": "Wool Cashmere New Class 1/4 Zip Pullover - Oatmeal Heather",
+          "product_type": "Women:Outerwear:Coverups:Sweaters",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Oatmeal Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "388",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3207r-chill-crew-pullover-olive-tree-womens",
+          "title": "Chill Crew Neck Pullover - Olive Tree",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Olive Tree"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-light-provence-blue",
+          "title": "Accolade Crew Neck Pullover - Light Provence Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Light Provence Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-navy",
+          "title": "Cropped 1/4 Zip Alumni Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-light-provence-blue",
+          "title": "Cropped 1/4 Zip Alumni Pullover - Light Provence Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Light Provence Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-paradise-pink",
+          "title": "Accolade Crew Neck Pullover - Paradise Pink",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Paradise Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3046r-wool-cashmere-new-class-full-zip-hoodie-navy",
+          "title": "Wool Cashmere New Class Full Zip Hoodie - Navy",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-light-provence-blue",
+          "title": "Cropped Accolade Crewneck - Light Provence Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Light Provence Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4736r-alosoft-sincere-fitted-jacket-navy",
+          "title": "Alosoft Sincere Fitted Jacket - Navy",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4736r-alosoft-sincere-fitted-jacket-light-provence-blue",
+          "title": "Alosoft Sincere Fitted Jacket - Light Provence Blue",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Light Provence Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31022r-wool-cashmere-ribbed-noble-full-zip-hoodie-paradise-pink",
+          "title": "Wool Cashmere Ribbed Noble Full Zip Hoodie - Paradise Pink",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Paradise Pink"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3046r-wool-cashmere-new-class-full-zip-hoodie-white-heather",
+          "title": "Wool Cashmere New Class Full Zip Hoodie - White Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3245r-double-take-hoodie-white-heather-womens",
+          "title": "Double Take Hoodie - White Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3307r-axis-hooded-pullover-blue-breeze-womens",
+          "title": "Axis Hooded Pullover - Blue Breeze",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Blue Breeze"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-sun-kissed-brown",
+          "title": "Accolade Crew Neck Pullover - Sun Kissed Brown",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Sun Kissed Brown"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3041rg-accolade-full-zip-hoodie-navy",
+          "title": "Accolade Full Zip Hoodie - Navy",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-ivory",
+          "title": "Cropped 1/4 Zip Alumni Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-navy",
+          "title": "Sway Full Zip Hoodie - Navy",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-summer-romance-red",
+          "title": "Accolade Crew Neck Pullover - Summer Romance Red",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Summer Romance Red"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-azure-blue",
+          "title": "Accolade Crew Neck Pullover - Azure Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Azure Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31022r-wool-cashmere-ribbed-noble-full-zip-hoodie-azure-blue",
+          "title": "Wool Cashmere Ribbed Noble Full Zip Hoodie - Azure Blue",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Azure Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "398",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31047r-1-4-zip-go-time-pullover-black",
+          "title": "1/4 Zip Go Time Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31047r-1-4-zip-go-time-pullover-azure-blue",
+          "title": "1/4 Zip Go Time Pullover - Azure Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Azure Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31047r-1-4-zip-go-time-pullover-white",
+          "title": "1/4 Zip Go Time Pullover - White",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-white-heather",
+          "title": "Accolade 1/4 Zip Pullover - White Heather",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31104r-sway-on-the-go-jacket-black",
+          "title": "Sway On The Go Jacket - Black",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31104r-sway-on-the-go-jacket-white-heather",
+          "title": "Sway On The Go Jacket - White Heather",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3937r-cropped-sway-crew-neck-pullover-white-heather",
+          "title": "Cropped Sway Crew Neck Pullover - White Heather",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4601r-scholar-knit-cropped-full-zip-jacket-white-heather",
+          "title": "Scholar Knit Cropped Full Zip Jacket - White Heather",
+          "product_type": "Women:Outerwear:Jackets",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-white",
+          "title": "Accolade Crew Neck Pullover - White",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "White"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3351r-chunky-knit-rewind-hoodie-espresso-multi-womens",
+          "title": "Chunky Knit Rewind Hoodie - Espresso Multi",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso Multi"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "228",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31047r-1-4-zip-go-time-pullover-satsuma-breeze",
+          "title": "1/4 Zip Go Time Pullover - Satsuma Breeze",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Satsuma Breeze"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-dune-grass",
+          "title": "Accolade Crew Neck Pullover - Dune Grass",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Dune Grass"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3245r-double-take-hoodie-dune-grass-womens",
+          "title": "Double Take Hoodie - Dune Grass",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Dune Grass"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-pink-marshmallow",
+          "title": "Accolade Crew Neck Pullover - Pink Marshmallow",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Pink Marshmallow"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-pink-marshmallow",
+          "title": "Cropped 1/4 Zip Alumni Pullover - Pink Marshmallow",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Pink Marshmallow"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31103r-alosoft-finesse-full-zip-fitted-hoodie-black",
+          "title": "Alosoft Finesse Full Zip Fitted Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31103r-alosoft-finesse-full-zip-fitted-hoodie-vintage-athletic-heather",
+          "title": "Alosoft Finesse Full Zip Fitted Hoodie - Vintage Athletic Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Vintage Athletic Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31103r-alosoft-finesse-full-zip-fitted-hoodie-pink-marshmallow",
+          "title": "Alosoft Finesse Full Zip Fitted Hoodie - Pink Marshmallow",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Pink Marshmallow"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-california-blue",
+          "title": "Accolade Crew Neck Pullover - California Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "California Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-california-blue",
+          "title": "Accolade 1/4 Zip Pullover - California Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "California Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3660r-cropped-1-4-zip-alumni-pullover-california-blue",
+          "title": "Cropped 1/4 Zip Alumni Pullover - California Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "California Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-warm-butter",
+          "title": "Accolade Crew Neck Pullover - Warm Butter",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Warm Butter"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-espresso",
+          "title": "Accolade 1/4 Zip Pullover - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-java-brown",
+          "title": "Accolade Crew Neck Pullover - Java Brown",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Java Brown"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-java-brown",
+          "title": "Sway Full Zip Hoodie - Java Brown",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Java Brown"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3041rg-accolade-full-zip-hoodie-java-brown",
+          "title": "Accolade Full Zip Hoodie - Java Brown",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Java Brown"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3950r-muse-crew-neck-pullover-ivory",
+          "title": "Muse Crew Neck Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3950r-muse-crew-neck-pullover-java-brown-heather",
+          "title": "Muse Crew Neck Pullover - Java Brown Heather",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Java Brown Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31084r-micro-chenille-cropped-v-neck-coverup-black",
+          "title": "Micro Chenille Cropped V-Neck Coverup - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31084r-micro-chenille-cropped-v-neck-coverup-espresso",
+          "title": "Micro Chenille Cropped V-Neck Coverup - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-bamboo-green",
+          "title": "Accolade Crew Neck Pullover - Bamboo Green",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bamboo Green"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-bamboo-green",
+          "title": "Cropped Serenity Coverup - Bamboo Green",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bamboo Green"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w4702r-cropped-mountain-peak-full-zip-hoodie-bamboo-green",
+          "title": "Cropped Mountain Peak Full-Zip Hoodie - Bamboo Green",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Bamboo Green"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3047r-wool-cashmere-new-class-hoodie-java-brown",
+          "title": "Wool Cashmere New Class Hoodie - Java Brown",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Java Brown"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "348",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3351r-chunky-knit-rewind-hoodie-black-multi-womens",
+          "title": "Chunky Knit Rewind Hoodie - Black Multi",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black Multi"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "228",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3349r-waffle-chenille-edition-hoodie-gravel-womens",
+          "title": "Waffle Chenille Edition Hoodie - Gravel",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3349r-waffle-chenille-edition-hoodie-ivory-womens",
+          "title": "Waffle Chenille Edition Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "188",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3351r-chunky-knit-rewind-hoodie-black-womens",
+          "title": "Chunky Knit Rewind Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "228",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-rich-bordeaux",
+          "title": "Accolade 1/4 Zip Pullover - Rich Bordeaux",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Rich Bordeaux"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31007r-polar-fleece-retreat-cover-up-rich-bordeaux",
+          "title": "Polar Fleece Retreat Cover Up - Rich Bordeaux",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Rich Bordeaux"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-rich-bordeaux",
+          "title": "Cropped Serenity Coverup - Rich Bordeaux",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Rich Bordeaux"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "m3351r-chunky-knit-rewind-hoodie-rich-bordeaux-multi-womens",
+          "title": "Chunky Knit Rewind Hoodie  - Rich Bordeaux Multi",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Rich Bordeaux Multi"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "228",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-frosted-pearl",
+          "title": "Accolade Crew Neck Pullover - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31007r-polar-fleece-retreat-cover-up-ivory",
+          "title": "Polar Fleece Retreat Cover Up - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31007r-polar-fleece-retreat-cover-up-frosted-pearl",
+          "title": "Polar Fleece Retreat Cover Up - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

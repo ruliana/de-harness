@@ -107,6 +107,7 @@ A tool can put a picture into the state with `image(pngOrJpegBytes)` (PNG 280-15
 | `examples/office/` | thirty tools, the many-tools domain |
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
+| `examples/storefront/` | shopping in a real Shopify shop (aloyoga.com): menu, colour filter, product, size, price (`npm run example:storefront`) |
 
 ## Example: Wikipedia navigation
 
@@ -116,3 +117,15 @@ other namespaces and redlinks are left out in code, and the list is cut to a bud
 described by their anchor text; `go_back` returns to the previous article and never offers the abandoned one again.
 Articles are fetched as they were at a fixed snapshot (`SNAPSHOT` in `examples/wikipedia/client.ts`), so a recording
 never goes stale. Wikipedia rate-limits shared addresses: the live run waits as asked and keeps what is already recorded.
+
+## Example: shopping on aloyoga.com
+
+`npm run example:storefront` runs "Find a blue sweatshirt in the shop, select size large, and get the price" on the live
+https://www.aloyoga.com and prints the steps and what it found (never touching the cart or checkout). The shop is a Shopify
+storefront, so the example reads the public JSON every such shop serves (the home page menu, `/collections/<h>/products.json`,
+`/products/<h>.js`), with an identifying `agent-initiated` User-Agent, no browser, and nothing beyond reads. Tools:
+`open_collection` (the shop menu, described by where each entry sits), `filter_colour` (a `param.set`: one yes/no question per colour
+of the collection, "Is {} a shade of the colour that `instructions` ask for?", and code keeps the colours above the threshold),
+`open_product`, `select_colour` (only for a product sold in several colours), `select_size` (sold out sizes are described as such),
+`read_price`, `go_back`, `end`. The model only picks from closed sets; code builds every list, applies the filter and looks the
+price up. Responses are trimmed before they are recorded, so `npm test` replays the whole shop and Jev offline.
