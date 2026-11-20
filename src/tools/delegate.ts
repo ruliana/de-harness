@@ -1,11 +1,11 @@
 /**
- * `delegateTool`: a tool that hands a task to a sub-agent (`ctx.runAgent`) and holds the loop until it is done.
+ * `delegate`: a tool that hands a task to a sub-agent (`ctx.runAgent`) and holds the loop until it is done.
  *
  * Jev cannot write the task, so the parent picks it from candidates (`tasks`, name -> when it applies). The child's
  * outcome lands in one state slot, `{ task, status, steps, output }`, whatever the status: a child that hits its step
  * limit or fails does not stop the parent, which sees the status in its state and decides what to do next.
  *
- *   delegateTool({
+ *   delegate({
  *     tasks: { "Leave the room through the red door": "The way out is the red door" },
  *     agent: (task) => ({ instructions: task, tools: rooms.tools, initialState: rooms.initialState, maxSteps: 4 }),
  *   })
@@ -32,7 +32,7 @@ export type DelegateOptions = {
   result?(task: string, result: RunResult): Json;
 };
 
-export function delegateTool(opts: DelegateOptions) {
+export function delegate(opts: DelegateOptions) {
   const slot = opts.slot ?? "delegated";
   const question = opts.question ?? "Which of these tasks do `instructions` ask a helper agent to carry out?";
   const task = typeof opts.tasks === "function" ? param.choice({ question, options: opts.tasks }) : param.choice({ question, options: opts.tasks });
