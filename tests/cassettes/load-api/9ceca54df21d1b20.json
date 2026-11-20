@@ -1,0 +1,79 @@
+{
+  "hash": "9ceca54df21d1b20",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Close Ben's open ticket about the printer as won't fix and email the requester",
+        "state": {
+          "apis": [
+            {
+              "name": "helpdesk",
+              "description": "Support tickets: list, read, create, update, close and delete tickets"
+            },
+            {
+              "name": "inventory",
+              "description": "Office equipment in stock: list items and read one"
+            }
+          ]
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "load_api": "Loads one of the APIs of `state.apis`: its endpoints become tools that can be called from the next step on.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "load_api.api": {
+          "type": "choice",
+          "instructions": "Which API of `state.apis` has the endpoints that `instructions` need?",
+          "criteria": {
+            "helpdesk": "Support tickets: list, read, create, update, close and delete tickets",
+            "inventory": "Office equipment in stock: list items and read one"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "load_api",
+          "confidence": 0.98,
+          "probabilities": {
+            "load_api": 0.99,
+            "end": 0.01
+          }
+        },
+        "load_api.api": {
+          "type": "choice",
+          "choice": "helpdesk",
+          "confidence": 1,
+          "probabilities": {
+            "helpdesk": 1,
+            "inventory": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 547,
+        "output_tokens": 69
+      }
+    }
+  }
+}

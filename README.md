@@ -136,6 +136,7 @@ the real browser, so CI installs Chromium.
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
 | `src/tools/` | `defineTool`, `param.*`, `ToolRegistry`, built-in `end`, `delegate` |
+| `src/openapi/` | `openApiTools(spec, { baseUrl })`: one tool per operation of an OpenAPI 3 document, parameters mapped to Choice / Noul / Set, ids taken from earlier list responses |
 | `src/questions/` | the question map for a step and answer parsing (the `__tool__` wording lives here) |
 | `src/state/` | the state document, slot merging, previous-actions window |
 | `src/loop/` | `createAgent(config).run()` |
@@ -145,6 +146,7 @@ the real browser, so CI installs Chromium.
 | `examples/rooms/`, `examples/pizza/` | the example domains |
 | `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |
 | `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
+| `examples/load-api/` | a tool that loads tools: `load_api` reads an OpenAPI document, adds one tool per endpoint and removes itself (`npm run example:load-api`) |
 | `examples/office/` | thirty tools, the many-tools domain |
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
