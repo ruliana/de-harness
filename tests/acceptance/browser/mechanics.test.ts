@@ -85,7 +85,7 @@ describe("browser: a Box becomes a click", () => {
   it("reports what was clicked, and that nothing changed when a click lands on empty space", async () => {
     const hit = await pick("#green");
     expect(hit.result.steps[0]!.summary).toMatch(/^clicked <button> "Green" at \(\d+, \d+\)$/);
-    const { result } = await run("/", [{ [TOOL_QUESTION]: "click", "click.target": say.box({ top: 0.9, bottom: 0.95, left: 0.9, right: 0.95 }), "click.target?present": 0.95 }, { [TOOL_QUESTION]: "end" }]);
+    const { result } = await run("/", [{ [TOOL_QUESTION]: "click", "click.target": say.box({ top: 0.9, bottom: 0.95, left: 0.9, right: 0.95 }), "click.target?present": 0.95 }, { [TOOL_QUESTION]: "end" }], { zoom: false }); // (with zoom the model is asked once more, see small-targets.test.ts)
     expect(result.steps[0]!.summary).toMatch(/and the page looks the same$/);
   });
 

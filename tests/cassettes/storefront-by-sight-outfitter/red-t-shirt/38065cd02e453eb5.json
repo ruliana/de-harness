@@ -71,11 +71,11 @@
             "left": 0.24,
             "right": 0.45
           },
-          "confidence": 0.9
+          "confidence": 0.89
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.99
+          "noul": 0.98
         }
       },
       "usage": {

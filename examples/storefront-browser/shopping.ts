@@ -3,7 +3,7 @@
  * the bag. The page is only a screenshot (`state.screen`); the model points at it with boxes and never reads a character of it.
  *
  *   navigate(url)     open the shop's home page (the only address offered; the first step, before any page is open)
- *   hover(target)     point at a menu entry, so that its menu opens
+ *   hover(target)     point at a menu entry, so that its menu opens (menus that open when pressed get a click when pointing opened nothing)
  *   click(target)     click a menu entry, a product, a size
  *   scroll(direction) see more of a long page
  *   read_price(target) point at the price: code reads the characters inside the box into `state.price`
@@ -18,6 +18,7 @@ import { browserTools, type BrowserSession } from "../../src/browser/index.js";
 /** Every question this example asks, in one place (the generic click, hover and scroll questions live in `src/browser/tools.ts`). */
 export const QUESTIONS = {
   click: "the element that `instructions` say to click next, in `state.screen`",
+  clickPresent: "Is the element that `instructions` say to click next visible in `state.screen`?",
   hover: "the menu entry in `state.screen` that `instructions` say to point at, to open its menu",
   price: "the price of the item that `instructions` ask for, in `state.screen`",
   pricePresent: "Is the price of the item that `instructions` ask for visible in `state.screen`?",
@@ -54,10 +55,12 @@ const MONEY = /(?:[$€£]|USD\s?)\s?\d[\d,]*(?:\.\d{2})?/;
 export type ShoppingOptions = {
   /** The shop's home page: the one address `navigate` offers. */
   home: string;
+  /** Scroll down when the thing to click is not in the screenshot yet (options of an item below the fold), instead of finding nothing. Default false. */
+  scrollToFind?: boolean;
   /** Leave the page's address and title out of the state (`state.page` keeps only the scroll position): the model then has nothing but the picture. */
   pageText?: boolean;
   /** Replace the wording of a question. */
-  questions?: Partial<typeof QUESTIONS>;
+  questions?: Partial<Record<keyof typeof QUESTIONS, string>>;
 };
 
 /** The browser tools for a shop and the one tool that reads a price. Start the agent with no state: `navigate` is the only tool until a page is open. */
@@ -79,7 +82,7 @@ export function shoppingTools(browser: BrowserSession, opts: ShoppingOptions): A
     },
   });
   return [
-    ...browserTools(browser, { urls: { [opts.home]: "the home page of the shop" }, hover: true, pageText: opts.pageText, questions: { click: q.click, hover: q.hover, hoverPresent: q.hoverPresent } }),
+    ...browserTools(browser, { urls: { [opts.home]: "the home page of the shop" }, hover: "or-click", scrollToFind: opts.scrollToFind, pageText: opts.pageText, questions: { click: q.click, clickPresent: q.clickPresent, hover: q.hover, hoverPresent: q.hoverPresent } }),
     readPrice,
   ];
 }

@@ -9,6 +9,12 @@
  *   /leave      a link to the same site under another host name (`localhost` instead of `127.0.0.1`)
  *   /views      a page that changes its view without loading a page (history.pushState), so going back stays on the same document
  *   /pricing    a plain page
+ *   /notice     a pop-up whose close button is 16 x 16 px (its x about 9 px wide), a CONTINUE button that lights up under the pointer but closes nothing
+ *   /click-menu a menu entry that opens its menu when pressed; pointing at it only underlines it
+ *   /hover-menu a menu entry that opens its menu when pointed at; pressing it only counts a press
+ *   /sizes      an item page whose size buttons are below the fold ("Selected: none" until one is pressed)
+ *   /slow-go    a link to /slow-page, which is sent after 2.2 s, longer than the browser waits for the network to go quiet (a page that loads slowly after a click)
+ *   /cards      a card whose middle is not pressable: a picture link above a row of colour dots (not links) and a gap
  * POST /api/subscribe records the address; `requests` keeps every request path.
  */
 import { readFileSync } from "node:fs";
@@ -75,6 +81,53 @@ const VIEWS = page(
   `document.getElementById('next').addEventListener('click', () => { history.pushState({}, '', '/views?view=two'); document.getElementById('view').textContent = 'View two'; });
 window.addEventListener('popstate', () => { document.getElementById('view').textContent = location.search ? 'View two' : 'View one'; });`,
 );
+
+const NOTICE = page(
+  "Notice",
+  `${header}<main><h1>Spring collection</h1><p>The page behind the notice.</p></main>
+<div id="notice" style="position:fixed;top:140px;left:280px;width:720px;height:150px;background:#ffffff;border:2px solid #111827;border-radius:6px;z-index:10;padding:24px 32px">
+  <button id="close" aria-label="Close modal" style="position:absolute;top:6px;right:6px;width:16px;height:16px;padding:0;background:#ffffff;color:#111827;font:400 20px/14px 'Test Sans';border-radius:0">&times;</button>
+  <p style="margin:0 0 16px">We use cookies to improve your visit.</p>
+  <button id="continue" style="width:320px;height:48px;background:#374151">CONTINUE</button>
+</div>`,
+  `document.getElementById('close').addEventListener('click', () => document.getElementById('notice').remove());`,
+);
+const NOTICE_CSS = `<style>#continue:hover{background:#d97706 !important}</style>`;
+
+const CLICK_MENU = page(
+  "Click menu",
+  `${header}<main><nav id="top" style="display:flex;gap:40px;margin:24px 0"><a href="#" id="shoes" style="color:#111827;text-decoration:none">Shoes</a><a href="#" style="color:#111827;text-decoration:none">Bags</a></nav>
+<div id="menu" style="display:none;width:520px;padding:16px 24px;background:#f3f4f6;border:1px solid #9ca3af"><a href="/pricing" id="sneakers">Sneakers</a><br><a href="/short" id="boots">Boots</a></div></main>
+<style>#top a:hover{text-decoration:underline !important}</style>`,
+  `document.getElementById('shoes').addEventListener('click', (e) => { e.preventDefault(); document.getElementById('menu').style.display = 'block'; });`,
+);
+
+const HOVER_MENU = page(
+  "Hover menu",
+  `${header}<main><nav id="top" style="display:flex;gap:40px;margin:24px 0"><div id="shoes-item"><a href="#" id="shoes" style="color:#111827;text-decoration:none">Shoes</a><div id="menu" style="display:none;position:absolute;width:520px;padding:16px 24px;background:#f3f4f6;border:1px solid #9ca3af"><a href="/pricing">Sneakers</a><br><a href="/short">Boots</a></div></div><a href="#" style="color:#111827;text-decoration:none">Bags</a></nav>
+<p id="presses">Presses: 0</p></main>
+<style>#shoes-item:hover #menu{display:block !important}</style>`,
+  `let n = 0; document.getElementById('shoes').addEventListener('click', (e) => { e.preventDefault(); document.getElementById('presses').textContent = 'Presses: ' + (++n); });`,
+);
+
+const SIZES = page(
+  "Item",
+  `${header}<main><h1>Storm Chaser</h1><div style="height:760px;background:#e5e7eb;margin-bottom:60px">A big picture of the boot.</div>
+<p>Pick a size</p><div class="row"><button class="colour" id="size-9" style="background:#374151;width:90px">9</button><button class="colour" id="size-10" style="background:#374151;width:90px">10</button><button class="colour" id="size-11" style="background:#374151;width:90px">11</button></div>
+<p id="pick">Selected: none</p><div style="height:400px"></div></main>`,
+  `for (const b of document.querySelectorAll('.colour')) b.addEventListener('click', () => { document.getElementById('pick').textContent = 'Selected: ' + b.textContent; });`,
+);
+
+const SLOW_GO = page("Slow go", `${header}<main><h1>Slow go</h1><p><a id="go" href="/slow-page" style="font-size:32px">Open the slow page</a></p></main>`);
+const SLOW_PAGE = page("Slow page", `${header}<main><h1>The slow page</h1><p>It arrived.</p></main>`);
+
+const CARDS = page(
+  "Cards",
+  `${header}<main><h1>Boots</h1><div id="card" style="width:300px;height:380px;border:1px solid #d1d5db">
+<a id="boot" href="/pricing" style="display:block;height:240px;background:#92400e;color:#ffffff">The brown boot</a>
+<div id="dots" style="height:70px;padding:24px"><span style="display:inline-block;width:22px;height:22px;border-radius:11px;background:#92400e"></span> <span style="display:inline-block;width:22px;height:22px;border-radius:11px;background:#111827"></span></div></div></main>`,
+);
+
 const leave = (other: string) => page("Leave", `${header}<main><h1>Elsewhere</h1><p><a id="away" href="${other}/pricing">Go to the other host</a></p></main>`);
 
 export type BrowserSite = {
@@ -115,6 +168,13 @@ export async function startBrowserSite(opts: { port?: number } = {}): Promise<Br
       case "/search": return send(SEARCH);
       case "/results": return send(results(url.searchParams.get("q") ?? ""));
       case "/popup": return send(POPUP);
+      case "/notice": return send(NOTICE.replace("</head>", `${NOTICE_CSS}</head>`));
+      case "/click-menu": return send(CLICK_MENU);
+      case "/hover-menu": return send(HOVER_MENU);
+      case "/sizes": return send(SIZES);
+      case "/cards": return send(CARDS);
+      case "/slow-go": return send(SLOW_GO);
+      case "/slow-page": return void setTimeout(() => send(SLOW_PAGE), 2200);
       case "/views": return send(VIEWS);
       case "/leave": return send(leave(`http://localhost:${port}`));
       default:

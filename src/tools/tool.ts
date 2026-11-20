@@ -27,6 +27,8 @@ export type ToolContext = {
   answers: Record<string, Answer>;
   /** 1-based number of the current step. */
   step: number;
+  /** The instructions of this run, as given to the model in every request: what a tool that asks the model again (a nested agent) repeats to it. */
+  instructions: string;
   /** Aborted when the caller cancels the run. Tools that wait on anything should honour it. */
   signal: AbortSignal;
   /** The live registry. Changes take effect from the next step. */

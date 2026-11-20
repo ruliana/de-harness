@@ -66,10 +66,10 @@
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 1,
+          "confidence": 0.98,
           "probabilities": {
-            "down": 1,
-            "bottom": 0
+            "down": 0.99,
+            "bottom": 0.01
           }
         }
       },

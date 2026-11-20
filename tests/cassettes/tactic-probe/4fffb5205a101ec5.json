@@ -64,12 +64,12 @@
         "tactic": {
           "type": "choice",
           "choice": "open_menu",
-          "confidence": 0.53,
+          "confidence": 0.49,
           "probabilities": {
-            "open_menu": 0.58,
-            "pick_menu_entry": 0.35,
+            "open_menu": 0.54,
+            "pick_menu_entry": 0.38,
             "scroll": 0.03,
-            "filter": 0,
+            "filter": 0.01,
             "click_item": 0.01,
             "select_option": 0,
             "read_value": 0,

@@ -53,16 +53,16 @@
         "tactic": {
           "type": "choice",
           "choice": "filter",
-          "confidence": 0.88,
+          "confidence": 0.82,
           "probabilities": {
             "open_menu": 0.01,
             "pick_menu_entry": 0,
-            "scroll": 0.05,
-            "filter": 0.89,
-            "click_item": 0.05,
-            "select_option": 0,
+            "scroll": 0.07,
+            "filter": 0.84,
+            "click_item": 0.06,
+            "select_option": 0.01,
             "read_value": 0,
-            "go_back": 0,
+            "go_back": 0.01,
             "close_overlay": 0,
             "end": 0
           }

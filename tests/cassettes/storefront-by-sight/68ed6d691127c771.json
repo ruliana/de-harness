@@ -68,10 +68,10 @@
           "box": {
             "top": 0.54,
             "bottom": 0.6,
-            "left": 0.47,
-            "right": 0.61
+            "left": 0.46,
+            "right": 0.6
           },
-          "confidence": 0.92
+          "confidence": 0.96
         },
         "click.target?present": {
           "type": "noul",

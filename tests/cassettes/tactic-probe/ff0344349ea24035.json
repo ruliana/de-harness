@@ -63,13 +63,13 @@
         "tactic": {
           "type": "choice",
           "choice": "open_menu",
-          "confidence": 0.96,
+          "confidence": 0.93,
           "probabilities": {
-            "open_menu": 0.96,
+            "open_menu": 0.94,
             "pick_menu_entry": 0.01,
-            "scroll": 0.03,
+            "scroll": 0.04,
             "filter": 0,
-            "click_item": 0,
+            "click_item": 0.01,
             "select_option": 0,
             "read_value": 0,
             "go_back": 0,

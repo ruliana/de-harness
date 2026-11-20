@@ -71,11 +71,11 @@
             "left": 0.19,
             "right": 0.24
           },
-          "confidence": 0.86
+          "confidence": 0.89
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.98
+          "noul": 0.99
         }
       },
       "usage": {

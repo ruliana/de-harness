@@ -66,15 +66,15 @@
         },
         "menuOpen": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "optionChosen": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.04
         },
         "valueVisible": {
           "type": "noul",
-          "noul": 0.97
+          "noul": 0.92
         },
         "pageKind": {
           "type": "choice",

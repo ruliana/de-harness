@@ -169,6 +169,19 @@ export function navigatorInstructions(tactic: Exclude<Tactic, "end">, task: Sigh
   return [...clauses, GOALS[tactic]].join(" ");
 }
 
+/**
+ * The wording of the navigator's click question for the tactics whose target the generic one ("the element that `instructions` say to click next")
+ * does not find: on an open menu it picked the search field or answered that nothing was there. Other tactics use the generic wording.
+ */
+export const NAVIGATOR_QUESTIONS: Partial<Record<Exclude<Tactic, "end">, { click: string; clickPresent: string }>> = {
+  pick_menu_entry: {
+    click: "the entry of the open menu in `state.screen` that is most likely to lead to what `instructions` ask for",
+    // The model said "no" to "is there an entry that leads to what `instructions` ask for?" on an open menu of 25 entries (nothing in it says "white"), so
+    // it does not judge the match: it judges that the menu is there, and the Box picks the best entry.
+    clickPresent: QUESTIONS.menuOpen,
+  },
+};
+
 /** The browser tools (by name) that the navigator of a tactic is given, out of those of `shoppingTools`. */
 export const NAVIGATOR_TOOLS: Record<Exclude<Tactic, "end">, string[]> = {
   open_menu: ["hover"],

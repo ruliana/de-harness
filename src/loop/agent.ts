@@ -229,7 +229,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
         signal: child.signal ? AbortSignal.any([signal, child.signal]) : signal,
         onEvent: (event) => emit({ type: "child", step, event }),
       }).run();
-    const ctx: ToolContext = { state: view, answers: parsed.raw, step, signal, tools, input, emit: (name, data) => emit({ type: "custom", step, name, data }), runAgent };
+    const ctx: ToolContext = { state: view, answers: parsed.raw, step, instructions: config.instructions, signal, tools, input, emit: (name, data) => emit({ type: "custom", step, name, data }), runAgent };
     let result: ToolResult;
     let error: string | undefined;
     try {

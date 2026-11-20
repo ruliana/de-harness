@@ -66,16 +66,16 @@
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.3,
-            "bottom": 0.59,
+            "top": 0.31,
+            "bottom": 0.6,
             "left": 0.24,
             "right": 0.45
           },
-          "confidence": 0.9
+          "confidence": 0.89
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.95
+          "noul": 0.96
         }
       },
       "usage": {
