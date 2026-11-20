@@ -19,10 +19,12 @@
     "example:pizza": "NODE_USE_ENV_PROXY=1 tsx examples/pizza/main.ts",
     "example:tickets": "NODE_USE_ENV_PROXY=1 tsx examples/tickets/main.ts",
     "example:screen": "NODE_USE_ENV_PROXY=1 tsx examples/screen/main.ts",
-    "example:screen:fixtures": "tsx examples/screen/render.ts"
+    "example:screen:fixtures": "tsx examples/screen/render.ts",
+    "example:wikipedia": "NODE_USE_ENV_PROXY=1 tsx examples/wikipedia/main.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
+    "node-html-parser": "^9.0.7",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.1.1"

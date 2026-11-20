@@ -1,0 +1,2593 @@
+{
+  "hash": "3426e6e960effc72",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Linux/1381784225",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Linux",
+      "lead": "Linux (/ˈlɪnʊks/ LIN-uuks) is a family of free and open-source software Unix-like operating systems based on the Linux kernel, which was first released on 17 September 1991 by Linus Torvalds. Some members of the family are typically packaged as a distribution (a.k.a. distro), which includes the kernel alongside supporting system software and libraries developed by third parties—such as GNU, Red Hat, and X.Org—to create a complete operating system; however, not all Linux-based operating systems are considered distros, with Android being an example. Linux was originally designed as a clone of Unix and is distributed under the copyleft GPL license.",
+      "links": [
+        {
+          "title": "Free and open-source software",
+          "texts": [
+            "free and open-source software",
+            "free and open-source"
+          ]
+        },
+        {
+          "title": "Unix-like",
+          "texts": [
+            "Unix-like"
+          ]
+        },
+        {
+          "title": "Linux kernel",
+          "texts": [
+            "Linux kernel"
+          ]
+        },
+        {
+          "title": "Linus Torvalds",
+          "texts": [
+            "Linus Torvalds"
+          ]
+        },
+        {
+          "title": "Package manager",
+          "texts": [
+            "packaged",
+            "package manager",
+            "package management system"
+          ]
+        },
+        {
+          "title": "Linux distribution",
+          "texts": [
+            "distribution"
+          ]
+        },
+        {
+          "title": "Kernel (operating system)",
+          "texts": [
+            "kernel"
+          ]
+        },
+        {
+          "title": "Library (computing)",
+          "texts": [
+            "libraries",
+            "Software libraries"
+          ]
+        },
+        {
+          "title": "GNU Project",
+          "texts": [
+            "GNU",
+            "GNU Project"
+          ]
+        },
+        {
+          "title": "Red Hat",
+          "texts": [
+            "Red Hat"
+          ]
+        },
+        {
+          "title": "X.Org Foundation",
+          "texts": [
+            "X.Org"
+          ]
+        },
+        {
+          "title": "Android (operating system)",
+          "texts": [
+            "Android"
+          ]
+        },
+        {
+          "title": "Unix",
+          "texts": [
+            "Unix"
+          ]
+        },
+        {
+          "title": "GPL",
+          "texts": [
+            "GPL"
+          ]
+        },
+        {
+          "title": "List of Linux distributions",
+          "texts": [
+            "thousands of Linux distributions"
+          ]
+        },
+        {
+          "title": "Debian",
+          "texts": [
+            "Debian"
+          ]
+        },
+        {
+          "title": "Fedora Linux",
+          "texts": [
+            "Fedora Linux",
+            "Fedora"
+          ]
+        },
+        {
+          "title": "Linux Mint",
+          "texts": [
+            "Linux Mint"
+          ]
+        },
+        {
+          "title": "Arch Linux",
+          "texts": [
+            "Arch Linux"
+          ]
+        },
+        {
+          "title": "Ubuntu",
+          "texts": [
+            "Ubuntu"
+          ]
+        },
+        {
+          "title": "Red Hat Enterprise Linux",
+          "texts": [
+            "Red Hat Enterprise Linux"
+          ]
+        },
+        {
+          "title": "SUSE Linux Enterprise",
+          "texts": [
+            "SUSE Linux Enterprise"
+          ]
+        },
+        {
+          "title": "ChromeOS",
+          "texts": [
+            "ChromeOS"
+          ]
+        },
+        {
+          "title": "Free Software Foundation",
+          "texts": [
+            "Free Software Foundation"
+          ]
+        },
+        {
+          "title": "GNU",
+          "texts": [
+            "GNU"
+          ]
+        },
+        {
+          "title": "GNU/Linux naming controversy",
+          "texts": [
+            "controversy surrounding this"
+          ]
+        },
+        {
+          "title": "Display server",
+          "texts": [
+            "display server (windowing system)"
+          ]
+        },
+        {
+          "title": "Bootloader",
+          "texts": [
+            "bootloader"
+          ]
+        },
+        {
+          "title": "Unix shell",
+          "texts": [
+            "Unix shell"
+          ]
+        },
+        {
+          "title": "X86",
+          "texts": [
+            "x86"
+          ]
+        },
+        {
+          "title": "Personal computer",
+          "texts": [
+            "personal computers"
+          ]
+        },
+        {
+          "title": "Porting",
+          "texts": [
+            "ported",
+            "porting",
+            "ports"
+          ]
+        },
+        {
+          "title": "Computer hardware platforms",
+          "texts": [
+            "platforms"
+          ]
+        },
+        {
+          "title": "Smartphone",
+          "texts": [
+            "smartphones"
+          ]
+        },
+        {
+          "title": "Usage share of operating systems",
+          "texts": [
+            "largest installed base",
+            "servers market share"
+          ]
+        },
+        {
+          "title": "General-purpose operating system",
+          "texts": [
+            "general-purpose operating systems"
+          ]
+        },
+        {
+          "title": "Free software",
+          "texts": [
+            "free software"
+          ]
+        },
+        {
+          "title": "Richard Stallman",
+          "texts": [
+            "Richard Stallman"
+          ]
+        },
+        {
+          "title": "Minix",
+          "texts": [
+            "Minix"
+          ]
+        },
+        {
+          "title": "386BSD",
+          "texts": [
+            "386BSD"
+          ]
+        },
+        {
+          "title": "Internet",
+          "texts": [
+            "Internet"
+          ]
+        },
+        {
+          "title": "UNIX System Laboratories, Inc. v. Berkeley Software Design, Inc.",
+          "texts": [
+            "legal issues",
+            "legal complications"
+          ]
+        },
+        {
+          "title": "AT&T Corporation",
+          "texts": [
+            "AT&T"
+          ]
+        },
+        {
+          "title": "Workstations",
+          "texts": [
+            "workstations"
+          ]
+        },
+        {
+          "title": "Windowing system",
+          "texts": [
+            "windowing system"
+          ]
+        },
+        {
+          "title": "X Window System",
+          "texts": [
+            "X11",
+            "X Window System"
+          ]
+        },
+        {
+          "title": "Wayland (protocol)",
+          "texts": [
+            "Wayland"
+          ]
+        },
+        {
+          "title": "Desktop environment",
+          "texts": [
+            "desktop environment",
+            "desktop environments"
+          ]
+        },
+        {
+          "title": "KDE Plasma",
+          "texts": [
+            "KDE Plasma"
+          ]
+        },
+        {
+          "title": "GNOME",
+          "texts": [
+            "GNOME"
+          ]
+        },
+        {
+          "title": "Xfce",
+          "texts": [
+            "Xfce"
+          ]
+        },
+        {
+          "title": "Server (computing)",
+          "texts": [
+            "servers"
+          ]
+        },
+        {
+          "title": "Graphical user interface",
+          "texts": [
+            "graphical user interface",
+            "graphical user interfaces"
+          ]
+        },
+        {
+          "title": "Solution stack",
+          "texts": [
+            "solution stack"
+          ]
+        },
+        {
+          "title": "LAMP (software bundle)",
+          "texts": [
+            "LAMP"
+          ]
+        },
+        {
+          "title": "Source code",
+          "texts": [
+            "source code"
+          ]
+        },
+        {
+          "title": "GNU General Public License",
+          "texts": [
+            "GNU General Public License"
+          ]
+        },
+        {
+          "title": "MacOS",
+          "texts": [
+            "macOS"
+          ]
+        },
+        {
+          "title": "Microsoft Windows",
+          "texts": [
+            "Microsoft Windows"
+          ]
+        },
+        {
+          "title": "System call",
+          "texts": [
+            "system calls"
+          ]
+        },
+        {
+          "title": "Desktop computer",
+          "texts": [
+            "desktop computers"
+          ]
+        },
+        {
+          "title": "Chromebook",
+          "texts": [
+            "Chromebook"
+          ]
+        },
+        {
+          "title": "K–12",
+          "texts": [
+            "K–12"
+          ]
+        },
+        {
+          "title": "Laptop",
+          "texts": [
+            "laptop"
+          ]
+        },
+        {
+          "title": "Big iron (computing)",
+          "texts": [
+            "big iron"
+          ]
+        },
+        {
+          "title": "Mainframe computer",
+          "texts": [
+            "mainframe computers"
+          ]
+        },
+        {
+          "title": "TOP500",
+          "texts": [
+            "world's 500 fastest supercomputers"
+          ]
+        },
+        {
+          "title": "Embedded system",
+          "texts": [
+            "embedded systems"
+          ]
+        },
+        {
+          "title": "Firmware",
+          "texts": [
+            "firmware"
+          ]
+        },
+        {
+          "title": "Router (computing)",
+          "texts": [
+            "routers"
+          ]
+        },
+        {
+          "title": "Automation",
+          "texts": [
+            "automation"
+          ]
+        },
+        {
+          "title": "Smart home technology",
+          "texts": [
+            "smart home devices"
+          ]
+        },
+        {
+          "title": "Video game console",
+          "texts": [
+            "video game consoles"
+          ]
+        },
+        {
+          "title": "Television",
+          "texts": [
+            "televisions"
+          ]
+        },
+        {
+          "title": "Smart TV",
+          "texts": [
+            "smart TVs"
+          ]
+        },
+        {
+          "title": "Automobiles",
+          "texts": [
+            "automobiles"
+          ]
+        },
+        {
+          "title": "Spacecraft",
+          "texts": [
+            "spacecraft"
+          ]
+        },
+        {
+          "title": "Falcon 9",
+          "texts": [
+            "Falcon 9"
+          ]
+        },
+        {
+          "title": "SpaceX Dragon 2",
+          "texts": [
+            "Dragon"
+          ]
+        },
+        {
+          "title": "Ingenuity (helicopter)",
+          "texts": [
+            "Ingenuity"
+          ]
+        },
+        {
+          "title": "Bell Labs",
+          "texts": [
+            "Bell Labs"
+          ]
+        },
+        {
+          "title": "Ken Thompson",
+          "texts": [
+            "Ken Thompson"
+          ]
+        },
+        {
+          "title": "Dennis Ritchie",
+          "texts": [
+            "Dennis Ritchie"
+          ]
+        },
+        {
+          "title": "Douglas McIlroy",
+          "texts": [
+            "Douglas McIlroy"
+          ]
+        },
+        {
+          "title": "Joe Ossanna",
+          "texts": [
+            "Joe Ossanna"
+          ]
+        },
+        {
+          "title": "Assembly language",
+          "texts": [
+            "assembly language"
+          ]
+        },
+        {
+          "title": "C (programming language)",
+          "texts": [
+            "C"
+          ]
+        },
+        {
+          "title": "High-level language",
+          "texts": [
+            "high-level language"
+          ]
+        },
+        {
+          "title": "Antitrust case",
+          "texts": [
+            "antitrust case"
+          ]
+        },
+        {
+          "title": "AT&T",
+          "texts": [
+            "AT&T"
+          ]
+        },
+        {
+          "title": "Academic institution",
+          "texts": [
+            "academic institutions"
+          ]
+        },
+        {
+          "title": "Breakup of the Bell System",
+          "texts": [
+            "AT&T divested itself"
+          ]
+        },
+        {
+          "title": "Regional Bell Operating Company",
+          "texts": [
+            "regional operating companies"
+          ]
+        },
+        {
+          "title": "Proprietary software",
+          "texts": [
+            "proprietary",
+            "Proprietary"
+          ]
+        },
+        {
+          "title": "Onyx Systems",
+          "texts": [
+            "Onyx Systems"
+          ]
+        },
+        {
+          "title": "Sun Microsystems",
+          "texts": [
+            "Sun Microsystems"
+          ]
+        },
+        {
+          "title": "Stanford University",
+          "texts": [
+            "Stanford University"
+          ]
+        },
+        {
+          "title": "Software system",
+          "texts": [
+            "software system"
+          ]
+        },
+        {
+          "title": "Compiler",
+          "texts": [
+            "compilers"
+          ]
+        },
+        {
+          "title": "Text editor",
+          "texts": [
+            "text editors"
+          ]
+        },
+        {
+          "title": "Shell (computing)",
+          "texts": [
+            "command-line shell",
+            "shell"
+          ]
+        },
+        {
+          "title": "Device driver",
+          "texts": [
+            "device drivers",
+            "Device drivers"
+          ]
+        },
+        {
+          "title": "Daemon (computing)",
+          "texts": [
+            "daemons"
+          ]
+        },
+        {
+          "title": "GNU Hurd",
+          "texts": [
+            "GNU Hurd"
+          ]
+        },
+        {
+          "title": "Andrew S. Tanenbaum",
+          "texts": [
+            "Andrew S. Tanenbaum"
+          ]
+        },
+        {
+          "title": "Computer science",
+          "texts": [
+            "computer science"
+          ]
+        },
+        {
+          "title": "Source-available software",
+          "texts": [
+            "complete source code of Minix was freely available"
+          ]
+        },
+        {
+          "title": "University of Helsinki",
+          "texts": [
+            "University of Helsinki"
+          ]
+        },
+        {
+          "title": "MicroVAX",
+          "texts": [
+            "MicroVAX"
+          ]
+        },
+        {
+          "title": "Minicomputer",
+          "texts": [
+            "minicomputer"
+          ]
+        },
+        {
+          "title": "Ultrix",
+          "texts": [
+            "Ultrix"
+          ]
+        },
+        {
+          "title": "Operating Systems: Design and Implementation",
+          "texts": [
+            "Operating Systems: Design and Implementation"
+          ]
+        },
+        {
+          "title": "Digital copy",
+          "texts": [
+            "digital copy"
+          ]
+        },
+        {
+          "title": "POSIX",
+          "texts": [
+            "POSIX"
+          ]
+        },
+        {
+          "title": "Software documentation",
+          "texts": [
+            "documentation"
+          ]
+        },
+        {
+          "title": "Usenet newsgroup",
+          "texts": [
+            "newsgroup"
+          ]
+        },
+        {
+          "title": "SunOS",
+          "texts": [
+            "SunOS"
+          ]
+        },
+        {
+          "title": "Computer program",
+          "texts": [
+            "computer programs"
+          ]
+        },
+        {
+          "title": "Operating system",
+          "texts": [
+            "operating system"
+          ]
+        },
+        {
+          "title": "NetBSD",
+          "texts": [
+            "NetBSD"
+          ]
+        },
+        {
+          "title": "OpenBSD",
+          "texts": [
+            "OpenBSD"
+          ]
+        },
+        {
+          "title": "FreeBSD",
+          "texts": [
+            "FreeBSD"
+          ]
+        },
+        {
+          "title": "GNU kernel",
+          "texts": [
+            "GNU kernel"
+          ]
+        },
+        {
+          "title": "Software license",
+          "texts": [
+            "licensed"
+          ]
+        },
+        {
+          "title": "GNU Lesser General Public License",
+          "texts": [
+            "GNU Lesser General Public License"
+          ]
+        },
+        {
+          "title": "X.Org Server",
+          "texts": [
+            "X.Org",
+            "X.Org Server"
+          ]
+        },
+        {
+          "title": "MIT License",
+          "texts": [
+            "MIT License"
+          ]
+        },
+        {
+          "title": "Digital rights management",
+          "texts": [
+            "digital rights management"
+          ]
+        },
+        {
+          "title": "Red Hat Linux",
+          "texts": [
+            "Red Hat Linux"
+          ]
+        },
+        {
+          "title": "Source lines of code",
+          "texts": [
+            "lines of source code",
+            "lines of code"
+          ]
+        },
+        {
+          "title": "COCOMO",
+          "texts": [
+            "Constructive Cost Model"
+          ]
+        },
+        {
+          "title": "C++",
+          "texts": [
+            "C++"
+          ]
+        },
+        {
+          "title": "Lisp (programming language)",
+          "texts": [
+            "Lisp"
+          ]
+        },
+        {
+          "title": "Fortran",
+          "texts": [
+            "Fortran"
+          ]
+        },
+        {
+          "title": "Shell script",
+          "texts": [
+            "shell scripting",
+            "shell scripts"
+          ]
+        },
+        {
+          "title": "Linux Mark Institute",
+          "texts": [
+            "Linux Mark Institute"
+          ]
+        },
+        {
+          "title": "GNU variants",
+          "texts": [
+            "variants"
+          ]
+        },
+        {
+          "title": "SUSE Linux",
+          "texts": [
+            "SUSE Linux"
+          ]
+        },
+        {
+          "title": "Portmanteau",
+          "texts": [
+            "portmanteau"
+          ]
+        },
+        {
+          "title": "Makefile",
+          "texts": [
+            "makefiles"
+          ]
+        },
+        {
+          "title": "File Transfer Protocol",
+          "texts": [
+            "FTP server"
+          ]
+        },
+        {
+          "title": "FUNET",
+          "texts": [
+            "FUNET"
+          ]
+        },
+        {
+          "title": "Helsinki University of Technology",
+          "texts": [
+            "Helsinki University of Technology"
+          ]
+        },
+        {
+          "title": "Close front unrounded vowel",
+          "texts": [
+            "close front unrounded vowel"
+          ]
+        },
+        {
+          "title": "Near-close near-front unrounded vowel",
+          "texts": [
+            "near-close near-front unrounded vowel"
+          ]
+        },
+        {
+          "title": "NASA",
+          "texts": [
+            "NASA"
+          ]
+        },
+        {
+          "title": "Computer cluster",
+          "texts": [
+            "clusters"
+          ]
+        },
+        {
+          "title": "Dell",
+          "texts": [
+            "Dell"
+          ]
+        },
+        {
+          "title": "IBM",
+          "texts": [
+            "IBM"
+          ]
+        },
+        {
+          "title": "Hewlett-Packard",
+          "texts": [
+            "Hewlett-Packard"
+          ]
+        },
+        {
+          "title": "Microsoft",
+          "texts": [
+            "Microsoft"
+          ]
+        },
+        {
+          "title": "Supercomputer",
+          "texts": [
+            "supercomputers"
+          ]
+        },
+        {
+          "title": "Netbook",
+          "texts": [
+            "netbook"
+          ]
+        },
+        {
+          "title": "Tablet computer",
+          "texts": [
+            "tablets"
+          ]
+        },
+        {
+          "title": "Wearable technology",
+          "texts": [
+            "wearables"
+          ]
+        },
+        {
+          "title": "Linux gaming",
+          "texts": [
+            "Linux gaming"
+          ]
+        },
+        {
+          "title": "Valve Corporation",
+          "texts": [
+            "Valve"
+          ]
+        },
+        {
+          "title": "SteamOS",
+          "texts": [
+            "SteamOS"
+          ]
+        },
+        {
+          "title": "Steam Deck",
+          "texts": [
+            "Steam Deck"
+          ]
+        },
+        {
+          "title": "Federal government of Brazil",
+          "texts": [
+            "federal government of Brazil"
+          ]
+        },
+        {
+          "title": "Greg Kroah-Hartman",
+          "texts": [
+            "Greg Kroah-Hartman"
+          ]
+        },
+        {
+          "title": "Package management",
+          "texts": [
+            "package management"
+          ]
+        },
+        {
+          "title": "Vendor lock-in",
+          "texts": [
+            "vendor lock-in"
+          ]
+        },
+        {
+          "title": "Web analytics",
+          "texts": [
+            "web server statistics"
+          ]
+        },
+        {
+          "title": "International Data Corporation",
+          "texts": [
+            "IDC"
+          ]
+        },
+        {
+          "title": "Amazon Web Services",
+          "texts": [
+            "Amazon Web Services"
+          ]
+        },
+        {
+          "title": "Microsoft Azure",
+          "texts": [
+            "Microsoft Azure"
+          ]
+        },
+        {
+          "title": "Google Cloud Platform",
+          "texts": [
+            "Google Cloud Platform"
+          ]
+        },
+        {
+          "title": "ZDNet",
+          "texts": [
+            "ZDNet"
+          ]
+        },
+        {
+          "title": "StatCounter",
+          "texts": [
+            "StatCounter"
+          ]
+        },
+        {
+          "title": "IOS",
+          "texts": [
+            "iOS"
+          ]
+        },
+        {
+          "title": "Titanic (1997 film)",
+          "texts": [
+            "Titanic"
+          ]
+        },
+        {
+          "title": "DreamWorks Animation",
+          "texts": [
+            "DreamWorks Animation"
+          ]
+        },
+        {
+          "title": "Pixar",
+          "texts": [
+            "Pixar"
+          ]
+        },
+        {
+          "title": "Weta Digital",
+          "texts": [
+            "Weta Digital"
+          ]
+        },
+        {
+          "title": "Industrial Light & Magic",
+          "texts": [
+            "Industrial Light & Magic"
+          ]
+        },
+        {
+          "title": "Kerala",
+          "texts": [
+            "Kerala"
+          ]
+        },
+        {
+          "title": "China",
+          "texts": [
+            "China"
+          ]
+        },
+        {
+          "title": "Loongson",
+          "texts": [
+            "Loongson"
+          ]
+        },
+        {
+          "title": "Spain",
+          "texts": [
+            "Spain"
+          ]
+        },
+        {
+          "title": "Extremadura",
+          "texts": [
+            "Extremadura"
+          ]
+        },
+        {
+          "title": "Guadalinex",
+          "texts": [
+            "Guadalinex"
+          ]
+        },
+        {
+          "title": "Andalusia",
+          "texts": [
+            "Andalusia"
+          ]
+        },
+        {
+          "title": "France",
+          "texts": [
+            "France"
+          ]
+        },
+        {
+          "title": "Germany",
+          "texts": [
+            "Germany"
+          ]
+        },
+        {
+          "title": "Red Star OS",
+          "texts": [
+            "Red Star OS"
+          ]
+        },
+        {
+          "title": "Evolution",
+          "texts": [
+            "evolved"
+          ]
+        },
+        {
+          "title": "Natural selection",
+          "texts": [
+            "natural selection"
+          ]
+        },
+        {
+          "title": "Mutation",
+          "texts": [
+            "alpha-particles in DNA"
+          ]
+        },
+        {
+          "title": "Eric S. Raymond",
+          "texts": [
+            "Eric S. Raymond"
+          ]
+        },
+        {
+          "title": "Bryan Cantrill",
+          "texts": [
+            "Bryan Cantrill"
+          ]
+        },
+        {
+          "title": "Monolithic kernel",
+          "texts": [
+            "monolithic kernel"
+          ]
+        },
+        {
+          "title": "Peripheral",
+          "texts": [
+            "peripherals"
+          ]
+        },
+        {
+          "title": "File system",
+          "texts": [
+            "file systems"
+          ]
+        },
+        {
+          "title": "User space and kernel space",
+          "texts": [
+            "userland"
+          ]
+        },
+        {
+          "title": "Glibc",
+          "texts": [
+            "GNU C library"
+          ]
+        },
+        {
+          "title": "C standard library",
+          "texts": [
+            "C standard library"
+          ]
+        },
+        {
+          "title": "GNU toolchain",
+          "texts": [
+            "toolchain",
+            "GNU toolchain"
+          ]
+        },
+        {
+          "title": "GNU Compiler Collection",
+          "texts": [
+            "compilers",
+            "GNU Compiler Collection"
+          ]
+        },
+        {
+          "title": "GNU Core Utilities",
+          "texts": [
+            "coreutils"
+          ]
+        },
+        {
+          "title": "List of Unix commands",
+          "texts": [
+            "Unix tools"
+          ]
+        },
+        {
+          "title": "Bash (Unix shell)",
+          "texts": [
+            "Bash",
+            "Bourne-Again Shell"
+          ]
+        },
+        {
+          "title": "Command-line interface",
+          "texts": [
+            "CLI"
+          ]
+        },
+        {
+          "title": "GNU GRUB",
+          "texts": [
+            "GNU GRUB"
+          ]
+        },
+        {
+          "title": "LILO (bootloader)",
+          "texts": [
+            "LILO"
+          ]
+        },
+        {
+          "title": "SYSLINUX",
+          "texts": [
+            "SYSLINUX"
+          ]
+        },
+        {
+          "title": "Systemd-boot",
+          "texts": [
+            "systemd-boot"
+          ]
+        },
+        {
+          "title": "Main memory",
+          "texts": [
+            "main memory"
+          ]
+        },
+        {
+          "title": "Init",
+          "texts": [
+            "init"
+          ]
+        },
+        {
+          "title": "Sysvinit",
+          "texts": [
+            "sysvinit"
+          ]
+        },
+        {
+          "title": "Systemd",
+          "texts": [
+            "systemd"
+          ]
+        },
+        {
+          "title": "OpenRC",
+          "texts": [
+            "OpenRC"
+          ]
+        },
+        {
+          "title": "Upstart (software)",
+          "texts": [
+            "Upstart"
+          ]
+        },
+        {
+          "title": "Process (computing)",
+          "texts": [
+            "process"
+          ]
+        },
+        {
+          "title": "Executable and Linkable Format",
+          "texts": [
+            "ELF"
+          ]
+        },
+        {
+          "title": "Dynamic linker",
+          "texts": [
+            "dynamic linker"
+          ]
+        },
+        {
+          "title": "Ld-linux.so",
+          "texts": [
+            "ld-linux.so"
+          ]
+        },
+        {
+          "title": "Header file",
+          "texts": [
+            "header files"
+          ]
+        },
+        {
+          "title": "API",
+          "texts": [
+            "programming interface"
+          ]
+        },
+        {
+          "title": "GNU C Library",
+          "texts": [
+            "GNU C Library"
+          ]
+        },
+        {
+          "title": "Simple DirectMedia Layer",
+          "texts": [
+            "SDL"
+          ]
+        },
+        {
+          "title": "Mesa (computer graphics)",
+          "texts": [
+            "Mesa"
+          ]
+        },
+        {
+          "title": "Musl",
+          "texts": [
+            "musl"
+          ]
+        },
+        {
+          "title": "EGLIBC",
+          "texts": [
+            "EGLIBC"
+          ]
+        },
+        {
+          "title": "UClibc",
+          "texts": [
+            "uClibc"
+          ]
+        },
+        {
+          "title": "UClinux",
+          "texts": [
+            "uClinux"
+          ]
+        },
+        {
+          "title": "Bionic (software)",
+          "texts": [
+            "Bionic"
+          ]
+        },
+        {
+          "title": "Void Linux",
+          "texts": [
+            "Void Linux"
+          ]
+        },
+        {
+          "title": "BusyBox",
+          "texts": [
+            "BusyBox"
+          ]
+        },
+        {
+          "title": "Toybox",
+          "texts": [
+            "Toybox"
+          ]
+        },
+        {
+          "title": "Widget toolkit",
+          "texts": [
+            "Widget toolkits"
+          ]
+        },
+        {
+          "title": "GTK",
+          "texts": [
+            "GTK"
+          ]
+        },
+        {
+          "title": "GNOME Project",
+          "texts": [
+            "GNOME Project"
+          ]
+        },
+        {
+          "title": "Qt (software)",
+          "texts": [
+            "Qt"
+          ]
+        },
+        {
+          "title": "Qt Project",
+          "texts": [
+            "Qt Project"
+          ]
+        },
+        {
+          "title": "The Qt Company",
+          "texts": [
+            "The Qt Company"
+          ]
+        },
+        {
+          "title": "Enlightenment Foundation Libraries",
+          "texts": [
+            "Enlightenment Foundation Libraries"
+          ]
+        },
+        {
+          "title": "Enlightenment (software)",
+          "texts": [
+            "Enlightenment"
+          ]
+        },
+        {
+          "title": "Dpkg",
+          "texts": [
+            "dpkg"
+          ]
+        },
+        {
+          "title": "RPM Package Manager",
+          "texts": [
+            "RPM"
+          ]
+        },
+        {
+          "title": "Tar (computing)",
+          "texts": [
+            "tarballs"
+          ]
+        },
+        {
+          "title": "User interface",
+          "texts": [
+            "user interface"
+          ]
+        },
+        {
+          "title": "Terminal emulator",
+          "texts": [
+            "terminal emulator"
+          ]
+        },
+        {
+          "title": "Virtual console",
+          "texts": [
+            "virtual console"
+          ]
+        },
+        {
+          "title": "List of command-line interpreters",
+          "texts": [
+            "other shells"
+          ]
+        },
+        {
+          "title": "Z shell",
+          "texts": [
+            "Zsh"
+          ]
+        },
+        {
+          "title": "Userland (computing)",
+          "texts": [
+            "userland"
+          ]
+        },
+        {
+          "title": "Inter-process communication",
+          "texts": [
+            "inter-process communication"
+          ]
+        },
+        {
+          "title": "GUI shell",
+          "texts": [
+            "GUI shells"
+          ]
+        },
+        {
+          "title": "MATE (desktop environment)",
+          "texts": [
+            "MATE"
+          ]
+        },
+        {
+          "title": "Cinnamon (desktop environment)",
+          "texts": [
+            "Cinnamon"
+          ]
+        },
+        {
+          "title": "LXDE",
+          "texts": [
+            "LXDE"
+          ]
+        },
+        {
+          "title": "Elementary OS",
+          "texts": [
+            "Pantheon"
+          ]
+        },
+        {
+          "title": "Network transparency",
+          "texts": [
+            "network transparency"
+          ]
+        },
+        {
+          "title": "Window manager",
+          "texts": [
+            "window managers"
+          ]
+        },
+        {
+          "title": "Tiling window manager",
+          "texts": [
+            "tiling"
+          ]
+        },
+        {
+          "title": "Dynamic window manager",
+          "texts": [
+            "dynamic"
+          ]
+        },
+        {
+          "title": "Stacking window manager",
+          "texts": [
+            "stacking"
+          ]
+        },
+        {
+          "title": "Compositing window manager",
+          "texts": [
+            "compositing"
+          ]
+        },
+        {
+          "title": "X window manager",
+          "texts": [
+            "X window managers"
+          ]
+        },
+        {
+          "title": "Dwm",
+          "texts": [
+            "dwm"
+          ]
+        },
+        {
+          "title": "Ratpoison",
+          "texts": [
+            "ratpoison"
+          ]
+        },
+        {
+          "title": "I3 (window manager)",
+          "texts": [
+            "i3wm"
+          ]
+        },
+        {
+          "title": "Minimalism (computing)",
+          "texts": [
+            "minimalist"
+          ]
+        },
+        {
+          "title": "FVWM",
+          "texts": [
+            "FVWM"
+          ]
+        },
+        {
+          "title": "Window Maker",
+          "texts": [
+            "Window Maker"
+          ]
+        },
+        {
+          "title": "Taskbar",
+          "texts": [
+            "taskbar"
+          ]
+        },
+        {
+          "title": "Theme (computing)",
+          "texts": [
+            "themes"
+          ]
+        },
+        {
+          "title": "Mutter (software)",
+          "texts": [
+            "Mutter"
+          ]
+        },
+        {
+          "title": "KWin",
+          "texts": [
+            "KWin"
+          ]
+        },
+        {
+          "title": "Xfwm",
+          "texts": [
+            "Xfwm"
+          ]
+        },
+        {
+          "title": "Video4Linux",
+          "texts": [
+            "V4L2"
+          ]
+        },
+        {
+          "title": "DVB",
+          "texts": [
+            "DVB"
+          ]
+        },
+        {
+          "title": "Free software license",
+          "texts": [
+            "free",
+            "free software licenses"
+          ]
+        },
+        {
+          "title": "Open-source license",
+          "texts": [
+            "open-source software licenses"
+          ]
+        },
+        {
+          "title": "Copyleft",
+          "texts": [
+            "copyleft"
+          ]
+        },
+        {
+          "title": "Interoperability",
+          "texts": [
+            "interoperability"
+          ]
+        },
+        {
+          "title": "Single UNIX Specification",
+          "texts": [
+            "Single UNIX Specification"
+          ]
+        },
+        {
+          "title": "Linux Standard Base",
+          "texts": [
+            "Linux Standard Base"
+          ]
+        },
+        {
+          "title": "International Organization for Standardization",
+          "texts": [
+            "ISO"
+          ]
+        },
+        {
+          "title": "American National Standards Institute",
+          "texts": [
+            "ANSI"
+          ]
+        },
+        {
+          "title": "The Open Group",
+          "texts": [
+            "The Open Group"
+          ]
+        },
+        {
+          "title": "EulerOS",
+          "texts": [
+            "EulerOS"
+          ]
+        },
+        {
+          "title": "Inspur K-UX",
+          "texts": [
+            "Inspur K-UX"
+          ]
+        },
+        {
+          "title": "Collaboration",
+          "texts": [
+            "collaboration"
+          ]
+        },
+        {
+          "title": "APT (software)",
+          "texts": [
+            "apt"
+          ]
+        },
+        {
+          "title": "Yum (software)",
+          "texts": [
+            "yum"
+          ]
+        },
+        {
+          "title": "ZYpp",
+          "texts": [
+            "zypper"
+          ]
+        },
+        {
+          "title": "Pacman (package manager)",
+          "texts": [
+            "pacman"
+          ]
+        },
+        {
+          "title": "Portage (software)",
+          "texts": [
+            "portage"
+          ]
+        },
+        {
+          "title": "SUSE S.A.",
+          "texts": [
+            "SUSE"
+          ]
+        },
+        {
+          "title": "OpenSUSE",
+          "texts": [
+            "openSUSE"
+          ]
+        },
+        {
+          "title": "Linux User Group",
+          "texts": [
+            "Linux User Groups"
+          ]
+        },
+        {
+          "title": "Internet Relay Chat",
+          "texts": [
+            "IRC"
+          ]
+        },
+        {
+          "title": "Newsgroup",
+          "texts": [
+            "newsgroups"
+          ]
+        },
+        {
+          "title": "Internet forum",
+          "texts": [
+            "Online forums"
+          ]
+        },
+        {
+          "title": "Stack Exchange",
+          "texts": [
+            "Unix & Linux Stack Exchange"
+          ]
+        },
+        {
+          "title": "LinuxQuestions.org",
+          "texts": [
+            "LinuxQuestions.org"
+          ]
+        },
+        {
+          "title": "Gentoo Linux",
+          "texts": [
+            "Gentoo"
+          ]
+        },
+        {
+          "title": "Mailing list",
+          "texts": [
+            "mailing lists"
+          ]
+        },
+        {
+          "title": "Cover disk",
+          "texts": [
+            "cover disks"
+          ]
+        },
+        {
+          "title": "Intel",
+          "texts": [
+            "Intel"
+          ]
+        },
+        {
+          "title": "Samsung",
+          "texts": [
+            "Samsung"
+          ]
+        },
+        {
+          "title": "Google",
+          "texts": [
+            "Google"
+          ]
+        },
+        {
+          "title": "AMD",
+          "texts": [
+            "AMD"
+          ]
+        },
+        {
+          "title": "Oracle Corporation",
+          "texts": [
+            "Oracle"
+          ]
+        },
+        {
+          "title": "Facebook",
+          "texts": [
+            "Facebook"
+          ]
+        },
+        {
+          "title": "Canonical (company)",
+          "texts": [
+            "Canonical"
+          ]
+        },
+        {
+          "title": "Symbiosis",
+          "texts": [
+            "symbiotic"
+          ]
+        },
+        {
+          "title": "Business model",
+          "texts": [
+            "business model"
+          ]
+        },
+        {
+          "title": "CP/M",
+          "texts": [
+            "CP/M"
+          ]
+        },
+        {
+          "title": "Apple DOS",
+          "texts": [
+            "Apple DOS"
+          ]
+        },
+        {
+          "title": "Classic Mac OS",
+          "texts": [
+            "classic Mac OS"
+          ]
+        },
+        {
+          "title": "Programming language",
+          "texts": [
+            "programming languages"
+          ]
+        },
+        {
+          "title": "GNU Build System",
+          "texts": [
+            "GNU Build System"
+          ]
+        },
+        {
+          "title": "Ada (programming language)",
+          "texts": [
+            "Ada"
+          ]
+        },
+        {
+          "title": "Go (programming language)",
+          "texts": [
+            "Go"
+          ]
+        },
+        {
+          "title": "PHP",
+          "texts": [
+            "PHP"
+          ]
+        },
+        {
+          "title": "Perl",
+          "texts": [
+            "Perl"
+          ]
+        },
+        {
+          "title": "Ruby (programming language)",
+          "texts": [
+            "Ruby"
+          ]
+        },
+        {
+          "title": "Python (programming language)",
+          "texts": [
+            "Python"
+          ]
+        },
+        {
+          "title": "Java (programming language)",
+          "texts": [
+            "Java"
+          ]
+        },
+        {
+          "title": "Rust (programming language)",
+          "texts": [
+            "Rust"
+          ]
+        },
+        {
+          "title": "Haskell",
+          "texts": [
+            "Haskell"
+          ]
+        },
+        {
+          "title": "LLVM",
+          "texts": [
+            "LLVM"
+          ]
+        },
+        {
+          "title": "Intel C++ Compiler",
+          "texts": [
+            "Intel C++ Compiler"
+          ]
+        },
+        {
+          "title": "Sun Studio (software)",
+          "texts": [
+            "Sun Studio"
+          ]
+        },
+        {
+          "title": "IBM XL C/C++ Compilers",
+          "texts": [
+            "IBM XL C/C++ Compiler"
+          ]
+        },
+        {
+          "title": "BASIC",
+          "texts": [
+            "BASIC"
+          ]
+        },
+        {
+          "title": "Procedural programming",
+          "texts": [
+            "procedural"
+          ]
+        },
+        {
+          "title": "QB64",
+          "texts": [
+            "QB64"
+          ]
+        },
+        {
+          "title": "PureBasic",
+          "texts": [
+            "PureBasic"
+          ]
+        },
+        {
+          "title": "Yabasic",
+          "texts": [
+            "Yabasic"
+          ]
+        },
+        {
+          "title": "GLBasic",
+          "texts": [
+            "GLBasic"
+          ]
+        },
+        {
+          "title": "Basic4GL",
+          "texts": [
+            "Basic4GL"
+          ]
+        },
+        {
+          "title": "XBasic",
+          "texts": [
+            "XBasic"
+          ]
+        },
+        {
+          "title": "WxBasic",
+          "texts": [
+            "wxBasic"
+          ]
+        },
+        {
+          "title": "SdlBasic",
+          "texts": [
+            "SdlBasic"
+          ]
+        },
+        {
+          "title": "Basic-256",
+          "texts": [
+            "Basic-256"
+          ]
+        },
+        {
+          "title": "Object oriented programming",
+          "texts": [
+            "object oriented"
+          ]
+        },
+        {
+          "title": "Gambas",
+          "texts": [
+            "Gambas"
+          ]
+        },
+        {
+          "title": "FreeBASIC",
+          "texts": [
+            "FreeBASIC"
+          ]
+        },
+        {
+          "title": "NS Basic",
+          "texts": [
+            "NS Basic"
+          ]
+        },
+        {
+          "title": "Chipmunk Basic",
+          "texts": [
+            "Chipmunk Basic"
+          ]
+        },
+        {
+          "title": "RapidQ",
+          "texts": [
+            "RapidQ"
+          ]
+        },
+        {
+          "title": "Xojo",
+          "texts": [
+            "Xojo"
+          ]
+        },
+        {
+          "title": "Pascal (programming language)",
+          "texts": [
+            "Pascal"
+          ]
+        },
+        {
+          "title": "GNU Pascal",
+          "texts": [
+            "GNU Pascal"
+          ]
+        },
+        {
+          "title": "Free Pascal",
+          "texts": [
+            "Free Pascal"
+          ]
+        },
+        {
+          "title": "Virtual Pascal",
+          "texts": [
+            "Virtual Pascal"
+          ]
+        },
+        {
+          "title": "Lazarus (software)",
+          "texts": [
+            "Lazarus"
+          ]
+        },
+        {
+          "title": "PascalABC.NET",
+          "texts": [
+            "PascalABC.NET"
+          ]
+        },
+        {
+          "title": "Delphi (software)",
+          "texts": [
+            "Delphi"
+          ]
+        },
+        {
+          "title": "FireMonkey",
+          "texts": [
+            "FireMonkey"
+          ]
+        },
+        {
+          "title": "Borland Kylix",
+          "texts": [
+            "Borland Kylix"
+          ]
+        },
+        {
+          "title": "Scripting language",
+          "texts": [
+            "scripting",
+            "extension language"
+          ]
+        },
+        {
+          "title": "AWK",
+          "texts": [
+            "AWK"
+          ]
+        },
+        {
+          "title": "Sed",
+          "texts": [
+            "sed"
+          ]
+        },
+        {
+          "title": "Make (software)",
+          "texts": [
+            "make"
+          ]
+        },
+        {
+          "title": "Regular expression",
+          "texts": [
+            "regular expressions"
+          ]
+        },
+        {
+          "title": "Grep",
+          "texts": [
+            "grep"
+          ]
+        },
+        {
+          "title": "Locate (Unix)",
+          "texts": [
+            "locate"
+          ]
+        },
+        {
+          "title": "Sendmail",
+          "texts": [
+            "Sendmail"
+          ]
+        },
+        {
+          "title": "Turing completeness",
+          "texts": [
+            "Turing complete"
+          ]
+        },
+        {
+          "title": "GNU Emacs",
+          "texts": [
+            "GNU Emacs"
+          ]
+        },
+        {
+          "title": "Emacs Lisp",
+          "texts": [
+            "Lisp"
+          ]
+        },
+        {
+          "title": "Dynamic programming language",
+          "texts": [
+            "dynamic languages"
+          ]
+        },
+        {
+          "title": "C Sharp (programming language)",
+          "texts": [
+            "C#"
+          ]
+        },
+        {
+          "title": "Common Language Infrastructure",
+          "texts": [
+            "CLI"
+          ]
+        },
+        {
+          "title": "List of CLI languages",
+          "texts": [
+            "languages"
+          ]
+        },
+        {
+          "title": "Mono (software)",
+          "texts": [
+            "Mono"
+          ]
+        },
+        {
+          "title": "Vala (programming language)",
+          "texts": [
+            "Vala"
+          ]
+        },
+        {
+          "title": "Scheme (programming language)",
+          "texts": [
+            "Scheme"
+          ]
+        },
+        {
+          "title": "Guile (programming language)",
+          "texts": [
+            "Guile Scheme"
+          ]
+        },
+        {
+          "title": "Static typing",
+          "texts": [
+            "static"
+          ]
+        },
+        {
+          "title": "Unix philosophy",
+          "texts": [
+            "Unix design"
+          ]
+        },
+        {
+          "title": "Functional programming",
+          "texts": [
+            "functional"
+          ]
+        },
+        {
+          "title": "Language binding",
+          "texts": [
+            "bindings"
+          ]
+        },
+        {
+          "title": "Java virtual machine",
+          "texts": [
+            "Java virtual machines"
+          ]
+        },
+        {
+          "title": "HotSpot",
+          "texts": [
+            "HotSpot"
+          ]
+        },
+        {
+          "title": "Kaffe",
+          "texts": [
+            "Kaffe"
+          ]
+        },
+        {
+          "title": "Jikes RVM",
+          "texts": [
+            "Jikes RVM"
+          ]
+        },
+        {
+          "title": "Kotlin",
+          "texts": [
+            "Kotlin"
+          ]
+        },
+        {
+          "title": "Scala (programming language)",
+          "texts": [
+            "Scala"
+          ]
+        },
+        {
+          "title": "Apache Groovy",
+          "texts": [
+            "Groovy"
+          ]
+        },
+        {
+          "title": "List of JVM languages",
+          "texts": [
+            "JVM languages"
+          ]
+        },
+        {
+          "title": "KDE",
+          "texts": [
+            "KDE"
+          ]
+        },
+        {
+          "title": "Integrated development environment",
+          "texts": [
+            "Integrated development environments"
+          ]
+        },
+        {
+          "title": "Anjuta",
+          "texts": [
+            "Anjuta"
+          ]
+        },
+        {
+          "title": "Code::Blocks",
+          "texts": [
+            "Code::Blocks"
+          ]
+        },
+        {
+          "title": "CodeLite",
+          "texts": [
+            "CodeLite"
+          ]
+        },
+        {
+          "title": "Eclipse (software)",
+          "texts": [
+            "Eclipse"
+          ]
+        },
+        {
+          "title": "Geany",
+          "texts": [
+            "Geany"
+          ]
+        },
+        {
+          "title": "ActiveState Komodo",
+          "texts": [
+            "ActiveState Komodo"
+          ]
+        },
+        {
+          "title": "KDevelop",
+          "texts": [
+            "KDevelop"
+          ]
+        },
+        {
+          "title": "MonoDevelop",
+          "texts": [
+            "MonoDevelop"
+          ]
+        },
+        {
+          "title": "NetBeans",
+          "texts": [
+            "NetBeans"
+          ]
+        },
+        {
+          "title": "Qt Creator",
+          "texts": [
+            "Qt Creator"
+          ]
+        },
+        {
+          "title": "Vim (text editor)",
+          "texts": [
+            "Vim"
+          ]
+        },
+        {
+          "title": "GNU nano",
+          "texts": [
+            "nano"
+          ]
+        },
+        {
+          "title": "Emacs",
+          "texts": [
+            "Emacs"
+          ]
+        },
+        {
+          "title": "GNU Image Manipulation Program",
+          "texts": [
+            "GNU Image Manipulation Program"
+          ]
+        },
+        {
+          "title": "Inkscape",
+          "texts": [
+            "Inkscape"
+          ]
+        },
+        {
+          "title": "Krita",
+          "texts": [
+            "Krita"
+          ]
+        },
+        {
+          "title": "DaVinci Resolve",
+          "texts": [
+            "DaVinci Resolve"
+          ]
+        },
+        {
+          "title": "Scribus",
+          "texts": [
+            "Scribus"
+          ]
+        },
+        {
+          "title": "Computer architecture",
+          "texts": [
+            "computer architectures"
+          ]
+        },
+        {
+          "title": "ARM architecture family",
+          "texts": [
+            "ARM"
+          ]
+        },
+        {
+          "title": "IBM Z",
+          "texts": [
+            "IBM Z"
+          ]
+        },
+        {
+          "title": "Embeddable Linux Kernel Subset",
+          "texts": [
+            "ELKS"
+          ]
+        },
+        {
+          "title": "Fork (software development)",
+          "texts": [
+            "fork"
+          ]
+        },
+        {
+          "title": "Intel 8086",
+          "texts": [
+            "Intel 8086"
+          ]
+        },
+        {
+          "title": "Intel 80286",
+          "texts": [
+            "Intel 80286"
+          ]
+        },
+        {
+          "title": "ΜClinux",
+          "texts": [
+            "μClinux"
+          ]
+        },
+        {
+          "title": "Memory management unit",
+          "texts": [
+            "memory management unit"
+          ]
+        },
+        {
+          "title": "Macintosh",
+          "texts": [
+            "Macintosh"
+          ]
+        },
+        {
+          "title": "PowerPC",
+          "texts": [
+            "PowerPC"
+          ]
+        },
+        {
+          "title": "Apple silicon",
+          "texts": [
+            "Apple silicon"
+          ]
+        },
+        {
+          "title": "Personal digital assistant",
+          "texts": [
+            "PDAs"
+          ]
+        },
+        {
+          "title": "Portable media player",
+          "texts": [
+            "portable music players"
+          ]
+        },
+        {
+          "title": "Convention (meeting)",
+          "texts": [
+            "conferences"
+          ]
+        },
+        {
+          "title": "FreedomHEC",
+          "texts": [
+            "FreedomHEC"
+          ]
+        },
+        {
+          "title": "Linus's law",
+          "texts": [
+            "Linus's law"
+          ]
+        },
+        {
+          "title": "Open Source Security Foundation",
+          "texts": [
+            "Open Source Security Foundation"
+          ]
+        },
+        {
+          "title": "Linux Foundation",
+          "texts": [
+            "Linux Foundation"
+          ]
+        }
+      ]
+    }
+  }
+}

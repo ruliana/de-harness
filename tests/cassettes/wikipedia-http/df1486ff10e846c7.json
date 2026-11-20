@@ -1,0 +1,34 @@
+{
+  "hash": "df1486ff10e846c7",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Mount%20Everest",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20261030233456|1382910699",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 42179,
+            "ns": 0,
+            "title": "Mount Everest",
+            "revisions": [
+              {
+                "revid": 1382963768,
+                "parentid": 1382910699
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

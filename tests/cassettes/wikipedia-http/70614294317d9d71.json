@@ -1,0 +1,34 @@
+{
+  "hash": "70614294317d9d71",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Mount%20Vesuvius",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20260730234558|1366932992",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 46817,
+            "ns": 0,
+            "title": "Mount Vesuvius",
+            "revisions": [
+              {
+                "revid": 1369586079,
+                "parentid": 1366932992
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

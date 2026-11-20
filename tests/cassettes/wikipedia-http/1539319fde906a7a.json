@@ -1,0 +1,40 @@
+{
+  "hash": "1539319fde906a7a",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Planets",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20260927133658|1377019019",
+        "continue": "||"
+      },
+      "query": {
+        "redirects": [
+          {
+            "from": "Planets",
+            "to": "Planet"
+          }
+        ],
+        "pages": [
+          {
+            "pageid": 22915,
+            "ns": 0,
+            "title": "Planet",
+            "revisions": [
+              {
+                "revid": 1377883466,
+                "parentid": 1377019019
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

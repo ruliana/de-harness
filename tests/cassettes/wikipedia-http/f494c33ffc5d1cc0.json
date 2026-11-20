@@ -1,0 +1,1048 @@
+{
+  "hash": "f494c33ffc5d1cc0",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Enigma_machine/1381401534",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Enigma machine",
+      "lead": "The Enigma machine is a cipher device developed and used in the early- to mid-20th century to protect commercial, diplomatic, and military communication. It was employed extensively by Nazi Germany during World War II, in all branches of the German military. The Enigma machine was considered so secure that it was used to encipher the most top-secret messages.",
+      "links": [
+        {
+          "title": "Cipher",
+          "texts": [
+            "cipher"
+          ]
+        },
+        {
+          "title": "Commerce",
+          "texts": [
+            "commercial"
+          ]
+        },
+        {
+          "title": "Nazi Germany",
+          "texts": [
+            "Nazi Germany",
+            "German"
+          ]
+        },
+        {
+          "title": "World War II",
+          "texts": [
+            "World War II"
+          ]
+        },
+        {
+          "title": "Wehrmacht",
+          "texts": [
+            "German military",
+            "Wehrmacht"
+          ]
+        },
+        {
+          "title": "Rotor machine",
+          "texts": [
+            "rotor mechanism",
+            "rotors",
+            "rotor machines"
+          ]
+        },
+        {
+          "title": "Plaintext",
+          "texts": [
+            "plaintext"
+          ]
+        },
+        {
+          "title": "Ciphertext",
+          "texts": [
+            "ciphertext"
+          ]
+        },
+        {
+          "title": "Key (cryptography)",
+          "texts": [
+            "cryptographic key"
+          ]
+        },
+        {
+          "title": "Second Polish Republic",
+          "texts": [
+            "Poland"
+          ]
+        },
+        {
+          "title": "Allies of World War II",
+          "texts": [
+            "Allies",
+            "Allied"
+          ]
+        },
+        {
+          "title": "Cryptanalysis of the Enigma",
+          "texts": [
+            "cryptanalysis of the Enigma",
+            "Enigma-decryption techniques",
+            "M4"
+          ]
+        },
+        {
+          "title": "Ultra (cryptography)",
+          "texts": [
+            "Ultra"
+          ]
+        },
+        {
+          "title": "Communications intelligence",
+          "texts": [
+            "communications intelligence"
+          ]
+        },
+        {
+          "title": "Lorenz cipher",
+          "texts": [
+            "Lorenz"
+          ]
+        },
+        {
+          "title": "Arthur Scherbius",
+          "texts": [
+            "Arthur Scherbius"
+          ]
+        },
+        {
+          "title": "World War I",
+          "texts": [
+            "World War I"
+          ]
+        },
+        {
+          "title": "Plugboard",
+          "texts": [
+            "plugboard"
+          ]
+        },
+        {
+          "title": "Blitzkrieg",
+          "texts": [
+            "blitzkrieg"
+          ]
+        },
+        {
+          "title": "Hans-Thilo Schmidt",
+          "texts": [
+            "Hans-Thilo Schmidt"
+          ]
+        },
+        {
+          "title": "French Third Republic",
+          "texts": [
+            "French"
+          ]
+        },
+        {
+          "title": "Marian Rejewski",
+          "texts": [
+            "Marian Rejewski"
+          ]
+        },
+        {
+          "title": "Cryptanalysis",
+          "texts": [
+            "cryptologist",
+            "depth"
+          ]
+        },
+        {
+          "title": "Biuro Szyfrów",
+          "texts": [
+            "Polish Cipher Bureau"
+          ]
+        },
+        {
+          "title": "Polish Enigma double",
+          "texts": [
+            "Enigma doubles",
+            "Polish Enigma double"
+          ]
+        },
+        {
+          "title": "Jerzy Różycki",
+          "texts": [
+            "Jerzy Różycki"
+          ]
+        },
+        {
+          "title": "Henryk Zygalski",
+          "texts": [
+            "Henryk Zygalski"
+          ]
+        },
+        {
+          "title": "Adam Mickiewicz University in Poznań",
+          "texts": [
+            "Poznań University"
+          ]
+        },
+        {
+          "title": "German Empire",
+          "texts": [
+            "Germany"
+          ]
+        },
+        {
+          "title": "Cyclometer",
+          "texts": [
+            "cyclometer"
+          ]
+        },
+        {
+          "title": "Zygalski sheets",
+          "texts": [
+            "Zygalski sheets"
+          ]
+        },
+        {
+          "title": "Bomba (cryptography)",
+          "texts": [
+            "bomba"
+          ]
+        },
+        {
+          "title": "Pyry, Warsaw",
+          "texts": [
+            "Pyry"
+          ]
+        },
+        {
+          "title": "Warsaw",
+          "texts": [
+            "Warsaw"
+          ]
+        },
+        {
+          "title": "Military intelligence",
+          "texts": [
+            "military intelligence"
+          ]
+        },
+        {
+          "title": "Colin Gubbins",
+          "texts": [
+            "Colin Gubbins"
+          ]
+        },
+        {
+          "title": "Vera Atkins",
+          "texts": [
+            "Vera Atkins"
+          ]
+        },
+        {
+          "title": "UK",
+          "texts": [
+            "British"
+          ]
+        },
+        {
+          "title": "Antonio Camazón",
+          "texts": [
+            "Antonio Camazón"
+          ]
+        },
+        {
+          "title": "Servicio de Información Militar",
+          "texts": [
+            "Servicio de Información Militar"
+          ]
+        },
+        {
+          "title": "Spanish Republican Army",
+          "texts": [
+            "Spanish Republican Army"
+          ]
+        },
+        {
+          "title": "Spanish Civil War",
+          "texts": [
+            "Spanish Civil War",
+            "Civil War"
+          ]
+        },
+        {
+          "title": "Gustave Bertrand",
+          "texts": [
+            "Gustave Bertrand"
+          ]
+        },
+        {
+          "title": "PC Bruno",
+          "texts": [
+            "PC Bruno"
+          ]
+        },
+        {
+          "title": "Norwegian campaign",
+          "texts": [
+            "Norwegian campaign"
+          ]
+        },
+        {
+          "title": "Luftwaffe",
+          "texts": [
+            "Luftwaffe"
+          ]
+        },
+        {
+          "title": "Bletchley Park",
+          "texts": [
+            "Bletchley Park"
+          ]
+        },
+        {
+          "title": "Battle of France",
+          "texts": [
+            "German invasion of France in June 1940"
+          ]
+        },
+        {
+          "title": "Cadix",
+          "texts": [
+            "Cadix"
+          ]
+        },
+        {
+          "title": "Vichy France",
+          "texts": [
+            "Vichy-controlled zone"
+          ]
+        },
+        {
+          "title": "Algiers",
+          "texts": [
+            "Algiers"
+          ]
+        },
+        {
+          "title": "Gordon Welchman",
+          "texts": [
+            "Gordon Welchman"
+          ]
+        },
+        {
+          "title": "Hut 6",
+          "texts": [
+            "Hut 6"
+          ]
+        },
+        {
+          "title": "Abwehr",
+          "texts": [
+            "Abwehr"
+          ]
+        },
+        {
+          "title": "Operation Torch",
+          "texts": [
+            "Operation Torch"
+          ]
+        },
+        {
+          "title": "Dilly Knox",
+          "texts": [
+            "Dilly Knox",
+            "Alfred Dilwyn Knox"
+          ]
+        },
+        {
+          "title": "Double-Cross System",
+          "texts": [
+            "Double-Cross System"
+          ]
+        },
+        {
+          "title": "Schlüsselgerät 41",
+          "texts": [
+            "Schlüsselgerät 41"
+          ]
+        },
+        {
+          "title": "Alphanumeric keyboard",
+          "texts": [
+            "keyboard"
+          ]
+        },
+        {
+          "title": "Axle",
+          "texts": [
+            "spindle"
+          ]
+        },
+        {
+          "title": "Electrical network",
+          "texts": [
+            "electrical circuit"
+          ]
+        },
+        {
+          "title": "Electric light",
+          "texts": [
+            "lamp"
+          ]
+        },
+        {
+          "title": "Kriegsmarine",
+          "texts": [
+            "Kriegsmarine"
+          ]
+        },
+        {
+          "title": "Polyalphabetic cipher",
+          "texts": [
+            "polyalphabetic substitution cipher"
+          ]
+        },
+        {
+          "title": "Ebonite",
+          "texts": [
+            "Ebonite"
+          ]
+        },
+        {
+          "title": "Bakelite",
+          "texts": [
+            "Bakelite"
+          ]
+        },
+        {
+          "title": "Brass",
+          "texts": [
+            "brass"
+          ]
+        },
+        {
+          "title": "Electrical contact",
+          "texts": [
+            "electrical contact"
+          ]
+        },
+        {
+          "title": "Alphabet",
+          "texts": [
+            "alphabet"
+          ]
+        },
+        {
+          "title": "Enigma-M4",
+          "texts": [
+            "M4"
+          ]
+        },
+        {
+          "title": "Encryption",
+          "texts": [
+            "encryption"
+          ]
+        },
+        {
+          "title": "Substitution cipher",
+          "texts": [
+            "substitution cipher"
+          ]
+        },
+        {
+          "title": "Initialisation vector",
+          "texts": [
+            "initialisation vector"
+          ]
+        },
+        {
+          "title": "Roman numerals",
+          "texts": [
+            "Roman numerals"
+          ]
+        },
+        {
+          "title": "Clock (cryptography)",
+          "texts": [
+            "Clock Method"
+          ]
+        },
+        {
+          "title": "Banburismus",
+          "texts": [
+            "Banburismus"
+          ]
+        },
+        {
+          "title": "Ratchet (device)",
+          "texts": [
+            "ratchet and pawl"
+          ]
+        },
+        {
+          "title": "Odometer",
+          "texts": [
+            "odometer"
+          ]
+        },
+        {
+          "title": "Coprime integers",
+          "texts": [
+            "relative prime"
+          ]
+        },
+        {
+          "title": "Stator (electric machines)",
+          "texts": [
+            "stator"
+          ]
+        },
+        {
+          "title": "QWERTZ",
+          "texts": [
+            "QWERTZ"
+          ]
+        },
+        {
+          "title": "Involution (mathematics)",
+          "texts": [
+            "self-reciprocal"
+          ]
+        },
+        {
+          "title": "Reichsmarine",
+          "texts": [
+            "Reichsmarine",
+            "German Navy"
+          ]
+        },
+        {
+          "title": "Printer (computing)",
+          "texts": [
+            "printer"
+          ]
+        },
+        {
+          "title": "Permutation",
+          "texts": [
+            "permutations"
+          ]
+        },
+        {
+          "title": "Cyclic permutation",
+          "texts": [
+            "cyclic permutation"
+          ]
+        },
+        {
+          "title": "Names of large numbers",
+          "texts": [
+            "quintillion"
+          ]
+        },
+        {
+          "title": "Bit",
+          "texts": [
+            "bits"
+          ]
+        },
+        {
+          "title": "Pseudorandomness",
+          "texts": [
+            "pseudo-random",
+            "substitution alphabet"
+          ]
+        },
+        {
+          "title": "Cyphertext",
+          "texts": [
+            "cyphertext"
+          ]
+        },
+        {
+          "title": "Morse code",
+          "texts": [
+            "Morse code"
+          ]
+        },
+        {
+          "title": "Code name",
+          "texts": [
+            "code names"
+          ]
+        },
+        {
+          "title": "Codebook",
+          "texts": [
+            "codebooks"
+          ]
+        },
+        {
+          "title": "Brute-force attack",
+          "texts": [
+            "brute-force attack"
+          ]
+        },
+        {
+          "title": "Initialization vector",
+          "texts": [
+            "initialisation vector"
+          ]
+        },
+        {
+          "title": "William F. Friedman",
+          "texts": [
+            "Friedman's",
+            "William Friedman"
+          ]
+        },
+        {
+          "title": "Index of coincidence",
+          "texts": [
+            "Index of coincidence"
+          ]
+        },
+        {
+          "title": "Kurzsignale",
+          "texts": [
+            "Kurzsignalheft"
+          ]
+        },
+        {
+          "title": "Discriminant Book",
+          "texts": [
+            "Kenngruppen"
+          ]
+        },
+        {
+          "title": "Patent",
+          "texts": [
+            "patent"
+          ]
+        },
+        {
+          "title": "Universal Postal Union",
+          "texts": [
+            "International Postal Union"
+          ]
+        },
+        {
+          "title": "Typewriter",
+          "texts": [
+            "typewriter"
+          ]
+        },
+        {
+          "title": "Willi Korn",
+          "texts": [
+            "Willi Korn"
+          ]
+        },
+        {
+          "title": "Hugh Foss",
+          "texts": [
+            "Hugh Foss"
+          ]
+        },
+        {
+          "title": "Government Communications Headquarters",
+          "texts": [
+            "Government Code and Cypher School",
+            "Government Communications Headquarters"
+          ]
+        },
+        {
+          "title": "QWERTY",
+          "texts": [
+            "QWERTY"
+          ]
+        },
+        {
+          "title": "Italian Navy",
+          "texts": [
+            "Italian Navy"
+          ]
+        },
+        {
+          "title": "Reichswehr",
+          "texts": [
+            "Reichswehr"
+          ]
+        },
+        {
+          "title": "Geheimschreiber",
+          "texts": [
+            "Geheimschreiber"
+          ]
+        },
+        {
+          "title": "Deutsche Reichsbahn",
+          "texts": [
+            "railways"
+          ]
+        },
+        {
+          "title": "Deutsches Museum",
+          "texts": [
+            "Deutsches Museum"
+          ]
+        },
+        {
+          "title": "Munich",
+          "texts": [
+            "Munich"
+          ]
+        },
+        {
+          "title": "Berlin",
+          "texts": [
+            "Berlin"
+          ]
+        },
+        {
+          "title": "National Codes Centre",
+          "texts": [
+            "National Codes Centre"
+          ]
+        },
+        {
+          "title": "Bletchley Park Museum",
+          "texts": [
+            "Bletchley Park"
+          ]
+        },
+        {
+          "title": "Science Museum, London",
+          "texts": [
+            "Science Museum"
+          ]
+        },
+        {
+          "title": "London",
+          "texts": [
+            "London"
+          ]
+        },
+        {
+          "title": "Discovery Park of America",
+          "texts": [
+            "Discovery Park of America"
+          ]
+        },
+        {
+          "title": "Polish Army Museum",
+          "texts": [
+            "Polish Army Museum"
+          ]
+        },
+        {
+          "title": "Swedish Army Museum",
+          "texts": [
+            "Swedish Army Museum"
+          ]
+        },
+        {
+          "title": "A Coruña",
+          "texts": [
+            "A Coruña"
+          ]
+        },
+        {
+          "title": "Narvik",
+          "texts": [
+            "Narvik"
+          ]
+        },
+        {
+          "title": "Hämeenlinna",
+          "texts": [
+            "Hämeenlinna"
+          ]
+        },
+        {
+          "title": "Technical University of Denmark",
+          "texts": [
+            "Technical University of Denmark"
+          ]
+        },
+        {
+          "title": "Australian War Memorial",
+          "texts": [
+            "Australian War Memorial"
+          ]
+        },
+        {
+          "title": "Australian Signals Directorate",
+          "texts": [
+            "Australian Signals Directorate"
+          ]
+        },
+        {
+          "title": "Canberra",
+          "texts": [
+            "Canberra"
+          ]
+        },
+        {
+          "title": "Computer History Museum",
+          "texts": [
+            "Computer History Museum"
+          ]
+        },
+        {
+          "title": "Mountain View, California",
+          "texts": [
+            "Mountain View, California"
+          ]
+        },
+        {
+          "title": "National Security Agency",
+          "texts": [
+            "National Security Agency"
+          ]
+        },
+        {
+          "title": "National Cryptologic Museum",
+          "texts": [
+            "National Cryptologic Museum"
+          ]
+        },
+        {
+          "title": "Fort Meade",
+          "texts": [
+            "Fort Meade"
+          ]
+        },
+        {
+          "title": "German submarine U-505",
+          "texts": [
+            "U-505"
+          ]
+        },
+        {
+          "title": "Museum of Science and Industry (Chicago)",
+          "texts": [
+            "Museum of Science and Industry"
+          ]
+        },
+        {
+          "title": "Chicago",
+          "texts": [
+            "Chicago"
+          ]
+        },
+        {
+          "title": "Union City, Tennessee",
+          "texts": [
+            "Union City, Tennessee"
+          ]
+        },
+        {
+          "title": "The Pentagon",
+          "texts": [
+            "Pentagon"
+          ]
+        },
+        {
+          "title": "The National WWII Museum",
+          "texts": [
+            "The National WWII Museum"
+          ]
+        },
+        {
+          "title": "The International Museum of World War II",
+          "texts": [
+            "The International Museum of World War II"
+          ]
+        },
+        {
+          "title": "Mimms Museum of Technology and Art",
+          "texts": [
+            "Mimms Museum of Technology and Art"
+          ]
+        },
+        {
+          "title": "Roswell, Georgia",
+          "texts": [
+            "Roswell, Georgia"
+          ]
+        },
+        {
+          "title": "National Museum of Computing",
+          "texts": [
+            "National Museum of Computing"
+          ]
+        },
+        {
+          "title": "Carnegie Mellon University",
+          "texts": [
+            "Carnegie Mellon University"
+          ]
+        },
+        {
+          "title": "Military Communications and Electronics Museum",
+          "texts": [
+            "Military Communications and Electronics Museum"
+          ]
+        },
+        {
+          "title": "Canadian Forces Base",
+          "texts": [
+            "Canadian Forces Base"
+          ]
+        },
+        {
+          "title": "CFB Kingston",
+          "texts": [
+            "Kingston"
+          ]
+        },
+        {
+          "title": "Kingston, Ontario",
+          "texts": [
+            "Kingston, Ontario"
+          ]
+        },
+        {
+          "title": "Bletchley Park museum",
+          "texts": [
+            "Bletchley Park museum"
+          ]
+        },
+        {
+          "title": "Jeremy Paxman",
+          "texts": [
+            "Jeremy Paxman"
+          ]
+        },
+        {
+          "title": "The Sunday Times",
+          "texts": [
+            "The Sunday Times"
+          ]
+        },
+        {
+          "title": "El País",
+          "texts": [
+            "El País"
+          ]
+        },
+        {
+          "title": "Museum of the Army (Toledo)",
+          "texts": [
+            "Spanish Army Museum"
+          ]
+        },
+        {
+          "title": "Bulgaria",
+          "texts": [
+            "Bulgarian"
+          ]
+        },
+        {
+          "title": "Cyrillic script",
+          "texts": [
+            "Cyrillic"
+          ]
+        },
+        {
+          "title": "National Museum of Military History (Bulgaria)",
+          "texts": [
+            "National Museum of Military History"
+          ]
+        },
+        {
+          "title": "Sofia",
+          "texts": [
+            "Sofia"
+          ]
+        },
+        {
+          "title": "World Wide Fund for Nature",
+          "texts": [
+            "World Wide Fund for Nature"
+          ]
+        },
+        {
+          "title": "Flensburg Firth",
+          "texts": [
+            "Flensburg Firth"
+          ]
+        },
+        {
+          "title": "Baltic Sea",
+          "texts": [
+            "Baltic Sea"
+          ]
+        },
+        {
+          "title": "Schleswig Holstein",
+          "texts": [
+            "Schleswig Holstein"
+          ]
+        },
+        {
+          "title": "Istria",
+          "texts": [
+            "Istrian"
+          ]
+        },
+        {
+          "title": "Pivka Park of Military History",
+          "texts": [
+            "Pivka Park of Military History"
+          ]
+        },
+        {
+          "title": "Slovenia",
+          "texts": [
+            "Slovenia"
+          ]
+        },
+        {
+          "title": "Christie's",
+          "texts": [
+            "Christie's"
+          ]
+        },
+        {
+          "title": "Karl Dönitz",
+          "texts": [
+            "Karl Dönitz"
+          ]
+        },
+        {
+          "title": "Typex",
+          "texts": [
+            "Typex"
+          ]
+        },
+        {
+          "title": "M-325",
+          "texts": [
+            "M-325"
+          ]
+        },
+        {
+          "title": "SIGABA",
+          "texts": [
+            "SIGABA"
+          ]
+        },
+        {
+          "title": "NEMA (machine)",
+          "texts": [
+            "NEMA"
+          ]
+        }
+      ]
+    }
+  }
+}

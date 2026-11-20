@@ -1,0 +1,3501 @@
+{
+  "hash": "45ed23c070c904e7",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Nepal/1382779681",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Nepal",
+      "lead": "Nepal is a landlocked country in South Asia. It is mainly situated in the Himalayas, but also includes parts of the Indo-Gangetic Plain. It borders the Tibet Autonomous Region of China to the north, and India to the south, east, and west, while it is narrowly separated from Bangladesh by the Siliguri Corridor, and from Bhutan by the Indian state of Sikkim. Nepal has a diverse geography, including fertile plains, subalpine forested hills, and eight of the world's ten highest mountains, including Mount Everest, the highest point above mean sea level on Earth. Kathmandu is the nation's capital and its largest city. Nepal is a multi-ethnic, multi-lingual, multi-religious, and multi-cultural sovereign state, with Nepali as the official language.",
+      "links": [
+        {
+          "title": "Landlocked country",
+          "texts": [
+            "landlocked country"
+          ]
+        },
+        {
+          "title": "South Asia",
+          "texts": [
+            "South Asia"
+          ]
+        },
+        {
+          "title": "Himalayas",
+          "texts": [
+            "Himalayas",
+            "Himal"
+          ]
+        },
+        {
+          "title": "Indo-Gangetic Plain",
+          "texts": [
+            "Indo-Gangetic Plain"
+          ]
+        },
+        {
+          "title": "Tibet Autonomous Region",
+          "texts": [
+            "Tibet Autonomous Region"
+          ]
+        },
+        {
+          "title": "China",
+          "texts": [
+            "China"
+          ]
+        },
+        {
+          "title": "China–Nepal border",
+          "texts": [
+            "to the north"
+          ]
+        },
+        {
+          "title": "India",
+          "texts": [
+            "India"
+          ]
+        },
+        {
+          "title": "India–Nepal border",
+          "texts": [
+            "to the south, east, and west"
+          ]
+        },
+        {
+          "title": "Bangladesh",
+          "texts": [
+            "Bangladesh"
+          ]
+        },
+        {
+          "title": "Siliguri Corridor",
+          "texts": [
+            "Siliguri Corridor"
+          ]
+        },
+        {
+          "title": "Bhutan",
+          "texts": [
+            "Bhutan"
+          ]
+        },
+        {
+          "title": "Indian state",
+          "texts": [
+            "Indian state"
+          ]
+        },
+        {
+          "title": "Sikkim",
+          "texts": [
+            "Sikkim"
+          ]
+        },
+        {
+          "title": "Geography of Nepal",
+          "texts": [
+            "diverse geography"
+          ]
+        },
+        {
+          "title": "Terai",
+          "texts": [
+            "fertile plains",
+            "Terai"
+          ]
+        },
+        {
+          "title": "List of highest mountains",
+          "texts": [
+            "highest mountains"
+          ]
+        },
+        {
+          "title": "Mount Everest",
+          "texts": [
+            "Mount Everest"
+          ]
+        },
+        {
+          "title": "Mean sea level",
+          "texts": [
+            "mean sea level"
+          ]
+        },
+        {
+          "title": "Kathmandu",
+          "texts": [
+            "Kathmandu"
+          ]
+        },
+        {
+          "title": "List of cities in Nepal",
+          "texts": [
+            "its largest city"
+          ]
+        },
+        {
+          "title": "Nepali language",
+          "texts": [
+            "Nepali"
+          ]
+        },
+        {
+          "title": "Tibet",
+          "texts": [
+            "Tibet"
+          ]
+        },
+        {
+          "title": "Kathmandu Valley",
+          "texts": [
+            "Kathmandu Valley"
+          ]
+        },
+        {
+          "title": "Indo-Aryan people",
+          "texts": [
+            "Indo-Aryans"
+          ]
+        },
+        {
+          "title": "Newar people",
+          "texts": [
+            "Newar",
+            "Newara"
+          ]
+        },
+        {
+          "title": "Nepal Mandala",
+          "texts": [
+            "Nepal Mandala"
+          ]
+        },
+        {
+          "title": "Silk Road",
+          "texts": [
+            "Silk Road"
+          ]
+        },
+        {
+          "title": "Lhasa Newar",
+          "texts": [
+            "valley's traders"
+          ]
+        },
+        {
+          "title": "Newa art",
+          "texts": [
+            "art"
+          ]
+        },
+        {
+          "title": "Architecture of Nepal",
+          "texts": [
+            "architecture"
+          ]
+        },
+        {
+          "title": "Gorkha kingdom",
+          "texts": [
+            "Gorkha Kingdom"
+          ]
+        },
+        {
+          "title": "Unification of Nepal",
+          "texts": [
+            "unified Nepal",
+            "unification of Nepal"
+          ]
+        },
+        {
+          "title": "Shah dynasty",
+          "texts": [
+            "Shah dynasty"
+          ]
+        },
+        {
+          "title": "Kingdom of Nepal",
+          "texts": [
+            "Kingdom of Nepal"
+          ]
+        },
+        {
+          "title": "British Empire",
+          "texts": [
+            "British Empire"
+          ]
+        },
+        {
+          "title": "Rana dynasty",
+          "texts": [
+            "Rana dynasty"
+          ]
+        },
+        {
+          "title": "Prime Minister of Nepal",
+          "texts": [
+            "premiers",
+            "prime minister"
+          ]
+        },
+        {
+          "title": "Qing dynasty",
+          "texts": [
+            "Imperial China",
+            "Qing Emperor"
+          ]
+        },
+        {
+          "title": "Presidencies and provinces of British India",
+          "texts": [
+            "British India"
+          ]
+        },
+        {
+          "title": "Treaty of Sugauli",
+          "texts": [
+            "treaty of Sugauli",
+            "Sugauli Treaty"
+          ]
+        },
+        {
+          "title": "Parliamentary system",
+          "texts": [
+            "Parliamentary democracy"
+          ]
+        },
+        {
+          "title": "Nepalese Civil War",
+          "texts": [
+            "Nepalese Civil War"
+          ]
+        },
+        {
+          "title": "Secular",
+          "texts": [
+            "secular"
+          ]
+        },
+        {
+          "title": "Republic",
+          "texts": [
+            "republic"
+          ]
+        },
+        {
+          "title": "Hinduism",
+          "texts": [
+            "Hindu"
+          ]
+        },
+        {
+          "title": "Constitution of Nepal",
+          "texts": [
+            "Constitution of Nepal",
+            "new constitution"
+          ]
+        },
+        {
+          "title": "Parliamentary republic",
+          "texts": [
+            "parliamentary republic"
+          ]
+        },
+        {
+          "title": "Provinces of Nepal",
+          "texts": [
+            "seven provinces"
+          ]
+        },
+        {
+          "title": "Foreign relations of Nepal",
+          "texts": [
+            "Nepal's foreign policy"
+          ]
+        },
+        {
+          "title": "United Nations",
+          "texts": [
+            "United Nations"
+          ]
+        },
+        {
+          "title": "South Asian Association for Regional Cooperation",
+          "texts": [
+            "South Asian Association for Regional Cooperation"
+          ]
+        },
+        {
+          "title": "Non-Aligned Movement",
+          "texts": [
+            "Non-Aligned Movement"
+          ]
+        },
+        {
+          "title": "BIMSTEC",
+          "texts": [
+            "Bay of Bengal Initiative",
+            "BIMSTEC"
+          ]
+        },
+        {
+          "title": "Outline of ancient India",
+          "texts": [
+            "ancient Indian"
+          ]
+        },
+        {
+          "title": "Early modern period",
+          "texts": [
+            "early modern period"
+          ]
+        },
+        {
+          "title": "Hindu mythology",
+          "texts": [
+            "Hindu mythology"
+          ]
+        },
+        {
+          "title": "Pashupati Purana",
+          "texts": [
+            "Pashupati Purāna"
+          ]
+        },
+        {
+          "title": "Pashupati",
+          "texts": [
+            "Pashupati"
+          ]
+        },
+        {
+          "title": "Buddhist mythology",
+          "texts": [
+            "Buddhist mythology"
+          ]
+        },
+        {
+          "title": "Manjushri",
+          "texts": [
+            "Manjushri"
+          ]
+        },
+        {
+          "title": "Bodhisattva",
+          "texts": [
+            "Bodhisattva"
+          ]
+        },
+        {
+          "title": "Nāga",
+          "texts": [
+            "serpents"
+          ]
+        },
+        {
+          "title": "Adi-Buddha",
+          "texts": [
+            "Adi-Buddha"
+          ]
+        },
+        {
+          "title": "Gopal Raj Vamshavali",
+          "texts": [
+            "Gopalarājvamshāvali"
+          ]
+        },
+        {
+          "title": "Abhira-Gupta dynasty",
+          "texts": [
+            "Abhiras"
+          ]
+        },
+        {
+          "title": "Jyotirlinga",
+          "texts": [
+            "Jyotirlinga"
+          ]
+        },
+        {
+          "title": "Pashupatinath Temple",
+          "texts": [
+            "Pashupatināth",
+            "Pashupatinath Temple"
+          ]
+        },
+        {
+          "title": "Indology",
+          "texts": [
+            "indologist"
+          ]
+        },
+        {
+          "title": "Christian Lassen",
+          "texts": [
+            "Christian Lassen"
+          ]
+        },
+        {
+          "title": "Sylvain Levi",
+          "texts": [
+            "Sylvain Levi"
+          ]
+        },
+        {
+          "title": "Vulgarism",
+          "texts": [
+            "vulgarism"
+          ]
+        },
+        {
+          "title": "Sanskrit",
+          "texts": [
+            "Sanskritic",
+            "Sanskrit"
+          ]
+        },
+        {
+          "title": "Tibeto-Burman languages",
+          "texts": [
+            "Tibeto-Burman",
+            "Tibeto-Burmans"
+          ]
+        },
+        {
+          "title": "Suniti Kumar Chatterji",
+          "texts": [
+            "Suniti Kumar Chatterji"
+          ]
+        },
+        {
+          "title": "Diplomatic correspondence",
+          "texts": [
+            "note verbale"
+          ]
+        },
+        {
+          "title": "Indian subcontinent",
+          "texts": [
+            "Indian subcontinent"
+          ]
+        },
+        {
+          "title": "Africa",
+          "texts": [
+            "Africa"
+          ]
+        },
+        {
+          "title": "Mehrgarh",
+          "texts": [
+            "Mehrgarh"
+          ]
+        },
+        {
+          "title": "Balochistan",
+          "texts": [
+            "Balochistan"
+          ]
+        },
+        {
+          "title": "Indus Valley Civilisation",
+          "texts": [
+            "Indus Valley Civilisation"
+          ]
+        },
+        {
+          "title": "Paleolithic",
+          "texts": [
+            "palaeolithic"
+          ]
+        },
+        {
+          "title": "Mesolithic",
+          "texts": [
+            "mesolithic"
+          ]
+        },
+        {
+          "title": "Neolithic",
+          "texts": [
+            "neolithic"
+          ]
+        },
+        {
+          "title": "Sivalik Hills",
+          "texts": [
+            "Siwalik hills",
+            "Sivalik Hills"
+          ]
+        },
+        {
+          "title": "Dang District, Nepal",
+          "texts": [
+            "Dang district"
+          ]
+        },
+        {
+          "title": "Dravidian peoples",
+          "texts": [
+            "Dravidian"
+          ]
+        },
+        {
+          "title": "Bronze Age India",
+          "texts": [
+            "Bronze Age in the Indian subcontinent"
+          ]
+        },
+        {
+          "title": "Indo-Aryan peoples",
+          "texts": [
+            "Indo-Aryans"
+          ]
+        },
+        {
+          "title": "Myanmar",
+          "texts": [
+            "Myanmar"
+          ]
+        },
+        {
+          "title": "Northeast India",
+          "texts": [
+            "north-east India"
+          ]
+        },
+        {
+          "title": "Stella Kramrisch",
+          "texts": [
+            "Stella Kramrisch"
+          ]
+        },
+        {
+          "title": "Shakya",
+          "texts": [
+            "Shakya"
+          ]
+        },
+        {
+          "title": "The Buddha",
+          "texts": [
+            "Gautama Buddha"
+          ]
+        },
+        {
+          "title": "East Asia",
+          "texts": [
+            "East Asia"
+          ]
+        },
+        {
+          "title": "Maurya Empire",
+          "texts": [
+            "Maurya Empire"
+          ]
+        },
+        {
+          "title": "Ashoka",
+          "texts": [
+            "Ashoka"
+          ]
+        },
+        {
+          "title": "Lumbini",
+          "texts": [
+            "Lumbini"
+          ]
+        },
+        {
+          "title": "Pillars of Ashoka",
+          "texts": [
+            "erected a pillar"
+          ]
+        },
+        {
+          "title": "Lumbini pillar inscription",
+          "texts": [
+            "inscriptions"
+          ]
+        },
+        {
+          "title": "Gupta Empire",
+          "texts": [
+            "Gupta Empire"
+          ]
+        },
+        {
+          "title": "Kirati peoples",
+          "texts": [
+            "Kiratas"
+          ]
+        },
+        {
+          "title": "Licchavis of Vaishali",
+          "texts": [
+            "Licchavis"
+          ]
+        },
+        {
+          "title": "Licchavis of Nepal",
+          "texts": [
+            "Licchavi dynasty"
+          ]
+        },
+        {
+          "title": "Songtsen Gampo",
+          "texts": [
+            "Songtsen Gampo"
+          ]
+        },
+        {
+          "title": "Tibetan Empire",
+          "texts": [
+            "Tibetan Empire"
+          ]
+        },
+        {
+          "title": "Narendradeva",
+          "texts": [
+            "Narendradeva"
+          ]
+        },
+        {
+          "title": "Thakuri",
+          "texts": [
+            "Thakuri"
+          ]
+        },
+        {
+          "title": "Khasa Kingdom",
+          "texts": [
+            "powerful empire"
+          ]
+        },
+        {
+          "title": "Khas people",
+          "texts": [
+            "Khas people"
+          ]
+        },
+        {
+          "title": "Uttarakhand",
+          "texts": [
+            "Uttarakhand"
+          ]
+        },
+        {
+          "title": "Baise rajya",
+          "texts": [
+            "Baise rajyas"
+          ]
+        },
+        {
+          "title": "Khasa Prakrit",
+          "texts": [
+            "their language"
+          ]
+        },
+        {
+          "title": "Simraungadh (medieval city)",
+          "texts": [
+            "Simraungadh"
+          ]
+        },
+        {
+          "title": "Karnats of Mithila",
+          "texts": [
+            "Karnats"
+          ]
+        },
+        {
+          "title": "Mithila (region)",
+          "texts": [
+            "Mithila"
+          ]
+        },
+        {
+          "title": "Senas of Makwanpur",
+          "texts": [
+            "Senas of Makwanpur"
+          ]
+        },
+        {
+          "title": "Bengal",
+          "texts": [
+            "Bengal"
+          ]
+        },
+        {
+          "title": "Malla dynasty (Nepal)",
+          "texts": [
+            "Mallas"
+          ]
+        },
+        {
+          "title": "Jayasthiti Malla",
+          "texts": [
+            "Jayasthiti Malla"
+          ]
+        },
+        {
+          "title": "William Kirkpatrick (East India Company officer)",
+          "texts": [
+            "Kirkpatrick"
+          ]
+        },
+        {
+          "title": "Shigatse",
+          "texts": [
+            "Shigatse"
+          ]
+        },
+        {
+          "title": "Gaya, India",
+          "texts": [
+            "Gaya"
+          ]
+        },
+        {
+          "title": "Kingdom of Kantipur",
+          "texts": [
+            "Kathmandu"
+          ]
+        },
+        {
+          "title": "Kingdom of Lalitpur",
+          "texts": [
+            "Patan"
+          ]
+        },
+        {
+          "title": "Kingdom of Bhaktapur",
+          "texts": [
+            "Bhaktapur"
+          ]
+        },
+        {
+          "title": "Banepa",
+          "texts": [
+            "Banepa"
+          ]
+        },
+        {
+          "title": "Kathmandu Durbar Square",
+          "texts": [
+            "Kathmandu"
+          ]
+        },
+        {
+          "title": "Patan Durbar Square",
+          "texts": [
+            "Patan"
+          ]
+        },
+        {
+          "title": "Bhaktapur Durbar Square",
+          "texts": [
+            "Bhaktapur Durbar Squares"
+          ]
+        },
+        {
+          "title": "Muslim invasion of India",
+          "texts": [
+            "Muslim invasion of India"
+          ]
+        },
+        {
+          "title": "Mughal Empire",
+          "texts": [
+            "Mughal period"
+          ]
+        },
+        {
+          "title": "Rajput",
+          "texts": [
+            "Rajput"
+          ]
+        },
+        {
+          "title": "Chaubisi rajya",
+          "texts": [
+            "Chaubisi states"
+          ]
+        },
+        {
+          "title": "British Raj",
+          "texts": [
+            "British rule"
+          ]
+        },
+        {
+          "title": "Gorkha Kingdom",
+          "texts": [
+            "Gorkha"
+          ]
+        },
+        {
+          "title": "Prithvi Narayan Shah",
+          "texts": [
+            "Prithvi Narayan Shah"
+          ]
+        },
+        {
+          "title": "Battle of Kirtipur",
+          "texts": [
+            "Battle of Kirtipur"
+          ]
+        },
+        {
+          "title": "Kumaon Kingdom",
+          "texts": [
+            "Kumaon"
+          ]
+        },
+        {
+          "title": "Garhwal Kingdom",
+          "texts": [
+            "Garhwal Kingdoms"
+          ]
+        },
+        {
+          "title": "Sino-Nepalese War",
+          "texts": [
+            "Sino-Nepali War"
+          ]
+        },
+        {
+          "title": "East India Company",
+          "texts": [
+            "East India Company"
+          ]
+        },
+        {
+          "title": "Anglo-Nepalese War",
+          "texts": [
+            "Anglo-Nepali War"
+          ]
+        },
+        {
+          "title": "Gurkha",
+          "texts": [
+            "Gurkhas"
+          ]
+        },
+        {
+          "title": "Kot massacre",
+          "texts": [
+            "Kot massacre"
+          ]
+        },
+        {
+          "title": "Jung Bahadur Rana",
+          "texts": [
+            "Jung Bahadur Rana"
+          ]
+        },
+        {
+          "title": "Indian Rebellion of 1857",
+          "texts": [
+            "Indian Rebellion of 1857"
+          ]
+        },
+        {
+          "title": "Naya Muluk",
+          "texts": [
+            "Naya Muluk"
+          ]
+        },
+        {
+          "title": "Nepal–Britain Treaty of 1923",
+          "texts": [
+            "an agreement of friendship"
+          ]
+        },
+        {
+          "title": "Sati (practice)",
+          "texts": [
+            "Sati"
+          ]
+        },
+        {
+          "title": "History of slavery in Asia",
+          "texts": [
+            "slavery"
+          ]
+        },
+        {
+          "title": "Nepalese democracy movement",
+          "texts": [
+            "pro-democracy movements"
+          ]
+        },
+        {
+          "title": "Indian independence movement",
+          "texts": [
+            "Indian independence movement"
+          ]
+        },
+        {
+          "title": "Tribhuvan of Nepal",
+          "texts": [
+            "King Tribhuvan"
+          ]
+        },
+        {
+          "title": "Nepali Congress",
+          "texts": [
+            "Nepali Congress"
+          ]
+        },
+        {
+          "title": "Mahendra of Nepal",
+          "texts": [
+            "King Mahendra"
+          ]
+        },
+        {
+          "title": "Panchayat (Nepal)",
+          "texts": [
+            "panchayat",
+            "Panchayat system"
+          ]
+        },
+        {
+          "title": "Censorship in Nepal",
+          "texts": [
+            "censorship"
+          ]
+        },
+        {
+          "title": "People's Movement I (1990)",
+          "texts": [
+            "People's Movement"
+          ]
+        },
+        {
+          "title": "Birendra of Nepal",
+          "texts": [
+            "King Birendra"
+          ]
+        },
+        {
+          "title": "Unified Communist Party of Nepal (Maoist)",
+          "texts": [
+            "Maoist Party"
+          ]
+        },
+        {
+          "title": "Dipendra of Nepal",
+          "texts": [
+            "Crown Prince Dipendra"
+          ]
+        },
+        {
+          "title": "Nepalese royal massacre",
+          "texts": [
+            "massacre in the royal palace"
+          ]
+        },
+        {
+          "title": "Gyanendra of Nepal",
+          "texts": [
+            "Gyanendra"
+          ]
+        },
+        {
+          "title": "2006 Nepalese revolution",
+          "texts": [
+            "democratic revolution of 2006",
+            "peaceful revolution of 2006"
+          ]
+        },
+        {
+          "title": "Secular state",
+          "texts": [
+            "secular state"
+          ]
+        },
+        {
+          "title": "Hindu king",
+          "texts": [
+            "Hindu kingdom"
+          ]
+        },
+        {
+          "title": "Federated state",
+          "texts": [
+            "federal"
+          ]
+        },
+        {
+          "title": "2025 Nepalese Gen Z protests",
+          "texts": [
+            "widespread protests"
+          ]
+        },
+        {
+          "title": "K. P. Sharma Oli",
+          "texts": [
+            "K. P. Sharma Oli"
+          ]
+        },
+        {
+          "title": "Nepali Army",
+          "texts": [
+            "Nepali Army"
+          ]
+        },
+        {
+          "title": "Sushila Karki",
+          "texts": [
+            "Sushila Karki"
+          ]
+        },
+        {
+          "title": "26th parallel north",
+          "texts": [
+            "26°"
+          ]
+        },
+        {
+          "title": "31st parallel north",
+          "texts": [
+            "31°N"
+          ]
+        },
+        {
+          "title": "80th meridian east",
+          "texts": [
+            "80°"
+          ]
+        },
+        {
+          "title": "89th meridian east",
+          "texts": [
+            "89°E"
+          ]
+        },
+        {
+          "title": "Gondwana",
+          "texts": [
+            "Gondwana"
+          ]
+        },
+        {
+          "title": "Plate tectonics",
+          "texts": [
+            "drift"
+          ]
+        },
+        {
+          "title": "Seafloor spreading",
+          "texts": [
+            "seafloor spreading"
+          ]
+        },
+        {
+          "title": "Tethys Ocean",
+          "texts": [
+            "Tethyn",
+            "Tethyan"
+          ]
+        },
+        {
+          "title": "Oceanic crust",
+          "texts": [
+            "oceanic crust"
+          ]
+        },
+        {
+          "title": "Subduction",
+          "texts": [
+            "subduct"
+          ]
+        },
+        {
+          "title": "Eurasian Plate",
+          "texts": [
+            "Eurasian Plate"
+          ]
+        },
+        {
+          "title": "Mantle (geology)",
+          "texts": [
+            "mantle"
+          ]
+        },
+        {
+          "title": "Indian Ocean",
+          "texts": [
+            "Indian Ocean"
+          ]
+        },
+        {
+          "title": "Continental crust",
+          "texts": [
+            "continental crust"
+          ]
+        },
+        {
+          "title": "Trough (geology)",
+          "texts": [
+            "trough"
+          ]
+        },
+        {
+          "title": "Lower Himalayan Range",
+          "texts": [
+            "Pahad",
+            "Lower Himalayan Range"
+          ]
+        },
+        {
+          "title": "Eight-thousander",
+          "texts": [
+            "eight-thousanders"
+          ]
+        },
+        {
+          "title": "Lhotse",
+          "texts": [
+            "Lhotse"
+          ]
+        },
+        {
+          "title": "Makalu",
+          "texts": [
+            "Makalu"
+          ]
+        },
+        {
+          "title": "Cho Oyu",
+          "texts": [
+            "Cho Oyu"
+          ]
+        },
+        {
+          "title": "Kangchenjunga",
+          "texts": [
+            "Kangchenjunga"
+          ]
+        },
+        {
+          "title": "Dhaulagiri",
+          "texts": [
+            "Dhaulagiri"
+          ]
+        },
+        {
+          "title": "Annapurna",
+          "texts": [
+            "Annapurna"
+          ]
+        },
+        {
+          "title": "Manaslu",
+          "texts": [
+            "Manaslu"
+          ]
+        },
+        {
+          "title": "Koshi River",
+          "texts": [
+            "Koshi"
+          ]
+        },
+        {
+          "title": "Gandaki River",
+          "texts": [
+            "Narayani"
+          ]
+        },
+        {
+          "title": "Ghaghara",
+          "texts": [
+            "Karnali"
+          ]
+        },
+        {
+          "title": "Inner Terai Valleys of Nepal",
+          "texts": [
+            "Inner Terai Valleys"
+          ]
+        },
+        {
+          "title": "Bihar",
+          "texts": [
+            "Bihar"
+          ]
+        },
+        {
+          "title": "Temperate",
+          "texts": [
+            "temperate"
+          ]
+        },
+        {
+          "title": "Monsoon",
+          "texts": [
+            "monsoon"
+          ]
+        },
+        {
+          "title": "Eastern Himalaya",
+          "texts": [
+            "eastern Himalayan",
+            "Himalayan biodiversity hotspot"
+          ]
+        },
+        {
+          "title": "Biocultural diversity",
+          "texts": [
+            "biocultural diversity"
+          ]
+        },
+        {
+          "title": "Biome",
+          "texts": [
+            "biomes"
+          ]
+        },
+        {
+          "title": "Arctic desert",
+          "texts": [
+            "arctic desert"
+          ]
+        },
+        {
+          "title": "Mammal",
+          "texts": [
+            "mammal species"
+          ]
+        },
+        {
+          "title": "Bird",
+          "texts": [
+            "bird species"
+          ]
+        },
+        {
+          "title": "Reptile",
+          "texts": [
+            "reptile species"
+          ]
+        },
+        {
+          "title": "Amphibian",
+          "texts": [
+            "amphibian species"
+          ]
+        },
+        {
+          "title": "Fish",
+          "texts": [
+            "fish species"
+          ]
+        },
+        {
+          "title": "Butterfly",
+          "texts": [
+            "butterfly species"
+          ]
+        },
+        {
+          "title": "Moth",
+          "texts": [
+            "moth species"
+          ]
+        },
+        {
+          "title": "Spider",
+          "texts": [
+            "spider species"
+          ]
+        },
+        {
+          "title": "Flowering plant",
+          "texts": [
+            "flowering plant species"
+          ]
+        },
+        {
+          "title": "Pteridophyte",
+          "texts": [
+            "pteridophytes"
+          ]
+        },
+        {
+          "title": "Bryophyte",
+          "texts": [
+            "bryophytes"
+          ]
+        },
+        {
+          "title": "Forest cover",
+          "texts": [
+            "forest cover"
+          ]
+        },
+        {
+          "title": "Shrubland",
+          "texts": [
+            "scrubland"
+          ]
+        },
+        {
+          "title": "Forest Landscape Integrity Index",
+          "texts": [
+            "Forest Landscape Integrity Index"
+          ]
+        },
+        {
+          "title": "Terai–Duar savanna and grasslands",
+          "texts": [
+            "Terai–Duar savanna and grasslands"
+          ]
+        },
+        {
+          "title": "Shorea robusta",
+          "texts": [
+            "Sal"
+          ]
+        },
+        {
+          "title": "Tropical and subtropical moist broadleaf forests",
+          "texts": [
+            "tropical evergreen forests"
+          ]
+        },
+        {
+          "title": "Himalayan subtropical broadleaf forests",
+          "texts": [
+            "subtropical"
+          ]
+        },
+        {
+          "title": "Temperate broadleaf and mixed forest",
+          "texts": [
+            "temperate deciduous mixed forests"
+          ]
+        },
+        {
+          "title": "Schima wallichii",
+          "texts": [
+            "Chilaune"
+          ]
+        },
+        {
+          "title": "Castanopsis indica",
+          "texts": [
+            "Katus"
+          ]
+        },
+        {
+          "title": "Tropical and subtropical coniferous forests",
+          "texts": [
+            "subtropical pine forest"
+          ]
+        },
+        {
+          "title": "Chir pine",
+          "texts": [
+            "chir pine"
+          ]
+        },
+        {
+          "title": "Oak",
+          "texts": [
+            "oak"
+          ]
+        },
+        {
+          "title": "Rhododendron",
+          "texts": [
+            "rhododendron"
+          ]
+        },
+        {
+          "title": "Temperate coniferous forest",
+          "texts": [
+            "Subalpine coniferous forests"
+          ]
+        },
+        {
+          "title": "Abies spectabilis",
+          "texts": [
+            "Eastern Himalayan fir"
+          ]
+        },
+        {
+          "title": "Pinus wallichiana",
+          "texts": [
+            "Himalayan pine"
+          ]
+        },
+        {
+          "title": "Tsuga dumosa",
+          "texts": [
+            "Himalayan hemlock"
+          ]
+        },
+        {
+          "title": "Alpine tundra",
+          "texts": [
+            "alpine shrubs and meadows"
+          ]
+        },
+        {
+          "title": "Astringent",
+          "texts": [
+            "astringent"
+          ]
+        },
+        {
+          "title": "Azadirachta indica",
+          "texts": [
+            "Azadirachta indica"
+          ]
+        },
+        {
+          "title": "Herbal medicine",
+          "texts": [
+            "herbal medicine"
+          ]
+        },
+        {
+          "title": "Ficus religiosa",
+          "texts": [
+            "Ficus religiosa"
+          ]
+        },
+        {
+          "title": "Mohenjo-daro",
+          "texts": [
+            "Mohenjo-daro"
+          ]
+        },
+        {
+          "title": "Gautama Buddha",
+          "texts": [
+            "Gautam Buddha"
+          ]
+        },
+        {
+          "title": "Pali canon",
+          "texts": [
+            "Pali canon"
+          ]
+        },
+        {
+          "title": "Tertiary (period)",
+          "texts": [
+            "Tertiary"
+          ]
+        },
+        {
+          "title": "Indian Plate",
+          "texts": [
+            "Indian Plate"
+          ]
+        },
+        {
+          "title": "Eurasia",
+          "texts": [
+            "Eurasia"
+          ]
+        },
+        {
+          "title": "Arid",
+          "texts": [
+            "arid"
+          ]
+        },
+        {
+          "title": "Mediterranean flora",
+          "texts": [
+            "Mediterranean flora"
+          ]
+        },
+        {
+          "title": "Neogene",
+          "texts": [
+            "neogene"
+          ]
+        },
+        {
+          "title": "Himalayan field mouse",
+          "texts": [
+            "Himalayan field mouse"
+          ]
+        },
+        {
+          "title": "IUCN",
+          "texts": [
+            "IUCN"
+          ]
+        },
+        {
+          "title": "Threatened species",
+          "texts": [
+            "threatened species"
+          ]
+        },
+        {
+          "title": "Endangered species",
+          "texts": [
+            "endangered"
+          ]
+        },
+        {
+          "title": "Bengal tiger",
+          "texts": [
+            "Bengal tiger"
+          ]
+        },
+        {
+          "title": "Red panda",
+          "texts": [
+            "red panda"
+          ]
+        },
+        {
+          "title": "Asiatic elephant",
+          "texts": [
+            "Asiatic elephant"
+          ]
+        },
+        {
+          "title": "Himalayan musk deer",
+          "texts": [
+            "Himalayan musk deer"
+          ]
+        },
+        {
+          "title": "Wild water buffalo",
+          "texts": [
+            "wild water buffalo"
+          ]
+        },
+        {
+          "title": "South Asian river dolphin",
+          "texts": [
+            "South Asian river dolphin"
+          ]
+        },
+        {
+          "title": "Critically endangered",
+          "texts": [
+            "critically endangered"
+          ]
+        },
+        {
+          "title": "Gharial",
+          "texts": [
+            "gharial"
+          ]
+        },
+        {
+          "title": "Bengal florican",
+          "texts": [
+            "Bengal florican"
+          ]
+        },
+        {
+          "title": "White-rumped vulture",
+          "texts": [
+            "white-rumped vulture"
+          ]
+        },
+        {
+          "title": "Diclofenac",
+          "texts": [
+            "diclofenac"
+          ]
+        },
+        {
+          "title": "Wildlife of Nepal",
+          "texts": [
+            "Nepali wildlife"
+          ]
+        },
+        {
+          "title": "Protected areas of Nepal",
+          "texts": [
+            "national parks and protected areas"
+          ]
+        },
+        {
+          "title": "Community forestry in Nepal",
+          "texts": [
+            "community forestry programme"
+          ]
+        },
+        {
+          "title": "Human-wildlife conflict",
+          "texts": [
+            "human-wildlife conflict"
+          ]
+        },
+        {
+          "title": "Vulnerable species",
+          "texts": [
+            "vulnerable"
+          ]
+        },
+        {
+          "title": "National park",
+          "texts": [
+            "national parks"
+          ]
+        },
+        {
+          "title": "Wildlife reserves",
+          "texts": [
+            "wildlife reserves"
+          ]
+        },
+        {
+          "title": "Game reserve",
+          "texts": [
+            "hunting reserve"
+          ]
+        },
+        {
+          "title": "Conservation Area",
+          "texts": [
+            "Conservation Areas"
+          ]
+        },
+        {
+          "title": "Buffer zone",
+          "texts": [
+            "buffer zones"
+          ]
+        },
+        {
+          "title": "Wetland",
+          "texts": [
+            "wetlands"
+          ]
+        },
+        {
+          "title": "Ramsar Convention",
+          "texts": [
+            "Ramsar Convention"
+          ]
+        },
+        {
+          "title": "Rastriya Swatantra Party",
+          "texts": [
+            "Rastriya Swatantra Party"
+          ]
+        },
+        {
+          "title": "Communist Party of Nepal (Unified Marxist–Leninist)",
+          "texts": [
+            "Communist Party of Nepal (Unified Marxist–Leninist)"
+          ]
+        },
+        {
+          "title": "Nepali Communist Party",
+          "texts": [
+            "Nepali Communist Party"
+          ]
+        },
+        {
+          "title": "Shram Sanskriti Party",
+          "texts": [
+            "Shram Sanskriti Party"
+          ]
+        },
+        {
+          "title": "Rastriya Prajatantra Party",
+          "texts": [
+            "Rastriya Prajatantra Party"
+          ]
+        },
+        {
+          "title": "People's Socialist Party, Nepal (2020)",
+          "texts": [
+            "Janata Samajbadi Party"
+          ]
+        },
+        {
+          "title": "Rastriya Janamorcha",
+          "texts": [
+            "Rastriya Janamorcha"
+          ]
+        },
+        {
+          "title": "Democratic socialism",
+          "texts": [
+            "democratic socialism"
+          ]
+        },
+        {
+          "title": "Nepal Praja Parishad",
+          "texts": [
+            "Nepal Praja Parishad"
+          ]
+        },
+        {
+          "title": "Martyrs of Nepal",
+          "texts": [
+            "four great martyrs",
+            "martyrs"
+          ]
+        },
+        {
+          "title": "Communist Party of Nepal",
+          "texts": [
+            "Communist Party of Nepal"
+          ]
+        },
+        {
+          "title": "1951 Nepalese revolution",
+          "texts": [
+            "overthrowing the Rana regime"
+          ]
+        },
+        {
+          "title": "United Left Front (Nepal, 1990)",
+          "texts": [
+            "United Left Front"
+          ]
+        },
+        {
+          "title": "1990 Nepalese revolution",
+          "texts": [
+            "joint civil resistance"
+          ]
+        },
+        {
+          "title": "CPN UML",
+          "texts": [
+            "CPN (UML)"
+          ]
+        },
+        {
+          "title": "Communist Party of Nepal (Maoist Centre)",
+          "texts": [
+            "Maoist Party"
+          ]
+        },
+        {
+          "title": "Madhesh movement",
+          "texts": [
+            "Madhesh movement"
+          ]
+        },
+        {
+          "title": "2017 Nepalese legislative election",
+          "texts": [
+            "2017 elections"
+          ]
+        },
+        {
+          "title": "2022 Nepalese general election",
+          "texts": [
+            "2022 general election"
+          ]
+        },
+        {
+          "title": "2nd Federal Parliament of Nepal",
+          "texts": [
+            "2nd Federal parliament"
+          ]
+        },
+        {
+          "title": "Pushpa Kamal Dahal",
+          "texts": [
+            "Pushpa Kamal Dahal"
+          ]
+        },
+        {
+          "title": "Balen Shah",
+          "texts": [
+            "Balen Shah"
+          ]
+        },
+        {
+          "title": "2026 Nepalese general election",
+          "texts": [
+            "2026 general election"
+          ]
+        },
+        {
+          "title": "Government of Nepal",
+          "texts": [
+            "Government of Nepal"
+          ]
+        },
+        {
+          "title": "Executive (government)",
+          "texts": [
+            "Executive"
+          ]
+        },
+        {
+          "title": "Legislature",
+          "texts": [
+            "Legislature"
+          ]
+        },
+        {
+          "title": "Mixed electoral system",
+          "texts": [
+            "mixed electoral system"
+          ]
+        },
+        {
+          "title": "Judiciary",
+          "texts": [
+            "Judiciary"
+          ]
+        },
+        {
+          "title": "Chief Justice of Nepal",
+          "texts": [
+            "Chief Justice"
+          ]
+        },
+        {
+          "title": "Sudurpashchim Province",
+          "texts": [
+            "Sudurpashchim"
+          ]
+        },
+        {
+          "title": "Karnali Province",
+          "texts": [
+            "Karnali"
+          ]
+        },
+        {
+          "title": "Lumbini Province",
+          "texts": [
+            "Lumbini"
+          ]
+        },
+        {
+          "title": "Gandaki Province",
+          "texts": [
+            "Gandaki"
+          ]
+        },
+        {
+          "title": "Bagmati Province",
+          "texts": [
+            "Bagmati"
+          ]
+        },
+        {
+          "title": "Madhesh Province",
+          "texts": [
+            "Madhesh"
+          ]
+        },
+        {
+          "title": "Koshi Province",
+          "texts": [
+            "Koshi"
+          ]
+        },
+        {
+          "title": "List of provinces of Nepal",
+          "texts": [
+            "7 provinces"
+          ]
+        },
+        {
+          "title": "Civil Code",
+          "texts": [
+            "Civil Code"
+          ]
+        },
+        {
+          "title": "Criminal Code",
+          "texts": [
+            "Criminal Code"
+          ]
+        },
+        {
+          "title": "Marital rape",
+          "texts": [
+            "marital rape"
+          ]
+        },
+        {
+          "title": "Abortion-rights movement",
+          "texts": [
+            "abortion rights"
+          ]
+        },
+        {
+          "title": "Geneva Convention",
+          "texts": [
+            "Geneva Convention"
+          ]
+        },
+        {
+          "title": "Biological Weapons Convention",
+          "texts": [
+            "Conventions/Treaties on the prohibition of Biological"
+          ]
+        },
+        {
+          "title": "Chemical Weapons Convention",
+          "texts": [
+            "Chemical"
+          ]
+        },
+        {
+          "title": "Nuclear weapons convention",
+          "texts": [
+            "Nuclear weapons"
+          ]
+        },
+        {
+          "title": "ILO fundamental conventions",
+          "texts": [
+            "International Labour Organization Fundamental Conventions"
+          ]
+        },
+        {
+          "title": "Treaty on the Non-Proliferation of Nuclear Weapons",
+          "texts": [
+            "Treaty on the Non-Proliferation of Nuclear Weapons"
+          ]
+        },
+        {
+          "title": "Paris climate accord",
+          "texts": [
+            "Paris climate accord"
+          ]
+        },
+        {
+          "title": "Nepal Police",
+          "texts": [
+            "Nepal Police"
+          ]
+        },
+        {
+          "title": "Inspector General of Police (Nepal)",
+          "texts": [
+            "Inspector General"
+          ]
+        },
+        {
+          "title": "Ministry of Home Affairs (Nepal)",
+          "texts": [
+            "Ministry of Home Affairs"
+          ]
+        },
+        {
+          "title": "Armed Police Force (Nepal)",
+          "texts": [
+            "Nepal Armed Police Force"
+          ]
+        },
+        {
+          "title": "Central Investigation Bureau",
+          "texts": [
+            "Crime Investigation Department"
+          ]
+        },
+        {
+          "title": "Commission for the Investigation of Abuse of Authority",
+          "texts": [
+            "Commission for the Investigation of Abuse of Authority"
+          ]
+        },
+        {
+          "title": "Henley Passport Index",
+          "texts": [
+            "passport"
+          ]
+        },
+        {
+          "title": "SAARC",
+          "texts": [
+            "SAARC"
+          ]
+        },
+        {
+          "title": "UN",
+          "texts": [
+            "UN"
+          ]
+        },
+        {
+          "title": "WTO",
+          "texts": [
+            "WTO"
+          ]
+        },
+        {
+          "title": "Asia Cooperation Dialogue",
+          "texts": [
+            "ACD"
+          ]
+        },
+        {
+          "title": "United Nations peacekeeping",
+          "texts": [
+            "UN peacekeeping"
+          ]
+        },
+        {
+          "title": "Victoria Cross",
+          "texts": [
+            "Victoria Cross"
+          ]
+        },
+        {
+          "title": "Param Vir Chakra",
+          "texts": [
+            "Param Vir Chakra"
+          ]
+        },
+        {
+          "title": "1950 Indo-Nepal Treaty of Peace and Friendship",
+          "texts": [
+            "1950 Treaty of Peace and Friendship"
+          ]
+        },
+        {
+          "title": "Territorial disputes between India and Nepal",
+          "texts": [
+            "territorial disputes"
+          ]
+        },
+        {
+          "title": "Sino-Nepal Treaty of Peace and Friendship",
+          "texts": [
+            "Treaty of Peace and Friendship"
+          ]
+        },
+        {
+          "title": "Five Principles of Peaceful Coexistence",
+          "texts": [
+            "Five Principles of Peaceful Coexistence"
+          ]
+        },
+        {
+          "title": "One-China policy",
+          "texts": [
+            "One China Policy"
+          ]
+        },
+        {
+          "title": "Tibetan diaspora",
+          "texts": [
+            "Tibetan refugees"
+          ]
+        },
+        {
+          "title": "2015 Nepal blockade",
+          "texts": [
+            "2015 economic blockade"
+          ]
+        },
+        {
+          "title": "Belt and Road Initiative",
+          "texts": [
+            "Belt and Road Initiative"
+          ]
+        },
+        {
+          "title": "Israel",
+          "texts": [
+            "Israel"
+          ]
+        },
+        {
+          "title": "Palestinians",
+          "texts": [
+            "Palestinians"
+          ]
+        },
+        {
+          "title": "Jerusalem",
+          "texts": [
+            "Jerusalem"
+          ]
+        },
+        {
+          "title": "United States",
+          "texts": [
+            "United States"
+          ]
+        },
+        {
+          "title": "Denmark",
+          "texts": [
+            "Denmark"
+          ]
+        },
+        {
+          "title": "Japan",
+          "texts": [
+            "Japan"
+          ]
+        },
+        {
+          "title": "Norway",
+          "texts": [
+            "Norway"
+          ]
+        },
+        {
+          "title": "Ministry of Defence (Nepal)",
+          "texts": [
+            "Ministry of Defence"
+          ]
+        },
+        {
+          "title": "Directorate of Military Intelligence (Nepal)",
+          "texts": [
+            "Directorate of Military Intelligence"
+          ]
+        },
+        {
+          "title": "National Investigation Department of Nepal",
+          "texts": [
+            "National Investigation Department"
+          ]
+        },
+        {
+          "title": "Pahari people (Nepal)",
+          "texts": [
+            "elite Pahari warrior castes"
+          ]
+        },
+        {
+          "title": "Least developed countries",
+          "texts": [
+            "least developed countries"
+          ]
+        },
+        {
+          "title": "List of countries by GDP (nominal) per capita",
+          "texts": [
+            "nominal GDP per capita"
+          ]
+        },
+        {
+          "title": "List of countries by GDP (PPP) per capita",
+          "texts": [
+            "GDP per capita at PPP"
+          ]
+        },
+        {
+          "title": "Labour in Nepal",
+          "texts": [
+            "Nepali labour force"
+          ]
+        },
+        {
+          "title": "Primary sector of the economy",
+          "texts": [
+            "The primary sector"
+          ]
+        },
+        {
+          "title": "Secondary sector of the economy",
+          "texts": [
+            "the secondary sector"
+          ]
+        },
+        {
+          "title": "Tertiary sector of the economy",
+          "texts": [
+            "the tertiary sector"
+          ]
+        },
+        {
+          "title": "Nepalese rupee",
+          "texts": [
+            "Nepali rupee"
+          ]
+        },
+        {
+          "title": "Indian rupee",
+          "texts": [
+            "Indian rupee"
+          ]
+        },
+        {
+          "title": "Distribution of wealth",
+          "texts": [
+            "distribution of wealth"
+          ]
+        },
+        {
+          "title": "European Union",
+          "texts": [
+            "European Union"
+          ]
+        },
+        {
+          "title": "COVID-19 pandemic",
+          "texts": [
+            "COVID-19 pandemic"
+          ]
+        },
+        {
+          "title": "Annapurna Circuit",
+          "texts": [
+            "Annapurna trekking circuit"
+          ]
+        },
+        {
+          "title": "Sagarmatha National Park",
+          "texts": [
+            "Sagarmatha National Park"
+          ]
+        },
+        {
+          "title": "Hippie trail",
+          "texts": [
+            "hippie trail"
+          ]
+        },
+        {
+          "title": "Nepal Airlines",
+          "texts": [
+            "Nepal Airlines"
+          ]
+        },
+        {
+          "title": "Pashupati Aryaghat",
+          "texts": [
+            "Pashupati Aryaghat"
+          ]
+        },
+        {
+          "title": "Department of Railways (Nepal)",
+          "texts": [
+            "railway"
+          ]
+        },
+        {
+          "title": "Simikot",
+          "texts": [
+            "Simikot"
+          ]
+        },
+        {
+          "title": "Kolkata",
+          "texts": [
+            "Kolkata"
+          ]
+        },
+        {
+          "title": "Nepal Telecommunications Authority",
+          "texts": [
+            "Nepal Telecommunication Authority"
+          ]
+        },
+        {
+          "title": "Nepal Telecom",
+          "texts": [
+            "Nepal Telecom"
+          ]
+        },
+        {
+          "title": "Ncell",
+          "texts": [
+            "Ncell"
+          ]
+        },
+        {
+          "title": "Press Council Nepal",
+          "texts": [
+            "Press Council Nepal"
+          ]
+        },
+        {
+          "title": "Reporters Without Borders",
+          "texts": [
+            "Reporters Without Borders"
+          ]
+        },
+        {
+          "title": "Nepali people",
+          "texts": [
+            "Nepali"
+          ]
+        },
+        {
+          "title": "Hindu Kush",
+          "texts": [
+            "Hindu Kush"
+          ]
+        },
+        {
+          "title": "Yunnan",
+          "texts": [
+            "Yunnan"
+          ]
+        },
+        {
+          "title": "Assam",
+          "texts": [
+            "Assam"
+          ]
+        },
+        {
+          "title": "Kirat",
+          "texts": [
+            "Kirat"
+          ]
+        },
+        {
+          "title": "Newar",
+          "texts": [
+            "Newars"
+          ]
+        },
+        {
+          "title": "Tharu people",
+          "texts": [
+            "Tharus"
+          ]
+        },
+        {
+          "title": "Pokhara",
+          "texts": [
+            "Pokhara"
+          ]
+        },
+        {
+          "title": "Biratnagar",
+          "texts": [
+            "Biratnagar"
+          ]
+        },
+        {
+          "title": "Lalitpur, Nepal",
+          "texts": [
+            "Lalitpur"
+          ]
+        },
+        {
+          "title": "Bharatpur, Nepal",
+          "texts": [
+            "Bharatpur"
+          ]
+        },
+        {
+          "title": "Birgunj",
+          "texts": [
+            "Birgunj"
+          ]
+        },
+        {
+          "title": "Dharan, Nepal",
+          "texts": [
+            "Dharan"
+          ]
+        },
+        {
+          "title": "Hetauda",
+          "texts": [
+            "Hetauda"
+          ]
+        },
+        {
+          "title": "Nepalgunj",
+          "texts": [
+            "Nepalgunj"
+          ]
+        },
+        {
+          "title": "Indo-Aryan languages",
+          "texts": [
+            "Indo-Aryan"
+          ]
+        },
+        {
+          "title": "Sino-Tibetan",
+          "texts": [
+            "Sino-Tibetan"
+          ]
+        },
+        {
+          "title": "Indigenous language",
+          "texts": [
+            "indigenous language"
+          ]
+        },
+        {
+          "title": "Maithili language",
+          "texts": [
+            "Maithili"
+          ]
+        },
+        {
+          "title": "Bhojpuri language",
+          "texts": [
+            "Bhojpuri"
+          ]
+        },
+        {
+          "title": "Tharu language",
+          "texts": [
+            "Tharu"
+          ]
+        },
+        {
+          "title": "Tamang language",
+          "texts": [
+            "Tamang"
+          ]
+        },
+        {
+          "title": "Bajjika dialect",
+          "texts": [
+            "Bajjika"
+          ]
+        },
+        {
+          "title": "Awadhi language",
+          "texts": [
+            "Awadhi"
+          ]
+        },
+        {
+          "title": "Nepal Bhasa",
+          "texts": [
+            "Nepal Bhasa"
+          ]
+        },
+        {
+          "title": "Magar language",
+          "texts": [
+            "Magar"
+          ]
+        },
+        {
+          "title": "Nepali Sign Language",
+          "texts": [
+            "sign languages"
+          ]
+        },
+        {
+          "title": "Devanagari",
+          "texts": [
+            "Devanagari"
+          ]
+        },
+        {
+          "title": "Urdu",
+          "texts": [
+            "Urdu"
+          ]
+        },
+        {
+          "title": "Nepali Muslims",
+          "texts": [
+            "Nepali Muslims"
+          ]
+        },
+        {
+          "title": "Tibetic languages",
+          "texts": [
+            "Varieties of Tibetan"
+          ]
+        },
+        {
+          "title": "Hinduism in Nepal",
+          "texts": [
+            "Hinduism"
+          ]
+        },
+        {
+          "title": "Buddhism in Nepal",
+          "texts": [
+            "Buddhism"
+          ]
+        },
+        {
+          "title": "Islam in Nepal",
+          "texts": [
+            "Islam"
+          ]
+        },
+        {
+          "title": "Kirat Mundhum",
+          "texts": [
+            "Kirant"
+          ]
+        },
+        {
+          "title": "Christianity in Nepal",
+          "texts": [
+            "Christianity"
+          ]
+        },
+        {
+          "title": "Shiva",
+          "texts": [
+            "Shiva"
+          ]
+        },
+        {
+          "title": "Anti-conversion law",
+          "texts": [
+            "anti-conversion law"
+          ]
+        },
+        {
+          "title": "Hindu",
+          "texts": [
+            "Hindus"
+          ]
+        },
+        {
+          "title": "Global Innovation Index",
+          "texts": [
+            "Global Innovation Index"
+          ]
+        },
+        {
+          "title": "List of countries by life expectancy",
+          "texts": [
+            "Life expectancy at birth"
+          ]
+        },
+        {
+          "title": "Lhotshampa",
+          "texts": [
+            "Lhotsampa"
+          ]
+        },
+        {
+          "title": "Government of India",
+          "texts": [
+            "Government of India"
+          ]
+        },
+        {
+          "title": "Non-Resident Indians",
+          "texts": [
+            "Non-Resident Indians"
+          ]
+        },
+        {
+          "title": "Caste system in Nepal",
+          "texts": [
+            "Nepali caste system",
+            "lower castes"
+          ]
+        },
+        {
+          "title": "Endogamous",
+          "texts": [
+            "endogamous"
+          ]
+        },
+        {
+          "title": "Jāti",
+          "texts": [
+            "jātis"
+          ]
+        },
+        {
+          "title": "Untouchability",
+          "texts": [
+            "untouchability"
+          ]
+        },
+        {
+          "title": "Arranged marriage in the Indian subcontinent",
+          "texts": [
+            "their marriages arranged"
+          ]
+        },
+        {
+          "title": "Child marriage",
+          "texts": [
+            "Child marriages"
+          ]
+        },
+        {
+          "title": "Public holidays in Nepal",
+          "texts": [
+            "Nepali festivals"
+          ]
+        },
+        {
+          "title": "Dashain",
+          "texts": [
+            "Dashain"
+          ]
+        },
+        {
+          "title": "Tihar (festival)",
+          "texts": [
+            "Tihar"
+          ]
+        },
+        {
+          "title": "Teej",
+          "texts": [
+            "Teej"
+          ]
+        },
+        {
+          "title": "Chhath",
+          "texts": [
+            "Chhath"
+          ]
+        },
+        {
+          "title": "Maghi",
+          "texts": [
+            "Maghi"
+          ]
+        },
+        {
+          "title": "Sakela",
+          "texts": [
+            "Sakela"
+          ]
+        },
+        {
+          "title": "Holi",
+          "texts": [
+            "Holi"
+          ]
+        },
+        {
+          "title": "Vaisakhi",
+          "texts": [
+            "Nepali new year"
+          ]
+        },
+        {
+          "title": "Gadhimai Temple",
+          "texts": [
+            "Gadhimai Temple"
+          ]
+        },
+        {
+          "title": "Witch-hunts in Nepal",
+          "texts": [
+            "Witch-hunts"
+          ]
+        },
+        {
+          "title": "Death by burning",
+          "texts": [
+            "burning alive"
+          ]
+        },
+        {
+          "title": "Rama",
+          "texts": [
+            "Rama"
+          ]
+        },
+        {
+          "title": "Flag of Nepal",
+          "texts": [
+            "Nepal's flag"
+          ]
+        },
+        {
+          "title": "Geometric Construction",
+          "texts": [
+            "Geometric Construction"
+          ]
+        },
+        {
+          "title": "Amar Singh Thapa",
+          "texts": [
+            "Amar Singh Thapa"
+          ]
+        },
+        {
+          "title": "Bhakti Thapa",
+          "texts": [
+            "Bhakti Thapa"
+          ]
+        },
+        {
+          "title": "Stupa",
+          "texts": [
+            "stupas"
+          ]
+        },
+        {
+          "title": "Kapilvastu District",
+          "texts": [
+            "Kapilvastu"
+          ]
+        },
+        {
+          "title": "Tang dynasty",
+          "texts": [
+            "Tang dynasty"
+          ]
+        },
+        {
+          "title": "Makara",
+          "texts": [
+            "Makaras"
+          ]
+        },
+        {
+          "title": "Pagoda",
+          "texts": [
+            "pagoda architecture"
+          ]
+        },
+        {
+          "title": "Chinese architecture",
+          "texts": [
+            "Chinese architecture"
+          ]
+        },
+        {
+          "title": "Thanka",
+          "texts": [
+            "thanka"
+          ]
+        },
+        {
+          "title": "Paubha",
+          "texts": [
+            "paubha"
+          ]
+        },
+        {
+          "title": "Tibetan Buddhism",
+          "texts": [
+            "Tibetan Buddhism"
+          ]
+        },
+        {
+          "title": "Changu Narayan Temple",
+          "texts": [
+            "Changu Narayan Temple"
+          ]
+        },
+        {
+          "title": "Newar window",
+          "texts": [
+            "\"ankhijhyal\" window"
+          ]
+        },
+        {
+          "title": "Chernozem",
+          "texts": [
+            "chernozem"
+          ]
+        },
+        {
+          "title": "Barakat Gallery",
+          "texts": [
+            "Barakat Gallery"
+          ]
+        },
+        {
+          "title": "Art Institute of Chicago",
+          "texts": [
+            "Art Institute of Chicago"
+          ]
+        },
+        {
+          "title": "Metropolitan Museum of Art",
+          "texts": [
+            "Metropolitan Museum of Art"
+          ]
+        },
+        {
+          "title": "Dallas Museum of Art",
+          "texts": [
+            "Dallas Museum of Art"
+          ]
+        },
+        {
+          "title": "Rubin Museum of Art",
+          "texts": [
+            "Rubin Museum"
+          ]
+        },
+        {
+          "title": "Christie's",
+          "texts": [
+            "Christie's"
+          ]
+        },
+        {
+          "title": "Bonhams",
+          "texts": [
+            "Bonhams"
+          ]
+        },
+        {
+          "title": "Brahmin",
+          "texts": [
+            "Brahmin"
+          ]
+        },
+        {
+          "title": "Varanasi",
+          "texts": [
+            "Varanasi"
+          ]
+        },
+        {
+          "title": "Newar literature",
+          "texts": [
+            "Newar literature"
+          ]
+        },
+        {
+          "title": "Nepali literature",
+          "texts": [
+            "Nepali literature"
+          ]
+        },
+        {
+          "title": "Bhanubhakta Ramayana",
+          "texts": [
+            "Bhanubhakta Ramayana"
+          ]
+        },
+        {
+          "title": "Motiram Bhatta",
+          "texts": [
+            "Motiram Bhatta"
+          ]
+        },
+        {
+          "title": "Maruni",
+          "texts": [
+            "Maruni"
+          ]
+        },
+        {
+          "title": "Lakhey",
+          "texts": [
+            "Lakhey"
+          ]
+        },
+        {
+          "title": "Kauda",
+          "texts": [
+            "Kauda"
+          ]
+        },
+        {
+          "title": "Tamang Selo",
+          "texts": [
+            "Tamang Selo"
+          ]
+        },
+        {
+          "title": "Kollywood (Kathmandu)",
+          "texts": [
+            "\"Kollywood\""
+          ]
+        },
+        {
+          "title": "Nepal Academy",
+          "texts": [
+            "Nepal Academy"
+          ]
+        },
+        {
+          "title": "Sari",
+          "texts": [
+            "sari"
+          ]
+        },
+        {
+          "title": "Petticoat",
+          "texts": [
+            "petticoat"
+          ]
+        },
+        {
+          "title": "Blouse",
+          "texts": [
+            "blouse"
+          ]
+        },
+        {
+          "title": "Choli",
+          "texts": [
+            "cholo"
+          ]
+        },
+        {
+          "title": "Dhoti",
+          "texts": [
+            "dhoti"
+          ]
+        },
+        {
+          "title": "Kaupinam",
+          "texts": [
+            "langauti"
+          ]
+        },
+        {
+          "title": "Madheshi people",
+          "texts": [
+            "Madheshi people"
+          ]
+        },
+        {
+          "title": "Patuka",
+          "texts": [
+            "patukas"
+          ]
+        },
+        {
+          "title": "Khata",
+          "texts": [
+            "khata"
+          ]
+        },
+        {
+          "title": "Turban",
+          "texts": [
+            "turbans"
+          ]
+        },
+        {
+          "title": "Pheta",
+          "texts": [
+            "pheta"
+          ]
+        },
+        {
+          "title": "Central Asia",
+          "texts": [
+            "Central Asia"
+          ]
+        },
+        {
+          "title": "Kurta",
+          "texts": [
+            "kurta"
+          ]
+        },
+        {
+          "title": "Daura-Suruwal",
+          "texts": [
+            "Daura-Suruwal"
+          ]
+        },
+        {
+          "title": "Tibetan culture",
+          "texts": [
+            "Tibetan culture"
+          ]
+        },
+        {
+          "title": "Chuba",
+          "texts": [
+            "chuba"
+          ]
+        },
+        {
+          "title": "Dhaka topi",
+          "texts": [
+            "dhaka topi"
+          ]
+        },
+        {
+          "title": "Jeans",
+          "texts": [
+            "jeans"
+          ]
+        },
+        {
+          "title": "Liturgical",
+          "texts": [
+            "liturgical"
+          ]
+        },
+        {
+          "title": "Vestment",
+          "texts": [
+            "vestment"
+          ]
+        },
+        {
+          "title": "Columbian exchange",
+          "texts": [
+            "Columbian exchange"
+          ]
+        },
+        {
+          "title": "Chilli peppers",
+          "texts": [
+            "chilli peppers"
+          ]
+        },
+        {
+          "title": "Cereal",
+          "texts": [
+            "Cereals"
+          ]
+        },
+        {
+          "title": "Lentil",
+          "texts": [
+            "lentils"
+          ]
+        },
+        {
+          "title": "Pulses",
+          "texts": [
+            "pulses"
+          ]
+        },
+        {
+          "title": "Ginger root",
+          "texts": [
+            "ginger"
+          ]
+        },
+        {
+          "title": "Garlic",
+          "texts": [
+            "garlic"
+          ]
+        },
+        {
+          "title": "Coriander",
+          "texts": [
+            "coriander"
+          ]
+        },
+        {
+          "title": "Cumin",
+          "texts": [
+            "cumin"
+          ]
+        },
+        {
+          "title": "Turmeric",
+          "texts": [
+            "turmeric"
+          ]
+        },
+        {
+          "title": "Cinnamon",
+          "texts": [
+            "cinnamon"
+          ]
+        },
+        {
+          "title": "Cardamon",
+          "texts": [
+            "cardamon"
+          ]
+        },
+        {
+          "title": "Jimbu",
+          "texts": [
+            "jimbu"
+          ]
+        },
+        {
+          "title": "Thali",
+          "texts": [
+            "thali"
+          ]
+        },
+        {
+          "title": "Chapati",
+          "texts": [
+            "chapati"
+          ]
+        },
+        {
+          "title": "Dhindo",
+          "texts": [
+            "Dhindo"
+          ]
+        },
+        {
+          "title": "Ahimsa",
+          "texts": [
+            "ahimsa"
+          ]
+        },
+        {
+          "title": "Upanishads",
+          "texts": [
+            "Upanishadic Hinduism"
+          ]
+        },
+        {
+          "title": "Buddhism",
+          "texts": [
+            "Buddhism"
+          ]
+        },
+        {
+          "title": "Jainism",
+          "texts": [
+            "Jainism"
+          ]
+        },
+        {
+          "title": "Shaktism",
+          "texts": [
+            "Shaktism"
+          ]
+        },
+        {
+          "title": "Kwati (soup)",
+          "texts": [
+            "Kwanti"
+          ]
+        },
+        {
+          "title": "Chataamari",
+          "texts": [
+            "chatamari"
+          ]
+        },
+        {
+          "title": "Bagiya",
+          "texts": [
+            "Bagiya"
+          ]
+        },
+        {
+          "title": "Taro",
+          "texts": [
+            "taro"
+          ]
+        },
+        {
+          "title": "Raksi",
+          "texts": [
+            "Raksi"
+          ]
+        },
+        {
+          "title": "Traditional games of Nepal",
+          "texts": [
+            "Nepali indigenous sports"
+          ]
+        },
+        {
+          "title": "Dandi biyo",
+          "texts": [
+            "dandi biyo"
+          ]
+        },
+        {
+          "title": "Kabaddi",
+          "texts": [
+            "kabaddi"
+          ]
+        },
+        {
+          "title": "Nepal Kabaddi League",
+          "texts": [
+            "Nepal Kabaddi League"
+          ]
+        },
+        {
+          "title": "Bagh-chal",
+          "texts": [
+            "Bagh-chal"
+          ]
+        },
+        {
+          "title": "Board game",
+          "texts": [
+            "board game"
+          ]
+        },
+        {
+          "title": "Ludo (board game)",
+          "texts": [
+            "Ludo"
+          ]
+        },
+        {
+          "title": "Snakes and ladders",
+          "texts": [
+            "snakes and ladders"
+          ]
+        },
+        {
+          "title": "Carrom",
+          "texts": [
+            "carrom"
+          ]
+        },
+        {
+          "title": "Chess",
+          "texts": [
+            "Chess"
+          ]
+        },
+        {
+          "title": "Volleyball",
+          "texts": [
+            "Volleyball"
+          ]
+        },
+        {
+          "title": "Tag (game)",
+          "texts": [
+            "tag"
+          ]
+        },
+        {
+          "title": "Knucklebones",
+          "texts": [
+            "knucklebones"
+          ]
+        },
+        {
+          "title": "Hopscotch",
+          "texts": [
+            "hopscotch"
+          ]
+        },
+        {
+          "title": "Duck, duck, goose",
+          "texts": [
+            "Duck, duck, goose"
+          ]
+        },
+        {
+          "title": "Seven stones",
+          "texts": [
+            "lagori"
+          ]
+        },
+        {
+          "title": "Marbles",
+          "texts": [
+            "marbles"
+          ]
+        },
+        {
+          "title": "Spinning top",
+          "texts": [
+            "top"
+          ]
+        },
+        {
+          "title": "Hoop rolling",
+          "texts": [
+            "hoop rolling"
+          ]
+        },
+        {
+          "title": "Gully cricket",
+          "texts": [
+            "gully cricket"
+          ]
+        },
+        {
+          "title": "Rubber band",
+          "texts": [
+            "Rubber bands"
+          ]
+        },
+        {
+          "title": "Ranger band",
+          "texts": [
+            "ranger bands"
+          ]
+        },
+        {
+          "title": "Bicycle",
+          "texts": [
+            "bike"
+          ]
+        },
+        {
+          "title": "Dodgeball",
+          "texts": [
+            "dodgeball"
+          ]
+        },
+        {
+          "title": "Cat's cradle",
+          "texts": [
+            "cat's cradle"
+          ]
+        },
+        {
+          "title": "Jianzi",
+          "texts": [
+            "jianzi"
+          ]
+        },
+        {
+          "title": "Skipping rope",
+          "texts": [
+            "skipping rope"
+          ]
+        },
+        {
+          "title": "Association football",
+          "texts": [
+            "Football"
+          ]
+        },
+        {
+          "title": "Cricket",
+          "texts": [
+            "cricket"
+          ]
+        },
+        {
+          "title": "SAFF",
+          "texts": [
+            "SAFF championships"
+          ]
+        },
+        {
+          "title": "South Asian Games",
+          "texts": [
+            "South Asian Games"
+          ]
+        },
+        {
+          "title": "FIFA World Rankings",
+          "texts": [
+            "FIFA World Rankings"
+          ]
+        },
+        {
+          "title": "List of countries with ODI status",
+          "texts": [
+            "ODI status"
+          ]
+        },
+        {
+          "title": "International Cricket Council",
+          "texts": [
+            "ICC"
+          ]
+        },
+        {
+          "title": "ICC ODI Championship",
+          "texts": [
+            "ODI"
+          ]
+        },
+        {
+          "title": "ICC T20I Championship",
+          "texts": [
+            "T20I rankings"
+          ]
+        },
+        {
+          "title": "Athletics (sport)",
+          "texts": [
+            "athletics"
+          ]
+        },
+        {
+          "title": "Martial arts",
+          "texts": [
+            "martial arts"
+          ]
+        },
+        {
+          "title": "Asian Games",
+          "texts": [
+            "Asian Games"
+          ]
+        },
+        {
+          "title": "Olympic Games",
+          "texts": [
+            "Olympic"
+          ]
+        },
+        {
+          "title": "Basketball",
+          "texts": [
+            "basketball"
+          ]
+        },
+        {
+          "title": "Futsal",
+          "texts": [
+            "futsal"
+          ]
+        },
+        {
+          "title": "Wrestling",
+          "texts": [
+            "wrestling"
+          ]
+        },
+        {
+          "title": "Badminton",
+          "texts": [
+            "badminton"
+          ]
+        },
+        {
+          "title": "Disability",
+          "texts": [
+            "disabled"
+          ]
+        },
+        {
+          "title": "Dasharath Rangasala",
+          "texts": [
+            "Dasarath Stadium"
+          ]
+        },
+        {
+          "title": "Nepal national football team",
+          "texts": [
+            "men"
+          ]
+        },
+        {
+          "title": "Nepal women's national football team",
+          "texts": [
+            "women national football teams"
+          ]
+        },
+        {
+          "title": "Nepal national cricket team",
+          "texts": [
+            "national team"
+          ]
+        },
+        {
+          "title": "Tribhuvan University International Cricket Ground",
+          "texts": [
+            "Tribhuvan University International Cricket Ground"
+          ]
+        }
+      ]
+    }
+  }
+}

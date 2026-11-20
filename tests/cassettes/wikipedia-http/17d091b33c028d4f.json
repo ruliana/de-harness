@@ -1,0 +1,1532 @@
+{
+  "hash": "17d091b33c028d4f",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Penicillin/1379692152",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Penicillin",
+      "lead": "Penicillins (P, PCN or PEN) are a group of β-lactam antibiotics originally obtained from Penicillium moulds, principally P. chrysogenum and P. rubens. Eight species of Penicillium, in the section Chrysogena, produce penicillins. Most penicillins in clinical use are synthesised by P. chrysogenum using deep tank fermentation and then purified. A number of natural penicillins have been discovered, but only two purified compounds are in clinical use: penicillin G (intramuscular or intravenous use) and penicillin V (given by mouth). Penicillins were among the first medications to be effective against many bacterial infections caused by staphylococci and streptococci. They are still widely used today for various bacterial infections, though many types of bacteria have developed resistance following extensive use.",
+      "links": [
+        {
+          "title": "Beta-lactam antibiotic",
+          "texts": [
+            "β-lactam antibiotics"
+          ]
+        },
+        {
+          "title": "Penicillium",
+          "texts": [
+            "Penicillium",
+            "penicillium"
+          ]
+        },
+        {
+          "title": "Mold (fungus)",
+          "texts": [
+            "moulds"
+          ]
+        },
+        {
+          "title": "Penicillium chrysogenum",
+          "texts": [
+            "P. chrysogenum",
+            "Penicillium chrysogenum"
+          ]
+        },
+        {
+          "title": "Penicillium rubens",
+          "texts": [
+            "P. rubens",
+            "Penicillium rubens"
+          ]
+        },
+        {
+          "title": "Industrial fermentation",
+          "texts": [
+            "deep tank fermentation"
+          ]
+        },
+        {
+          "title": "Benzylpenicillin",
+          "texts": [
+            "penicillin G"
+          ]
+        },
+        {
+          "title": "Intramuscular injection",
+          "texts": [
+            "intramuscular"
+          ]
+        },
+        {
+          "title": "Intravenous therapy",
+          "texts": [
+            "intravenous use"
+          ]
+        },
+        {
+          "title": "Phenoxymethylpenicillin",
+          "texts": [
+            "penicillin V"
+          ]
+        },
+        {
+          "title": "Bacterial infection",
+          "texts": [
+            "bacterial infections"
+          ]
+        },
+        {
+          "title": "Staphylococcus",
+          "texts": [
+            "staphylococci"
+          ]
+        },
+        {
+          "title": "Streptococcus",
+          "texts": [
+            "streptococci"
+          ]
+        },
+        {
+          "title": "Bacteria",
+          "texts": [
+            "bacteria"
+          ]
+        },
+        {
+          "title": "Antibiotic resistance",
+          "texts": [
+            "resistance"
+          ]
+        },
+        {
+          "title": "Side effects of penicillin",
+          "texts": [
+            "penicillin allergies"
+          ]
+        },
+        {
+          "title": "Cephalosporin",
+          "texts": [
+            "cephalosporins"
+          ]
+        },
+        {
+          "title": "Immunoglobulin E",
+          "texts": [
+            "immunoglobulin E (IgE)"
+          ]
+        },
+        {
+          "title": "Alexander Fleming",
+          "texts": [
+            "Alexander Fleming"
+          ]
+        },
+        {
+          "title": "Neonatal conjunctivitis",
+          "texts": [
+            "neonatal conjunctivitis",
+            "ophthalmia neonatorum"
+          ]
+        },
+        {
+          "title": "Howard Florey",
+          "texts": [
+            "Howard Florey"
+          ]
+        },
+        {
+          "title": "Ernst Boris Chain",
+          "texts": [
+            "Ernst Boris Chain",
+            "Ernst Chain"
+          ]
+        },
+        {
+          "title": "University of Oxford",
+          "texts": [
+            "University of Oxford"
+          ]
+        },
+        {
+          "title": "Meningitis",
+          "texts": [
+            "meningitis"
+          ]
+        },
+        {
+          "title": "Nobel Prize in Physiology or Medicine",
+          "texts": [
+            "Nobel Prize in Physiology or Medicine"
+          ]
+        },
+        {
+          "title": "Antistaphylococcal penicillins",
+          "texts": [
+            "antistaphylococcal penicillins"
+          ]
+        },
+        {
+          "title": "Aminopenicillin",
+          "texts": [
+            "aminopenicillins"
+          ]
+        },
+        {
+          "title": "Antipseudomonal penicillins",
+          "texts": [
+            "antipseudomonal penicillins"
+          ]
+        },
+        {
+          "title": "Digitalin",
+          "texts": [
+            "Digitalin"
+          ]
+        },
+        {
+          "title": "Digitalis",
+          "texts": [
+            "Digitalis"
+          ]
+        },
+        {
+          "title": "Beta-lactam",
+          "texts": [
+            "β-lactam",
+            "beta-lactam"
+          ]
+        },
+        {
+          "title": "Thiazolidine",
+          "texts": [
+            "thiazolidine"
+          ]
+        },
+        {
+          "title": "Gentamicin",
+          "texts": [
+            "gentamicin"
+          ]
+        },
+        {
+          "title": "Penicillin O",
+          "texts": [
+            "penicillin O"
+          ]
+        },
+        {
+          "title": "Penicillin G",
+          "texts": [
+            "penicillin G"
+          ]
+        },
+        {
+          "title": "Phenoxyethanol",
+          "texts": [
+            "phenoxyethanol"
+          ]
+        },
+        {
+          "title": "Penicillin V",
+          "texts": [
+            "penicillin V"
+          ]
+        },
+        {
+          "title": "6-aminopenicillanic acid",
+          "texts": [
+            "6-Aminopenicillanic acid"
+          ]
+        },
+        {
+          "title": "Benzathine benzylpenicillin",
+          "texts": [
+            "benzathine benzylpenicillin"
+          ]
+        },
+        {
+          "title": "Staphylococcus aureus",
+          "texts": [
+            "Oxford Staphylococcus",
+            "Staphylococcus aureus"
+          ]
+        },
+        {
+          "title": "Sir William Dunn School of Pathology",
+          "texts": [
+            "Oxford",
+            "Sir William Dunn School of Pathology"
+          ]
+        },
+        {
+          "title": "National Institute for Medical Research",
+          "texts": [
+            "National Institute for Medical Research"
+          ]
+        },
+        {
+          "title": "Mill Hill",
+          "texts": [
+            "Mill Hill"
+          ]
+        },
+        {
+          "title": "Beta-lactamase",
+          "texts": [
+            "beta-lactamases",
+            "penicillinase",
+            "β-lactamase"
+          ]
+        },
+        {
+          "title": "Genetic engineering",
+          "texts": [
+            "genetic engineering"
+          ]
+        },
+        {
+          "title": "Precursor (chemistry)",
+          "texts": [
+            "precursor"
+          ]
+        },
+        {
+          "title": "Semisynthesis",
+          "texts": [
+            "semi-synthetic"
+          ]
+        },
+        {
+          "title": "Antibiotic",
+          "texts": [
+            "antibiotics"
+          ]
+        },
+        {
+          "title": "6-APA",
+          "texts": [
+            "6-APA"
+          ]
+        },
+        {
+          "title": "Cloxacillin",
+          "texts": [
+            "Cloxacillin"
+          ]
+        },
+        {
+          "title": "Dicloxacillin",
+          "texts": [
+            "Dicloxacillin"
+          ]
+        },
+        {
+          "title": "Flucloxacillin",
+          "texts": [
+            "Flucloxacillin"
+          ]
+        },
+        {
+          "title": "Methicillin",
+          "texts": [
+            "Methicillin"
+          ]
+        },
+        {
+          "title": "Nafcillin",
+          "texts": [
+            "Nafcillin"
+          ]
+        },
+        {
+          "title": "Oxacillin",
+          "texts": [
+            "Oxacillin"
+          ]
+        },
+        {
+          "title": "Escherichia coli",
+          "texts": [
+            "Escherichia coli"
+          ]
+        },
+        {
+          "title": "Salmonella typhi",
+          "texts": [
+            "Salmonella typhi"
+          ]
+        },
+        {
+          "title": "Ampicillin",
+          "texts": [
+            "Ampicillin"
+          ]
+        },
+        {
+          "title": "Amoxicillin",
+          "texts": [
+            "Amoxicillin"
+          ]
+        },
+        {
+          "title": "Pivampicillin",
+          "texts": [
+            "Pivampicillin"
+          ]
+        },
+        {
+          "title": "Bacampicillin",
+          "texts": [
+            "Bacampicillin"
+          ]
+        },
+        {
+          "title": "Metampicillin",
+          "texts": [
+            "Metampicillin"
+          ]
+        },
+        {
+          "title": "Talampicillin",
+          "texts": [
+            "Talampicillin"
+          ]
+        },
+        {
+          "title": "Hetacillin",
+          "texts": [
+            "Hetacillin"
+          ]
+        },
+        {
+          "title": "Epicillin",
+          "texts": [
+            "Epicillin"
+          ]
+        },
+        {
+          "title": "Pseudomonas aeruginosa",
+          "texts": [
+            "Pseudomonas aeruginosa"
+          ]
+        },
+        {
+          "title": "Carbenicillin",
+          "texts": [
+            "Carbenicillin"
+          ]
+        },
+        {
+          "title": "Ticarcillin",
+          "texts": [
+            "Ticarcillin"
+          ]
+        },
+        {
+          "title": "Temocillin",
+          "texts": [
+            "Temocillin"
+          ]
+        },
+        {
+          "title": "Mezlocillin",
+          "texts": [
+            "Mezlocillin"
+          ]
+        },
+        {
+          "title": "Piperacillin",
+          "texts": [
+            "Piperacillin"
+          ]
+        },
+        {
+          "title": "Azlocillin",
+          "texts": [
+            "Azlocillin"
+          ]
+        },
+        {
+          "title": "Clavulanic acid",
+          "texts": [
+            "Clavulanic acid"
+          ]
+        },
+        {
+          "title": "Sulbactam",
+          "texts": [
+            "Sulbactam"
+          ]
+        },
+        {
+          "title": "Tazobactam",
+          "texts": [
+            "Tazobactam"
+          ]
+        },
+        {
+          "title": "Chemical compound",
+          "texts": [
+            "chemical compounds"
+          ]
+        },
+        {
+          "title": "Procaine penicillin",
+          "texts": [
+            "procaine penicillin"
+          ]
+        },
+        {
+          "title": "Septicaemia",
+          "texts": [
+            "septicaemia"
+          ]
+        },
+        {
+          "title": "Empyema",
+          "texts": [
+            "empyema"
+          ]
+        },
+        {
+          "title": "Pneumonia",
+          "texts": [
+            "pneumonia"
+          ]
+        },
+        {
+          "title": "Pericarditis",
+          "texts": [
+            "pericarditis"
+          ]
+        },
+        {
+          "title": "Endocarditis",
+          "texts": [
+            "endocarditis"
+          ]
+        },
+        {
+          "title": "Anthrax",
+          "texts": [
+            "anthrax"
+          ]
+        },
+        {
+          "title": "Actinomycosis",
+          "texts": [
+            "actinomycosis"
+          ]
+        },
+        {
+          "title": "Clostridium",
+          "texts": [
+            "clostridial infections"
+          ]
+        },
+        {
+          "title": "Botulism",
+          "texts": [
+            "botulism"
+          ]
+        },
+        {
+          "title": "Gas gangrene",
+          "texts": [
+            "gas gangrene"
+          ]
+        },
+        {
+          "title": "Tetanus",
+          "texts": [
+            "tetanus"
+          ]
+        },
+        {
+          "title": "Diphtheria",
+          "texts": [
+            "diphtheria"
+          ]
+        },
+        {
+          "title": "Erysipelothrix",
+          "texts": [
+            "erysipelothrix"
+          ]
+        },
+        {
+          "title": "Acute necrotizing ulcerative gingivitis",
+          "texts": [
+            "fusospirochetosis"
+          ]
+        },
+        {
+          "title": "Listeria",
+          "texts": [
+            "Listeria"
+          ]
+        },
+        {
+          "title": "Pasteurella",
+          "texts": [
+            "Pasteurella"
+          ]
+        },
+        {
+          "title": "Haverhill fever",
+          "texts": [
+            "Haverhill fever"
+          ]
+        },
+        {
+          "title": "Rat-bite fever",
+          "texts": [
+            "rat-bite fever"
+          ]
+        },
+        {
+          "title": "Neisseria gonorrhoeae",
+          "texts": [
+            "disseminated gonococcal infections",
+            "Neisseria gonorrhoeae"
+          ]
+        },
+        {
+          "title": "Neisseria meningitidis",
+          "texts": [
+            "meningococcal",
+            "Neisseria meningitidis"
+          ]
+        },
+        {
+          "title": "Adverse drug reaction",
+          "texts": [
+            "adverse drug reactions"
+          ]
+        },
+        {
+          "title": "Diarrhoea",
+          "texts": [
+            "diarrhoea"
+          ]
+        },
+        {
+          "title": "Hypersensitivity",
+          "texts": [
+            "hypersensitivity"
+          ]
+        },
+        {
+          "title": "Nausea",
+          "texts": [
+            "nausea"
+          ]
+        },
+        {
+          "title": "Rash",
+          "texts": [
+            "rash"
+          ]
+        },
+        {
+          "title": "Neurotoxicity",
+          "texts": [
+            "neurotoxicity"
+          ]
+        },
+        {
+          "title": "Urticaria",
+          "texts": [
+            "urticaria"
+          ]
+        },
+        {
+          "title": "Superinfection",
+          "texts": [
+            "superinfection"
+          ]
+        },
+        {
+          "title": "Candidiasis",
+          "texts": [
+            "candidiasis"
+          ]
+        },
+        {
+          "title": "Fever",
+          "texts": [
+            "fever"
+          ]
+        },
+        {
+          "title": "Vomiting",
+          "texts": [
+            "vomiting"
+          ]
+        },
+        {
+          "title": "Erythema",
+          "texts": [
+            "erythema"
+          ]
+        },
+        {
+          "title": "Dermatitis",
+          "texts": [
+            "dermatitis"
+          ]
+        },
+        {
+          "title": "Angioedema",
+          "texts": [
+            "angioedema"
+          ]
+        },
+        {
+          "title": "Seizures",
+          "texts": [
+            "seizures"
+          ]
+        },
+        {
+          "title": "Epilepsy",
+          "texts": [
+            "epilepsy"
+          ]
+        },
+        {
+          "title": "Pseudomembranous colitis",
+          "texts": [
+            "pseudomembranous colitis"
+          ]
+        },
+        {
+          "title": "Serum sickness",
+          "texts": [
+            "serum sickness"
+          ]
+        },
+        {
+          "title": "Serum sickness-like reaction",
+          "texts": [
+            "serum sickness-like reaction"
+          ]
+        },
+        {
+          "title": "Type III hypersensitivity",
+          "texts": [
+            "type III hypersensitivity"
+          ]
+        },
+        {
+          "title": "Type I hypersensitivity",
+          "texts": [
+            "type I hypersensitivity"
+          ]
+        },
+        {
+          "title": "Anaphylaxis",
+          "texts": [
+            "anaphylaxis"
+          ]
+        },
+        {
+          "title": "Parenteral",
+          "texts": [
+            "parenterally"
+          ]
+        },
+        {
+          "title": "Livedoid dermatitis",
+          "texts": [
+            "livedoid dermatitis"
+          ]
+        },
+        {
+          "title": "Penam",
+          "texts": [
+            "penam"
+          ]
+        },
+        {
+          "title": "Molar mass",
+          "texts": [
+            "molar mass"
+          ]
+        },
+        {
+          "title": "L-cysteine",
+          "texts": [
+            "L-cysteine"
+          ]
+        },
+        {
+          "title": "Moiety (chemistry)",
+          "texts": [
+            "moiety"
+          ]
+        },
+        {
+          "title": "Amide bond",
+          "texts": [
+            "amide bond"
+          ]
+        },
+        {
+          "title": "Resonance (chemistry)",
+          "texts": [
+            "resonance stabilisation"
+          ]
+        },
+        {
+          "title": "Gram-positive bacteria",
+          "texts": [
+            "gram-positive species"
+          ]
+        },
+        {
+          "title": "Cell wall",
+          "texts": [
+            "cell wall"
+          ]
+        },
+        {
+          "title": "Glycoproteins",
+          "texts": [
+            "glycoproteins"
+          ]
+        },
+        {
+          "title": "Gram-negative bacteria",
+          "texts": [
+            "gram-negative bacteria"
+          ]
+        },
+        {
+          "title": "Lipopolysaccharide",
+          "texts": [
+            "lipopolysaccharide"
+          ]
+        },
+        {
+          "title": "Hydrophilic",
+          "texts": [
+            "hydrophilic"
+          ]
+        },
+        {
+          "title": "Porin (protein)",
+          "texts": [
+            "porins"
+          ]
+        },
+        {
+          "title": "Peptidoglycan",
+          "texts": [
+            "peptidoglycans"
+          ]
+        },
+        {
+          "title": "Bacterial cell wall",
+          "texts": [
+            "bacterial cell wall"
+          ]
+        },
+        {
+          "title": "Penicillin binding proteins",
+          "texts": [
+            "penicillin binding proteins",
+            "penicillin-binding proteins"
+          ]
+        },
+        {
+          "title": "Lysis",
+          "texts": [
+            "lysis"
+          ]
+        },
+        {
+          "title": "Enzyme",
+          "texts": [
+            "enzyme"
+          ]
+        },
+        {
+          "title": "DD-Transpeptidase",
+          "texts": [
+            "DD-transpeptidase"
+          ]
+        },
+        {
+          "title": "Cross-link",
+          "texts": [
+            "cross linking"
+          ]
+        },
+        {
+          "title": "Cycloalkane",
+          "texts": [
+            "ring"
+          ]
+        },
+        {
+          "title": "Hydrolyze",
+          "texts": [
+            "hydrolyse"
+          ]
+        },
+        {
+          "title": "Cytolysis",
+          "texts": [
+            "cytolysis"
+          ]
+        },
+        {
+          "title": "Glycopeptide antibiotics",
+          "texts": [
+            "glycopeptide antibiotics"
+          ]
+        },
+        {
+          "title": "Vancomycin",
+          "texts": [
+            "vancomycin"
+          ]
+        },
+        {
+          "title": "Teicoplanin",
+          "texts": [
+            "teicoplanin"
+          ]
+        },
+        {
+          "title": "Protoplast",
+          "texts": [
+            "protoplasts"
+          ]
+        },
+        {
+          "title": "Gram-negative",
+          "texts": [
+            "Gram-negative"
+          ]
+        },
+        {
+          "title": "Spheroplast",
+          "texts": [
+            "spheroplasts"
+          ]
+        },
+        {
+          "title": "Aminoglycosides",
+          "texts": [
+            "aminoglycosides"
+          ]
+        },
+        {
+          "title": "Minimum Bactericidal Concentration",
+          "texts": [
+            "MBC"
+          ]
+        },
+        {
+          "title": "Cyanobacteria",
+          "texts": [
+            "cyanobacteria"
+          ]
+        },
+        {
+          "title": "Photosynthesis",
+          "texts": [
+            "photosynthetic"
+          ]
+        },
+        {
+          "title": "Organelle",
+          "texts": [
+            "organelles"
+          ]
+        },
+        {
+          "title": "Glaucophyte",
+          "texts": [
+            "glaucophytes"
+          ]
+        },
+        {
+          "title": "Chloroplast",
+          "texts": [
+            "chloroplasts"
+          ]
+        },
+        {
+          "title": "Bryophyte",
+          "texts": [
+            "bryophytes"
+          ]
+        },
+        {
+          "title": "Plastid",
+          "texts": [
+            "plastids"
+          ]
+        },
+        {
+          "title": "Vascular plant",
+          "texts": [
+            "vascular plants"
+          ]
+        },
+        {
+          "title": "Endosymbiotic theory",
+          "texts": [
+            "endosymbiotic theory"
+          ]
+        },
+        {
+          "title": "Evolution",
+          "texts": [
+            "evolution"
+          ]
+        },
+        {
+          "title": "Bioavailability",
+          "texts": [
+            "bioavailability"
+          ]
+        },
+        {
+          "title": "Ernst Chain",
+          "texts": [
+            "Ernst Chain"
+          ]
+        },
+        {
+          "title": "Edward Abraham",
+          "texts": [
+            "Edward Abraham"
+          ]
+        },
+        {
+          "title": "Penicillinase",
+          "texts": [
+            "penicillinase"
+          ]
+        },
+        {
+          "title": "Multi-drug resistance",
+          "texts": [
+            "multi-drug resistance"
+          ]
+        },
+        {
+          "title": "Methicillin-resistant S. aureus",
+          "texts": [
+            "methicillin-resistant S. aureus"
+          ]
+        },
+        {
+          "title": "Persister cells",
+          "texts": [
+            "persister cells"
+          ]
+        },
+        {
+          "title": "St Mary's Hospital, London",
+          "texts": [
+            "St. Mary's Hospital"
+          ]
+        },
+        {
+          "title": "Imperial College",
+          "texts": [
+            "Imperial College"
+          ]
+        },
+        {
+          "title": "Charles Thom",
+          "texts": [
+            "Charles Thom"
+          ]
+        },
+        {
+          "title": "Haemophilus influenzae",
+          "texts": [
+            "Haemophilus influenzae"
+          ]
+        },
+        {
+          "title": "International Historic Chemical Landmark",
+          "texts": [
+            "International Historic Chemical Landmark"
+          ]
+        },
+        {
+          "title": "Pathologist",
+          "texts": [
+            "pathologist"
+          ]
+        },
+        {
+          "title": "Sheffield Royal Infirmary",
+          "texts": [
+            "Royal Infirmary"
+          ]
+        },
+        {
+          "title": "Sheffield",
+          "texts": [
+            "Sheffield"
+          ]
+        },
+        {
+          "title": "Arthur Duncan Gardner",
+          "texts": [
+            "Arthur Duncan Gardner"
+          ]
+        },
+        {
+          "title": "Norman Heatley",
+          "texts": [
+            "Norman Heatley"
+          ]
+        },
+        {
+          "title": "Margaret Jennings (scientist)",
+          "texts": [
+            "Margaret Jennings"
+          ]
+        },
+        {
+          "title": "Jean Orr-Ewing",
+          "texts": [
+            "Jean Orr-Ewing"
+          ]
+        },
+        {
+          "title": "In vivo",
+          "texts": [
+            "in vivo"
+          ]
+        },
+        {
+          "title": "Albert Alexander (police officer)",
+          "texts": [
+            "Albert Alexander"
+          ]
+        },
+        {
+          "title": "Cocoanut Grove fire",
+          "texts": [
+            "Cocoanut Grove fire"
+          ]
+        },
+        {
+          "title": "Boston",
+          "texts": [
+            "Boston"
+          ]
+        },
+        {
+          "title": "The Lancet",
+          "texts": [
+            "The Lancet"
+          ]
+        },
+        {
+          "title": "War Cabinet",
+          "texts": [
+            "War Cabinet"
+          ]
+        },
+        {
+          "title": "Mass production",
+          "texts": [
+            "mass production"
+          ]
+        },
+        {
+          "title": "His Majesty's Government",
+          "texts": [
+            "His Majesty's Government"
+          ]
+        },
+        {
+          "title": "US federal government",
+          "texts": [
+            "US federal government"
+          ]
+        },
+        {
+          "title": "National Center for Agricultural Utilization Research",
+          "texts": [
+            "National Center for Agricultural Utilization Research"
+          ]
+        },
+        {
+          "title": "US Department of Agriculture",
+          "texts": [
+            "US Department of Agriculture"
+          ]
+        },
+        {
+          "title": "Peoria, Illinois",
+          "texts": [
+            "Peoria, Illinois"
+          ]
+        },
+        {
+          "title": "Merck & Co.",
+          "texts": [
+            "Merck & Co."
+          ]
+        },
+        {
+          "title": "War Production Board",
+          "texts": [
+            "War Production Board"
+          ]
+        },
+        {
+          "title": "Allies of World War II",
+          "texts": [
+            "Allied"
+          ]
+        },
+        {
+          "title": "Corn steep liquor",
+          "texts": [
+            "corn steep liquor"
+          ]
+        },
+        {
+          "title": "Invasion of Normandy",
+          "texts": [
+            "invasion of Normandy"
+          ]
+        },
+        {
+          "title": "Cantaloupe",
+          "texts": [
+            "cantaloupe"
+          ]
+        },
+        {
+          "title": "Jasper H. Kane",
+          "texts": [
+            "Jasper H. Kane"
+          ]
+        },
+        {
+          "title": "Pfizer",
+          "texts": [
+            "Pfizer"
+          ]
+        },
+        {
+          "title": "Margaret Hutchinson Rousseau",
+          "texts": [
+            "Margaret Hutchinson Rousseau"
+          ]
+        },
+        {
+          "title": "G. Raymond Rettew",
+          "texts": [
+            "G. Raymond Rettew"
+          ]
+        },
+        {
+          "title": "Second World War",
+          "texts": [
+            "Second World War"
+          ]
+        },
+        {
+          "title": "Clearance (medicine)",
+          "texts": [
+            "renal clearance"
+          ]
+        },
+        {
+          "title": "Andrew Jackson Moyer",
+          "texts": [
+            "Andrew Jackson Moyer"
+          ]
+        },
+        {
+          "title": "Henry Hallett Dale",
+          "texts": [
+            "Henry Dale"
+          ]
+        },
+        {
+          "title": "Uricosuric",
+          "texts": [
+            "uricosuric"
+          ]
+        },
+        {
+          "title": "Probenecid",
+          "texts": [
+            "probenecid"
+          ]
+        },
+        {
+          "title": "Chemical structure",
+          "texts": [
+            "chemical structure"
+          ]
+        },
+        {
+          "title": "X-ray crystallography",
+          "texts": [
+            "X-ray crystallography"
+          ]
+        },
+        {
+          "title": "Dorothy Hodgkin",
+          "texts": [
+            "Dorothy Crowfoot Hodgkin"
+          ]
+        },
+        {
+          "title": "John C. Sheehan",
+          "texts": [
+            "John C. Sheehan"
+          ]
+        },
+        {
+          "title": "Massachusetts Institute of Technology",
+          "texts": [
+            "Massachusetts Institute of Technology"
+          ]
+        },
+        {
+          "title": "Total synthesis",
+          "texts": [
+            "synthesis"
+          ]
+        },
+        {
+          "title": "Peptides",
+          "texts": [
+            "peptides"
+          ]
+        },
+        {
+          "title": "Protecting group",
+          "texts": [
+            "protecting groups"
+          ]
+        },
+        {
+          "title": "Beecham Group",
+          "texts": [
+            "Beecham Group"
+          ]
+        },
+        {
+          "title": "Methicillin-resistant Staphylococcus aureus",
+          "texts": [
+            "methicillin-resistant Staphylococcus aureus"
+          ]
+        },
+        {
+          "title": "Secondary metabolite",
+          "texts": [
+            "secondary metabolite"
+          ]
+        },
+        {
+          "title": "Enzyme inhibitor",
+          "texts": [
+            "feedback inhibition"
+          ]
+        },
+        {
+          "title": "Homocitrate synthase",
+          "texts": [
+            "homocitrate synthase"
+          ]
+        },
+        {
+          "title": "Alpha-Ketoglutaric acid",
+          "texts": [
+            "α-ketoglutarate"
+          ]
+        },
+        {
+          "title": "Acetyl-CoA",
+          "texts": [
+            "AcCoA"
+          ]
+        },
+        {
+          "title": "Homocitric acid",
+          "texts": [
+            "homocitrate"
+          ]
+        },
+        {
+          "title": "Alpha-Aminoadipic acid",
+          "texts": [
+            "L-α-aminoadipic acid"
+          ]
+        },
+        {
+          "title": "Lysine",
+          "texts": [
+            "L-lysine"
+          ]
+        },
+        {
+          "title": "Fed-batch",
+          "texts": [
+            "fed-batch"
+          ]
+        },
+        {
+          "title": "Glucose",
+          "texts": [
+            "glucose"
+          ]
+        },
+        {
+          "title": "Lactose",
+          "texts": [
+            "lactose"
+          ]
+        },
+        {
+          "title": "PH",
+          "texts": [
+            "pH"
+          ]
+        },
+        {
+          "title": "Phosphate",
+          "texts": [
+            "phosphate"
+          ]
+        },
+        {
+          "title": "Oxygen",
+          "texts": [
+            "oxygen"
+          ]
+        },
+        {
+          "title": "Ammonium",
+          "texts": [
+            "ammonium"
+          ]
+        },
+        {
+          "title": "Nitrogen",
+          "texts": [
+            "nitrogen"
+          ]
+        },
+        {
+          "title": "Methionine",
+          "texts": [
+            "methionine"
+          ]
+        },
+        {
+          "title": "Biotechnology",
+          "texts": [
+            "biotechnological"
+          ]
+        },
+        {
+          "title": "Directed evolution",
+          "texts": [
+            "directed evolution"
+          ]
+        },
+        {
+          "title": "Polymerase chain reaction",
+          "texts": [
+            "error-prone PCR"
+          ]
+        },
+        {
+          "title": "DNA shuffling",
+          "texts": [
+            "DNA shuffling"
+          ]
+        },
+        {
+          "title": "Protein engineering",
+          "texts": [
+            "ITCHY"
+          ]
+        },
+        {
+          "title": "Overlap extension polymerase chain reaction",
+          "texts": [
+            "strand-overlap PCR"
+          ]
+        },
+        {
+          "title": "Tripeptide",
+          "texts": [
+            "tripeptide"
+          ]
+        },
+        {
+          "title": "Nonribosomal peptide",
+          "texts": [
+            "nonribosomal peptide"
+          ]
+        },
+        {
+          "title": "Redox",
+          "texts": [
+            "oxidative"
+          ]
+        },
+        {
+          "title": "Bicyclic molecule",
+          "texts": [
+            "bicyclic"
+          ]
+        },
+        {
+          "title": "Isopenicillin N synthase",
+          "texts": [
+            "isopenicillin N synthase"
+          ]
+        },
+        {
+          "title": "Transamidation",
+          "texts": [
+            "transamidation"
+          ]
+        },
+        {
+          "title": "Isopenicillin N N-acyltransferase",
+          "texts": [
+            "isopenicillin N N-acyltransferase"
+          ]
+        },
+        {
+          "title": "Phenylacetic acid",
+          "texts": [
+            "phenylacetyl"
+          ]
+        }
+      ]
+    }
+  }
+}

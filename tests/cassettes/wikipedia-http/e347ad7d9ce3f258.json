@@ -1,0 +1,715 @@
+{
+  "hash": "e347ad7d9ce3f258",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Telescope/1370790151",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Telescope",
+      "lead": "A telescope is a device used to observe distant objects by their emission, absorption, or reflection of electromagnetic radiation. Originally, it was an optical instrument using lenses, curved mirrors, or a combination of both to observe distant objects – an optical telescope. Nowadays, the word \"telescope\" is defined as a wide range of instruments capable of detecting different regions of the electromagnetic spectrum, and in some cases other types of detectors.",
+      "links": [
+        {
+          "title": "Absorption (electromagnetic radiation)",
+          "texts": [
+            "absorption"
+          ]
+        },
+        {
+          "title": "Reflection (physics)",
+          "texts": [
+            "reflection"
+          ]
+        },
+        {
+          "title": "Electromagnetic radiation",
+          "texts": [
+            "electromagnetic radiation"
+          ]
+        },
+        {
+          "title": "Optical instrument",
+          "texts": [
+            "optical instrument"
+          ]
+        },
+        {
+          "title": "Lens",
+          "texts": [
+            "lenses"
+          ]
+        },
+        {
+          "title": "Curved mirror",
+          "texts": [
+            "curved mirrors"
+          ]
+        },
+        {
+          "title": "Optical telescope",
+          "texts": [
+            "optical telescope"
+          ]
+        },
+        {
+          "title": "Electromagnetic spectrum",
+          "texts": [
+            "electromagnetic spectrum"
+          ]
+        },
+        {
+          "title": "Refracting telescope",
+          "texts": [
+            "refracting telescopes",
+            "refracting telescope"
+          ]
+        },
+        {
+          "title": "Netherlands",
+          "texts": [
+            "Netherlands"
+          ]
+        },
+        {
+          "title": "Astronomy",
+          "texts": [
+            "astronomy"
+          ]
+        },
+        {
+          "title": "Reflecting telescope",
+          "texts": [
+            "reflecting telescope",
+            "reflecting telescopes"
+          ]
+        },
+        {
+          "title": "Radio telescope",
+          "texts": [
+            "radio telescopes",
+            "radio"
+          ]
+        },
+        {
+          "title": "Infrared telescope",
+          "texts": [
+            "infrared telescopes"
+          ]
+        },
+        {
+          "title": "Giovanni Demisiani",
+          "texts": [
+            "Giovanni Demisiani"
+          ]
+        },
+        {
+          "title": "Galileo Galilei",
+          "texts": [
+            "Galileo Galilei",
+            "Galileo"
+          ]
+        },
+        {
+          "title": "Accademia dei Lincei",
+          "texts": [
+            "Accademia dei Lincei"
+          ]
+        },
+        {
+          "title": "Starry Messenger",
+          "texts": [
+            "Starry Messenger"
+          ]
+        },
+        {
+          "title": "Latin",
+          "texts": [
+            "Latin"
+          ]
+        },
+        {
+          "title": "Ancient Greek",
+          "texts": [
+            "Ancient Greek"
+          ]
+        },
+        {
+          "title": "Hans Lipperhey",
+          "texts": [
+            "Hans Lipperhey"
+          ]
+        },
+        {
+          "title": "Objective (optics)",
+          "texts": [
+            "objective"
+          ]
+        },
+        {
+          "title": "Parabolic reflector",
+          "texts": [
+            "parabolic mirrors"
+          ]
+        },
+        {
+          "title": "Spherical aberration",
+          "texts": [
+            "spherical aberration"
+          ]
+        },
+        {
+          "title": "Chromatic aberration",
+          "texts": [
+            "chromatic aberration"
+          ]
+        },
+        {
+          "title": "Isaac Newton",
+          "texts": [
+            "Isaac Newton"
+          ]
+        },
+        {
+          "title": "Newtonian telescope",
+          "texts": [
+            "Newtonian reflector"
+          ]
+        },
+        {
+          "title": "John Dobson (amateur astronomer)",
+          "texts": [
+            "John Dobson"
+          ]
+        },
+        {
+          "title": "Dobsonian telescope",
+          "texts": [
+            "Dobsonian telescope"
+          ]
+        },
+        {
+          "title": "Achromatic lens",
+          "texts": [
+            "achromatic lens"
+          ]
+        },
+        {
+          "title": "Speculum metal",
+          "texts": [
+            "speculum metal"
+          ]
+        },
+        {
+          "title": "Wavelength",
+          "texts": [
+            "wavelengths",
+            "wavelength"
+          ]
+        },
+        {
+          "title": "Gamma-ray telescope",
+          "texts": [
+            "gamma-rays"
+          ]
+        },
+        {
+          "title": "Astronomical seeing",
+          "texts": [
+            "astronomical seeing"
+          ]
+        },
+        {
+          "title": "Light pollution",
+          "texts": [
+            "light pollution"
+          ]
+        },
+        {
+          "title": "Hubble Space Telescope",
+          "texts": [
+            "Hubble Space Telescope"
+          ]
+        },
+        {
+          "title": "Spitzer Space Telescope",
+          "texts": [
+            "Spitzer Space Telescope"
+          ]
+        },
+        {
+          "title": "Kepler Space Telescope",
+          "texts": [
+            "Kepler Space Telescope"
+          ]
+        },
+        {
+          "title": "Exoplanets",
+          "texts": [
+            "exoplanets"
+          ]
+        },
+        {
+          "title": "James Webb Space Telescope",
+          "texts": [
+            "James Webb Space Telescope"
+          ]
+        },
+        {
+          "title": "Kourou",
+          "texts": [
+            "Kourou"
+          ]
+        },
+        {
+          "title": "French Guiana",
+          "texts": [
+            "French Guiana"
+          ]
+        },
+        {
+          "title": "Ariane 5",
+          "texts": [
+            "Ariane 5"
+          ]
+        },
+        {
+          "title": "Lagrange Point",
+          "texts": [
+            "Lagrange Point"
+          ]
+        },
+        {
+          "title": "James Clerk Maxwell Telescope",
+          "texts": [
+            "James Clerk Maxwell Telescope"
+          ]
+        },
+        {
+          "title": "Wide Field Camera 3",
+          "texts": [
+            "Wide Field Camera 3"
+          ]
+        },
+        {
+          "title": "TRACE",
+          "texts": [
+            "TRACE"
+          ]
+        },
+        {
+          "title": "Solar and Heliospheric Observatory",
+          "texts": [
+            "SOHO"
+          ]
+        },
+        {
+          "title": "Extreme ultraviolet",
+          "texts": [
+            "extreme ultraviolet"
+          ]
+        },
+        {
+          "title": "Space telescope",
+          "texts": [
+            "space telescope"
+          ]
+        },
+        {
+          "title": "Flying telescope",
+          "texts": [
+            "flying telescope"
+          ]
+        },
+        {
+          "title": "Astronomer",
+          "texts": [
+            "professional astronomers"
+          ]
+        },
+        {
+          "title": "Amateur astronomer",
+          "texts": [
+            "amateur astronomers"
+          ]
+        },
+        {
+          "title": "Observatory",
+          "texts": [
+            "observatory"
+          ]
+        },
+        {
+          "title": "Directional antenna",
+          "texts": [
+            "directional"
+          ]
+        },
+        {
+          "title": "Radio antennas",
+          "texts": [
+            "radio antennas"
+          ]
+        },
+        {
+          "title": "Focal-plane array (radio astronomy)",
+          "texts": [
+            "focal-plane array"
+          ]
+        },
+        {
+          "title": "Astronomical interferometer",
+          "texts": [
+            "astronomical interferometers"
+          ]
+        },
+        {
+          "title": "Aperture synthesis",
+          "texts": [
+            "aperture synthesis"
+          ]
+        },
+        {
+          "title": "Very-long-baseline interferometry",
+          "texts": [
+            "very-long-baseline interferometry"
+          ]
+        },
+        {
+          "title": "HALCA",
+          "texts": [
+            "HALCA"
+          ]
+        },
+        {
+          "title": "Optical interferometry",
+          "texts": [
+            "optical interferometers"
+          ]
+        },
+        {
+          "title": "Aperture masking interferometry",
+          "texts": [
+            "aperture masking interferometry"
+          ]
+        },
+        {
+          "title": "Microwave radiation",
+          "texts": [
+            "microwave radiation"
+          ]
+        },
+        {
+          "title": "Allen Telescope Array",
+          "texts": [
+            "Allen Telescope Array"
+          ]
+        },
+        {
+          "title": "Search for Extraterrestrial Intelligence",
+          "texts": [
+            "SETI"
+          ]
+        },
+        {
+          "title": "Arecibo Observatory",
+          "texts": [
+            "Arecibo Observatory"
+          ]
+        },
+        {
+          "title": "Focus (optics)",
+          "texts": [
+            "focuses"
+          ]
+        },
+        {
+          "title": "Angular size",
+          "texts": [
+            "angular size"
+          ]
+        },
+        {
+          "title": "Brightness",
+          "texts": [
+            "brightness"
+          ]
+        },
+        {
+          "title": "Mirror",
+          "texts": [
+            "mirrors"
+          ]
+        },
+        {
+          "title": "Theodolite",
+          "texts": [
+            "theodolites"
+          ]
+        },
+        {
+          "title": "Spotting scope",
+          "texts": [
+            "spotting scopes"
+          ]
+        },
+        {
+          "title": "Monocular",
+          "texts": [
+            "monoculars"
+          ]
+        },
+        {
+          "title": "Binoculars",
+          "texts": [
+            "binoculars"
+          ]
+        },
+        {
+          "title": "Camera lens",
+          "texts": [
+            "camera lenses"
+          ]
+        },
+        {
+          "title": "Catadioptric",
+          "texts": [
+            "catadioptric telescope"
+          ]
+        },
+        {
+          "title": "Fresnel imager",
+          "texts": [
+            "Fresnel imager"
+          ]
+        },
+        {
+          "title": "Fresnel lens",
+          "texts": [
+            "Fresnel lens"
+          ]
+        },
+        {
+          "title": "Astrograph",
+          "texts": [
+            "astrographs"
+          ]
+        },
+        {
+          "title": "Comet seeker",
+          "texts": [
+            "comet seekers"
+          ]
+        },
+        {
+          "title": "Solar telescope",
+          "texts": [
+            "solar telescopes"
+          ]
+        },
+        {
+          "title": "X-ray",
+          "texts": [
+            "X-rays"
+          ]
+        },
+        {
+          "title": "X-ray optics",
+          "texts": [
+            "X-ray optics"
+          ]
+        },
+        {
+          "title": "Wolter telescope",
+          "texts": [
+            "Wolter telescopes",
+            "Wolter telescope"
+          ]
+        },
+        {
+          "title": "Heavy metals",
+          "texts": [
+            "heavy metals"
+          ]
+        },
+        {
+          "title": "Degree (angle)",
+          "texts": [
+            "degrees"
+          ]
+        },
+        {
+          "title": "Parabola",
+          "texts": [
+            "parabola"
+          ]
+        },
+        {
+          "title": "Hyperbola",
+          "texts": [
+            "hyperbola"
+          ]
+        },
+        {
+          "title": "Ellipse",
+          "texts": [
+            "ellipse"
+          ]
+        },
+        {
+          "title": "Hans Wolter",
+          "texts": [
+            "Hans Wolter"
+          ]
+        },
+        {
+          "title": "Einstein Observatory",
+          "texts": [
+            "Einstein Observatory"
+          ]
+        },
+        {
+          "title": "ROSAT",
+          "texts": [
+            "ROSAT"
+          ]
+        },
+        {
+          "title": "Chandra X-ray Observatory",
+          "texts": [
+            "Chandra X-ray Observatory"
+          ]
+        },
+        {
+          "title": "NuSTAR",
+          "texts": [
+            "NuSTAR"
+          ]
+        },
+        {
+          "title": "Deployable structure",
+          "texts": [
+            "deployable"
+          ]
+        },
+        {
+          "title": "Coded aperture",
+          "texts": [
+            "coded aperture"
+          ]
+        },
+        {
+          "title": "Satellite",
+          "texts": [
+            "satellites"
+          ]
+        },
+        {
+          "title": "Earth's atmosphere",
+          "texts": [
+            "Earth's atmosphere"
+          ]
+        },
+        {
+          "title": "Fermi Gamma-ray Space Telescope",
+          "texts": [
+            "Fermi Gamma-ray Space Telescope"
+          ]
+        },
+        {
+          "title": "Imaging atmospheric Cherenkov telescope",
+          "texts": [
+            "Imaging Atmospheric Cherenkov Telescopes"
+          ]
+        },
+        {
+          "title": "High Energy Stereoscopic System",
+          "texts": [
+            "H.E.S.S."
+          ]
+        },
+        {
+          "title": "VERITAS",
+          "texts": [
+            "VERITAS"
+          ]
+        },
+        {
+          "title": "Cherenkov Telescope Array",
+          "texts": [
+            "CTA"
+          ]
+        },
+        {
+          "title": "High Altitude Water Cherenkov Experiment",
+          "texts": [
+            "HAWC"
+          ]
+        },
+        {
+          "title": "Large High Altitude Air Shower Observatory",
+          "texts": [
+            "LHAASO"
+          ]
+        },
+        {
+          "title": "List of optical telescopes",
+          "texts": [
+            "List of optical telescopes"
+          ]
+        },
+        {
+          "title": "List of largest optical reflecting telescopes",
+          "texts": [
+            "List of largest optical reflecting telescopes"
+          ]
+        },
+        {
+          "title": "List of largest optical refracting telescopes",
+          "texts": [
+            "List of largest optical refracting telescopes"
+          ]
+        },
+        {
+          "title": "List of largest optical telescopes historically",
+          "texts": [
+            "List of largest optical telescopes historically"
+          ]
+        },
+        {
+          "title": "List of radio telescopes",
+          "texts": [
+            "List of radio telescopes"
+          ]
+        },
+        {
+          "title": "List of solar telescopes",
+          "texts": [
+            "List of solar telescopes"
+          ]
+        },
+        {
+          "title": "List of space observatories",
+          "texts": [
+            "List of space observatories"
+          ]
+        },
+        {
+          "title": "List of telescope parts and construction",
+          "texts": [
+            "List of telescope parts and construction"
+          ]
+        },
+        {
+          "title": "List of telescope types",
+          "texts": [
+            "List of telescope types"
+          ]
+        }
+      ]
+    }
+  }
+}

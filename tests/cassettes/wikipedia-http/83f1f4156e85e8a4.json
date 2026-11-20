@@ -1,0 +1,2249 @@
+{
+  "hash": "83f1f4156e85e8a4",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Mount_Everest/1382963768",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Mount Everest",
+      "lead": "Mount Everest (known in Nepali as Sagarmāthā, in Sherpa as Chamolangma, and in Tibetan as Jomolangma/Čhomolangma) is the highest mountain on Earth above sea level. It lies in the Mahalangur Himal sub-range of the Himalayas and marks part of the China–Nepal border at its summit. Its height was most recently measured in 2020 through a joint survey by Nepalese and Chinese authorities as 8,848.86 m (29,031 ft 8+1⁄2 in).",
+      "links": [
+        {
+          "title": "Nepali language",
+          "texts": [
+            "Nepali"
+          ]
+        },
+        {
+          "title": "Sherpa language",
+          "texts": [
+            "Sherpa"
+          ]
+        },
+        {
+          "title": "Tibetan language (standard)",
+          "texts": [
+            "Tibetan"
+          ]
+        },
+        {
+          "title": "Sea level",
+          "texts": [
+            "sea level"
+          ]
+        },
+        {
+          "title": "Mahalangur Himal",
+          "texts": [
+            "Mahalangur Himal"
+          ]
+        },
+        {
+          "title": "Himalayas",
+          "texts": [
+            "Himalayas"
+          ]
+        },
+        {
+          "title": "China–Nepal border",
+          "texts": [
+            "China–Nepal border"
+          ]
+        },
+        {
+          "title": "Nepal",
+          "texts": [
+            "Nepal",
+            "republic"
+          ]
+        },
+        {
+          "title": "China",
+          "texts": [
+            "China"
+          ]
+        },
+        {
+          "title": "Altitude sickness",
+          "texts": [
+            "altitude sickness"
+          ]
+        },
+        {
+          "title": "Avalanche",
+          "texts": [
+            "avalanches",
+            "avalanche"
+          ]
+        },
+        {
+          "title": "Khumbu Icefall",
+          "texts": [
+            "Khumbu Icefall"
+          ]
+        },
+        {
+          "title": "List of people who died climbing Mount Everest",
+          "texts": [
+            "died on Everest"
+          ]
+        },
+        {
+          "title": "Geoid",
+          "texts": [
+            "geoid",
+            "Geoid"
+          ]
+        },
+        {
+          "title": "Bay of Bengal",
+          "texts": [
+            "Bay of Bengal"
+          ]
+        },
+        {
+          "title": "Tim Macartney-Snape",
+          "texts": [
+            "Tim Macartney-Snape's team"
+          ]
+        },
+        {
+          "title": "Everest base camps",
+          "texts": [
+            "North Base Camp",
+            "South Base Camp",
+            "two base camps"
+          ]
+        },
+        {
+          "title": "Kathmandu",
+          "texts": [
+            "Kathmandu"
+          ]
+        },
+        {
+          "title": "Lukla",
+          "texts": [
+            "Lukla"
+          ]
+        },
+        {
+          "title": "Mountaineering",
+          "texts": [
+            "mountaineers"
+          ]
+        },
+        {
+          "title": "1921 British Mount Everest reconnaissance expedition",
+          "texts": [
+            "reconnaissance expedition by the British in 1921",
+            "1921 British Reconnaissance Expedition"
+          ]
+        },
+        {
+          "title": "North Col",
+          "texts": [
+            "North Col"
+          ]
+        },
+        {
+          "title": "1922 British Mount Everest expedition",
+          "texts": [
+            "1922 expedition"
+          ]
+        },
+        {
+          "title": "1924 British Mount Everest expedition",
+          "texts": [
+            "1924 expedition"
+          ]
+        },
+        {
+          "title": "George Mallory",
+          "texts": [
+            "George Mallory"
+          ]
+        },
+        {
+          "title": "Andrew Irvine (mountaineer)",
+          "texts": [
+            "Andrew Irvine"
+          ]
+        },
+        {
+          "title": "Tenzing Norgay",
+          "texts": [
+            "Tenzing Norgay",
+            "Tenzing"
+          ]
+        },
+        {
+          "title": "Edmund Hillary",
+          "texts": [
+            "Edmund Hillary"
+          ]
+        },
+        {
+          "title": "1953 British Mount Everest expedition",
+          "texts": [
+            "first documented ascent of Everest in 1953",
+            "1953 British Mount Everest expedition"
+          ]
+        },
+        {
+          "title": "1952 Swiss Mount Everest expedition",
+          "texts": [
+            "1952 Swiss expedition",
+            "1952 Swiss Mount Everest expedition"
+          ]
+        },
+        {
+          "title": "Wang Fuzhou",
+          "texts": [
+            "Wang Fuzhou"
+          ]
+        },
+        {
+          "title": "Gongbu (mountaineer)",
+          "texts": [
+            "Gonpo"
+          ]
+        },
+        {
+          "title": "1960 Chinese Mount Everest expedition",
+          "texts": [
+            "ascent of the peak from the North Ridge"
+          ]
+        },
+        {
+          "title": "International Alphabet of Sanskrit Transliteration",
+          "texts": [
+            "IAST"
+          ]
+        },
+        {
+          "title": "Classical Tibetan",
+          "texts": [
+            "Tibetan"
+          ]
+        },
+        {
+          "title": "Qing China",
+          "texts": [
+            "Qing"
+          ]
+        },
+        {
+          "title": "Emperor Kangxi",
+          "texts": [
+            "Emperor Kangxi"
+          ]
+        },
+        {
+          "title": "Jean Baptiste Bourguignon d'Anville",
+          "texts": [
+            "D'Anville"
+          ]
+        },
+        {
+          "title": "Wylie transliteration",
+          "texts": [
+            "Wylie"
+          ]
+        },
+        {
+          "title": "Transcription into Chinese characters",
+          "texts": [
+            "Chinese transcription"
+          ]
+        },
+        {
+          "title": "Traditional Chinese characters",
+          "texts": [
+            "t"
+          ]
+        },
+        {
+          "title": "Pinyin",
+          "texts": [
+            "pinyin"
+          ]
+        },
+        {
+          "title": "Standard Chinese",
+          "texts": [
+            "Standard Mandarin"
+          ]
+        },
+        {
+          "title": "Traditional characters",
+          "texts": [
+            "t"
+          ]
+        },
+        {
+          "title": "Simplified characters",
+          "texts": [
+            "s"
+          ]
+        },
+        {
+          "title": "Ministry of Civil Affairs",
+          "texts": [
+            "Ministry of Internal Affairs"
+          ]
+        },
+        {
+          "title": "Kangchenjunga",
+          "texts": [
+            "Kangchenjunga"
+          ]
+        },
+        {
+          "title": "Dhaulagiri",
+          "texts": [
+            "Dhaulagiri"
+          ]
+        },
+        {
+          "title": "Andrew Scott Waugh",
+          "texts": [
+            "Andrew Waugh",
+            "Andrew Scott Waugh"
+          ]
+        },
+        {
+          "title": "Surveyor General of India",
+          "texts": [
+            "Surveyor General of India"
+          ]
+        },
+        {
+          "title": "George Everest",
+          "texts": [
+            "Sir George Everest"
+          ]
+        },
+        {
+          "title": "Royal Geographical Society",
+          "texts": [
+            "Royal Geographical Society"
+          ]
+        },
+        {
+          "title": "Hindi",
+          "texts": [
+            "Hindi"
+          ]
+        },
+        {
+          "title": "Indian people",
+          "texts": [
+            "the native of India"
+          ]
+        },
+        {
+          "title": "Cartography",
+          "texts": [
+            "cartographers"
+          ]
+        },
+        {
+          "title": "Gaurishankar",
+          "texts": [
+            "Gaurishankar",
+            "a different peak"
+          ]
+        },
+        {
+          "title": "Great Trigonometrical Survey",
+          "texts": [
+            "Great Trigonometrical Survey"
+          ]
+        },
+        {
+          "title": "Theodolite",
+          "texts": [
+            "theodolites",
+            "theodolite"
+          ]
+        },
+        {
+          "title": "Kingdom of Nepal",
+          "texts": [
+            "Nepal",
+            "monarchy"
+          ]
+        },
+        {
+          "title": "Terai",
+          "texts": [
+            "Terai"
+          ]
+        },
+        {
+          "title": "Malaria",
+          "texts": [
+            "malaria"
+          ]
+        },
+        {
+          "title": "List of past presumed highest mountains",
+          "texts": [
+            "considered the highest peak in the world"
+          ]
+        },
+        {
+          "title": "Patna",
+          "texts": [
+            "Patna"
+          ]
+        },
+        {
+          "title": "Ganges",
+          "texts": [
+            "Ganges"
+          ]
+        },
+        {
+          "title": "Light refraction",
+          "texts": [
+            "light refraction"
+          ]
+        },
+        {
+          "title": "Roman numerals",
+          "texts": [
+            "Roman numerals"
+          ]
+        },
+        {
+          "title": "Dehradun",
+          "texts": [
+            "Dehradun"
+          ]
+        },
+        {
+          "title": "Radhanath Sikdar",
+          "texts": [
+            "Radhanath Sikdar"
+          ]
+        },
+        {
+          "title": "Bengal",
+          "texts": [
+            "Bengal"
+          ]
+        },
+        {
+          "title": "Trigonometry",
+          "texts": [
+            "trigonometric"
+          ]
+        },
+        {
+          "title": "Kolkata",
+          "texts": [
+            "Calcutta"
+          ]
+        },
+        {
+          "title": "Survey of India",
+          "texts": [
+            "Survey of India"
+          ]
+        },
+        {
+          "title": "Triangulation",
+          "texts": [
+            "triangulation"
+          ]
+        },
+        {
+          "title": "April 2015 Nepal earthquake",
+          "texts": [
+            "April 2015 Nepal earthquake",
+            "earthquake measuring 7.8"
+          ]
+        },
+        {
+          "title": "Bradford Washburn",
+          "texts": [
+            "Bradford Washburn"
+          ]
+        },
+        {
+          "title": "Global Positioning System",
+          "texts": [
+            "GPS"
+          ]
+        },
+        {
+          "title": "Photogrammetry",
+          "texts": [
+            "photogrammetric"
+          ]
+        },
+        {
+          "title": "Khumbu",
+          "texts": [
+            "Khumbu"
+          ]
+        },
+        {
+          "title": "Erwin Schneider",
+          "texts": [
+            "Erwin Schneider"
+          ]
+        },
+        {
+          "title": "Lhotse",
+          "texts": [
+            "Lhotse"
+          ]
+        },
+        {
+          "title": "Topography",
+          "texts": [
+            "topographic"
+          ]
+        },
+        {
+          "title": "Aerial photography",
+          "texts": [
+            "aerial photography"
+          ]
+        },
+        {
+          "title": "Chinese Academy of Sciences",
+          "texts": [
+            "Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "title": "Plate tectonics",
+          "texts": [
+            "plate tectonics"
+          ]
+        },
+        {
+          "title": "Main Himalayan Thrust",
+          "texts": [
+            "Main Himalayan Thrust"
+          ]
+        },
+        {
+          "title": "Convergent boundary",
+          "texts": [
+            "convergent boundary"
+          ]
+        },
+        {
+          "title": "Eurasian Plate",
+          "texts": [
+            "Eurasian Plate"
+          ]
+        },
+        {
+          "title": "Indian Plate",
+          "texts": [
+            "Indian Plate"
+          ]
+        },
+        {
+          "title": "Above sea level",
+          "texts": [
+            "above sea level"
+          ]
+        },
+        {
+          "title": "Mauna Kea",
+          "texts": [
+            "Mauna Kea"
+          ]
+        },
+        {
+          "title": "Denali",
+          "texts": [
+            "Denali"
+          ]
+        },
+        {
+          "title": "Alaska",
+          "texts": [
+            "Alaska"
+          ]
+        },
+        {
+          "title": "Tibetan Plateau",
+          "texts": [
+            "Tibetan Plateau"
+          ]
+        },
+        {
+          "title": "Chimborazo",
+          "texts": [
+            "Chimborazo"
+          ]
+        },
+        {
+          "title": "Ecuador",
+          "texts": [
+            "Ecuador"
+          ]
+        },
+        {
+          "title": "Nuptse",
+          "texts": [
+            "Nuptse"
+          ]
+        },
+        {
+          "title": "Changtse",
+          "texts": [
+            "Changtse"
+          ]
+        },
+        {
+          "title": "Khumbutse",
+          "texts": [
+            "Khumbutse"
+          ]
+        },
+        {
+          "title": "Khumbu Glacier",
+          "texts": [
+            "Khumbu icefall and glacier",
+            "Khumbu Glacier"
+          ]
+        },
+        {
+          "title": "Geologic formation",
+          "texts": [
+            "formations"
+          ]
+        },
+        {
+          "title": "Fault (geology)",
+          "texts": [
+            "faults"
+          ]
+        },
+        {
+          "title": "Detachment fault",
+          "texts": [
+            "detachments"
+          ]
+        },
+        {
+          "title": "Rongbuk Glacier",
+          "texts": [
+            "Rongbuk Formation",
+            "Rongbuk Glacier"
+          ]
+        },
+        {
+          "title": "Ordovician",
+          "texts": [
+            "Ordovician"
+          ]
+        },
+        {
+          "title": "Dolomite (rock)",
+          "texts": [
+            "dolomite"
+          ]
+        },
+        {
+          "title": "Argillaceous minerals",
+          "texts": [
+            "argillaceous"
+          ]
+        },
+        {
+          "title": "Sediment",
+          "texts": [
+            "laminae"
+          ]
+        },
+        {
+          "title": "Siltstone",
+          "texts": [
+            "siltstone"
+          ]
+        },
+        {
+          "title": "Crinoid",
+          "texts": [
+            "crinoids"
+          ]
+        },
+        {
+          "title": "Limestone",
+          "texts": [
+            "limestone"
+          ]
+        },
+        {
+          "title": "Petrograph",
+          "texts": [
+            "petrographic"
+          ]
+        },
+        {
+          "title": "Trilobite",
+          "texts": [
+            "trilobites"
+          ]
+        },
+        {
+          "title": "Ostracods",
+          "texts": [
+            "ostracods"
+          ]
+        },
+        {
+          "title": "Thrombolite",
+          "texts": [
+            "thrombolite"
+          ]
+        },
+        {
+          "title": "Three Steps",
+          "texts": [
+            "Third Step"
+          ]
+        },
+        {
+          "title": "Cyanobacteria",
+          "texts": [
+            "cyanobacteria"
+          ]
+        },
+        {
+          "title": "Normal fault",
+          "texts": [
+            "normal fault"
+          ]
+        },
+        {
+          "title": "Intercalation (geology)",
+          "texts": [
+            "intercalated"
+          ]
+        },
+        {
+          "title": "Diopside",
+          "texts": [
+            "diopside"
+          ]
+        },
+        {
+          "title": "Epidote",
+          "texts": [
+            "epidote"
+          ]
+        },
+        {
+          "title": "Marble",
+          "texts": [
+            "marble"
+          ]
+        },
+        {
+          "title": "Muscovite",
+          "texts": [
+            "muscovite"
+          ]
+        },
+        {
+          "title": "Biotite",
+          "texts": [
+            "biotite"
+          ]
+        },
+        {
+          "title": "Schist",
+          "texts": [
+            "semischist"
+          ]
+        },
+        {
+          "title": "Breccia",
+          "texts": [
+            "breccia"
+          ]
+        },
+        {
+          "title": "Phyllite",
+          "texts": [
+            "phyllite"
+          ]
+        },
+        {
+          "title": "Sericite",
+          "texts": [
+            "sericite"
+          ]
+        },
+        {
+          "title": "Quartz",
+          "texts": [
+            "quartzose"
+          ]
+        },
+        {
+          "title": "Cambrian",
+          "texts": [
+            "Cambrian"
+          ]
+        },
+        {
+          "title": "Flysch",
+          "texts": [
+            "flysch"
+          ]
+        },
+        {
+          "title": "Mudstone",
+          "texts": [
+            "mudstone"
+          ]
+        },
+        {
+          "title": "Shale",
+          "texts": [
+            "shale"
+          ]
+        },
+        {
+          "title": "Sandstone",
+          "texts": [
+            "sandstone"
+          ]
+        },
+        {
+          "title": "Graywacke",
+          "texts": [
+            "graywacke"
+          ]
+        },
+        {
+          "title": "Sillimanite",
+          "texts": [
+            "sillimanite"
+          ]
+        },
+        {
+          "title": "K-feldspar",
+          "texts": [
+            "K-feldspar"
+          ]
+        },
+        {
+          "title": "Gneiss",
+          "texts": [
+            "gneiss"
+          ]
+        },
+        {
+          "title": "Sill (geology)",
+          "texts": [
+            "sills"
+          ]
+        },
+        {
+          "title": "Dike (geology)",
+          "texts": [
+            "dikes"
+          ]
+        },
+        {
+          "title": "Granite",
+          "texts": [
+            "leucogranite"
+          ]
+        },
+        {
+          "title": "Oligocene",
+          "texts": [
+            "Oligocene"
+          ]
+        },
+        {
+          "title": "Miocene",
+          "texts": [
+            "Miocene"
+          ]
+        },
+        {
+          "title": "Paleoproterozoic",
+          "texts": [
+            "Paleoproterozoic"
+          ]
+        },
+        {
+          "title": "Sedimentary rock",
+          "texts": [
+            "sedimentary"
+          ]
+        },
+        {
+          "title": "Metamorphic rock",
+          "texts": [
+            "metamorphic"
+          ]
+        },
+        {
+          "title": "Geology of the Himalaya",
+          "texts": [
+            "during the Cenozoic collision of India with Asia"
+          ]
+        },
+        {
+          "title": "International Union of Geological Sciences",
+          "texts": [
+            "International Union of Geological Sciences"
+          ]
+        },
+        {
+          "title": "Moss",
+          "texts": [
+            "moss"
+          ]
+        },
+        {
+          "title": "Arenaria (plant)",
+          "texts": [
+            "Arenaria"
+          ]
+        },
+        {
+          "title": "Jumping spider",
+          "texts": [
+            "jumping spider"
+          ]
+        },
+        {
+          "title": "Euophrys omnisuperstes",
+          "texts": [
+            "Euophrys omnisuperstes"
+          ]
+        },
+        {
+          "title": "Bar-headed goose",
+          "texts": [
+            "bar-headed goose"
+          ]
+        },
+        {
+          "title": "Chough",
+          "texts": [
+            "chough"
+          ]
+        },
+        {
+          "title": "South Col",
+          "texts": [
+            "South Col"
+          ]
+        },
+        {
+          "title": "Yellow-billed chough",
+          "texts": [
+            "yellow-billed choughs"
+          ]
+        },
+        {
+          "title": "Yak",
+          "texts": [
+            "Yaks",
+            "yaks"
+          ]
+        },
+        {
+          "title": "Himalayan tahr",
+          "texts": [
+            "Himalayan tahr"
+          ]
+        },
+        {
+          "title": "Snow leopard",
+          "texts": [
+            "snow leopard"
+          ]
+        },
+        {
+          "title": "Himalayan black bear",
+          "texts": [
+            "Himalayan black bear"
+          ]
+        },
+        {
+          "title": "Red panda",
+          "texts": [
+            "red panda"
+          ]
+        },
+        {
+          "title": "Pika",
+          "texts": [
+            "pika"
+          ]
+        },
+        {
+          "title": "Sagarmatha National Park",
+          "texts": [
+            "Sagarmatha National Park"
+          ]
+        },
+        {
+          "title": "Qomolangma National Nature Preserve",
+          "texts": [
+            "Qomolangma National Nature Reserve"
+          ]
+        },
+        {
+          "title": "Ice cap climate",
+          "texts": [
+            "ice cap climate"
+          ]
+        },
+        {
+          "title": "Climate change",
+          "texts": [
+            "climate change"
+          ]
+        },
+        {
+          "title": "Mount Everest webcam",
+          "texts": [
+            "Mount Everest webcam"
+          ]
+        },
+        {
+          "title": "Troposphere",
+          "texts": [
+            "troposphere"
+          ]
+        },
+        {
+          "title": "Stratosphere",
+          "texts": [
+            "stratosphere"
+          ]
+        },
+        {
+          "title": "Jet stream",
+          "texts": [
+            "jet stream"
+          ]
+        },
+        {
+          "title": "Bernoulli's principle",
+          "texts": [
+            "Bernoulli's principle"
+          ]
+        },
+        {
+          "title": "Monsoon",
+          "texts": [
+            "monsoon"
+          ]
+        },
+        {
+          "title": "The Himalayan Database",
+          "texts": [
+            "The Himalayan Database"
+          ]
+        },
+        {
+          "title": "Clinton Thomas Dent",
+          "texts": [
+            "Clinton Thomas Dent"
+          ]
+        },
+        {
+          "title": "Alpine Club (UK)",
+          "texts": [
+            "Alpine Club"
+          ]
+        },
+        {
+          "title": "Guy Bullock",
+          "texts": [
+            "Guy Bullock"
+          ]
+        },
+        {
+          "title": "Edward Felix Norton",
+          "texts": [
+            "Col. Felix Norton"
+          ]
+        },
+        {
+          "title": "Howard Somervell",
+          "texts": [
+            "Howard Somervell"
+          ]
+        },
+        {
+          "title": "George Finch (chemist)",
+          "texts": [
+            "George Finch"
+          ]
+        },
+        {
+          "title": "Geoffrey Bruce",
+          "texts": [
+            "Geoffrey Bruce"
+          ]
+        },
+        {
+          "title": "1924 British Mount Everest Expedition",
+          "texts": [
+            "next expedition was in 1924"
+          ]
+        },
+        {
+          "title": "Great Couloir",
+          "texts": [
+            "Great Couloir"
+          ]
+        },
+        {
+          "title": "Mallory and Irvine Research Expedition",
+          "texts": [
+            "Mallory and Irvine Research Expedition"
+          ]
+        },
+        {
+          "title": "Lucy, Lady Houston",
+          "texts": [
+            "Lady Houston",
+            "Lucy, Lady Houston"
+          ]
+        },
+        {
+          "title": "Millionaire",
+          "texts": [
+            "millionaire"
+          ]
+        },
+        {
+          "title": "Houston–Mount Everest flight expedition",
+          "texts": [
+            "Houston Everest Flight of 1933"
+          ]
+        },
+        {
+          "title": "Westland Wallace",
+          "texts": [
+            "aeroplanes"
+          ]
+        },
+        {
+          "title": "Douglas Douglas-Hamilton, 14th Duke of Hamilton",
+          "texts": [
+            "Marquess of Clydesdale"
+          ]
+        },
+        {
+          "title": "Summit (topography)",
+          "texts": [
+            "summit"
+          ]
+        },
+        {
+          "title": "Charles Granville Bruce",
+          "texts": [
+            "Charles Bruce"
+          ]
+        },
+        {
+          "title": "Hugh Ruttledge",
+          "texts": [
+            "Hugh Ruttledge"
+          ]
+        },
+        {
+          "title": "1933 British Mount Everest expedition",
+          "texts": [
+            "1933"
+          ]
+        },
+        {
+          "title": "1936 British Mount Everest expedition",
+          "texts": [
+            "1936"
+          ]
+        },
+        {
+          "title": "Tibet",
+          "texts": [
+            "Tibet",
+            "Tibetan"
+          ]
+        },
+        {
+          "title": "Bill Tilman",
+          "texts": [
+            "Bill Tilman"
+          ]
+        },
+        {
+          "title": "Charles Snead Houston",
+          "texts": [
+            "Charles Houston"
+          ]
+        },
+        {
+          "title": "Mount Everest reconnaissance from Nepal",
+          "texts": [
+            "exploratory expedition to Everest through Nepal"
+          ]
+        },
+        {
+          "title": "Raymond Lambert",
+          "texts": [
+            "Raymond Lambert"
+          ]
+        },
+        {
+          "title": "Sherpa people",
+          "texts": [
+            "Sherpa",
+            "Sherpas",
+            "Sherpa people"
+          ]
+        },
+        {
+          "title": "John Hunt, Baron Hunt",
+          "texts": [
+            "John Hunt"
+          ]
+        },
+        {
+          "title": "Tom Bourdillon",
+          "texts": [
+            "Tom Bourdillon"
+          ]
+        },
+        {
+          "title": "Charles Evans (mountaineer)",
+          "texts": [
+            "Charles Evans"
+          ]
+        },
+        {
+          "title": "Ernst Schmied",
+          "texts": [
+            "Ernst Schmied"
+          ]
+        },
+        {
+          "title": "Juerg Marmet",
+          "texts": [
+            "Juerg Marmet"
+          ]
+        },
+        {
+          "title": "Jim Whittaker",
+          "texts": [
+            "Jim Whittaker"
+          ]
+        },
+        {
+          "title": "Nawang Gombu",
+          "texts": [
+            "Nawang Gombu"
+          ]
+        },
+        {
+          "title": "1963 American Mount Everest expedition",
+          "texts": [
+            "American Mount Everest expedition"
+          ]
+        },
+        {
+          "title": "Tom Hornbein",
+          "texts": [
+            "Tom Hornbein"
+          ]
+        },
+        {
+          "title": "Willi Unsoeld",
+          "texts": [
+            "Willi Unsoeld"
+          ]
+        },
+        {
+          "title": "North Face (Everest)",
+          "texts": [
+            "North Face"
+          ]
+        },
+        {
+          "title": "Yuichiro Miura",
+          "texts": [
+            "Yuichiro Miura"
+          ]
+        },
+        {
+          "title": "Junko Tabei",
+          "texts": [
+            "Junko Tabei"
+          ]
+        },
+        {
+          "title": "1975 British Mount Everest Southwest Face expedition",
+          "texts": [
+            "1975 British Mount Everest Southwest Face expedition"
+          ]
+        },
+        {
+          "title": "Chris Bonington",
+          "texts": [
+            "Chris Bonington"
+          ]
+        },
+        {
+          "title": "Western Cwm",
+          "texts": [
+            "Western Cwm"
+          ]
+        },
+        {
+          "title": "Reinhold Messner",
+          "texts": [
+            "Reinhold Messner"
+          ]
+        },
+        {
+          "title": "Peter Habeler",
+          "texts": [
+            "Peter Habeler"
+          ]
+        },
+        {
+          "title": "Andrzej Zawada",
+          "texts": [
+            "Andrzej Zawada"
+          ]
+        },
+        {
+          "title": "Leszek Cichy",
+          "texts": [
+            "Leszek Cichy"
+          ]
+        },
+        {
+          "title": "Krzysztof Wielicki",
+          "texts": [
+            "Krzysztof Wielicki"
+          ]
+        },
+        {
+          "title": "Eight-thousander",
+          "texts": [
+            "8000 metre peaks"
+          ]
+        },
+        {
+          "title": "Lho La",
+          "texts": [
+            "Lho La"
+          ]
+        },
+        {
+          "title": "Zygmunt Andrzej Heinrich",
+          "texts": [
+            "Zygmunt Andrzej Heinrich"
+          ]
+        },
+        {
+          "title": "Artur Hajzer",
+          "texts": [
+            "Artur Hajzer"
+          ]
+        },
+        {
+          "title": "Gary Ball",
+          "texts": [
+            "Gary Ball"
+          ]
+        },
+        {
+          "title": "Rob Hall",
+          "texts": [
+            "Rob Hall"
+          ]
+        },
+        {
+          "title": "Elizabeth Hawley",
+          "texts": [
+            "Elizabeth Hawley"
+          ]
+        },
+        {
+          "title": "Carlos Carsolio",
+          "texts": [
+            "Carlos Carsolio"
+          ]
+        },
+        {
+          "title": "2014 Mount Everest ice avalanche",
+          "texts": [
+            "2014 Mount Everest ice avalanche"
+          ]
+        },
+        {
+          "title": "Jon Krakauer",
+          "texts": [
+            "Jon Krakauer"
+          ]
+        },
+        {
+          "title": "Outside (magazine)",
+          "texts": [
+            "Outside"
+          ]
+        },
+        {
+          "title": "Into Thin Air",
+          "texts": [
+            "Into Thin Air"
+          ]
+        },
+        {
+          "title": "Anatoli Boukreev",
+          "texts": [
+            "Anatoli Boukreev"
+          ]
+        },
+        {
+          "title": "The Climb (book)",
+          "texts": [
+            "The Climb"
+          ]
+        },
+        {
+          "title": "University of Toronto",
+          "texts": [
+            "University of Toronto"
+          ]
+        },
+        {
+          "title": "New Scientist",
+          "texts": [
+            "New Scientist"
+          ]
+        },
+        {
+          "title": "Beck Weathers",
+          "texts": [
+            "Beck Weathers"
+          ]
+        },
+        {
+          "title": "Matt Dickinson",
+          "texts": [
+            "Matt Dickinson"
+          ]
+        },
+        {
+          "title": "Everest (2015 film)",
+          "texts": [
+            "Everest"
+          ]
+        },
+        {
+          "title": "David Sharp (mountaineer)",
+          "texts": [
+            "David Sharp"
+          ]
+        },
+        {
+          "title": "Asian Trekking",
+          "texts": [
+            "Asian Trekking"
+          ]
+        },
+        {
+          "title": "Mark Inglis",
+          "texts": [
+            "Mark Inglis"
+          ]
+        },
+        {
+          "title": "Green Boots",
+          "texts": [
+            "Green Boots"
+          ]
+        },
+        {
+          "title": "Burçak Özoğlu Poçan",
+          "texts": [
+            "Burçak Özoğlu Poçan"
+          ]
+        },
+        {
+          "title": "Himex",
+          "texts": [
+            "Himex"
+          ]
+        },
+        {
+          "title": "The Tribune (India)",
+          "texts": [
+            "The Tribune, India"
+          ]
+        },
+        {
+          "title": "Discovery Channel",
+          "texts": [
+            "Discovery Channel"
+          ]
+        },
+        {
+          "title": "Everest: Beyond the Limit",
+          "texts": [
+            "Everest: Beyond the Limit"
+          ]
+        },
+        {
+          "title": "Maxim Chaya",
+          "texts": [
+            "Maxim Chaya"
+          ]
+        },
+        {
+          "title": "Russell Brice",
+          "texts": [
+            "Russell Brice"
+          ]
+        },
+        {
+          "title": "Lincoln Hall (climber)",
+          "texts": [
+            "Lincoln Hall"
+          ]
+        },
+        {
+          "title": "Meagan McGrath",
+          "texts": [
+            "Meagan McGrath"
+          ]
+        },
+        {
+          "title": "1996 Mount Everest disaster",
+          "texts": [
+            "1996 Mount Everest disaster",
+            "1996 disaster"
+          ]
+        },
+        {
+          "title": "2008 Summer Olympics summit of Mt. Everest",
+          "texts": [
+            "carrying the Olympic torch",
+            "Olympic torch relay being taken to the summit of Mount Everest."
+          ]
+        },
+        {
+          "title": "2008 Summer Olympics",
+          "texts": [
+            "2008 Summer Olympics"
+          ]
+        },
+        {
+          "title": "Moment magnitude scale",
+          "texts": [
+            "Mw"
+          ]
+        },
+        {
+          "title": "Everest Base Camp",
+          "texts": [
+            "Everest Base Camp",
+            "South Base Camp",
+            "Base Camp"
+          ]
+        },
+        {
+          "title": "Pumori",
+          "texts": [
+            "Pumori"
+          ]
+        },
+        {
+          "title": "List of aftershocks of April 2015 Nepal earthquake",
+          "texts": [
+            "many aftershocks"
+          ]
+        },
+        {
+          "title": "Kami Rita",
+          "texts": [
+            "Kami Rita"
+          ]
+        },
+        {
+          "title": "Apa Sherpa",
+          "texts": [
+            "Apa Sherpa"
+          ]
+        },
+        {
+          "title": "Phurba Tashi",
+          "texts": [
+            "Phurba Tashi Sherpa"
+          ]
+        },
+        {
+          "title": "Ueli Steck",
+          "texts": [
+            "Ueli Steck"
+          ]
+        },
+        {
+          "title": "Hillary Step",
+          "texts": [
+            "Hillary Step"
+          ]
+        },
+        {
+          "title": "Xia Boyu",
+          "texts": [
+            "Xia Boyu"
+          ]
+        },
+        {
+          "title": "Juan Pablo Mohr Prieto",
+          "texts": [
+            "Juan Pablo Mohr Prieto"
+          ]
+        },
+        {
+          "title": "Mingma Dorchi Sherpa",
+          "texts": [
+            "Mingma Dorchi Sherpa"
+          ]
+        },
+        {
+          "title": "COVID-19 pandemic",
+          "texts": [
+            "COVID-19 pandemic"
+          ]
+        },
+        {
+          "title": "Lhakpa Sherpa",
+          "texts": [
+            "Lhakpa Sherpa"
+          ]
+        },
+        {
+          "title": "Nirmal Purja",
+          "texts": [
+            "Nirmal Purja"
+          ]
+        },
+        {
+          "title": "Commercialization",
+          "texts": [
+            "commercialisation"
+          ]
+        },
+        {
+          "title": "David Breashears",
+          "texts": [
+            "David Breashears"
+          ]
+        },
+        {
+          "title": "Richard Bass",
+          "texts": [
+            "Richard Bass"
+          ]
+        },
+        {
+          "title": "Gross domestic product",
+          "texts": [
+            "gross domestic product"
+          ]
+        },
+        {
+          "title": "Bottled oxygen (climbing)",
+          "texts": [
+            "bottled oxygen",
+            "open-circuit bottled oxygen sets"
+          ]
+        },
+        {
+          "title": "Lhasa",
+          "texts": [
+            "Lhasa"
+          ]
+        },
+        {
+          "title": "Fixed ropes",
+          "texts": [
+            "fixed ropes"
+          ]
+        },
+        {
+          "title": "Sled",
+          "texts": [
+            "sled"
+          ]
+        },
+        {
+          "title": "Jamling Tenzing Norgay",
+          "texts": [
+            "Jamling Tenzing Norgay"
+          ]
+        },
+        {
+          "title": "Crampons",
+          "texts": [
+            "crampons"
+          ]
+        },
+        {
+          "title": "Shriya Shah-Klorfine",
+          "texts": [
+            "Shriya Shah-Klorfine"
+          ]
+        },
+        {
+          "title": "Seven Summits",
+          "texts": [
+            "Seven Summits"
+          ]
+        },
+        {
+          "title": "Xenon gas",
+          "texts": [
+            "xenon gas"
+          ]
+        },
+        {
+          "title": "Erythropoietin",
+          "texts": [
+            "erythropoietin"
+          ]
+        },
+        {
+          "title": "Altitude acclimatisation",
+          "texts": [
+            "altitude acclimatisation"
+          ]
+        },
+        {
+          "title": "International Climbing and Mountaineering Federation",
+          "texts": [
+            "International Climbing and Mountaineering Federation"
+          ]
+        },
+        {
+          "title": "Down syndrome",
+          "texts": [
+            "Down syndrome"
+          ]
+        },
+        {
+          "title": "Annexation of Tibet by the People's Republic of China",
+          "texts": [
+            "Annexation of Tibet by the People's Republic of China"
+          ]
+        },
+        {
+          "title": "Namche Bazaar",
+          "texts": [
+            "Namche Bazaar"
+          ]
+        },
+        {
+          "title": "Dzo",
+          "texts": [
+            "dzopkyos"
+          ]
+        },
+        {
+          "title": "Porter (carrier)",
+          "texts": [
+            "porters"
+          ]
+        },
+        {
+          "title": "Kathmandu Valley",
+          "texts": [
+            "Kathmandu Valley"
+          ]
+        },
+        {
+          "title": "Sherpa (people)",
+          "texts": [
+            "Sherpas"
+          ]
+        },
+        {
+          "title": "Serac",
+          "texts": [
+            "Seracs"
+          ]
+        },
+        {
+          "title": "Crevasse",
+          "texts": [
+            "crevasses"
+          ]
+        },
+        {
+          "title": "High altitude",
+          "texts": [
+            "high altitude"
+          ]
+        },
+        {
+          "title": "Fixed rope",
+          "texts": [
+            "fixed ropes"
+          ]
+        },
+        {
+          "title": "Geneva Spur",
+          "texts": [
+            "Geneva Spur"
+          ]
+        },
+        {
+          "title": "Yellow Band",
+          "texts": [
+            "Yellow Band"
+          ]
+        },
+        {
+          "title": "1952 Swiss Mount Everest Expedition",
+          "texts": [
+            "1952 Swiss expedition"
+          ]
+        },
+        {
+          "title": "Scrambling",
+          "texts": [
+            "scrambling"
+          ]
+        },
+        {
+          "title": "Death zone",
+          "texts": [
+            "death zone"
+          ]
+        },
+        {
+          "title": "South Summit (Everest)",
+          "texts": [
+            "South Summit"
+          ]
+        },
+        {
+          "title": "Kangshung Face",
+          "texts": [
+            "Kangshung Face"
+          ]
+        },
+        {
+          "title": "Exposure (heights)",
+          "texts": [
+            "exposure"
+          ]
+        },
+        {
+          "title": "Frostbite",
+          "texts": [
+            "frostbite"
+          ]
+        },
+        {
+          "title": "Breathing",
+          "texts": [
+            "threat to climbers is low atmospheric pressure"
+          ]
+        },
+        {
+          "title": "Oxygen saturation (medicine)",
+          "texts": [
+            "blood oxygen saturation"
+          ]
+        },
+        {
+          "title": "The Atlantic",
+          "texts": [
+            "The Atlantic"
+          ]
+        },
+        {
+          "title": "K2",
+          "texts": [
+            "K2"
+          ]
+        },
+        {
+          "title": "Annapurna Massif",
+          "texts": [
+            "Annapurna"
+          ]
+        },
+        {
+          "title": "Nanga Parbat",
+          "texts": [
+            "Nanga Parbat"
+          ]
+        },
+        {
+          "title": "Eiger",
+          "texts": [
+            "Eiger"
+          ]
+        },
+        {
+          "title": "Retinal haemorrhage",
+          "texts": [
+            "retinal haemorrhages"
+          ]
+        },
+        {
+          "title": "Oxygen mask",
+          "texts": [
+            "oxygen masks"
+          ]
+        },
+        {
+          "title": "Bottled oxygen",
+          "texts": [
+            "tanks",
+            "bottled oxygen"
+          ]
+        },
+        {
+          "title": "Cerebral hypoxia",
+          "texts": [
+            "cerebral hypoxia"
+          ]
+        },
+        {
+          "title": "Griffith Pugh",
+          "texts": [
+            "Griffith Pugh"
+          ]
+        },
+        {
+          "title": "Los Angeles Times",
+          "texts": [
+            "Los Angeles Times"
+          ]
+        },
+        {
+          "title": "Karl Gordon Henize",
+          "texts": [
+            "Karl Gordon Henize"
+          ]
+        },
+        {
+          "title": "Background radiation",
+          "texts": [
+            "background radiation"
+          ]
+        },
+        {
+          "title": "Vitor Negrete",
+          "texts": [
+            "Vitor Negrete"
+          ]
+        },
+        {
+          "title": "Prostitution in Tibet",
+          "texts": [
+            "prostitution"
+          ]
+        },
+        {
+          "title": "Phanthog",
+          "texts": [
+            "Phanthog"
+          ]
+        },
+        {
+          "title": "Franz Oppurg",
+          "texts": [
+            "Franz Oppurg"
+          ]
+        },
+        {
+          "title": "Jean-Marc Boivin",
+          "texts": [
+            "Jean-Marc Boivin"
+          ]
+        },
+        {
+          "title": "Lydia Bradey",
+          "texts": [
+            "Lydia Bradey"
+          ]
+        },
+        {
+          "title": "Davo Karničar",
+          "texts": [
+            "Davo Karničar"
+          ]
+        },
+        {
+          "title": "Marco Siffredi",
+          "texts": [
+            "Marco Siffredi"
+          ]
+        },
+        {
+          "title": "Erik Weihenmayer",
+          "texts": [
+            "Erik Weihenmayer"
+          ]
+        },
+        {
+          "title": "Andrzej Bargiel",
+          "texts": [
+            "Andrzej Bargiel"
+          ]
+        },
+        {
+          "title": "Showgirl",
+          "texts": [
+            "showgirl"
+          ]
+        },
+        {
+          "title": "Airplane",
+          "texts": [
+            "airplanes"
+          ]
+        },
+        {
+          "title": "Paraglider",
+          "texts": [
+            "paraglider"
+          ]
+        },
+        {
+          "title": "Hot-air balloon",
+          "texts": [
+            "hot-air balloon"
+          ]
+        },
+        {
+          "title": "Eric Jones (climber)",
+          "texts": [
+            "Eric Jones"
+          ]
+        },
+        {
+          "title": "Leo Dickinson",
+          "texts": [
+            "Leo Dickinson"
+          ]
+        },
+        {
+          "title": "Kodachrome",
+          "texts": [
+            "Kodachrome"
+          ]
+        },
+        {
+          "title": "The Daily Telegraph",
+          "texts": [
+            "The Telegraph"
+          ]
+        },
+        {
+          "title": "Didier Delsalle",
+          "texts": [
+            "Didier Delsalle"
+          ]
+        },
+        {
+          "title": "Eurocopter AS350",
+          "texts": [
+            "Eurocopter AS350"
+          ]
+        },
+        {
+          "title": "Fédération Aéronautique Internationale",
+          "texts": [
+            "Fédération Aéronautique Internationale"
+          ]
+        },
+        {
+          "title": "Rotorcraft",
+          "texts": [
+            "rotorcraft"
+          ]
+        },
+        {
+          "title": "List of Mount Everest records",
+          "texts": [
+            "records"
+          ]
+        },
+        {
+          "title": "Kayaking",
+          "texts": [
+            "kayaked"
+          ]
+        },
+        {
+          "title": "Nightline",
+          "texts": [
+            "Nightline"
+          ]
+        },
+        {
+          "title": "Wang Jing (mountaineer)",
+          "texts": [
+            "Wang Jing"
+          ]
+        },
+        {
+          "title": "Bell 412",
+          "texts": [
+            "412EPI"
+          ]
+        },
+        {
+          "title": "Hans Kammerlander",
+          "texts": [
+            "Hans Kammerlander"
+          ]
+        },
+        {
+          "title": "Steve McKinney (skier)",
+          "texts": [
+            "Steve McKinney"
+          ]
+        },
+        {
+          "title": "Padmasambhava",
+          "texts": [
+            "Padmasambhava"
+          ]
+        },
+        {
+          "title": "Lotus birth",
+          "texts": [
+            "lotus-born"
+          ]
+        },
+        {
+          "title": "Rongbuk Monastery",
+          "texts": [
+            "Rongbuk Monastery"
+          ]
+        },
+        {
+          "title": "Nangpa La",
+          "texts": [
+            "Nangpa La"
+          ]
+        },
+        {
+          "title": "Miyolangsangma",
+          "texts": [
+            "Miyolangsangma"
+          ]
+        },
+        {
+          "title": "Buddhist",
+          "texts": [
+            "Buddhist"
+          ]
+        },
+        {
+          "title": "Karma",
+          "texts": [
+            "karmic"
+          ]
+        },
+        {
+          "title": "National symbols of Nepal",
+          "texts": [
+            "national symbol of Nepal"
+          ]
+        },
+        {
+          "title": "Nepal Rastra Bank",
+          "texts": [
+            "Nepal Rastra Bank"
+          ]
+        },
+        {
+          "title": "Gyanendra of Nepal",
+          "texts": [
+            "former king"
+          ]
+        },
+        {
+          "title": "Obverse and reverse",
+          "texts": [
+            "obverse",
+            "reverse"
+          ]
+        },
+        {
+          "title": "Nepalese rupee",
+          "texts": [
+            "Nepalese rupee"
+          ]
+        },
+        {
+          "title": "Coinage of Nepal",
+          "texts": [
+            "Nepalese coins"
+          ]
+        },
+        {
+          "title": "Nepalese 1-rupee coin",
+          "texts": [
+            "1-rupee"
+          ]
+        },
+        {
+          "title": "Nepalese 2-rupee coin",
+          "texts": [
+            "2-rupee"
+          ]
+        },
+        {
+          "title": "Commemorative coin",
+          "texts": [
+            "special coins"
+          ]
+        },
+        {
+          "title": "Solukhumbu District",
+          "texts": [
+            "Solukhumbu district"
+          ]
+        },
+        {
+          "title": "Khumbu Pasanglhamu",
+          "texts": [
+            "Khumbu Pasanglhamu"
+          ]
+        }
+      ]
+    }
+  }
+}
