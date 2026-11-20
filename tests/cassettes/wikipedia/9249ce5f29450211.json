@@ -276,30 +276,30 @@
         },
         "open_link.link": {
           "type": "choice",
-          "choice": "London",
+          "choice": "Royal College of Science",
           "confidence": 0.11,
           "probabilities": {
-            "Trade name": 0.06,
-            "Public university": 0.02,
-            "Research university": 0.06,
-            "London": 0.11,
+            "Trade name": 0.05,
+            "Public university": 0.01,
+            "Research university": 0.05,
+            "London": 0.09,
             "Prince Albert of Saxe-Coburg and Gotha": 0.07,
             "Queen Victoria": 0.02,
             "Albertopolis": 0.03,
             "Royal Albert Hall": 0,
-            "Royal College of Science": 0.08,
+            "Royal College of Science": 0.11,
             "Royal School of Mines": 0.02,
-            "City and Guilds of London Institute": 0.02,
-            "St Mary's Hospital, London": 0.05,
+            "City and Guilds of London Institute": 0.03,
+            "St Mary's Hospital, London": 0.06,
             "Charing Cross and Westminster Medical School": 0,
             "Imperial College School of Medicine": 0.02,
             "Imperial Business School": 0,
             "Queen Elizabeth II": 0,
             "University of London": 0.07,
-            "Imperial College Faculty of Engineering": 0.02,
+            "Imperial College Faculty of Engineering": 0,
             "Imperial College Faculty of Medicine": 0.02,
             "Imperial College Faculty of Natural Sciences": 0,
-            "South Kensington": 0.03,
+            "South Kensington": 0.02,
             "White City, London": 0,
             "Teaching hospital": 0,
             "Pears Cumbria School of Medicine": 0,
@@ -343,7 +343,7 @@
             "Queen's Tower, London": 0,
             "Wolfson Foundation": 0,
             "Elizabeth II": 0,
-            "St Mary's Hospital Medical School": 0.01,
+            "St Mary's Hospital Medical School": 0.02,
             "Royal charter": 0,
             "National Heart and Lung Institute": 0,
             "Royal Postgraduate Medical School": 0,
@@ -376,7 +376,7 @@
             "Allies and Morrison": 0,
             "Inner London": 0,
             "Acton, London": 0,
-            "Faculty of Engineering, Imperial College London": 0,
+            "Faculty of Engineering, Imperial College London": 0.01,
             "Department of Chemical Engineering, Imperial College London": 0,
             "Department of Civil and Environmental Engineering, Imperial College London": 0,
             "Department of Computing, Imperial College London": 0,
@@ -417,7 +417,7 @@
             "French National Centre for Scientific Research": 0,
             "Abraham de Moivre": 0,
             "Joe Biden": 0,
-            "Neil Ferguson (epidemiologist)": 0.01,
+            "Neil Ferguson (epidemiologist)": 0,
             "New York Times": 0,
             "State of New York": 0.01,
             "Governor of New York": 0,
@@ -456,7 +456,7 @@
             "Time (magazine)": 0,
             "Engineering": 0,
             "Science": 0.02,
-            "Medicine": 0.01,
+            "Medicine": 0.02,
             "Business": 0,
             "European Union": 0,
             "Students' union": 0,
@@ -478,13 +478,13 @@
             "Rugby union": 0,
             "Camborne School of Mines": 0,
             "Dining club": 0,
-            "Collegiate university": 0.05
+            "Collegiate university": 0.06
           }
         }
       },
       "usage": {
         "input_tokens": 5915,
-        "output_tokens": 2172
+        "output_tokens": 2175
       }
     }
   }

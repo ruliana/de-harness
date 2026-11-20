@@ -187,37 +187,37 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_ticket",
-          "confidence": 0.51,
+          "confidence": 0.52,
           "probabilities": {
-            "open_ticket": 0.63,
-            "assign": 0.06,
-            "set_status": 0.31,
+            "open_ticket": 0.64,
+            "assign": 0.07,
+            "set_status": 0.29,
             "tag": 0
           }
         },
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#5 App crashes when I open the settings page",
-          "confidence": 0.56,
+          "confidence": 0.64,
           "probabilities": {
-            "#4 How do I export my data to CSV?": 0.22,
-            "#5 App crashes when I open the settings page": 0.78
+            "#4 How do I export my data to CSV?": 0.18,
+            "#5 App crashes when I open the settings page": 0.82
           }
         },
         "assign.team": {
           "type": "choice",
           "choice": "accounts",
-          "confidence": 0.81,
+          "confidence": 0.77,
           "probabilities": {
-            "billing": 0.06,
+            "billing": 0.09,
             "technical": 0.06,
-            "accounts": 0.86,
+            "accounts": 0.83,
             "general": 0.02
           }
         },
         "assign.instructed": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.04
         },
         "set_status.status": {
           "type": "choice",
@@ -231,17 +231,17 @@
         },
         "set_status.repeats_another": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "tag.tag": {
           "type": "choice",
           "choice": "bug",
-          "confidence": 0.56,
+          "confidence": 0.48,
           "probabilities": {
-            "refund": 0.08,
-            "urgent": 0.25,
+            "refund": 0.11,
+            "urgent": 0.28,
             "vip": 0,
-            "bug": 0.67
+            "bug": 0.61
           }
         }
       },

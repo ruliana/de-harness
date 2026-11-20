@@ -199,27 +199,27 @@
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#2 Password reset email never arrives",
-          "confidence": 0.8,
+          "confidence": 0.74,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.87,
+            "#2 Password reset email never arrives": 0.83,
             "#4 How do I export my data to CSV?": 0.02,
-            "#5 App crashes when I open the settings page": 0.11
+            "#5 App crashes when I open the settings page": 0.15
           }
         },
         "assign.team": {
           "type": "choice",
           "choice": "accounts",
-          "confidence": 0.81,
+          "confidence": 0.87,
           "probabilities": {
-            "billing": 0.06,
-            "technical": 0.05,
-            "accounts": 0.86,
-            "general": 0.03
+            "billing": 0.05,
+            "technical": 0.03,
+            "accounts": 0.9,
+            "general": 0.02
           }
         },
         "assign.instructed": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.05
         },
         "set_status.status": {
           "type": "choice",
@@ -238,12 +238,12 @@
         "tag.tag": {
           "type": "choice",
           "choice": "bug",
-          "confidence": 0.53,
+          "confidence": 0.65,
           "probabilities": {
-            "refund": 0.17,
-            "urgent": 0.17,
+            "refund": 0.13,
+            "urgent": 0.12,
             "vip": 0.01,
-            "bug": 0.65
+            "bug": 0.74
           }
         }
       },

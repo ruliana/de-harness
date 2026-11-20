@@ -47,17 +47,17 @@
         "tone": {
           "type": "choice",
           "choice": "calm",
-          "confidence": 0.89,
+          "confidence": 0.91,
           "probabilities": {
-            "angry": 0.07,
-            "calm": 0.93,
+            "angry": 0.06,
+            "calm": 0.94,
             "excited": 0
           }
         },
         "urgency": {
           "type": "score",
-          "score": 1.24,
-          "confidence": 0.61,
+          "score": 1.26,
+          "confidence": 0.58,
           "legend": {
             "0": "Can wait",
             "1": "Needs attention this week",
@@ -65,8 +65,8 @@
           },
           "probabilities": {
             "0": 0.01,
-            "1": 0.74,
-            "2": 0.25
+            "1": 0.72,
+            "2": 0.27
           }
         },
         "billing": {

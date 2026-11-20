@@ -64,10 +64,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "place_order",
-          "confidence": 0.97,
+          "confidence": 0.96,
           "probabilities": {
-            "ask_customer": 0.02,
-            "place_order": 0.98,
+            "ask_customer": 0.03,
+            "place_order": 0.97,
             "end": 0
           }
         },

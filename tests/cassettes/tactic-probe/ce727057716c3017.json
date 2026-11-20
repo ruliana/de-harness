@@ -52,14 +52,14 @@
         "tactic": {
           "type": "choice",
           "choice": "scroll",
-          "confidence": 0.81,
+          "confidence": 0.78,
           "probabilities": {
-            "open_menu": 0.02,
+            "open_menu": 0.04,
             "pick_menu_entry": 0,
-            "scroll": 0.83,
-            "click_item": 0.13,
-            "select_option": 0.01,
-            "read_value": 0.01,
+            "scroll": 0.8,
+            "click_item": 0.12,
+            "select_option": 0.02,
+            "read_value": 0.02,
             "go_back": 0,
             "close_overlay": 0,
             "end": 0

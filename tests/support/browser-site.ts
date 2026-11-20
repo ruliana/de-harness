@@ -7,6 +7,7 @@
  *   /search     a form: type a query, press Enter, read the results on /results?q=...
  *   /popup      a link that opens in a new tab
  *   /leave      a link to the same site under another host name (`localhost` instead of `127.0.0.1`)
+ *   /views      a page that changes its view without loading a page (history.pushState), so going back stays on the same document
  *   /pricing    a plain page
  * POST /api/subscribe records the address; `requests` keeps every request path.
  */
@@ -68,6 +69,12 @@ const PRICING = page("Pricing", `${header}<main><h1>Pricing</h1><p>One plan: 12 
 const SEARCH = page("Search", `${header}<main><h1>Search</h1><form action="/results"><input id="q" name="q" type="text" placeholder="Search the site" style="width:420px;height:52px;font:400 20px 'Test Sans';padding:0 12px"></form></main>`);
 const results = (q: string) => page("Results", `${header}<main><h1>Results</h1><p id="results">Results for: ${q.replace(/[<>&]/g, "")}</p></main>`);
 const POPUP = page("Popup", `${header}<main><h1>Links</h1><p><a id="out" href="/pricing" target="_blank">See pricing in a new tab</a></p></main>`);
+const VIEWS = page(
+  "Views",
+  `${header}<main><h1 id="view">View one</h1><button class="colour" id="next" style="background:#2563eb">Next view</button></main>`,
+  `document.getElementById('next').addEventListener('click', () => { history.pushState({}, '', '/views?view=two'); document.getElementById('view').textContent = 'View two'; });
+window.addEventListener('popstate', () => { document.getElementById('view').textContent = location.search ? 'View two' : 'View one'; });`,
+);
 const leave = (other: string) => page("Leave", `${header}<main><h1>Elsewhere</h1><p><a id="away" href="${other}/pricing">Go to the other host</a></p></main>`);
 
 export type BrowserSite = {
@@ -108,6 +115,7 @@ export async function startBrowserSite(opts: { port?: number } = {}): Promise<Br
       case "/search": return send(SEARCH);
       case "/results": return send(results(url.searchParams.get("q") ?? ""));
       case "/popup": return send(POPUP);
+      case "/views": return send(VIEWS);
       case "/leave": return send(leave(`http://localhost:${port}`));
       default:
         res.writeHead(404, { "content-type": "text/plain" });

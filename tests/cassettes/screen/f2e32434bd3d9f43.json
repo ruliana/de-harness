@@ -62,7 +62,7 @@
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.73,
+            "top": 0.72,
             "bottom": 0.85,
             "left": 0.1,
             "right": 0.41

@@ -2660,35 +2660,6 @@
           ]
         },
         {
-          "handle": "m3254r-chill-vintage-wash-hoodie-woodrose-wash-womens",
-          "title": "Chill Vintage Wash Hoodie - Woodrose Wash",
-          "product_type": "Women:Outerwear:Coverups:Hoodies",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Woodrose Wash"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "S",
-                "M",
-                "L",
-                "XL",
-                "2XL"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "76",
-              "available": true
-            }
-          ]
-        },
-        {
           "handle": "u3031rg-accolade-crew-neck-pullover-bluestone",
           "title": "Accolade Crew Neck Pullover - Bluestone",
           "product_type": "Women:Outerwear:Coverups:Pullovers",
@@ -2715,7 +2686,7 @@
           "variants": [
             {
               "price": "138",
-              "available": true
+              "available": false
             }
           ]
         },
@@ -3835,35 +3806,6 @@
           ]
         },
         {
-          "handle": "w3924rg-cropped-accolade-crewneck-winter-frost",
-          "title": "Cropped Accolade Crewneck - Winter Frost",
-          "product_type": "Women:Outerwear:Coverups:Pullovers",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Winter Frost"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "128",
-              "available": true
-            }
-          ]
-        },
-        {
           "handle": "w3875r-cropped-serenity-coverup-winter-frost",
           "title": "Cropped Serenity Coverup - Winter Frost",
           "product_type": "Women:Outerwear:Coverups:Pullovers",
@@ -3975,35 +3917,6 @@
           "variants": [
             {
               "price": "158",
-              "available": true
-            }
-          ]
-        },
-        {
-          "handle": "w3987r-polar-fleece-hazy-pullover-ivory",
-          "title": "Polar Fleece Hazy Pullover - Ivory",
-          "product_type": "Women:Outerwear:Coverups:Pullovers",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Ivory"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "148",
               "available": true
             }
           ]
@@ -5400,7 +5313,7 @@
           "variants": [
             {
               "price": "128",
-              "available": false
+              "available": true
             }
           ]
         },
@@ -5528,7 +5441,7 @@
           "variants": [
             {
               "price": "138",
-              "available": true
+              "available": false
             }
           ]
         },
@@ -5620,7 +5533,7 @@
           "variants": [
             {
               "price": "108",
-              "available": false
+              "available": true
             }
           ]
         },
@@ -5657,7 +5570,7 @@
           "variants": [
             {
               "price": "138",
-              "available": true
+              "available": false
             }
           ]
         },
@@ -6119,37 +6032,6 @@
           ]
         },
         {
-          "handle": "u3031rg-accolade-crew-neck-pullover-summer-romance-red",
-          "title": "Accolade Crew Neck Pullover - Summer Romance Red",
-          "product_type": "Women:Outerwear:Coverups:Pullovers",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Summer Romance Red"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L",
-                "XL",
-                "2XL"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "138",
-              "available": true
-            }
-          ]
-        },
-        {
           "handle": "u3031rg-accolade-crew-neck-pullover-azure-blue",
           "title": "Accolade Crew Neck Pullover - Azure Blue",
           "product_type": "Women:Outerwear:Coverups:Pullovers",
@@ -6205,35 +6087,6 @@
           "variants": [
             {
               "price": "398",
-              "available": true
-            }
-          ]
-        },
-        {
-          "handle": "w31047r-1-4-zip-go-time-pullover-black",
-          "title": "1/4 Zip Go Time Pullover - Black",
-          "product_type": "Women:Outerwear:Coverups:Pullovers",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Black"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "168",
               "available": true
             }
           ]
@@ -7067,7 +6920,7 @@
           "variants": [
             {
               "price": "108",
-              "available": true
+              "available": false
             }
           ]
         },
@@ -7580,6 +7433,159 @@
           "variants": [
             {
               "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31162r-marl-sweater-rewind-full-zip-hoodie-black",
+          "title": "Marl Sweater Rewind Full Zip Hoodie - Black Marl",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black Marl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31162r-marl-sweater-rewind-full-zip-hoodie-frosted-pearl",
+          "title": "Marl Sweater Rewind Full Zip Hoodie - Frosted Pearl Marl",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl Marl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w3678r-waffle-weekend-escape-mock-neck-long-sleeve-frosted-pearl",
+          "title": "Waffle Weekend Escape Mock Neck Long Sleeve - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-frosted-pearl",
+          "title": "Cropped Accolade Crewneck - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3013r-renown-heavy-weight-hoodie-frosted-pearl",
+          "title": "Renown Heavy Weight Hoodie - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
               "available": true
             }
           ]

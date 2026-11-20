@@ -8,7 +8,7 @@
  *   scroll(direction)   down / up / top / bottom, only the directions the scroll position allows
  *   type_text(text)     text = one of the candidates in `texts`, typed into the focused field (only when `texts` is given)
  *   press_key(key)      key  = one of `keys` (default Enter, Tab, Escape)
- *   go_back             the previous page of the history
+ *   go_back             the previous page of the history; on the first page it changes nothing and says so (it never goes to a blank page)
  *   end                 built in
  *
  * No-change guard: click, hover, scroll, press_key and go_back are not offered any more once they changed nothing `noChange` (3) times
@@ -182,7 +182,8 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
       available: usable("go_back"),
       run: async (_args, ctx) => {
         const went = await browser.back();
-        return went ? { state: seen("go_back", ctx, await snap()), summary: "went back to the previous page" } : { summary: "there is no previous page to go back to" };
+        // Without a previous page nothing moves, but the step still reports the (unchanged) screenshot, so the no-change guard counts it and stops offering go_back.
+        return { state: seen("go_back", ctx, await snap()), summary: went ? "went back to the previous page" : "there is no previous page to go back to: the browser is still on the same page" };
       },
     }),
   );

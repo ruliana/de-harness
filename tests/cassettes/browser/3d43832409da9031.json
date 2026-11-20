@@ -103,12 +103,12 @@
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.45,
+            "top": 0.46,
             "bottom": 0.97,
-            "left": 0.09,
-            "right": 0.96
+            "left": 0.08,
+            "right": 0.63
           },
-          "confidence": 0.03
+          "confidence": 0.06
         },
         "click.target?present": {
           "type": "noul",
@@ -117,10 +117,10 @@
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.02,
+          "confidence": 0.08,
           "probabilities": {
-            "down": 0.51,
-            "bottom": 0.49
+            "down": 0.54,
+            "bottom": 0.46
           }
         },
         "type_text.text": {
@@ -135,10 +135,10 @@
         "press_key.key": {
           "type": "choice",
           "choice": "Tab",
-          "confidence": 0.37,
+          "confidence": 0.43,
           "probabilities": {
-            "Enter": 0.4,
-            "Tab": 0.58,
+            "Enter": 0.36,
+            "Tab": 0.62,
             "Escape": 0.02
           }
         }

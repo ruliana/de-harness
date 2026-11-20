@@ -69,13 +69,13 @@
             "top": 0.54,
             "bottom": 0.59,
             "left": 0.47,
-            "right": 0.62
+            "right": 0.61
           },
-          "confidence": 0.88
+          "confidence": 0.87
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.98
+          "noul": 0.97
         }
       },
       "usage": {

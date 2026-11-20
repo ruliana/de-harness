@@ -99,17 +99,17 @@
         },
         "move.station": {
           "type": "choice",
-          "choice": "Museum",
-          "confidence": 0.26,
+          "choice": "Central",
+          "confidence": 0.02,
           "probabilities": {
-            "Central": 0.37,
-            "Museum": 0.63
+            "Central": 0.51,
+            "Museum": 0.49
           }
         }
       },
       "usage": {
         "input_tokens": 706,
-        "output_tokens": 66
+        "output_tokens": 65
       }
     }
   }
