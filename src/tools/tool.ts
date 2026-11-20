@@ -12,6 +12,7 @@
 import type { Answer } from "../model/types.js";
 import type { EventInput } from "../events/events.js";
 import type { Json, StateView } from "../state/state.js";
+import type { InputPort } from "../input/provider.js";
 import type { ToolRegistry } from "./registry.js";
 import type { ArgsOf, Params } from "./param.js";
 
@@ -26,6 +27,8 @@ export type ToolContext = {
   signal: AbortSignal;
   /** The live registry. Changes take effect from the next step. */
   tools: ToolRegistry;
+  /** Ask the user and hold the loop until they reply (`await ctx.input.ask(prompt)`). Throws on timeout, and when no provider is configured. */
+  input: InputPort;
   /** Add a custom event to the trace. */
   emit(name: string, data?: unknown): void;
 };

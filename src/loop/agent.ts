@@ -13,6 +13,7 @@ import { TraceWriter } from "../events/trace.js";
 import type { EventInput, HarnessEvent } from "../events/events.js";
 import { DecisionModelError, type Answer, type DecisionModel, type DecisionRequest } from "../model/types.js";
 import { AnswerError, buildQuestions, parseArgs, pickedTool } from "../questions/build.js";
+import { createInputPort, type InputProvider } from "../input/provider.js";
 import { StateDocument, type Json } from "../state/state.js";
 import { endTool } from "../tools/builtin.js";
 import { ToolRegistry } from "../tools/registry.js";
@@ -32,6 +33,10 @@ export type AgentConfig = {
   /** Write every event to this file as JSONL. */
   trace?: string;
   signal?: AbortSignal;
+  /** Who answers `ctx.input.ask`: a terminal (`StdinInput`), a script (`ScriptedInput`), a web hook. Without one, asking throws. */
+  input?: InputProvider;
+  /** Default timeout of every `ctx.input.ask`, in ms. Unset waits forever. */
+  inputTimeoutMs?: number;
   onEvent?: (event: HarnessEvent) => void;
 };
 
@@ -138,7 +143,16 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
 
     // 4. run it (it may await anything)
     emit({ type: "tool_call", step, tool: tool.name, args: parsed.args });
-    const ctx: ToolContext = { state: view, answers: parsed.raw, step, signal, tools, emit: (name, data) => emit({ type: "custom", step, name, data }) };
+    const input = createInputPort(config.input, {
+      signal,
+      ...(config.inputTimeoutMs !== undefined ? { defaultTimeoutMs: config.inputTimeoutMs } : {}),
+      observer: {
+        requested: (prompt, choices) => emit({ type: "input_requested", step, tool: tool.name, prompt, ...(choices ? { choices } : {}) }),
+        received: (reply) => emit({ type: "input_received", step, tool: tool.name, reply }),
+        failed: (reason, message) => emit({ type: "input_failed", step, tool: tool.name, reason, message }),
+      },
+    });
+    const ctx: ToolContext = { state: view, answers: parsed.raw, step, signal, tools, input, emit: (name, data) => emit({ type: "custom", step, name, data }) };
     let result: ToolResult;
     let error: string | undefined;
     try {
@@ -147,6 +161,9 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
       error = e instanceof Error ? e.message : String(e);
       result = { state: { error } };
     }
+
+    // an abort while the tool was waiting (user input, a sub-agent) ends the run; the half-done step is not recorded
+    if (signal.aborted) return finish("aborted");
 
     // 5. merge into the state; an `error` slot lives for one step
     if (doc.has("error")) doc.merge({ error: null });
