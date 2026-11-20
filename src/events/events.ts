@@ -9,6 +9,7 @@ export type HarnessEvent = { ts: string } & (
   | { type: "model_error"; step: number; message: string; status?: number }
   | { type: "tool_call"; step: number; tool: string; args: Record<string, unknown> }
   | { type: "tool_result"; step: number; tool: string; summary?: string; error?: string; end?: boolean }
+  | { type: "tools_changed"; step: number; change: "added" | "removed"; tool: string; tools: string[] }
   | { type: "custom"; step: number; name: string; data?: unknown }
   | { type: "run_end"; status: string; steps: number }
 );
