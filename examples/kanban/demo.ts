@@ -1,0 +1,183 @@
+/**
+ * Renders the assistant on the Kanban board as a short video (MP4, WebM) and an animated PNG, the media of the README.
+ *
+ *   npm run example:kanban:demo -- --out docs/media
+ *
+ * It runs the same two scenarios as the test (`move-assign`, then `ask-assignee`), by default replayed from the recordings in
+ * tests/cassettes/kanban (no key, no network), in a Chromium that records the page. What a viewer sees besides the page: the person
+ * types into the panel letter by letter, the model "thinks" a moment before each step (the replay would otherwise be instant), a pointer
+ * and the Box that the model chose are drawn on the page, and a dragged card travels slowly. All of it is drawn into an element that the
+ * session hides from the model (`hideFromModel`), so the pictures the model gets are the ones of the recordings.
+ * The animated PNG is made from screenshots taken after each step. ffmpeg encodes. Needs Playwright's Chromium and ffmpeg.
+ */
+import { execFileSync } from "node:child_process";
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { parseArgs } from "node:util";
+import { chromium } from "playwright";
+import { CassetteModel, JevModel, type DecisionModel, type DecisionRequest, type DecisionResponse } from "../../src/index.js";
+import { OVERLAY_FIELD, type BrowserSession } from "../../src/browser/index.js";
+import { SCENARIOS, problems, runScenario, type Scenario } from "./run.js";
+
+const { values } = parseArgs({ options: { out: { type: "string", default: "docs/media" }, live: { type: "boolean", default: false }, "think-ms": { type: "string", default: "650" } } });
+const out = values.out!;
+const work = join(out, ".frames");
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** The model, made slower: the recordings answer at once, a viewer needs to see each step before the next. */
+class Thinking implements DecisionModel {
+  readonly id: string;
+  constructor(private readonly inner: DecisionModel, private readonly ms: number) {
+    this.id = inner.id;
+  }
+  async ask(request: DecisionRequest): Promise<DecisionResponse> {
+    await sleep(this.ms);
+    return this.inner.ask(request);
+  }
+}
+
+const FX = "#demo-fx";
+/** Runs in the page, before its own scripts (plain JavaScript in a string: it must not go through the compiler). Draws a pointer, click ripples and Boxes. */
+const FX_SCRIPT = `(() => {
+  const css = \`
+    #demo-fx { position: fixed; inset: 0; pointer-events: none; z-index: 2147483646; }
+    #demo-fx .dot { position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; background: #ef4444; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #ef4444, 0 2px 8px rgba(0,0,0,.5); border-radius: 50% !important; }
+    #demo-fx .ring { position: absolute; width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 4px solid #ef4444; border-radius: 50% !important; animation: ring .6s ease-out forwards; }
+    #demo-fx .box { position: absolute; border: 4px solid #f59e0b; background: rgba(245,158,11,.16); animation: fade 1.6s ease-in forwards; }
+    #demo-fx .box.to { border-style: dashed; border-color: #22c55e; background: rgba(34,197,94,.12); }
+    @keyframes ring { to { transform: scale(4); opacity: 0; } }
+    @keyframes fade { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+  \`;
+  const mount = () => {
+    if (document.getElementById('demo-fx')) return;
+    const fx = document.createElement('div'); fx.id = 'demo-fx';
+    fx.innerHTML = '<style>' + css + '</style><div class="dot" style="left:-50px;top:-50px"></div>';
+    document.documentElement.append(fx);
+    const dot = fx.querySelector('.dot');
+    addEventListener('mousemove', (e) => { dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px'; }, true);
+    addEventListener('mousedown', (e) => { const r = document.createElement('div'); r.className = 'ring'; r.style.left = e.clientX + 'px'; r.style.top = e.clientY + 'px'; fx.append(r); setTimeout(() => r.remove(), 700); }, true);
+  };
+  window.__fxBox = (boxes) => { mount(); const fx = document.getElementById('demo-fx'); for (const [b, kind] of boxes) { const d = document.createElement('div'); d.className = 'box ' + kind; d.style.left = b.left * innerWidth + 'px'; d.style.top = b.top * innerHeight + 'px'; d.style.width = (b.right - b.left) * innerWidth + 'px'; d.style.height = (b.bottom - b.top) * innerHeight + 'px'; fx.append(d); setTimeout(() => d.remove(), 1700); } };
+  if (document.documentElement) mount(); else addEventListener('DOMContentLoaded', mount);
+})();`;
+
+type Box = { top: number; bottom: number; left: number; right: number };
+const boxes = (args: Record<string, unknown>): [Box, string][] => {
+  const out: [Box, string][] = [];
+  for (const [key, v] of Object.entries(args)) {
+    if (v && typeof v === "object" && "top" in v && "left" in v) out.push([v as Box, key === "column" ? "to" : "from"]);
+  }
+  return out;
+};
+
+/** The person types into the panel's field letter by letter. */
+async function typeSlowly(text: string, browser: BrowserSession) {
+  for (let i = 1; i <= text.length; i++) {
+    await browser.userTypes(OVERLAY_FIELD, text.slice(0, i));
+    await sleep(38);
+  }
+  await sleep(450);
+}
+
+const titleCard = (kicker: string, big: string, quote: string) => `<style>
+*{box-sizing:border-box;margin:0}
+body{width:1280px;height:800px;background:#0f1419;color:#e6edf3;font:20px/1.4 "DejaVu Sans",system-ui,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:24px}
+b{font-size:22px;color:#7ee0a8;font-weight:700}.big{font:700 50px/1.2 "DejaVu Sans",sans-serif;max-width:1000px}.q{max-width:900px;color:#c7d1dc;font-size:26px}.dim{color:#8b98a9;font-size:18px;max-width:820px}
+</style><b>${kicker}</b><div class="big">${big}</div><div class="q">${quote}</div><div class="dim">The model never writes text. At each step it answers closed questions: which tool, which card, which column, which button.</div>`;
+
+type Segment = { video: string; trimSeconds: number; frames: string[]; scenario: Scenario };
+
+async function record(scenario: Scenario, index: number): Promise<Segment> {
+  const dir = join(work, `video-${index}`);
+  mkdirSync(dir, { recursive: true });
+  const frames: string[] = [];
+  const queue: Promise<unknown>[] = [];
+  const started = Date.now();
+  let readyAt = 0;
+  const base = values.live ? new JevModel({ apiKey: process.env.TYPESAFE_API_KEY }) : new CassetteModel({ dir: "tests/cassettes/kanban" });
+  const shoot = (browser: BrowserSession, wait: number) =>
+    queue.push(
+      (async () => {
+        await sleep(wait);
+        const file = join(work, `s${index}-${String(frames.length).padStart(3, "0")}.png`);
+        frames.push(file);
+        writeFileSync(file, await browser.screenshot({ everything: true }));
+      })(),
+    );
+  const outcome = await runScenario({
+    scenario,
+    model: new Thinking(base, Number(values["think-ms"])),
+    thinkMs: 1600,
+    browser: { video: { dir }, dragStepMs: 45, settleMs: 500 },
+    type: (text, browser) => typeSlowly(text, browser),
+    onReady: async (browser, overlay) => {
+      browser.hideFromModel(FX);
+      await browser.addInitScript(FX_SCRIPT);
+      await sleep(900);
+      readyAt = Date.now();
+      shoot(browser, 0);
+      void overlay;
+    },
+    onFinish: async (browser) => {
+      await Promise.all(queue);
+      shoot(browser, 700); // the panel's last line is written once the run is over
+      await Promise.all(queue);
+      await sleep(1500); // a moment on the finished board, for the video
+    },
+    onEvent: (e, browser) => {
+      if (e.type === "tool_call") void browser.evaluate((b) => (window as unknown as { __fxBox?: (b: unknown) => void }).__fxBox?.(b), boxes(e.args)).catch(() => {});
+      if (e.type === "tool_result" || e.type === "input_requested") shoot(browser, e.type === "tool_result" ? 700 : 400);
+    },
+  });
+  const bad = problems(outcome);
+  if (bad.length) throw new Error(`the run of "${scenario.name}" is not right: ${bad.join("; ")}`);
+  const files = readdirSync(dir).filter((f) => f.endsWith(".webm"));
+  if (files.length !== 1) throw new Error("expected one recorded video");
+  return { video: join(dir, files[0]!), trimSeconds: (readyAt - started) / 1000 - 0.3, frames, scenario };
+}
+
+async function main() {
+  rmSync(work, { recursive: true, force: true });
+  mkdirSync(work, { recursive: true });
+  const segments: Segment[] = [];
+  for (const [i, name] of ["move-assign", "ask-assignee"].entries()) segments.push(await record(SCENARIOS.find((s) => s.name === name)!, i));
+
+  // The title cards, as pictures of a page.
+  const browser = await chromium.launch();
+  const page = await (await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 })).newPage();
+  const cards: string[] = [];
+  const intro: [string, string, string][] = [
+    ["de-harness · an assistant over a Kanban board", "You type. It operates the board.", "“" + segments[0]!.scenario.instruction + "”"],
+    ["de-harness · when it is not sure", "It asks you, and waits.", "“" + segments[1]!.scenario.instruction + "”"],
+  ];
+  for (const [i, c] of intro.entries()) {
+    await page.setContent(titleCard(...c));
+    const file = join(work, `card${i}.png`);
+    await page.screenshot({ path: file });
+    cards.push(file);
+  }
+  await browser.close();
+
+  // MP4 and WebM: card, run, card, run.
+  const cardClip = (n: number) => ["-loop", "1", "-framerate", "25", "-t", "2.6", "-i", cards[n]!];
+  const inputs = [...cardClip(0), "-ss", String(segments[0]!.trimSeconds), "-i", segments[0]!.video, ...cardClip(1), "-ss", String(segments[1]!.trimSeconds), "-i", segments[1]!.video];
+  const norm = (i: number) => `[${i}:v]scale=1280:800,fps=25,format=yuv420p,setsar=1[v${i}]`;
+  const filter = `${[0, 1, 2, 3].map(norm).join(";")};[v0][v1][v2][v3]concat=n=4:v=1:a=0[v]`;
+  const encode = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...inputs, "-filter_complex", filter, "-map", "[v]", ...args], { stdio: "inherit" });
+  encode("-c:v", "libx264", "-crf", "27", "-preset", "slow", "-movflags", "+faststart", join(out, "kanban-demo.mp4"));
+  encode("-c:v", "libvpx-vp9", "-crf", "40", "-b:v", "0", "-cpu-used", "4", join(out, "kanban-demo.webm"));
+
+  // The animated PNG: the cards and a screenshot after each step.
+  const seq: { file: string; seconds: number }[] = [{ file: cards[0]!, seconds: 2.4 }];
+  const stills = (s: Segment) => s.frames.map((file, i) => ({ file, seconds: i === s.frames.length - 1 ? 3 : 1.3 }));
+  seq.push(...stills(segments[0]!), { file: cards[1]!, seconds: 2.4 }, ...stills(segments[1]!));
+  const list = seq.flatMap((f) => [`file '${f.file}'`, `duration ${f.seconds}`]);
+  list.push(list[list.length - 2]!);
+  writeFileSync(join(work, "frames.txt"), list.join("\n") + "\n");
+  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", join(work, "frames.txt"), "-vf", "scale=900:-1:flags=lanczos", "-fps_mode", "vfr", "-plays", "0", "-f", "apng", join(out, "kanban-demo.png")], { stdio: "inherit" });
+  const steps = segments.map((s) => s.frames.length);
+  rmSync(work, { recursive: true, force: true });
+  console.log(`kanban demo: ${steps.join(" + ")} frames, written to ${out}`);
+}
+
+await main();

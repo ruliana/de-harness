@@ -1,0 +1,40 @@
+{
+  "hash": "abb2ab49cc65c5f3",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Move the 'Update docs' card to Doing and ask me who to assign it to"
+      },
+      "questions": {
+        "assignee": {
+          "type": "noul",
+          "instructions": "Do `instructions` tell the assistant to ask the person who a card is to be assigned to, or to assign it to someone without saying who?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "assignee": {
+          "type": "noul",
+          "noul": 0.93
+        }
+      },
+      "usage": {
+        "input_tokens": 319,
+        "output_tokens": 21
+      }
+    }
+  }
+}
