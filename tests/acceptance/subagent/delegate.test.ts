@@ -1,9 +1,9 @@
-/** W5: a parent agent hands a task to a child agent (ctx.runAgent / delegateTool), against Jev through a cassette. */
+/** W5: a parent agent hands a task to a child agent (ctx.runAgent / delegate), against Jev through a cassette. */
 import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { beforeAll, describe, expect, it } from "vitest";
-import { createAgent, delegateTool, type RunResult } from "../../../src/index.js";
+import { createAgent, delegate, type RunResult } from "../../../src/index.js";
 import { createRooms } from "../../../examples/rooms/rooms.js";
 import { jevFor } from "../../support/models.js";
 
@@ -18,7 +18,7 @@ describe("delegate: a parent hands the red door to a child with the rooms tools"
     const rooms = createRooms();
     world = rooms.world;
     trace = join(mkdtempSync(join(tmpdir(), "delegate-")), "run.jsonl");
-    const delegate = delegateTool({
+    const handOff = delegate({
       description: "Hands a task to a helper agent that can walk through the doors of the rooms, and waits for its report.",
       tasks: {
         "Leave the room through the red door": "The helper finds the red door and walks out through it",
@@ -27,7 +27,7 @@ describe("delegate: a parent hands the red door to a child with the rooms tools"
       },
       agent: (task) => ({ instructions: task, tools: rooms.tools, initialState: rooms.initialState, maxSteps: 4 }),
     });
-    result = await createAgent({ model: jevFor("subagent"), instructions: INSTRUCTIONS, tools: [delegate], maxSteps: 4, trace }).run();
+    result = await createAgent({ model: jevFor("subagent"), instructions: INSTRUCTIONS, tools: [handOff], maxSteps: 4, trace }).run();
   });
 
   it("delegates the red door to the child, puts the child's output in a parent slot, and the parent ends", () => {

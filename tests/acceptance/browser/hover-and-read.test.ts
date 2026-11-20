@@ -3,7 +3,8 @@
  * createAgent(...).run() with a real headless Chromium, the real tools and real screenshots.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { BrowserSession, ScriptedModel, TOOL_QUESTION, browserTools, createAgent, say, type Box } from "../../../src/index.js";
+import { ScriptedModel, TOOL_QUESTION, createAgent, say, type Box } from "../../../src/index.js";
+import { BrowserSession, browserTools } from "../../../src/browser/index.js";
 import { shoppingTools } from "../../../examples/storefront-browser/shopping.js";
 import { startShopSite, type ShopSite } from "../../../examples/storefront-browser/shop-site.js";
 
