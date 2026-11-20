@@ -152,57 +152,57 @@
           "box": {
             "top": 0.32,
             "bottom": 0.37,
-            "left": 0.06,
+            "left": 0.05,
             "right": 0.18
           },
-          "confidence": 0.9
+          "confidence": 0.88
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.89
+          "noul": 0.92
         },
         "hover.target": {
           "type": "box",
           "box": {
-            "top": 0.11,
-            "bottom": 0.33,
-            "left": 0.17,
-            "right": 0.24
+            "top": 0.1,
+            "bottom": 0.15,
+            "left": 0.18,
+            "right": 0.25
           },
-          "confidence": 0.35
+          "confidence": 0.38
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.96
+          "noul": 0.95
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.7,
+          "confidence": 0.74,
           "probabilities": {
-            "down": 0.85,
-            "bottom": 0.15
+            "down": 0.87,
+            "bottom": 0.13
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Enter",
-          "confidence": 0.43,
+          "confidence": 0.48,
           "probabilities": {
-            "Enter": 0.62,
-            "Tab": 0.33,
-            "Escape": 0.05
+            "Enter": 0.65,
+            "Tab": 0.32,
+            "Escape": 0.03
           }
         },
         "read_price.target": {
           "type": "box",
           "box": {
             "top": 0.33,
-            "bottom": 0.36,
+            "bottom": 0.35,
             "left": 0.05,
             "right": 0.23
           },
-          "confidence": 0.13
+          "confidence": 0.1
         },
         "read_price.target?present": {
           "type": "noul",

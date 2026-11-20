@@ -5,14 +5,13 @@
  */
 import { createAgent, type DecisionModel, type HarnessEvent } from "../../src/index.js";
 import { BrowserSession } from "../../src/browser/index.js";
-import { plainTask } from "../storefront-browser/shopping.js";
 import { judgeScreen, sightTools } from "../storefront-by-sight/planner.js";
-import { DONE_OPENED } from "../storefront-by-sight/tactics.js";
+import { DONE_OPENED, shopTask } from "../storefront-by-sight/tactics.js";
 import type { Shop } from "./shops.js";
 
 export const launchShop = (shop: Shop) => BrowserSession.launch({ allowedHosts: shop.hosts, settleMs: 800 });
 
-export const taskFor = (shop: Shop) => plainTask(shop.name, shop.what, shop.size);
+export const taskFor = (shop: Shop) => shopTask(shop.name, shop.what, shop.size);
 
 /** What the page says about itself at the end of a run, read by code from generic markup (never seen by the model). Best effort: the scorer's eyes are the verdict. */
 export type Facts = {
@@ -88,7 +87,7 @@ export async function runShop(opts: SweepOptions): Promise<SweepRun> {
   const screen = (await opts.browser.snapshot()).screen!;
   const result = await createAgent({
     model: opts.model,
-    instructions: task,
+    instructions: task.text,
     tools,
     initialState: { screen, judgments: await judgeScreen(opts.model, task, screen), done: [DONE_OPENED] },
     previousActions: 0,

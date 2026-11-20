@@ -13,14 +13,14 @@ import { defineTool, type AnyTool, type DecisionModel, type Json } from "../../s
 import { isStuck, nextStuck, type BrowserSession } from "../../src/browser/index.js";
 import { extractImages } from "../../src/state/images.js";
 import { shoppingTools } from "../storefront-browser/shopping.js";
-import { CHECKS, DONE, GOALS, judge, NAVIGATOR_QUESTIONS, NAVIGATOR_TOOLS, TACTICS, type Judgments, type Tactic } from "./tactics.js";
+import { CHECKS, DONE, judge, NAVIGATOR_QUESTIONS, NAVIGATOR_TOOLS, navigatorInstructions, sightTask, TACTICS, type Judgments, type SightTask, type Tactic } from "./tactics.js";
 
 export type SightOptions = {
   browser: BrowserSession;
   /** Asks the yes/no questions that check a tactic. Usually the model of the run. */
   model: DecisionModel;
-  /** The task as the person said it. The navigator gets it with every goal. */
-  task: string;
+  /** The task as the person said it, whole for the deciding level; the navigator of each tactic gets only the clauses that tactic needs (`SightTask`). A string is every clause. */
+  task: string | SightTask;
   /** The shop's home page, the one address the navigator's `navigate` could open (not offered: the run starts on it). */
   home: string;
   /** Steps of the navigator per tactic. Default 3. */
@@ -30,9 +30,9 @@ export type SightOptions = {
 };
 
 /** The yes/no judgments of a screenshot, as the planner state's `judgments` slot. */
-export async function judgeScreen(model: DecisionModel, task: string, screen: Json): Promise<Json> {
+export async function judgeScreen(model: DecisionModel, task: string | SightTask, screen: Json): Promise<Json> {
   const { value, images } = extractImages({ screen });
-  return (await judge(model, task, value.screen as string, images)) as unknown as Json;
+  return (await judge(model, sightTask(task).text, value.screen as string, images)) as unknown as Json;
 }
 
 /** What the run found, outside the state: the model never sees it. */
@@ -55,6 +55,9 @@ const neverEnd = defineTool({ name: "end", description: "Stops.", available: () 
 
 const doneOf = (state: Readonly<Record<string, unknown>>) => (state.done as string[] | undefined) ?? [];
 
+/** A filter of a list takes a scroll to reach it, a click to open it and one for its value: four at most. */
+const FILTER_STEPS = 4;
+
 /** Does it make sense to do this now? Code decides, from what is done. */
 function sensible(tactic: Tactic, state: Readonly<Record<string, unknown>>): boolean {
   const done = doneOf(state);
@@ -63,6 +66,12 @@ function sensible(tactic: Tactic, state: Readonly<Record<string, unknown>>): boo
       return done.at(-1) === DONE.open_menu;
     case "select_option":
       return done.includes(DONE.click_item);
+    case "filter": {
+      // Code decides from the judgments of the screenshot: a list whose item is not in view yet. Not after scrolling
+      // only: the filters are at the top of the list, and a screen down they are out of view.
+      const j = state.judgments as Judgments | undefined;
+      return j?.pageKind === "list" && j.itemVisible !== true && done.filter((d) => d === DONE.filter).length < FILTER_STEPS;
+    }
     case "read_value":
       return done.includes(DONE.click_item) && !done.includes(DONE.read_value);
     case "end":
@@ -74,6 +83,7 @@ function sensible(tactic: Tactic, state: Readonly<Record<string, unknown>>): boo
 
 export function sightTools(opts: SightOptions): { tools: AnyTool[]; found: Found } {
   const { browser } = opts;
+  const task = sightTask(opts.task);
   const found: Found = {};
   // The options of an item (a size) are often below the fold: its navigator scrolls down when it does not see the option, then clicks it.
   const navigatorFor = (name: Exclude<Tactic, "end">) => shoppingTools(browser, { home: opts.home, pageText: false, scrollToFind: name === "select_option", questions: NAVIGATOR_QUESTIONS[name] });
@@ -97,7 +107,7 @@ export function sightTools(opts: SightOptions): { tools: AnyTool[]; found: Found
       available: ({ state }) => state.screen !== undefined && (opts.rules === false || sensible(name, state)) && !isStuck(state.stuck, name, 1),
       run: async (_args, ctx) => {
         const child = await ctx.runAgent({
-          instructions: `${opts.task} ${GOALS[name]}`,
+          instructions: navigatorInstructions(name, task),
           tools: [...navigatorFor(name).filter((t) => NAVIGATOR_TOOLS[name].includes(t.name)).map(oneAction), neverEnd],
           initialState: await state0(),
           maxSteps: opts.navigatorSteps ?? 3,
@@ -107,7 +117,7 @@ export function sightTools(opts: SightOptions): { tools: AnyTool[]; found: Found
 
         // Check on the new screenshot. Code decides what the answers mean.
         const check = CHECKS[name];
-        const judgments = await judgeScreen(opts.model, opts.task, after as Json);
+        const judgments = await judgeScreen(opts.model, task.text, after as Json);
         let worked: boolean | "unsure" = true;
         if (name === "read_value") {
           const price = (child.state.price as { text?: string } | undefined)?.text;

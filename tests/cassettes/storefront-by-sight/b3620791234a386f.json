@@ -64,13 +64,13 @@
         "__tool__": {
           "type": "choice",
           "choice": "select_option",
-          "confidence": 0.96,
+          "confidence": 0.98,
           "probabilities": {
             "open_menu": 0,
             "scroll": 0,
             "click_item": 0,
-            "select_option": 0.97,
-            "read_value": 0.03,
+            "select_option": 0.98,
+            "read_value": 0.02,
             "go_back": 0,
             "close_overlay": 0
           }

@@ -97,13 +97,19 @@ export async function scoreSteps(model: DecisionModel, instructions: string, ste
 
 export type Report = {
   steps: number;
-  /** Share of steps where the pick equals the run's tactic, per variant. */
+  /** Share of steps where the pick equals the run's tactic (or is one of the `ALSO` that agree with it), per variant. */
   match: Record<Variant, number>;
   /** Per variant: truth -> picked -> count. */
   confusion: Record<Variant, Record<string, Record<string, number>>>;
   /** Per variant and tactic of the run: how many steps, how many matched. */
   perTactic: Record<Variant, Record<string, { steps: number; matched: number }>>;
 };
+
+/**
+ * Other tactics that count as the run's own. The runs the probe replays scrolled a list to find the item; a person who had seen the
+ * list's filters could as well have used them. Both bring the item into view, so a pick of `filter` where the run scrolled agrees.
+ */
+const ALSO: Partial<Record<Tactic, Tactic[]>> = { scroll: ["filter"] };
 
 export function report(scored: Scored[]): Report {
   const match = {} as Report["match"];
@@ -118,7 +124,7 @@ export function report(scored: Scored[]): Report {
       (confusion[v][s.truth] ??= {})[picked] = (confusion[v][s.truth]?.[picked] ?? 0) + 1;
       const t = (perTactic[v][s.truth] ??= { steps: 0, matched: 0 });
       t.steps++;
-      if (picked === s.truth) {
+      if (picked === s.truth || ALSO[s.truth]?.includes(picked)) {
         t.matched++;
         hit++;
       }

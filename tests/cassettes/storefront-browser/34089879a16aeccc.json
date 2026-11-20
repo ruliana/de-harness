@@ -42,10 +42,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "navigate",
-          "confidence": 0.98,
+          "confidence": 0.96,
           "probabilities": {
-            "navigate": 0.99,
-            "end": 0.01
+            "navigate": 0.98,
+            "end": 0.02
           }
         },
         "navigate.url": {

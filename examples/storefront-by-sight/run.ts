@@ -6,24 +6,23 @@
 import { createAgent, type DecisionModel } from "../../src/index.js";
 import type { BrowserSession } from "../../src/browser/index.js";
 import { pageFacts, type Outcome, type SiteKind } from "../storefront-browser/run.js";
-import { plainTask } from "../storefront-browser/shopping.js";
 import { judgeScreen, sightTools } from "./planner.js";
-import { DONE_OPENED } from "./tactics.js";
+import { DONE_OPENED, shopTask, sightTask, type SightTask } from "./tactics.js";
 
 export { launchFixture, launchLive, startFixture, FIXTURE_PORT, LIVE, problems } from "../storefront-browser/run.js";
 
-export type SightRun = { kind: SiteKind; model: DecisionModel; browser: BrowserSession; home: string; task?: string; maxSteps?: number; navigatorSteps?: number; rules?: boolean; onStep?: (line: string) => void };
+export type SightRun = { kind: SiteKind; model: DecisionModel; browser: BrowserSession; home: string; task?: string | SightTask; maxSteps?: number; navigatorSteps?: number; rules?: boolean; onStep?: (line: string) => void };
 
 /** Open the shop and run the deciding level. At most `maxSteps` (default 10) tactics. */
 export async function runBySight(opts: SightRun): Promise<Outcome & { found: string | null }> {
-  const task = opts.task ?? plainTask(opts.kind === "live" ? "aloyoga.com" : "the shop");
+  const task = sightTask(opts.task ?? shopTask(opts.kind === "live" ? "aloyoga.com" : "the shop", "a blue sweatshirt", "large"));
   const { tools, found } = sightTools({ browser: opts.browser, model: opts.model, task, home: opts.home, navigatorSteps: opts.navigatorSteps, rules: opts.rules });
   await opts.browser.goto(opts.home);
   const trail: string[] = [];
   const screen = (await opts.browser.snapshot()).screen!;
   const result = await createAgent({
     model: opts.model,
-    instructions: task,
+    instructions: task.text,
     tools,
     initialState: { screen, judgments: await judgeScreen(opts.model, task, screen), done: [DONE_OPENED] },
     previousActions: 0,
