@@ -11,13 +11,18 @@
  *   go_back             the previous page of the history
  *   end                 built in
  *
- * Every tool that changes the page replaces two state slots: `screen` (the screenshot) and `page` ({ url, title, scroll }).
+ * No-change guard: click, hover, scroll, press_key and go_back are not offered any more once they changed nothing `noChange` (3) times
+ * in a row; `state.stuck` shows the counts. Any change of the screenshot lifts it.
+ *
+ * Every tool that changes the page replaces two state slots: `screen` (the screenshot) and `page` ({ url, title, scroll }; only `scroll` with `pageText: false`).
  * Put them into `initialState` with `await browser.snapshot()` (after `browser.goto(start)`) or leave them out and offer `navigate`.
  */
 import { defineTool, type AnyTool } from "../tools/tool.js";
+import type { Json } from "../state/state.js";
 import { param, type Options, type ParamContext } from "../tools/param.js";
 import { isImageValue } from "../state/images.js";
 import type { BrowserSession, ScrollDirection } from "./session.js";
+import { DEFAULT_NO_CHANGE, isStuck, nextStuck } from "./stuck.js";
 
 export type Candidates = Options | ((ctx: ParamContext) => Options);
 
@@ -30,6 +35,10 @@ export type BrowserToolsOptions = {
   hover?: boolean;
   /** Keys the agent may press. Default Enter, Tab and Escape. */
   keys?: Options;
+  /** Stop offering a tool that left the screenshot unchanged this many times in a row. Default 3, 0 turns the guard off. */
+  noChange?: number;
+  /** Put the address and title of the page into `state.page`. Default true; false leaves only `page.scroll`, for agents that must decide from the picture alone. */
+  pageText?: boolean;
   /** The state slot that holds the screenshot. Default `screen`. */
   screen?: string;
   /** Replace the wording of any question (every question names state by path and asks for one judgment). */
@@ -50,11 +59,23 @@ function scrollOptions(ctx: ParamContext): Record<string, string> {
   return Object.fromEntries((Object.keys(DIRECTIONS) as ScrollDirection[]).filter(allowed).map((d) => [d, DIRECTIONS[d]]));
 }
 
+/** The screenshot and where the page is; without `pageText` the page's address and title are left out. */
+export async function snapshotOf(browser: BrowserSession, slot = "screen", pageText = true): Promise<Record<string, Json>> {
+  const snapshot = await browser.snapshot(slot);
+  return pageText ? snapshot : { ...snapshot, page: { scroll: (snapshot.page as { scroll: Json }).scroll } };
+}
+
 export function browserTools(browser: BrowserSession, options: BrowserToolsOptions = {}): AnyTool[] {
   const slot = options.screen ?? "screen";
   const ref = `state.${slot}`;
   const q = options.questions ?? {};
+  const limit = options.noChange ?? DEFAULT_NO_CHANGE;
+  const snap = () => snapshotOf(browser, slot, options.pageText !== false);
   const hasScreen = (state: Readonly<Record<string, unknown>>) => isImageValue(state[slot]);
+  /** The tool is offered when there is a screenshot and the guard has not stopped it. */
+  const usable = (tool: string) => ({ state }: { state: Readonly<Record<string, unknown>> }) => hasScreen(state) && !isStuck(state.stuck, tool, limit);
+  /** The state a changing tool writes: the new snapshot and the guard's count. */
+  const seen = (tool: string, ctx: { state: Readonly<Record<string, unknown>> }, snapshot: Record<string, Json>): Record<string, Json | null> => ({ ...snapshot, stuck: nextStuck(ctx.state.stuck, tool, ctx.state[slot], snapshot[slot]) });
 
   const tools: AnyTool[] = [];
 
@@ -67,7 +88,7 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
         run: async ({ url }) => {
           await browser.goto(url as string);
           const page = (await browser.info()).title;
-          return { state: await browser.snapshot(slot), summary: `opened ${url}${page ? ` ("${page}")` : ""}` };
+          return { state: await snap(), summary: `opened ${url}${page ? ` ("${page}")` : ""}` };
         },
       }),
     );
@@ -77,7 +98,7 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
     defineTool({
       name: "click",
       description: `Clicks one element of the web page, which is the picture in \`${ref}\`.`,
-      available: ({ state }) => hasScreen(state),
+      available: usable("click"),
       params: {
         target: param.box({
           question: q.click ?? `the element that \`instructions\` say to click next, in \`${ref}\``,
@@ -89,10 +110,10 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
         if (!target) return { summary: "found nothing to click: the element is not visible in the screenshot" };
         const before = (ctx.state[slot] as { $image?: { base64: string } } | undefined)?.$image?.base64;
         const clicked = await browser.clickBox(target);
-        const state = await browser.snapshot(slot);
+        const state = await snap();
         const same = before !== undefined && (state[slot] as { $image: { base64: string } }).$image.base64 === before;
         const note = clicked.blocked ? `, but ${clicked.blocked} is not an allowed address, so the page stayed` : same ? ", and the page looks the same" : "";
-        return { state, summary: `clicked ${clicked.element} at (${clicked.x}, ${clicked.y})${note}` };
+        return { state: seen("click", ctx, state), summary: `clicked ${clicked.element} at (${clicked.x}, ${clicked.y})${note}` };
       },
     }),
     ...(options.hover
@@ -100,7 +121,7 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
           defineTool({
             name: "hover",
             description: `Moves the mouse pointer onto one element of the web page, which is the picture in \`${ref}\`, without clicking: menus open this way.`,
-            available: ({ state }) => hasScreen(state),
+            available: usable("hover"),
             params: {
               target: param.box({
                 question: q.hover ?? `the element that \`instructions\` say to point the mouse at, in \`${ref}\``,
@@ -108,10 +129,10 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
                 present: q.hoverPresent ?? `Is the element that \`instructions\` say to point the mouse at visible in \`${ref}\`?`,
               }),
             },
-            run: async ({ target }) => {
+            run: async ({ target }, ctx) => {
               if (!target) return { summary: "found nothing to point at: the element is not visible in the screenshot" };
               const pointed = await browser.hoverBox(target);
-              return { state: await browser.snapshot(slot), summary: `pointed at ${pointed.element} at (${pointed.x}, ${pointed.y})` };
+              return { state: seen("hover", ctx, await snap()), summary: `pointed at ${pointed.element} at (${pointed.x}, ${pointed.y})` };
             },
           }),
         ]
@@ -119,11 +140,11 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
     defineTool({
       name: "scroll",
       description: "Scrolls the web page in the browser to see another part of it.",
-      available: ({ state }) => hasScreen(state) && ((state.page?.scroll as { max: number } | undefined)?.max ?? 1) > 0,
+      available: (ctx) => usable("scroll")(ctx) && ((ctx.state.page?.scroll as { max: number } | undefined)?.max ?? 1) > 0,
       params: { direction: param.choice({ question: q.scroll ?? `In which direction should the page in \`${ref}\` be scrolled to bring into view what \`instructions\` talk about?`, options: scrollOptions }) },
-      run: async ({ direction }) => {
+      run: async ({ direction }, ctx) => {
         const at = await browser.scroll(direction as ScrollDirection);
-        return { state: await browser.snapshot(slot), summary: `scrolled ${direction} to ${at}px from the top` };
+        return { state: seen("scroll", ctx, await snap()), summary: `scrolled ${direction} to ${at}px from the top` };
       },
     }),
   );
@@ -138,7 +159,7 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
         run: async ({ text }) => {
           const into = await browser.type(text as string);
           if (into === null) return { summary: `typed nothing: no field is selected (click a field first)` };
-          return { state: await browser.snapshot(slot), summary: `typed "${text}" into the <${into}>` };
+          return { state: await snap(), summary: `typed "${text}" into the <${into}>` };
         },
       }),
     );
@@ -148,20 +169,20 @@ export function browserTools(browser: BrowserSession, options: BrowserToolsOptio
     defineTool({
       name: "press_key",
       description: "Presses one key of the keyboard in the browser, for example to submit a form.",
-      available: ({ state }) => hasScreen(state),
+      available: usable("press_key"),
       params: { key: param.choice({ question: q.pressKey ?? "Which key do `instructions` say to press now?", options: options.keys ?? ["Enter", "Tab", "Escape"] }) },
-      run: async ({ key }) => {
+      run: async ({ key }, ctx) => {
         await browser.press(key as string);
-        return { state: await browser.snapshot(slot), summary: `pressed ${key}` };
+        return { state: seen("press_key", ctx, await snap()), summary: `pressed ${key}` };
       },
     }),
     defineTool({
       name: "go_back",
       description: "Goes back to the previous web page in the browser history.",
-      available: ({ state }) => hasScreen(state),
-      run: async () => {
+      available: usable("go_back"),
+      run: async (_args, ctx) => {
         const went = await browser.back();
-        return went ? { state: await browser.snapshot(slot), summary: "went back to the previous page" } : { summary: "there is no previous page to go back to" };
+        return went ? { state: seen("go_back", ctx, await snap()), summary: "went back to the previous page" } : { summary: "there is no previous page to go back to" };
       },
     }),
   );
