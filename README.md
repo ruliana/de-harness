@@ -145,9 +145,10 @@ the real browser, so CI installs Chromium.
 | `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
 | `examples/office/` | thirty tools, the many-tools domain |
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
-| `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`) |
+| `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
 | `examples/storefront-browser/` | the same shopping task by sight: a headless browser, screenshots, boxes to click and to point at the price (`npm run example:storefront-browser`) |
+| `examples/storefront-by-sight/` | the one-sentence shopping task by sight, with a deciding level (picks a tactic from the screenshot) and a navigating level (carries it out with a Box); `npm run example:by-sight`, and the tactic probe `npm run example:probe` |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
 | `examples/storefront/` | shopping in a real Shopify shop (aloyoga.com): menu, colour filter, product, size, price (`npm run example:storefront`) |
 
@@ -194,3 +195,18 @@ Spelled-out steps matter a lot. Measured on 2026-11-20, 5 runs each:
 
 With the one sentence Jev either scrolls up and down forever or repeats one action (pressing Enter 12 times); nothing in it says where to look first.
 Hover is the missing piece for menus: clicking WOMEN on aloyoga.com goes to a page with no sweatshirt entry, so `browserTools(..., { hover: true })` offers `hover(target)`.
+
+## Example: the one-sentence task by sight, in two levels
+
+`npm run example:by-sight -- --site live|fixture [--runs N] [--no-rules]` runs "Go to the shop, find a blue sweatshirt, select size large, and get the price" with nothing
+spelled out and nothing but pictures reaching Jev: no page text, address or title, in either level.
+
+- **Deciding level** (`examples/storefront-by-sight/planner.ts`): an agent whose tools are nine generic tactics (`open_menu`, `pick_menu_entry`, `scroll`, `click_item`, `select_option`,
+  `read_value`, `go_back`, `close_overlay`, `end`; wording in `tactics.ts`). Its state is the screenshot, `state.judgments` (five yes/no or choice questions about that screenshot: item visible,
+  menu open, option chosen, price visible, kind of page), `state.done` (what code recorded as done) and `state.last_try` (what did not work). Jev never writes a goal: the tactic list is the choice.
+- **Navigating level**: each tactic starts a child agent (`ctx.runAgent`) with the task, a one-step goal and only the browser tools that tactic needs. It makes one move and stops by itself (a target it cannot find is not a move,
+  so it may look again, three steps at most). Code then checks the new screenshot (it must differ, and the judgments must show the tactic worked) before writing `done`.
+- **Code decides**: which tactics make sense now (`rules`: no menu entry before a menu, no option or value before an item, no `end` before the value was read), that a tactic that changed nothing is not offered again on the same screenshot,
+  and, in `src/browser`, that a tool that changed nothing three times is not offered.
+
+Before building it, `examples/storefront-by-sight/probe.ts` replayed the screenshots of runs that worked (spelled-out steps) and asked the deciding level what to do at each one (`npm run example:probe`).

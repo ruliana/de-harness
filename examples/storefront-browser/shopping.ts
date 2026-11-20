@@ -41,6 +41,10 @@ export const stepInstructions = (shop: string, what = "a blue sweatshirt", secti
   `6. Stop. ` +
   `Never add anything to the bag and never open the checkout.`;
 
+/** The same task for an agent that has no `state.price` of its own: it stops when the price has been read. */
+export const plainTask = (shop: string, what = "a blue sweatshirt", size = "large") =>
+  `Go to ${shop}, find ${what}, select size ${size}, and get the price. Never add anything to the bag and never open the checkout. Stop once the price of ${what} in size ${size} has been read.`;
+
 export const SHOPPING_TASK = plainInstructions("aloyoga.com");
 export const SHOPPING_STEPS = stepInstructions("aloyoga.com");
 
@@ -49,6 +53,8 @@ const MONEY = /(?:[$€£]|USD\s?)\s?\d[\d,]*(?:\.\d{2})?/;
 export type ShoppingOptions = {
   /** The shop's home page: the one address `navigate` offers. */
   home: string;
+  /** Leave the page's address and title out of the state (`state.page` keeps only the scroll position): the model then has nothing but the picture. */
+  pageText?: boolean;
   /** Replace the wording of a question. */
   questions?: Partial<typeof QUESTIONS>;
 };
@@ -72,7 +78,7 @@ export function shoppingTools(browser: BrowserSession, opts: ShoppingOptions): A
     },
   });
   return [
-    ...browserTools(browser, { urls: { [opts.home]: "the home page of the shop" }, hover: true, questions: { click: q.click, hover: q.hover, hoverPresent: q.hoverPresent } }),
+    ...browserTools(browser, { urls: { [opts.home]: "the home page of the shop" }, hover: true, pageText: opts.pageText, questions: { click: q.click, hover: q.hover, hoverPresent: q.hoverPresent } }),
     readPrice,
   ];
 }

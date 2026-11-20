@@ -199,3 +199,38 @@ describe("browser: launching", () => {
     await expect(BrowserSession.launch({ viewport: { width: 2000, height: 800 } })).rejects.toThrow(/2000x800/);
   });
 });
+
+describe("browser: the no-change guard", () => {
+  const escape = { [TOOL_QUESTION]: "press_key", "press_key.key": "Escape" };
+  const stuckIn = (model: ScriptedModel, request: number) => (model.requests[request]!.state as { state: { stuck?: Record<string, number> } }).state.stuck;
+
+  it("counts the runs of a tool that changed nothing, and stops offering it at the third", async () => {
+    const { model, result } = await run("/", [escape, escape, escape, { [TOOL_QUESTION]: "end" }]);
+    expect(stuckIn(model, 0)).toBeUndefined();
+    expect(stuckIn(model, 1)).toEqual({ press_key: 1 });
+    expect(stuckIn(model, 2)).toEqual({ press_key: 2 });
+    expect(toolsOf(model, 2)).toContain("press_key");
+    expect(stuckIn(model, 3)).toEqual({ press_key: 3 });
+    expect(toolsOf(model, 3)).toEqual(["click", "end", "go_back", "scroll"]);
+    expect(result.status).toBe("ended");
+  });
+
+  it("lifts the block as soon as something changes the screenshot", async () => {
+    const { model } = await run("/", [escape, escape, { [TOOL_QUESTION]: "scroll", "scroll.direction": "down" }, escape, { [TOOL_QUESTION]: "end" }]);
+    expect(stuckIn(model, 2)).toEqual({ press_key: 2 });
+    expect(stuckIn(model, 3)).toBeUndefined(); // the scroll changed the page
+    expect(stuckIn(model, 4)).toEqual({ press_key: 1 }); // and counting starts again
+  });
+
+  it("can be turned off with noChange: 0", async () => {
+    const { model } = await run("/", [escape, escape, escape, escape, { [TOOL_QUESTION]: "end" }], { noChange: 0 });
+    expect(toolsOf(model, 4)).toContain("press_key");
+  });
+
+  it("leaves the address and the title out of the state when pageText is false, keeping only the scroll position", async () => {
+    const { model } = await run("/", [{ [TOOL_QUESTION]: "scroll", "scroll.direction": "down" }, { [TOOL_QUESTION]: "end" }], { pageText: false });
+    const page = (model.requests[1]!.state as { state: { page: Record<string, unknown> } }).state.page;
+    expect(Object.keys(page)).toEqual(["scroll"]);
+    expect((page.scroll as { position: number }).position).toBe(640);
+  });
+});

@@ -115,12 +115,12 @@
         "__tool__": {
           "type": "choice",
           "choice": "hover",
-          "confidence": 0.83,
+          "confidence": 0.85,
           "probabilities": {
             "navigate": 0,
-            "click": 0.06,
-            "hover": 0.85,
-            "scroll": 0.08,
+            "click": 0.05,
+            "hover": 0.87,
+            "scroll": 0.07,
             "press_key": 0,
             "go_back": 0,
             "read_price": 0,
@@ -140,14 +140,14 @@
           "box": {
             "top": 0.1,
             "bottom": 0.13,
-            "left": 0.21,
-            "right": 0.29
+            "left": 0.22,
+            "right": 0.31
           },
-          "confidence": 0.74
+          "confidence": 0.73
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.4
+          "noul": 0.47
         },
         "hover.target": {
           "type": "box",
@@ -155,31 +155,31 @@
             "top": 0.1,
             "bottom": 0.13,
             "left": 0.21,
-            "right": 0.29
+            "right": 0.31
           },
           "confidence": 0.71
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.73
+          "noul": 0.75
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.86,
+          "confidence": 0.8,
           "probabilities": {
-            "down": 0.93,
-            "bottom": 0.07
+            "down": 0.9,
+            "bottom": 0.1
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Tab",
-          "confidence": 0.76,
+          "confidence": 0.67,
           "probabilities": {
-            "Enter": 0.08,
-            "Tab": 0.84,
-            "Escape": 0.08
+            "Enter": 0.11,
+            "Tab": 0.78,
+            "Escape": 0.11
           }
         },
         "read_price.target": {
