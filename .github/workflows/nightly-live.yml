@@ -1,0 +1,19 @@
+name: nightly-live
+# Catches model drift by re-running the acceptance tests against live Jev. Never blocks merges.
+# Needs a repository secret named TYPESAFE_API_KEY; without it the job is skipped.
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+jobs:
+  live:
+    if: ${{ vars.HAS_TYPESAFE_KEY == 'true' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run test:live
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}

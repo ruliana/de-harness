@@ -1,0 +1,22 @@
+{
+  "name": "de-harness",
+  "version": "0.1.0",
+  "description": "A harness for decision models: agents whose model is used only to call tools",
+  "type": "module",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "HARNESS_CASSETTE=record NODE_USE_ENV_PROXY=1 vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}
