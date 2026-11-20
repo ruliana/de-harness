@@ -1,0 +1,4055 @@
+{
+  "hash": "98fbde7bed6f0c58",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Helsinki/1382243127",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Helsinki",
+      "lead": "Helsinki, until about 1930 known in English by its Swedish name of Helsingfors, is the capital and most populous city in Finland. It is on the shore of the Gulf of Finland and is the seat of southern Finland's Uusimaa region. About 694,000 people live in the municipality, with 1.3 million in the capital region and 1.6 million in the metropolitan area. As the most populous urban area in Finland, it is the country's most significant centre for politics, education, finance, culture, and research. Helsinki is 80 kilometres (50 mi) north of Tallinn, Estonia, 400 kilometres (250 mi) east of Stockholm, Sweden, and 300 kilometres (190 mi) west of Saint Petersburg, Russia. Helsinki is a bilingual municipality with Finnish and Swedish as its official languages.",
+      "links": [
+        {
+          "title": "Swedish language",
+          "texts": [
+            "Swedish"
+          ]
+        },
+        {
+          "title": "Finland",
+          "texts": [
+            "Finland"
+          ]
+        },
+        {
+          "title": "Gulf of Finland",
+          "texts": [
+            "Gulf of Finland"
+          ]
+        },
+        {
+          "title": "Uusimaa",
+          "texts": [
+            "Uusimaa"
+          ]
+        },
+        {
+          "title": "Helsinki capital region",
+          "texts": [
+            "capital region",
+            "Helsinki capital region"
+          ]
+        },
+        {
+          "title": "Helsinki metropolitan area",
+          "texts": [
+            "metropolitan area",
+            "Helsinki metropolitan area",
+            "Helsinki region"
+          ]
+        },
+        {
+          "title": "List of urban areas in Finland by population",
+          "texts": [
+            "urban area"
+          ]
+        },
+        {
+          "title": "Tallinn",
+          "texts": [
+            "Tallinn"
+          ]
+        },
+        {
+          "title": "Stockholm, Sweden",
+          "texts": [
+            "Stockholm, Sweden"
+          ]
+        },
+        {
+          "title": "Saint Petersburg, Russia",
+          "texts": [
+            "Saint Petersburg, Russia"
+          ]
+        },
+        {
+          "title": "Bilingual",
+          "texts": [
+            "bilingual"
+          ]
+        },
+        {
+          "title": "Finnish language",
+          "texts": [
+            "Finnish"
+          ]
+        },
+        {
+          "title": "Espoo",
+          "texts": [
+            "Espoo"
+          ]
+        },
+        {
+          "title": "Vantaa",
+          "texts": [
+            "Vantaa"
+          ]
+        },
+        {
+          "title": "Kauniainen",
+          "texts": [
+            "Kauniainen"
+          ]
+        },
+        {
+          "title": "Sipoo",
+          "texts": [
+            "Sipoo"
+          ]
+        },
+        {
+          "title": "List of northernmost items",
+          "texts": [
+            "northernmost"
+          ]
+        },
+        {
+          "title": "Member state of the European Union",
+          "texts": [
+            "EU member state"
+          ]
+        },
+        {
+          "title": "List of the most populated municipalities in the Nordic countries",
+          "texts": [
+            "third-largest"
+          ]
+        },
+        {
+          "title": "Oslo",
+          "texts": [
+            "Oslo"
+          ]
+        },
+        {
+          "title": "List of urban areas in the Nordic countries",
+          "texts": [
+            "third-largest"
+          ]
+        },
+        {
+          "title": "Copenhagen",
+          "texts": [
+            "Copenhagen"
+          ]
+        },
+        {
+          "title": "Helsinki Airport",
+          "texts": [
+            "Helsinki Airport",
+            "largest airport"
+          ]
+        },
+        {
+          "title": "City quality of life indices",
+          "texts": [
+            "city quality of life indices"
+          ]
+        },
+        {
+          "title": "Condé Nast Traveler",
+          "texts": [
+            "Condé Nast Traveler"
+          ]
+        },
+        {
+          "title": "Rovaniemi",
+          "texts": [
+            "Rovaniemi"
+          ]
+        },
+        {
+          "title": "Lapland (Finland)",
+          "texts": [
+            "Lapland"
+          ]
+        },
+        {
+          "title": "Tourism",
+          "texts": [
+            "tourist"
+          ]
+        },
+        {
+          "title": "1952 Summer Olympics",
+          "texts": [
+            "1952 Summer Olympics",
+            "1952 Olympic Games"
+          ]
+        },
+        {
+          "title": "Conference on Security and Co-operation in Europe",
+          "texts": [
+            "CSCE"
+          ]
+        },
+        {
+          "title": "Organization for Security and Co-operation in Europe",
+          "texts": [
+            "OSCE"
+          ]
+        },
+        {
+          "title": "World Athletics Championships",
+          "texts": [
+            "World Athletics Championships"
+          ]
+        },
+        {
+          "title": "Eurovision Song Contest 2007",
+          "texts": [
+            "52nd Eurovision Song Contest",
+            "Eurovision Song Contest 2007"
+          ]
+        },
+        {
+          "title": "World Design Capital",
+          "texts": [
+            "World Design Capital"
+          ]
+        },
+        {
+          "title": "Design Cities (UNESCO)",
+          "texts": [
+            "Design City"
+          ]
+        },
+        {
+          "title": "UNESCO",
+          "texts": [
+            "UNESCO"
+          ]
+        },
+        {
+          "title": "Creative Cities Network",
+          "texts": [
+            "Creative Cities Network"
+          ]
+        },
+        {
+          "title": "Swedish colonisation of Finland",
+          "texts": [
+            "Swedish colonisation",
+            "Swedes permanently colonised"
+          ]
+        },
+        {
+          "title": "Hälsingland",
+          "texts": [
+            "Hälsingland"
+          ]
+        },
+        {
+          "title": "Sweden",
+          "texts": [
+            "Sweden"
+          ]
+        },
+        {
+          "title": "Vantaa (river)",
+          "texts": [
+            "Vantaa River"
+          ]
+        },
+        {
+          "title": "Helsingin pitäjän kirkonkylä",
+          "texts": [
+            "village"
+          ]
+        },
+        {
+          "title": "Church of St. Lawrence, Vantaa",
+          "texts": [
+            "church",
+            "Church of St. Lawrence"
+          ]
+        },
+        {
+          "title": "Uppland",
+          "texts": [
+            "Uppland"
+          ]
+        },
+        {
+          "title": "Neck",
+          "texts": [
+            "neck"
+          ]
+        },
+        {
+          "title": "Rapids",
+          "texts": [
+            "rapids"
+          ]
+        },
+        {
+          "title": "Helsingør",
+          "texts": [
+            "Helsingør"
+          ]
+        },
+        {
+          "title": "Helsingborg",
+          "texts": [
+            "Helsingborg"
+          ]
+        },
+        {
+          "title": "Koskela",
+          "texts": [
+            "Forsby",
+            "Koskela"
+          ]
+        },
+        {
+          "title": "Council of State (Finland)",
+          "texts": [
+            "Finnish government"
+          ]
+        },
+        {
+          "title": "Senate of Finland",
+          "texts": [
+            "Senate of Finland"
+          ]
+        },
+        {
+          "title": "Turku",
+          "texts": [
+            "Turku"
+          ]
+        },
+        {
+          "title": "Literary language",
+          "texts": [
+            "written"
+          ]
+        },
+        {
+          "title": "Russian Empire",
+          "texts": [
+            "Russian Empire"
+          ]
+        },
+        {
+          "title": "Helsinki slang",
+          "texts": [
+            "Helsinki slang"
+          ]
+        },
+        {
+          "title": "Northern Sami",
+          "texts": [
+            "Northern Sami"
+          ]
+        },
+        {
+          "title": "Last Glacial Period",
+          "texts": [
+            "Ice Age"
+          ]
+        },
+        {
+          "title": "Pitäjänmäki",
+          "texts": [
+            "Pitäjänmäki"
+          ]
+        },
+        {
+          "title": "Kaarela",
+          "texts": [
+            "Kaarela"
+          ]
+        },
+        {
+          "title": "Iron Age",
+          "texts": [
+            "Iron Age"
+          ]
+        },
+        {
+          "title": "Tavastians",
+          "texts": [
+            "Tavastians"
+          ]
+        },
+        {
+          "title": "Palynology",
+          "texts": [
+            "Pollen analysis"
+          ]
+        },
+        {
+          "title": "Christianity",
+          "texts": [
+            "Christianity"
+          ]
+        },
+        {
+          "title": "Christian cross",
+          "texts": [
+            "crosses"
+          ]
+        },
+        {
+          "title": "Kingdom of Sweden (800–1521)",
+          "texts": [
+            "Kingdom of Sweden"
+          ]
+        },
+        {
+          "title": "Vikings",
+          "texts": [
+            "Vikings"
+          ]
+        },
+        {
+          "title": "Battle at Herdaler",
+          "texts": [
+            "Battle at Herdaler"
+          ]
+        },
+        {
+          "title": "Olaf II of Norway",
+          "texts": [
+            "Olaf II of Norway"
+          ]
+        },
+        {
+          "title": "Ingå",
+          "texts": [
+            "Ingå"
+          ]
+        },
+        {
+          "title": "Heimskringla",
+          "texts": [
+            "Saga of Olaf Haraldson"
+          ]
+        },
+        {
+          "title": "Norrland",
+          "texts": [
+            "Norrland"
+          ]
+        },
+        {
+          "title": "Middle Ages",
+          "texts": [
+            "Middle Ages"
+          ]
+        },
+        {
+          "title": "Töölö",
+          "texts": [
+            "Töölö"
+          ]
+        },
+        {
+          "title": "King's Road (Finland)",
+          "texts": [
+            "Kuninkaantie"
+          ]
+        },
+        {
+          "title": "Keep",
+          "texts": [
+            "keep"
+          ]
+        },
+        {
+          "title": "Baltic Sea",
+          "texts": [
+            "Baltic Sea"
+          ]
+        },
+        {
+          "title": "Reval",
+          "texts": [
+            "Reval"
+          ]
+        },
+        {
+          "title": "Peasant",
+          "texts": [
+            "peasants"
+          ]
+        },
+        {
+          "title": "Priest",
+          "texts": [
+            "priests"
+          ]
+        },
+        {
+          "title": "Nobility",
+          "texts": [
+            "nobles"
+          ]
+        },
+        {
+          "title": "Vyborg",
+          "texts": [
+            "Vyborg"
+          ]
+        },
+        {
+          "title": "Pohja",
+          "texts": [
+            "Pohja"
+          ]
+        },
+        {
+          "title": "Fur",
+          "texts": [
+            "Furs"
+          ]
+        },
+        {
+          "title": "Wood",
+          "texts": [
+            "wood"
+          ]
+        },
+        {
+          "title": "Tar",
+          "texts": [
+            "tar"
+          ]
+        },
+        {
+          "title": "Fish",
+          "texts": [
+            "fish"
+          ]
+        },
+        {
+          "title": "Salt",
+          "texts": [
+            "salt"
+          ]
+        },
+        {
+          "title": "Grain",
+          "texts": [
+            "grain"
+          ]
+        },
+        {
+          "title": "Vantaa River",
+          "texts": [
+            "River Vantaa",
+            "Vantaa River"
+          ]
+        },
+        {
+          "title": "Gustav I of Sweden",
+          "texts": [
+            "Gustav I of Sweden"
+          ]
+        },
+        {
+          "title": "Hanseatic League",
+          "texts": [
+            "Hanseatic"
+          ]
+        },
+        {
+          "title": "Bourgeoisie",
+          "texts": [
+            "bourgeoisie"
+          ]
+        },
+        {
+          "title": "Porvoo",
+          "texts": [
+            "Porvoo"
+          ]
+        },
+        {
+          "title": "Raseborg",
+          "texts": [
+            "Raseborg"
+          ]
+        },
+        {
+          "title": "Rauma, Finland",
+          "texts": [
+            "Rauma"
+          ]
+        },
+        {
+          "title": "Ulvila",
+          "texts": [
+            "Ulvila"
+          ]
+        },
+        {
+          "title": "Forced displacement",
+          "texts": [
+            "move"
+          ]
+        },
+        {
+          "title": "Per Brahe the Younger",
+          "texts": [
+            "Per Brahe the Younger"
+          ]
+        },
+        {
+          "title": "Vironniemi",
+          "texts": [
+            "Vironniemi"
+          ]
+        },
+        {
+          "title": "Kruununhaka",
+          "texts": [
+            "Kruununhaka"
+          ]
+        },
+        {
+          "title": "Senate Square, Helsinki",
+          "texts": [
+            "Senate Square"
+          ]
+        },
+        {
+          "title": "Helsinki Cathedral",
+          "texts": [
+            "Helsinki Cathedral"
+          ]
+        },
+        {
+          "title": "Fire",
+          "texts": [
+            "fires"
+          ]
+        },
+        {
+          "title": "Nyland and Tavastehus County",
+          "texts": [
+            "Nyland and Tavastehus County"
+          ]
+        },
+        {
+          "title": "Great Northern War plague outbreak",
+          "texts": [
+            "plague"
+          ]
+        },
+        {
+          "title": "Battle of Helsinki (1713)",
+          "texts": [
+            "Russians captured"
+          ]
+        },
+        {
+          "title": "Great Northern War",
+          "texts": [
+            "Great Northern War"
+          ]
+        },
+        {
+          "title": "Suomenlinna",
+          "texts": [
+            "Sveaborg",
+            "Suomenlinna"
+          ]
+        },
+        {
+          "title": "Finnish War",
+          "texts": [
+            "Finnish War"
+          ]
+        },
+        {
+          "title": "Grand Duchy of Finland",
+          "texts": [
+            "Grand Duchy of Finland"
+          ]
+        },
+        {
+          "title": "Alexander I of Russia",
+          "texts": [
+            "Alexander I of Russia"
+          ]
+        },
+        {
+          "title": "Move of capital of Finland from Turku to Helsinki",
+          "texts": [
+            "moved the capital of Finland"
+          ]
+        },
+        {
+          "title": "St Petersburg",
+          "texts": [
+            "St Petersburg"
+          ]
+        },
+        {
+          "title": "Great Fire of Turku",
+          "texts": [
+            "Great Fire of Turku"
+          ]
+        },
+        {
+          "title": "Royal Academy of Turku",
+          "texts": [
+            "Royal Academy of Turku"
+          ]
+        },
+        {
+          "title": "Neoclassicism",
+          "texts": [
+            "neoclassical"
+          ]
+        },
+        {
+          "title": "Carl Ludvig Engel",
+          "texts": [
+            "C. L. Engel",
+            "Carl Ludvig Engel"
+          ]
+        },
+        {
+          "title": "Industrialisation",
+          "texts": [
+            "industrialisation"
+          ]
+        },
+        {
+          "title": "Finnish Civil War",
+          "texts": [
+            "Finnish Civil War"
+          ]
+        },
+        {
+          "title": "Winter War",
+          "texts": [
+            "Winter War"
+          ]
+        },
+        {
+          "title": "Swedish-speaking population of Finland",
+          "texts": [
+            "Swedish speakers"
+          ]
+        },
+        {
+          "title": "German language",
+          "texts": [
+            "German"
+          ]
+        },
+        {
+          "title": "Russian language",
+          "texts": [
+            "Russian"
+          ]
+        },
+        {
+          "title": "Helsinki Metro",
+          "texts": [
+            "Helsinki Metro",
+            "metro"
+          ]
+        },
+        {
+          "title": "Central Park (Helsinki)",
+          "texts": [
+            "Helsinki Central Park"
+          ]
+        },
+        {
+          "title": "Seurasaari",
+          "texts": [
+            "Seurasaari"
+          ]
+        },
+        {
+          "title": "Lauttasaari",
+          "texts": [
+            "Lauttasaari"
+          ]
+        },
+        {
+          "title": "Korkeasaari",
+          "texts": [
+            "Korkeasaari"
+          ]
+        },
+        {
+          "title": "Korkeasaari Zoo",
+          "texts": [
+            "Korkeasaari Zoo"
+          ]
+        },
+        {
+          "title": "Vallisaari",
+          "texts": [
+            "Vallisaari"
+          ]
+        },
+        {
+          "title": "Isosaari",
+          "texts": [
+            "Isosaari"
+          ]
+        },
+        {
+          "title": "Santahamina",
+          "texts": [
+            "Santahamina"
+          ]
+        },
+        {
+          "title": "Pihlajasaari",
+          "texts": [
+            "Pihlajasaari"
+          ]
+        },
+        {
+          "title": "Fire Island",
+          "texts": [
+            "Fire Island"
+          ]
+        },
+        {
+          "title": "New York City",
+          "texts": [
+            "New York City"
+          ]
+        },
+        {
+          "title": "Hanko, Finland",
+          "texts": [
+            "Hanko"
+          ]
+        },
+        {
+          "title": "Norway maple",
+          "texts": [
+            "Norway maple"
+          ]
+        },
+        {
+          "title": "Red squirrel",
+          "texts": [
+            "red squirrel"
+          ]
+        },
+        {
+          "title": "Helsinki urban area",
+          "texts": [
+            "Helsinki urban area"
+          ]
+        },
+        {
+          "title": "Metropolis",
+          "texts": [
+            "metropolis"
+          ]
+        },
+        {
+          "title": "Hyvinkää",
+          "texts": [
+            "Hyvinkää"
+          ]
+        },
+        {
+          "title": "Järvenpää",
+          "texts": [
+            "Järvenpää"
+          ]
+        },
+        {
+          "title": "Kerava",
+          "texts": [
+            "Kerava"
+          ]
+        },
+        {
+          "title": "Kirkkonummi",
+          "texts": [
+            "Kirkkonummi"
+          ]
+        },
+        {
+          "title": "Nurmijärvi",
+          "texts": [
+            "Nurmijärvi"
+          ]
+        },
+        {
+          "title": "Tuusula",
+          "texts": [
+            "Tuusula"
+          ]
+        },
+        {
+          "title": "Pornainen",
+          "texts": [
+            "Pornainen"
+          ]
+        },
+        {
+          "title": "Mäntsälä",
+          "texts": [
+            "Mäntsälä"
+          ]
+        },
+        {
+          "title": "Vihti",
+          "texts": [
+            "Vihti"
+          ]
+        },
+        {
+          "title": "Urban areas in Finland",
+          "texts": [
+            "urban area in Finland"
+          ]
+        },
+        {
+          "title": "Hemiboreal",
+          "texts": [
+            "hemiboreal"
+          ]
+        },
+        {
+          "title": "Humid continental climate",
+          "texts": [
+            "humid continental climate"
+          ]
+        },
+        {
+          "title": "Köppen climate classification",
+          "texts": [
+            "Köppen"
+          ]
+        },
+        {
+          "title": "Trewartha climate classification",
+          "texts": [
+            "Trewartha"
+          ]
+        },
+        {
+          "title": "North Atlantic Current",
+          "texts": [
+            "North Atlantic Current"
+          ]
+        },
+        {
+          "title": "Extratropical cyclone",
+          "texts": [
+            "Extratropical cyclone"
+          ]
+        },
+        {
+          "title": "Urban heat island",
+          "texts": [
+            "urban heat island"
+          ]
+        },
+        {
+          "title": "Winter solstice",
+          "texts": [
+            "winter solstice"
+          ]
+        },
+        {
+          "title": "Summer solstice",
+          "texts": [
+            "summer solstice"
+          ]
+        },
+        {
+          "title": "Kaisaniemi",
+          "texts": [
+            "Kaisaniemi"
+          ]
+        },
+        {
+          "title": "Ilmala",
+          "texts": [
+            "Ilmala"
+          ]
+        },
+        {
+          "title": "Helsinki City Centre",
+          "texts": [
+            "Helsinki City Centre"
+          ]
+        },
+        {
+          "title": "North Helsinki",
+          "texts": [
+            "North Helsinki"
+          ]
+        },
+        {
+          "title": "East Helsinki",
+          "texts": [
+            "East Helsinki"
+          ]
+        },
+        {
+          "title": "Suburb",
+          "texts": [
+            "suburbs"
+          ]
+        },
+        {
+          "title": "Central business district",
+          "texts": [
+            "business center"
+          ]
+        },
+        {
+          "title": "Kluuvi",
+          "texts": [
+            "Kluuvi"
+          ]
+        },
+        {
+          "title": "Kamppi",
+          "texts": [
+            "Kamppi"
+          ]
+        },
+        {
+          "title": "Punavuori",
+          "texts": [
+            "Punavuori"
+          ]
+        },
+        {
+          "title": "Malmi, Helsinki",
+          "texts": [
+            "Malmi"
+          ]
+        },
+        {
+          "title": "Itäkeskus",
+          "texts": [
+            "Itäkeskus"
+          ]
+        },
+        {
+          "title": "Neoclassical architecture",
+          "texts": [
+            "neoclassical"
+          ]
+        },
+        {
+          "title": "Helsinki Senate Square",
+          "texts": [
+            "Senate Square"
+          ]
+        },
+        {
+          "title": "Government Palace (Finland)",
+          "texts": [
+            "Government Palace"
+          ]
+        },
+        {
+          "title": "Epithet",
+          "texts": [
+            "epithet"
+          ]
+        },
+        {
+          "title": "Kuninkaanportti",
+          "texts": [
+            "Kuninkaanportti"
+          ]
+        },
+        {
+          "title": "Kustaanmiekka",
+          "texts": [
+            "Kustaanmiekka Island"
+          ]
+        },
+        {
+          "title": "Art Nouveau",
+          "texts": [
+            "Art Nouveau"
+          ]
+        },
+        {
+          "title": "Jugendstil",
+          "texts": [
+            "Jugend"
+          ]
+        },
+        {
+          "title": "Romantic nationalism",
+          "texts": [
+            "romantic nationalism"
+          ]
+        },
+        {
+          "title": "Kalevala",
+          "texts": [
+            "Kalevala"
+          ]
+        },
+        {
+          "title": "Katajanokka",
+          "texts": [
+            "Katajanokka"
+          ]
+        },
+        {
+          "title": "Ullanlinna",
+          "texts": [
+            "Ullanlinna",
+            "Ullanlinna/Ulrikasborg"
+          ]
+        },
+        {
+          "title": "Eliel Saarinen",
+          "texts": [
+            "Eliel Saarinen"
+          ]
+        },
+        {
+          "title": "Helsinki Central railway station",
+          "texts": [
+            "Helsinki Central Station"
+          ]
+        },
+        {
+          "title": "Bank of Finland",
+          "texts": [
+            "Bank of Finland"
+          ]
+        },
+        {
+          "title": "Renaissance Revival architecture",
+          "texts": [
+            "Renaissance Revivalish"
+          ]
+        },
+        {
+          "title": "House of the Estates",
+          "texts": [
+            "House of the Estates"
+          ]
+        },
+        {
+          "title": "Gothic Revival architecture",
+          "texts": [
+            "Gothic Revival architecture"
+          ]
+        },
+        {
+          "title": "St. John's Church, Helsinki",
+          "texts": [
+            "St. John's Church"
+          ]
+        },
+        {
+          "title": "House of Nobility (Finland)",
+          "texts": [
+            "House of Nobility"
+          ]
+        },
+        {
+          "title": "Catholic",
+          "texts": [
+            "Catholic"
+          ]
+        },
+        {
+          "title": "St. Henry's Cathedral",
+          "texts": [
+            "St. Henry's Cathedral"
+          ]
+        },
+        {
+          "title": "Soviet Union",
+          "texts": [
+            "Soviet Union"
+          ]
+        },
+        {
+          "title": "Stockholm",
+          "texts": [
+            "Stockholm"
+          ]
+        },
+        {
+          "title": "Cold War",
+          "texts": [
+            "Cold War"
+          ]
+        },
+        {
+          "title": "The Kremlin Letter",
+          "texts": [
+            "The Kremlin Letter"
+          ]
+        },
+        {
+          "title": "Reds (film)",
+          "texts": [
+            "Reds"
+          ]
+        },
+        {
+          "title": "Gorky Park (film)",
+          "texts": [
+            "Gorky Park"
+          ]
+        },
+        {
+          "title": "Leningrad",
+          "texts": [
+            "Leningrad"
+          ]
+        },
+        {
+          "title": "Moscow",
+          "texts": [
+            "Moscow"
+          ]
+        },
+        {
+          "title": "Alvar Aalto",
+          "texts": [
+            "Alvar Aalto"
+          ]
+        },
+        {
+          "title": "Functionalism (architecture)",
+          "texts": [
+            "functionalism"
+          ]
+        },
+        {
+          "title": "Studio Aalto",
+          "texts": [
+            "Studio Aalto"
+          ]
+        },
+        {
+          "title": "Finlandia Hall",
+          "texts": [
+            "Finlandia Hall",
+            "Finlandia concert hall"
+          ]
+        },
+        {
+          "title": "Kulttuuritalo",
+          "texts": [
+            "House of Culture"
+          ]
+        },
+        {
+          "title": "Aalto Works",
+          "texts": [
+            "Aalto Works"
+          ]
+        },
+        {
+          "title": "UNESCO World Heritage List",
+          "texts": [
+            "UNESCO World Heritage List"
+          ]
+        },
+        {
+          "title": "Stora Enso",
+          "texts": [
+            "Stora Enso"
+          ]
+        },
+        {
+          "title": "Helsinki Olympic Stadium",
+          "texts": [
+            "Olympic Stadium",
+            "The Olympic Stadium"
+          ]
+        },
+        {
+          "title": "Tennispalatsi",
+          "texts": [
+            "Tennis Palace",
+            "Tennispalatsi"
+          ]
+        },
+        {
+          "title": "Töölö Rowing Stadium",
+          "texts": [
+            "Rowing Stadium"
+          ]
+        },
+        {
+          "title": "Helsinki Swimming Stadium",
+          "texts": [
+            "Swimming Stadium"
+          ]
+        },
+        {
+          "title": "Helsinki Velodrome",
+          "texts": [
+            "Velodrome"
+          ]
+        },
+        {
+          "title": "Lasipalatsi",
+          "texts": [
+            "Glass Palace"
+          ]
+        },
+        {
+          "title": "Töölö Sports Hall",
+          "texts": [
+            "Töölö Sports Hall"
+          ]
+        },
+        {
+          "title": "Helsinki-Malmi Airport",
+          "texts": [
+            "Helsinki-Malmi Airport"
+          ]
+        },
+        {
+          "title": "Second World War",
+          "texts": [
+            "Second World War"
+          ]
+        },
+        {
+          "title": "DoCoMoMo",
+          "texts": [
+            "DoCoMoMo"
+          ]
+        },
+        {
+          "title": "Finnish National Board of Antiquities",
+          "texts": [
+            "Finnish Heritage Agency"
+          ]
+        },
+        {
+          "title": "Linnanmäki",
+          "texts": [
+            "Linnanmäki Amusement Park"
+          ]
+        },
+        {
+          "title": "Pihlajamäki",
+          "texts": [
+            "Pihlajamäki"
+          ]
+        },
+        {
+          "title": "Precast concrete",
+          "texts": [
+            "precast concrete"
+          ]
+        },
+        {
+          "title": "Pikku Huopalahti",
+          "texts": [
+            "Pikku Huopalahti"
+          ]
+        },
+        {
+          "title": "Eastern Helsinki",
+          "texts": [
+            "Eastern Helsinki"
+          ]
+        },
+        {
+          "title": "Modern architecture",
+          "texts": [
+            "Modern architecture"
+          ]
+        },
+        {
+          "title": "Kiasma",
+          "texts": [
+            "Kiasma",
+            "Kiasma Art Museum"
+          ]
+        },
+        {
+          "title": "Sanomatalo",
+          "texts": [
+            "Sanomatalo"
+          ]
+        },
+        {
+          "title": "Hotel Torni",
+          "texts": [
+            "Hotel Torni"
+          ]
+        },
+        {
+          "title": "Finago Tower",
+          "texts": [
+            "Neste headquarters"
+          ]
+        },
+        {
+          "title": "Pasila",
+          "texts": [
+            "Pasila"
+          ]
+        },
+        {
+          "title": "Kone",
+          "texts": [
+            "Kone"
+          ]
+        },
+        {
+          "title": "Kalasatama",
+          "texts": [
+            "Kalasatama"
+          ]
+        },
+        {
+          "title": "Sörnäinen Harbour",
+          "texts": [
+            "a former container port"
+          ]
+        },
+        {
+          "title": "Jätkäsaari",
+          "texts": [
+            "Jätkäsaari"
+          ]
+        },
+        {
+          "title": "Ruoholahti",
+          "texts": [
+            "Ruoholahti"
+          ]
+        },
+        {
+          "title": "Low-carbon economy",
+          "texts": [
+            "low-carbon economy"
+          ]
+        },
+        {
+          "title": "Keisarinnankivi",
+          "texts": [
+            "Keisarinnankivi"
+          ]
+        },
+        {
+          "title": "Alexander II of Russia",
+          "texts": [
+            "Alexander II"
+          ]
+        },
+        {
+          "title": "Havis Amanda",
+          "texts": [
+            "Havis Amanda"
+          ]
+        },
+        {
+          "title": "Paavo Nurmi statue",
+          "texts": [
+            "Paavo Nurmi statue"
+          ]
+        },
+        {
+          "title": "Three Smiths Statue",
+          "texts": [
+            "Three Smiths Statue"
+          ]
+        },
+        {
+          "title": "Aleksis Kivi Memorial",
+          "texts": [
+            "Aleksis Kivi Memorial"
+          ]
+        },
+        {
+          "title": "Eino Leino (statue)",
+          "texts": [
+            "Eino Leino Statue"
+          ]
+        },
+        {
+          "title": "Equestrian statue of Marshal Mannerheim",
+          "texts": [
+            "Equestrian statue of Marshal Mannerheim"
+          ]
+        },
+        {
+          "title": "Sibelius Monument (Helsinki)",
+          "texts": [
+            "Sibelius Monument"
+          ]
+        },
+        {
+          "title": "Municipalities of Finland",
+          "texts": [
+            "Finnish municipalities"
+          ]
+        },
+        {
+          "title": "City Council of Helsinki",
+          "texts": [
+            "Helsinki's city council"
+          ]
+        },
+        {
+          "title": "Urban planning",
+          "texts": [
+            "urban planning"
+          ]
+        },
+        {
+          "title": "Public transport",
+          "texts": [
+            "public transport",
+            "public transportation"
+          ]
+        },
+        {
+          "title": "Elections in Finland",
+          "texts": [
+            "municipal elections"
+          ]
+        },
+        {
+          "title": "National Coalition Party",
+          "texts": [
+            "National Coalition Party"
+          ]
+        },
+        {
+          "title": "Social Democratic Party of Finland",
+          "texts": [
+            "Social Democratic Party"
+          ]
+        },
+        {
+          "title": "Green League",
+          "texts": [
+            "Green League"
+          ]
+        },
+        {
+          "title": "Daniel Sazonov",
+          "texts": [
+            "Daniel Sazonov"
+          ]
+        },
+        {
+          "title": "Nordic countries",
+          "texts": [
+            "Nordics"
+          ]
+        },
+        {
+          "title": "Republic of Finland",
+          "texts": [
+            "Republic of Finland"
+          ]
+        },
+        {
+          "title": "World War II",
+          "texts": [
+            "World War II"
+          ]
+        },
+        {
+          "title": "Helsinki Regional Transport Authority",
+          "texts": [
+            "HSL",
+            "Helsinki Regional Transport Authority"
+          ]
+        },
+        {
+          "title": "Lohja",
+          "texts": [
+            "Lohja"
+          ]
+        },
+        {
+          "title": "Hämeenlinna",
+          "texts": [
+            "Hämeenlinna"
+          ]
+        },
+        {
+          "title": "Lahti",
+          "texts": [
+            "Lahti"
+          ]
+        },
+        {
+          "title": "Sámi languages",
+          "texts": [
+            "Sámi"
+          ]
+        },
+        {
+          "title": "New Finn",
+          "texts": [
+            "New Finns"
+          ]
+        },
+        {
+          "title": "English language",
+          "texts": [
+            "English"
+          ]
+        },
+        {
+          "title": "Somali language",
+          "texts": [
+            "Somali"
+          ]
+        },
+        {
+          "title": "Arabic",
+          "texts": [
+            "Arabic"
+          ]
+        },
+        {
+          "title": "Estonian language",
+          "texts": [
+            "Estonian"
+          ]
+        },
+        {
+          "title": "Estonia",
+          "texts": [
+            "Estonia",
+            "Estonian"
+          ]
+        },
+        {
+          "title": "Somalia",
+          "texts": [
+            "Somalia"
+          ]
+        },
+        {
+          "title": "Iraq",
+          "texts": [
+            "Iraq"
+          ]
+        },
+        {
+          "title": "China",
+          "texts": [
+            "China"
+          ]
+        },
+        {
+          "title": "Russia",
+          "texts": [
+            "Russia"
+          ]
+        },
+        {
+          "title": "Evangelical Lutheran Church of Finland",
+          "texts": [
+            "Evangelical Lutheran Church"
+          ]
+        },
+        {
+          "title": "Uspenski Cathedral",
+          "texts": [
+            "Uspenski Cathedral"
+          ]
+        },
+        {
+          "title": "Kallio Church",
+          "texts": [
+            "Kallio Church"
+          ]
+        },
+        {
+          "title": "Temppeliaukio Church",
+          "texts": [
+            "Temppeliaukio Church"
+          ]
+        },
+        {
+          "title": "Orthodoxy",
+          "texts": [
+            "Orthodox"
+          ]
+        },
+        {
+          "title": "Catholicism",
+          "texts": [
+            "Catholic"
+          ]
+        },
+        {
+          "title": "Cathedral of Saint Henry",
+          "texts": [
+            "Cathedral of Saint Henry"
+          ]
+        },
+        {
+          "title": "St. Mary's Church, Helsinki",
+          "texts": [
+            "St Mary's Catholic Parish"
+          ]
+        },
+        {
+          "title": "Bangladeshis",
+          "texts": [
+            "Bangladeshis"
+          ]
+        },
+        {
+          "title": "Kosovo Albanians",
+          "texts": [
+            "Kosovars"
+          ]
+        },
+        {
+          "title": "Kurds",
+          "texts": [
+            "Kurds"
+          ]
+        },
+        {
+          "title": "Bosniaks",
+          "texts": [
+            "Bosniaks"
+          ]
+        },
+        {
+          "title": "Helsinki Islamic Center",
+          "texts": [
+            "Helsinki Islamic Center"
+          ]
+        },
+        {
+          "title": "Helsinki Synagogue",
+          "texts": [
+            "Helsinki Synagogue"
+          ]
+        },
+        {
+          "title": "Jews in Finland",
+          "texts": [
+            "Jews in Finland"
+          ]
+        },
+        {
+          "title": "Turku Synagogue",
+          "texts": [
+            "Turku Synagogue"
+          ]
+        },
+        {
+          "title": "Päijänne Water Tunnel",
+          "texts": [
+            "Päijänne Water Tunnel"
+          ]
+        },
+        {
+          "title": "University of Helsinki",
+          "texts": [
+            "University of Helsinki"
+          ]
+        },
+        {
+          "title": "Aalto University",
+          "texts": [
+            "Aalto University"
+          ]
+        },
+        {
+          "title": "Hanken School of Economics",
+          "texts": [
+            "Hanken School of Economics"
+          ]
+        },
+        {
+          "title": "University of the Arts Helsinki",
+          "texts": [
+            "University of the Arts Helsinki"
+          ]
+        },
+        {
+          "title": "National Defence University (Finland)",
+          "texts": [
+            "National Defence University"
+          ]
+        },
+        {
+          "title": "Haaga-Helia University of Applied Sciences",
+          "texts": [
+            "Haaga-Helia University of Applied Sciences"
+          ]
+        },
+        {
+          "title": "Laurea University of Applied Sciences",
+          "texts": [
+            "Laurea University of Applied Sciences"
+          ]
+        },
+        {
+          "title": "Helsinki Metropolia University of Applied Sciences",
+          "texts": [
+            "Helsinki Metropolia University of Applied Sciences"
+          ]
+        },
+        {
+          "title": "Arcada University of Applied Sciences",
+          "texts": [
+            "Arcada University of Applied Sciences"
+          ]
+        },
+        {
+          "title": "Diaconia University of Applied Sciences",
+          "texts": [
+            "Diaconia University of Applied Sciences"
+          ]
+        },
+        {
+          "title": "HUMAK University of Applied Sciences",
+          "texts": [
+            "HUMAK University of Applied Sciences"
+          ]
+        },
+        {
+          "title": "European Institute of Innovation and Technology",
+          "texts": [
+            "European Institute of Innovation and Technology"
+          ]
+        },
+        {
+          "title": "National Museum of Finland",
+          "texts": [
+            "National Museum of Finland"
+          ]
+        },
+        {
+          "title": "Helsinki City Museum",
+          "texts": [
+            "Helsinki City Museum"
+          ]
+        },
+        {
+          "title": "Helsinki University Museum",
+          "texts": [
+            "Helsinki University Museum"
+          ]
+        },
+        {
+          "title": "Finnish Museum of Natural History",
+          "texts": [
+            "Finnish Museum of Natural History"
+          ]
+        },
+        {
+          "title": "Finnish National Gallery",
+          "texts": [
+            "Finnish National Gallery"
+          ]
+        },
+        {
+          "title": "Ateneum",
+          "texts": [
+            "Ateneum Art Museum"
+          ]
+        },
+        {
+          "title": "Sinebrychoff Art Museum",
+          "texts": [
+            "Sinebrychoff Art Museum"
+          ]
+        },
+        {
+          "title": "Steven Holl",
+          "texts": [
+            "Steven Holl"
+          ]
+        },
+        {
+          "title": "State-owned",
+          "texts": [
+            "state-owned"
+          ]
+        },
+        {
+          "title": "Senate Properties",
+          "texts": [
+            "Senate Properties"
+          ]
+        },
+        {
+          "title": "Helsinki Art Museum",
+          "texts": [
+            "Helsinki Art Museum"
+          ]
+        },
+        {
+          "title": "Architecture & Design Museum, Helsinki",
+          "texts": [
+            "Architecture & Design Museum"
+          ]
+        },
+        {
+          "title": "South Harbour, Helsinki",
+          "texts": [
+            "South Harbour"
+          ]
+        },
+        {
+          "title": "Kaapelitehdas",
+          "texts": [
+            "Cable Factory"
+          ]
+        },
+        {
+          "title": "Hotel and Restaurant Museum",
+          "texts": [
+            "Hotel and Restaurant Museum"
+          ]
+        },
+        {
+          "title": "Military Museum of Finland",
+          "texts": [
+            "Military Museum of Finland"
+          ]
+        },
+        {
+          "title": "Didrichsen Art Museum",
+          "texts": [
+            "Didrichsen Art Museum"
+          ]
+        },
+        {
+          "title": "Amos Anderson Art Museum",
+          "texts": [
+            "Amos Rex Art Museum"
+          ]
+        },
+        {
+          "title": "Finnish National Theatre",
+          "texts": [
+            "Finnish National Theatre"
+          ]
+        },
+        {
+          "title": "Helsinki City Theatre",
+          "texts": [
+            "Helsinki City Theatre"
+          ]
+        },
+        {
+          "title": "Swedish Theatre",
+          "texts": [
+            "Swedish Theatre"
+          ]
+        },
+        {
+          "title": "Alexander Theatre",
+          "texts": [
+            "Alexander Theatre"
+          ]
+        },
+        {
+          "title": "KOM-teatteri",
+          "texts": [
+            "KOM-teatteri"
+          ]
+        },
+        {
+          "title": "Finnish National Opera and Ballet",
+          "texts": [
+            "Finnish National Opera and Ballet"
+          ]
+        },
+        {
+          "title": "Dance House Helsinki",
+          "texts": [
+            "Dance House Helsinki"
+          ]
+        },
+        {
+          "title": "Helsinki Philharmonic Orchestra",
+          "texts": [
+            "Helsinki Philharmonic Orchestra"
+          ]
+        },
+        {
+          "title": "Finnish Radio Symphony Orchestra",
+          "texts": [
+            "Finnish Radio Symphony Orchestra"
+          ]
+        },
+        {
+          "title": "Helsinki Music Centre",
+          "texts": [
+            "Helsinki Music Centre"
+          ]
+        },
+        {
+          "title": "Kaija Saariaho",
+          "texts": [
+            "Kaija Saariaho"
+          ]
+        },
+        {
+          "title": "Magnus Lindberg (Finnish composer)",
+          "texts": [
+            "Magnus Lindberg"
+          ]
+        },
+        {
+          "title": "Esa-Pekka Salonen",
+          "texts": [
+            "Esa-Pekka Salonen"
+          ]
+        },
+        {
+          "title": "Einojuhani Rautavaara",
+          "texts": [
+            "Einojuhani Rautavaara"
+          ]
+        },
+        {
+          "title": "Sibelius Academy",
+          "texts": [
+            "Sibelius Academy"
+          ]
+        },
+        {
+          "title": "Finnish National Opera",
+          "texts": [
+            "Finnish National Opera"
+          ]
+        },
+        {
+          "title": "Martti Wallén",
+          "texts": [
+            "Martti Wallén"
+          ]
+        },
+        {
+          "title": "Monica Groop",
+          "texts": [
+            "Monica Groop"
+          ]
+        },
+        {
+          "title": "Children of Bodom",
+          "texts": [
+            "Children of Bodom"
+          ]
+        },
+        {
+          "title": "Hanoi Rocks",
+          "texts": [
+            "Hanoi Rocks"
+          ]
+        },
+        {
+          "title": "HIM (Finnish band)",
+          "texts": [
+            "HIM"
+          ]
+        },
+        {
+          "title": "Stratovarius",
+          "texts": [
+            "Stratovarius"
+          ]
+        },
+        {
+          "title": "The 69 Eyes",
+          "texts": [
+            "The 69 Eyes"
+          ]
+        },
+        {
+          "title": "Finntroll",
+          "texts": [
+            "Finntroll"
+          ]
+        },
+        {
+          "title": "Ensiferum",
+          "texts": [
+            "Ensiferum"
+          ]
+        },
+        {
+          "title": "Wintersun",
+          "texts": [
+            "Wintersun"
+          ]
+        },
+        {
+          "title": "The Rasmus",
+          "texts": [
+            "The Rasmus"
+          ]
+        },
+        {
+          "title": "Poets of the Fall",
+          "texts": [
+            "Poets of the Fall"
+          ]
+        },
+        {
+          "title": "Apocalyptica",
+          "texts": [
+            "Apocalyptica"
+          ]
+        },
+        {
+          "title": "Metal music",
+          "texts": [
+            "metal music"
+          ]
+        },
+        {
+          "title": "Tuska Open Air Metal Festival",
+          "texts": [
+            "Tuska Open Air Metal Festival"
+          ]
+        },
+        {
+          "title": "Suvilahti",
+          "texts": [
+            "Suvilahti"
+          ]
+        },
+        {
+          "title": "Sörnäinen",
+          "texts": [
+            "Sörnäinen"
+          ]
+        },
+        {
+          "title": "Veikkaus Arena",
+          "texts": [
+            "Veikkaus Arena"
+          ]
+        },
+        {
+          "title": "Helsinki Ice Hall",
+          "texts": [
+            "Helsinki Ice Hall"
+          ]
+        },
+        {
+          "title": "Messukeskus Helsinki",
+          "texts": [
+            "Messukeskus Helsinki"
+          ]
+        },
+        {
+          "title": "Eurovision Song Contest",
+          "texts": [
+            "Eurovision Song Contest"
+          ]
+        },
+        {
+          "title": "Lordi",
+          "texts": [
+            "Lordi"
+          ]
+        },
+        {
+          "title": "Eurovision Song Contest 2006",
+          "texts": [
+            "2006"
+          ]
+        },
+        {
+          "title": "Tavastia Club",
+          "texts": [
+            "Tavastia Club"
+          ]
+        },
+        {
+          "title": "Flow Festival",
+          "texts": [
+            "Flow Festival"
+          ]
+        },
+        {
+          "title": "Helsinki Day",
+          "texts": [
+            "Helsinki Day"
+          ]
+        },
+        {
+          "title": "Open-air concert",
+          "texts": [
+            "open-air concert"
+          ]
+        },
+        {
+          "title": "Helsinki Festival",
+          "texts": [
+            "Helsinki Festival"
+          ]
+        },
+        {
+          "title": "Night of the Arts",
+          "texts": [
+            "Night of the Arts"
+          ]
+        },
+        {
+          "title": "United Buddy Bears",
+          "texts": [
+            "United Buddy Bears"
+          ]
+        },
+        {
+          "title": "Nokia",
+          "texts": [
+            "Nokia"
+          ]
+        },
+        {
+          "title": "Marimekko",
+          "texts": [
+            "Marimekko"
+          ]
+        },
+        {
+          "title": "Aalto University School of Arts, Design and Architecture",
+          "texts": [
+            "Aalto University School of Arts, Design and Architecture"
+          ]
+        },
+        {
+          "title": "Helsinki International Film Festival",
+          "texts": [
+            "Helsinki International Film Festival – Love & Anarchy"
+          ]
+        },
+        {
+          "title": "Night Visions (film festival)",
+          "texts": [
+            "Night Visions"
+          ]
+        },
+        {
+          "title": "Horror film",
+          "texts": [
+            "horror"
+          ]
+        },
+        {
+          "title": "Fantasy",
+          "texts": [
+            "fantasy"
+          ]
+        },
+        {
+          "title": "Science fiction",
+          "texts": [
+            "science fiction"
+          ]
+        },
+        {
+          "title": "Documentary film",
+          "texts": [
+            "documentary"
+          ]
+        },
+        {
+          "title": "Contemporary art",
+          "texts": [
+            "contemporary art"
+          ]
+        },
+        {
+          "title": "Lux Helsinki",
+          "texts": [
+            "Lux Helsinki"
+          ]
+        },
+        {
+          "title": "Sanoma",
+          "texts": [
+            "Sanoma"
+          ]
+        },
+        {
+          "title": "Newspaper of record",
+          "texts": [
+            "journal of record"
+          ]
+        },
+        {
+          "title": "Helsingin Sanomat",
+          "texts": [
+            "Helsingin Sanomat"
+          ]
+        },
+        {
+          "title": "Tabloid (newspaper format)",
+          "texts": [
+            "tabloid"
+          ]
+        },
+        {
+          "title": "Ilta-Sanomat",
+          "texts": [
+            "Ilta-Sanomat"
+          ]
+        },
+        {
+          "title": "Taloussanomat",
+          "texts": [
+            "Taloussanomat"
+          ]
+        },
+        {
+          "title": "Nelonen (TV channel)",
+          "texts": [
+            "Nelonen"
+          ]
+        },
+        {
+          "title": "Ruutu+",
+          "texts": [
+            "Ruutu"
+          ]
+        },
+        {
+          "title": "Alma Media",
+          "texts": [
+            "Alma Media"
+          ]
+        },
+        {
+          "title": "Iltalehti",
+          "texts": [
+            "Iltalehti"
+          ]
+        },
+        {
+          "title": "Kauppalehti",
+          "texts": [
+            "Kauppalehti"
+          ]
+        },
+        {
+          "title": "Talouselämä",
+          "texts": [
+            "Talouselämä"
+          ]
+        },
+        {
+          "title": "Yle",
+          "texts": [
+            "Yle"
+          ]
+        },
+        {
+          "title": "Yle TV1",
+          "texts": [
+            "Yle TV1"
+          ]
+        },
+        {
+          "title": "Yle TV2",
+          "texts": [
+            "Yle TV2"
+          ]
+        },
+        {
+          "title": "Yle Teema & Fem",
+          "texts": [
+            "Yle Teema & Fem"
+          ]
+        },
+        {
+          "title": "Yle Radio Suomi",
+          "texts": [
+            "Yle Radio 1",
+            "Yle Radio Suomi"
+          ]
+        },
+        {
+          "title": "YleX",
+          "texts": [
+            "YleX"
+          ]
+        },
+        {
+          "title": "Yle Vega",
+          "texts": [
+            "Yle Vega"
+          ]
+        },
+        {
+          "title": "Yle X3M",
+          "texts": [
+            "Yle X3M"
+          ]
+        },
+        {
+          "title": "Digital television",
+          "texts": [
+            "digitally"
+          ]
+        },
+        {
+          "title": "Yle Transmission Tower",
+          "texts": [
+            "Yle Transmission Tower"
+          ]
+        },
+        {
+          "title": "MTV3",
+          "texts": [
+            "MTV3"
+          ]
+        },
+        {
+          "title": "Radio Nova (Finland)",
+          "texts": [
+            "Radio Nova"
+          ]
+        },
+        {
+          "title": "Nordic Broadcasting",
+          "texts": [
+            "Nordic Broadcasting"
+          ]
+        },
+        {
+          "title": "Bonnier Group",
+          "texts": [
+            "Bonnier"
+          ]
+        },
+        {
+          "title": "Proventus",
+          "texts": [
+            "Proventus"
+          ]
+        },
+        {
+          "title": "Inn",
+          "texts": [
+            "inns"
+          ]
+        },
+        {
+          "title": "Pub",
+          "texts": [
+            "pubs"
+          ]
+        },
+        {
+          "title": "Alcoholic drink",
+          "texts": [
+            "alcoholic beverages"
+          ]
+        },
+        {
+          "title": "Merchant",
+          "texts": [
+            "merchants"
+          ]
+        },
+        {
+          "title": "Coffeehouse",
+          "texts": [
+            "café"
+          ]
+        },
+        {
+          "title": "Café Ekberg",
+          "texts": [
+            "Café Ekberg"
+          ]
+        },
+        {
+          "title": "Fredrik Ekberg",
+          "texts": [
+            "Fredrik Ekberg"
+          ]
+        },
+        {
+          "title": "St. Petersburg",
+          "texts": [
+            "St. Petersburg"
+          ]
+        },
+        {
+          "title": "Pastry",
+          "texts": [
+            "pastry"
+          ]
+        },
+        {
+          "title": "Elite",
+          "texts": [
+            "elite"
+          ]
+        },
+        {
+          "title": "Karl Fazer",
+          "texts": [
+            "Karl Fazer"
+          ]
+        },
+        {
+          "title": "Fazer",
+          "texts": [
+            "Fazer"
+          ]
+        },
+        {
+          "title": "Cafe Regatta",
+          "texts": [
+            "Café Regatta"
+          ]
+        },
+        {
+          "title": "Port city",
+          "texts": [
+            "port city"
+          ]
+        },
+        {
+          "title": "Fish as food",
+          "texts": [
+            "fish food"
+          ]
+        },
+        {
+          "title": "Northern Europe",
+          "texts": [
+            "Northern Europe"
+          ]
+        },
+        {
+          "title": "Market Square, Helsinki",
+          "texts": [
+            "Market Square"
+          ]
+        },
+        {
+          "title": "Herring fair",
+          "texts": [
+            "traditional herring market"
+          ]
+        },
+        {
+          "title": "Salmon",
+          "texts": [
+            "Salmon"
+          ]
+        },
+        {
+          "title": "Fish soup",
+          "texts": [
+            "souped"
+          ]
+        },
+        {
+          "title": "Bream",
+          "texts": [
+            "bream"
+          ]
+        },
+        {
+          "title": "Mashed potato",
+          "texts": [
+            "mashed potatoes"
+          ]
+        },
+        {
+          "title": "Redcurrant",
+          "texts": [
+            "redcurrant"
+          ]
+        },
+        {
+          "title": "Vispipuuro",
+          "texts": [
+            "vispipuuro"
+          ]
+        },
+        {
+          "title": "Pasty",
+          "texts": [
+            "pasties"
+          ]
+        },
+        {
+          "title": "Veal",
+          "texts": [
+            "veal"
+          ]
+        },
+        {
+          "title": "Moose",
+          "texts": [
+            "elk"
+          ]
+        },
+        {
+          "title": "Cream sauce",
+          "texts": [
+            "cream sauce"
+          ]
+        },
+        {
+          "title": "Seafood",
+          "texts": [
+            "seafood"
+          ]
+        },
+        {
+          "title": "Food culture",
+          "texts": [
+            "food culture"
+          ]
+        },
+        {
+          "title": "Reindeer",
+          "texts": [
+            "reindeer"
+          ]
+        },
+        {
+          "title": "Bear",
+          "texts": [
+            "bear"
+          ]
+        },
+        {
+          "title": "Asian cuisine",
+          "texts": [
+            "Asian restaurants"
+          ]
+        },
+        {
+          "title": "Chinese cuisine",
+          "texts": [
+            "Chinese"
+          ]
+        },
+        {
+          "title": "Thai cuisine",
+          "texts": [
+            "Thai"
+          ]
+        },
+        {
+          "title": "Indian cuisine",
+          "texts": [
+            "Indian"
+          ]
+        },
+        {
+          "title": "Nepalese cuisine",
+          "texts": [
+            "Nepalese"
+          ]
+        },
+        {
+          "title": "Vietnamese cuisine",
+          "texts": [
+            "Vietnamese"
+          ]
+        },
+        {
+          "title": "Sushi",
+          "texts": [
+            "Sushi"
+          ]
+        },
+        {
+          "title": "Restaurant buffets",
+          "texts": [
+            "restaurant buffets"
+          ]
+        },
+        {
+          "title": "Nordic cuisine",
+          "texts": [
+            "Nordic flavors"
+          ]
+        },
+        {
+          "title": "Middle Eastern cuisine",
+          "texts": [
+            "Middle Eastern"
+          ]
+        },
+        {
+          "title": "Russian cuisine",
+          "texts": [
+            "Russian cuisine"
+          ]
+        },
+        {
+          "title": "Blini",
+          "texts": [
+            "blinis"
+          ]
+        },
+        {
+          "title": "Pancake",
+          "texts": [
+            "pancakes"
+          ]
+        },
+        {
+          "title": "Teurastamo",
+          "texts": [
+            "Teurastamo"
+          ]
+        },
+        {
+          "title": "Hermanni (Helsinki)",
+          "texts": [
+            "Hermanni"
+          ]
+        },
+        {
+          "title": "Slaughterhouse",
+          "texts": [
+            "slaughterhouse"
+          ]
+        },
+        {
+          "title": "Michelin Guide",
+          "texts": [
+            "Michelin Guide"
+          ]
+        },
+        {
+          "title": "Bib Gourmand",
+          "texts": [
+            "Bib Gourmand"
+          ]
+        },
+        {
+          "title": "Helsinki Central Library Oodi",
+          "texts": [
+            "Helsinki Central Library Oodi"
+          ]
+        },
+        {
+          "title": "National Library of Finland",
+          "texts": [
+            "National Library of Finland"
+          ]
+        },
+        {
+          "title": "Rikhardinkatu library",
+          "texts": [
+            "Rikhardinkatu Library"
+          ]
+        },
+        {
+          "title": "Sauna",
+          "texts": [
+            "Sauna"
+          ]
+        },
+        {
+          "title": "Kotiharjun Sauna",
+          "texts": [
+            "Kotiharjun Sauna"
+          ]
+        },
+        {
+          "title": "Löyly",
+          "texts": [
+            "Löyly"
+          ]
+        },
+        {
+          "title": "Allas Sea Pool",
+          "texts": [
+            "Allas Sea Pool"
+          ]
+        },
+        {
+          "title": "Vappu",
+          "texts": [
+            "Vappu"
+          ]
+        },
+        {
+          "title": "May Day",
+          "texts": [
+            "May Day Eve"
+          ]
+        },
+        {
+          "title": "Kaivopuisto",
+          "texts": [
+            "Kaivopuisto"
+          ]
+        },
+        {
+          "title": "Helsinki Pride",
+          "texts": [
+            "Helsinki Pride"
+          ]
+        },
+        {
+          "title": "Midsummer",
+          "texts": [
+            "Midsummer"
+          ]
+        },
+        {
+          "title": "Maypole",
+          "texts": [
+            "maypole"
+          ]
+        },
+        {
+          "title": "Bonfire",
+          "texts": [
+            "bonfires"
+          ]
+        },
+        {
+          "title": "IAAF World Championships in Athletics",
+          "texts": [
+            "World Championships in Athletics"
+          ]
+        },
+        {
+          "title": "Association football",
+          "texts": [
+            "football"
+          ]
+        },
+        {
+          "title": "Ice hockey",
+          "texts": [
+            "ice hockey"
+          ]
+        },
+        {
+          "title": "HJK Helsinki",
+          "texts": [
+            "HJK Helsinki"
+          ]
+        },
+        {
+          "title": "HIFK Fotboll",
+          "texts": [
+            "IFK Helsingfors"
+          ]
+        },
+        {
+          "title": "Stadin derby",
+          "texts": [
+            "Stadin derby"
+          ]
+        },
+        {
+          "title": "HIFK (ice hockey)",
+          "texts": [
+            "IFK Helsingfors"
+          ]
+        },
+        {
+          "title": "Jokerit",
+          "texts": [
+            "Jokerit"
+          ]
+        },
+        {
+          "title": "Bandy",
+          "texts": [
+            "bandy"
+          ]
+        },
+        {
+          "title": "Botnia-69",
+          "texts": [
+            "Botnia-69"
+          ]
+        },
+        {
+          "title": "Bandy World Championship",
+          "texts": [
+            "Bandy World Championship"
+          ]
+        },
+        {
+          "title": "Helsinki City Marathon",
+          "texts": [
+            "Helsinki City Marathon"
+          ]
+        },
+        {
+          "title": "Formula 3000",
+          "texts": [
+            "Formula 3000"
+          ]
+        },
+        {
+          "title": "European Figure Skating Championships",
+          "texts": [
+            "European Figure Skating Championships"
+          ]
+        },
+        {
+          "title": "World Figure Skating Championships",
+          "texts": [
+            "World Figure Skating Championships"
+          ]
+        },
+        {
+          "title": "American football",
+          "texts": [
+            "American football"
+          ]
+        },
+        {
+          "title": "Vaahteraliiga",
+          "texts": [
+            "Vaahteraliiga"
+          ]
+        },
+        {
+          "title": "Helsinki Roosters",
+          "texts": [
+            "Helsinki Roosters"
+          ]
+        },
+        {
+          "title": "Sports hall",
+          "texts": [
+            "sports halls"
+          ]
+        },
+        {
+          "title": "Sports field",
+          "texts": [
+            "sports fields"
+          ]
+        },
+        {
+          "title": "Ice rinks",
+          "texts": [
+            "ice rinks"
+          ]
+        },
+        {
+          "title": "Swimming pool",
+          "texts": [
+            "swimming pools"
+          ]
+        },
+        {
+          "title": "Beach",
+          "texts": [
+            "beaches"
+          ]
+        },
+        {
+          "title": "Hietaniemi Beach",
+          "texts": [
+            "Hietaniemi Beach"
+          ]
+        },
+        {
+          "title": "Public transport in Helsinki",
+          "texts": [
+            "public transport system"
+          ]
+        },
+        {
+          "title": "Helsinki tram",
+          "texts": [
+            "trams"
+          ]
+        },
+        {
+          "title": "VR commuter rail",
+          "texts": [
+            "commuter rail"
+          ]
+        },
+        {
+          "title": "Bus",
+          "texts": [
+            "bus"
+          ]
+        },
+        {
+          "title": "Ferry",
+          "texts": [
+            "ferry"
+          ]
+        },
+        {
+          "title": "Helsinki City Bikes",
+          "texts": [
+            "public bike system"
+          ]
+        },
+        {
+          "title": "Trams in Helsinki",
+          "texts": [
+            "Helsinki's tram system"
+          ]
+        },
+        {
+          "title": "Horse-drawn",
+          "texts": [
+            "horse-drawn"
+          ]
+        },
+        {
+          "title": "Helsinki light rail line 15",
+          "texts": [
+            "one"
+          ]
+        },
+        {
+          "title": "Light rail",
+          "texts": [
+            "light rail"
+          ]
+        },
+        {
+          "title": "Keilaniemi",
+          "texts": [
+            "Keilaniemi"
+          ]
+        },
+        {
+          "title": "Planned tram projects in Helsinki",
+          "texts": [
+            "planned to more than double"
+          ]
+        },
+        {
+          "title": "Vantaa light rail",
+          "texts": [
+            "Vantaa light rail"
+          ]
+        },
+        {
+          "title": "Crown Bridges",
+          "texts": [
+            "Crown Bridges"
+          ]
+        },
+        {
+          "title": "Laajasalo",
+          "texts": [
+            "Laajasalo"
+          ]
+        },
+        {
+          "title": "West Helsinki light rail",
+          "texts": [
+            "West Helsinki light rail"
+          ]
+        },
+        {
+          "title": "Kannelmäki",
+          "texts": [
+            "Kannelmäki"
+          ]
+        },
+        {
+          "title": "Helsinki commuter rail",
+          "texts": [
+            "commuter rail system"
+          ]
+        },
+        {
+          "title": "Ring Rail Line",
+          "texts": [
+            "Ring Rail Line"
+          ]
+        },
+        {
+          "title": "Semicircle",
+          "texts": [
+            "semicircular"
+          ]
+        },
+        {
+          "title": "Ring road",
+          "texts": [
+            "beltways"
+          ]
+        },
+        {
+          "title": "Ring I",
+          "texts": [
+            "Ring I"
+          ]
+        },
+        {
+          "title": "Ring II",
+          "texts": [
+            "Ring II"
+          ]
+        },
+        {
+          "title": "Ring III",
+          "texts": [
+            "Ring III"
+          ]
+        },
+        {
+          "title": "Länsiväylä",
+          "texts": [
+            "Länsiväylä"
+          ]
+        },
+        {
+          "title": "Itäväylä",
+          "texts": [
+            "Itäväylä"
+          ]
+        },
+        {
+          "title": "Highways in Finland",
+          "texts": [
+            "Finnish highways"
+          ]
+        },
+        {
+          "title": "Motorway",
+          "texts": [
+            "motorways"
+          ]
+        },
+        {
+          "title": "Vihdintie",
+          "texts": [
+            "Vihdintie"
+          ]
+        },
+        {
+          "title": "Finnish national road 1",
+          "texts": [
+            "Finnish national road 1"
+          ]
+        },
+        {
+          "title": "European route E18",
+          "texts": [
+            "E18"
+          ]
+        },
+        {
+          "title": "Salo, Finland",
+          "texts": [
+            "Salo"
+          ]
+        },
+        {
+          "title": "Finnish national road 3",
+          "texts": [
+            "Finnish national road 3"
+          ]
+        },
+        {
+          "title": "European route E12",
+          "texts": [
+            "E12"
+          ]
+        },
+        {
+          "title": "Tampere",
+          "texts": [
+            "Tampere"
+          ]
+        },
+        {
+          "title": "Vaasa",
+          "texts": [
+            "Vaasa"
+          ]
+        },
+        {
+          "title": "Finnish national road 4",
+          "texts": [
+            "Finnish national road 4"
+          ]
+        },
+        {
+          "title": "European route E75",
+          "texts": [
+            "E75"
+          ]
+        },
+        {
+          "title": "Jyväskylä",
+          "texts": [
+            "Jyväskylä"
+          ]
+        },
+        {
+          "title": "Oulu",
+          "texts": [
+            "Oulu"
+          ]
+        },
+        {
+          "title": "Finnish national road 7",
+          "texts": [
+            "Finnish national road 7"
+          ]
+        },
+        {
+          "title": "Kotka",
+          "texts": [
+            "Kotka"
+          ]
+        },
+        {
+          "title": "Helsinki Central Railway Station",
+          "texts": [
+            "Helsinki Central Railway Station"
+          ]
+        },
+        {
+          "title": "Finnish Main Line",
+          "texts": [
+            "Main Line"
+          ]
+        },
+        {
+          "title": "Allegro (train)",
+          "texts": [
+            "Allegro high-speed trains"
+          ]
+        },
+        {
+          "title": "Helsinki to Tallinn Tunnel",
+          "texts": [
+            "Helsinki to Tallinn Tunnel"
+          ]
+        },
+        {
+          "title": "Rail Baltica",
+          "texts": [
+            "Rail Baltica"
+          ]
+        },
+        {
+          "title": "Icebreaker",
+          "texts": [
+            "icebreakers"
+          ]
+        },
+        {
+          "title": "West Harbour, Helsinki",
+          "texts": [
+            "West Harbour"
+          ]
+        },
+        {
+          "title": "Hernesaari",
+          "texts": [
+            "Hernesaari"
+          ]
+        },
+        {
+          "title": "Port of Helsinki",
+          "texts": [
+            "Port of Helsinki"
+          ]
+        },
+        {
+          "title": "Port of Dover",
+          "texts": [
+            "Port of Dover"
+          ]
+        },
+        {
+          "title": "List of busiest cruise ports by passengers",
+          "texts": [
+            "busiest passenger port in the world"
+          ]
+        },
+        {
+          "title": "Mariehamn",
+          "texts": [
+            "Mariehamn"
+          ]
+        },
+        {
+          "title": "MS J. L. Runeberg",
+          "texts": [
+            "MS J. L. Runeberg"
+          ]
+        },
+        {
+          "title": "Medieval",
+          "texts": [
+            "medieval"
+          ]
+        },
+        {
+          "title": "Finnlines",
+          "texts": [
+            "Finnlines"
+          ]
+        },
+        {
+          "title": "Gdynia",
+          "texts": [
+            "Gdynia"
+          ]
+        },
+        {
+          "title": "Travemünde",
+          "texts": [
+            "Travemünde"
+          ]
+        },
+        {
+          "title": "Rostock",
+          "texts": [
+            "Rostock"
+          ]
+        },
+        {
+          "title": "St. Peter Line",
+          "texts": [
+            "St. Peter Line"
+          ]
+        },
+        {
+          "title": "Beijing",
+          "texts": [
+            "Beijing"
+          ]
+        },
+        {
+          "title": "Berlin",
+          "texts": [
+            "Berlin"
+          ]
+        },
+        {
+          "title": "Saint Petersburg",
+          "texts": [
+            "Saint Petersburg"
+          ]
+        },
+        {
+          "title": "2022 Russian invasion of Ukraine",
+          "texts": [
+            "2022 Russian invasion of Ukraine"
+          ]
+        },
+        {
+          "title": "Peter Forsskål",
+          "texts": [
+            "Peter Forsskål"
+          ]
+        },
+        {
+          "title": "Peter Hagerstein",
+          "texts": [
+            "Peter Hagerstein"
+          ]
+        },
+        {
+          "title": "Kingdom of Tahiti",
+          "texts": [
+            "Kings of Tahiti"
+          ]
+        },
+        {
+          "title": "Axel Hampus Dalström",
+          "texts": [
+            "Axel Hampus Dalström"
+          ]
+        },
+        {
+          "title": "Maria Tschetschulin",
+          "texts": [
+            "Maria Tschetschulin"
+          ]
+        },
+        {
+          "title": "Augusta Krook",
+          "texts": [
+            "Augusta Krook"
+          ]
+        },
+        {
+          "title": "Agnes Tschetschulin",
+          "texts": [
+            "Agnes Tschetschulin"
+          ]
+        },
+        {
+          "title": "Jakob Sederholm",
+          "texts": [
+            "Jakob Sederholm"
+          ]
+        },
+        {
+          "title": "Shooting sport",
+          "texts": [
+            "sport shooter"
+          ]
+        },
+        {
+          "title": "Emil Lindh",
+          "texts": [
+            "Emil Lindh"
+          ]
+        },
+        {
+          "title": "Oskar Merikanto",
+          "texts": [
+            "Oskar Merikanto"
+          ]
+        },
+        {
+          "title": "Signe Lagerborg-Stenius",
+          "texts": [
+            "Signe Lagerborg-Stenius"
+          ]
+        },
+        {
+          "title": "Maggie Gripenberg",
+          "texts": [
+            "Maggie Gripenberg"
+          ]
+        },
+        {
+          "title": "Gunnar Nordström",
+          "texts": [
+            "Gunnar Nordström"
+          ]
+        },
+        {
+          "title": "Väinö Tanner",
+          "texts": [
+            "Väinö Tanner"
+          ]
+        },
+        {
+          "title": "Walter Jakobsson",
+          "texts": [
+            "Walter Jakobsson"
+          ]
+        },
+        {
+          "title": "Mauritz Stiller",
+          "texts": [
+            "Mauritz Stiller"
+          ]
+        },
+        {
+          "title": "Karl Wiik",
+          "texts": [
+            "Karl Wiik"
+          ]
+        },
+        {
+          "title": "Lennart Lindroos",
+          "texts": [
+            "Lennart Lindroos"
+          ]
+        },
+        {
+          "title": "Erkki Karu",
+          "texts": [
+            "Erkki Karu"
+          ]
+        },
+        {
+          "title": "Kai Donner",
+          "texts": [
+            "Kai Donner"
+          ]
+        },
+        {
+          "title": "Gustaf Molander",
+          "texts": [
+            "Gustaf Molander"
+          ]
+        },
+        {
+          "title": "Johan Helo",
+          "texts": [
+            "Johan Helo"
+          ]
+        },
+        {
+          "title": "Minna Craucher",
+          "texts": [
+            "Minna Craucher"
+          ]
+        },
+        {
+          "title": "Artturi Ilmari Virtanen",
+          "texts": [
+            "Artturi Ilmari Virtanen"
+          ]
+        },
+        {
+          "title": "Rolf Nevanlinna",
+          "texts": [
+            "Rolf Nevanlinna"
+          ]
+        },
+        {
+          "title": "Elmer Diktonius",
+          "texts": [
+            "Elmer Diktonius"
+          ]
+        },
+        {
+          "title": "Yrjö Leino",
+          "texts": [
+            "Yrjö Leino"
+          ]
+        },
+        {
+          "title": "Fredrika Wetterhoff",
+          "texts": [
+            "Fredrika Wetterhoff"
+          ]
+        },
+        {
+          "title": "Toivo Wiherheimo",
+          "texts": [
+            "Toivo Wiherheimo"
+          ]
+        },
+        {
+          "title": "Aku Ahjolinna",
+          "texts": [
+            "Aku Ahjolinna"
+          ]
+        },
+        {
+          "title": "Lars Ahlfors",
+          "texts": [
+            "Lars Ahlfors"
+          ]
+        },
+        {
+          "title": "Laura Åkerlund",
+          "texts": [
+            "Laura Åkerlund"
+          ]
+        },
+        {
+          "title": "Ella Eronen",
+          "texts": [
+            "Ella Eronen"
+          ]
+        },
+        {
+          "title": "Helena Anhava",
+          "texts": [
+            "Helena Anhava"
+          ]
+        },
+        {
+          "title": "Paavo Berglund",
+          "texts": [
+            "Paavo Berglund"
+          ]
+        },
+        {
+          "title": "Laura Birn",
+          "texts": [
+            "Laura Birn"
+          ]
+        },
+        {
+          "title": "Laci Boldemann",
+          "texts": [
+            "Laci Boldemann"
+          ]
+        },
+        {
+          "title": "Irja Agnes Browallius",
+          "texts": [
+            "Irja Agnes Browallius"
+          ]
+        },
+        {
+          "title": "Bo Carpelan",
+          "texts": [
+            "Bo Carpelan"
+          ]
+        },
+        {
+          "title": "Tarja Cronberg",
+          "texts": [
+            "Tarja Cronberg"
+          ]
+        },
+        {
+          "title": "Jörn Donner",
+          "texts": [
+            "Jörn Donner"
+          ]
+        },
+        {
+          "title": "George Gaynes",
+          "texts": [
+            "George Gaynes"
+          ]
+        },
+        {
+          "title": "Ragnar Granit",
+          "texts": [
+            "Ragnar Granit"
+          ]
+        },
+        {
+          "title": "Mika Waltari",
+          "texts": [
+            "Mika Waltari"
+          ]
+        },
+        {
+          "title": "Elina Haavio-Mannila",
+          "texts": [
+            "Elina Haavio-Mannila"
+          ]
+        },
+        {
+          "title": "Tarja Halonen",
+          "texts": [
+            "Tarja Halonen"
+          ]
+        },
+        {
+          "title": "Reino Helismaa",
+          "texts": [
+            "Reino Helismaa"
+          ]
+        },
+        {
+          "title": "Kai Hietarinta",
+          "texts": [
+            "Kai Hietarinta"
+          ]
+        },
+        {
+          "title": "Kim Hirschovits",
+          "texts": [
+            "Kim Hirschovits"
+          ]
+        },
+        {
+          "title": "Bengt Holmström",
+          "texts": [
+            "Bengt Holmström"
+          ]
+        },
+        {
+          "title": "Shawn Huff",
+          "texts": [
+            "Shawn Huff"
+          ]
+        },
+        {
+          "title": "Ville Husso",
+          "texts": [
+            "Ville Husso"
+          ]
+        },
+        {
+          "title": "Kirsti Ilvessalo",
+          "texts": [
+            "Kirsti Ilvessalo"
+          ]
+        },
+        {
+          "title": "Juha Jääskä",
+          "texts": [
+            "Juha Jääskä"
+          ]
+        },
+        {
+          "title": "Tove Jansson",
+          "texts": [
+            "Tove Jansson"
+          ]
+        },
+        {
+          "title": "Kaapo Kähkönen",
+          "texts": [
+            "Kaapo Kähkönen"
+          ]
+        },
+        {
+          "title": "Aki Kaurismäki",
+          "texts": [
+            "Aki Kaurismäki"
+          ]
+        },
+        {
+          "title": "Emma Kimiläinen",
+          "texts": [
+            "Emma Kimiläinen"
+          ]
+        },
+        {
+          "title": "Kiti Kokkonen",
+          "texts": [
+            "Kiti Kokkonen"
+          ]
+        },
+        {
+          "title": "Petteri Koponen",
+          "texts": [
+            "Petteri Koponen"
+          ]
+        },
+        {
+          "title": "Lennart Koskinen",
+          "texts": [
+            "Lennart Koskinen"
+          ]
+        },
+        {
+          "title": "Sam Lake",
+          "texts": [
+            "Sam Lake"
+          ]
+        },
+        {
+          "title": "Remedy Entertainment",
+          "texts": [
+            "Remedy Entertainment"
+          ]
+        },
+        {
+          "title": "Olli Lehto",
+          "texts": [
+            "Olli Lehto"
+          ]
+        },
+        {
+          "title": "Samuel Lehtonen",
+          "texts": [
+            "Samuel Lehtonen"
+          ]
+        },
+        {
+          "title": "Juha Leiviskä",
+          "texts": [
+            "Juha Leiviskä"
+          ]
+        },
+        {
+          "title": "Magnus Lindberg",
+          "texts": [
+            "Magnus Lindberg"
+          ]
+        },
+        {
+          "title": "Esa Lindell",
+          "texts": [
+            "Esa Lindell"
+          ]
+        },
+        {
+          "title": "Lill Lindfors",
+          "texts": [
+            "Lill Lindfors"
+          ]
+        },
+        {
+          "title": "Jari Mäenpää",
+          "texts": [
+            "Jari Mäenpää"
+          ]
+        },
+        {
+          "title": "Melodic death metal",
+          "texts": [
+            "melodic death metal"
+          ]
+        },
+        {
+          "title": "Folk metal",
+          "texts": [
+            "folk metal"
+          ]
+        },
+        {
+          "title": "Klaus Mäkelä",
+          "texts": [
+            "Klaus Mäkelä"
+          ]
+        },
+        {
+          "title": "Susanna Mälkki",
+          "texts": [
+            "Susanna Mälkki"
+          ]
+        },
+        {
+          "title": "Georg Malmstén",
+          "texts": [
+            "Georg Malmstén"
+          ]
+        },
+        {
+          "title": "Tauno Marttinen",
+          "texts": [
+            "Tauno Marttinen"
+          ]
+        },
+        {
+          "title": "Vesa-Matti Loiri",
+          "texts": [
+            "Vesa-Matti Loiri"
+          ]
+        },
+        {
+          "title": "Abdirahim Hussein Mohamed",
+          "texts": [
+            "Abdirahim Hussein Mohamed"
+          ]
+        },
+        {
+          "title": "Hanno Möttölä",
+          "texts": [
+            "Hanno Möttölä"
+          ]
+        },
+        {
+          "title": "Väinö Myllyrinne",
+          "texts": [
+            "Väinö Myllyrinne"
+          ]
+        },
+        {
+          "title": "List of tallest people",
+          "texts": [
+            "world's tallest living person"
+          ]
+        },
+        {
+          "title": "Peter Nygård",
+          "texts": [
+            "Peter Nygård"
+          ]
+        },
+        {
+          "title": "Markku Peltola",
+          "texts": [
+            "Markku Peltola"
+          ]
+        },
+        {
+          "title": "Kimmo Pikkarainen",
+          "texts": [
+            "Kimmo Pikkarainen"
+          ]
+        },
+        {
+          "title": "Anne Marie Pohtamo",
+          "texts": [
+            "Anne Marie Pohtamo"
+          ]
+        },
+        {
+          "title": "Miss Finland",
+          "texts": [
+            "Miss Suomi 1975"
+          ]
+        },
+        {
+          "title": "Miss Universe 1975",
+          "texts": [
+            "Miss Universe 1975"
+          ]
+        },
+        {
+          "title": "Jasper Pääkkönen",
+          "texts": [
+            "Jasper Pääkkönen"
+          ]
+        },
+        {
+          "title": "Elisabeth Rehn",
+          "texts": [
+            "Elisabeth Rehn"
+          ]
+        },
+        {
+          "title": "Susanne Ringell",
+          "texts": [
+            "Susanne Ringell"
+          ]
+        },
+        {
+          "title": "Miron Ruina",
+          "texts": [
+            "Miron Ruina"
+          ]
+        },
+        {
+          "title": "Riitta Salin",
+          "texts": [
+            "Riitta Salin"
+          ]
+        },
+        {
+          "title": "Sasu Salin",
+          "texts": [
+            "Sasu Salin"
+          ]
+        },
+        {
+          "title": "Asko Sarkola",
+          "texts": [
+            "Asko Sarkola"
+          ]
+        },
+        {
+          "title": "Heikki Sarmanto",
+          "texts": [
+            "Heikki Sarmanto"
+          ]
+        },
+        {
+          "title": "Teemu Selänne",
+          "texts": [
+            "Teemu Selänne"
+          ]
+        },
+        {
+          "title": "Hockey Hall of Fame",
+          "texts": [
+            "Hall of Fame"
+          ]
+        },
+        {
+          "title": "Ann Selin",
+          "texts": [
+            "Ann Selin"
+          ]
+        },
+        {
+          "title": "Birgit Sergelius",
+          "texts": [
+            "Birgit Sergelius"
+          ]
+        },
+        {
+          "title": "Alexander Stubb",
+          "texts": [
+            "Alexander Stubb"
+          ]
+        },
+        {
+          "title": "Teuvo Teräväinen",
+          "texts": [
+            "Teuvo Teräväinen"
+          ]
+        },
+        {
+          "title": "Eeva Therman",
+          "texts": [
+            "Eeva Therman"
+          ]
+        },
+        {
+          "title": "Märta Tikkanen",
+          "texts": [
+            "Märta Tikkanen"
+          ]
+        },
+        {
+          "title": "Linus Torvalds",
+          "texts": [
+            "Linus Torvalds"
+          ]
+        },
+        {
+          "title": "Elin Törnudd",
+          "texts": [
+            "Elin Törnudd"
+          ]
+        },
+        {
+          "title": "Klaus Törnudd",
+          "texts": [
+            "Klaus Törnudd"
+          ]
+        },
+        {
+          "title": "Sirkka Turkka",
+          "texts": [
+            "Sirkka Turkka"
+          ]
+        },
+        {
+          "title": "Jarno Tuunainen",
+          "texts": [
+            "Jarno Tuunainen"
+          ]
+        },
+        {
+          "title": "Ville Valo",
+          "texts": [
+            "Ville Valo"
+          ]
+        },
+        {
+          "title": "Ulla Vuorela",
+          "texts": [
+            "Ulla Vuorela"
+          ]
+        },
+        {
+          "title": "Lauri Ylönen",
+          "texts": [
+            "Lauri Ylönen"
+          ]
+        }
+      ]
+    }
+  }
+}

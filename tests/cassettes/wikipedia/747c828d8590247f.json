@@ -1,0 +1,255 @@
+{
+  "hash": "747c828d8590247f",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Navigate Wikipedia from the article \"Penicillin\" to the article \"Imperial College London\" by following links. Stop when the article you are on is \"Imperial College London\".",
+        "state": {
+          "page": {
+            "title": "Imperial College School of Medicine",
+            "summary": "The Imperial College School of Medicine (ICSM) is the undergraduate medical school of Imperial College London in England and one of the United Hospitals. It is part of the college's Faculty of Medicine and was formed by the merger of several historic medical schools. Its core campuses are located at South Kensington, St Mary's, Charing Cross, Hammersmith and Chelsea and Westminster."
+          },
+          "trail": [
+            "Penicillin",
+            "Alexander Fleming",
+            "Imperial College School of Medicine"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Alexander Fleming"
+            },
+            "summary": "opened the article \"Alexander Fleming\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Imperial College School of Medicine"
+            },
+            "summary": "opened the article \"Imperial College School of Medicine\""
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_link": "Follows one link of the article in `state.page` and opens the linked article.",
+            "go_back": "Goes back to the previous article of `state.trail`, because the current one leads nowhere useful.",
+            "end": "Stops, because the article in `state.page.title` is the article that `instructions` ask to reach."
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "instructions": "Which of these linked articles is the best next step from the article in `state.page` towards the article that `instructions` ask to reach?",
+          "criteria": {
+            "Imperial College London": "shown in the text as \"Imperial College London\"",
+            "England": "shown in the text as \"England\"",
+            "United Hospitals": "shown in the text as \"United Hospitals\"",
+            "Imperial College Faculty of Medicine": "shown in the text as \"Faculty of Medicine\"",
+            "South Kensington": "shown in the text as \"South Kensington\"",
+            "St Mary's Hospital, London": "shown in the text as \"St Mary's\", \"St Mary's Hospital\"",
+            "Charing Cross Hospital": "shown in the text as \"Charing Cross\", \"Charing Cross Hospital\"",
+            "Hammersmith Hospital": "shown in the text as \"Hammersmith\", \"Hammersmith Hospital\"",
+            "Chelsea and Westminster Hospital": "shown in the text as \"Chelsea and Westminster\"",
+            "Charing Cross Hospital Medical School": "shown in the text as \"Charing Cross Hospital Medical School\"",
+            "Westminster Hospital Medical School": "shown in the text as \"Westminster Hospital Medical School\", \"Shrove Tuesday Final Year Dinner\"",
+            "St Mary's Hospital Medical School": "shown in the text as \"St Mary's Hospital Medical School\", \"St Mary's Medical School\"",
+            "Royal Postgraduate Medical School": "shown in the text as \"Royal Postgraduate Medical School\"",
+            "Charing Cross and Westminster Medical School": "shown in the text as \"Charing Cross and Westminster Medical School\"",
+            "MBBS": "shown in the text as \"MBBS\"",
+            "BSc": "shown in the text as \"BSc\"",
+            "Associateships of Imperial College London": "shown in the text as \"Associateship of Imperial College School of Medicine\"",
+            "Flipped classroom": "shown in the text as \"flipped classroom\"",
+            "Imperial College Union": "shown in the text as \"Imperial College Union\"",
+            "Chelsea & Westminster Hospital": "shown in the text as \"Chelsea & Westminster Hospital\"",
+            "Royal Brompton Hospital": "shown in the text as \"Royal Brompton Hospital\"",
+            "Harefield Hospital": "shown in the text as \"Harefield Hospital\"",
+            "Queen Charlotte's Hospital": "shown in the text as \"Queen Charlotte's & Chelsea Hospital\"",
+            "Western Eye Hospital": "shown in the text as \"Western Eye Hospital\"",
+            "Ashford Hospital": "shown in the text as \"Ashford Hospital\"",
+            "Central Middlesex Hospital": "shown in the text as \"Central Middlesex Hospital\"",
+            "Ealing Hospital": "shown in the text as \"Ealing Hospital\"",
+            "Hillingdon Hospital": "shown in the text as \"Hillingdon Hospital\"",
+            "Mount Vernon Hospital": "shown in the text as \"Mount Vernon Hospital\"",
+            "Northwick Park Hospital": "shown in the text as \"Northwick Park Hospital\"",
+            "St Mark's Hospital": "shown in the text as \"St Mark's Hospital\"",
+            "West Middlesex Hospital": "shown in the text as \"West Middlesex Hospital\"",
+            "St Peter's Hospital, Chertsey": "shown in the text as \"St Peter's Hospital, Chertsey\"",
+            "St Bernard's Hospital, Hanwell": "shown in the text as \"St Bernard's Hospital\"",
+            "St Charles' Hospital": "shown in the text as \"St Charles' Hospital\"",
+            "West London NHS Trust": "shown in the text as \"West London NHS Trust\"",
+            "Gordon Hospital": "shown in the text as \"Gordon Hospital\"",
+            "Broadmoor Hospital": "shown in the text as \"Broadmoor Hospital\"",
+            "Cassel Hospital": "shown in the text as \"Cassel Hospital\"",
+            "Nobel Laureates": "shown in the text as \"Nobel Laureates\"",
+            "Christopher Addison": "shown in the text as \"Christopher Addison\"",
+            "N.H. Ashton": "shown in the text as \"N.H. Ashton\"",
+            "Ernst Chain": "shown in the text as \"Ernst Chain\"",
+            "Ara Darzi, Baron Darzi of Denham": "shown in the text as \"Ara Darzi, Baron Darzi of Denham\"",
+            "Carl Djerassi": "shown in the text as \"Carl Djerassi\"",
+            "Norethisterone": "shown in the text as \"norethisterone\"",
+            "Harold Ellis (professor)": "shown in the text as \"Harold Ellis\"",
+            "Joseph Fayrer": "shown in the text as \"Joseph Fayrer\"",
+            "Marc Feldmann": "shown in the text as \"Marc Feldmann\"",
+            "Sneh Bhargava": "shown in the text as \"Sneh Bhargava\"",
+            "Malcolm Green (physician)": "shown in the text as \"Malcolm Green\"",
+            "John Henry (toxicologist)": "shown in the text as \"John Henry\"",
+            "Frederick Hopkins": "shown in the text as \"Frederick Hopkins\"",
+            "Rosalind Hurley": "shown in the text as \"Rosalind Hurley\"",
+            "Andrew Huxley": "shown in the text as \"Andrew Huxley\"",
+            "Thomas Huxley": "shown in the text as \"Thomas Huxley\"",
+            "Bruce Keogh": "shown in the text as \"Bruce Keogh\"",
+            "National Health Service": "shown in the text as \"National Health Service\"",
+            "Louise Lake-Tack": "shown in the text as \"Louise Lake-Tack\"",
+            "List of Governors-General of Antigua and Barbuda": "shown in the text as \"Governor-General of Antigua and Barbuda\"",
+            "David Livingstone": "shown in the text as \"David Livingstone\"",
+            "Ravinder Nath Maini": "shown in the text as \"Ravinder Nath Maini\"",
+            "Christine Moffatt": "shown in the text as \"Christine Moffatt\"",
+            "Albert Neuberger": "shown in the text as \"Albert Neuberger\"",
+            "William Kitchen Parker": "shown in the text as \"William Kitchen Parker\"",
+            "William Stanley Peart": "shown in the text as \"William Stanley Peart\"",
+            "Julia Polak": "shown in the text as \"Julia Polak\"",
+            "Rodney Robert Porter": "shown in the text as \"Rodney Robert Porter\"",
+            "Ann Redgrave": "shown in the text as \"Ann Redgrave\"",
+            "Bernard Spilsbury": "shown in the text as \"Bernard Spilsbury\"",
+            "Edith Summerskill": "shown in the text as \"Edith Summerskill\"",
+            "Joseph Toynbee": "shown in the text as \"Joseph Toynbee\"",
+            "Augustus Desiré Waller": "shown in the text as \"Augustus Waller\"",
+            "Electrocardiogram": "shown in the text as \"electrocardiogram\"",
+            "Stephen Westaby": "shown in the text as \"Stephen Westaby\"",
+            "Cardiothoracic Surgery": "shown in the text as \"Cardiothoracic Surgery\"",
+            "Almroth Wright": "shown in the text as \"Almroth Wright\"",
+            "Philip Poole-Wilson": "shown in the text as \"Philip Poole-Wilson\"",
+            "Magdi Yacoub": "shown in the text as \"Magdi Yacoub\"",
+            "Roger Bannister": "shown in the text as \"Roger Bannister\"",
+            "Jane Yardley": "shown in the text as \"Jane Yardley\"",
+            "Adam Kay (writer)": "shown in the text as \"Adam Kay\""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "open_link",
+          "confidence": 0.97,
+          "probabilities": {
+            "open_link": 0.98,
+            "go_back": 0.01,
+            "end": 0.01
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "choice": "Imperial College London",
+          "confidence": 0.96,
+          "probabilities": {
+            "Imperial College London": 0.96,
+            "England": 0,
+            "United Hospitals": 0,
+            "Imperial College Faculty of Medicine": 0.04,
+            "South Kensington": 0,
+            "St Mary's Hospital, London": 0,
+            "Charing Cross Hospital": 0,
+            "Hammersmith Hospital": 0,
+            "Chelsea and Westminster Hospital": 0,
+            "Charing Cross Hospital Medical School": 0,
+            "Westminster Hospital Medical School": 0,
+            "St Mary's Hospital Medical School": 0,
+            "Royal Postgraduate Medical School": 0,
+            "Charing Cross and Westminster Medical School": 0,
+            "MBBS": 0,
+            "BSc": 0,
+            "Associateships of Imperial College London": 0,
+            "Flipped classroom": 0,
+            "Imperial College Union": 0,
+            "Chelsea & Westminster Hospital": 0,
+            "Royal Brompton Hospital": 0,
+            "Harefield Hospital": 0,
+            "Queen Charlotte's Hospital": 0,
+            "Western Eye Hospital": 0,
+            "Ashford Hospital": 0,
+            "Central Middlesex Hospital": 0,
+            "Ealing Hospital": 0,
+            "Hillingdon Hospital": 0,
+            "Mount Vernon Hospital": 0,
+            "Northwick Park Hospital": 0,
+            "St Mark's Hospital": 0,
+            "West Middlesex Hospital": 0,
+            "St Peter's Hospital, Chertsey": 0,
+            "St Bernard's Hospital, Hanwell": 0,
+            "St Charles' Hospital": 0,
+            "West London NHS Trust": 0,
+            "Gordon Hospital": 0,
+            "Broadmoor Hospital": 0,
+            "Cassel Hospital": 0,
+            "Nobel Laureates": 0,
+            "Christopher Addison": 0,
+            "N.H. Ashton": 0,
+            "Ernst Chain": 0,
+            "Ara Darzi, Baron Darzi of Denham": 0,
+            "Carl Djerassi": 0,
+            "Norethisterone": 0,
+            "Harold Ellis (professor)": 0,
+            "Joseph Fayrer": 0,
+            "Marc Feldmann": 0,
+            "Sneh Bhargava": 0,
+            "Malcolm Green (physician)": 0,
+            "John Henry (toxicologist)": 0,
+            "Frederick Hopkins": 0,
+            "Rosalind Hurley": 0,
+            "Andrew Huxley": 0,
+            "Thomas Huxley": 0,
+            "Bruce Keogh": 0,
+            "National Health Service": 0,
+            "Louise Lake-Tack": 0,
+            "List of Governors-General of Antigua and Barbuda": 0,
+            "David Livingstone": 0,
+            "Ravinder Nath Maini": 0,
+            "Christine Moffatt": 0,
+            "Albert Neuberger": 0,
+            "William Kitchen Parker": 0,
+            "William Stanley Peart": 0,
+            "Julia Polak": 0,
+            "Rodney Robert Porter": 0,
+            "Ann Redgrave": 0,
+            "Bernard Spilsbury": 0,
+            "Edith Summerskill": 0,
+            "Joseph Toynbee": 0,
+            "Augustus Desiré Waller": 0,
+            "Electrocardiogram": 0,
+            "Stephen Westaby": 0,
+            "Cardiothoracic Surgery": 0,
+            "Almroth Wright": 0,
+            "Philip Poole-Wilson": 0,
+            "Magdi Yacoub": 0,
+            "Roger Bannister": 0,
+            "Jane Yardley": 0,
+            "Adam Kay (writer)": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 2878,
+        "output_tokens": 936
+      }
+    }
+  }
+}

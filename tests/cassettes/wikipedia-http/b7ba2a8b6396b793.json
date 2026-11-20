@@ -1,0 +1,34 @@
+{
+  "hash": "b7ba2a8b6396b793",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Jupiter",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20261009011201|1379280802",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 38930,
+            "ns": 0,
+            "title": "Jupiter",
+            "revisions": [
+              {
+                "revid": 1380352046,
+                "parentid": 1379280802
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

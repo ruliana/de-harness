@@ -1,0 +1,1543 @@
+{
+  "hash": "ca7071439ac6f6ed",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Pompeii/1377727528",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Pompeii",
+      "lead": "Pompeii (/pɒmˈpeɪ(i)/ ; Latin: [pɔmˈpei̯.iː]) was a city in what is now the municipality of Pompei, near Naples, in the Campania region of Italy. Along with Herculaneum, Stabiae, and many surrounding villas, it was buried under 4 to 6 m (13 to 20 ft) of volcanic ash and pumice in the eruption of Mount Vesuvius in 79 AD.",
+      "links": [
+        {
+          "title": "Pompei",
+          "texts": [
+            "Pompei"
+          ]
+        },
+        {
+          "title": "Naples",
+          "texts": [
+            "Naples"
+          ]
+        },
+        {
+          "title": "Campania",
+          "texts": [
+            "Campania"
+          ]
+        },
+        {
+          "title": "Herculaneum",
+          "texts": [
+            "Herculaneum"
+          ]
+        },
+        {
+          "title": "Stabiae",
+          "texts": [
+            "Stabiae"
+          ]
+        },
+        {
+          "title": "Villa Boscoreale",
+          "texts": [
+            "many surrounding villas"
+          ]
+        },
+        {
+          "title": "Volcanic ash",
+          "texts": [
+            "volcanic ash"
+          ]
+        },
+        {
+          "title": "Pumice",
+          "texts": [
+            "pumice"
+          ]
+        },
+        {
+          "title": "Eruption of Mount Vesuvius in 79 AD",
+          "texts": [
+            "eruption of Mount Vesuvius in 79 AD"
+          ]
+        },
+        {
+          "title": "Culture of ancient Rome",
+          "texts": [
+            "Roman life"
+          ]
+        },
+        {
+          "title": "Urban planning",
+          "texts": [
+            "urban planning"
+          ]
+        },
+        {
+          "title": "Architectural style",
+          "texts": [
+            "architectural styles"
+          ]
+        },
+        {
+          "title": "Social class",
+          "texts": [
+            "social classes"
+          ]
+        },
+        {
+          "title": "Casting",
+          "texts": [
+            "moulds"
+          ]
+        },
+        {
+          "title": "Vulgar Latin",
+          "texts": [
+            "Vulgar Latin"
+          ]
+        },
+        {
+          "title": "Archaeology",
+          "texts": [
+            "archaeology"
+          ]
+        },
+        {
+          "title": "UNESCO",
+          "texts": [
+            "UNESCO"
+          ]
+        },
+        {
+          "title": "World Heritage Site",
+          "texts": [
+            "World Heritage Site"
+          ]
+        },
+        {
+          "title": "Latin declension",
+          "texts": [
+            "declension"
+          ]
+        },
+        {
+          "title": "Oscan language",
+          "texts": [
+            "Oscan"
+          ]
+        },
+        {
+          "title": "Hamlet (place)",
+          "texts": [
+            "hamlets"
+          ]
+        },
+        {
+          "title": "Pompeia gens",
+          "texts": [
+            "gens Pompeia"
+          ]
+        },
+        {
+          "title": "Mount Vesuvius",
+          "texts": [
+            "Mount Vesuvius"
+          ]
+        },
+        {
+          "title": "Landslide",
+          "texts": [
+            "landslides"
+          ]
+        },
+        {
+          "title": "Navigability",
+          "texts": [
+            "navigable"
+          ]
+        },
+        {
+          "title": "Sarno River",
+          "texts": [
+            "Sarno River"
+          ]
+        },
+        {
+          "title": "Greeks",
+          "texts": [
+            "Greek"
+          ]
+        },
+        {
+          "title": "Phoenicia",
+          "texts": [
+            "Phoenician"
+          ]
+        },
+        {
+          "title": "Old town",
+          "texts": [
+            "old town"
+          ]
+        },
+        {
+          "title": "Battle of Cumae (474 BC)",
+          "texts": [
+            "Battle of Cumae"
+          ]
+        },
+        {
+          "title": "Osci",
+          "texts": [
+            "Oscans"
+          ]
+        },
+        {
+          "title": "Doric order",
+          "texts": [
+            "Doric"
+          ]
+        },
+        {
+          "title": "Cumae",
+          "texts": [
+            "Cumae"
+          ]
+        },
+        {
+          "title": "Nola",
+          "texts": [
+            "Nola"
+          ]
+        },
+        {
+          "title": "Tufa",
+          "texts": [
+            "tufa"
+          ]
+        },
+        {
+          "title": "Stratigraphy",
+          "texts": [
+            "stratigraphy"
+          ]
+        },
+        {
+          "title": "Etruscan civilization",
+          "texts": [
+            "Etruscans"
+          ]
+        },
+        {
+          "title": "Etruscan cities",
+          "texts": [
+            "Etruscan League of cities"
+          ]
+        },
+        {
+          "title": "Necropolis",
+          "texts": [
+            "necropolis"
+          ]
+        },
+        {
+          "title": "Forum (Roman)",
+          "texts": [
+            "forum"
+          ]
+        },
+        {
+          "title": "Temple of Apollo (Pompeii)",
+          "texts": [
+            "Temple of Apollo"
+          ]
+        },
+        {
+          "title": "Bucchero",
+          "texts": [
+            "bucchero"
+          ]
+        },
+        {
+          "title": "Amedeo Maiuri",
+          "texts": [
+            "Maiuri",
+            "Amedeo Maiuri"
+          ]
+        },
+        {
+          "title": "Atrium (architecture)",
+          "texts": [
+            "atrium"
+          ]
+        },
+        {
+          "title": "Syracuse, Italy",
+          "texts": [
+            "Syracuse"
+          ]
+        },
+        {
+          "title": "Samnites",
+          "texts": [
+            "Samnites"
+          ]
+        },
+        {
+          "title": "Abruzzo",
+          "texts": [
+            "Abruzzo"
+          ]
+        },
+        {
+          "title": "Molise",
+          "texts": [
+            "Molise"
+          ]
+        },
+        {
+          "title": "Samnite Wars",
+          "texts": [
+            "Samnite Wars"
+          ]
+        },
+        {
+          "title": "Latin War",
+          "texts": [
+            "Latin War"
+          ]
+        },
+        {
+          "title": "Pyrrhus of Epirus",
+          "texts": [
+            "Pyrrhus"
+          ]
+        },
+        {
+          "title": "Hippodamus",
+          "texts": [
+            "Hippodamus"
+          ]
+        },
+        {
+          "title": "Sarno",
+          "texts": [
+            "Sarno"
+          ]
+        },
+        {
+          "title": "Agger (ancient Rome)",
+          "texts": [
+            "agger"
+          ]
+        },
+        {
+          "title": "Socii",
+          "texts": [
+            "socii"
+          ]
+        },
+        {
+          "title": "Second Punic War",
+          "texts": [
+            "Second Punic War"
+          ]
+        },
+        {
+          "title": "Hannibal",
+          "texts": [
+            "Hannibal"
+          ]
+        },
+        {
+          "title": "Provence",
+          "texts": [
+            "Provence"
+          ]
+        },
+        {
+          "title": "Lucius Mummius",
+          "texts": [
+            "Lucius Mummius"
+          ]
+        },
+        {
+          "title": "Ancient Corinth",
+          "texts": [
+            "Corinth"
+          ]
+        },
+        {
+          "title": "Theatre Area of Pompeii",
+          "texts": [
+            "The Large Theatre",
+            "Odeon",
+            "Theatre Area of Pompeii"
+          ]
+        },
+        {
+          "title": "Temple of Jupiter (Pompeii)",
+          "texts": [
+            "Temple of Jupiter"
+          ]
+        },
+        {
+          "title": "Social War (90–88 BC)",
+          "texts": [
+            "Social Wars"
+          ]
+        },
+        {
+          "title": "Lucius Cornelius Sulla",
+          "texts": [
+            "Sulla"
+          ]
+        },
+        {
+          "title": "Ballista",
+          "texts": [
+            "ballista"
+          ]
+        },
+        {
+          "title": "Lucius Cluentius",
+          "texts": [
+            "Lucius Cluentius"
+          ]
+        },
+        {
+          "title": "Colonia (Roman)",
+          "texts": [
+            "Roman colony"
+          ]
+        },
+        {
+          "title": "Roman citizenship",
+          "texts": [
+            "Roman citizenship"
+          ]
+        },
+        {
+          "title": "Villa of the Mysteries",
+          "texts": [
+            "Villa of the Mysteries"
+          ]
+        },
+        {
+          "title": "Villa of Diomedes",
+          "texts": [
+            "Villa of Diomedes"
+          ]
+        },
+        {
+          "title": "Boscoreale",
+          "texts": [
+            "Boscoreale"
+          ]
+        },
+        {
+          "title": "Boscotrecase",
+          "texts": [
+            "Boscotrecase"
+          ]
+        },
+        {
+          "title": "Oplontis",
+          "texts": [
+            "Oplontis"
+          ]
+        },
+        {
+          "title": "Terzigno",
+          "texts": [
+            "Terzigno"
+          ]
+        },
+        {
+          "title": "Southern Italy",
+          "texts": [
+            "Southern Italy"
+          ]
+        },
+        {
+          "title": "Appian Way",
+          "texts": [
+            "Appian Way"
+          ]
+        },
+        {
+          "title": "Amphitheatre of Pompeii",
+          "texts": [
+            "Amphitheatre of Pompeii",
+            "Amphitheatre"
+          ]
+        },
+        {
+          "title": "Augustus",
+          "texts": [
+            "Augustus"
+          ]
+        },
+        {
+          "title": "Eumachia",
+          "texts": [
+            "Eumachia Building",
+            "Eumachia building"
+          ]
+        },
+        {
+          "title": "Macellum of Pompeii",
+          "texts": [
+            "Macellum",
+            "Macellum of Pompeii"
+          ]
+        },
+        {
+          "title": "Aqua Augusta (Naples)",
+          "texts": [
+            "Serino Aqueduct"
+          ]
+        },
+        {
+          "title": "Marcus Vipsanius Agrippa",
+          "texts": [
+            "Marcus Vipsanius Agrippa"
+          ]
+        },
+        {
+          "title": "Nuceria",
+          "texts": [
+            "Nucerians",
+            "Nuceria"
+          ]
+        },
+        {
+          "title": "Praetorian Guard",
+          "texts": [
+            "Praetorian Guard"
+          ]
+        },
+        {
+          "title": "Pliny the Younger",
+          "texts": [
+            "Pliny the Younger"
+          ]
+        },
+        {
+          "title": "62 Pompeii earthquake",
+          "texts": [
+            "severe earthquake"
+          ]
+        },
+        {
+          "title": "Richter magnitude scale",
+          "texts": [
+            "Richter magnitude scale"
+          ]
+        },
+        {
+          "title": "Pater Patriae",
+          "texts": [
+            "Pater Patriae"
+          ]
+        },
+        {
+          "title": "Insula (Roman city)",
+          "texts": [
+            "insula",
+            "insulae"
+          ]
+        },
+        {
+          "title": "Nero",
+          "texts": [
+            "Nero"
+          ]
+        },
+        {
+          "title": "Poppaea",
+          "texts": [
+            "Poppaea"
+          ]
+        },
+        {
+          "title": "List of volcanic eruptions by death toll",
+          "texts": [
+            "one of the deadliest eruptions in history"
+          ]
+        },
+        {
+          "title": "Lapilli",
+          "texts": [
+            "lapilli"
+          ]
+        },
+        {
+          "title": "Pyroclastic flow",
+          "texts": [
+            "pyroclastic flows"
+          ]
+        },
+        {
+          "title": "Vulcanology",
+          "texts": [
+            "volcanological"
+          ]
+        },
+        {
+          "title": "Biological anthropology",
+          "texts": [
+            "bio-anthropological"
+          ]
+        },
+        {
+          "title": "Suffocation",
+          "texts": [
+            "suffocation"
+          ]
+        },
+        {
+          "title": "Tephra",
+          "texts": [
+            "tephra"
+          ]
+        },
+        {
+          "title": "Bay of Naples",
+          "texts": [
+            "Bay of Naples"
+          ]
+        },
+        {
+          "title": "Misenum",
+          "texts": [
+            "Misenum"
+          ]
+        },
+        {
+          "title": "Pliny the Elder",
+          "texts": [
+            "Pliny the Elder"
+          ]
+        },
+        {
+          "title": "Plinian eruption",
+          "texts": [
+            "Plinian"
+          ]
+        },
+        {
+          "title": "Imperator",
+          "texts": [
+            "imperatorial"
+          ]
+        },
+        {
+          "title": "Roman emperor",
+          "texts": [
+            "emperor"
+          ]
+        },
+        {
+          "title": "Titus",
+          "texts": [
+            "Titus"
+          ]
+        },
+        {
+          "title": "Disturbance (archaeology)",
+          "texts": [
+            "disturbance"
+          ]
+        },
+        {
+          "title": "Building material",
+          "texts": [
+            "building material"
+          ]
+        },
+        {
+          "title": "Tabula Peutingeriana",
+          "texts": [
+            "Tabula Peutingeriana"
+          ]
+        },
+        {
+          "title": "Domenico Fontana",
+          "texts": [
+            "Domenico Fontana"
+          ]
+        },
+        {
+          "title": "Torre Annunziata",
+          "texts": [
+            "Torre Annunziata"
+          ]
+        },
+        {
+          "title": "Pompey",
+          "texts": [
+            "Pompey"
+          ]
+        },
+        {
+          "title": "Charles III of Spain",
+          "texts": [
+            "Charles of Bourbon"
+          ]
+        },
+        {
+          "title": "Roque Joaquín de Alcubierre",
+          "texts": [
+            "Roque Joaquín de Alcubierre"
+          ]
+        },
+        {
+          "title": "Karl Jakob Weber",
+          "texts": [
+            "Karl Weber"
+          ]
+        },
+        {
+          "title": "Pietro la Vega",
+          "texts": [
+            "Pietro"
+          ]
+        },
+        {
+          "title": "House of the Faun",
+          "texts": [
+            "Faun",
+            "House of the Faun"
+          ]
+        },
+        {
+          "title": "Casa del Menandro",
+          "texts": [
+            "Menandro"
+          ]
+        },
+        {
+          "title": "House of the Tragic Poet",
+          "texts": [
+            "Tragic Poet",
+            "House of the Tragic Poet"
+          ]
+        },
+        {
+          "title": "House of the surgeon",
+          "texts": [
+            "Surgeon"
+          ]
+        },
+        {
+          "title": "Giuseppe Fiorelli",
+          "texts": [
+            "Giuseppe Fiorelli"
+          ]
+        },
+        {
+          "title": "Plaster",
+          "texts": [
+            "plaster"
+          ]
+        },
+        {
+          "title": "Resin",
+          "texts": [
+            "resin"
+          ]
+        },
+        {
+          "title": "Insula (building)",
+          "texts": [
+            "insulae"
+          ]
+        },
+        {
+          "title": "Thermopolium",
+          "texts": [
+            "thermopolium",
+            "thermopolia"
+          ]
+        },
+        {
+          "title": "Fresco",
+          "texts": [
+            "frescoes"
+          ]
+        },
+        {
+          "title": "Dolia (vessels)",
+          "texts": [
+            "dolia"
+          ]
+        },
+        {
+          "title": "Patera",
+          "texts": [
+            "patera"
+          ]
+        },
+        {
+          "title": "Amphora",
+          "texts": [
+            "amphorae"
+          ]
+        },
+        {
+          "title": "Marcus Venerius Secundio",
+          "texts": [
+            "Marcus Venerius Secundio"
+          ]
+        },
+        {
+          "title": "Sodales Augustales",
+          "texts": [
+            "Sodales Augustales"
+          ]
+        },
+        {
+          "title": "Horae",
+          "texts": [
+            "Horae"
+          ]
+        },
+        {
+          "title": "World War II",
+          "texts": [
+            "World War II"
+          ]
+        },
+        {
+          "title": "Allies of World War II",
+          "texts": [
+            "Allied forces"
+          ]
+        },
+        {
+          "title": "1996 World Monuments Watch",
+          "texts": [
+            "1996 World Monuments Watch"
+          ]
+        },
+        {
+          "title": "World Monuments Fund",
+          "texts": [
+            "World Monuments Fund"
+          ]
+        },
+        {
+          "title": "1998 World Monuments Watch",
+          "texts": [
+            "1998"
+          ]
+        },
+        {
+          "title": "2000 World Monuments Watch",
+          "texts": [
+            "2000"
+          ]
+        },
+        {
+          "title": "Building restoration",
+          "texts": [
+            "restoration"
+          ]
+        },
+        {
+          "title": "American Express",
+          "texts": [
+            "American Express"
+          ]
+        },
+        {
+          "title": "Samuel Henry Kress",
+          "texts": [
+            "Samuel H. Kress Foundation"
+          ]
+        },
+        {
+          "title": "List of World Heritage in Danger",
+          "texts": [
+            "List of World Heritage in Danger"
+          ]
+        },
+        {
+          "title": "European Union",
+          "texts": [
+            "European Union"
+          ]
+        },
+        {
+          "title": "World Heritage Centre",
+          "texts": [
+            "UNESCO headquarters"
+          ]
+        },
+        {
+          "title": "Domus",
+          "texts": [
+            "domus"
+          ]
+        },
+        {
+          "title": "House of Julia Felix",
+          "texts": [
+            "House of Julia Felix"
+          ]
+        },
+        {
+          "title": "House of Loreius Tiburtinus",
+          "texts": [
+            "House of Loreius Tiburtinus"
+          ]
+        },
+        {
+          "title": "The Garden of the Fugitives",
+          "texts": [
+            "the Garden of the Fugitives",
+            "The Garden of the Fugitives"
+          ]
+        },
+        {
+          "title": "Ancient Roman architecture",
+          "texts": [
+            "Ancient Roman architecture"
+          ]
+        },
+        {
+          "title": "Palaestra",
+          "texts": [
+            "palaestra"
+          ]
+        },
+        {
+          "title": "Natatorium",
+          "texts": [
+            "natatorium"
+          ]
+        },
+        {
+          "title": "Caupona",
+          "texts": [
+            "cauponae"
+          ]
+        },
+        {
+          "title": "Prostitution in ancient Rome",
+          "texts": [
+            "prostitutes"
+          ]
+        },
+        {
+          "title": "Lupanar",
+          "texts": [
+            "Lupanar"
+          ]
+        },
+        {
+          "title": "Prostitution",
+          "texts": [
+            "prostitution"
+          ]
+        },
+        {
+          "title": "Hospitium",
+          "texts": [
+            "hospitium"
+          ]
+        },
+        {
+          "title": "Autostrada A3 (Italy)",
+          "texts": [
+            "Naples-Salerno motorway"
+          ]
+        },
+        {
+          "title": "Moregine bracelet",
+          "texts": [
+            "Moregine bracelet"
+          ]
+        },
+        {
+          "title": "Aqueduct (water supply)",
+          "texts": [
+            "aqueduct"
+          ]
+        },
+        {
+          "title": "Serino Aqueduct",
+          "texts": [
+            "Serino Aqueduct"
+          ]
+        },
+        {
+          "title": "Castellum",
+          "texts": [
+            "castellum aquae"
+          ]
+        },
+        {
+          "title": "Thermopolia",
+          "texts": [
+            "Thermopolia"
+          ]
+        },
+        {
+          "title": "Dolium",
+          "texts": [
+            "dolia"
+          ]
+        },
+        {
+          "title": "Lararium",
+          "texts": [
+            "lararium"
+          ]
+        },
+        {
+          "title": "Lares",
+          "texts": [
+            "Lares"
+          ]
+        },
+        {
+          "title": "Mercury (mythology)",
+          "texts": [
+            "Mercury"
+          ]
+        },
+        {
+          "title": "Dionysus",
+          "texts": [
+            "Dionysus"
+          ]
+        },
+        {
+          "title": "Triclinium",
+          "texts": [
+            "triclinium"
+          ]
+        },
+        {
+          "title": "Pompeian Styles",
+          "texts": [
+            "Third style"
+          ]
+        },
+        {
+          "title": "Bacchus",
+          "texts": [
+            "Bacchus"
+          ]
+        },
+        {
+          "title": "Sesterces",
+          "texts": [
+            "sesterces"
+          ]
+        },
+        {
+          "title": "Fullo",
+          "texts": [
+            "fullonica"
+          ]
+        },
+        {
+          "title": "Garum",
+          "texts": [
+            "garum"
+          ]
+        },
+        {
+          "title": "Amphorae",
+          "texts": [
+            "amphorae"
+          ]
+        },
+        {
+          "title": "Suburban Baths (Pompeii)",
+          "texts": [
+            "Suburban Baths"
+          ]
+        },
+        {
+          "title": "Stabian Baths",
+          "texts": [
+            "Stabian Baths"
+          ]
+        },
+        {
+          "title": "Temple of Isis (Pompeii)",
+          "texts": [
+            "Temple of Isis"
+          ]
+        },
+        {
+          "title": "House of the Centenary",
+          "texts": [
+            "House of the Centenary"
+          ]
+        },
+        {
+          "title": "House of the Greek Epigrams",
+          "texts": [
+            "House of the Greek Epigrams"
+          ]
+        },
+        {
+          "title": "House of Lucius Caecilius Iucundus",
+          "texts": [
+            "House of Lucius Caecilius Iucundus"
+          ]
+        },
+        {
+          "title": "House of Menander",
+          "texts": [
+            "House of Menander"
+          ]
+        },
+        {
+          "title": "House of the Prince of Naples",
+          "texts": [
+            "House of the Prince of Naples"
+          ]
+        },
+        {
+          "title": "House of Sallust",
+          "texts": [
+            "House of Sallust"
+          ]
+        },
+        {
+          "title": "House of the Silver Wedding",
+          "texts": [
+            "House of the Silver Wedding"
+          ]
+        },
+        {
+          "title": "House of the Small Fountain (Pompeii)",
+          "texts": [
+            "House of the Small Fountain (Pompeii)"
+          ]
+        },
+        {
+          "title": "House of the Surgeon",
+          "texts": [
+            "House of the Surgeon"
+          ]
+        },
+        {
+          "title": "House of the Vettii",
+          "texts": [
+            "House of the Vettii"
+          ]
+        },
+        {
+          "title": "Lupanar (Pompeii)",
+          "texts": [
+            "Lupanar"
+          ]
+        },
+        {
+          "title": "Tyrrhenian Sea",
+          "texts": [
+            "Tyrrhenian Sea"
+          ]
+        },
+        {
+          "title": "Barley",
+          "texts": [
+            "Barley"
+          ]
+        },
+        {
+          "title": "Wheat",
+          "texts": [
+            "wheat"
+          ]
+        },
+        {
+          "title": "Millet",
+          "texts": [
+            "millet"
+          ]
+        },
+        {
+          "title": "Lucius Columella",
+          "texts": [
+            "Columella"
+          ]
+        },
+        {
+          "title": "Ancient Roman units of measurement",
+          "texts": [
+            "cullei"
+          ]
+        },
+        {
+          "title": "Jugerum",
+          "texts": [
+            "jugerum"
+          ]
+        },
+        {
+          "title": "Emmer",
+          "texts": [
+            "emmer"
+          ]
+        },
+        {
+          "title": "Setaria italica",
+          "texts": [
+            "Italian millet"
+          ]
+        },
+        {
+          "title": "Panicum miliaceum",
+          "texts": [
+            "common millet"
+          ]
+        },
+        {
+          "title": "Vicia ervilia",
+          "texts": [
+            "bitter vetch"
+          ]
+        },
+        {
+          "title": "Erotic art in Pompeii and Herculaneum",
+          "texts": [
+            "erotic art in Pompeii and Herculaneum"
+          ]
+        },
+        {
+          "title": "Culture shock",
+          "texts": [
+            "clash of cultures"
+          ]
+        },
+        {
+          "title": "Sexuality in ancient Rome",
+          "texts": [
+            "sexuality in ancient Rome"
+          ]
+        },
+        {
+          "title": "Counter-Reformation",
+          "texts": [
+            "Counter-Reformation"
+          ]
+        },
+        {
+          "title": "Priapus",
+          "texts": [
+            "Priapus"
+          ]
+        },
+        {
+          "title": "Leda and the Swan",
+          "texts": [
+            "Leda and the Swan"
+          ]
+        },
+        {
+          "title": "Artifact (archaeology)",
+          "texts": [
+            "artefacts"
+          ]
+        },
+        {
+          "title": "Naples National Archaeological Museum",
+          "texts": [
+            "Naples National Archaeological Museum"
+          ]
+        },
+        {
+          "title": "Francis I of Naples",
+          "texts": [
+            "King Francis"
+          ]
+        },
+        {
+          "title": "Secret Museum, Naples",
+          "texts": [
+            "Naples \"Secret Museum\""
+          ]
+        },
+        {
+          "title": "Sexual revolution",
+          "texts": [
+            "sexual revolution"
+          ]
+        },
+        {
+          "title": "Grand Tour",
+          "texts": [
+            "Grand Tour"
+          ]
+        },
+        {
+          "title": "Vesuvius National Park",
+          "texts": [
+            "Vesuvius National Park"
+          ]
+        },
+        {
+          "title": "Villa Poppaea",
+          "texts": [
+            "Villa Poppaea"
+          ]
+        },
+        {
+          "title": "1980 Irpinia earthquake",
+          "texts": [
+            "an earthquake"
+          ]
+        },
+        {
+          "title": "Journey to Italy",
+          "texts": [
+            "Journey to Italy"
+          ]
+        },
+        {
+          "title": "George Sanders",
+          "texts": [
+            "George Sanders"
+          ]
+        },
+        {
+          "title": "Ingrid Bergman",
+          "texts": [
+            "Ingrid Bergman"
+          ]
+        },
+        {
+          "title": "Television series",
+          "texts": [
+            "television series"
+          ]
+        },
+        {
+          "title": "Up Pompeii!",
+          "texts": [
+            "Up Pompeii!"
+          ]
+        },
+        {
+          "title": "Doctor Who",
+          "texts": [
+            "Doctor Who"
+          ]
+        },
+        {
+          "title": "The Fires of Pompeii",
+          "texts": [
+            "The Fires of Pompeii"
+          ]
+        },
+        {
+          "title": "Pink Floyd",
+          "texts": [
+            "Pink Floyd"
+          ]
+        },
+        {
+          "title": "Pink Floyd: Live at Pompeii",
+          "texts": [
+            "Pink Floyd: Live at Pompeii"
+          ]
+        },
+        {
+          "title": "The B-52s",
+          "texts": [
+            "The B-52s"
+          ]
+        },
+        {
+          "title": "Siouxsie and the Banshees",
+          "texts": [
+            "Siouxsie and the Banshees"
+          ]
+        },
+        {
+          "title": "Cities in Dust",
+          "texts": [
+            "Cities in Dust"
+          ]
+        },
+        {
+          "title": "Tinderbox (Siouxsie and the Banshees album)",
+          "texts": [
+            "Tinderbox"
+          ]
+        },
+        {
+          "title": "Pompeii (novel)",
+          "texts": [
+            "Pompeii"
+          ]
+        },
+        {
+          "title": "Robert Harris (novelist)",
+          "texts": [
+            "Robert Harris"
+          ]
+        },
+        {
+          "title": "Pompeii (song)",
+          "texts": [
+            "Pompeii"
+          ]
+        },
+        {
+          "title": "Bastille (band)",
+          "texts": [
+            "Bastille"
+          ]
+        },
+        {
+          "title": "Pompeii (film)",
+          "texts": [
+            "Pompeii"
+          ]
+        },
+        {
+          "title": "Historical film",
+          "texts": [
+            "historical"
+          ]
+        },
+        {
+          "title": "Disaster film",
+          "texts": [
+            "disaster film"
+          ]
+        },
+        {
+          "title": "Paul W. S. Anderson",
+          "texts": [
+            "Paul W. S. Anderson"
+          ]
+        },
+        {
+          "title": "David Gilmour",
+          "texts": [
+            "David Gilmour"
+          ]
+        },
+        {
+          "title": "Rattle That Lock Tour",
+          "texts": [
+            "Rattle That Lock Tour"
+          ]
+        },
+        {
+          "title": "In Search of... (TV series)",
+          "texts": [
+            "In Search of..."
+          ]
+        },
+        {
+          "title": "National Geographic Channel",
+          "texts": [
+            "National Geographic"
+          ]
+        },
+        {
+          "title": "Ancient Mysteries",
+          "texts": [
+            "Ancient Mysteries"
+          ]
+        },
+        {
+          "title": "A&E (TV channel)",
+          "texts": [
+            "A&E"
+          ]
+        },
+        {
+          "title": "Leonard Nimoy",
+          "texts": [
+            "Leonard Nimoy"
+          ]
+        },
+        {
+          "title": "Pompeii: The Last Day",
+          "texts": [
+            "Pompeii: The Last Day"
+          ]
+        },
+        {
+          "title": "BBC",
+          "texts": [
+            "BBC"
+          ]
+        },
+        {
+          "title": "Fulling",
+          "texts": [
+            "fuller"
+          ]
+        },
+        {
+          "title": "Gladiator",
+          "texts": [
+            "gladiators"
+          ]
+        },
+        {
+          "title": "Tokyo Broadcasting System",
+          "texts": [
+            "Tokyo Broadcasting System"
+          ]
+        },
+        {
+          "title": "Five (channel)",
+          "texts": [
+            "Channel 5"
+          ]
+        },
+        {
+          "title": "BBC One",
+          "texts": [
+            "BBC One"
+          ]
+        },
+        {
+          "title": "Margaret Mountford",
+          "texts": [
+            "Margaret Mountford"
+          ]
+        },
+        {
+          "title": "Smithsonian Channel",
+          "texts": [
+            "Smithsonian Channel"
+          ]
+        },
+        {
+          "title": "CBC Gem",
+          "texts": [
+            "CBC Gem"
+          ]
+        },
+        {
+          "title": "David Suzuki",
+          "texts": [
+            "David Suzuki"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "hash": "e1d6a174b889d849",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Pompeii",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20260930174808|1377702949",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 21476593,
+            "ns": 0,
+            "title": "Pompeii",
+            "revisions": [
+              {
+                "revid": 1377727528,
+                "parentid": 1377702949
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

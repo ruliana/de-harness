@@ -106,3 +106,13 @@ A tool can put a picture into the state with `image(pngOrJpegBytes)` (PNG 280-15
 | `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
 | `examples/office/` | thirty tools, the many-tools domain |
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
+| `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
+
+## Example: Wikipedia navigation
+
+`npm run example:wikipedia -- --from "Alan Turing" --to "Enigma machine"` walks from one article to another by following
+links and prints the path. `open_link(link)` offers the links of the article body (references, info boxes, navboxes,
+other namespaces and redlinks are left out in code, and the list is cut to a budget), keyed by article title and
+described by their anchor text; `go_back` returns to the previous article and never offers the abandoned one again.
+Articles are fetched as they were at a fixed snapshot (`SNAPSHOT` in `examples/wikipedia/client.ts`), so a recording
+never goes stale. Wikipedia rate-limits shared addresses: the live run waits as asked and keeps what is already recorded.

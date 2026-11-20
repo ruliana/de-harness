@@ -1,0 +1,3331 @@
+{
+  "hash": "09ffe49b19c8ee06",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Hinduism/1380388834",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Hinduism",
+      "lead": "Hinduism (/ˈhɪnduˌɪzəm/) is an umbrella term for a range of Indian religious and spiritual traditions (sampradayas) that are unified by adherence to Dharma, a cosmic order maintained by its followers through rituals and righteous living, as expounded in the Vedas. The word Hindu originated as an exonym, and while Hinduism has been called the oldest surviving religion in the world, it is also described since the 19th century by the term Sanātana Dharma (lit. 'eternal dharma'). Vaidika Dharma (lit. 'Vedic dharma') and Arya Dharma are historical endonyms for Hinduism.",
+      "links": [
+        {
+          "title": "Hypernymy and hyponymy",
+          "texts": [
+            "umbrella term"
+          ]
+        },
+        {
+          "title": "Indian religions",
+          "texts": [
+            "Indian religious"
+          ]
+        },
+        {
+          "title": "List of religions and spiritual traditions",
+          "texts": [
+            "spiritual traditions"
+          ]
+        },
+        {
+          "title": "Sampradaya",
+          "texts": [
+            "sampradayas"
+          ]
+        },
+        {
+          "title": "Dharma",
+          "texts": [
+            "Dharma",
+            "dharma"
+          ]
+        },
+        {
+          "title": "Ṛta",
+          "texts": [
+            "cosmic order"
+          ]
+        },
+        {
+          "title": "Vedas",
+          "texts": [
+            "Vedas",
+            "Vedic literature",
+            "Vedic"
+          ]
+        },
+        {
+          "title": "Exonym",
+          "texts": [
+            "exonym"
+          ]
+        },
+        {
+          "title": "Religion",
+          "texts": [
+            "religion"
+          ]
+        },
+        {
+          "title": "Sanātana Dharma",
+          "texts": [
+            "Sanātana Dharma"
+          ]
+        },
+        {
+          "title": "Arya",
+          "texts": [
+            "Arya"
+          ]
+        },
+        {
+          "title": "Endonym and exonym",
+          "texts": [
+            "endonyms",
+            "exonym"
+          ]
+        },
+        {
+          "title": "Glossary of Hinduism terms",
+          "texts": [
+            "concepts"
+          ]
+        },
+        {
+          "title": "God in Hinduism",
+          "texts": [
+            "theology",
+            "henotheistic"
+          ]
+        },
+        {
+          "title": "Hindu mythology",
+          "texts": [
+            "mythology"
+          ]
+        },
+        {
+          "title": "Hindu texts",
+          "texts": [
+            "textual sources",
+            "Hindu scriptures",
+            "Hindu texts"
+          ]
+        },
+        {
+          "title": "Śruti",
+          "texts": [
+            "Śruti"
+          ]
+        },
+        {
+          "title": "Smṛti",
+          "texts": [
+            "Smṛti"
+          ]
+        },
+        {
+          "title": "Upanishads",
+          "texts": [
+            "Upanishads"
+          ]
+        },
+        {
+          "title": "Puranas",
+          "texts": [
+            "Puranas",
+            "Purānas"
+          ]
+        },
+        {
+          "title": "Ramayana",
+          "texts": [
+            "Ramayana"
+          ]
+        },
+        {
+          "title": "Mahabharata",
+          "texts": [
+            "Mahabharata"
+          ]
+        },
+        {
+          "title": "Bhagavad Gita",
+          "texts": [
+            "Bhagavad Gita",
+            "Bhagavad Gītā"
+          ]
+        },
+        {
+          "title": "Agama (Hinduism)",
+          "texts": [
+            "Agamas"
+          ]
+        },
+        {
+          "title": "Karma",
+          "texts": [
+            "karma"
+          ]
+        },
+        {
+          "title": "Saṃsāra",
+          "texts": [
+            "saṃsāra"
+          ]
+        },
+        {
+          "title": "Puruṣārtha",
+          "texts": [
+            "Puruṣārthas",
+            "puruṣārtha"
+          ]
+        },
+        {
+          "title": "Artha",
+          "texts": [
+            "artha",
+            "Artha"
+          ]
+        },
+        {
+          "title": "Kama",
+          "texts": [
+            "kama",
+            "Kama"
+          ]
+        },
+        {
+          "title": "Moksha",
+          "texts": [
+            "moksha",
+            "Moksha"
+          ]
+        },
+        {
+          "title": "Emancipation",
+          "texts": [
+            "emancipation"
+          ]
+        },
+        {
+          "title": "Bhakti",
+          "texts": [
+            "bhakti",
+            "Bhakti"
+          ]
+        },
+        {
+          "title": "Puja (Hinduism)",
+          "texts": [
+            "puja",
+            "religious rituals at home",
+            "Puja"
+          ]
+        },
+        {
+          "title": "Yajna",
+          "texts": [
+            "yajna"
+          ]
+        },
+        {
+          "title": "Dhyana in Hinduism",
+          "texts": [
+            "dhyana"
+          ]
+        },
+        {
+          "title": "Yoga",
+          "texts": [
+            "Yoga",
+            "yoga"
+          ]
+        },
+        {
+          "title": "Hindu denominations",
+          "texts": [
+            "denominations"
+          ]
+        },
+        {
+          "title": "Vaishnavism",
+          "texts": [
+            "Vaishnavism"
+          ]
+        },
+        {
+          "title": "Shaivism",
+          "texts": [
+            "Shaivism",
+            "Shaiva",
+            "Saiva traditions"
+          ]
+        },
+        {
+          "title": "Shaktism",
+          "texts": [
+            "Shaktism"
+          ]
+        },
+        {
+          "title": "Smartism",
+          "texts": [
+            "Smartism"
+          ]
+        },
+        {
+          "title": "Āstika and nāstika",
+          "texts": [
+            "Āstika"
+          ]
+        },
+        {
+          "title": "Hindu philosophy",
+          "texts": [
+            "Hindu philosophy",
+            "philosophy"
+          ]
+        },
+        {
+          "title": "Samkhya",
+          "texts": [
+            "Sankhya",
+            "Sānkhya",
+            "Samkhya"
+          ]
+        },
+        {
+          "title": "Yoga (philosophy)",
+          "texts": [
+            "Yoga"
+          ]
+        },
+        {
+          "title": "Nyaya",
+          "texts": [
+            "Nyaya"
+          ]
+        },
+        {
+          "title": "Vaisheshika",
+          "texts": [
+            "Vaisheshika"
+          ]
+        },
+        {
+          "title": "Mīmāṃsā",
+          "texts": [
+            "Mīmāṃsā",
+            "Mimāmsā"
+          ]
+        },
+        {
+          "title": "Vedanta",
+          "texts": [
+            "Vedanta",
+            "Vedantic school",
+            "Vedantic"
+          ]
+        },
+        {
+          "title": "Itihasa-Purana",
+          "texts": [
+            "Itihasa-Purana"
+          ]
+        },
+        {
+          "title": "Epic-Puranic chronology",
+          "texts": [
+            "Epic-Puranic chronology"
+          ]
+        },
+        {
+          "title": "Brahmanism",
+          "texts": [
+            "Brahmanical orthopraxy",
+            "orthodox Brahmanic culture"
+          ]
+        },
+        {
+          "title": "Hindu synthesis",
+          "texts": [
+            "Hindu synthesis",
+            "synthesis"
+          ]
+        },
+        {
+          "title": "Common Era",
+          "texts": [
+            "BCE"
+          ]
+        },
+        {
+          "title": "Second urbanisation",
+          "texts": [
+            "second urbanisation"
+          ]
+        },
+        {
+          "title": "History of Hinduism",
+          "texts": [
+            "classical period of Hinduism"
+          ]
+        },
+        {
+          "title": "Indian epic poetry",
+          "texts": [
+            "epics",
+            "Epic"
+          ]
+        },
+        {
+          "title": "Medieval India",
+          "texts": [
+            "medieval period"
+          ]
+        },
+        {
+          "title": "Decline of Buddhism in the Indian subcontinent",
+          "texts": [
+            "decline of Buddhism in India"
+          ]
+        },
+        {
+          "title": "Neo-Vedanta",
+          "texts": [
+            "modern Hinduism",
+            "\"Hindu modernism\""
+          ]
+        },
+        {
+          "title": "Western culture",
+          "texts": [
+            "Western culture"
+          ]
+        },
+        {
+          "title": "Hinduism in the West",
+          "texts": [
+            "in the West"
+          ]
+        },
+        {
+          "title": "Transcendental Meditation",
+          "texts": [
+            "Transcendental Meditation"
+          ]
+        },
+        {
+          "title": "International Society for Krishna Consciousness",
+          "texts": [
+            "ISKCON"
+          ]
+        },
+        {
+          "title": "ISKCON",
+          "texts": [
+            "Hare Krishna movement",
+            "ISKCON"
+          ]
+        },
+        {
+          "title": "Major religious groups",
+          "texts": [
+            "world's third-largest",
+            "world's third largest religion"
+          ]
+        },
+        {
+          "title": "Ethnic religion",
+          "texts": [
+            "ethnic religion"
+          ]
+        },
+        {
+          "title": "Hindus",
+          "texts": [
+            "Hindus"
+          ]
+        },
+        {
+          "title": "Religion in India",
+          "texts": [
+            "India"
+          ]
+        },
+        {
+          "title": "Hinduism in Nepal",
+          "texts": [
+            "Nepal"
+          ]
+        },
+        {
+          "title": "Religion in Mauritius",
+          "texts": [
+            "Mauritius"
+          ]
+        },
+        {
+          "title": "Hinduism in Bali",
+          "texts": [
+            "Bali"
+          ]
+        },
+        {
+          "title": "Hinduism in Indonesia",
+          "texts": [
+            "Indonesia"
+          ]
+        },
+        {
+          "title": "Hinduism by country",
+          "texts": [
+            "Significant numbers"
+          ]
+        },
+        {
+          "title": "Hinduism in South Asia",
+          "texts": [
+            "South Asia"
+          ]
+        },
+        {
+          "title": "Hinduism in Southeast Asia",
+          "texts": [
+            "Southeast Asia"
+          ]
+        },
+        {
+          "title": "Hinduism in the West Indies",
+          "texts": [
+            "Caribbean"
+          ]
+        },
+        {
+          "title": "Hinduism in the Middle East",
+          "texts": [
+            "Middle East"
+          ]
+        },
+        {
+          "title": "Hinduism in the United States",
+          "texts": [
+            "North America",
+            "United States"
+          ]
+        },
+        {
+          "title": "Hinduism in Europe",
+          "texts": [
+            "Europe"
+          ]
+        },
+        {
+          "title": "Hinduism in Oceania",
+          "texts": [
+            "Oceania"
+          ]
+        },
+        {
+          "title": "Hinduism in Africa",
+          "texts": [
+            "Africa"
+          ]
+        },
+        {
+          "title": "Hinduism in Australia",
+          "texts": [
+            "Australia"
+          ]
+        },
+        {
+          "title": "Sanskrit",
+          "texts": [
+            "Sanskrit"
+          ]
+        },
+        {
+          "title": "Indus River",
+          "texts": [
+            "Indus River"
+          ]
+        },
+        {
+          "title": "Sindh",
+          "texts": [
+            "Sindh"
+          ]
+        },
+        {
+          "title": "Proto-Iranian language",
+          "texts": [
+            "Proto-Iranian"
+          ]
+        },
+        {
+          "title": "Avesta",
+          "texts": [
+            "Avesta"
+          ]
+        },
+        {
+          "title": "Darius I",
+          "texts": [
+            "Darius I"
+          ]
+        },
+        {
+          "title": "Hindush",
+          "texts": [
+            "Hindush"
+          ]
+        },
+        {
+          "title": "Sasanian Empire",
+          "texts": [
+            "Sasanian"
+          ]
+        },
+        {
+          "title": "Hindu",
+          "texts": [
+            "Hindu",
+            "Hindus"
+          ]
+        },
+        {
+          "title": "Romila Thapar",
+          "texts": [
+            "Romila Thapar"
+          ]
+        },
+        {
+          "title": "Hindustan",
+          "texts": [
+            "Hindustan"
+          ]
+        },
+        {
+          "title": "Names of India",
+          "texts": [
+            "alternative name"
+          ]
+        },
+        {
+          "title": "Xuanzang",
+          "texts": [
+            "Xuanzang"
+          ]
+        },
+        {
+          "title": "Isami (historian)",
+          "texts": [
+            "Isami"
+          ]
+        },
+        {
+          "title": "Vividha Tirtha Kalpa",
+          "texts": [
+            "Vividha Tirtha Kalpa"
+          ]
+        },
+        {
+          "title": "Apabhramsa",
+          "texts": [
+            "Apabhramsa"
+          ]
+        },
+        {
+          "title": "Vidyapati",
+          "texts": [
+            "Vidyapati"
+          ]
+        },
+        {
+          "title": "Bengali language",
+          "texts": [
+            "Bengali"
+          ]
+        },
+        {
+          "title": "Gaudiya Vaishnavism",
+          "texts": [
+            "Gaudiya Vaishnava"
+          ]
+        },
+        {
+          "title": "Gentoo (term)",
+          "texts": [
+            "Gentoos"
+          ]
+        },
+        {
+          "title": "Charles Grant (British East India Company)",
+          "texts": [
+            "Charles Grant"
+          ]
+        },
+        {
+          "title": "Raja Ram Mohun Roy",
+          "texts": [
+            "Raja Ram Mohan Roy"
+          ]
+        },
+        {
+          "title": "Varna (Hinduism)",
+          "texts": [
+            "varna",
+            "varṇas"
+          ]
+        },
+        {
+          "title": "Jāti",
+          "texts": [
+            "jāti"
+          ]
+        },
+        {
+          "title": "Second Urbanisation",
+          "texts": [
+            "Second Urbanisation"
+          ]
+        },
+        {
+          "title": "Definition of religion",
+          "texts": [
+            "define as a religion"
+          ]
+        },
+        {
+          "title": "Spirituality",
+          "texts": [
+            "spirituality"
+          ]
+        },
+        {
+          "title": "Polytheism",
+          "texts": [
+            "polytheistic"
+          ]
+        },
+        {
+          "title": "Pantheism",
+          "texts": [
+            "pantheistic"
+          ]
+        },
+        {
+          "title": "Panentheism",
+          "texts": [
+            "panentheistic"
+          ]
+        },
+        {
+          "title": "Pandeism",
+          "texts": [
+            "pandeistic"
+          ]
+        },
+        {
+          "title": "Henotheism",
+          "texts": [
+            "henotheistic"
+          ]
+        },
+        {
+          "title": "Monotheism",
+          "texts": [
+            "monotheistic"
+          ]
+        },
+        {
+          "title": "Monism",
+          "texts": [
+            "monistic"
+          ]
+        },
+        {
+          "title": "Agnosticism",
+          "texts": [
+            "agnostic"
+          ]
+        },
+        {
+          "title": "Atheism",
+          "texts": [
+            "atheistic"
+          ]
+        },
+        {
+          "title": "Humanism",
+          "texts": [
+            "humanist"
+          ]
+        },
+        {
+          "title": "Mahatma Gandhi",
+          "texts": [
+            "Mahatma Gandhi"
+          ]
+        },
+        {
+          "title": "Wendy Doniger",
+          "texts": [
+            "Wendy Doniger"
+          ]
+        },
+        {
+          "title": "Caste system in India",
+          "texts": [
+            "caste",
+            "castes",
+            "caste system"
+          ]
+        },
+        {
+          "title": "Dogma",
+          "texts": [
+            "dogma"
+          ]
+        },
+        {
+          "title": "Darsanas",
+          "texts": [
+            "darsanas"
+          ]
+        },
+        {
+          "title": "Āstika",
+          "texts": [
+            "āstika"
+          ]
+        },
+        {
+          "title": "Nyāya",
+          "texts": [
+            "Nyāya"
+          ]
+        },
+        {
+          "title": "Vedānta",
+          "texts": [
+            "Vedānta"
+          ]
+        },
+        {
+          "title": "Vishnu",
+          "texts": [
+            "God Vishnu",
+            "Vishnu"
+          ]
+        },
+        {
+          "title": "Shiva",
+          "texts": [
+            "God Shiva",
+            "Shiva"
+          ]
+        },
+        {
+          "title": "Shakti",
+          "texts": [
+            "Goddess Adi Shakti",
+            "Shakti"
+          ]
+        },
+        {
+          "title": "Smarta Tradition",
+          "texts": [
+            "Smartism"
+          ]
+        },
+        {
+          "title": "Supreme God (Hinduism)",
+          "texts": [
+            "Supreme God"
+          ]
+        },
+        {
+          "title": "Ātman (Hinduism)",
+          "texts": [
+            "ātman",
+            "Atman",
+            "individual Selfs"
+          ]
+        },
+        {
+          "title": "Reincarnation",
+          "texts": [
+            "reincarnation"
+          ]
+        },
+        {
+          "title": "Folk Hinduism",
+          "texts": [
+            "Folk Hinduism"
+          ]
+        },
+        {
+          "title": "Deities",
+          "texts": [
+            "deities"
+          ]
+        },
+        {
+          "title": "Historical Vedic religion",
+          "texts": [
+            "Vedic Hinduism",
+            "historical Vedic religion"
+          ]
+        },
+        {
+          "title": "Upanishad",
+          "texts": [
+            "Upanishads"
+          ]
+        },
+        {
+          "title": "Advaita Vedanta",
+          "texts": [
+            "Advaita Vedanta",
+            "Advaita school"
+          ]
+        },
+        {
+          "title": "Yoga Sutras of Patanjali",
+          "texts": [
+            "Yoga Sutras of Patanjali",
+            "Patanjali's Yoga Sutras"
+          ]
+        },
+        {
+          "title": "Jnana yoga",
+          "texts": [
+            "jnana-marga"
+          ]
+        },
+        {
+          "title": "Bhakti yoga",
+          "texts": [
+            "bhakti-marga"
+          ]
+        },
+        {
+          "title": "Sannyasa",
+          "texts": [
+            "militaristic traditions",
+            "renunciant",
+            "Sannyasa"
+          ]
+        },
+        {
+          "title": "Rama",
+          "texts": [
+            "Rama"
+          ]
+        },
+        {
+          "title": "Hindu nationalism",
+          "texts": [
+            "political Hinduism"
+          ]
+        },
+        {
+          "title": "Vīrya (Hinduism)",
+          "texts": [
+            "virya-marga"
+          ]
+        },
+        {
+          "title": "Brahmin",
+          "texts": [
+            "Brahman",
+            "Brahmins"
+          ]
+        },
+        {
+          "title": "Buddhism",
+          "texts": [
+            "Buddhism"
+          ]
+        },
+        {
+          "title": "Jainism",
+          "texts": [
+            "Jainism"
+          ]
+        },
+        {
+          "title": "Syncretism",
+          "texts": [
+            "syncretic"
+          ]
+        },
+        {
+          "title": "Brahmo Samaj",
+          "texts": [
+            "Brahmo Samaj"
+          ]
+        },
+        {
+          "title": "Theosophical Society",
+          "texts": [
+            "Theosophical Society"
+          ]
+        },
+        {
+          "title": "Guru",
+          "texts": [
+            "Guru",
+            "guru"
+          ]
+        },
+        {
+          "title": "BAPS",
+          "texts": [
+            "BAPS"
+          ]
+        },
+        {
+          "title": "Indology",
+          "texts": [
+            "Indology"
+          ]
+        },
+        {
+          "title": "Gabriella Eichinger Ferro-Luzzi",
+          "texts": [
+            "Gabriella Eichinger Ferro-Luzzi"
+          ]
+        },
+        {
+          "title": "Puranic chronology",
+          "texts": [
+            "Puranic chronology"
+          ]
+        },
+        {
+          "title": "Indo-Aryan languages",
+          "texts": [
+            "Indo-Aryan languages"
+          ]
+        },
+        {
+          "title": "Human history",
+          "texts": [
+            "Human history"
+          ]
+        },
+        {
+          "title": "Shruti",
+          "texts": [
+            "Shruti"
+          ]
+        },
+        {
+          "title": "Ahimsa",
+          "texts": [
+            "ahiṃsā"
+          ]
+        },
+        {
+          "title": "Svadharma",
+          "texts": [
+            "svadharma"
+          ]
+        },
+        {
+          "title": "Tantra",
+          "texts": [
+            "Tantric revelations",
+            "Tantra"
+          ]
+        },
+        {
+          "title": "Charvaka",
+          "texts": [
+            "Charvaka"
+          ]
+        },
+        {
+          "title": "Poola Tirupati Raju",
+          "texts": [
+            "P.T. Raju"
+          ]
+        },
+        {
+          "title": "Klaus Klostermaier",
+          "texts": [
+            "Klaus Klostermaier"
+          ]
+        },
+        {
+          "title": "Arvind Sharma",
+          "texts": [
+            "Arvind Sharma"
+          ]
+        },
+        {
+          "title": "Brian K. Smith",
+          "texts": [
+            "Brian K. Smith"
+          ]
+        },
+        {
+          "title": "Varnasrama Dharma",
+          "texts": [
+            "varṇāśrama"
+          ]
+        },
+        {
+          "title": "Bhagavata Purana",
+          "texts": [
+            "Bhāgavata Purāṇa",
+            "Bhagavata Purana",
+            "Bhagwata Purana"
+          ]
+        },
+        {
+          "title": "Pashupata Shaivism",
+          "texts": [
+            "Paśupatas"
+          ]
+        },
+        {
+          "title": "Kapalika",
+          "texts": [
+            "Kāpālins"
+          ]
+        },
+        {
+          "title": "Alexis Sanderson",
+          "texts": [
+            "Alexis Sanderson"
+          ]
+        },
+        {
+          "title": "Antinomianism",
+          "texts": [
+            "antinomian"
+          ]
+        },
+        {
+          "title": "Mimamsa",
+          "texts": [
+            "Mimamsa"
+          ]
+        },
+        {
+          "title": "Āgama (Hinduism)",
+          "texts": [
+            "Agamas"
+          ]
+        },
+        {
+          "title": "Bal Gangadhar Tilak",
+          "texts": [
+            "Bal Gangadhar Tilak"
+          ]
+        },
+        {
+          "title": "Supreme Court of India",
+          "texts": [
+            "Indian Supreme Court",
+            "Supreme Court of India"
+          ]
+        },
+        {
+          "title": "Creed",
+          "texts": [
+            "creed"
+          ]
+        },
+        {
+          "title": "Theism",
+          "texts": [
+            "Theism"
+          ]
+        },
+        {
+          "title": "Ontology",
+          "texts": [
+            "ontology"
+          ]
+        },
+        {
+          "title": "Hindu atheism",
+          "texts": [
+            "Hindus are or have been atheists"
+          ]
+        },
+        {
+          "title": "Sastra",
+          "texts": [
+            "sacred literature"
+          ]
+        },
+        {
+          "title": "Louis Renou",
+          "texts": [
+            "Louis Renou"
+          ]
+        },
+        {
+          "title": "Gupta Empire",
+          "texts": [
+            "Gupta period",
+            "Gupta Empire"
+          ]
+        },
+        {
+          "title": "Antinomian",
+          "texts": [
+            "antinomian"
+          ]
+        },
+        {
+          "title": "Mikel Burley",
+          "texts": [
+            "Mikel Burley"
+          ]
+        },
+        {
+          "title": "Manusmriti",
+          "texts": [
+            "Manusmriti"
+          ]
+        },
+        {
+          "title": "Swami Vivekananda",
+          "texts": [
+            "Swami Vivekananda"
+          ]
+        },
+        {
+          "title": "Hindu reform movements",
+          "texts": [
+            "Hindu reform movements"
+          ]
+        },
+        {
+          "title": "Ram Mohan Roy",
+          "texts": [
+            "Ram Mohan Roy"
+          ]
+        },
+        {
+          "title": "Sarvepalli Radhakrishnan",
+          "texts": [
+            "Sarvepalli Radhakrishnan"
+          ]
+        },
+        {
+          "title": "Hindu Renaissance",
+          "texts": [
+            "Hindu Renaissance"
+          ]
+        },
+        {
+          "title": "Pizza effect",
+          "texts": [
+            "pizza effect"
+          ]
+        },
+        {
+          "title": "Hare Krishna movement",
+          "texts": [
+            "Hare Krishna movement"
+          ]
+        },
+        {
+          "title": "Indian Hindus",
+          "texts": [
+            "Indian Hindus"
+          ]
+        },
+        {
+          "title": "Soteriology",
+          "texts": [
+            "soteriological"
+          ]
+        },
+        {
+          "title": "Kirtan",
+          "texts": [
+            "Kirtans"
+          ]
+        },
+        {
+          "title": "Bhajan",
+          "texts": [
+            "Bhajans"
+          ]
+        },
+        {
+          "title": "Ardhanarishvara",
+          "texts": [
+            "Ardhanarishvara"
+          ]
+        },
+        {
+          "title": "Kumbh Mela",
+          "texts": [
+            "Kumbh Mela"
+          ]
+        },
+        {
+          "title": "Assam",
+          "texts": [
+            "Assam"
+          ]
+        },
+        {
+          "title": "West Bengal",
+          "texts": [
+            "Bengal"
+          ]
+        },
+        {
+          "title": "Parvati",
+          "texts": [
+            "Parvati"
+          ]
+        },
+        {
+          "title": "Kali",
+          "texts": [
+            "Kali"
+          ]
+        },
+        {
+          "title": "Durga",
+          "texts": [
+            "Durga"
+          ]
+        },
+        {
+          "title": "Hindu deities",
+          "texts": [
+            "Hindu deities",
+            "deities"
+          ]
+        },
+        {
+          "title": "Surya",
+          "texts": [
+            "Surya"
+          ]
+        },
+        {
+          "title": "Kartikeya",
+          "texts": [
+            "Skanda"
+          ]
+        },
+        {
+          "title": "Adi Shankara",
+          "texts": [
+            "Adi Shankara",
+            "Adi Sankara"
+          ]
+        },
+        {
+          "title": "Saguna Brahman",
+          "texts": [
+            "Saguna Brahman"
+          ]
+        },
+        {
+          "title": "Polyethnicity",
+          "texts": [
+            "polyethnic"
+          ]
+        },
+        {
+          "title": "Indian subcontinent",
+          "texts": [
+            "Indian subcontinent"
+          ]
+        },
+        {
+          "title": "Indo-Aryan peoples",
+          "texts": [
+            "Indo-Aryan"
+          ]
+        },
+        {
+          "title": "Dravidian peoples",
+          "texts": [
+            "Dravidian"
+          ]
+        },
+        {
+          "title": "South Asian ethnic groups",
+          "texts": [
+            "South Asian ethnic groups"
+          ]
+        },
+        {
+          "title": "Meitei people",
+          "texts": [
+            "Meitei people"
+          ]
+        },
+        {
+          "title": "Tibeto-Burman languages",
+          "texts": [
+            "Tibeto-Burman"
+          ]
+        },
+        {
+          "title": "Manipur",
+          "texts": [
+            "Manipur"
+          ]
+        },
+        {
+          "title": "Middle Ages",
+          "texts": [
+            "Middle Ages"
+          ]
+        },
+        {
+          "title": "State religion",
+          "texts": [
+            "state religion"
+          ]
+        },
+        {
+          "title": "Greater India",
+          "texts": [
+            "Greater India"
+          ]
+        },
+        {
+          "title": "Kabul",
+          "texts": [
+            "Kabul"
+          ]
+        },
+        {
+          "title": "Southeast Asia",
+          "texts": [
+            "Southeast Asia"
+          ]
+        },
+        {
+          "title": "Cambodia",
+          "texts": [
+            "Cambodia"
+          ]
+        },
+        {
+          "title": "Vietnam",
+          "texts": [
+            "Vietnam"
+          ]
+        },
+        {
+          "title": "Indonesia",
+          "texts": [
+            "Indonesia"
+          ]
+        },
+        {
+          "title": "Philippines",
+          "texts": [
+            "Philippines"
+          ]
+        },
+        {
+          "title": "Austronesian peoples",
+          "texts": [
+            "Austronesian"
+          ]
+        },
+        {
+          "title": "Balinese people",
+          "texts": [
+            "Balinese"
+          ]
+        },
+        {
+          "title": "Tenggerese people",
+          "texts": [
+            "Tenggerese people"
+          ]
+        },
+        {
+          "title": "Chams",
+          "texts": [
+            "Chams"
+          ]
+        },
+        {
+          "title": "Pashtuns",
+          "texts": [
+            "Pashtuns"
+          ]
+        },
+        {
+          "title": "Partition of India",
+          "texts": [
+            "partition",
+            "Partition of India"
+          ]
+        },
+        {
+          "title": "Kalash people",
+          "texts": [
+            "Kalash people"
+          ]
+        },
+        {
+          "title": "Hinduism in Ghana",
+          "texts": [
+            "Ghanaian Hindus"
+          ]
+        },
+        {
+          "title": "Swami Ghanananda Saraswati",
+          "texts": [
+            "Swami Ghanananda Saraswati"
+          ]
+        },
+        {
+          "title": "Hindu Monastery of Africa",
+          "texts": [
+            "Hindu Monastery of Africa"
+          ]
+        },
+        {
+          "title": "A. C. Bhaktivedanta Swami Prabhupada",
+          "texts": [
+            "A. C. Bhaktivedanta Swami Prabhupada"
+          ]
+        },
+        {
+          "title": "Vedic Sanskrit",
+          "texts": [
+            "Vedic Sanskrit"
+          ]
+        },
+        {
+          "title": "Apauruṣeyā",
+          "texts": [
+            "apauruṣeyā"
+          ]
+        },
+        {
+          "title": "Rishis",
+          "texts": [
+            "rishis"
+          ]
+        },
+        {
+          "title": "Sources of dharma",
+          "texts": [
+            "sources of dharma"
+          ]
+        },
+        {
+          "title": "Ācāra",
+          "texts": [
+            "Śiṣṭa Āchāra/Sadāchara"
+          ]
+        },
+        {
+          "title": "Atmatusti",
+          "texts": [
+            "Ātma tuṣṭi"
+          ]
+        },
+        {
+          "title": "Rigveda",
+          "texts": [
+            "Rigveda"
+          ]
+        },
+        {
+          "title": "Samaveda",
+          "texts": [
+            "Samaveda"
+          ]
+        },
+        {
+          "title": "Yajurveda",
+          "texts": [
+            "Yajurveda"
+          ]
+        },
+        {
+          "title": "Atharvaveda",
+          "texts": [
+            "Atharvaveda"
+          ]
+        },
+        {
+          "title": "Samhita",
+          "texts": [
+            "Samhitas"
+          ]
+        },
+        {
+          "title": "Aranyakas",
+          "texts": [
+            "Aranyakas"
+          ]
+        },
+        {
+          "title": "Brahmanas",
+          "texts": [
+            "Brahmanas"
+          ]
+        },
+        {
+          "title": "Muktikā",
+          "texts": [
+            "Muktikā"
+          ]
+        },
+        {
+          "title": "Mukhya Upanishads",
+          "texts": [
+            "Principal Upanishads"
+          ]
+        },
+        {
+          "title": "Yoga Sutras",
+          "texts": [
+            "Yoga Sutras"
+          ]
+        },
+        {
+          "title": "Radha",
+          "texts": [
+            "Radha"
+          ]
+        },
+        {
+          "title": "Samsara",
+          "texts": [
+            "Saṃsāra",
+            "samsara"
+          ]
+        },
+        {
+          "title": "Afterlife",
+          "texts": [
+            "Afterlife"
+          ]
+        },
+        {
+          "title": "Śrāddha",
+          "texts": [
+            "Śrāddha"
+          ]
+        },
+        {
+          "title": "Ancestor worship",
+          "texts": [
+            "Ancestor worship"
+          ]
+        },
+        {
+          "title": "Rta",
+          "texts": [
+            "rta"
+          ]
+        },
+        {
+          "title": "Brihadaranyaka",
+          "texts": [
+            "Brihadaranyaka"
+          ]
+        },
+        {
+          "title": "Brihadaranyaka Upanishad",
+          "texts": [
+            "Brihadaranyaka Upanishad"
+          ]
+        },
+        {
+          "title": "Krishna",
+          "texts": [
+            "Krishna"
+          ]
+        },
+        {
+          "title": "Dharmaśāstra",
+          "texts": [
+            "Dharmasastra"
+          ]
+        },
+        {
+          "title": "Pali",
+          "texts": [
+            "Pali"
+          ]
+        },
+        {
+          "title": "Senses",
+          "texts": [
+            "senses"
+          ]
+        },
+        {
+          "title": "Sanskrit language",
+          "texts": [
+            "Sanskrit"
+          ]
+        },
+        {
+          "title": "Romanization of Sanskrit",
+          "texts": [
+            "romanized"
+          ]
+        },
+        {
+          "title": "Atman (Hinduism)",
+          "texts": [
+            "Atman",
+            "ātman"
+          ]
+        },
+        {
+          "title": "Purusha",
+          "texts": [
+            "Purusha",
+            "Purusa"
+          ]
+        },
+        {
+          "title": "Brahman",
+          "texts": [
+            "Brahman",
+            "One Truth and One Ultimate Reality",
+            "metaphysical Brahman"
+          ]
+        },
+        {
+          "title": "Jivanmukta",
+          "texts": [
+            "Jivanmukti"
+          ]
+        },
+        {
+          "title": "Videha mukti",
+          "texts": [
+            "Videhamukti"
+          ]
+        },
+        {
+          "title": "Ānanda (Hindu philosophy)",
+          "texts": [
+            "happiness"
+          ]
+        },
+        {
+          "title": "Peace",
+          "texts": [
+            "peace"
+          ]
+        },
+        {
+          "title": "Vedic period",
+          "texts": [
+            "Vedic period"
+          ]
+        },
+        {
+          "title": "Buddha",
+          "texts": [
+            "Buddha"
+          ]
+        },
+        {
+          "title": "Mahavira",
+          "texts": [
+            "Mahavira"
+          ]
+        },
+        {
+          "title": "Nasadiya Sukta",
+          "texts": [
+            "Nasadiya Sukta"
+          ]
+        },
+        {
+          "title": "Origin of the universe",
+          "texts": [
+            "origin of the universe"
+          ]
+        },
+        {
+          "title": "Rig Veda",
+          "texts": [
+            "Rig Veda"
+          ]
+        },
+        {
+          "title": "Nonduality (spirituality)",
+          "texts": [
+            "non-dualist"
+          ]
+        },
+        {
+          "title": "Ultimate reality",
+          "texts": [
+            "the Ultimate Reality"
+          ]
+        },
+        {
+          "title": "Jiva",
+          "texts": [
+            "one's Self"
+          ]
+        },
+        {
+          "title": "Paramatman",
+          "texts": [
+            "supreme Self"
+          ]
+        },
+        {
+          "title": "Dualism (Indian philosophy)",
+          "texts": [
+            "Dualistic"
+          ]
+        },
+        {
+          "title": "Dvaita Vedanta",
+          "texts": [
+            "Dvaita"
+          ]
+        },
+        {
+          "title": "Brahma",
+          "texts": [
+            "Brahma"
+          ]
+        },
+        {
+          "title": "Ishvara",
+          "texts": [
+            "Ishvara"
+          ]
+        },
+        {
+          "title": "Bhagavan",
+          "texts": [
+            "Bhagavan"
+          ]
+        },
+        {
+          "title": "Parameshwara (god)",
+          "texts": [
+            "Parameshwara"
+          ]
+        },
+        {
+          "title": "Deva (Hinduism)",
+          "texts": [
+            "Deva",
+            "Devas",
+            "devas"
+          ]
+        },
+        {
+          "title": "Devi",
+          "texts": [
+            "Devi"
+          ]
+        },
+        {
+          "title": "Animism",
+          "texts": [
+            "animism"
+          ]
+        },
+        {
+          "title": "Man and nature",
+          "texts": [
+            "man and nature"
+          ]
+        },
+        {
+          "title": "Hindu architecture",
+          "texts": [
+            "architecture"
+          ]
+        },
+        {
+          "title": "Hindu iconography",
+          "texts": [
+            "icons",
+            "symbolism and iconography",
+            "symbolic iconography"
+          ]
+        },
+        {
+          "title": "Iṣṭa devatā",
+          "texts": [
+            "iṣṭa devatā"
+          ]
+        },
+        {
+          "title": "Avatar",
+          "texts": [
+            "avatar"
+          ]
+        },
+        {
+          "title": "Dashavatara",
+          "texts": [
+            "Dashavatara"
+          ]
+        },
+        {
+          "title": "Garuda Purana",
+          "texts": [
+            "Garuda Purana"
+          ]
+        },
+        {
+          "title": "Ganesha",
+          "texts": [
+            "Ganesha"
+          ]
+        },
+        {
+          "title": "Carvaka",
+          "texts": [
+            "Carvaka"
+          ]
+        },
+        {
+          "title": "Raja yoga",
+          "texts": [
+            "Yoga"
+          ]
+        },
+        {
+          "title": "God and gender in Hinduism",
+          "texts": [
+            "feminine and masculine"
+          ]
+        },
+        {
+          "title": "Sita",
+          "texts": [
+            "Sita"
+          ]
+        },
+        {
+          "title": "Graham Schweig",
+          "texts": [
+            "Graham Schweig"
+          ]
+        },
+        {
+          "title": "Kena Upanishad",
+          "texts": [
+            "Kena Upanishad"
+          ]
+        },
+        {
+          "title": "Katha Upanishad",
+          "texts": [
+            "Katha Upanishad"
+          ]
+        },
+        {
+          "title": "Shiva Purana",
+          "texts": [
+            "Shiva Purana"
+          ]
+        },
+        {
+          "title": "Jayadeva",
+          "texts": [
+            "Jayadeva"
+          ]
+        },
+        {
+          "title": "Gita Govinda",
+          "texts": [
+            "Gita Govinda"
+          ]
+        },
+        {
+          "title": "Acharya",
+          "texts": [
+            "Acharya"
+          ]
+        },
+        {
+          "title": "Mahacharya",
+          "texts": [
+            "Mahacharya"
+          ]
+        },
+        {
+          "title": "Meditation",
+          "texts": [
+            "meditation"
+          ]
+        },
+        {
+          "title": "Mantra",
+          "texts": [
+            "mantras"
+          ]
+        },
+        {
+          "title": "Speech act",
+          "texts": [
+            "linguistic utterances"
+          ]
+        },
+        {
+          "title": "Magic (supernatural)",
+          "texts": [
+            "magical"
+          ]
+        },
+        {
+          "title": "Rites of passage",
+          "texts": [
+            "rites of passage"
+          ]
+        },
+        {
+          "title": "Dharmasutra",
+          "texts": [
+            "Dharmasutras"
+          ]
+        },
+        {
+          "title": "Kalpa (Vedanga)",
+          "texts": [
+            "Gryhasutra"
+          ]
+        },
+        {
+          "title": "Compassion",
+          "texts": [
+            "compassion"
+          ]
+        },
+        {
+          "title": "Garbhadhana",
+          "texts": [
+            "Garbhadhana"
+          ]
+        },
+        {
+          "title": "Pumsavana",
+          "texts": [
+            "Pumsavana"
+          ]
+        },
+        {
+          "title": "Simantonnayana",
+          "texts": [
+            "Simantonnayana"
+          ]
+        },
+        {
+          "title": "Upanayana",
+          "texts": [
+            "Upanayana"
+          ]
+        },
+        {
+          "title": "Samavartana",
+          "texts": [
+            "Samavartana"
+          ]
+        },
+        {
+          "title": "Antyeshti",
+          "texts": [
+            "Antyeshti"
+          ]
+        },
+        {
+          "title": "Saṃskāra",
+          "texts": [
+            "sanskaras"
+          ]
+        },
+        {
+          "title": "Japa",
+          "texts": [
+            "japas"
+          ]
+        },
+        {
+          "title": "Murti",
+          "texts": [
+            "murti",
+            "murtis"
+          ]
+        },
+        {
+          "title": "Hindu temple",
+          "texts": [
+            "Hindu temples",
+            "Hindu temple"
+          ]
+        },
+        {
+          "title": "Arti (Hinduism)",
+          "texts": [
+            "aarati"
+          ]
+        },
+        {
+          "title": "Om Jai Jagdish Hare",
+          "texts": [
+            "Om Jai Jagdish Hare"
+          ]
+        },
+        {
+          "title": "Hindi",
+          "texts": [
+            "Hindi"
+          ]
+        },
+        {
+          "title": "Sukhakarta Dukhaharta",
+          "texts": [
+            "Sukhakarta Dukhaharta"
+          ]
+        },
+        {
+          "title": "Marathi language",
+          "texts": [
+            "Marathi"
+          ]
+        },
+        {
+          "title": "Hanuman",
+          "texts": [
+            "Hanuman"
+          ]
+        },
+        {
+          "title": "Venkateswara",
+          "texts": [
+            "Vishnu"
+          ]
+        },
+        {
+          "title": "Swaminarayan Sampradaya",
+          "texts": [
+            "Swaminarayan"
+          ]
+        },
+        {
+          "title": "Swaminarayan",
+          "texts": [
+            "Swaminarayan"
+          ]
+        },
+        {
+          "title": "Nirguna Brahman",
+          "texts": [
+            "nirguna Brahman"
+          ]
+        },
+        {
+          "title": "Hindu calendar",
+          "texts": [
+            "Hindu calendar"
+          ]
+        },
+        {
+          "title": "Bhau-beej",
+          "texts": [
+            "Bhai Dooj"
+          ]
+        },
+        {
+          "title": "Ashadhi Ekadashi",
+          "texts": [
+            "Ashadhi Ekadashi"
+          ]
+        },
+        {
+          "title": "Bonalu",
+          "texts": [
+            "Bonalu"
+          ]
+        },
+        {
+          "title": "Chhath",
+          "texts": [
+            "Chhath"
+          ]
+        },
+        {
+          "title": "Dashain",
+          "texts": [
+            "Dashain"
+          ]
+        },
+        {
+          "title": "Diwali",
+          "texts": [
+            "Diwali"
+          ]
+        },
+        {
+          "title": "Tihar (festival)",
+          "texts": [
+            "Tihar"
+          ]
+        },
+        {
+          "title": "Deepawali",
+          "texts": [
+            "Deepawali"
+          ]
+        },
+        {
+          "title": "Durga Puja",
+          "texts": [
+            "Durga Puja"
+          ]
+        },
+        {
+          "title": "Dussehra",
+          "texts": [
+            "Dussehra"
+          ]
+        },
+        {
+          "title": "Ganesh Chaturthi",
+          "texts": [
+            "Ganesh Chaturthi"
+          ]
+        },
+        {
+          "title": "Gowri Habba",
+          "texts": [
+            "Gowri Habba"
+          ]
+        },
+        {
+          "title": "Gudi Padwa",
+          "texts": [
+            "Gudi Padwa"
+          ]
+        },
+        {
+          "title": "Holi",
+          "texts": [
+            "Holi"
+          ]
+        },
+        {
+          "title": "Karva Chauth",
+          "texts": [
+            "Karva Chauth"
+          ]
+        },
+        {
+          "title": "Kartika Purnima",
+          "texts": [
+            "Kartika Purnima"
+          ]
+        },
+        {
+          "title": "Krishna Janmashtami",
+          "texts": [
+            "Krishna Janmashtami"
+          ]
+        },
+        {
+          "title": "Maha Shivaratri",
+          "texts": [
+            "Maha Shivaratri"
+          ]
+        },
+        {
+          "title": "Makar Sankranti",
+          "texts": [
+            "Makar Sankranti"
+          ]
+        },
+        {
+          "title": "Navaratri",
+          "texts": [
+            "Navaratri"
+          ]
+        },
+        {
+          "title": "Onam",
+          "texts": [
+            "Onam"
+          ]
+        },
+        {
+          "title": "Pongal (festival)",
+          "texts": [
+            "Pongal"
+          ]
+        },
+        {
+          "title": "Radhashtami",
+          "texts": [
+            "Radhashtami"
+          ]
+        },
+        {
+          "title": "Raksha Bandhan",
+          "texts": [
+            "Raksha Bandhan"
+          ]
+        },
+        {
+          "title": "Rama Navami",
+          "texts": [
+            "Rama Navami"
+          ]
+        },
+        {
+          "title": "Ratha Yatra",
+          "texts": [
+            "Ratha Yatra"
+          ]
+        },
+        {
+          "title": "Sharad Purnima",
+          "texts": [
+            "Sharad Purnima"
+          ]
+        },
+        {
+          "title": "Shigmo",
+          "texts": [
+            "Shigmo"
+          ]
+        },
+        {
+          "title": "Thaipusam",
+          "texts": [
+            "Thaipusam"
+          ]
+        },
+        {
+          "title": "Ugadi",
+          "texts": [
+            "Ugadi"
+          ]
+        },
+        {
+          "title": "Vasant Panchami",
+          "texts": [
+            "Vasant Panchami"
+          ]
+        },
+        {
+          "title": "Vishu",
+          "texts": [
+            "Vishu"
+          ]
+        },
+        {
+          "title": "Pilgrimage",
+          "texts": [
+            "pilgrimages"
+          ]
+        },
+        {
+          "title": "Tirtha (Hinduism)",
+          "texts": [
+            "Tirtha"
+          ]
+        },
+        {
+          "title": "Skanda Purana",
+          "texts": [
+            "Skanda Purana"
+          ]
+        },
+        {
+          "title": "Sadhu",
+          "texts": [
+            "sadhu"
+          ]
+        },
+        {
+          "title": "Rishi",
+          "texts": [
+            "rishi",
+            "sages"
+          ]
+        },
+        {
+          "title": "Varanasi",
+          "texts": [
+            "Varanasi"
+          ]
+        },
+        {
+          "title": "Rameswaram",
+          "texts": [
+            "Rameswaram"
+          ]
+        },
+        {
+          "title": "Kanchipuram",
+          "texts": [
+            "Kanchipuram"
+          ]
+        },
+        {
+          "title": "Dwarka",
+          "texts": [
+            "Dwarka"
+          ]
+        },
+        {
+          "title": "Puri (city)",
+          "texts": [
+            "Puri"
+          ]
+        },
+        {
+          "title": "Haridwar",
+          "texts": [
+            "Haridwar"
+          ]
+        },
+        {
+          "title": "Sri Rangam",
+          "texts": [
+            "Sri Rangam"
+          ]
+        },
+        {
+          "title": "Vrindavan",
+          "texts": [
+            "Vrindavan"
+          ]
+        },
+        {
+          "title": "Ayodhya",
+          "texts": [
+            "Ayodhya"
+          ]
+        },
+        {
+          "title": "Tirupati",
+          "texts": [
+            "Tirupati"
+          ]
+        },
+        {
+          "title": "Mayapur",
+          "texts": [
+            "Mayapur"
+          ]
+        },
+        {
+          "title": "Nathdwara",
+          "texts": [
+            "Nathdwara"
+          ]
+        },
+        {
+          "title": "Jyotirlinga",
+          "texts": [
+            "Jyotirlinga"
+          ]
+        },
+        {
+          "title": "Shakti Pitha",
+          "texts": [
+            "Shakti Pitha"
+          ]
+        },
+        {
+          "title": "Prayagraj",
+          "texts": [
+            "Prayagraj"
+          ]
+        },
+        {
+          "title": "Ganges",
+          "texts": [
+            "Ganges"
+          ]
+        },
+        {
+          "title": "Yamuna",
+          "texts": [
+            "Yamuna"
+          ]
+        },
+        {
+          "title": "Ujjain",
+          "texts": [
+            "Ujjain"
+          ]
+        },
+        {
+          "title": "Shipra",
+          "texts": [
+            "Shipra"
+          ]
+        },
+        {
+          "title": "Nashik",
+          "texts": [
+            "Nashik"
+          ]
+        },
+        {
+          "title": "Godavari",
+          "texts": [
+            "Godavari"
+          ]
+        },
+        {
+          "title": "Vrata",
+          "texts": [
+            "Vrata"
+          ]
+        },
+        {
+          "title": "Sanskara (rite of passage)",
+          "texts": [
+            "rite of passage"
+          ]
+        },
+        {
+          "title": "Festivals",
+          "texts": [
+            "festivals"
+          ]
+        },
+        {
+          "title": "Culture of India",
+          "texts": [
+            "culture of India"
+          ]
+        },
+        {
+          "title": "Culture of Southeast Asia",
+          "texts": [
+            "Southeast Asia"
+          ]
+        },
+        {
+          "title": "Vastu shastra",
+          "texts": [
+            "Vastu shastras"
+          ]
+        },
+        {
+          "title": "Shilpa Shastras",
+          "texts": [
+            "Shilpa Shastras"
+          ]
+        },
+        {
+          "title": "Manasara",
+          "texts": [
+            "Manasara"
+          ]
+        },
+        {
+          "title": "Hindu temple architecture",
+          "texts": [
+            "architectural tradition"
+          ]
+        },
+        {
+          "title": "Indian rock-cut architecture",
+          "texts": [
+            "rock-cut architecture"
+          ]
+        },
+        {
+          "title": "Hellenistic influence on Indian art",
+          "texts": [
+            "Hellenistic"
+          ]
+        },
+        {
+          "title": "Hindu art",
+          "texts": [
+            "Hindu art"
+          ]
+        },
+        {
+          "title": "Kama Sutra",
+          "texts": [
+            "Kama Sutra"
+          ]
+        },
+        {
+          "title": "Kalā",
+          "texts": [
+            "art forms"
+          ]
+        },
+        {
+          "title": "Lunisolar calendar",
+          "texts": [
+            "lunisolar calendars"
+          ]
+        },
+        {
+          "title": "Sidereal year",
+          "texts": [
+            "sidereal year"
+          ]
+        },
+        {
+          "title": "Shaka era",
+          "texts": [
+            "Shalivahana Shaka"
+          ]
+        },
+        {
+          "title": "Shalivahana",
+          "texts": [
+            "King Shalivahana"
+          ]
+        },
+        {
+          "title": "Indian national calendar",
+          "texts": [
+            "Indian national calendar"
+          ]
+        },
+        {
+          "title": "Deccan Plateau",
+          "texts": [
+            "Deccan region"
+          ]
+        },
+        {
+          "title": "Vikram Samvat",
+          "texts": [
+            "Vikram Samvat"
+          ]
+        },
+        {
+          "title": "India",
+          "texts": [
+            "India",
+            "Republic of India"
+          ]
+        },
+        {
+          "title": "Tamil calendar",
+          "texts": [
+            "Tamil calendar"
+          ]
+        },
+        {
+          "title": "Malayalam calendar",
+          "texts": [
+            "Malayalam calendar"
+          ]
+        },
+        {
+          "title": "Panchangam",
+          "texts": [
+            "Panchangam"
+          ]
+        },
+        {
+          "title": "Panjika",
+          "texts": [
+            "Panjika"
+          ]
+        },
+        {
+          "title": "Hebrew calendar",
+          "texts": [
+            "Hebrew calendar"
+          ]
+        },
+        {
+          "title": "Chinese calendar",
+          "texts": [
+            "Chinese calendar"
+          ]
+        },
+        {
+          "title": "Babylonian calendar",
+          "texts": [
+            "Babylonian calendar"
+          ]
+        },
+        {
+          "title": "Buddhist calendar",
+          "texts": [
+            "Buddhist calendars",
+            "Buddhist calendar"
+          ]
+        },
+        {
+          "title": "Laos",
+          "texts": [
+            "Laos"
+          ]
+        },
+        {
+          "title": "Myanmar",
+          "texts": [
+            "Myanmar"
+          ]
+        },
+        {
+          "title": "Sri Lanka",
+          "texts": [
+            "Sri Lanka"
+          ]
+        },
+        {
+          "title": "Thailand",
+          "texts": [
+            "Thailand"
+          ]
+        },
+        {
+          "title": "Jain",
+          "texts": [
+            "Jain"
+          ]
+        },
+        {
+          "title": "Ekadashi",
+          "texts": [
+            "Ekadashi"
+          ]
+        },
+        {
+          "title": "Kshatriya",
+          "texts": [
+            "Kshatriyas"
+          ]
+        },
+        {
+          "title": "Vaishya",
+          "texts": [
+            "Vaishyas"
+          ]
+        },
+        {
+          "title": "Shudra",
+          "texts": [
+            "Shudras"
+          ]
+        },
+        {
+          "title": "Guṇa",
+          "texts": [
+            "guṇa"
+          ]
+        },
+        {
+          "title": "British Raj",
+          "texts": [
+            "British colonial regime"
+          ]
+        },
+        {
+          "title": "Hatha Yoga Pradipika",
+          "texts": [
+            "Hatha Yoga Pradipika",
+            "Svātmārāma"
+          ]
+        },
+        {
+          "title": "Bhakti Yoga",
+          "texts": [
+            "Bhakti Yoga"
+          ]
+        },
+        {
+          "title": "Karma Yoga",
+          "texts": [
+            "Karma Yoga"
+          ]
+        },
+        {
+          "title": "Rāja Yoga",
+          "texts": [
+            "Rāja Yoga"
+          ]
+        },
+        {
+          "title": "Jñāna Yoga",
+          "texts": [
+            "Jñāna Yoga"
+          ]
+        },
+        {
+          "title": "Yoga as exercise",
+          "texts": [
+            "yoga as exercise"
+          ]
+        },
+        {
+          "title": "Hatha yoga",
+          "texts": [
+            "Hatha yoga"
+          ]
+        },
+        {
+          "title": "Om",
+          "texts": [
+            "Om"
+          ]
+        },
+        {
+          "title": "Swastika",
+          "texts": [
+            "Swastika"
+          ]
+        },
+        {
+          "title": "Tilaka",
+          "texts": [
+            "Tilaka"
+          ]
+        },
+        {
+          "title": "Third eye",
+          "texts": [
+            "spiritual third eye"
+          ]
+        },
+        {
+          "title": "Mandala",
+          "texts": [
+            "mandala"
+          ]
+        },
+        {
+          "title": "Lingam",
+          "texts": [
+            "lingam"
+          ]
+        },
+        {
+          "title": "Nonviolence",
+          "texts": [
+            "nonviolence"
+          ]
+        },
+        {
+          "title": "Yamas",
+          "texts": [
+            "Yamas"
+          ]
+        },
+        {
+          "title": "Shandilya Upanishad",
+          "texts": [
+            "Śāṇḍilya Upanishad"
+          ]
+        },
+        {
+          "title": "Mitahara",
+          "texts": [
+            "Mitahara"
+          ]
+        },
+        {
+          "title": "Vegetarianism",
+          "texts": [
+            "vegetarianism"
+          ]
+        },
+        {
+          "title": "Lacto vegetarian",
+          "texts": [
+            "lacto vegetarians"
+          ]
+        },
+        {
+          "title": "Jhatka",
+          "texts": [
+            "Jhatka"
+          ]
+        },
+        {
+          "title": "Halal",
+          "texts": [
+            "Halal"
+          ]
+        },
+        {
+          "title": "Himalayas",
+          "texts": [
+            "Himalayan regions"
+          ]
+        },
+        {
+          "title": "Zebu",
+          "texts": [
+            "Bos indicus"
+          ]
+        },
+        {
+          "title": "Cow",
+          "texts": [
+            "cow"
+          ]
+        },
+        {
+          "title": "Vegetarian",
+          "texts": [
+            "vegetarian"
+          ]
+        },
+        {
+          "title": "Bali",
+          "texts": [
+            "Bali"
+          ]
+        },
+        {
+          "title": "Nepal",
+          "texts": [
+            "Nepal",
+            "state"
+          ]
+        },
+        {
+          "title": "Animal sacrifice in Hinduism",
+          "texts": [
+            "animal sacrifice"
+          ]
+        },
+        {
+          "title": "Vaishnava",
+          "texts": [
+            "Vaishnava"
+          ]
+        },
+        {
+          "title": "Mount Meru",
+          "texts": [
+            "Mount Meru"
+          ]
+        },
+        {
+          "title": "Gopuram",
+          "texts": [
+            "Gopuram"
+          ]
+        },
+        {
+          "title": "Nagara architecture",
+          "texts": [
+            "Nagara"
+          ]
+        },
+        {
+          "title": "Brahmacharya",
+          "texts": [
+            "Brahmacharya"
+          ]
+        },
+        {
+          "title": "Grihastha",
+          "texts": [
+            "Grihastha"
+          ]
+        },
+        {
+          "title": "Vānaprastha",
+          "texts": [
+            "Vānaprastha"
+          ]
+        },
+        {
+          "title": "Purusartha",
+          "texts": [
+            "Purusartha"
+          ]
+        },
+        {
+          "title": "Monastic",
+          "texts": [
+            "monastic"
+          ]
+        },
+        {
+          "title": "Iron Age in India",
+          "texts": [
+            "Iron Age"
+          ]
+        },
+        {
+          "title": "Prehistoric religion",
+          "texts": [
+            "prehistoric religions"
+          ]
+        },
+        {
+          "title": "Indus Valley Civilisation",
+          "texts": [
+            "Indus Valley Civilisation"
+          ]
+        },
+        {
+          "title": "Indo-Aryan migrations",
+          "texts": [
+            "Indo-Aryan migrations"
+          ]
+        },
+        {
+          "title": "Bhakti movement",
+          "texts": [
+            "Bhakti movement"
+          ]
+        },
+        {
+          "title": "Islamic rulers in South Asia",
+          "texts": [
+            "Islamic"
+          ]
+        },
+        {
+          "title": "Muslim conquest of India",
+          "texts": [
+            "Muslim rulers"
+          ]
+        },
+        {
+          "title": "Christian Missionaries",
+          "texts": [
+            "Christian Missionaries"
+          ]
+        },
+        {
+          "title": "Goa",
+          "texts": [
+            "Goa"
+          ]
+        },
+        {
+          "title": "Goa Inquisition",
+          "texts": [
+            "1560 inquisition"
+          ]
+        },
+        {
+          "title": "Portuguese India",
+          "texts": [
+            "Portuguese colonists"
+          ]
+        },
+        {
+          "title": "Persecution of Hindus",
+          "texts": [
+            "persecutions of Hindus"
+          ]
+        },
+        {
+          "title": "Colonial India",
+          "texts": [
+            "colonial period"
+          ]
+        },
+        {
+          "title": "Unitarianism",
+          "texts": [
+            "Unitarianism"
+          ]
+        },
+        {
+          "title": "Theosophy (Blavatskian)",
+          "texts": [
+            "Theosophy"
+          ]
+        },
+        {
+          "title": "Kingdom of Nepal",
+          "texts": [
+            "Kingdom of Nepal"
+          ]
+        },
+        {
+          "title": "Unification of Nepal",
+          "texts": [
+            "Unification of Nepal"
+          ]
+        },
+        {
+          "title": "Shah dynasty",
+          "texts": [
+            "Shah dynasty"
+          ]
+        },
+        {
+          "title": "Indian people",
+          "texts": [
+            "Indians"
+          ]
+        },
+        {
+          "title": "British colonial",
+          "texts": [
+            "British colonies"
+          ]
+        },
+        {
+          "title": "Fiji",
+          "texts": [
+            "Fiji"
+          ]
+        },
+        {
+          "title": "Mauritius",
+          "texts": [
+            "Mauritius"
+          ]
+        },
+        {
+          "title": "Trinidad and Tobago",
+          "texts": [
+            "Trinidad and Tobago"
+          ]
+        },
+        {
+          "title": "Indian diaspora",
+          "texts": [
+            "Indian diaspora"
+          ]
+        },
+        {
+          "title": "Hinduism in the United Kingdom",
+          "texts": [
+            "United Kingdom"
+          ]
+        },
+        {
+          "title": "Sathya Sai Organization",
+          "texts": [
+            "Sathya Sai Organization"
+          ]
+        },
+        {
+          "title": "Vedanta Society",
+          "texts": [
+            "Vedanta Society"
+          ]
+        },
+        {
+          "title": "Arya Samaj",
+          "texts": [
+            "Arya Samaj"
+          ]
+        },
+        {
+          "title": "Shuddhi (Hinduism)",
+          "texts": [
+            "Shuddhi"
+          ]
+        },
+        {
+          "title": "Pew Research Center",
+          "texts": [
+            "Pew Research Center"
+          ]
+        },
+        {
+          "title": "World's population",
+          "texts": [
+            "world's population"
+          ]
+        },
+        {
+          "title": "Bangladesh",
+          "texts": [
+            "Bangladesh"
+          ]
+        },
+        {
+          "title": "Pakistan",
+          "texts": [
+            "Pakistan"
+          ]
+        },
+        {
+          "title": "Java",
+          "texts": [
+            "Java"
+          ]
+        },
+        {
+          "title": "Cham people",
+          "texts": [
+            "Cham people"
+          ]
+        },
+        {
+          "title": "Ninh Thuận Province",
+          "texts": [
+            "Ninh Thuận Province"
+          ]
+        },
+        {
+          "title": "Christianity",
+          "texts": [
+            "Christianity"
+          ]
+        },
+        {
+          "title": "Islam",
+          "texts": [
+            "Islam"
+          ]
+        },
+        {
+          "title": "Growth of religion",
+          "texts": [
+            "third fastest-growing religion"
+          ]
+        },
+        {
+          "title": "Hinduism in India",
+          "texts": [
+            "India"
+          ]
+        },
+        {
+          "title": "Hinduism in Mauritius",
+          "texts": [
+            "Mauritius"
+          ]
+        },
+        {
+          "title": "Hinduism in Guyana",
+          "texts": [
+            "Guyana"
+          ]
+        },
+        {
+          "title": "Hinduism in Fiji",
+          "texts": [
+            "Fiji"
+          ]
+        },
+        {
+          "title": "Hinduism in Trinidad and Tobago",
+          "texts": [
+            "Trinidad and Tobago"
+          ]
+        },
+        {
+          "title": "Hinduism in Bhutan",
+          "texts": [
+            "Bhutan"
+          ]
+        },
+        {
+          "title": "Hinduism in Suriname",
+          "texts": [
+            "Suriname"
+          ]
+        },
+        {
+          "title": "Hinduism in Qatar",
+          "texts": [
+            "Qatar"
+          ]
+        },
+        {
+          "title": "Hinduism in Sri Lanka",
+          "texts": [
+            "Sri Lanka"
+          ]
+        },
+        {
+          "title": "Hinduism in Bahrain",
+          "texts": [
+            "Bahrain"
+          ]
+        },
+        {
+          "title": "Hinduism in Bangladesh",
+          "texts": [
+            "Bangladesh"
+          ]
+        },
+        {
+          "title": "Hinduism in Réunion",
+          "texts": [
+            "Réunion"
+          ]
+        },
+        {
+          "title": "Hinduism in the United Arab Emirates",
+          "texts": [
+            "United Arab Emirates"
+          ]
+        },
+        {
+          "title": "Hinduism in Malaysia",
+          "texts": [
+            "Malaysia"
+          ]
+        },
+        {
+          "title": "Hinduism in Kuwait",
+          "texts": [
+            "Kuwait"
+          ]
+        },
+        {
+          "title": "Hinduism in Oman",
+          "texts": [
+            "Oman"
+          ]
+        },
+        {
+          "title": "Hinduism in Seychelles",
+          "texts": [
+            "Seychelles"
+          ]
+        },
+        {
+          "title": "Hinduism in Singapore",
+          "texts": [
+            "Singapore"
+          ]
+        },
+        {
+          "title": "Hinduism in New Zealand",
+          "texts": [
+            "New Zealand"
+          ]
+        },
+        {
+          "title": "Hinduism in Pakistan",
+          "texts": [
+            "Pakistan"
+          ]
+        }
+      ]
+    }
+  }
+}

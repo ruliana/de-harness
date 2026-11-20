@@ -1,0 +1,34 @@
+{
+  "hash": "6e43d5c14b30b2b4",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Alan%20Turing",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20261027202326|1382288157",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 1208,
+            "ns": 0,
+            "title": "Alan Turing",
+            "revisions": [
+              {
+                "revid": 1382747434,
+                "parentid": 1382288157
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

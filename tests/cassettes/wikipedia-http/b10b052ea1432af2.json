@@ -1,0 +1,2304 @@
+{
+  "hash": "b10b052ea1432af2",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Volcano/1380352685",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Volcano",
+      "lead": "A volcano is a vent or fissure in the crust of a planetary-mass object that allows hot lava, volcanic ash, and gases to escape from a magma chamber below the surface. On Earth, volcanoes are most often found where tectonic plates are diverging or converging, and because most of Earth's plate boundaries are underwater, most volcanoes are found underwater. For example, a mid-ocean ridge, such as the Mid-Atlantic Ridge, has volcanoes caused by divergent tectonic plates whereas the Pacific Ring of Fire has volcanoes caused by convergent tectonic plates. Volcanoes resulting from divergent tectonic activity are usually nonexplosive whereas those resulting from convergent tectonic activity cause violent eruptions. Volcanoes can also form where there is stretching and thinning of the crust's plates, such as in the East African Rift, the Wells Gray-Clearwater volcanic field, and the Rio Grande rift in North America. Volcanism away from plate boundaries most likely arises from upwelling diapirs from the core–mantle boundary called mantle plumes, 3,000 kilometres (1,900 mi) deep within Earth. This results in hotspot volcanism or intraplate volcanism, in which the plume may cause thinning of the crust and result in a volcanic island chain due to the continuous movement of the tectonic plate, of which the Hawaiian hotspot is an example. Volcanoes are usually not created at transform tectonic boundaries where two tectonic plates slide past one another.",
+      "links": [
+        {
+          "title": "Crust (geology)",
+          "texts": [
+            "crust"
+          ]
+        },
+        {
+          "title": "Planetary-mass object",
+          "texts": [
+            "planetary-mass object"
+          ]
+        },
+        {
+          "title": "Lava",
+          "texts": [
+            "lava",
+            "Lava"
+          ]
+        },
+        {
+          "title": "Volcanic ash",
+          "texts": [
+            "volcanic ash",
+            "ash",
+            "Ash"
+          ]
+        },
+        {
+          "title": "Volcanic gas",
+          "texts": [
+            "gases",
+            "volcanic gases",
+            "Volcanic gases"
+          ]
+        },
+        {
+          "title": "Magma chamber",
+          "texts": [
+            "magma chamber"
+          ]
+        },
+        {
+          "title": "List of tectonic plates",
+          "texts": [
+            "tectonic plates"
+          ]
+        },
+        {
+          "title": "Divergent boundary",
+          "texts": [
+            "diverging",
+            "diverging plate boundaries"
+          ]
+        },
+        {
+          "title": "Convergent boundary",
+          "texts": [
+            "converging"
+          ]
+        },
+        {
+          "title": "Mid-ocean ridge",
+          "texts": [
+            "mid-ocean ridge",
+            "mid-ocean ridges"
+          ]
+        },
+        {
+          "title": "Mid-Atlantic Ridge",
+          "texts": [
+            "Mid-Atlantic Ridge"
+          ]
+        },
+        {
+          "title": "Ring of Fire",
+          "texts": [
+            "Ring of Fire"
+          ]
+        },
+        {
+          "title": "East African Rift",
+          "texts": [
+            "East African Rift"
+          ]
+        },
+        {
+          "title": "Wells Gray-Clearwater volcanic field",
+          "texts": [
+            "Wells Gray-Clearwater volcanic field"
+          ]
+        },
+        {
+          "title": "Rio Grande rift",
+          "texts": [
+            "Rio Grande rift"
+          ]
+        },
+        {
+          "title": "Diapir",
+          "texts": [
+            "diapirs"
+          ]
+        },
+        {
+          "title": "Core–mantle boundary",
+          "texts": [
+            "core–mantle boundary"
+          ]
+        },
+        {
+          "title": "Mantle plume",
+          "texts": [
+            "mantle plumes"
+          ]
+        },
+        {
+          "title": "Hotspot (geology)",
+          "texts": [
+            "hotspot volcanism",
+            "Hotspots"
+          ]
+        },
+        {
+          "title": "Intraplate volcanism",
+          "texts": [
+            "intraplate volcanism"
+          ]
+        },
+        {
+          "title": "Volcanic island",
+          "texts": [
+            "volcanic island"
+          ]
+        },
+        {
+          "title": "Hawaiian hotspot",
+          "texts": [
+            "Hawaiian hotspot"
+          ]
+        },
+        {
+          "title": "Transform fault",
+          "texts": [
+            "transform tectonic boundaries"
+          ]
+        },
+        {
+          "title": "Active volcano",
+          "texts": [
+            "active"
+          ]
+        },
+        {
+          "title": "Holocene",
+          "texts": [
+            "Holocene"
+          ]
+        },
+        {
+          "title": "Sulfuric acid",
+          "texts": [
+            "sulfuric acid"
+          ]
+        },
+        {
+          "title": "Troposphere",
+          "texts": [
+            "troposphere"
+          ]
+        },
+        {
+          "title": "Volcanic winter",
+          "texts": [
+            "volcanic winters",
+            "volcanic winter"
+          ]
+        },
+        {
+          "title": "Cryovolcanism",
+          "texts": [
+            "cryovolcanism"
+          ]
+        },
+        {
+          "title": "Magma",
+          "texts": [
+            "magma"
+          ]
+        },
+        {
+          "title": "British English",
+          "texts": [
+            "UK"
+          ]
+        },
+        {
+          "title": "American English",
+          "texts": [
+            "US"
+          ]
+        },
+        {
+          "title": "Vulcano",
+          "texts": [
+            "Vulcano"
+          ]
+        },
+        {
+          "title": "Aeolian Islands",
+          "texts": [
+            "Aeolian Islands"
+          ]
+        },
+        {
+          "title": "Latin",
+          "texts": [
+            "Latin"
+          ]
+        },
+        {
+          "title": "Vulcan (mythology)",
+          "texts": [
+            "Vulcan"
+          ]
+        },
+        {
+          "title": "Roman mythology",
+          "texts": [
+            "Roman mythology"
+          ]
+        },
+        {
+          "title": "Volcanism",
+          "texts": [
+            "volcanism"
+          ]
+        },
+        {
+          "title": "Volcanology",
+          "texts": [
+            "volcanology"
+          ]
+        },
+        {
+          "title": "Lithosphere",
+          "texts": [
+            "lithosphere"
+          ]
+        },
+        {
+          "title": "Convection",
+          "texts": [
+            "convection"
+          ]
+        },
+        {
+          "title": "Earth's mantle",
+          "texts": [
+            "mantle"
+          ]
+        },
+        {
+          "title": "Polygenetic volcanic field",
+          "texts": [
+            "polygenetic"
+          ]
+        },
+        {
+          "title": "Monogenetic volcanic field",
+          "texts": [
+            "monogenetic",
+            "monogenetic volcanic fields"
+          ]
+        },
+        {
+          "title": "Oceanic crust",
+          "texts": [
+            "oceanic crust",
+            "oceanic"
+          ]
+        },
+        {
+          "title": "Adiabatic",
+          "texts": [
+            "adiabatic"
+          ]
+        },
+        {
+          "title": "Partial melting",
+          "texts": [
+            "partial melting"
+          ]
+        },
+        {
+          "title": "Divergent plate boundaries",
+          "texts": [
+            "divergent plate boundaries"
+          ]
+        },
+        {
+          "title": "Seafloor",
+          "texts": [
+            "seafloor"
+          ]
+        },
+        {
+          "title": "Black smoker",
+          "texts": [
+            "Black smokers",
+            "some support peculiar ecosystems"
+          ]
+        },
+        {
+          "title": "Iceland",
+          "texts": [
+            "Iceland"
+          ]
+        },
+        {
+          "title": "Subduction",
+          "texts": [
+            "Subduction"
+          ]
+        },
+        {
+          "title": "Flux melting",
+          "texts": [
+            "flux melting"
+          ]
+        },
+        {
+          "title": "Viscous",
+          "texts": [
+            "viscous"
+          ]
+        },
+        {
+          "title": "Silica",
+          "texts": [
+            "silica"
+          ]
+        },
+        {
+          "title": "Igneous intrusion",
+          "texts": [
+            "cools and solidifies at depth",
+            "igneous intrusions"
+          ]
+        },
+        {
+          "title": "Volcanic arc",
+          "texts": [
+            "volcanic arcs"
+          ]
+        },
+        {
+          "title": "Cascade Volcanoes",
+          "texts": [
+            "Cascade Volcanoes"
+          ]
+        },
+        {
+          "title": "Japanese archipelago",
+          "texts": [
+            "Japanese archipelago"
+          ]
+        },
+        {
+          "title": "Indonesia",
+          "texts": [
+            "Indonesia"
+          ]
+        },
+        {
+          "title": "Hawaiian Islands",
+          "texts": [
+            "Hawaiian Islands"
+          ]
+        },
+        {
+          "title": "Snake River Plain",
+          "texts": [
+            "Snake River Plain"
+          ]
+        },
+        {
+          "title": "Yellowstone Caldera",
+          "texts": [
+            "Yellowstone Caldera",
+            "Yellowstone"
+          ]
+        },
+        {
+          "title": "Yellowstone hotspot",
+          "texts": [
+            "Yellowstone hotspot"
+          ]
+        },
+        {
+          "title": "Flood basalt",
+          "texts": [
+            "flood basalts"
+          ]
+        },
+        {
+          "title": "Aulacogen",
+          "texts": [
+            "aulacogen"
+          ]
+        },
+        {
+          "title": "Alkaline magma series",
+          "texts": [
+            "alkali lava"
+          ]
+        },
+        {
+          "title": "Carbonatite",
+          "texts": [
+            "carbonatites"
+          ]
+        },
+        {
+          "title": "Conical",
+          "texts": [
+            "conical"
+          ]
+        },
+        {
+          "title": "Volcanic crater",
+          "texts": [
+            "crater",
+            "Volcanic craters"
+          ]
+        },
+        {
+          "title": "Lava dome",
+          "texts": [
+            "lava domes",
+            "Lava domes"
+          ]
+        },
+        {
+          "title": "Landscape",
+          "texts": [
+            "landscape"
+          ]
+        },
+        {
+          "title": "Plateau",
+          "texts": [
+            "plateaus"
+          ]
+        },
+        {
+          "title": "Landform",
+          "texts": [
+            "landform"
+          ]
+        },
+        {
+          "title": "Puʻu ʻŌʻō",
+          "texts": [
+            "Puʻu ʻŌʻō"
+          ]
+        },
+        {
+          "title": "Kīlauea",
+          "texts": [
+            "Kīlauea"
+          ]
+        },
+        {
+          "title": "Lake Taupō",
+          "texts": [
+            "Lake Taupō"
+          ]
+        },
+        {
+          "title": "Mud volcano",
+          "texts": [
+            "mud volcanoes",
+            "Mud volcanoes"
+          ]
+        },
+        {
+          "title": "Cryovolcano",
+          "texts": [
+            "cryovolcanoes"
+          ]
+        },
+        {
+          "title": "Jupiter",
+          "texts": [
+            "Jupiter"
+          ]
+        },
+        {
+          "title": "Saturn",
+          "texts": [
+            "Saturn",
+            "Saturnian"
+          ]
+        },
+        {
+          "title": "Neptune",
+          "texts": [
+            "Neptune"
+          ]
+        },
+        {
+          "title": "Igneous",
+          "texts": [
+            "igneous"
+          ]
+        },
+        {
+          "title": "Fissure vent",
+          "texts": [
+            "Volcanic fissure vents"
+          ]
+        },
+        {
+          "title": "Basaltic lava",
+          "texts": [
+            "basaltic lava"
+          ]
+        },
+        {
+          "title": "Volcanic plateau",
+          "texts": [
+            "lava plateau"
+          ]
+        },
+        {
+          "title": "Effusive eruption",
+          "texts": [
+            "effusive eruptions"
+          ]
+        },
+        {
+          "title": "Olympus Mons",
+          "texts": [
+            "Olympus Mons"
+          ]
+        },
+        {
+          "title": "Solar System",
+          "texts": [
+            "Solar System"
+          ]
+        },
+        {
+          "title": "Rhyolite",
+          "texts": [
+            "rhyolite",
+            "rhyolites"
+          ]
+        },
+        {
+          "title": "Mount St. Helens",
+          "texts": [
+            "Mount St. Helens"
+          ]
+        },
+        {
+          "title": "Lassen Peak",
+          "texts": [
+            "Lassen Peak"
+          ]
+        },
+        {
+          "title": "1980 eruption of Mount St. Helens",
+          "texts": [
+            "1980 eruption of Mount St. Helens"
+          ]
+        },
+        {
+          "title": "Scoria",
+          "texts": [
+            "scoria"
+          ]
+        },
+        {
+          "title": "Pyroclastic rock",
+          "texts": [
+            "pyroclastics"
+          ]
+        },
+        {
+          "title": "Maar",
+          "texts": [
+            "maar"
+          ]
+        },
+        {
+          "title": "Tuff ring",
+          "texts": [
+            "tuff rings"
+          ]
+        },
+        {
+          "title": "Parasitic cone",
+          "texts": [
+            "flank vents",
+            "parasitic cones"
+          ]
+        },
+        {
+          "title": "Parícutin",
+          "texts": [
+            "Parícutin"
+          ]
+        },
+        {
+          "title": "Sunset Crater",
+          "texts": [
+            "Sunset Crater"
+          ]
+        },
+        {
+          "title": "Arizona",
+          "texts": [
+            "Arizona"
+          ]
+        },
+        {
+          "title": "New Mexico",
+          "texts": [
+            "New Mexico"
+          ]
+        },
+        {
+          "title": "Caja del Rio",
+          "texts": [
+            "Caja del Rio"
+          ]
+        },
+        {
+          "title": "Volcanic field",
+          "texts": [
+            "volcanic field"
+          ]
+        },
+        {
+          "title": "Tephra",
+          "texts": [
+            "tephra",
+            "Tephra"
+          ]
+        },
+        {
+          "title": "Strata",
+          "texts": [
+            "strata"
+          ]
+        },
+        {
+          "title": "Laccolith",
+          "texts": [
+            "laccoliths"
+          ]
+        },
+        {
+          "title": "Sill (geology)",
+          "texts": [
+            "sills"
+          ]
+        },
+        {
+          "title": "Mount Fuji",
+          "texts": [
+            "Mount Fuji"
+          ]
+        },
+        {
+          "title": "Mayon Volcano",
+          "texts": [
+            "Mayon Volcano"
+          ]
+        },
+        {
+          "title": "Mount Vesuvius",
+          "texts": [
+            "Mount Vesuvius"
+          ]
+        },
+        {
+          "title": "Stromboli",
+          "texts": [
+            "Stromboli"
+          ]
+        },
+        {
+          "title": "Explosive eruption",
+          "texts": [
+            "explosive eruption",
+            "explosive eruptions",
+            "Explosive volcanic eruptions"
+          ]
+        },
+        {
+          "title": "Recorded history",
+          "texts": [
+            "historically"
+          ]
+        },
+        {
+          "title": "Pyroclastic surge",
+          "texts": [
+            "pyroclastic surges"
+          ]
+        },
+        {
+          "title": "Lahar",
+          "texts": [
+            "lahars"
+          ]
+        },
+        {
+          "title": "Volcanic bomb",
+          "texts": [
+            "volcanic bombs"
+          ]
+        },
+        {
+          "title": "Caldera",
+          "texts": [
+            "caldera",
+            "calderas"
+          ]
+        },
+        {
+          "title": "Tuff",
+          "texts": [
+            "tuffs",
+            "tuff"
+          ]
+        },
+        {
+          "title": "Supervolcano",
+          "texts": [
+            "four are known from the last million years"
+          ]
+        },
+        {
+          "title": "Sulfur",
+          "texts": [
+            "sulfur"
+          ]
+        },
+        {
+          "title": "Geological map",
+          "texts": [
+            "geological mapping"
+          ]
+        },
+        {
+          "title": "Yellowstone National Park",
+          "texts": [
+            "Yellowstone National Park"
+          ]
+        },
+        {
+          "title": "Valles Caldera",
+          "texts": [
+            "Valles Caldera"
+          ]
+        },
+        {
+          "title": "Lake Toba",
+          "texts": [
+            "Lake Toba"
+          ]
+        },
+        {
+          "title": "Sumatra",
+          "texts": [
+            "Sumatra"
+          ]
+        },
+        {
+          "title": "Ngorongoro Crater",
+          "texts": [
+            "Ngorongoro Crater"
+          ]
+        },
+        {
+          "title": "Volcanogenic lake",
+          "texts": [
+            "Volcanogenic lakes"
+          ]
+        },
+        {
+          "title": "Hydrophone",
+          "texts": [
+            "hydrophones"
+          ]
+        },
+        {
+          "title": "Pillow lava",
+          "texts": [
+            "Pillow lava"
+          ]
+        },
+        {
+          "title": "Hydrothermal vent",
+          "texts": [
+            "Hydrothermal vents"
+          ]
+        },
+        {
+          "title": "Chemotroph",
+          "texts": [
+            "chemotrophs"
+          ]
+        },
+        {
+          "title": "Pumice raft",
+          "texts": [
+            "pumice rafts"
+          ]
+        },
+        {
+          "title": "Seismic",
+          "texts": [
+            "seismic"
+          ]
+        },
+        {
+          "title": "Oceanographic",
+          "texts": [
+            "oceanographic"
+          ]
+        },
+        {
+          "title": "Mayotte",
+          "texts": [
+            "Mayotte"
+          ]
+        },
+        {
+          "title": "Ice cap",
+          "texts": [
+            "ice caps"
+          ]
+        },
+        {
+          "title": "Palagonite",
+          "texts": [
+            "palagonite"
+          ]
+        },
+        {
+          "title": "Tuya",
+          "texts": [
+            "tuyas"
+          ]
+        },
+        {
+          "title": "British Columbia",
+          "texts": [
+            "British Columbia"
+          ]
+        },
+        {
+          "title": "Tuya Butte",
+          "texts": [
+            "Tuya Butte"
+          ]
+        },
+        {
+          "title": "Tuya River",
+          "texts": [
+            "Tuya River"
+          ]
+        },
+        {
+          "title": "Tuya Range",
+          "texts": [
+            "Tuya Range"
+          ]
+        },
+        {
+          "title": "Tuya Mountains Provincial Park",
+          "texts": [
+            "Tuya Mountains Provincial Park"
+          ]
+        },
+        {
+          "title": "Tuya Lake",
+          "texts": [
+            "Tuya Lake"
+          ]
+        },
+        {
+          "title": "Jennings River",
+          "texts": [
+            "Jennings River"
+          ]
+        },
+        {
+          "title": "Yukon Territory",
+          "texts": [
+            "Yukon Territory"
+          ]
+        },
+        {
+          "title": "Geyser",
+          "texts": [
+            "geysers"
+          ]
+        },
+        {
+          "title": "Fumarole",
+          "texts": [
+            "fumaroles",
+            "Fumaroles"
+          ]
+        },
+        {
+          "title": "Mudpot",
+          "texts": [
+            "mud pools"
+          ]
+        },
+        {
+          "title": "Hot spring",
+          "texts": [
+            "hot springs"
+          ]
+        },
+        {
+          "title": "Baratang Island",
+          "texts": [
+            "Baratang"
+          ]
+        },
+        {
+          "title": "Balochistan, Pakistan",
+          "texts": [
+            "Balochistan"
+          ]
+        },
+        {
+          "title": "Steam",
+          "texts": [
+            "steam"
+          ]
+        },
+        {
+          "title": "Vapor pressure",
+          "texts": [
+            "pressure"
+          ]
+        },
+        {
+          "title": "Volcanic eruption",
+          "texts": [
+            "volcanic eruption"
+          ]
+        },
+        {
+          "title": "Carbon dioxide",
+          "texts": [
+            "carbon dioxide"
+          ]
+        },
+        {
+          "title": "Sulfur dioxide",
+          "texts": [
+            "sulfur dioxide"
+          ]
+        },
+        {
+          "title": "Hydrogen sulfide",
+          "texts": [
+            "hydrogen sulfide"
+          ]
+        },
+        {
+          "title": "Water vapour",
+          "texts": [
+            "Water vapour"
+          ]
+        },
+        {
+          "title": "Hydrogen chloride",
+          "texts": [
+            "hydrogen chloride"
+          ]
+        },
+        {
+          "title": "Hydrogen fluoride",
+          "texts": [
+            "hydrogen fluoride"
+          ]
+        },
+        {
+          "title": "Hydrogen",
+          "texts": [
+            "hydrogen"
+          ]
+        },
+        {
+          "title": "Carbon monoxide",
+          "texts": [
+            "carbon monoxide"
+          ]
+        },
+        {
+          "title": "Halocarbon",
+          "texts": [
+            "halocarbons"
+          ]
+        },
+        {
+          "title": "Volatile (astrogeology)",
+          "texts": [
+            "volatile"
+          ]
+        },
+        {
+          "title": "Felsic",
+          "texts": [
+            "felsic"
+          ]
+        },
+        {
+          "title": "Dacite",
+          "texts": [
+            "dacites"
+          ]
+        },
+        {
+          "title": "Pyroclastic flow",
+          "texts": [
+            "Pyroclastic flows",
+            "pyroclastic flows"
+          ]
+        },
+        {
+          "title": "Ignimbrite",
+          "texts": [
+            "ignimbrites"
+          ]
+        },
+        {
+          "title": "Alaska",
+          "texts": [
+            "Alaska"
+          ]
+        },
+        {
+          "title": "Valley of Ten Thousand Smokes",
+          "texts": [
+            "Valley of Ten Thousand Smokes"
+          ]
+        },
+        {
+          "title": "Novarupta",
+          "texts": [
+            "Novarupta"
+          ]
+        },
+        {
+          "title": "Mount Katmai",
+          "texts": [
+            "Katmai"
+          ]
+        },
+        {
+          "title": "Earth's atmosphere",
+          "texts": [
+            "Earth's atmosphere"
+          ]
+        },
+        {
+          "title": "Eruption column",
+          "texts": [
+            "eruption column"
+          ]
+        },
+        {
+          "title": "Stratosphere",
+          "texts": [
+            "stratosphere"
+          ]
+        },
+        {
+          "title": "Fractional crystallization (geology)",
+          "texts": [
+            "fractional crystallization"
+          ]
+        },
+        {
+          "title": "Intermediate composition",
+          "texts": [
+            "intermediate composition"
+          ]
+        },
+        {
+          "title": "Andesitic",
+          "texts": [
+            "andesitic"
+          ]
+        },
+        {
+          "title": "Convergent boundaries",
+          "texts": [
+            "convergent boundaries"
+          ]
+        },
+        {
+          "title": "Tectonic plate",
+          "texts": [
+            "tectonic plates"
+          ]
+        },
+        {
+          "title": "Slab (geology)",
+          "texts": [
+            "slab"
+          ]
+        },
+        {
+          "title": "Mafic",
+          "texts": [
+            "mafic"
+          ]
+        },
+        {
+          "title": "Magnesium",
+          "texts": [
+            "magnesium"
+          ]
+        },
+        {
+          "title": "Basalt",
+          "texts": [
+            "basaltic",
+            "basalt"
+          ]
+        },
+        {
+          "title": "Shield volcanoes",
+          "texts": [
+            "Shield volcanoes"
+          ]
+        },
+        {
+          "title": "Mauna Loa",
+          "texts": [
+            "Mauna Loa"
+          ]
+        },
+        {
+          "title": "Kilauea",
+          "texts": [
+            "Kilauea"
+          ]
+        },
+        {
+          "title": "Continental crust",
+          "texts": [
+            "continental crust"
+          ]
+        },
+        {
+          "title": "Ultramafic",
+          "texts": [
+            "ultramafic"
+          ]
+        },
+        {
+          "title": "Komatiite",
+          "texts": [
+            "komatiites"
+          ]
+        },
+        {
+          "title": "Proterozoic",
+          "texts": [
+            "Proterozoic"
+          ]
+        },
+        {
+          "title": "Pāhoehoe",
+          "texts": [
+            "pāhoehoe"
+          ]
+        },
+        {
+          "title": "Hawaiian language",
+          "texts": [
+            "Hawaiian"
+          ]
+        },
+        {
+          "title": "Rhyolitic",
+          "texts": [
+            "Rhyolitic"
+          ]
+        },
+        {
+          "title": "Obsidian",
+          "texts": [
+            "obsidian"
+          ]
+        },
+        {
+          "title": "Extrusion",
+          "texts": [
+            "when it flows to the surface"
+          ]
+        },
+        {
+          "title": "Sand",
+          "texts": [
+            "sand-sized"
+          ]
+        },
+        {
+          "title": "Volcaniclastics",
+          "texts": [
+            "volcaniclastics"
+          ]
+        },
+        {
+          "title": "Erosion",
+          "texts": [
+            "erosion"
+          ]
+        },
+        {
+          "title": "Anatomy",
+          "texts": [
+            "biological anatomy"
+          ]
+        },
+        {
+          "title": "Cinder Hill",
+          "texts": [
+            "Cinder Hill"
+          ]
+        },
+        {
+          "title": "Mount Bird",
+          "texts": [
+            "Mount Bird"
+          ]
+        },
+        {
+          "title": "Ross Island",
+          "texts": [
+            "Ross Island"
+          ]
+        },
+        {
+          "title": "Antarctica",
+          "texts": [
+            "Antarctica"
+          ]
+        },
+        {
+          "title": "Mount Kaimon",
+          "texts": [
+            "Mount Kaimon"
+          ]
+        },
+        {
+          "title": "Kyūshū",
+          "texts": [
+            "Kyūshū"
+          ]
+        },
+        {
+          "title": "Devils Tower",
+          "texts": [
+            "Devils Tower"
+          ]
+        },
+        {
+          "title": "Smithsonian Institution",
+          "texts": [
+            "Smithsonian Institution"
+          ]
+        },
+        {
+          "title": "Global Volcanism Program",
+          "texts": [
+            "Global Volcanism Program"
+          ]
+        },
+        {
+          "title": "Epoch (geology)",
+          "texts": [
+            "Epoch"
+          ]
+        },
+        {
+          "title": "Volcanic explosivity index",
+          "texts": [
+            "volcanic explosivity index"
+          ]
+        },
+        {
+          "title": "Hawaiian eruption",
+          "texts": [
+            "Hawaiian eruptions"
+          ]
+        },
+        {
+          "title": "Lava fountain",
+          "texts": [
+            "lava fountains"
+          ]
+        },
+        {
+          "title": "Hawaii hotspot",
+          "texts": [
+            "Hawaiian volcanoes"
+          ]
+        },
+        {
+          "title": "Strombolian eruption",
+          "texts": [
+            "Strombolian eruptions"
+          ]
+        },
+        {
+          "title": "Gas slug",
+          "texts": [
+            "gas slug"
+          ]
+        },
+        {
+          "title": "Vulcanian eruption",
+          "texts": [
+            "Vulcanian eruptions"
+          ]
+        },
+        {
+          "title": "Peléan eruption",
+          "texts": [
+            "Peléan eruptions"
+          ]
+        },
+        {
+          "title": "Mount Pelée",
+          "texts": [
+            "Mount Pelée"
+          ]
+        },
+        {
+          "title": "Plinian eruption",
+          "texts": [
+            "Plinian eruptions"
+          ]
+        },
+        {
+          "title": "Pliny the Younger",
+          "texts": [
+            "Pliny the Younger"
+          ]
+        },
+        {
+          "title": "Eruption of Mount Vesuvius in 79",
+          "texts": [
+            "eruption of Mount Vesuvius in 79",
+            "eruption of 79 CE"
+          ]
+        },
+        {
+          "title": "Pumice",
+          "texts": [
+            "pumice"
+          ]
+        },
+        {
+          "title": "Mount Mazama",
+          "texts": [
+            "Mt. Mazama"
+          ]
+        },
+        {
+          "title": "Phreatomagmatic eruption",
+          "texts": [
+            "Phreatomagmatic eruptions"
+          ]
+        },
+        {
+          "title": "Groundwater",
+          "texts": [
+            "groundwater"
+          ]
+        },
+        {
+          "title": "Superheating",
+          "texts": [
+            "superheated"
+          ]
+        },
+        {
+          "title": "Phreatic eruption",
+          "texts": [
+            "Phreatic eruptions"
+          ]
+        },
+        {
+          "title": "Country rock (geology)",
+          "texts": [
+            "country rock"
+          ]
+        },
+        {
+          "title": "USGS",
+          "texts": [
+            "USGS"
+          ]
+        },
+        {
+          "title": "Earthquake swarm",
+          "texts": [
+            "earthquake swarms"
+          ]
+        },
+        {
+          "title": "Mount Edgecumbe (Alaska)",
+          "texts": [
+            "Mount Edgecumbe"
+          ]
+        },
+        {
+          "title": "Alaska Volcano Observatory",
+          "texts": [
+            "Alaska Volcano Observatory"
+          ]
+        },
+        {
+          "title": "Chaitén (volcano)",
+          "texts": [
+            "Chaitén volcano"
+          ]
+        },
+        {
+          "title": "Toba Lake",
+          "texts": [
+            "Toba"
+          ]
+        },
+        {
+          "title": "Vesuvius",
+          "texts": [
+            "Vesuvius"
+          ]
+        },
+        {
+          "title": "Herculaneum",
+          "texts": [
+            "Herculaneum"
+          ]
+        },
+        {
+          "title": "Pompeii",
+          "texts": [
+            "Pompeii"
+          ]
+        },
+        {
+          "title": "Pinatubo",
+          "texts": [
+            "Pinatubo"
+          ]
+        },
+        {
+          "title": "Soufrière Hills",
+          "texts": [
+            "Soufrière Hills"
+          ]
+        },
+        {
+          "title": "Montserrat",
+          "texts": [
+            "Montserrat"
+          ]
+        },
+        {
+          "title": "Plymouth, Montserrat",
+          "texts": [
+            "Plymouth"
+          ]
+        },
+        {
+          "title": "Ghost town",
+          "texts": [
+            "ghost town"
+          ]
+        },
+        {
+          "title": "Fourpeaked Mountain",
+          "texts": [
+            "Fourpeaked Mountain"
+          ]
+        },
+        {
+          "title": "Taftan (volcano)",
+          "texts": [
+            "Taftan volcano"
+          ]
+        },
+        {
+          "title": "Hawaiian–Emperor seamount chain",
+          "texts": [
+            "Hawaiian–Emperor seamount chain"
+          ]
+        },
+        {
+          "title": "Hohentwiel",
+          "texts": [
+            "Hohentwiel"
+          ]
+        },
+        {
+          "title": "Shiprock",
+          "texts": [
+            "Shiprock"
+          ]
+        },
+        {
+          "title": "Capulin Volcano National Monument",
+          "texts": [
+            "Capulin"
+          ]
+        },
+        {
+          "title": "Zuidwal volcano",
+          "texts": [
+            "Zuidwal volcano"
+          ]
+        },
+        {
+          "title": "Netherlands",
+          "texts": [
+            "Netherlands"
+          ]
+        },
+        {
+          "title": "Monte Vulture",
+          "texts": [
+            "Monte Vulture"
+          ]
+        },
+        {
+          "title": "Edinburgh Castle",
+          "texts": [
+            "Edinburgh Castle"
+          ]
+        },
+        {
+          "title": "Castle Rock (Edinburgh)",
+          "texts": [
+            "Castle Rock"
+          ]
+        },
+        {
+          "title": "International Association of Volcanology and Chemistry of the Earth's Interior",
+          "texts": [
+            "International Association of Volcanology and Chemistry of the Earth's Interior"
+          ]
+        },
+        {
+          "title": "International Decade for Natural Disaster Reduction",
+          "texts": [
+            "International Decade for Natural Disaster Reduction"
+          ]
+        },
+        {
+          "title": "Avachinsky",
+          "texts": [
+            "Avachinsky"
+          ]
+        },
+        {
+          "title": "Koryaksky",
+          "texts": [
+            "Koryaksky"
+          ]
+        },
+        {
+          "title": "Kamchatka",
+          "texts": [
+            "Kamchatka"
+          ]
+        },
+        {
+          "title": "Nevado de Colima",
+          "texts": [
+            "Nevado de Colima"
+          ]
+        },
+        {
+          "title": "Jalisco",
+          "texts": [
+            "Jalisco"
+          ]
+        },
+        {
+          "title": "Colima",
+          "texts": [
+            "Colima"
+          ]
+        },
+        {
+          "title": "Mount Etna",
+          "texts": [
+            "Mount Etna"
+          ]
+        },
+        {
+          "title": "Galeras",
+          "texts": [
+            "Galeras"
+          ]
+        },
+        {
+          "title": "Nariño",
+          "texts": [
+            "Nariño"
+          ]
+        },
+        {
+          "title": "Mount Merapi",
+          "texts": [
+            "Mount Merapi"
+          ]
+        },
+        {
+          "title": "Central Java",
+          "texts": [
+            "Central Java"
+          ]
+        },
+        {
+          "title": "Mount Nyiragongo",
+          "texts": [
+            "Mount Nyiragongo"
+          ]
+        },
+        {
+          "title": "Mount Rainier",
+          "texts": [
+            "Mount Rainier"
+          ]
+        },
+        {
+          "title": "Washington (state)",
+          "texts": [
+            "Washington"
+          ]
+        },
+        {
+          "title": "Sakurajima",
+          "texts": [
+            "Sakurajima"
+          ]
+        },
+        {
+          "title": "Kagoshima Prefecture",
+          "texts": [
+            "Kagoshima Prefecture"
+          ]
+        },
+        {
+          "title": "Santa María (volcano)",
+          "texts": [
+            "Santa Maria/Santiaguito"
+          ]
+        },
+        {
+          "title": "Santorini",
+          "texts": [
+            "Santorini"
+          ]
+        },
+        {
+          "title": "Cyclades",
+          "texts": [
+            "Cyclades"
+          ]
+        },
+        {
+          "title": "Taal Volcano",
+          "texts": [
+            "Taal Volcano"
+          ]
+        },
+        {
+          "title": "Luzon",
+          "texts": [
+            "Luzon"
+          ]
+        },
+        {
+          "title": "Teide",
+          "texts": [
+            "Teide"
+          ]
+        },
+        {
+          "title": "Ulawun",
+          "texts": [
+            "Ulawun"
+          ]
+        },
+        {
+          "title": "New Britain",
+          "texts": [
+            "New Britain"
+          ]
+        },
+        {
+          "title": "Mount Unzen",
+          "texts": [
+            "Mount Unzen"
+          ]
+        },
+        {
+          "title": "Nagasaki Prefecture",
+          "texts": [
+            "Nagasaki Prefecture"
+          ]
+        },
+        {
+          "title": "Province of Naples",
+          "texts": [
+            "Naples"
+          ]
+        },
+        {
+          "title": "Deep Earth Carbon Degassing Project",
+          "texts": [
+            "Deep Earth Carbon Degassing Project"
+          ]
+        },
+        {
+          "title": "Deep Carbon Observatory",
+          "texts": [
+            "Deep Carbon Observatory"
+          ]
+        },
+        {
+          "title": "Multi-Component Gas Analyzer System",
+          "texts": [
+            "Multi-Component Gas Analyzer System"
+          ]
+        },
+        {
+          "title": "Prediction of volcanic activity",
+          "texts": [
+            "prediction of volcanic activity"
+          ]
+        },
+        {
+          "title": "Types of volcanic eruptions",
+          "texts": [
+            "types of volcanic eruptions"
+          ]
+        },
+        {
+          "title": "Phreatic eruptions",
+          "texts": [
+            "phreatic eruptions"
+          ]
+        },
+        {
+          "title": "Sector collapse",
+          "texts": [
+            "sector collapses"
+          ]
+        },
+        {
+          "title": "Mud pot",
+          "texts": [
+            "mud pots"
+          ]
+        },
+        {
+          "title": "Huaynaputina",
+          "texts": [
+            "Huaynaputina"
+          ]
+        },
+        {
+          "title": "Russian famine of 1601–1603",
+          "texts": [
+            "Russian famine of 1601–1603"
+          ]
+        },
+        {
+          "title": "Ozone layer",
+          "texts": [
+            "ozone layer"
+          ]
+        },
+        {
+          "title": "Acid rain",
+          "texts": [
+            "acid rain"
+          ]
+        },
+        {
+          "title": "Carbon",
+          "texts": [
+            "carbon"
+          ]
+        },
+        {
+          "title": "Biogeochemical cycle",
+          "texts": [
+            "biogeochemical cycles"
+          ]
+        },
+        {
+          "title": "Jet aircraft",
+          "texts": [
+            "jet aircraft"
+          ]
+        },
+        {
+          "title": "Turbine",
+          "texts": [
+            "turbine"
+          ]
+        },
+        {
+          "title": "Supereruption",
+          "texts": [
+            "supereruption"
+          ]
+        },
+        {
+          "title": "Toba catastrophe theory",
+          "texts": [
+            "population bottleneck"
+          ]
+        },
+        {
+          "title": "Ordovician-Silurian extinction events",
+          "texts": [
+            "End-Ordovician"
+          ]
+        },
+        {
+          "title": "Permian-Triassic",
+          "texts": [
+            "Permian-Triassic"
+          ]
+        },
+        {
+          "title": "Late Devonian extinction",
+          "texts": [
+            "Late Devonian"
+          ]
+        },
+        {
+          "title": "Mass extinction",
+          "texts": [
+            "mass extinctions"
+          ]
+        },
+        {
+          "title": "Mount Tambora",
+          "texts": [
+            "Mount Tambora"
+          ]
+        },
+        {
+          "title": "Year Without a Summer",
+          "texts": [
+            "Year Without a Summer"
+          ]
+        },
+        {
+          "title": "Irish Famine (1740–1741)",
+          "texts": [
+            "famine"
+          ]
+        },
+        {
+          "title": "Rapa Nui",
+          "texts": [
+            "Rapa Nui"
+          ]
+        },
+        {
+          "title": "Moai",
+          "texts": [
+            "moai"
+          ]
+        },
+        {
+          "title": "Easter Island",
+          "texts": [
+            "Easter Island"
+          ]
+        },
+        {
+          "title": "Geothermal power",
+          "texts": [
+            "geothermal power"
+          ]
+        },
+        {
+          "title": "Probability theory",
+          "texts": [
+            "probability"
+          ]
+        },
+        {
+          "title": "Risk management",
+          "texts": [
+            "risk management"
+          ]
+        },
+        {
+          "title": "Mount Pinatubo",
+          "texts": [
+            "Mount Pinatubo"
+          ]
+        },
+        {
+          "title": "Moon",
+          "texts": [
+            "Moon"
+          ]
+        },
+        {
+          "title": "Lunar mare",
+          "texts": [
+            "maria"
+          ]
+        },
+        {
+          "title": "Rille",
+          "texts": [
+            "rilles"
+          ]
+        },
+        {
+          "title": "Lunar dome",
+          "texts": [
+            "domes"
+          ]
+        },
+        {
+          "title": "Venus",
+          "texts": [
+            "Venus"
+          ]
+        },
+        {
+          "title": "Lava flows",
+          "texts": [
+            "Lava flows"
+          ]
+        },
+        {
+          "title": "Maat Mons",
+          "texts": [
+            "Maat Mons"
+          ]
+        },
+        {
+          "title": "Ash flow",
+          "texts": [
+            "ash flows"
+          ]
+        },
+        {
+          "title": "Mars",
+          "texts": [
+            "Mars"
+          ]
+        },
+        {
+          "title": "Arsia Mons",
+          "texts": [
+            "Arsia Mons"
+          ]
+        },
+        {
+          "title": "Ascraeus Mons",
+          "texts": [
+            "Ascraeus Mons"
+          ]
+        },
+        {
+          "title": "Hecates Tholus",
+          "texts": [
+            "Hecates Tholus"
+          ]
+        },
+        {
+          "title": "Pavonis Mons",
+          "texts": [
+            "Pavonis Mons"
+          ]
+        },
+        {
+          "title": "Mars Express",
+          "texts": [
+            "Mars Express"
+          ]
+        },
+        {
+          "title": "Natural satellite",
+          "texts": [
+            "moon"
+          ]
+        },
+        {
+          "title": "Io (moon)",
+          "texts": [
+            "Io"
+          ]
+        },
+        {
+          "title": "Tides",
+          "texts": [
+            "tidal"
+          ]
+        },
+        {
+          "title": "Silicate",
+          "texts": [
+            "silicate"
+          ]
+        },
+        {
+          "title": "Europa (moon)",
+          "texts": [
+            "Europa"
+          ]
+        },
+        {
+          "title": "Galilean moon",
+          "texts": [
+            "Galilean moons"
+          ]
+        },
+        {
+          "title": "Voyager 2",
+          "texts": [
+            "Voyager 2"
+          ]
+        },
+        {
+          "title": "Triton (moon)",
+          "texts": [
+            "Triton"
+          ]
+        },
+        {
+          "title": "Cassini–Huygens",
+          "texts": [
+            "Cassini–Huygens"
+          ]
+        },
+        {
+          "title": "Enceladus (moon)",
+          "texts": [
+            "fountains of frozen particles erupting from Enceladus"
+          ]
+        },
+        {
+          "title": "Liquid nitrogen",
+          "texts": [
+            "liquid nitrogen"
+          ]
+        },
+        {
+          "title": "Ammonia",
+          "texts": [
+            "ammonia"
+          ]
+        },
+        {
+          "title": "Methane",
+          "texts": [
+            "methane"
+          ]
+        },
+        {
+          "title": "Titan (moon)",
+          "texts": [
+            "Titan"
+          ]
+        },
+        {
+          "title": "Kuiper Belt Object",
+          "texts": [
+            "Kuiper Belt Object"
+          ]
+        },
+        {
+          "title": "Quaoar",
+          "texts": [
+            "Quaoar"
+          ]
+        },
+        {
+          "title": "Exoplanet",
+          "texts": [
+            "exoplanet"
+          ]
+        },
+        {
+          "title": "COROT-7b",
+          "texts": [
+            "COROT-7b"
+          ]
+        },
+        {
+          "title": "Transit method",
+          "texts": [
+            "transit"
+          ]
+        },
+        {
+          "title": "Tidal heating",
+          "texts": [
+            "tidal heating"
+          ]
+        },
+        {
+          "title": "Hominina",
+          "texts": [
+            "hominina"
+          ]
+        },
+        {
+          "title": "Pele (deity)",
+          "texts": [
+            "Pele"
+          ]
+        },
+        {
+          "title": "Supernatural",
+          "texts": [
+            "supernatural"
+          ]
+        },
+        {
+          "title": "Gods",
+          "texts": [
+            "gods"
+          ]
+        },
+        {
+          "title": "Demigod",
+          "texts": [
+            "demigods"
+          ]
+        },
+        {
+          "title": "Çatalhöyük",
+          "texts": [
+            "Çatalhöyük"
+          ]
+        },
+        {
+          "title": "Hephaistos",
+          "texts": [
+            "Hephaistos"
+          ]
+        },
+        {
+          "title": "Anaxagoras",
+          "texts": [
+            "Anaxagoras"
+          ]
+        },
+        {
+          "title": "Seneca the Younger",
+          "texts": [
+            "Seneca the Younger"
+          ]
+        },
+        {
+          "title": "Combustion",
+          "texts": [
+            "combustion"
+          ]
+        },
+        {
+          "title": "Jesuit",
+          "texts": [
+            "Jesuit"
+          ]
+        },
+        {
+          "title": "Athanasius Kircher",
+          "texts": [
+            "Athanasius Kircher"
+          ]
+        },
+        {
+          "title": "Mundus Subterraneus",
+          "texts": [
+            "Mundus Subterraneus"
+          ]
+        },
+        {
+          "title": "Johannes Kepler",
+          "texts": [
+            "Johannes Kepler"
+          ]
+        },
+        {
+          "title": "René Descartes",
+          "texts": [
+            "René Descartes"
+          ]
+        },
+        {
+          "title": "James Hutton",
+          "texts": [
+            "James Hutton"
+          ]
+        },
+        {
+          "title": "Lazzaro Spallanzani",
+          "texts": [
+            "Lazzaro Spallanzani"
+          ]
+        },
+        {
+          "title": "1886 eruption of Mount Tarawera",
+          "texts": [
+            "1886 eruption of Mount Tarawera"
+          ]
+        },
+        {
+          "title": "Phreatomagmatic",
+          "texts": [
+            "phreatomagmatic"
+          ]
+        },
+        {
+          "title": "Hydrothermal",
+          "texts": [
+            "hydrothermal"
+          ]
+        },
+        {
+          "title": "Dike (geology)",
+          "texts": [
+            "dyke"
+          ]
+        },
+        {
+          "title": "Alfred Lacroix",
+          "texts": [
+            "Alfred Lacroix"
+          ]
+        },
+        {
+          "title": "1902 eruption of Mount Pelée",
+          "texts": [
+            "1902 eruption of Mount Pelée"
+          ]
+        },
+        {
+          "title": "Arthur Holmes",
+          "texts": [
+            "Arthur Holmes"
+          ]
+        },
+        {
+          "title": "Mantle (geology)",
+          "texts": [
+            "mantle"
+          ]
+        }
+      ]
+    }
+  }
+}

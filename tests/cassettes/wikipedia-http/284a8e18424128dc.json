@@ -1,0 +1,34 @@
+{
+  "hash": "284a8e18424128dc",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Telescope",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20260817185141|1369875150",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 7070301,
+            "ns": 0,
+            "title": "Telescope",
+            "revisions": [
+              {
+                "revid": 1370790151,
+                "parentid": 1369875150
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

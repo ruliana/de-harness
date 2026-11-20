@@ -1,0 +1,1804 @@
+{
+  "hash": "2ca60ba90de77433",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Alan_Turing/1382747434",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Alan Turing",
+      "lead": "Alan Mathison Turing (/ˈtjʊərɪŋ/; 23 June 1912 – 7 June 1954) was an English mathematician and logician widely regarded as the father of theoretical computer science. He formalised the concepts of algorithm and computation with the Turing machine, a model of a general-purpose computer, and his contributions to cryptanalysis helped the Allies of World War II decipher messages encrypted by the German Enigma machine. He also contributed the Turing test to philosophy of artificial intelligence and the Turing pattern concept to mathematical and theoretical biology.",
+      "links": [
+        {
+          "title": "Logic",
+          "texts": [
+            "logician"
+          ]
+        },
+        {
+          "title": "Theoretical computer science",
+          "texts": [
+            "theoretical computer science"
+          ]
+        },
+        {
+          "title": "Algorithm",
+          "texts": [
+            "algorithm"
+          ]
+        },
+        {
+          "title": "Computation",
+          "texts": [
+            "computation"
+          ]
+        },
+        {
+          "title": "Turing machine",
+          "texts": [
+            "Turing machine",
+            "Turing machines"
+          ]
+        },
+        {
+          "title": "Cryptanalysis",
+          "texts": [
+            "cryptanalysis",
+            "indicator"
+          ]
+        },
+        {
+          "title": "Allies of World War II",
+          "texts": [
+            "Allies of World War II"
+          ]
+        },
+        {
+          "title": "Enigma machine",
+          "texts": [
+            "Enigma machine",
+            "indicator"
+          ]
+        },
+        {
+          "title": "Turing test",
+          "texts": [
+            "Turing test",
+            "reversed"
+          ]
+        },
+        {
+          "title": "Philosophy of artificial intelligence",
+          "texts": [
+            "philosophy of artificial intelligence"
+          ]
+        },
+        {
+          "title": "Turing pattern",
+          "texts": [
+            "Turing pattern"
+          ]
+        },
+        {
+          "title": "Mathematical and theoretical biology",
+          "texts": [
+            "mathematical and theoretical biology"
+          ]
+        },
+        {
+          "title": "Southern England",
+          "texts": [
+            "southern England"
+          ]
+        },
+        {
+          "title": "University of Cambridge",
+          "texts": [
+            "King's College, Cambridge"
+          ]
+        },
+        {
+          "title": "Princeton University",
+          "texts": [
+            "Princeton University"
+          ]
+        },
+        {
+          "title": "World War II",
+          "texts": [
+            "World War II"
+          ]
+        },
+        {
+          "title": "Government Code and Cypher School",
+          "texts": [
+            "Government Code and Cypher School"
+          ]
+        },
+        {
+          "title": "Bletchley Park",
+          "texts": [
+            "Bletchley Park"
+          ]
+        },
+        {
+          "title": "Codebreaking",
+          "texts": [
+            "codebreaking"
+          ]
+        },
+        {
+          "title": "Hut 8",
+          "texts": [
+            "Hut 8"
+          ]
+        },
+        {
+          "title": "Bomba (cryptography)",
+          "texts": [
+            "bomba",
+            "Bomba",
+            "bomba kryptologiczna"
+          ]
+        },
+        {
+          "title": "Cryptanalysis of the Enigma",
+          "texts": [
+            "cryptanalysis of the Enigma",
+            "cryptanalysis of the Enigma cipher machine",
+            "crib-based decryption"
+          ]
+        },
+        {
+          "title": "Ultra (cryptography)",
+          "texts": [
+            "Ultra"
+          ]
+        },
+        {
+          "title": "Battle of the Atlantic",
+          "texts": [
+            "Battle of the Atlantic"
+          ]
+        },
+        {
+          "title": "National Physical Laboratory (United Kingdom)",
+          "texts": [
+            "National Physical Laboratory",
+            "National Physical Laboratory (NPL)"
+          ]
+        },
+        {
+          "title": "Automatic Computing Engine",
+          "texts": [
+            "Automatic Computing Engine"
+          ]
+        },
+        {
+          "title": "Computing Machine Laboratory",
+          "texts": [
+            "Computing Machine Laboratory"
+          ]
+        },
+        {
+          "title": "Manchester computers",
+          "texts": [
+            "Manchester computers"
+          ]
+        },
+        {
+          "title": "Mathematical biology",
+          "texts": [
+            "mathematical biology"
+          ]
+        },
+        {
+          "title": "Morphogenesis",
+          "texts": [
+            "morphogenesis"
+          ]
+        },
+        {
+          "title": "Chemical oscillator",
+          "texts": [
+            "chemical oscillators"
+          ]
+        },
+        {
+          "title": "Gross indecency",
+          "texts": [
+            "gross indecency"
+          ]
+        },
+        {
+          "title": "Chemical castration",
+          "texts": [
+            "chemical castration"
+          ]
+        },
+        {
+          "title": "Cyanide poisoning",
+          "texts": [
+            "cyanide poisoning"
+          ]
+        },
+        {
+          "title": "Official Secrets Act 1939",
+          "texts": [
+            "Official Secrets Act"
+          ]
+        },
+        {
+          "title": "Gordon Brown",
+          "texts": [
+            "Gordon Brown"
+          ]
+        },
+        {
+          "title": "Queen Elizabeth II",
+          "texts": [
+            "Queen Elizabeth II"
+          ]
+        },
+        {
+          "title": "Royal prerogative of mercy",
+          "texts": [
+            "pardon",
+            "royal prerogative of mercy",
+            "pardoning"
+          ]
+        },
+        {
+          "title": "Alan Turing law",
+          "texts": [
+            "Alan Turing law"
+          ]
+        },
+        {
+          "title": "Maida Vale",
+          "texts": [
+            "Maida Vale"
+          ]
+        },
+        {
+          "title": "Indian Civil Service",
+          "texts": [
+            "Indian Civil Service"
+          ]
+        },
+        {
+          "title": "British Raj",
+          "texts": [
+            "British Raj government"
+          ]
+        },
+        {
+          "title": "Chatrapur",
+          "texts": [
+            "Chatrapur"
+          ]
+        },
+        {
+          "title": "Madras Presidency",
+          "texts": [
+            "Madras Presidency"
+          ]
+        },
+        {
+          "title": "Odisha",
+          "texts": [
+            "Odisha"
+          ]
+        },
+        {
+          "title": "Baronet",
+          "texts": [
+            "baronet"
+          ]
+        },
+        {
+          "title": "Edward Waller Stoney",
+          "texts": [
+            "Edward Waller Stoney"
+          ]
+        },
+        {
+          "title": "Madras and Southern Mahratta Railway",
+          "texts": [
+            "Madras Railways"
+          ]
+        },
+        {
+          "title": "Protestantism in Ireland",
+          "texts": [
+            "Protestant"
+          ]
+        },
+        {
+          "title": "Anglo-Irish people",
+          "texts": [
+            "Anglo-Irish"
+          ]
+        },
+        {
+          "title": "Gentry",
+          "texts": [
+            "gentry"
+          ]
+        },
+        {
+          "title": "County Tipperary",
+          "texts": [
+            "County Tipperary"
+          ]
+        },
+        {
+          "title": "County Longford",
+          "texts": [
+            "County Longford"
+          ]
+        },
+        {
+          "title": "County Clare",
+          "texts": [
+            "County Clare"
+          ]
+        },
+        {
+          "title": "St Bartholomew's Church, Dublin",
+          "texts": [
+            "St. Bartholomew's Church"
+          ]
+        },
+        {
+          "title": "Clyde Road",
+          "texts": [
+            "Clyde Road"
+          ]
+        },
+        {
+          "title": "Ballsbridge",
+          "texts": [
+            "Ballsbridge"
+          ]
+        },
+        {
+          "title": "Bengal Army",
+          "texts": [
+            "Bengal Army"
+          ]
+        },
+        {
+          "title": "Blue plaque",
+          "texts": [
+            "blue plaque"
+          ]
+        },
+        {
+          "title": "Colonnade Hotel (London)",
+          "texts": [
+            "Colonnade Hotel"
+          ]
+        },
+        {
+          "title": "Dermot Turing",
+          "texts": [
+            "Dermot Turing"
+          ]
+        },
+        {
+          "title": "Turing baronets",
+          "texts": [
+            "Turing baronets"
+          ]
+        },
+        {
+          "title": "Edwin Tenney Brewster",
+          "texts": [
+            "Edwin Tenney Brewster"
+          ]
+        },
+        {
+          "title": "Hastings",
+          "texts": [
+            "Hastings"
+          ]
+        },
+        {
+          "title": "British Army",
+          "texts": [
+            "Army"
+          ]
+        },
+        {
+          "title": "Baston Lodge",
+          "texts": [
+            "Baston Lodge"
+          ]
+        },
+        {
+          "title": "St Leonards-on-Sea",
+          "texts": [
+            "St Leonards-on-Sea"
+          ]
+        },
+        {
+          "title": "Guildford",
+          "texts": [
+            "Guildford"
+          ]
+        },
+        {
+          "title": "Frant",
+          "texts": [
+            "Frant"
+          ]
+        },
+        {
+          "title": "East Sussex",
+          "texts": [
+            "East Sussex"
+          ]
+        },
+        {
+          "title": "Sherborne School",
+          "texts": [
+            "Sherborne School"
+          ]
+        },
+        {
+          "title": "Sherborne",
+          "texts": [
+            "Sherborne"
+          ]
+        },
+        {
+          "title": "1926 United Kingdom general strike",
+          "texts": [
+            "1926 General Strike"
+          ]
+        },
+        {
+          "title": "Southampton",
+          "texts": [
+            "Southampton"
+          ]
+        },
+        {
+          "title": "Definition of education",
+          "texts": [
+            "definition of education"
+          ]
+        },
+        {
+          "title": "Classics",
+          "texts": [
+            "classics"
+          ]
+        },
+        {
+          "title": "Calculus",
+          "texts": [
+            "calculus"
+          ]
+        },
+        {
+          "title": "Albert Einstein",
+          "texts": [
+            "Albert Einstein"
+          ]
+        },
+        {
+          "title": "Newton's laws of motion",
+          "texts": [
+            "Newton's laws of motion"
+          ]
+        },
+        {
+          "title": "Christopher Morcom",
+          "texts": [
+            "his elaborate school pranks",
+            "Christopher Morcom"
+          ]
+        },
+        {
+          "title": "In-joke",
+          "texts": [
+            "in-jokes"
+          ]
+        },
+        {
+          "title": "Trinity College, Cambridge",
+          "texts": [
+            "Trinity College, Cambridge"
+          ]
+        },
+        {
+          "title": "Scholarship",
+          "texts": [
+            "scholarship"
+          ]
+        },
+        {
+          "title": "Salisbury Singers",
+          "texts": [
+            "Salisbury Singers"
+          ]
+        },
+        {
+          "title": "Bovine tuberculosis",
+          "texts": [
+            "bovine tuberculosis"
+          ]
+        },
+        {
+          "title": "Atheism",
+          "texts": [
+            "atheism"
+          ]
+        },
+        {
+          "title": "Materialism",
+          "texts": [
+            "materialistic"
+          ]
+        },
+        {
+          "title": "King's College, Cambridge",
+          "texts": [
+            "King's College, Cambridge"
+          ]
+        },
+        {
+          "title": "Etonians",
+          "texts": [
+            "Etonians"
+          ]
+        },
+        {
+          "title": "Exhibition (scholarship)",
+          "texts": [
+            "exhibition"
+          ]
+        },
+        {
+          "title": "Mathematical Tripos",
+          "texts": [
+            "Mathematical Tripos"
+          ]
+        },
+        {
+          "title": "Central limit theorem",
+          "texts": [
+            "central limit theorem"
+          ]
+        },
+        {
+          "title": "Part III of the Mathematical Tripos",
+          "texts": [
+            "Part III"
+          ]
+        },
+        {
+          "title": "London Mathematical Society",
+          "texts": [
+            "Journal of the London Mathematical Society"
+          ]
+        },
+        {
+          "title": "Fellow",
+          "texts": [
+            "Fellow"
+          ]
+        },
+        {
+          "title": "Jarl Waldemar Lindeberg",
+          "texts": [
+            "Jarl Waldemar Lindeberg"
+          ]
+        },
+        {
+          "title": "Abram Besicovitch",
+          "texts": [
+            "Abram Besicovitch"
+          ]
+        },
+        {
+          "title": "Alonzo Church",
+          "texts": [
+            "Alonzo Church"
+          ]
+        },
+        {
+          "title": "Gödel's incompleteness theorems",
+          "texts": [
+            "Gödel's incompleteness theorems"
+          ]
+        },
+        {
+          "title": "Max Newman",
+          "texts": [
+            "Max Newman"
+          ]
+        },
+        {
+          "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+          "texts": [
+            "On Computable Numbers, with an Application to the Entscheidungsproblem"
+          ]
+        },
+        {
+          "title": "Entscheidungsproblem",
+          "texts": [
+            "Entscheidungsproblem"
+          ]
+        },
+        {
+          "title": "David Hilbert",
+          "texts": [
+            "David Hilbert"
+          ]
+        },
+        {
+          "title": "Halting problem",
+          "texts": [
+            "halting problem"
+          ]
+        },
+        {
+          "title": "Decision problem",
+          "texts": [
+            "undecidable"
+          ]
+        },
+        {
+          "title": "Turing's proof",
+          "texts": [
+            "Turing's proof"
+          ]
+        },
+        {
+          "title": "Lambda calculus",
+          "texts": [
+            "lambda calculus"
+          ]
+        },
+        {
+          "title": "Universal Turing machine",
+          "texts": [
+            "universal Turing machine"
+          ]
+        },
+        {
+          "title": "Church–Turing thesis",
+          "texts": [
+            "Church–Turing thesis"
+          ]
+        },
+        {
+          "title": "John von Neumann",
+          "texts": [
+            "John von Neumann",
+            "Von Neumann"
+          ]
+        },
+        {
+          "title": "Theory of computation",
+          "texts": [
+            "theory of computation"
+          ]
+        },
+        {
+          "title": "Jane Eliza Procter Fellowship",
+          "texts": [
+            "Jane Eliza Procter Visiting Fellow"
+          ]
+        },
+        {
+          "title": "Binary multiplier",
+          "texts": [
+            "binary multiplier"
+          ]
+        },
+        {
+          "title": "Princeton University Department of Mathematics",
+          "texts": [
+            "Department of Mathematics"
+          ]
+        },
+        {
+          "title": "Systems of Logic Based on Ordinals",
+          "texts": [
+            "Systems of Logic Based on Ordinals"
+          ]
+        },
+        {
+          "title": "Ordinal logic",
+          "texts": [
+            "ordinal logic"
+          ]
+        },
+        {
+          "title": "Turing reduction",
+          "texts": [
+            "relative computing"
+          ]
+        },
+        {
+          "title": "Oracle machine",
+          "texts": [
+            "oracles"
+          ]
+        },
+        {
+          "title": "Postdoctoral researcher",
+          "texts": [
+            "postdoctoral assistant"
+          ]
+        },
+        {
+          "title": "Ludwig Wittgenstein",
+          "texts": [
+            "Ludwig Wittgenstein"
+          ]
+        },
+        {
+          "title": "Foundations of mathematics",
+          "texts": [
+            "foundations of mathematics"
+          ]
+        },
+        {
+          "title": "Philosophy of mathematics",
+          "texts": [
+            "formalism"
+          ]
+        },
+        {
+          "title": "Asa Briggs",
+          "texts": [
+            "Asa Briggs"
+          ]
+        },
+        {
+          "title": "Nazi Germany",
+          "texts": [
+            "Nazi Germany"
+          ]
+        },
+        {
+          "title": "Dilly Knox",
+          "texts": [
+            "Dilly Knox"
+          ]
+        },
+        {
+          "title": "Warsaw",
+          "texts": [
+            "Warsaw"
+          ]
+        },
+        {
+          "title": "Polish Cipher Bureau",
+          "texts": [
+            "Polish Cipher Bureau"
+          ]
+        },
+        {
+          "title": "Enigma rotor details",
+          "texts": [
+            "Enigma machine's rotors"
+          ]
+        },
+        {
+          "title": "Bombe",
+          "texts": [
+            "bombe"
+          ]
+        },
+        {
+          "title": "Banburismus",
+          "texts": [
+            "Banburismus"
+          ]
+        },
+        {
+          "title": "Turingery",
+          "texts": [
+            "Turingery"
+          ]
+        },
+        {
+          "title": "Lorenz SZ 40/42",
+          "texts": [
+            "Lorenz SZ 40/42"
+          ]
+        },
+        {
+          "title": "Secure voice",
+          "texts": [
+            "secure voice"
+          ]
+        },
+        {
+          "title": "Her Majesty's Government Communications Centre",
+          "texts": [
+            "Hanslope Park",
+            "HMGCC"
+          ]
+        },
+        {
+          "title": "GCHQ",
+          "texts": [
+            "GCHQ"
+          ]
+        },
+        {
+          "title": "The National Archives (United Kingdom)",
+          "texts": [
+            "UK National Archives"
+          ]
+        },
+        {
+          "title": "Ronald Lewin",
+          "texts": [
+            "Ronald Lewin"
+          ]
+        },
+        {
+          "title": "I.J. Good",
+          "texts": [
+            "Jack Good"
+          ]
+        },
+        {
+          "title": "Peter Hilton",
+          "texts": [
+            "Peter Hilton"
+          ]
+        },
+        {
+          "title": "Long-distance running",
+          "texts": [
+            "long-distance runner"
+          ]
+        },
+        {
+          "title": "Great Britain at the 1948 Summer Olympics",
+          "texts": [
+            "1948 British Olympic team"
+          ]
+        },
+        {
+          "title": "Tom Richards (athlete)",
+          "texts": [
+            "Thomas Richards"
+          ]
+        },
+        {
+          "title": "Counterfactual history",
+          "texts": [
+            "counterfactual history"
+          ]
+        },
+        {
+          "title": "Harry Hinsley",
+          "texts": [
+            "Harry Hinsley"
+          ]
+        },
+        {
+          "title": "Order of the British Empire",
+          "texts": [
+            "Officer of the Order of the British Empire"
+          ]
+        },
+        {
+          "title": "George VI",
+          "texts": [
+            "George VI"
+          ]
+        },
+        {
+          "title": "Gordon Welchman",
+          "texts": [
+            "Gordon Welchman"
+          ]
+        },
+        {
+          "title": "Crib (cryptanalysis)",
+          "texts": [
+            "crib"
+          ]
+        },
+        {
+          "title": "Plaintext",
+          "texts": [
+            "plaintext"
+          ]
+        },
+        {
+          "title": "Electromechanics",
+          "texts": [
+            "electromechanically"
+          ]
+        },
+        {
+          "title": "Conel Hugh O'Donel Alexander",
+          "texts": [
+            "Hugh Alexander"
+          ]
+        },
+        {
+          "title": "Stuart Milner-Barry",
+          "texts": [
+            "Stuart Milner-Barry"
+          ]
+        },
+        {
+          "title": "Biuro Szyfrów",
+          "texts": [
+            "work of the Poles"
+          ]
+        },
+        {
+          "title": "Winston Churchill",
+          "texts": [
+            "Winston Churchill"
+          ]
+        },
+        {
+          "title": "Andrew Hodges",
+          "texts": [
+            "Andrew Hodges"
+          ]
+        },
+        {
+          "title": "Hastings Ismay, 1st Baron Ismay",
+          "texts": [
+            "General Ismay"
+          ]
+        },
+        {
+          "title": "Abraham Wald",
+          "texts": [
+            "Abraham Wald"
+          ]
+        },
+        {
+          "title": "Sequential analysis",
+          "texts": [
+            "sequential analysis"
+          ]
+        },
+        {
+          "title": "Ban (unit)",
+          "texts": [
+            "ban"
+          ]
+        },
+        {
+          "title": "Cryptanalysis of the Lorenz cipher",
+          "texts": [
+            "cryptanalysis of the Lorenz cipher"
+          ]
+        },
+        {
+          "title": "United States Naval Computing Machine Laboratory",
+          "texts": [
+            "Computing Machine Laboratory"
+          ]
+        },
+        {
+          "title": "Dayton, Ohio",
+          "texts": [
+            "Dayton, Ohio"
+          ]
+        },
+        {
+          "title": "Bell Labs",
+          "texts": [
+            "Bell Labs"
+          ]
+        },
+        {
+          "title": "Secure speech",
+          "texts": [
+            "secure speech"
+          ]
+        },
+        {
+          "title": "Colonel Hugh O'Donel Alexander",
+          "texts": [
+            "Hugh Alexander"
+          ]
+        },
+        {
+          "title": "Lorenz cipher",
+          "texts": [
+            "Lorenz cipher"
+          ]
+        },
+        {
+          "title": "Teleprinter",
+          "texts": [
+            "teleprinter"
+          ]
+        },
+        {
+          "title": "Rotor machine",
+          "texts": [
+            "rotor cipher attachment"
+          ]
+        },
+        {
+          "title": "Tommy Flowers",
+          "texts": [
+            "Tommy Flowers"
+          ]
+        },
+        {
+          "title": "Colossus computer",
+          "texts": [
+            "Colossus computer"
+          ]
+        },
+        {
+          "title": "Heath Robinson (codebreaking machine)",
+          "texts": [
+            "Heath Robinson"
+          ]
+        },
+        {
+          "title": "Hanslope Park",
+          "texts": [
+            "Hanslope Park"
+          ]
+        },
+        {
+          "title": "Royal Electrical and Mechanical Engineers",
+          "texts": [
+            "REME"
+          ]
+        },
+        {
+          "title": "SIGSALY",
+          "texts": [
+            "SIGSALY"
+          ]
+        },
+        {
+          "title": "Hampton, London",
+          "texts": [
+            "Hampton"
+          ]
+        },
+        {
+          "title": "ACE (computer)",
+          "texts": [
+            "ACE"
+          ]
+        },
+        {
+          "title": "Stored-program computer",
+          "texts": [
+            "stored-program computer"
+          ]
+        },
+        {
+          "title": "First Draft of a Report on the EDVAC",
+          "texts": [
+            "First Draft of a Report on the EDVAC"
+          ]
+        },
+        {
+          "title": "John R. Womersley",
+          "texts": [
+            "John R. Womersley"
+          ]
+        },
+        {
+          "title": "Pilot ACE",
+          "texts": [
+            "Pilot ACE"
+          ]
+        },
+        {
+          "title": "English Electric DEUCE",
+          "texts": [
+            "English Electric DEUCE"
+          ]
+        },
+        {
+          "title": "Bendix G-15",
+          "texts": [
+            "Bendix G-15"
+          ]
+        },
+        {
+          "title": "Heinz Billing",
+          "texts": [
+            "Heinz Billing"
+          ]
+        },
+        {
+          "title": "Max Planck Institute for Physics",
+          "texts": [
+            "Max Planck Institute for Physics"
+          ]
+        },
+        {
+          "title": "Konrad Zuse",
+          "texts": [
+            "Konrad Zuse"
+          ]
+        },
+        {
+          "title": "Göttingen",
+          "texts": [
+            "Göttingen"
+          ]
+        },
+        {
+          "title": "Reader (academic rank)",
+          "texts": [
+            "reader"
+          ]
+        },
+        {
+          "title": "School of Mathematics, University of Manchester",
+          "texts": [
+            "Mathematics Department"
+          ]
+        },
+        {
+          "title": "University of Manchester",
+          "texts": [
+            "University of Manchester"
+          ]
+        },
+        {
+          "title": "Wilmslow",
+          "texts": [
+            "Wilmslow"
+          ]
+        },
+        {
+          "title": "Von Neumann architecture",
+          "texts": [
+            "stored-program"
+          ]
+        },
+        {
+          "title": "Manchester Mark 1",
+          "texts": [
+            "Manchester Mark 1"
+          ]
+        },
+        {
+          "title": "Manchester Literary and Philosophical Society",
+          "texts": [
+            "Manchester Literary and Philosophical Society"
+          ]
+        },
+        {
+          "title": "Mind (journal)",
+          "texts": [
+            "Mind"
+          ]
+        },
+        {
+          "title": "Computing Machinery and Intelligence",
+          "texts": [
+            "Computing Machinery and Intelligence"
+          ]
+        },
+        {
+          "title": "Artificial intelligence",
+          "texts": [
+            "artificial intelligence"
+          ]
+        },
+        {
+          "title": "CAPTCHA",
+          "texts": [
+            "CAPTCHA"
+          ]
+        },
+        {
+          "title": "BBC Radio",
+          "texts": [
+            "BBC radio"
+          ]
+        },
+        {
+          "title": "D.G. Champernowne",
+          "texts": [
+            "D.G. Champernowne"
+          ]
+        },
+        {
+          "title": "Chess",
+          "texts": [
+            "chess"
+          ]
+        },
+        {
+          "title": "Turochamp",
+          "texts": [
+            "Turochamp"
+          ]
+        },
+        {
+          "title": "Ferranti Mark 1",
+          "texts": [
+            "Ferranti Mark 1"
+          ]
+        },
+        {
+          "title": "Garry Kasparov",
+          "texts": [
+            "Garry Kasparov"
+          ]
+        },
+        {
+          "title": "Alick Glennie",
+          "texts": [
+            "Alick Glennie"
+          ]
+        },
+        {
+          "title": "The Chemical Basis of Morphogenesis",
+          "texts": [
+            "The Chemical Basis of Morphogenesis"
+          ]
+        },
+        {
+          "title": "Reaction–diffusion system",
+          "texts": [
+            "reaction–diffusion system"
+          ]
+        },
+        {
+          "title": "Partial differential equations",
+          "texts": [
+            "partial differential equations"
+          ]
+        },
+        {
+          "title": "Autocatalytic",
+          "texts": [
+            "autocatalytic"
+          ]
+        },
+        {
+          "title": "Boris Pavlovich Belousov",
+          "texts": [
+            "Boris Belousov"
+          ]
+        },
+        {
+          "title": "Belousov–Zhabotinsky reaction",
+          "texts": [
+            "Belousov–Zhabotinsky reaction"
+          ]
+        },
+        {
+          "title": "Second law of thermodynamics",
+          "texts": [
+            "second law of thermodynamics"
+          ]
+        },
+        {
+          "title": "Philosophical Transactions of the Royal Society",
+          "texts": [
+            "Philosophical Transactions of the Royal Society"
+          ]
+        },
+        {
+          "title": "DNA",
+          "texts": [
+            "DNA"
+          ]
+        },
+        {
+          "title": "Phyllotaxis",
+          "texts": [
+            "phyllotaxy"
+          ]
+        },
+        {
+          "title": "Primordium",
+          "texts": [
+            "primordia"
+          ]
+        },
+        {
+          "title": "Meristem",
+          "texts": [
+            "meristem"
+          ]
+        },
+        {
+          "title": "Hox genes",
+          "texts": [
+            "Hox genes"
+          ]
+        },
+        {
+          "title": "American Physical Society",
+          "texts": [
+            "American Physical Society"
+          ]
+        },
+        {
+          "title": "Chia seed",
+          "texts": [
+            "chia seeds"
+          ]
+        },
+        {
+          "title": "Ratio Club",
+          "texts": [
+            "Ratio Club"
+          ]
+        },
+        {
+          "title": "Dining club",
+          "texts": [
+            "dining club"
+          ]
+        },
+        {
+          "title": "Cybernetics",
+          "texts": [
+            "cybernetics"
+          ]
+        },
+        {
+          "title": "Neuroscience",
+          "texts": [
+            "neuroscience"
+          ]
+        },
+        {
+          "title": "Phil Husbands",
+          "texts": [
+            "Phil Husbands"
+          ]
+        },
+        {
+          "title": "Owen Holland (academic)",
+          "texts": [
+            "Owen Holland"
+          ]
+        },
+        {
+          "title": "Warren McCulloch",
+          "texts": [
+            "Warren McCulloch"
+          ]
+        },
+        {
+          "title": "Silver bar",
+          "texts": [
+            "silver bars"
+          ]
+        },
+        {
+          "title": "Adjusted for inflation",
+          "texts": [
+            "adjusted for inflation"
+          ]
+        },
+        {
+          "title": "Chess boxing",
+          "texts": [
+            "chess boxing"
+          ]
+        },
+        {
+          "title": "Chad Valley (toy brand)",
+          "texts": [
+            "Chad Valley"
+          ]
+        },
+        {
+          "title": "Joan Clarke",
+          "texts": [
+            "Joan Clarke"
+          ]
+        },
+        {
+          "title": "Wilmslow Road",
+          "texts": [
+            "Oxford Road"
+          ]
+        },
+        {
+          "title": "Dancehouse",
+          "texts": [
+            "Regal Cinema"
+          ]
+        },
+        {
+          "title": "Criminal Law Amendment Act 1885",
+          "texts": [
+            "Section 11",
+            "Criminal Law Amendment Act 1885"
+          ]
+        },
+        {
+          "title": "Committal procedure",
+          "texts": [
+            "committal proceedings"
+          ]
+        },
+        {
+          "title": "Sessions House, Knutsford",
+          "texts": [
+            "Sessions House"
+          ]
+        },
+        {
+          "title": "Knutsford",
+          "texts": [
+            "Knutsford"
+          ]
+        },
+        {
+          "title": "Elizabeth II",
+          "texts": [
+            "Regina"
+          ]
+        },
+        {
+          "title": "Organotherapy",
+          "texts": [
+            "organotherapy"
+          ]
+        },
+        {
+          "title": "Manchester Royal Infirmary",
+          "texts": [
+            "Manchester Royal Infirmary"
+          ]
+        },
+        {
+          "title": "Diethylstilbestrol",
+          "texts": [
+            "diethylstilbestrol"
+          ]
+        },
+        {
+          "title": "Oestrogen",
+          "texts": [
+            "oestrogen"
+          ]
+        },
+        {
+          "title": "Stilbestrol",
+          "texts": [
+            "stilboestrol"
+          ]
+        },
+        {
+          "title": "Impotence",
+          "texts": [
+            "impotence"
+          ]
+        },
+        {
+          "title": "Gynaecomastia",
+          "texts": [
+            "gynaecomastia"
+          ]
+        },
+        {
+          "title": "Signals intelligence",
+          "texts": [
+            "signals intelligence"
+          ]
+        },
+        {
+          "title": "Guy Burgess",
+          "texts": [
+            "Guy Burgess"
+          ]
+        },
+        {
+          "title": "Donald Maclean (spy)",
+          "texts": [
+            "Donald Maclean"
+          ]
+        },
+        {
+          "title": "Angus Wilson",
+          "texts": [
+            "Angus Wilson"
+          ]
+        },
+        {
+          "title": "E. M. Forster",
+          "texts": [
+            "E. M. Forster"
+          ]
+        },
+        {
+          "title": "Pun",
+          "texts": [
+            "pun"
+          ]
+        },
+        {
+          "title": "P. N. Furbank",
+          "texts": [
+            "P. N. Furbank"
+          ]
+        },
+        {
+          "title": "Blackpool Pleasure Beach",
+          "texts": [
+            "Blackpool Pleasure Beach"
+          ]
+        },
+        {
+          "title": "Fortune telling",
+          "texts": [
+            "fortune telling"
+          ]
+        },
+        {
+          "title": "Inquests in England and Wales",
+          "texts": [
+            "inquest"
+          ]
+        },
+        {
+          "title": "Woking Crematorium",
+          "texts": [
+            "Woking Crematorium"
+          ]
+        },
+        {
+          "title": "Lyn Irvine",
+          "texts": [
+            "Lyn Newman"
+          ]
+        },
+        {
+          "title": "David Leavitt",
+          "texts": [
+            "David Leavitt"
+          ]
+        },
+        {
+          "title": "Snow White and the Seven Dwarfs (1937 film)",
+          "texts": [
+            "Snow White and the Seven Dwarfs"
+          ]
+        },
+        {
+          "title": "John W. Dawson Jr.",
+          "texts": [
+            "John W. Dawson Jr."
+          ]
+        },
+        {
+          "title": "Jack Copeland",
+          "texts": [
+            "Jack Copeland"
+          ]
+        },
+        {
+          "title": "Electroplating",
+          "texts": [
+            "electroplating"
+          ]
+        },
+        {
+          "title": "Agency (philosophy)",
+          "texts": [
+            "agency"
+          ]
+        },
+        {
+          "title": "List of things named after Alan Turing",
+          "texts": [
+            "many things named after him"
+          ]
+        },
+        {
+          "title": "Turing Award",
+          "texts": [
+            "an annual award"
+          ]
+        },
+        {
+          "title": "Bank of England £50 note",
+          "texts": [
+            "Bank of England £50 note"
+          ]
+        },
+        {
+          "title": "Icons: The Greatest Person of the 20th Century",
+          "texts": [
+            "2019 BBC series"
+          ]
+        },
+        {
+          "title": "Douglas Hofstadter",
+          "texts": [
+            "Douglas Hofstadter"
+          ]
+        },
+        {
+          "title": "John Graham-Cumming",
+          "texts": [
+            "John Graham-Cumming"
+          ]
+        },
+        {
+          "title": "John Leech (politician)",
+          "texts": [
+            "John Leech"
+          ]
+        },
+        {
+          "title": "E-petition",
+          "texts": [
+            "e-petition"
+          ]
+        },
+        {
+          "title": "Pardon",
+          "texts": [
+            "pardon"
+          ]
+        },
+        {
+          "title": "Tom McNally, Baron McNally",
+          "texts": [
+            "Lord McNally"
+          ]
+        },
+        {
+          "title": "Manchester Withington (UK Parliament constituency)",
+          "texts": [
+            "Manchester Withington"
+          ]
+        },
+        {
+          "title": "Stephen Hawking",
+          "texts": [
+            "Stephen Hawking"
+          ]
+        },
+        {
+          "title": "British House of Lords",
+          "texts": [
+            "House of Lords"
+          ]
+        },
+        {
+          "title": "John Sharkey, Baron Sharkey",
+          "texts": [
+            "Lord Sharkey"
+          ]
+        },
+        {
+          "title": "The Daily Telegraph",
+          "texts": [
+            "The Daily Telegraph"
+          ]
+        },
+        {
+          "title": "Astronomer Royal",
+          "texts": [
+            "Astronomer Royal"
+          ]
+        },
+        {
+          "title": "Martin Rees, Baron Rees of Ludlow",
+          "texts": [
+            "Lord Rees"
+          ]
+        },
+        {
+          "title": "List of presidents of the Royal Society",
+          "texts": [
+            "President of the Royal Society"
+          ]
+        },
+        {
+          "title": "Paul Nurse",
+          "texts": [
+            "Paul Nurse"
+          ]
+        },
+        {
+          "title": "Jean Barker, Baroness Trumpington",
+          "texts": [
+            "Lady Trumpington"
+          ]
+        },
+        {
+          "title": "David Cameron",
+          "texts": [
+            "David Cameron"
+          ]
+        },
+        {
+          "title": "House of Commons of the United Kingdom",
+          "texts": [
+            "House of Commons"
+          ]
+        },
+        {
+          "title": "Christopher Chope",
+          "texts": [
+            "Christopher Chope"
+          ]
+        },
+        {
+          "title": "Royal sign-manual",
+          "texts": [
+            "royal warrant"
+          ]
+        },
+        {
+          "title": "Chris Grayling",
+          "texts": [
+            "Chris Grayling"
+          ]
+        },
+        {
+          "title": "Policing and Crime Act 2017",
+          "texts": [
+            "Policing and Crime Act 2017"
+          ]
+        },
+        {
+          "title": "Amnesty law",
+          "texts": [
+            "amnesty law"
+          ]
+        },
+        {
+          "title": "The Imitation Game",
+          "texts": [
+            "The Imitation Game"
+          ]
+        },
+        {
+          "title": "Sexual orientation and the military of the United Kingdom",
+          "texts": [
+            "an apology to LGBT veterans"
+          ]
+        },
+        {
+          "title": "Secretary of State for Defence",
+          "texts": [
+            "Defence Secretary"
+          ]
+        },
+        {
+          "title": "Ben Wallace (politician)",
+          "texts": [
+            "Ben Wallace"
+          ]
+        },
+        {
+          "title": "Fourth plinth",
+          "texts": [
+            "fourth plinth of Trafalgar Square"
+          ]
+        }
+      ]
+    }
+  }
+}

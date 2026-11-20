@@ -1,0 +1,34 @@
+{
+  "hash": "75604d5b2fa8a029",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Penicillin",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20260810033624|1368621719",
+        "continue": "||"
+      },
+      "query": {
+        "pages": [
+          {
+            "pageid": 23312,
+            "ns": 0,
+            "title": "Penicillin",
+            "revisions": [
+              {
+                "revid": 1379692152,
+                "parentid": 1368621719
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1963 @@
+{
+  "hash": "d0bc22bfb22a1421",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Jupiter/1380352046",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Jupiter",
+      "lead": "Jupiter is the fifth planet from the Sun, and the largest in the Solar System. It is a gas giant with a mass nearly 2.5 times that of all the other planets in the Solar System combined and slightly less than one-thousandth the mass of the Sun. The diameter of Jupiter is 11 times that of Earth and a tenth that of the Sun. It orbits the Sun at a distance of 5.20 AU (778.5 Gm), with an orbital period of 11.86 years. Jupiter is the third-brightest natural object in the Earth's night sky, after the Moon and Venus, and has been observed since prehistoric times. It was named after Jupiter, the chief deity of ancient Roman religion.",
+      "links": [
+        {
+          "title": "Planet",
+          "texts": [
+            "planet"
+          ]
+        },
+        {
+          "title": "Sun",
+          "texts": [
+            "Sun"
+          ]
+        },
+        {
+          "title": "List of Solar System objects by size",
+          "texts": [
+            "largest in the Solar System"
+          ]
+        },
+        {
+          "title": "Gas giant",
+          "texts": [
+            "gas giant"
+          ]
+        },
+        {
+          "title": "Jupiter mass",
+          "texts": [
+            "mass",
+            "Jupiter mass"
+          ]
+        },
+        {
+          "title": "Solar System",
+          "texts": [
+            "Solar System"
+          ]
+        },
+        {
+          "title": "Earth",
+          "texts": [
+            "Earth"
+          ]
+        },
+        {
+          "title": "Astronomical unit",
+          "texts": [
+            "AU"
+          ]
+        },
+        {
+          "title": "Gigametre",
+          "texts": [
+            "Gm"
+          ]
+        },
+        {
+          "title": "Orbital period",
+          "texts": [
+            "orbital period"
+          ]
+        },
+        {
+          "title": "Julian year (astronomy)",
+          "texts": [
+            "years"
+          ]
+        },
+        {
+          "title": "List of brightest natural objects in the sky",
+          "texts": [
+            "third-brightest natural object",
+            "fourth-brightest object in the sky"
+          ]
+        },
+        {
+          "title": "Night sky",
+          "texts": [
+            "night sky"
+          ]
+        },
+        {
+          "title": "Moon",
+          "texts": [
+            "Moon"
+          ]
+        },
+        {
+          "title": "Venus",
+          "texts": [
+            "Venus"
+          ]
+        },
+        {
+          "title": "Prehistoric times",
+          "texts": [
+            "prehistoric times"
+          ]
+        },
+        {
+          "title": "Jupiter (god)",
+          "texts": [
+            "Jupiter"
+          ]
+        },
+        {
+          "title": "Ancient Roman religion",
+          "texts": [
+            "ancient Roman religion"
+          ]
+        },
+        {
+          "title": "Jupiter's atmosphere",
+          "texts": [
+            "Jupiter's atmosphere"
+          ]
+        },
+        {
+          "title": "Hydrogen",
+          "texts": [
+            "hydrogen"
+          ]
+        },
+        {
+          "title": "Helium",
+          "texts": [
+            "helium"
+          ]
+        },
+        {
+          "title": "Mass",
+          "texts": [
+            "mass"
+          ]
+        },
+        {
+          "title": "Carbon",
+          "texts": [
+            "carbon"
+          ]
+        },
+        {
+          "title": "Oxygen",
+          "texts": [
+            "oxygen"
+          ]
+        },
+        {
+          "title": "Sulfur",
+          "texts": [
+            "sulfur"
+          ]
+        },
+        {
+          "title": "Neon",
+          "texts": [
+            "neon"
+          ]
+        },
+        {
+          "title": "Ammonia",
+          "texts": [
+            "ammonia"
+          ]
+        },
+        {
+          "title": "Water vapour",
+          "texts": [
+            "water vapour"
+          ]
+        },
+        {
+          "title": "Phosphine",
+          "texts": [
+            "phosphine"
+          ]
+        },
+        {
+          "title": "Hydrogen sulfide",
+          "texts": [
+            "hydrogen sulfide"
+          ]
+        },
+        {
+          "title": "Hydrocarbon",
+          "texts": [
+            "hydrocarbons"
+          ]
+        },
+        {
+          "title": "Saturn",
+          "texts": [
+            "Saturn"
+          ]
+        },
+        {
+          "title": "Great Red Spot",
+          "texts": [
+            "Great Red Spot"
+          ]
+        },
+        {
+          "title": "Oblate spheroid",
+          "texts": [
+            "oblate spheroid"
+          ]
+        },
+        {
+          "title": "Metallic hydrogen",
+          "texts": [
+            "metallic hydrogen"
+          ]
+        },
+        {
+          "title": "Magnetic field",
+          "texts": [
+            "magnetic field"
+          ]
+        },
+        {
+          "title": "Eddy current",
+          "texts": [
+            "eddy currents"
+          ]
+        },
+        {
+          "title": "Solar wind",
+          "texts": [
+            "solar wind"
+          ]
+        },
+        {
+          "title": "Magnetosphere",
+          "texts": [
+            "magnetosphere"
+          ]
+        },
+        {
+          "title": "Moons of Jupiter",
+          "texts": [
+            "115 moons",
+            "Jupiter's moons",
+            "Jovian system"
+          ]
+        },
+        {
+          "title": "Galilean moons",
+          "texts": [
+            "four largest moons",
+            "Galilean moons"
+          ]
+        },
+        {
+          "title": "Io (moon)",
+          "texts": [
+            "Io"
+          ]
+        },
+        {
+          "title": "Europa (moon)",
+          "texts": [
+            "Europa",
+            "Europa's surface"
+          ]
+        },
+        {
+          "title": "Ganymede (moon)",
+          "texts": [
+            "Ganymede"
+          ]
+        },
+        {
+          "title": "Callisto (moon)",
+          "texts": [
+            "Callisto"
+          ]
+        },
+        {
+          "title": "Mercury (planet)",
+          "texts": [
+            "Mercury"
+          ]
+        },
+        {
+          "title": "Planetary ring",
+          "texts": [
+            "planetary rings",
+            "planetary ring"
+          ]
+        },
+        {
+          "title": "Rings of Jupiter",
+          "texts": [
+            "rings of Jupiter"
+          ]
+        },
+        {
+          "title": "Torus",
+          "texts": [
+            "torus"
+          ]
+        },
+        {
+          "title": "List of missions to the outer planets",
+          "texts": [
+            "visited by"
+          ]
+        },
+        {
+          "title": "Robotic spacecraft",
+          "texts": [
+            "robotic probes"
+          ]
+        },
+        {
+          "title": "Flyby (spaceflight)",
+          "texts": [
+            "flybys"
+          ]
+        },
+        {
+          "title": "Jupiter analogue",
+          "texts": [
+            "Jupiter-like exoplanets"
+          ]
+        },
+        {
+          "title": "Pantheon (religion)",
+          "texts": [
+            "pantheon"
+          ]
+        },
+        {
+          "title": "Zeus",
+          "texts": [
+            "Zeus"
+          ]
+        },
+        {
+          "title": "International Astronomical Union",
+          "texts": [
+            "International Astronomical Union"
+          ]
+        },
+        {
+          "title": "Planetary symbol",
+          "texts": [
+            "planetary symbol"
+          ]
+        },
+        {
+          "title": "Zeta",
+          "texts": [
+            "zeta"
+          ]
+        },
+        {
+          "title": "Scribal abbreviation",
+          "texts": [
+            "horizontal stroke"
+          ]
+        },
+        {
+          "title": "Genitive case",
+          "texts": [
+            "genitive case"
+          ]
+        },
+        {
+          "title": "Iuppiter",
+          "texts": [
+            "Iuppiter"
+          ]
+        },
+        {
+          "title": "Adjective",
+          "texts": [
+            "adjectival"
+          ]
+        },
+        {
+          "title": "Middle Ages",
+          "texts": [
+            "Middle Ages"
+          ]
+        },
+        {
+          "title": "Jupiter (astrology)",
+          "texts": [
+            "astrology"
+          ]
+        },
+        {
+          "title": "Frost line (astrophysics)",
+          "texts": [
+            "snow line"
+          ]
+        },
+        {
+          "title": "Volatile (astrogeology)",
+          "texts": [
+            "volatiles"
+          ]
+        },
+        {
+          "title": "Primary atmosphere",
+          "texts": [
+            "gaseous atmosphere"
+          ]
+        },
+        {
+          "title": "Grand tack hypothesis",
+          "texts": [
+            "grand tack hypothesis"
+          ]
+        },
+        {
+          "title": "Kilometre",
+          "texts": [
+            "km"
+          ]
+        },
+        {
+          "title": "Mile",
+          "texts": [
+            "mi"
+          ]
+        },
+        {
+          "title": "Accretion (astrophysics)",
+          "texts": [
+            "accreted",
+            "accretes"
+          ]
+        },
+        {
+          "title": "Orbital resonance",
+          "texts": [
+            "orbital resonances",
+            "orbital resonance"
+          ]
+        },
+        {
+          "title": "Super-Earth",
+          "texts": [
+            "super-Earths"
+          ]
+        },
+        {
+          "title": "Mean motion resonance",
+          "texts": [
+            "mean motion resonance"
+          ]
+        },
+        {
+          "title": "Solar nebula",
+          "texts": [
+            "solar nebula"
+          ]
+        },
+        {
+          "title": "Nice model",
+          "texts": [
+            "Nice model"
+          ]
+        },
+        {
+          "title": "Kuiper belt",
+          "texts": [
+            "Kuiper belt"
+          ]
+        },
+        {
+          "title": "Late Heavy Bombardment",
+          "texts": [
+            "Late Heavy Bombardment"
+          ]
+        },
+        {
+          "title": "Jumping-Jupiter scenario",
+          "texts": [
+            "Jumping-Jupiter scenario"
+          ]
+        },
+        {
+          "title": "Fifth Giant",
+          "texts": [
+            "fifth gas giant"
+          ]
+        },
+        {
+          "title": "Molecular nitrogen",
+          "texts": [
+            "molecular nitrogen"
+          ]
+        },
+        {
+          "title": "Equator",
+          "texts": [
+            "equator"
+          ]
+        },
+        {
+          "title": "Terrestrial planet",
+          "texts": [
+            "terrestrial planets"
+          ]
+        },
+        {
+          "title": "Atmosphere of Jupiter",
+          "texts": [
+            "atmosphere of Jupiter",
+            "Jupiter's atmosphere"
+          ]
+        },
+        {
+          "title": "Hydrocarbons",
+          "texts": [
+            "hydrocarbons"
+          ]
+        },
+        {
+          "title": "Methane",
+          "texts": [
+            "methane"
+          ]
+        },
+        {
+          "title": "Ethane",
+          "texts": [
+            "ethane"
+          ]
+        },
+        {
+          "title": "Benzene",
+          "texts": [
+            "benzene"
+          ]
+        },
+        {
+          "title": "Crystal",
+          "texts": [
+            "crystals"
+          ]
+        },
+        {
+          "title": "Precipitation (meteorology)",
+          "texts": [
+            "precipitation"
+          ]
+        },
+        {
+          "title": "Spectroscopy",
+          "texts": [
+            "spectroscopy"
+          ]
+        },
+        {
+          "title": "Uranus",
+          "texts": [
+            "Uranus"
+          ]
+        },
+        {
+          "title": "Neptune",
+          "texts": [
+            "Neptune"
+          ]
+        },
+        {
+          "title": "Abundance of the chemical elements",
+          "texts": [
+            "most common elements"
+          ]
+        },
+        {
+          "title": "Ice giants",
+          "texts": [
+            "ice giants"
+          ]
+        },
+        {
+          "title": "Earth radius",
+          "texts": [
+            "R🜨"
+          ]
+        },
+        {
+          "title": "Barycentre",
+          "texts": [
+            "barycentre"
+          ]
+        },
+        {
+          "title": "Photosphere",
+          "texts": [
+            "Sun's surface"
+          ]
+        },
+        {
+          "title": "Solar radius",
+          "texts": [
+            "solar radii",
+            "R☉"
+          ]
+        },
+        {
+          "title": "Solar mass",
+          "texts": [
+            "mass of the Sun"
+          ]
+        },
+        {
+          "title": "Extrasolar planet",
+          "texts": [
+            "extrasolar planets"
+          ]
+        },
+        {
+          "title": "Brown dwarf",
+          "texts": [
+            "brown dwarfs"
+          ]
+        },
+        {
+          "title": "HD 209458 b",
+          "texts": [
+            "HD 209458 b"
+          ]
+        },
+        {
+          "title": "Gliese 229 b",
+          "texts": [
+            "Gliese 229 b"
+          ]
+        },
+        {
+          "title": "Jupiter radius",
+          "texts": [
+            "Jupiter radius"
+          ]
+        },
+        {
+          "title": "Kelvin–Helmholtz mechanism",
+          "texts": [
+            "Kelvin–Helmholtz mechanism"
+          ]
+        },
+        {
+          "title": "Radius",
+          "texts": [
+            "radius"
+          ]
+        },
+        {
+          "title": "Stellar ignition",
+          "texts": [
+            "stellar ignition"
+          ]
+        },
+        {
+          "title": "Hydrogen fusion",
+          "texts": [
+            "fuse hydrogen"
+          ]
+        },
+        {
+          "title": "Star",
+          "texts": [
+            "star"
+          ]
+        },
+        {
+          "title": "Red dwarf",
+          "texts": [
+            "red dwarf"
+          ]
+        },
+        {
+          "title": "Axial tilt",
+          "texts": [
+            "axial tilt"
+          ]
+        },
+        {
+          "title": "Period of revolution",
+          "texts": [
+            "rotation"
+          ]
+        },
+        {
+          "title": "Coordinate axis",
+          "texts": [
+            "axis"
+          ]
+        },
+        {
+          "title": "Equatorial bulge",
+          "texts": [
+            "equatorial bulge"
+          ]
+        },
+        {
+          "title": "Differential rotation",
+          "texts": [
+            "differential rotation"
+          ]
+        },
+        {
+          "title": "Radio astronomer",
+          "texts": [
+            "radio astronomers"
+          ]
+        },
+        {
+          "title": "Planetary core",
+          "texts": [
+            "core"
+          ]
+        },
+        {
+          "title": "Molecular hydrogen",
+          "texts": [
+            "molecular hydrogen"
+          ]
+        },
+        {
+          "title": "Protoplanetary disk",
+          "texts": [
+            "protoplanetary disk"
+          ]
+        },
+        {
+          "title": "Juno (spacecraft)",
+          "texts": [
+            "Juno mission",
+            "Juno"
+          ]
+        },
+        {
+          "title": "Critical pressure",
+          "texts": [
+            "critical pressure"
+          ]
+        },
+        {
+          "title": "Pascal (unit)",
+          "texts": [
+            "MPa"
+          ]
+        },
+        {
+          "title": "Critical temperature",
+          "texts": [
+            "critical temperature"
+          ]
+        },
+        {
+          "title": "Kelvin",
+          "texts": [
+            "K"
+          ]
+        },
+        {
+          "title": "Celsius",
+          "texts": [
+            "°C"
+          ]
+        },
+        {
+          "title": "Fahrenheit",
+          "texts": [
+            "°F"
+          ]
+        },
+        {
+          "title": "Supercritical fluid",
+          "texts": [
+            "supercritical fluid"
+          ]
+        },
+        {
+          "title": "Extraterrestrial diamonds",
+          "texts": [
+            "diamonds"
+          ]
+        },
+        {
+          "title": "Standard atmosphere (unit)",
+          "texts": [
+            "standard Earth atmosphere"
+          ]
+        },
+        {
+          "title": "Bar (unit)",
+          "texts": [
+            "bar"
+          ]
+        },
+        {
+          "title": "Ammonium hydrosulfide",
+          "texts": [
+            "ammonium hydrosulfide"
+          ]
+        },
+        {
+          "title": "Tropopause",
+          "texts": [
+            "tropopause"
+          ]
+        },
+        {
+          "title": "Atmospheric circulation",
+          "texts": [
+            "circulation"
+          ]
+        },
+        {
+          "title": "Turbulence",
+          "texts": [
+            "turbulence"
+          ]
+        },
+        {
+          "title": "Jet stream",
+          "texts": [
+            "zonal jet streams"
+          ]
+        },
+        {
+          "title": "Water (properties)",
+          "texts": [
+            "water"
+          ]
+        },
+        {
+          "title": "Lightning",
+          "texts": [
+            "lightning"
+          ]
+        },
+        {
+          "title": "Upper-atmospheric lightning",
+          "texts": [
+            "Upper-atmospheric lightning"
+          ]
+        },
+        {
+          "title": "Chromophore",
+          "texts": [
+            "chromophores"
+          ]
+        },
+        {
+          "title": "Convection cell",
+          "texts": [
+            "convection cells"
+          ]
+        },
+        {
+          "title": "Solar radiation",
+          "texts": [
+            "solar radiation"
+          ]
+        },
+        {
+          "title": "Convection",
+          "texts": [
+            "Convection"
+          ]
+        },
+        {
+          "title": "Anticyclonic storm",
+          "texts": [
+            "anticyclonic storm"
+          ]
+        },
+        {
+          "title": "Hubble Space Telescope",
+          "texts": [
+            "Hubble Space Telescope"
+          ]
+        },
+        {
+          "title": "Telescope",
+          "texts": [
+            "telescopes"
+          ]
+        },
+        {
+          "title": "Aperture",
+          "texts": [
+            "aperture"
+          ]
+        },
+        {
+          "title": "Period (physics)",
+          "texts": [
+            "period"
+          ]
+        },
+        {
+          "title": "Acetylene",
+          "texts": [
+            "acetylene"
+          ]
+        },
+        {
+          "title": "Mathematical model",
+          "texts": [
+            "Mathematical models"
+          ]
+        },
+        {
+          "title": "Oval BA",
+          "texts": [
+            "Oval BA"
+          ]
+        },
+        {
+          "title": "Jupiter's North Pole",
+          "texts": [
+            "north pole",
+            "Jupiter's north pole"
+          ]
+        },
+        {
+          "title": "Trihydrogen cation",
+          "texts": [
+            "trihydrogen cation"
+          ]
+        },
+        {
+          "title": "Magnetic dipole moment",
+          "texts": [
+            "dipole moment"
+          ]
+        },
+        {
+          "title": "Gauss (unit)",
+          "texts": [
+            "gauss"
+          ]
+        },
+        {
+          "title": "Tesla (unit)",
+          "texts": [
+            "mT"
+          ]
+        },
+        {
+          "title": "Bow shock",
+          "texts": [
+            "bow shock"
+          ]
+        },
+        {
+          "title": "Magnetopause",
+          "texts": [
+            "magnetopause"
+          ]
+        },
+        {
+          "title": "Magnetosheath",
+          "texts": [
+            "magnetosheath"
+          ]
+        },
+        {
+          "title": "Lee side",
+          "texts": [
+            "lee side"
+          ]
+        },
+        {
+          "title": "Sulfur dioxide",
+          "texts": [
+            "sulfur dioxide"
+          ]
+        },
+        {
+          "title": "Ionization",
+          "texts": [
+            "ionized"
+          ]
+        },
+        {
+          "title": "Ion",
+          "texts": [
+            "ions"
+          ]
+        },
+        {
+          "title": "Plasma sheet",
+          "texts": [
+            "plasma sheet"
+          ]
+        },
+        {
+          "title": "Hertz",
+          "texts": [
+            "MHz"
+          ]
+        },
+        {
+          "title": "Shortwave radio receiver",
+          "texts": [
+            "shortwave radio receivers"
+          ]
+        },
+        {
+          "title": "Alfvén wave",
+          "texts": [
+            "Alfvén waves"
+          ]
+        },
+        {
+          "title": "Cyclotron",
+          "texts": [
+            "cyclotron"
+          ]
+        },
+        {
+          "title": "Astrophysical maser",
+          "texts": [
+            "maser mechanism"
+          ]
+        },
+        {
+          "title": "Radio wave",
+          "texts": [
+            "radio emissions"
+          ]
+        },
+        {
+          "title": "Orbital plane",
+          "texts": [
+            "orbital plane"
+          ]
+        },
+        {
+          "title": "Orbital inclination",
+          "texts": [
+            "inclined"
+          ]
+        },
+        {
+          "title": "Orbital eccentricity",
+          "texts": [
+            "eccentricity"
+          ]
+        },
+        {
+          "title": "Perihelion",
+          "texts": [
+            "perihelion"
+          ]
+        },
+        {
+          "title": "Aphelion",
+          "texts": [
+            "aphelion"
+          ]
+        },
+        {
+          "title": "Exoplanet",
+          "texts": [
+            "exoplanet"
+          ]
+        },
+        {
+          "title": "Mars",
+          "texts": [
+            "Mars"
+          ]
+        },
+        {
+          "title": "Opposition (astronomy)",
+          "texts": [
+            "opposition"
+          ]
+        },
+        {
+          "title": "Conjunction (astronomy and astrology)",
+          "texts": [
+            "conjunction"
+          ]
+        },
+        {
+          "title": "Apparent magnitude",
+          "texts": [
+            "apparent magnitude"
+          ]
+        },
+        {
+          "title": "Angular diameter",
+          "texts": [
+            "angular diameter"
+          ]
+        },
+        {
+          "title": "Arcsecond",
+          "texts": [
+            "arcseconds"
+          ]
+        },
+        {
+          "title": "Apsis",
+          "texts": [
+            "perihelion"
+          ]
+        },
+        {
+          "title": "Apparent retrograde motion",
+          "texts": [
+            "retrograde motion"
+          ]
+        },
+        {
+          "title": "Phase angle (astronomy)",
+          "texts": [
+            "phase angle"
+          ]
+        },
+        {
+          "title": "Adrastea (moon)",
+          "texts": [
+            "Adrastea"
+          ]
+        },
+        {
+          "title": "Metis (moon)",
+          "texts": [
+            "Metis"
+          ]
+        },
+        {
+          "title": "Thebe (moon)",
+          "texts": [
+            "Thebe"
+          ]
+        },
+        {
+          "title": "Amalthea (moon)",
+          "texts": [
+            "Amalthea"
+          ]
+        },
+        {
+          "title": "Natural satellite",
+          "texts": [
+            "natural satellites"
+          ]
+        },
+        {
+          "title": "Laplace resonance",
+          "texts": [
+            "Laplace resonance"
+          ]
+        },
+        {
+          "title": "Tidal force",
+          "texts": [
+            "tidal force"
+          ]
+        },
+        {
+          "title": "Tidal circularization",
+          "texts": [
+            "circularize"
+          ]
+        },
+        {
+          "title": "Friction",
+          "texts": [
+            "friction"
+          ]
+        },
+        {
+          "title": "Tidal heating",
+          "texts": [
+            "generates heat"
+          ]
+        },
+        {
+          "title": "Volcanism on Io",
+          "texts": [
+            "volcanic activity of Io"
+          ]
+        },
+        {
+          "title": "Orbital elements",
+          "texts": [
+            "orbital elements"
+          ]
+        },
+        {
+          "title": "Themisto (moon)",
+          "texts": [
+            "Themisto"
+          ]
+        },
+        {
+          "title": "Valetudo (moon)",
+          "texts": [
+            "Valetudo"
+          ]
+        },
+        {
+          "title": "Regular moon",
+          "texts": [
+            "regular moons"
+          ]
+        },
+        {
+          "title": "Irregular moons",
+          "texts": [
+            "irregular moons"
+          ]
+        },
+        {
+          "title": "Asteroid capture",
+          "texts": [
+            "captured asteroids"
+          ]
+        },
+        {
+          "title": "Orbital plane (astronomy)",
+          "texts": [
+            "orbital plane"
+          ]
+        },
+        {
+          "title": "Celestial equator",
+          "texts": [
+            "equatorial plane"
+          ]
+        },
+        {
+          "title": "Kirkwood gap",
+          "texts": [
+            "Kirkwood gaps"
+          ]
+        },
+        {
+          "title": "Asteroid belt",
+          "texts": [
+            "asteroid belt"
+          ]
+        },
+        {
+          "title": "Asteroid",
+          "texts": [
+            "asteroids",
+            "asteroid"
+          ]
+        },
+        {
+          "title": "Lagrangian point",
+          "texts": [
+            "Lagrangian points"
+          ]
+        },
+        {
+          "title": "Trojan asteroid",
+          "texts": [
+            "Trojan asteroids"
+          ]
+        },
+        {
+          "title": "List of Trojan asteroids (Greek camp)",
+          "texts": [
+            "Greek"
+          ]
+        },
+        {
+          "title": "List of Trojan asteroids (Trojan camp)",
+          "texts": [
+            "Trojan"
+          ]
+        },
+        {
+          "title": "Iliad",
+          "texts": [
+            "Iliad"
+          ]
+        },
+        {
+          "title": "588 Achilles",
+          "texts": [
+            "588 Achilles"
+          ]
+        },
+        {
+          "title": "Max Wolf",
+          "texts": [
+            "Max Wolf"
+          ]
+        },
+        {
+          "title": "624 Hektor",
+          "texts": [
+            "624 Hektor"
+          ]
+        },
+        {
+          "title": "Semi-major axis",
+          "texts": [
+            "semi-major axis"
+          ]
+        },
+        {
+          "title": "List of periodic comets",
+          "texts": [
+            "short-period comets"
+          ]
+        },
+        {
+          "title": "Perturbation (astronomy)",
+          "texts": [
+            "perturbed"
+          ]
+        },
+        {
+          "title": "Comet Shoemaker–Levy 9",
+          "texts": [
+            "vacuum cleaner",
+            "Comet Shoemaker–Levy 9"
+          ]
+        },
+        {
+          "title": "Gravity well",
+          "texts": [
+            "gravity well"
+          ]
+        },
+        {
+          "title": "List of Jupiter events",
+          "texts": [
+            "impacts on Jupiter"
+          ]
+        },
+        {
+          "title": "Comet",
+          "texts": [
+            "comet"
+          ]
+        },
+        {
+          "title": "Oort cloud",
+          "texts": [
+            "Oort cloud"
+          ]
+        },
+        {
+          "title": "Giovanni Domenico Cassini",
+          "texts": [
+            "Giovanni Cassini"
+          ]
+        },
+        {
+          "title": "Babylonian astronomers",
+          "texts": [
+            "Babylonian astronomers"
+          ]
+        },
+        {
+          "title": "Earthly branches",
+          "texts": [
+            "earthly branches"
+          ]
+        },
+        {
+          "title": "Chinese language",
+          "texts": [
+            "Chinese language",
+            "Chinese"
+          ]
+        },
+        {
+          "title": "Simplified characters",
+          "texts": [
+            "simplified"
+          ]
+        },
+        {
+          "title": "Chinese zodiac",
+          "texts": [
+            "Chinese zodiac",
+            "zodiac"
+          ]
+        },
+        {
+          "title": "Tai Sui",
+          "texts": [
+            "Tai Sui"
+          ]
+        },
+        {
+          "title": "Chinese gods",
+          "texts": [
+            "god"
+          ]
+        },
+        {
+          "title": "Taoist",
+          "texts": [
+            "Taoist"
+          ]
+        },
+        {
+          "title": "Chinese folk religion",
+          "texts": [
+            "folk religious practices"
+          ]
+        },
+        {
+          "title": "Xi Zezong",
+          "texts": [
+            "Xi Zezong"
+          ]
+        },
+        {
+          "title": "Gan De",
+          "texts": [
+            "Gan De"
+          ]
+        },
+        {
+          "title": "Chinese astronomy",
+          "texts": [
+            "Chinese astronomer"
+          ]
+        },
+        {
+          "title": "Trapezoidal rule",
+          "texts": [
+            "trapezoidal rule"
+          ]
+        },
+        {
+          "title": "Babylon",
+          "texts": [
+            "Babylonians"
+          ]
+        },
+        {
+          "title": "Ecliptic",
+          "texts": [
+            "ecliptic"
+          ]
+        },
+        {
+          "title": "Almagest",
+          "texts": [
+            "Almagest"
+          ]
+        },
+        {
+          "title": "Claudius Ptolemaeus",
+          "texts": [
+            "Claudius Ptolemaeus"
+          ]
+        },
+        {
+          "title": "Geocentric",
+          "texts": [
+            "geocentric"
+          ]
+        },
+        {
+          "title": "Deferent",
+          "texts": [
+            "deferents"
+          ]
+        },
+        {
+          "title": "Epicycle",
+          "texts": [
+            "epicycles"
+          ]
+        },
+        {
+          "title": "Galileo Galilei",
+          "texts": [
+            "Galileo Galilei"
+          ]
+        },
+        {
+          "title": "Simon Marius",
+          "texts": [
+            "Simon Marius"
+          ]
+        },
+        {
+          "title": "Heliocentrism",
+          "texts": [
+            "heliocentric"
+          ]
+        },
+        {
+          "title": "Nicolaus Copernicus",
+          "texts": [
+            "Nicolaus Copernicus"
+          ]
+        },
+        {
+          "title": "Inquisition",
+          "texts": [
+            "Inquisition"
+          ]
+        },
+        {
+          "title": "Robert Hooke",
+          "texts": [
+            "Robert Hooke"
+          ]
+        },
+        {
+          "title": "Samuel Heinrich Schwabe",
+          "texts": [
+            "Heinrich Schwabe"
+          ]
+        },
+        {
+          "title": "Giovanni Alfonso Borelli",
+          "texts": [
+            "Giovanni Borelli"
+          ]
+        },
+        {
+          "title": "Ole Rømer",
+          "texts": [
+            "Ole Rømer"
+          ]
+        },
+        {
+          "title": "Speed of light",
+          "texts": [
+            "speed of light"
+          ]
+        },
+        {
+          "title": "E. E. Barnard",
+          "texts": [
+            "E. E. Barnard"
+          ]
+        },
+        {
+          "title": "Lick Observatory",
+          "texts": [
+            "Lick Observatory"
+          ]
+        },
+        {
+          "title": "Voyager 1",
+          "texts": [
+            "Voyager 1"
+          ]
+        },
+        {
+          "title": "Rupert Wildt",
+          "texts": [
+            "Rupert Wildt"
+          ]
+        },
+        {
+          "title": "Absorption bands",
+          "texts": [
+            "absorption bands"
+          ]
+        },
+        {
+          "title": "Kenneth Franklin",
+          "texts": [
+            "Kenneth Franklin"
+          ]
+        },
+        {
+          "title": "Frank Drake",
+          "texts": [
+            "Frank Drake"
+          ]
+        },
+        {
+          "title": "Cyclotron radiation",
+          "texts": [
+            "cyclotron radiation"
+          ]
+        },
+        {
+          "title": "Thermal radiation",
+          "texts": [
+            "Thermal radiation"
+          ]
+        },
+        {
+          "title": "Spacecraft",
+          "texts": [
+            "spacecraft"
+          ]
+        },
+        {
+          "title": "Pioneer 10",
+          "texts": [
+            "Pioneer 10"
+          ]
+        },
+        {
+          "title": "Delta-v",
+          "texts": [
+            "delta-v"
+          ]
+        },
+        {
+          "title": "Hohmann transfer orbit",
+          "texts": [
+            "Hohmann transfer orbit"
+          ]
+        },
+        {
+          "title": "Low Earth orbit",
+          "texts": [
+            "low Earth orbit"
+          ]
+        },
+        {
+          "title": "Gravitational slingshot",
+          "texts": [
+            "Gravity assists"
+          ]
+        },
+        {
+          "title": "Optical resolution",
+          "texts": [
+            "resolution"
+          ]
+        },
+        {
+          "title": "Pioneer program",
+          "texts": [
+            "Pioneer"
+          ]
+        },
+        {
+          "title": "Radio occultations",
+          "texts": [
+            "Radio occultations"
+          ]
+        },
+        {
+          "title": "Ionosphere",
+          "texts": [
+            "ionosphere"
+          ]
+        },
+        {
+          "title": "Voyager program",
+          "texts": [
+            "Voyager"
+          ]
+        },
+        {
+          "title": "Terminator (solar)",
+          "texts": [
+            "night side"
+          ]
+        },
+        {
+          "title": "Ulysses (spacecraft)",
+          "texts": [
+            "Ulysses"
+          ]
+        },
+        {
+          "title": "Polar orbit",
+          "texts": [
+            "polar orbit"
+          ]
+        },
+        {
+          "title": "New Horizons",
+          "texts": [
+            "New Horizons"
+          ]
+        },
+        {
+          "title": "Pluto",
+          "texts": [
+            "Pluto"
+          ]
+        },
+        {
+          "title": "Galileo (spacecraft)",
+          "texts": [
+            "Galileo",
+            "atmospheric probe"
+          ]
+        },
+        {
+          "title": "NASA",
+          "texts": [
+            "NASA"
+          ]
+        },
+        {
+          "title": "Life on Europa",
+          "texts": [
+            "which may harbour life"
+          ]
+        },
+        {
+          "title": "Magnetosphere of Jupiter",
+          "texts": [
+            "Jupiter's magnetosphere"
+          ]
+        },
+        {
+          "title": "JunoCam",
+          "texts": [
+            "JunoCam"
+          ]
+        },
+        {
+          "title": "Jupiter Icy Moons Orbiter",
+          "texts": [
+            "JIMO"
+          ]
+        },
+        {
+          "title": "European Space Agency",
+          "texts": [
+            "ESA"
+          ]
+        },
+        {
+          "title": "EJSM/Laplace",
+          "texts": [
+            "EJSM/Laplace"
+          ]
+        },
+        {
+          "title": "Jupiter Europa Orbiter",
+          "texts": [
+            "Jupiter Europa Orbiter"
+          ]
+        },
+        {
+          "title": "Jupiter Ganymede Orbiter",
+          "texts": [
+            "Jupiter Ganymede Orbiter"
+          ]
+        },
+        {
+          "title": "Cosmic Vision",
+          "texts": [
+            "Cosmic Vision"
+          ]
+        },
+        {
+          "title": "Jupiter Icy Moon Explorer",
+          "texts": [
+            "Jupiter Icy Moon Explorer"
+          ]
+        },
+        {
+          "title": "Europa Clipper",
+          "texts": [
+            "Europa Clipper"
+          ]
+        },
+        {
+          "title": "Chinese National Space Administration",
+          "texts": [
+            "Chinese National Space Administration"
+          ]
+        },
+        {
+          "title": "Tianwen-4",
+          "texts": [
+            "Tianwen-4"
+          ]
+        },
+        {
+          "title": "Interstellar Express",
+          "texts": [
+            "Interstellar Express"
+          ]
+        },
+        {
+          "title": "Interstellar Probe (spacecraft)",
+          "texts": [
+            "Interstellar Probe"
+          ]
+        },
+        {
+          "title": "Marduk",
+          "texts": [
+            "Marduk"
+          ]
+        },
+        {
+          "title": "Hammurabi",
+          "texts": [
+            "Hammurabi"
+          ]
+        },
+        {
+          "title": "Constellation",
+          "texts": [
+            "constellations"
+          ]
+        },
+        {
+          "title": "Zodiac",
+          "texts": [
+            "zodiac"
+          ]
+        },
+        {
+          "title": "Greek mythology",
+          "texts": [
+            "mythical Greek"
+          ]
+        },
+        {
+          "title": "Greek language",
+          "texts": [
+            "Greek"
+          ]
+        },
+        {
+          "title": "Phaethon",
+          "texts": [
+            "Phaethon"
+          ]
+        },
+        {
+          "title": "Homer",
+          "texts": [
+            "Homeric"
+          ]
+        },
+        {
+          "title": "Near East",
+          "texts": [
+            "Near-Eastern"
+          ]
+        },
+        {
+          "title": "El (deity)",
+          "texts": [
+            "El"
+          ]
+        },
+        {
+          "title": "Baal",
+          "texts": [
+            "Baal"
+          ]
+        },
+        {
+          "title": "Enlil",
+          "texts": [
+            "Enlil"
+          ]
+        },
+        {
+          "title": "Epinomis",
+          "texts": [
+            "Epinomis"
+          ]
+        },
+        {
+          "title": "Plato",
+          "texts": [
+            "Plato"
+          ]
+        },
+        {
+          "title": "List of Roman deities",
+          "texts": [
+            "god"
+          ]
+        },
+        {
+          "title": "Roman mythology",
+          "texts": [
+            "Roman mythology"
+          ]
+        },
+        {
+          "title": "Proto-Indo-European language",
+          "texts": [
+            "Proto-Indo-European"
+          ]
+        },
+        {
+          "title": "Vocative",
+          "texts": [
+            "vocative"
+          ]
+        },
+        {
+          "title": "Dyeus",
+          "texts": [
+            "Dyēus"
+          ]
+        },
+        {
+          "title": "Jyotisha",
+          "texts": [
+            "Vedic astrology"
+          ]
+        },
+        {
+          "title": "Brihaspati",
+          "texts": [
+            "Brihaspati"
+          ]
+        },
+        {
+          "title": "Guru",
+          "texts": [
+            "Guru"
+          ]
+        },
+        {
+          "title": "Turkic mythology",
+          "texts": [
+            "Central Asian Turkic myths"
+          ]
+        },
+        {
+          "title": "Pinyin",
+          "texts": [
+            "pinyin"
+          ]
+        },
+        {
+          "title": "Five elements (Chinese philosophy)",
+          "texts": [
+            "Five Elements"
+          ]
+        }
+      ]
+    }
+  }
+}

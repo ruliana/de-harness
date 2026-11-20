@@ -1,0 +1,680 @@
+{
+  "hash": "f91dfa267607418f",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Linus_Torvalds/1382352240",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Linus Torvalds",
+      "lead": "Linus Benedict Torvalds (born 28 December 1969) is a Finnish and American software engineer who is the creator and lead developer of the Linux kernel since 1991. He also created the distributed version control system Git.",
+      "links": [
+        {
+          "title": "Linux kernel",
+          "texts": [
+            "Linux kernel"
+          ]
+        },
+        {
+          "title": "Distributed version control",
+          "texts": [
+            "distributed version control"
+          ]
+        },
+        {
+          "title": "Git",
+          "texts": [
+            "Git"
+          ]
+        },
+        {
+          "title": "Millennium Technology Prize",
+          "texts": [
+            "Millennium Technology Prize"
+          ]
+        },
+        {
+          "title": "Open source",
+          "texts": [
+            "open source"
+          ]
+        },
+        {
+          "title": "Operating system",
+          "texts": [
+            "operating system"
+          ]
+        },
+        {
+          "title": "Computer",
+          "texts": [
+            "computers"
+          ]
+        },
+        {
+          "title": "Kernel (operating system)",
+          "texts": [
+            "kernel"
+          ]
+        },
+        {
+          "title": "Computer Pioneer Award",
+          "texts": [
+            "IEEE Computer Society Computer Pioneer Award"
+          ]
+        },
+        {
+          "title": "IEEE Masaru Ibuka Consumer Electronics Award",
+          "texts": [
+            "IEEE Masaru Ibuka Consumer Electronics Award"
+          ]
+        },
+        {
+          "title": "Helsinki",
+          "texts": [
+            "Helsinki"
+          ]
+        },
+        {
+          "title": "Nils Torvalds",
+          "texts": [
+            "Nils Torvalds"
+          ]
+        },
+        {
+          "title": "Leo Törnqvist",
+          "texts": [
+            "Leo Törnqvist"
+          ]
+        },
+        {
+          "title": "Ole Torvalds",
+          "texts": [
+            "Ole Torvalds"
+          ]
+        },
+        {
+          "title": "Toivo Karanko",
+          "texts": [
+            "Toivo Karanko"
+          ]
+        },
+        {
+          "title": "University of Helsinki",
+          "texts": [
+            "University of Helsinki"
+          ]
+        },
+        {
+          "title": "Swedish-speaking Finns",
+          "texts": [
+            "Swedish-speaking minority"
+          ]
+        },
+        {
+          "title": "Linus Pauling",
+          "texts": [
+            "Linus Pauling"
+          ]
+        },
+        {
+          "title": "Rebel Code",
+          "texts": [
+            "Rebel Code: Linux and the Open Source Revolution"
+          ]
+        },
+        {
+          "title": "Linus van Pelt",
+          "texts": [
+            "Linus"
+          ]
+        },
+        {
+          "title": "Peanuts",
+          "texts": [
+            "Peanuts"
+          ]
+        },
+        {
+          "title": "VIC-20",
+          "texts": [
+            "VIC-20"
+          ]
+        },
+        {
+          "title": "BASIC",
+          "texts": [
+            "BASIC"
+          ]
+        },
+        {
+          "title": "Machine code",
+          "texts": [
+            "machine code"
+          ]
+        },
+        {
+          "title": "6502",
+          "texts": [
+            "6502"
+          ]
+        },
+        {
+          "title": "Assembly language",
+          "texts": [
+            "assembly language"
+          ]
+        },
+        {
+          "title": "Sinclair QL",
+          "texts": [
+            "Sinclair QL"
+          ]
+        },
+        {
+          "title": "Pac-Man",
+          "texts": [
+            "Pac-Man"
+          ]
+        },
+        {
+          "title": "Computer science",
+          "texts": [
+            "computer science"
+          ]
+        },
+        {
+          "title": "Finnish Navy",
+          "texts": [
+            "Finnish Navy"
+          ]
+        },
+        {
+          "title": "Nyland Brigade",
+          "texts": [
+            "Nyland Brigade"
+          ]
+        },
+        {
+          "title": "Conscription in Finland",
+          "texts": [
+            "mandatory military service of Finland"
+          ]
+        },
+        {
+          "title": "Second lieutenant",
+          "texts": [
+            "second lieutenant"
+          ]
+        },
+        {
+          "title": "Artillery observer",
+          "texts": [
+            "artillery observer"
+          ]
+        },
+        {
+          "title": "Digital Equipment Corporation",
+          "texts": [
+            "DEC"
+          ]
+        },
+        {
+          "title": "MicroVAX",
+          "texts": [
+            "MicroVAX"
+          ]
+        },
+        {
+          "title": "ULTRIX",
+          "texts": [
+            "ULTRIX"
+          ]
+        },
+        {
+          "title": "Andrew Tanenbaum",
+          "texts": [
+            "Andrew Tanenbaum"
+          ]
+        },
+        {
+          "title": "Operating Systems: Design and Implementation",
+          "texts": [
+            "Operating Systems: Design and Implementation"
+          ]
+        },
+        {
+          "title": "MINIX",
+          "texts": [
+            "MINIX"
+          ]
+        },
+        {
+          "title": "Unix",
+          "texts": [
+            "Unix"
+          ]
+        },
+        {
+          "title": "Intel 80386",
+          "texts": [
+            "Intel 80386"
+          ]
+        },
+        {
+          "title": "IBM PC clone",
+          "texts": [
+            "IBM PC clone"
+          ]
+        },
+        {
+          "title": "FTP server",
+          "texts": [
+            "FTP server"
+          ]
+        },
+        {
+          "title": "GNU Project",
+          "texts": [
+            "GNU Project"
+          ]
+        },
+        {
+          "title": "Helsinki University of Technology",
+          "texts": [
+            "Helsinki University of Technology"
+          ]
+        },
+        {
+          "title": "Richard Stallman",
+          "texts": [
+            "Richard Stallman"
+          ]
+        },
+        {
+          "title": "GNU General Public License version 2",
+          "texts": [
+            "GNU General Public License version 2"
+          ]
+        },
+        {
+          "title": "Transmeta",
+          "texts": [
+            "Transmeta"
+          ]
+        },
+        {
+          "title": "Open Source Development Labs",
+          "texts": [
+            "Open Source Development Labs"
+          ]
+        },
+        {
+          "title": "Free Standards Group",
+          "texts": [
+            "Free Standards Group"
+          ]
+        },
+        {
+          "title": "Linux Foundation",
+          "texts": [
+            "Linux Foundation"
+          ]
+        },
+        {
+          "title": "Dunthorpe, Oregon",
+          "texts": [
+            "Dunthorpe, Oregon"
+          ]
+        },
+        {
+          "title": "Beaverton, Oregon",
+          "texts": [
+            "Beaverton"
+          ]
+        },
+        {
+          "title": "86open",
+          "texts": [
+            "86open"
+          ]
+        },
+        {
+          "title": "Linux",
+          "texts": [
+            "Linux"
+          ]
+        },
+        {
+          "title": "MIT Technology Review",
+          "texts": [
+            "MIT Technology Review"
+          ]
+        },
+        {
+          "title": "TR100",
+          "texts": [
+            "TR100"
+          ]
+        },
+        {
+          "title": "Red Hat",
+          "texts": [
+            "Red Hat"
+          ]
+        },
+        {
+          "title": "VA Linux",
+          "texts": [
+            "VA Linux"
+          ]
+        },
+        {
+          "title": "Stock option",
+          "texts": [
+            "stock options"
+          ]
+        },
+        {
+          "title": "Went public",
+          "texts": [
+            "went public"
+          ]
+        },
+        {
+          "title": "Tux (mascot)",
+          "texts": [
+            "Tux"
+          ]
+        },
+        {
+          "title": "Proprietary software",
+          "texts": [
+            "proprietary software"
+          ]
+        },
+        {
+          "title": "BitKeeper",
+          "texts": [
+            "BitKeeper"
+          ]
+        },
+        {
+          "title": "Steve Jobs",
+          "texts": [
+            "Steve Jobs"
+          ]
+        },
+        {
+          "title": "MacOS",
+          "texts": [
+            "macOS"
+          ]
+        },
+        {
+          "title": "Mach (kernel)",
+          "texts": [
+            "Mach"
+          ]
+        },
+        {
+          "title": "Fedora Linux",
+          "texts": [
+            "Fedora Linux"
+          ]
+        },
+        {
+          "title": "PowerPC",
+          "texts": [
+            "PowerPC"
+          ]
+        },
+        {
+          "title": "GNOME 3.0",
+          "texts": [
+            "GNOME 3.0"
+          ]
+        },
+        {
+          "title": "Xfce",
+          "texts": [
+            "Xfce"
+          ]
+        },
+        {
+          "title": "Aalto University",
+          "texts": [
+            "Aalto University"
+          ]
+        },
+        {
+          "title": "Nvidia",
+          "texts": [
+            "Nvidia"
+          ]
+        },
+        {
+          "title": "Linux kernel mailing list",
+          "texts": [
+            "Linux kernel mailing list"
+          ]
+        },
+        {
+          "title": "Intel",
+          "texts": [
+            "Intel"
+          ]
+        },
+        {
+          "title": "Sage Sharp",
+          "texts": [
+            "Sage Sharp"
+          ]
+        },
+        {
+          "title": "Systemd",
+          "texts": [
+            "systemd"
+          ]
+        },
+        {
+          "title": "Lennart Poettering",
+          "texts": [
+            "Lennart Poettering"
+          ]
+        },
+        {
+          "title": "Contributor Covenant",
+          "texts": [
+            "Contributor Covenant"
+          ]
+        },
+        {
+          "title": "The New Yorker",
+          "texts": [
+            "The New Yorker"
+          ]
+        },
+        {
+          "title": "Russian invasion of Ukraine",
+          "texts": [
+            "Russian invasion of Ukraine"
+          ]
+        },
+        {
+          "title": "Ari Lemmke",
+          "texts": [
+            "Ari Lemmke"
+          ]
+        },
+        {
+          "title": "Linux Mark Institute",
+          "texts": [
+            "Linux Mark Institute"
+          ]
+        },
+        {
+          "title": "Version control software",
+          "texts": [
+            "version control software"
+          ]
+        },
+        {
+          "title": "Scuba diving",
+          "texts": [
+            "scuba dives",
+            "scuba diving"
+          ]
+        },
+        {
+          "title": "Free and open source software",
+          "texts": [
+            "free and open source software"
+          ]
+        },
+        {
+          "title": "Static code analysis",
+          "texts": [
+            "static analysis"
+          ]
+        },
+        {
+          "title": "Address space",
+          "texts": [
+            "address spaces"
+          ]
+        },
+        {
+          "title": "Birth name",
+          "texts": [
+            "née"
+          ]
+        },
+        {
+          "title": "Karate",
+          "texts": [
+            "karate"
+          ]
+        },
+        {
+          "title": "Magic number (programming)",
+          "texts": [
+            "magic values"
+          ]
+        },
+        {
+          "title": "Irreligion",
+          "texts": [
+            "a-religious"
+          ]
+        },
+        {
+          "title": "Atheism",
+          "texts": [
+            "atheist"
+          ]
+        },
+        {
+          "title": "Separation of church and state",
+          "texts": [
+            "church and state separation"
+          ]
+        },
+        {
+          "title": "State religion",
+          "texts": [
+            "state religion"
+          ]
+        },
+        {
+          "title": "LinuxWorld Conference and Expo",
+          "texts": [
+            "LinuxWorld Conference"
+          ]
+        },
+        {
+          "title": "Silicon Valley",
+          "texts": [
+            "Silicon Valley"
+          ]
+        },
+        {
+          "title": "Portland, Oregon",
+          "texts": [
+            "Portland, Oregon"
+          ]
+        },
+        {
+          "title": "Voter registration in the United States",
+          "texts": [
+            "registered to vote in the United States"
+          ]
+        },
+        {
+          "title": "Time (magazine)",
+          "texts": [
+            "Time magazine"
+          ]
+        },
+        {
+          "title": "Time 100: The Most Important People of the Century",
+          "texts": [
+            "Time 100: The Most Important People of the Century"
+          ]
+        },
+        {
+          "title": "InfoWorld",
+          "texts": [
+            "InfoWorld"
+          ]
+        },
+        {
+          "title": "BusinessWeek",
+          "texts": [
+            "BusinessWeek"
+          ]
+        },
+        {
+          "title": "Business 2.0",
+          "texts": [
+            "Business 2.0"
+          ]
+        },
+        {
+          "title": "YLE",
+          "texts": [
+            "YLE"
+          ]
+        },
+        {
+          "title": "Suuret Suomalaiset",
+          "texts": [
+            "100 Greatest Finns"
+          ]
+        },
+        {
+          "title": "Encyclopædia Britannica, Inc.",
+          "texts": [
+            "The Britannica Guide"
+          ]
+        },
+        {
+          "title": "ISBN (identifier)",
+          "texts": [
+            "ISBN"
+          ]
+        },
+        {
+          "title": "SUSE S.A.",
+          "texts": [
+            "SUSE"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1046 @@
+{
+  "hash": "105fbf37f312e293",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/api/rest_v1/page/html/Mount_Vesuvius/1369586079",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "title": "Mount Vesuvius",
+      "lead": "Mount Vesuvius (/vəˈsuːviəs/ və-SOO-vee-əs) is a somma–stratovolcano located on the Gulf of Naples in Campania, Italy, about 9 km (5.6 mi) east of Naples and a short distance from the shore. It is one of several volcanoes forming the Campanian volcanic arc. Vesuvius consists of a large cone partially encircled by the steep rim of a summit caldera, resulting from the collapse of an earlier, much higher structure.",
+      "links": [
+        {
+          "title": "Somma volcano",
+          "texts": [
+            "somma",
+            "somma volcano"
+          ]
+        },
+        {
+          "title": "Stratovolcano",
+          "texts": [
+            "stratovolcano"
+          ]
+        },
+        {
+          "title": "Gulf of Naples",
+          "texts": [
+            "Gulf of Naples"
+          ]
+        },
+        {
+          "title": "Campania",
+          "texts": [
+            "Campania"
+          ]
+        },
+        {
+          "title": "Italy",
+          "texts": [
+            "Italy"
+          ]
+        },
+        {
+          "title": "Naples",
+          "texts": [
+            "Naples"
+          ]
+        },
+        {
+          "title": "Volcano",
+          "texts": [
+            "volcanoes"
+          ]
+        },
+        {
+          "title": "Campanian volcanic arc",
+          "texts": [
+            "Campanian volcanic arc"
+          ]
+        },
+        {
+          "title": "Volcanic cone",
+          "texts": [
+            "cone"
+          ]
+        },
+        {
+          "title": "Caldera",
+          "texts": [
+            "caldera"
+          ]
+        },
+        {
+          "title": "Eruption of Mount Vesuvius in 79 AD",
+          "texts": [
+            "eruption of Mount Vesuvius in 79 AD"
+          ]
+        },
+        {
+          "title": "Roman Empire",
+          "texts": [
+            "Roman",
+            "Roman Empire"
+          ]
+        },
+        {
+          "title": "Pompeii",
+          "texts": [
+            "Pompeii"
+          ]
+        },
+        {
+          "title": "Herculaneum",
+          "texts": [
+            "Herculaneum"
+          ]
+        },
+        {
+          "title": "Oplontis",
+          "texts": [
+            "Oplontis"
+          ]
+        },
+        {
+          "title": "Stabiae",
+          "texts": [
+            "Stabiae"
+          ]
+        },
+        {
+          "title": "Volcanic rock",
+          "texts": [
+            "stones"
+          ]
+        },
+        {
+          "title": "Volcanic ash",
+          "texts": [
+            "ash",
+            "ashes"
+          ]
+        },
+        {
+          "title": "Volcanic gas",
+          "texts": [
+            "volcanic gases"
+          ]
+        },
+        {
+          "title": "Volcanic eruption",
+          "texts": [
+            "erupting",
+            "spewing"
+          ]
+        },
+        {
+          "title": "Lava",
+          "texts": [
+            "molten rock",
+            "lava"
+          ]
+        },
+        {
+          "title": "Pumice",
+          "texts": [
+            "pumice"
+          ]
+        },
+        {
+          "title": "Pliny the Younger",
+          "texts": [
+            "Pliny the Younger"
+          ]
+        },
+        {
+          "title": "Tacitus",
+          "texts": [
+            "Tacitus"
+          ]
+        },
+        {
+          "title": "Decade Volcanoes",
+          "texts": [
+            "Decade Volcanoes"
+          ]
+        },
+        {
+          "title": "Plinian",
+          "texts": [
+            "Plinian"
+          ]
+        },
+        {
+          "title": "Roman Republic",
+          "texts": [
+            "Roman Republic"
+          ]
+        },
+        {
+          "title": "Synonym",
+          "texts": [
+            "collateral forms"
+          ]
+        },
+        {
+          "title": "Etymology",
+          "texts": [
+            "etymology"
+          ]
+        },
+        {
+          "title": "Roman Iron Age",
+          "texts": [
+            "Roman Iron Age"
+          ]
+        },
+        {
+          "title": "Oscans",
+          "texts": [
+            "Oscans"
+          ]
+        },
+        {
+          "title": "Italic languages",
+          "texts": [
+            "Italic"
+          ]
+        },
+        {
+          "title": "Latin language",
+          "texts": [
+            "Latins"
+          ]
+        },
+        {
+          "title": "Etruscan civilization",
+          "texts": [
+            "Etruscan"
+          ]
+        },
+        {
+          "title": "Indo-European",
+          "texts": [
+            "Indo-European"
+          ]
+        },
+        {
+          "title": "Latin",
+          "texts": [
+            "Latin"
+          ]
+        },
+        {
+          "title": "Oscan",
+          "texts": [
+            "Oscan"
+          ]
+        },
+        {
+          "title": "Hearth",
+          "texts": [
+            "hearth"
+          ]
+        },
+        {
+          "title": "Vesta (mythology)",
+          "texts": [
+            "Vesta"
+          ]
+        },
+        {
+          "title": "Hercules",
+          "texts": [
+            "Hercules"
+          ]
+        },
+        {
+          "title": "Diodorus Siculus",
+          "texts": [
+            "Diodorus Siculus"
+          ]
+        },
+        {
+          "title": "Cumae",
+          "texts": [
+            "Cumae"
+          ]
+        },
+        {
+          "title": "Sicily",
+          "texts": [
+            "Sicily"
+          ]
+        },
+        {
+          "title": "Phlegraean Fields",
+          "texts": [
+            "Φλεγραῖον πεδίον"
+          ]
+        },
+        {
+          "title": "Epigram",
+          "texts": [
+            "epigram"
+          ]
+        },
+        {
+          "title": "Martial",
+          "texts": [
+            "Martial"
+          ]
+        },
+        {
+          "title": "Venus (mythology)",
+          "texts": [
+            "Venus"
+          ]
+        },
+        {
+          "title": "Genius (mythology)",
+          "texts": [
+            "Genius"
+          ]
+        },
+        {
+          "title": "Fresco",
+          "texts": [
+            "frescos"
+          ]
+        },
+        {
+          "title": "Lararia",
+          "texts": [
+            "lararia"
+          ]
+        },
+        {
+          "title": "Capua",
+          "texts": [
+            "Capua"
+          ]
+        },
+        {
+          "title": "Jupiter (mythology)",
+          "texts": [
+            "Jupiter"
+          ]
+        },
+        {
+          "title": "Mount Somma",
+          "texts": [
+            "Mount Somma"
+          ]
+        },
+        {
+          "title": "Types of volcanic eruptions",
+          "texts": [
+            "paroxysmal"
+          ]
+        },
+        {
+          "title": "Vineyard",
+          "texts": [
+            "vineyards"
+          ]
+        },
+        {
+          "title": "Tectonic plate",
+          "texts": [
+            "tectonic plates"
+          ]
+        },
+        {
+          "title": "African plate",
+          "texts": [
+            "African"
+          ]
+        },
+        {
+          "title": "Eurasian plate",
+          "texts": [
+            "Eurasian"
+          ]
+        },
+        {
+          "title": "Subducted",
+          "texts": [
+            "subducted"
+          ]
+        },
+        {
+          "title": "Convergent boundary",
+          "texts": [
+            "convergent boundary"
+          ]
+        },
+        {
+          "title": "Upper mantle",
+          "texts": [
+            "upper mantle"
+          ]
+        },
+        {
+          "title": "Campi Flegrei",
+          "texts": [
+            "Campi Flegrei"
+          ]
+        },
+        {
+          "title": "Ischia",
+          "texts": [
+            "Ischia"
+          ]
+        },
+        {
+          "title": "Subduction",
+          "texts": [
+            "subduction"
+          ]
+        },
+        {
+          "title": "Monte Amiata",
+          "texts": [
+            "Monte Amiata"
+          ]
+        },
+        {
+          "title": "Tuscany",
+          "texts": [
+            "Tuscany"
+          ]
+        },
+        {
+          "title": "Avellino eruption",
+          "texts": [
+            "Avellino eruption"
+          ]
+        },
+        {
+          "title": "Constantinople",
+          "texts": [
+            "Constantinople"
+          ]
+        },
+        {
+          "title": "Istanbul",
+          "texts": [
+            "Istanbul"
+          ]
+        },
+        {
+          "title": "Volcanic landslide",
+          "texts": [
+            "landslides"
+          ]
+        },
+        {
+          "title": "Mount Etna",
+          "texts": [
+            "Mount Etna"
+          ]
+        },
+        {
+          "title": "Scoria",
+          "texts": [
+            "scoria"
+          ]
+        },
+        {
+          "title": "Silica",
+          "texts": [
+            "silica"
+          ]
+        },
+        {
+          "title": "Potassium",
+          "texts": [
+            "potassium"
+          ]
+        },
+        {
+          "title": "Phonolite",
+          "texts": [
+            "phonolite"
+          ]
+        },
+        {
+          "title": "Tephritic phonolite",
+          "texts": [
+            "tephritic phonolite"
+          ]
+        },
+        {
+          "title": "Tephrite",
+          "texts": [
+            "tephrite"
+          ]
+        },
+        {
+          "title": "Smithsonian Institution",
+          "texts": [
+            "Smithsonian Institution"
+          ]
+        },
+        {
+          "title": "Global Volcanism Program",
+          "texts": [
+            "Global Volcanism Program"
+          ]
+        },
+        {
+          "title": "Holocene Epoch",
+          "texts": [
+            "Holocene Epoch"
+          ]
+        },
+        {
+          "title": "Volcanic explosivity index",
+          "texts": [
+            "volcanic explosivity index"
+          ]
+        },
+        {
+          "title": "Core sample",
+          "texts": [
+            "core samples"
+          ]
+        },
+        {
+          "title": "Mesozoic",
+          "texts": [
+            "Mesozoic"
+          ]
+        },
+        {
+          "title": "K–Ar dating",
+          "texts": [
+            "potassium–argon"
+          ]
+        },
+        {
+          "title": "Argon–argon dating",
+          "texts": [
+            "argon–argon dating"
+          ]
+        },
+        {
+          "title": "Campanian ignimbrite",
+          "texts": [
+            "Campanian ignimbrite"
+          ]
+        },
+        {
+          "title": "Plinian eruption",
+          "texts": [
+            "Plinian eruption"
+          ]
+        },
+        {
+          "title": "Tephra",
+          "texts": [
+            "tephra"
+          ]
+        },
+        {
+          "title": "VEI",
+          "texts": [
+            "VEI"
+          ]
+        },
+        {
+          "title": "Mercato eruption",
+          "texts": [
+            "Mercato eruption"
+          ]
+        },
+        {
+          "title": "Bronze Age",
+          "texts": [
+            "Bronze Age"
+          ]
+        },
+        {
+          "title": "Apennine culture",
+          "texts": [
+            "Apennine culture"
+          ]
+        },
+        {
+          "title": "Afragola",
+          "texts": [
+            "Afragola"
+          ]
+        },
+        {
+          "title": "Carbon dating",
+          "texts": [
+            "carbon dates"
+          ]
+        },
+        {
+          "title": "Nola",
+          "texts": [
+            "Nola"
+          ]
+        },
+        {
+          "title": "Pyroclastic surge",
+          "texts": [
+            "Pyroclastic surge",
+            "pyroclastic surges"
+          ]
+        },
+        {
+          "title": "Ash fall",
+          "texts": [
+            "ashfall"
+          ]
+        },
+        {
+          "title": "Phlegrean Fields",
+          "texts": [
+            "Phlegrean Fields"
+          ]
+        },
+        {
+          "title": "Plutarch",
+          "texts": [
+            "Plutarch"
+          ]
+        },
+        {
+          "title": "Silius Italicus",
+          "texts": [
+            "Silius Italicus"
+          ]
+        },
+        {
+          "title": "Punica (poem)",
+          "texts": [
+            "Punica"
+          ]
+        },
+        {
+          "title": "Ice core",
+          "texts": [
+            "ice core"
+          ]
+        },
+        {
+          "title": "Hydrogen sulfide",
+          "texts": [
+            "hydrogen sulfide"
+          ]
+        },
+        {
+          "title": "Roman literature",
+          "texts": [
+            "Roman"
+          ]
+        },
+        {
+          "title": "House of the Centenary",
+          "texts": [
+            "House of the Centenary"
+          ]
+        },
+        {
+          "title": "Natural History (Pliny)",
+          "texts": [
+            "Natural History"
+          ]
+        },
+        {
+          "title": "Strabo",
+          "texts": [
+            "Strabo"
+          ]
+        },
+        {
+          "title": "Geographica",
+          "texts": [
+            "Geographica"
+          ]
+        },
+        {
+          "title": "De architectura",
+          "texts": [
+            "De architectura"
+          ]
+        },
+        {
+          "title": "Vitruvius",
+          "texts": [
+            "Vitruvius"
+          ]
+        },
+        {
+          "title": "List of natural disasters by death toll",
+          "texts": [
+            "most catastrophic"
+          ]
+        },
+        {
+          "title": "Witness",
+          "texts": [
+            "eyewitness"
+          ]
+        },
+        {
+          "title": "Thermal energy",
+          "texts": [
+            "thermal energy"
+          ]
+        },
+        {
+          "title": "Atomic bombings of Hiroshima and Nagasaki",
+          "texts": [
+            "Hiroshima-Nagasaki bombings"
+          ]
+        },
+        {
+          "title": "62 Pompeii earthquake",
+          "texts": [
+            "powerful earthquake in 62"
+          ]
+        },
+        {
+          "title": "Tsunami",
+          "texts": [
+            "tsunami",
+            "wave action"
+          ]
+        },
+        {
+          "title": "Pliny the Elder",
+          "texts": [
+            "Pliny the Elder"
+          ]
+        },
+        {
+          "title": "Misenum",
+          "texts": [
+            "Misenum"
+          ]
+        },
+        {
+          "title": "Bay of Naples",
+          "texts": [
+            "Bay of Naples"
+          ]
+        },
+        {
+          "title": "Sheet lightning",
+          "texts": [
+            "sheet lightning"
+          ]
+        },
+        {
+          "title": "Capri",
+          "texts": [
+            "Capri"
+          ]
+        },
+        {
+          "title": "Roman Navy",
+          "texts": [
+            "Roman fleet"
+          ]
+        },
+        {
+          "title": "Castellammare di Stabia",
+          "texts": [
+            "Castellammare di Stabia"
+          ]
+        },
+        {
+          "title": "Drusilla (daughter of Agrippa I)",
+          "texts": [
+            "Drusilla"
+          ]
+        },
+        {
+          "title": "Antonius Felix",
+          "texts": [
+            "Antonius Felix"
+          ]
+        },
+        {
+          "title": "Cassius Dio",
+          "texts": [
+            "Cassius Dio"
+          ]
+        },
+        {
+          "title": "Theodoric the Great",
+          "texts": [
+            "Theodoric the Great"
+          ]
+        },
+        {
+          "title": "Goths",
+          "texts": [
+            "Gothic"
+          ]
+        },
+        {
+          "title": "Lava flows",
+          "texts": [
+            "lava flows"
+          ]
+        },
+        {
+          "title": "Lahar",
+          "texts": [
+            "lahar"
+          ]
+        },
+        {
+          "title": "Vesuvian eruption",
+          "texts": [
+            "Vesuvian eruption"
+          ]
+        },
+        {
+          "title": "1908 Summer Olympics",
+          "texts": [
+            "1908 Summer Olympics"
+          ]
+        },
+        {
+          "title": "Comunes",
+          "texts": [
+            "comunes"
+          ]
+        },
+        {
+          "title": "San Sebastiano al Vesuvio",
+          "texts": [
+            "San Sebastiano al Vesuvio"
+          ]
+        },
+        {
+          "title": "Massa di Somma",
+          "texts": [
+            "Massa di Somma"
+          ]
+        },
+        {
+          "title": "Ottaviano",
+          "texts": [
+            "Ottaviano"
+          ]
+        },
+        {
+          "title": "San Giorgio a Cremano",
+          "texts": [
+            "San Giorgio a Cremano"
+          ]
+        },
+        {
+          "title": "Pyroclastic flow",
+          "texts": [
+            "pyroclastic flow"
+          ]
+        },
+        {
+          "title": "United States Army Air Forces",
+          "texts": [
+            "United States Army Air Forces"
+          ]
+        },
+        {
+          "title": "340th Bombardment Group",
+          "texts": [
+            "340th Bombardment Group"
+          ]
+        },
+        {
+          "title": "Pompeii Airfield",
+          "texts": [
+            "Pompeii Airfield"
+          ]
+        },
+        {
+          "title": "Terzigno",
+          "texts": [
+            "Terzigno"
+          ]
+        },
+        {
+          "title": "Plexiglas",
+          "texts": [
+            "Plexiglas"
+          ]
+        },
+        {
+          "title": "North American B-25 Mitchell",
+          "texts": [
+            "North American B-25 Mitchell"
+          ]
+        },
+        {
+          "title": "Magma chamber",
+          "texts": [
+            "chamber"
+          ]
+        },
+        {
+          "title": "Olivine",
+          "texts": [
+            "olivine"
+          ]
+        },
+        {
+          "title": "Sulfur dioxide",
+          "texts": [
+            "sulfur dioxide"
+          ]
+        },
+        {
+          "title": "Carbon dioxide",
+          "texts": [
+            "carbon dioxide"
+          ]
+        },
+        {
+          "title": "Eruption",
+          "texts": [
+            "eruption"
+          ]
+        },
+        {
+          "title": "Internal pressure",
+          "texts": [
+            "internal pressure"
+          ]
+        },
+        {
+          "title": "Felsic",
+          "texts": [
+            "felsic"
+          ]
+        },
+        {
+          "title": "Silicate",
+          "texts": [
+            "silicates"
+          ]
+        },
+        {
+          "title": "Viscous",
+          "texts": [
+            "viscous"
+          ]
+        },
+        {
+          "title": "Prevailing winds",
+          "texts": [
+            "prevailing winds"
+          ]
+        },
+        {
+          "title": "Avellino",
+          "texts": [
+            "Avellino"
+          ]
+        },
+        {
+          "title": "Salerno",
+          "texts": [
+            "Salerno"
+          ]
+        },
+        {
+          "title": "Emergency evacuation",
+          "texts": [
+            "emergency evacuation"
+          ]
+        },
+        {
+          "title": "Vesuvius red zone",
+          "texts": [
+            "zona rossa"
+          ]
+        },
+        {
+          "title": "False alarm",
+          "texts": [
+            "false alarm"
+          ]
+        },
+        {
+          "title": "Osservatorio Vesuvio",
+          "texts": [
+            "Osservatorio Vesuvio"
+          ]
+        },
+        {
+          "title": "GPS",
+          "texts": [
+            "GPS"
+          ]
+        },
+        {
+          "title": "Satellite",
+          "texts": [
+            "satellite"
+          ]
+        },
+        {
+          "title": "Synthetic aperture radar",
+          "texts": [
+            "synthetic aperture radar"
+          ]
+        },
+        {
+          "title": "Geophysical survey",
+          "texts": [
+            "surveys"
+          ]
+        },
+        {
+          "title": "Fumarole",
+          "texts": [
+            "fumaroles"
+          ]
+        },
+        {
+          "title": "Subsidence",
+          "texts": [
+            "subsidence"
+          ]
+        },
+        {
+          "title": "Vesuvius National Park",
+          "texts": [
+            "national park"
+          ]
+        },
+        {
+          "title": "Funicular",
+          "texts": [
+            "funicular"
+          ]
+        },
+        {
+          "title": "Funiculì, Funiculà",
+          "texts": [
+            "Funiculì, Funiculà"
+          ]
+        },
+        {
+          "title": "Neapolitan language",
+          "texts": [
+            "Neapolitan language"
+          ]
+        }
+      ]
+    }
+  }
+}
