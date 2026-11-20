@@ -13,7 +13,7 @@ import { defineTool, type AnyTool, type DecisionModel, type Json } from "../../s
 import { isStuck, nextStuck, type BrowserSession } from "../../src/browser/index.js";
 import { extractImages } from "../../src/state/images.js";
 import { shoppingTools } from "../storefront-browser/shopping.js";
-import { CHECKS, DONE, GOALS, judge, NAVIGATOR_TOOLS, TACTICS, type Judgments, type Tactic } from "./tactics.js";
+import { CHECKS, DONE, GOALS, judge, NAVIGATOR_QUESTIONS, NAVIGATOR_TOOLS, TACTICS, type Judgments, type Tactic } from "./tactics.js";
 
 export type SightOptions = {
   browser: BrowserSession;
@@ -46,7 +46,8 @@ const oneAction = (tool: AnyTool): AnyTool => ({
   ...tool,
   run: async (args, ctx) => {
     const result = await tool.run(args, ctx);
-    return result.state ? { ...result, end: true } : result;
+    // A click that found nothing and scrolled to look further (`scrollToFind`) is not the action either: the navigator clicks on the next step.
+    return result.state && (args as { target?: unknown }).target !== null ? { ...result, end: true } : result;
   },
 });
 /** A built-in `end` that is never offered, so that the navigator cannot stop before it acted. */
@@ -74,7 +75,8 @@ function sensible(tactic: Tactic, state: Readonly<Record<string, unknown>>): boo
 export function sightTools(opts: SightOptions): { tools: AnyTool[]; found: Found } {
   const { browser } = opts;
   const found: Found = {};
-  const navigator = shoppingTools(browser, { home: opts.home, pageText: false });
+  // The options of an item (a size) are often below the fold: its navigator scrolls down when it does not see the option, then clicks it.
+  const navigatorFor = (name: Exclude<Tactic, "end">) => shoppingTools(browser, { home: opts.home, pageText: false, scrollToFind: name === "select_option", questions: NAVIGATOR_QUESTIONS[name] });
   const state0 = async () => {
     const s = await browser.snapshot();
     return { screen: s.screen!, page: { scroll: (s.page as { scroll: Json }).scroll } };
@@ -96,12 +98,12 @@ export function sightTools(opts: SightOptions): { tools: AnyTool[]; found: Found
       run: async (_args, ctx) => {
         const child = await ctx.runAgent({
           instructions: `${opts.task} ${GOALS[name]}`,
-          tools: [...navigator.filter((t) => NAVIGATOR_TOOLS[name].includes(t.name)).map(oneAction), neverEnd],
+          tools: [...navigatorFor(name).filter((t) => NAVIGATOR_TOOLS[name].includes(t.name)).map(oneAction), neverEnd],
           initialState: await state0(),
           maxSteps: opts.navigatorSteps ?? 3,
         });
         const after = (await browser.snapshot()).screen!;
-        const stuck = nextStuck(ctx.state.stuck, name, ctx.state.screen, after);
+        const stuck = nextStuck(ctx.state.stuck, name, ctx.state.screen, after, browser.pointerNoise());
 
         // Check on the new screenshot. Code decides what the answers mean.
         const check = CHECKS[name];

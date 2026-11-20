@@ -57,10 +57,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_menu",
-          "confidence": 0.82,
+          "confidence": 0.87,
           "probabilities": {
-            "open_menu": 0.86,
-            "scroll": 0.13,
+            "open_menu": 0.9,
+            "scroll": 0.09,
             "click_item": 0.01,
             "go_back": 0,
             "close_overlay": 0

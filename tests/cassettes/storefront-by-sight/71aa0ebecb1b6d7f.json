@@ -62,11 +62,11 @@
       "answers": {
         "itemVisible": {
           "type": "noul",
-          "noul": 0.28
+          "noul": 0.46
         },
         "menuOpen": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "optionChosen": {
           "type": "noul",

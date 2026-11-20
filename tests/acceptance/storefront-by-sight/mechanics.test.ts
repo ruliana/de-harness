@@ -3,11 +3,13 @@
  * is offered, what code does with a tactic that did not work, and that the navigating level does one thing and stops.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { ScriptedModel, TOOL_QUESTION, say, type DecisionRequest } from "../../../src/index.js";
-import type { BrowserSession } from "../../../src/browser/index.js";
+import { ScriptedModel, TOOL_QUESTION, createAgent, say, type DecisionRequest } from "../../../src/index.js";
+import { BrowserSession } from "../../../src/browser/index.js";
 import { launchFixture, startFixture } from "../../../examples/storefront-browser/run.js";
 import type { ShopSite } from "../../../examples/storefront-browser/shop-site.js";
 import { runBySight } from "../../../examples/storefront-by-sight/run.js";
+import { judgeScreen, sightTools } from "../../../examples/storefront-by-sight/planner.js";
+import { DONE } from "../../../examples/storefront-by-sight/tactics.js";
 
 let site: ShopSite;
 let browser: BrowserSession;
@@ -23,14 +25,16 @@ afterAll(async () => {
 /** The deciding level's request offers tactics; `close_overlay` is the one that no rule removes. */
 const isPlanner = (r: DecisionRequest) => "close_overlay" in ((r.questions[TOOL_QUESTION] as { criteria: Record<string, string> } | undefined)?.criteria ?? {});
 const offered = (r: DecisionRequest) => Object.keys((r.questions[TOOL_QUESTION] as { criteria: Record<string, string> }).criteria).sort();
-/** Where nothing reacts to the pointer: the bottom right corner of the home page. */
-const NOTHING = { top: 0.9, bottom: 0.95, left: 0.9, right: 0.95 };
+/** Where nothing reacts to the pointer or to a click: an empty part of the home page's banner. */
+const NOTHING = { top: 0.3, bottom: 0.4, left: 0.6, right: 0.7 };
 
 /** A script: the deciding level picks `tactics` in turn; the navigating level points at nothing; the judgments are all "unsure". */
 function script(tactics: string[]) {
   let step = 0;
   return (request: DecisionRequest): Record<string, string | number | ReturnType<typeof say.box>> => {
     if (isPlanner(request)) return { [TOOL_QUESTION]: tactics[Math.min(step++, tactics.length - 1)]! };
+    // a box with nothing pressable in it is asked again on an enlarged picture: the answer is the same empty place
+    if (request.questions[TOOL_QUESTION] && offered(request).includes("locate")) return { [TOOL_QUESTION]: "locate", "locate.target": say.box(NOTHING), "locate.target?present": 0.95 };
     if (request.questions[TOOL_QUESTION]) return { [TOOL_QUESTION]: "hover", "hover.target": say.box(NOTHING), "hover.target?present": 0.95 };
     return {};
   };
@@ -65,5 +69,37 @@ describe("storefront by sight: mechanics", () => {
     const navigator = model.requests.find((r) => !isPlanner(r) && r.questions[TOOL_QUESTION])!;
     expect((navigator.state as { instructions: string }).instructions).toMatch(/blue sweatshirt.*Point the mouse at the entry in the row of menus/);
     expect(offered(navigator)).toEqual(["hover"]); // only what the tactic needs, and no way to stop before moving
+  });
+
+  it("select_option: an option below the fold is scrolled to and clicked within one planner step, not given up on", async () => {
+    const short = await BrowserSession.launch({ allowedHosts: ["127.0.0.1"], settleMs: 150, viewport: { width: 1280, height: 300 } });
+    try {
+      await short.goto(`${site.url}/products/w31007r-accolade-hoodie-moonshadow-blue`);
+      const sizeL = '#sizes button[data-size="L"]';
+      expect((await short.boxOf(sizeL))!.top).toBeGreaterThan(1); // below the bottom of the screenshot
+      await short.scroll("down");
+      const box = (await short.boxOf(sizeL))!;
+      expect(box.top).toBeGreaterThan(0);
+      expect(box.bottom).toBeLessThan(1);
+      await short.scroll("top");
+      const task = "Select size large";
+      let navigatorStep = 0;
+      const model = new ScriptedModel([
+        (request): Record<string, string | number | ReturnType<typeof say.box>> => {
+          if (isPlanner(request)) return { [TOOL_QUESTION]: "select_option" };
+          if (request.questions[TOOL_QUESTION]) return navigatorStep++ === 0 ? { [TOOL_QUESTION]: "click", "click.target?present": 0.05 } : { [TOOL_QUESTION]: "click", "click.target": say.box(box), "click.target?present": 0.95 };
+          return {};
+        },
+      ]);
+      const { tools } = sightTools({ browser: short, model, task, home: `${site.url}/` });
+      const screen = (await short.snapshot()).screen!;
+      const result = await createAgent({ model, instructions: task, tools, initialState: { screen, judgments: await judgeScreen(model, task, screen), done: [DONE.click_item] }, previousActions: 0, maxSteps: 1 }).run();
+      const moves = result.events.flatMap((e) => (e.type === "child" && e.event.type === "tool_call" ? [e.event.tool] : []));
+      expect(moves).toEqual(["click", "click"]); // looked, scrolled, then clicked: one planner step
+      expect(result.steps).toHaveLength(1);
+      expect(await short.evaluate(() => document.querySelector('#sizes button[aria-pressed="true"]')?.getAttribute("data-size"), null)).toBe("L");
+    } finally {
+      await short.close();
+    }
   });
 });

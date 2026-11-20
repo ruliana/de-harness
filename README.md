@@ -112,8 +112,8 @@ await browser.close();
 
 | Tool | The model decides | Code decides |
 | - | - | - |
-| `click(target)` | the Box around the element to click, or that it is not in the screenshot | the click point: the box's centre, in viewport pixels (screenshots are viewport-sized at scale 1) |
-| `hover(target)` | the Box of the element to point the mouse at (menus that open on hover) | only offered with `hover: true`; the pointer goes to the box's centre and the page settles |
+| `click(target)` | the Box around the element to click, or that it is not in the screenshot | the click point: the box's centre in viewport pixels (screenshots are viewport-sized at scale 1), moved onto the pressable element that fills most of the box when the centre is on a gap; a box smaller than 48 px, or with nothing pressable in it, is first asked again on a 3x enlarged picture of the part around it (`zoom`), because Jev's finest box is about 13 x 8 px; with `scrollToFind`, a target that is not in the screenshot scrolls down one step instead of doing nothing |
+| `hover(target)` | the Box of the element to point the mouse at (menus that open on hover) | only offered with `hover: true`; the pointer goes to the box's point (as for `click`) and the page settles; with `hover: "or-click"` a hover that opened nothing is followed by a click on the same point (menus that open when pressed) |
 | `scroll(direction)` | `down` / `up` / `top` / `bottom` | only the directions that move the page are offered (from `state.page.scroll`); gone on a page that fits one screen; steps are 80% of a viewport |
 | `type_text(text)` | one of `texts` (candidates), typed into the focused field | reports "typed nothing" when no field is focused; the tool only exists when `texts` is given |
 | `press_key(key)` | one of `keys` (default Enter, Tab, Escape) | |
@@ -122,7 +122,7 @@ await browser.close();
 
 For verification and use-case code: `browser.text()` (whole page), `browser.visibleText()` (what is in the viewport right now),
 `browser.boxOf(selector)` (the Box a perfect answer would be), `browser.textIn(box, grow?)` (the characters the page shows inside a Box: the model points at a price, code reads it), `browser.evaluate(fn, arg)`, `browser.screenshot()`, `browser.info()`.
-Clicks that open a new tab move the agent to it, dialogs are dismissed, and `allowedHosts` aborts every request to any other host
+The no-change guard (a tool that changed nothing three times in a row is not offered) does not count what the pointer lit up (a hover colour, an underline) as a change. Clicks that open a new tab move the agent to it, dialogs are dismissed, and `allowedHosts` aborts every request to any other host
 (an address outside it fails `navigate` with an error and a click on such a link leaves the page where it was). Question wording is in
 one place (`src/browser/tools.ts`) and can be replaced per tool with `questions`. Playwright is an optional peer dependency:
 `npm i -D playwright && npx playwright install chromium`; in the cloud sandbox Chromium already goes through the egress proxy.
