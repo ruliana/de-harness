@@ -22,7 +22,8 @@
     "example:screen:fixtures": "tsx examples/screen/render.ts",
     "example:wikipedia": "NODE_USE_ENV_PROXY=1 tsx examples/wikipedia/main.ts",
     "example:storefront": "NODE_USE_ENV_PROXY=1 tsx examples/storefront/main.ts",
-    "example:browser": "NODE_USE_ENV_PROXY=1 tsx examples/browser/main.ts"
+    "example:browser": "NODE_USE_ENV_PROXY=1 tsx examples/browser/main.ts",
+    "example:storefront-browser": "NODE_USE_ENV_PROXY=1 tsx examples/storefront-browser/main.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

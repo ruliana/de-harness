@@ -148,6 +148,44 @@ export class BrowserSession {
     return { x, y, element, ...(blocked ? { blocked } : {}) };
   }
 
+  /** Move the pointer onto the centre of a Box, for menus that open when hovered, and wait for the page to settle. Reports what is under the pointer. */
+  async hoverBox(box: Box): Promise<Clicked> {
+    const { x, y } = this.pointOf(box);
+    const element = await this.describeAt(x, y);
+    await this.page.mouse.move(x, y);
+    await this.settle();
+    return { x, y, element };
+  }
+
+  /**
+   * The text the viewport shows inside a Box (fractions of the screenshot), in reading order: every text node whose rectangle is
+   * at least half inside the box. Jev's edges are approximate, so a node that the box mostly covers counts. For use-case code that
+   * lets the model point at something (a price, a total) and reads the characters itself, because the model cannot write them.
+   * `grow` widens the box on every side first (as a fraction of the viewport), since a Box around a line of text is often a few pixels off.
+   */
+  async textIn(box: Box, grow = 0): Promise<string> {
+    return await this.page.evaluate(([b, g]) => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      const left = (b.left - g) * w, right = (b.right + g) * w, top = (b.top - g) * h, bottom = (b.bottom + g) * h;
+      const parts: string[] = [];
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+        const text = n.textContent?.replace(/\s+/g, " ").trim();
+        const parent = n.parentElement;
+        if (!text || !parent || !parent.checkVisibility()) continue;
+        const range = document.createRange();
+        range.selectNodeContents(n);
+        const r = range.getBoundingClientRect();
+        if (r.width <= 0 || r.height <= 0) continue;
+        const iw = Math.min(r.right, right) - Math.max(r.left, left);
+        const ih = Math.min(r.bottom, bottom) - Math.max(r.top, top);
+        if (iw > 0 && ih > 0 && (iw * ih) / (r.width * r.height) >= 0.5) parts.push(text);
+      }
+      return parts.join(" ");
+    }, [box, grow] as const);
+  }
+
   /** Scroll by 80% of a viewport (or to an end). Returns the new scroll position. */
   async scroll(direction: ScrollDirection): Promise<number> {
     const step = Math.round(this.viewport.height * 0.8);
