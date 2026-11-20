@@ -12,6 +12,7 @@
 import type { Answer } from "../model/types.js";
 import type { EventInput } from "../events/events.js";
 import type { Json, StateView } from "../state/state.js";
+import type { RunResult, SubAgentConfig } from "../loop/agent.js";
 import type { InputPort } from "../input/provider.js";
 import type { ToolRegistry } from "./registry.js";
 import type { ArgsOf, Params } from "./param.js";
@@ -19,7 +20,10 @@ import type { ArgsOf, Params } from "./param.js";
 export type ToolContext = {
   /** Read-only copy of the state slots. */
   state: StateView;
-  /** Raw answers for this tool's questions, keyed by parameter name (probabilities, confidence), so code can apply its own thresholds. */
+  /**
+   * Raw answers for this tool's questions (probabilities, confidence), so code can apply its own thresholds. Keyed by parameter name;
+   * a set's members are keyed `toppings[olives]` and an optional parameter's stated question `delivery_time?stated`.
+   */
   answers: Record<string, Answer>;
   /** 1-based number of the current step. */
   step: number;
@@ -31,6 +35,12 @@ export type ToolContext = {
   input: InputPort;
   /** Add a custom event to the trace. */
   emit(name: string, data?: unknown): void;
+  /**
+   * Run a nested agent with its own tools, instructions and step limit, and await its result. The loop holds until it
+   * finishes. The child uses this agent's model unless it brings its own, stops when this run is aborted, and its
+   * events appear in this trace as `child` events under the current step.
+   */
+  runAgent(config: SubAgentConfig): Promise<RunResult>;
 };
 
 /** Availability is decided in code, before the question map is built. */
