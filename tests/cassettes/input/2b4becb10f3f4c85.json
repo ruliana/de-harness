@@ -64,21 +64,21 @@
         "__tool__": {
           "type": "choice",
           "choice": "place_order",
-          "confidence": 0.94,
+          "confidence": 0.97,
           "probabilities": {
-            "ask_customer": 0.04,
-            "place_order": 0.96,
+            "ask_customer": 0.02,
+            "place_order": 0.98,
             "end": 0
           }
         },
         "ask_customer.question": {
           "type": "choice",
           "choice": "What name should I put on the order?",
-          "confidence": 0.66,
+          "confidence": 0.58,
           "probabilities": {
             "What size would you like: small, medium or large?": 0.01,
-            "What name should I put on the order?": 0.77,
-            "Would you like anything with your coffee?": 0.22
+            "What name should I put on the order?": 0.72,
+            "Would you like anything with your coffee?": 0.27
           }
         },
         "place_order.size": {

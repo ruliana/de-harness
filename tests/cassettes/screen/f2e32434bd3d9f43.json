@@ -62,12 +62,12 @@
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.72,
+            "top": 0.73,
             "bottom": 0.85,
             "left": 0.1,
             "right": 0.41
           },
-          "confidence": 0.88
+          "confidence": 0.9
         },
         "click.target?present": {
           "type": "noul",

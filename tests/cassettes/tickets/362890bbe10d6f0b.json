@@ -107,15 +107,15 @@
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#1 Charged twice for the March invoice",
-          "confidence": 0.92,
+          "confidence": 0.91,
           "probabilities": {
-            "#1 Charged twice for the March invoice": 0.93,
+            "#1 Charged twice for the March invoice": 0.92,
             "#2 Password reset email never arrives": 0,
             "#3 Refund for my cancelled subscription": 0,
             "#4 How do I export my data to CSV?": 0,
             "#5 App crashes when I open the settings page": 0.01,
             "#6 Invoice shows the wrong VAT number": 0,
-            "#7 App crashes when I open the settings page": 0.05,
+            "#7 App crashes when I open the settings page": 0.06,
             "#8 Password reset email never arrives": 0.01
           }
         }

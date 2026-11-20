@@ -44,10 +44,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "delegate",
-          "confidence": 1,
+          "confidence": 0.98,
           "probabilities": {
-            "delegate": 1,
-            "end": 0
+            "delegate": 0.99,
+            "end": 0.01
           }
         },
         "delegate.task": {

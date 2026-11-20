@@ -1,0 +1,40 @@
+{
+  "hash": "670c6a662ecd9af5",
+  "request": {
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids&rvlimit=1&rvdir=older&redirects=1&format=json&formatversion=2&rvstart=2026-11-01T00%3A00%3A00Z&titles=Imperial%20College",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "body": {
+      "continue": {
+        "rvcontinue": "20260920212628|1375917324",
+        "continue": "||"
+      },
+      "query": {
+        "redirects": [
+          {
+            "from": "Imperial College",
+            "to": "Imperial College London"
+          }
+        ],
+        "pages": [
+          {
+            "pageid": 61116,
+            "ns": 0,
+            "title": "Imperial College London",
+            "revisions": [
+              {
+                "revid": 1379528685,
+                "parentid": 1375917324
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -162,10 +162,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "assign",
-          "confidence": 0.93,
+          "confidence": 0.92,
           "probabilities": {
-            "open_ticket": 0.05,
-            "assign": 0.95,
+            "open_ticket": 0.06,
+            "assign": 0.94,
             "set_status": 0,
             "tag": 0
           }
@@ -173,15 +173,15 @@
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#3 Refund for my cancelled subscription",
-          "confidence": 0.17,
+          "confidence": 0.19,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.14,
-            "#3 Refund for my cancelled subscription": 0.29,
+            "#2 Password reset email never arrives": 0.17,
+            "#3 Refund for my cancelled subscription": 0.31,
             "#4 How do I export my data to CSV?": 0,
-            "#5 App crashes when I open the settings page": 0.02,
-            "#6 Invoice shows the wrong VAT number": 0.26,
-            "#7 App crashes when I open the settings page": 0.27,
-            "#8 Password reset email never arrives": 0.02
+            "#5 App crashes when I open the settings page": 0.03,
+            "#6 Invoice shows the wrong VAT number": 0.22,
+            "#7 App crashes when I open the settings page": 0.24,
+            "#8 Password reset email never arrives": 0.03
           }
         },
         "assign.team": {
@@ -202,11 +202,11 @@
         "set_status.status": {
           "type": "choice",
           "choice": "open",
-          "confidence": 0.85,
+          "confidence": 0.82,
           "probabilities": {
-            "open": 0.9,
+            "open": 0.88,
             "pending": 0.01,
-            "closed": 0.09
+            "closed": 0.11
           }
         },
         "set_status.repeats_another": {
@@ -216,10 +216,10 @@
         "tag.tag": {
           "type": "choice",
           "choice": "refund",
-          "confidence": 0.96,
+          "confidence": 0.97,
           "probabilities": {
-            "refund": 0.97,
-            "urgent": 0.02,
+            "refund": 0.98,
+            "urgent": 0.01,
             "vip": 0,
             "bug": 0.01
           }

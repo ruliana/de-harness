@@ -191,13 +191,13 @@
         "__tool__": {
           "type": "choice",
           "choice": "end",
-          "confidence": 0.99,
+          "confidence": 1,
           "probabilities": {
             "open_collection": 0,
             "select_size": 0,
             "read_price": 0,
-            "go_back": 0.01,
-            "end": 0.99
+            "go_back": 0,
+            "end": 1
           }
         },
         "open_collection.collection": {

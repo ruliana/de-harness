@@ -162,14 +162,14 @@
         },
         "open_ticket.ticket": {
           "type": "choice",
-          "choice": "#8 Password reset email never arrives",
-          "confidence": 0.42,
+          "choice": "#3 Refund for my cancelled subscription",
+          "confidence": 0.32,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.15,
-            "#3 Refund for my cancelled subscription": 0.24,
+            "#2 Password reset email never arrives": 0.09,
+            "#3 Refund for my cancelled subscription": 0.46,
             "#4 How do I export my data to CSV?": 0.01,
-            "#5 App crashes when I open the settings page": 0.06,
-            "#8 Password reset email never arrives": 0.54
+            "#5 App crashes when I open the settings page": 0.05,
+            "#8 Password reset email never arrives": 0.39
           }
         },
         "tag.tag": {
@@ -186,7 +186,7 @@
       },
       "usage": {
         "input_tokens": 1317,
-        "output_tokens": 176
+        "output_tokens": 177
       }
     }
   }
