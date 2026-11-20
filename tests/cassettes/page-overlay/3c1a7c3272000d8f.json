@@ -1,0 +1,40 @@
+{
+  "hash": "3c1a7c3272000d8f",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Fill in my shipping details, choose express delivery and place the order"
+      },
+      "questions": {
+        "delivery": {
+          "type": "noul",
+          "instructions": "Do `instructions` say which delivery to choose, Standard or Express?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "delivery": {
+          "type": "noul",
+          "noul": 0.97
+        }
+      },
+      "usage": {
+        "input_tokens": 299,
+        "output_tokens": 20
+      }
+    }
+  }
+}

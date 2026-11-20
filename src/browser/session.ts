@@ -28,6 +28,12 @@ export type BrowserOptions = {
    * Every request to any other host is aborted, so a click cannot walk the agent out of the site. Default: no restriction.
    */
   allowedHosts?: string[];
+  /**
+   * CSS selectors of elements that are on the page for the person and must not be in the pictures the model sees (an overlay that the
+   * agent is run from). They are hidden while a screenshot or a zoom is taken, so the model cannot point at them or read them.
+   * More can be added later with `hideFromModel`.
+   */
+  hide?: string[];
   /** Wait after an action before the screenshot, for animations and scripts to run. Default 250. */
   settleMs?: number;
   /** Upper bound for waiting on the network to go quiet after an action. Default 1500. */
@@ -71,6 +77,7 @@ export class BrowserSession {
   private pointer = { x: 0, y: 0 };
   private noise: Region[] = [];
   private readonly allowed: string[] | undefined;
+  private readonly hidden: string[];
   private readonly opts: Required<Pick<BrowserOptions, "settleMs" | "networkIdleMs" | "navigationTimeoutMs">>;
 
   private constructor(
@@ -83,6 +90,7 @@ export class BrowserSession {
     this.page = page;
     this.viewport = viewport;
     this.allowed = opts.allowedHosts?.map((h) => h.toLowerCase());
+    this.hidden = [...(opts.hide ?? [])];
     this.opts = { settleMs: opts.settleMs ?? 250, networkIdleMs: opts.networkIdleMs ?? 1500, navigationTimeoutMs: opts.navigationTimeoutMs ?? 30_000 };
     const watch = (p: Page) => {
       p.on("dialog", (d) => void d.dismiss().catch(() => {})); // an alert must never freeze the agent
@@ -306,7 +314,7 @@ export class BrowserSession {
     const cdp = await this.context.newCDPSession(this.page);
     try {
       const offset = await this.page.evaluate(() => ({ x: window.scrollX, y: window.scrollY }));
-      const { data } = await cdp.send("Page.captureScreenshot", { format: "png", clip: { x: left + offset.x, y: top + offset.y, width: w, height: h, scale: factor } });
+      const { data } = await this.withoutHidden(() => cdp.send("Page.captureScreenshot", { format: "png", clip: { x: left + offset.x, y: top + offset.y, width: w, height: h, scale: factor } }));
       return { screen: image(Buffer.from(data, "base64")), region: { left, top, right: left + w, bottom: top + h } };
     } finally {
       await cdp.detach().catch(() => {});
@@ -407,9 +415,59 @@ export class BrowserSession {
     await this.settle();
   }
 
-  /** The viewport as a PNG, the size of the viewport. */
-  async screenshot(): Promise<Uint8Array> {
-    return await this.page.screenshot({ type: "png", scale: "css", animations: "disabled", caret: "initial" });
+  /**
+   * The viewport as a PNG, the size of the viewport, without what `hide` / `hideFromModel` names: this is the picture the model sees.
+   * `{ everything: true }` keeps those elements in, for a person who wants to see the page as it looks to them (a demo, a bug report).
+   */
+  async screenshot(opts: { everything?: boolean } = {}): Promise<Uint8Array> {
+    const take = () => this.page.screenshot({ type: "png", scale: "css", animations: "disabled", caret: "initial" });
+    return opts.everything ? await take() : await this.withoutHidden(take);
+  }
+
+  /** From now on, never show the elements matching this CSS selector in a screenshot or zoom (see `BrowserOptions.hide`). Idempotent. */
+  hideFromModel(selector: string): void {
+    if (!this.hidden.includes(selector)) this.hidden.push(selector);
+  }
+
+  /**
+   * Run code in the page of every page of this browser, before the page's own scripts, now and after each navigation, and on the page
+   * that is open now. For what must outlive a navigation, such as an overlay. Needs `exposeFunction` for anything that should call back.
+   */
+  async addInitScript(source: string): Promise<void> {
+    await this.context.addInitScript({ content: source });
+    await Promise.all(this.context.pages().map((p) => p.evaluate(source).catch(() => {})));
+  }
+
+  /** Make a Node function callable from the page as `window[name](...)`, on every page of this browser, after each navigation too. The arguments and the result must be JSON. */
+  async exposeFunction(name: string, fn: (...args: never[]) => unknown): Promise<void> {
+    await this.context.exposeFunction(name, fn as (...args: unknown[]) => unknown);
+  }
+
+  /**
+   * Type into an element found by a CSS selector as a person does (it pierces open shadow roots), and press `key` afterwards when given.
+   * This is for the person who uses the page, not for the agent (it clicks nothing and does not wait for the page to settle).
+   */
+  async userTypes(selector: string, text: string, key?: string): Promise<void> {
+    const field = this.page.locator(selector).first();
+    await field.fill(text);
+    if (key) await field.press(key);
+  }
+
+  /** Run `fn` while the elements that the model must not see are hidden. Their layout stays (they are only made invisible), so nothing around them moves. */
+  private async withoutHidden<T>(fn: () => Promise<T>): Promise<T> {
+    if (this.hidden.length === 0) return await fn();
+    const css = this.hidden.map((s) => `${s} { visibility: hidden !important; }`).join("\n");
+    await this.page.evaluate((text) => {
+      const style = document.createElement("style");
+      style.setAttribute("data-harness-hide", "");
+      style.textContent = text;
+      document.documentElement.append(style);
+    }, css);
+    try {
+      return await fn();
+    } finally {
+      await this.page.evaluate(() => document.querySelectorAll("style[data-harness-hide]").forEach((e) => e.remove())).catch(() => {});
+    }
   }
 
   async info(): Promise<PageInfo> {
