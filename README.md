@@ -12,6 +12,23 @@ npm test            # replay mode, no network
 npm run test:live   # live Jev, re-records cassettes
 ```
 
+## Examples
+
+Each one has a README that says what it shows and how to run it.
+
+- [Rooms](examples/rooms/): the smallest agent, a hall with coloured doors, to see the core loop.
+- [Pizza](examples/pizza/): ordering from a menu, with choices, sets and an optional parameter.
+- [Coffee](examples/coffee/): a tool that holds the loop and waits for the customer to answer.
+- [Chest](examples/chest/): tools that appear and disappear while the agent runs.
+- [Tickets](examples/tickets/): working a support-ticket queue through an HTTP API.
+- [Office](examples/office/): thirty tools at once, which makes each step two-phase.
+- [Load API](examples/load-api/): a tool that reads an OpenAPI document and adds one tool per endpoint.
+- [Graph](examples/graph/): riding a transit map from one station to another.
+- [Tree](examples/tree/): filing an item by walking a taxonomy of a few hundred categories.
+- [Wikipedia](examples/wikipedia/): getting from one article to another by following links.
+- [Screen](examples/screen/): a sign-up form seen only as a picture, with a box around the button to click.
+- [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
+
 ## How it works
 
 Each step is **one** request to the model: the state document (`instructions`, `state`, `previous_actions`), a Choice
