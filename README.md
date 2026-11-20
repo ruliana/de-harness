@@ -91,6 +91,44 @@ params: {
 
 A tool can put a picture into the state with `image(pngOrJpegBytes)` (PNG 280-1568 px per side). The model sees it wherever a question names the slot by path, and requests that carry images are sent with `TypeSafe-Danger-Zone-Images: true`. `param.box({ question, image })` asks Jev where something is (a Box) and, in the same request, whether it is there at all (a companion Noul, `<param>?present` in `ctx.answers`); the tool receives `{ top, bottom, left, right }` as fractions of the image, or `null` when the Noul says the target is absent. Box answers are approximate: compare overlap, not exact edges. Box requests always go to Jev 1.14 or later. Try it: `npm run example:screen -- "Click the Submit button" --out proof.png` (`HARNESS_CASSETTE=replay` uses the recordings).
 
+### A browser as the state
+
+`BrowserSession` (a headless Chromium through Playwright) and `browserTools(session, options)` let an agent use a web page that it
+only *sees*: every tool that changes the page puts a fresh screenshot into `state.screen` and `{ url, title, scroll }` into
+`state.page`. The model points with Boxes and chooses from candidates that code supplies; nothing is generated.
+
+```ts
+const browser = await BrowserSession.launch({ allowedHosts: ["shop.example"] });   // 1280x800 viewport, headless
+await browser.goto("https://shop.example/");
+const result = await createAgent({
+  model: new JevModel(),
+  instructions: "Find the red mug and open it",
+  tools: browserTools(browser, { urls: { "https://shop.example/cart": "the cart" }, texts: ["mug"] }),
+  initialState: await browser.snapshot(),      // { screen: image, page: { url, title, scroll } }
+}).run();
+await browser.text();                          // verify in code: the page's text, never the model's job
+await browser.close();
+```
+
+| Tool | The model decides | Code decides |
+| - | - | - |
+| `click(target)` | the Box around the element to click, or that it is not in the screenshot | the click point: the box's centre, in viewport pixels (screenshots are viewport-sized at scale 1) |
+| `scroll(direction)` | `down` / `up` / `top` / `bottom` | only the directions that move the page are offered (from `state.page.scroll`); gone on a page that fits one screen; steps are 80% of a viewport |
+| `type_text(text)` | one of `texts` (candidates), typed into the focused field | reports "typed nothing" when no field is focused; the tool only exists when `texts` is given |
+| `press_key(key)` | one of `keys` (default Enter, Tab, Escape) | |
+| `navigate(url)` | one of `urls` (candidates) | the tool only exists when `urls` is given; it is the only one offered before a first page is open |
+| `go_back` | | |
+
+For verification and use-case code: `browser.text()` (whole page), `browser.visibleText()` (what is in the viewport right now),
+`browser.boxOf(selector)` (the Box a perfect answer would be), `browser.evaluate(fn, arg)`, `browser.screenshot()`, `browser.info()`.
+Clicks that open a new tab move the agent to it, dialogs are dismissed, and `allowedHosts` aborts every request to any other host
+(an address outside it fails `navigate` with an error and a click on such a link leaves the page where it was). Question wording is in
+one place (`src/browser/tools.ts`) and can be replaced per tool with `questions`. Playwright is an optional peer dependency:
+`npm i -D playwright && npx playwright install chromium`; in the cloud sandbox Chromium already goes through the egress proxy.
+`npm run example:browser -- --url <address> "<what to do>"` runs it live. Tests: `tests/acceptance/browser/` against a site on
+loopback (`tests/support/browser-site.ts`, bundled fonts so screenshots are stable); `npm test` replays Jev from cassettes and runs
+the real browser, so CI installs Chromium.
+
 | Where | What |
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
@@ -106,6 +144,8 @@ A tool can put a picture into the state with `image(pngOrJpegBytes)` (PNG 280-15
 | `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
 | `examples/office/` | thirty tools, the many-tools domain |
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
+| `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`) |
+| `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
 | `examples/storefront/` | shopping in a real Shopify shop (aloyoga.com): menu, colour filter, product, size, price (`npm run example:storefront`) |
 

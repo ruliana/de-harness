@@ -30,4 +30,6 @@ Work arrives as pull requests. CI runs `typecheck` and `acceptance`; when both p
 (auto-merge). Run `npm run test:live` before opening the PR, commit the cassette changes, and paste the live summary in
 the PR body. A missing recording fails with `no recording for <hash>`: re-record with `npm run test:live`.
 
+Browser tests (`tests/acceptance/browser`) drive a real headless Chromium: `npm ci` then `npx playwright install chromium` (the cloud image already has it; CI installs it). Screenshots are keyed into cassettes, so the test site bundles its fonts and the session launches Chromium with flags that keep rendering stable.
+
 Cloud sessions: Node's built-in `fetch` ignores the proxy, so live runs need `NODE_USE_ENV_PROXY=1` (the script sets it).

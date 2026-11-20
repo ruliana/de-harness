@@ -728,7 +728,7 @@
         },
         "filter_colour.colours[Espresso]": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "filter_colour.colours[Bone]": {
           "type": "noul",
@@ -740,7 +740,7 @@
         },
         "filter_colour.colours[Deep Gravel]": {
           "type": "noul",
-          "noul": 0.19
+          "noul": 0.17
         },
         "filter_colour.colours[Gravel]": {
           "type": "noul",
@@ -764,11 +764,11 @@
         },
         "filter_colour.colours[Winter Frost]": {
           "type": "noul",
-          "noul": 0.58
+          "noul": 0.62
         },
         "filter_colour.colours[Frosted Pearl]": {
           "type": "noul",
-          "noul": 0.16
+          "noul": 0.12
         },
         "filter_colour.colours[Platinum Grey]": {
           "type": "noul",
@@ -776,7 +776,7 @@
         },
         "filter_colour.colours[Light Provence Blue]": {
           "type": "noul",
-          "noul": 0.85
+          "noul": 0.87
         },
         "filter_colour.colours[Java Brown]": {
           "type": "noul",
@@ -796,7 +796,7 @@
         },
         "filter_colour.colours[Sunshine]": {
           "type": "noul",
-          "noul": 0.11
+          "noul": 0.09
         },
         "filter_colour.colours[Azure Blue]": {
           "type": "noul",
@@ -808,7 +808,7 @@
         },
         "filter_colour.colours[California Blue]": {
           "type": "noul",
-          "noul": 0.91
+          "noul": 0.92
         },
         "filter_colour.colours[Bamboo Green]": {
           "type": "noul",
@@ -828,15 +828,15 @@
         },
         "filter_colour.colours[Athletic Heather Grey Tonal]": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.04
         },
         "filter_colour.colours[Grey Triblend]": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.03
         },
         "filter_colour.colours[Bluestone]": {
           "type": "noul",
-          "noul": 0.82
+          "noul": 0.83
         },
         "filter_colour.colours[Burgundy]": {
           "type": "noul",
@@ -844,7 +844,7 @@
         },
         "filter_colour.colours[Brownstone]": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.05
         },
         "filter_colour.colours[Candy Heart Pink]": {
           "type": "noul",
@@ -856,11 +856,11 @@
         },
         "filter_colour.colours[Dune Grass]": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.09
         },
         "filter_colour.colours[Moonshadow Blue]": {
           "type": "noul",
-          "noul": 0.88
+          "noul": 0.89
         },
         "filter_colour.colours[Charcoal Green Tonal]": {
           "type": "noul",
@@ -868,11 +868,11 @@
         },
         "filter_colour.colours[Gravel Heather]": {
           "type": "noul",
-          "noul": 0.14
+          "noul": 0.13
         },
         "filter_colour.colours[Dark Heather Grey]": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "filter_colour.colours[Navy Tonal]": {
           "type": "noul",
@@ -880,7 +880,7 @@
         },
         "filter_colour.colours[Espresso Tonal]": {
           "type": "noul",
-          "noul": 0.11
+          "noul": 0.1
         },
         "filter_colour.colours[Gravel Wash]": {
           "type": "noul",
@@ -892,27 +892,27 @@
         },
         "filter_colour.colours[Celestial Blue Granite Heather]": {
           "type": "noul",
-          "noul": 0.79
+          "noul": 0.77
         },
         "filter_colour.colours[Black Wash]": {
           "type": "noul",
-          "noul": 0.16
+          "noul": 0.11
         },
         "filter_colour.colours[Woodrose Wash]": {
           "type": "noul",
-          "noul": 0.31
+          "noul": 0.35
         },
         "filter_colour.colours[Dark Heather Grey Tonal]": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.05
         },
         "filter_colour.colours[Macadamia Blush]": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.04
         },
         "filter_colour.colours[Bone Heather]": {
           "type": "noul",
-          "noul": 0.08
+          "noul": 0.07
         },
         "filter_colour.colours[White Heather Grey]": {
           "type": "noul",
@@ -920,7 +920,7 @@
         },
         "filter_colour.colours[Chai Latte]": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "filter_colour.colours[Black Pinstripe]": {
           "type": "noul",
@@ -928,11 +928,11 @@
         },
         "filter_colour.colours[Espresso Pinstripe]": {
           "type": "noul",
-          "noul": 0.06
+          "noul": 0.05
         },
         "filter_colour.colours[Bright Red]": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.01
         },
         "filter_colour.colours[Candlelight Yellow]": {
           "type": "noul",
@@ -940,15 +940,15 @@
         },
         "filter_colour.colours[Bone Pinstripe]": {
           "type": "noul",
-          "noul": 0.18
+          "noul": 0.17
         },
         "filter_colour.colours[Blue Breeze]": {
           "type": "noul",
-          "noul": 0.84
+          "noul": 0.83
         },
         "filter_colour.colours[Sun Kissed Brown]": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0.02
         },
         "filter_colour.colours[Summer Romance Red]": {
           "type": "noul",
@@ -960,7 +960,7 @@
         },
         "filter_colour.colours[Satsuma Breeze]": {
           "type": "noul",
-          "noul": 0.21
+          "noul": 0.24
         },
         "filter_colour.colours[Vintage Athletic Heather]": {
           "type": "noul",
@@ -972,27 +972,27 @@
         },
         "filter_colour.colours[Java Brown Heather]": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.05
         },
         "filter_colour.colours[Black Multi]": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.05
         },
         "filter_colour.colours[Rich Bordeaux Multi]": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.03
         },
         "filter_colour.colours[Black Marl]": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.04
         },
         "filter_colour.colours[Frosted Pearl Marl]": {
           "type": "noul",
-          "noul": 0.18
+          "noul": 0.21
         },
         "filter_colour.colours[Frosted Pearl Heather]": {
           "type": "noul",
-          "noul": 0.21
+          "noul": 0.16
         },
         "filter_colour.colours[Black Heather]": {
           "type": "noul",
@@ -1001,7 +1001,7 @@
         "open_product.product": {
           "type": "choice",
           "choice": "Axis Hooded Pullover - Blue Breeze",
-          "confidence": 0.29,
+          "confidence": 0.26,
           "probabilities": {
             "Waffle Chenille Edition Hoodie - Black": 0,
             "Cropped Accolade Crewneck - Paradise Pink": 0,
@@ -1010,7 +1010,7 @@
             "Cropped Serenity Coverup - Black": 0,
             "Accolade Full Zip Hoodie - Athletic Heather Grey": 0,
             "Accolade Crew Neck Pullover - Espresso": 0,
-            "Accolade Hoodie - Navy": 0.12,
+            "Accolade Hoodie - Navy": 0.13,
             "Accolade 1/4 Zip Pullover - Black": 0,
             "Make Waves Hoodie - Ivory/Bone/Gravel": 0,
             "Cropped Mountain Peak Full-Zip Hoodie - Black": 0,
@@ -1063,7 +1063,7 @@
             "Make Waves Hoodie - Vintage Black Tonal": 0,
             "Wool Cashmere New Class Hoodie - Platinum Grey": 0,
             "Triumph Restore Crew Neck Sweatshirt - Black": 0,
-            "Wool Cashmere New Class Hoodie - Celestial Blue Granite Heather": 0.16,
+            "Wool Cashmere New Class Hoodie - Celestial Blue Granite Heather": 0.17,
             "Wool Cashmere New Class Hoodie - Black": 0,
             "Chill Crew Neck Pullover - Athletic Heather Grey": 0,
             "Cashmere Plush Waffle 1/4 Zip Pullover - Black": 0,
@@ -1191,16 +1191,16 @@
             "Chill Crew Neck Pullover - Olive Tree": 0,
             "Accolade Crew Neck Pullover - Light Provence Blue": 0.11,
             "Cropped 1/4 Zip Alumni Pullover - Navy": 0,
-            "Cropped 1/4 Zip Alumni Pullover - Light Provence Blue": 0,
+            "Cropped 1/4 Zip Alumni Pullover - Light Provence Blue": 0.02,
             "Accolade Crew Neck Pullover - Paradise Pink": 0,
             "Wool Cashmere New Class Full Zip Hoodie - Navy": 0.02,
-            "Cropped Accolade Crewneck - Light Provence Blue": 0.02,
+            "Cropped Accolade Crewneck - Light Provence Blue": 0.01,
             "Alosoft Sincere Fitted Jacket - Navy": 0,
             "Alosoft Sincere Fitted Jacket - Light Provence Blue": 0,
             "Wool Cashmere Ribbed Noble Full Zip Hoodie - Paradise Pink": 0,
             "Wool Cashmere New Class Full Zip Hoodie - White Heather": 0,
             "Double Take Hoodie - White Heather": 0.02,
-            "Axis Hooded Pullover - Blue Breeze": 0.29,
+            "Axis Hooded Pullover - Blue Breeze": 0.26,
             "Accolade Crew Neck Pullover - Sun Kissed Brown": 0,
             "Accolade Full Zip Hoodie - Navy": 0.04
           }

@@ -44,10 +44,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "ask_customer",
-          "confidence": 0.98,
+          "confidence": 1,
           "probabilities": {
-            "ask_customer": 0.99,
-            "end": 0.01
+            "ask_customer": 1,
+            "end": 0
           }
         },
         "ask_customer.question": {

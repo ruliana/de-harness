@@ -140,7 +140,7 @@
         },
         "place_order.toppings[peppers]": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0.02
         },
         "place_order.toppings[basil]": {
           "type": "noul",

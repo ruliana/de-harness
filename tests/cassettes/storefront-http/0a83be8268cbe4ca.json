@@ -3946,7 +3946,7 @@
           "variants": [
             {
               "price": "168",
-              "available": true
+              "available": false
             }
           ]
         },

@@ -161,15 +161,15 @@
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#6 Invoice shows the wrong VAT number",
-          "confidence": 0.44,
+          "confidence": 0.38,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.06,
-            "#3 Refund for my cancelled subscription": 0.16,
+            "#2 Password reset email never arrives": 0.1,
+            "#3 Refund for my cancelled subscription": 0.17,
             "#4 How do I export my data to CSV?": 0,
             "#5 App crashes when I open the settings page": 0.03,
-            "#6 Invoice shows the wrong VAT number": 0.52,
-            "#7 App crashes when I open the settings page": 0.19,
-            "#8 Password reset email never arrives": 0.04
+            "#6 Invoice shows the wrong VAT number": 0.47,
+            "#7 App crashes when I open the settings page": 0.2,
+            "#8 Password reset email never arrives": 0.03
           }
         },
         "set_status.status": {

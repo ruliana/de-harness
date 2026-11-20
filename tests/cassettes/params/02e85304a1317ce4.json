@@ -132,11 +132,11 @@
         },
         "place_order.toppings[pepperoni]": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0.02
         },
         "place_order.toppings[onions]": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.01
         },
         "place_order.toppings[peppers]": {
           "type": "noul",
@@ -149,12 +149,12 @@
         "place_order.delivery_time": {
           "type": "choice",
           "choice": "evening",
-          "confidence": 0.25,
+          "confidence": 0.2,
           "probabilities": {
-            "morning": 0.2,
-            "lunch": 0.3,
-            "afternoon": 0.07,
-            "evening": 0.4,
+            "morning": 0.26,
+            "lunch": 0.27,
+            "afternoon": 0.08,
+            "evening": 0.36,
             "late": 0.03
           }
         },

@@ -257,8 +257,8 @@
         },
         "open_link.link": {
           "type": "choice",
-          "choice": "Alexander Fleming",
-          "confidence": 0.41,
+          "choice": "Imperial College",
+          "confidence": 0.38,
           "probabilities": {
             "Beta-lactam antibiotic": 0,
             "Penicillium": 0,
@@ -278,9 +278,9 @@
             "Side effects of penicillin": 0,
             "Cephalosporin": 0,
             "Immunoglobulin E": 0,
-            "Alexander Fleming": 0.41,
+            "Alexander Fleming": 0.32,
             "Neonatal conjunctivitis": 0,
-            "Howard Florey": 0.08,
+            "Howard Florey": 0.05,
             "Ernst Boris Chain": 0.03,
             "University of Oxford": 0,
             "Meningitis": 0,
@@ -423,14 +423,14 @@
             "Endosymbiotic theory": 0,
             "Evolution": 0,
             "Bioavailability": 0,
-            "Ernst Chain": 0,
+            "Ernst Chain": 0.01,
             "Edward Abraham": 0.04,
             "Penicillinase": 0,
             "Multi-drug resistance": 0,
             "Methicillin-resistant S. aureus": 0,
             "Persister cells": 0,
-            "St Mary's Hospital, London": 0.11,
-            "Imperial College": 0.28,
+            "St Mary's Hospital, London": 0.12,
+            "Imperial College": 0.38,
             "Charles Thom": 0,
             "Haemophilus influenzae": 0,
             "International Historic Chemical Landmark": 0,
@@ -465,7 +465,7 @@
       },
       "usage": {
         "input_tokens": 5825,
-        "output_tokens": 2134
+        "output_tokens": 2136
       }
     }
   }

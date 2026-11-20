@@ -63,10 +63,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "select",
-          "confidence": 0.94,
+          "confidence": 0.92,
           "probabilities": {
-            "ascend": 0,
-            "select": 0.96,
+            "ascend": 0.01,
+            "select": 0.95,
             "end": 0.04
           }
         }
