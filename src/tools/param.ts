@@ -6,6 +6,7 @@
  *   param.noul({ question })             -> Noul;    value: boolean from thresholds 0.7 / 0.3, or 'unsure' in between
  *   param.score({ question, levels })    -> Score;   value: the label of the most probable level
  *   param.set({ question, members })     -> one Noul per member (`{}` in the question is the member); value: the members above the yes threshold
+ *   param.box({ question, image })       -> Box + a companion Noul (`<param>?present`); value: { top, bottom, left, right } or null
  *
  * Any spec takes `optional: { stated }`: one more Noul asks whether the value is stated at all, and the value is
  * `undefined` unless that answer is above the yes threshold. Noul-based specs (noul, set members, stated) take
@@ -14,6 +15,7 @@
  * Questions must stand alone: they cannot see each other's answers. Name the subject by state path in backticks
  * (`state.room.doors`, `instructions`) and ask one concrete judgment.
  */
+import type { Box } from "../model/types.js";
 import type { StateView } from "../state/state.js";
 
 /** Candidate values: names, or name -> description of when it applies. Names are sent to the model, so make them descriptive. */
@@ -64,10 +66,26 @@ export type SetSpec<V extends string = string, Opt extends boolean = false> = Co
   readonly _value?: V[];
 };
 
-export type ParamSpec = ChoiceSpec<any, any> | NoulSpec<any> | ScoreSpec<any, any> | SetSpec<any, any>;
+export type BoxSpec<Opt extends boolean = false> = Common<Opt> & {
+  kind: "box";
+  /**
+   * What to find, as a noun phrase that names the image by state path: "the button that `instructions` say to click, in
+   * `state.screen`". It is not a question: a Box always answers with a box, even when nothing fits.
+   */
+  question: string;
+  /** Where the image lives, as a state path (`state.screen`). The tool is left out of a step while that slot holds no image. */
+  image: string;
+  /** The companion Noul: is the target there at all? The default asks whether anything in `image` matches `question`. */
+  present?: string;
+  thresholds?: Thresholds;
+  readonly _value?: Box | null;
+};
+
+export type ParamSpec = ChoiceSpec<any, any> | NoulSpec<any> | ScoreSpec<any, any> | SetSpec<any, any> | BoxSpec<any>;
 export type Params = Record<string, ParamSpec>;
 
-export type ValueOf<S extends ParamSpec> = S extends { readonly _optional?: true } ? Exclude<S["_value"], undefined> | undefined : NonNullable<S["_value"]>;
+/** A Box value is `null` when the companion Noul says the target is not in the image, so only `undefined` is excluded. */
+export type ValueOf<S extends ParamSpec> = S extends { readonly _optional?: true } ? Exclude<S["_value"], undefined> | undefined : Exclude<S["_value"], undefined>;
 /** The typed arguments `run` receives. */
 export type ArgsOf<P extends Params> = { [K in keyof P]: ValueOf<P[K]> };
 
@@ -89,6 +107,11 @@ function set(spec: { question: string; members: readonly string[] | ((ctx: Param
 export const param = {
   choice,
   set,
+  box: <Opt extends Optional | undefined = undefined>(spec: { question: string; image: string; present?: string; thresholds?: Thresholds; optional?: Opt }): BoxSpec<IsOptional<Opt>> => {
+    if (spec.thresholds) checkThresholds(spec.thresholds);
+    if (spec.optional?.thresholds) checkThresholds(spec.optional.thresholds);
+    return { kind: "box", ...spec } as BoxSpec<any>;
+  },
   noul: <Opt extends Optional | undefined = undefined>(spec: { question: string; criteria?: { true?: string; false?: string }; thresholds?: Thresholds; optional?: Opt }): NoulSpec<IsOptional<Opt>> => {
     if (spec.thresholds) checkThresholds(spec.thresholds);
     if (spec.optional?.thresholds) checkThresholds(spec.optional.thresholds);

@@ -17,7 +17,9 @@
     "example:rooms": "NODE_USE_ENV_PROXY=1 tsx examples/rooms/main.ts",
     "example:coffee": "NODE_USE_ENV_PROXY=1 tsx examples/coffee/main.ts",
     "example:pizza": "NODE_USE_ENV_PROXY=1 tsx examples/pizza/main.ts",
-    "example:tickets": "NODE_USE_ENV_PROXY=1 tsx examples/tickets/main.ts"
+    "example:tickets": "NODE_USE_ENV_PROXY=1 tsx examples/tickets/main.ts",
+    "example:screen": "NODE_USE_ENV_PROXY=1 tsx examples/screen/main.ts",
+    "example:screen:fixtures": "tsx examples/screen/render.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

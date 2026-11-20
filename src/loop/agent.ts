@@ -19,6 +19,7 @@ import type { EventInput, HarnessEvent, Phase } from "../events/events.js";
 import { DecisionModelError, type Answer, type DecisionModel, type DecisionRequest, type DecisionResponse, type Question } from "../model/types.js";
 import { AnswerError, TOOL_QUESTION, buildQuestions, paramQuestions, parseArgs, pickedTool, toolQuestionOnly } from "../questions/build.js";
 import { createInputPort, type InputProvider } from "../input/provider.js";
+import { extractImages } from "../state/images.js";
 import { StateDocument, type Json } from "../state/state.js";
 import { endTool } from "../tools/builtin.js";
 import { ToolRegistry } from "../tools/registry.js";
@@ -143,7 +144,12 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     if (plan.tools.length === 0) return finish("error", { error: new Error("No tool is available") });
 
     // 2. ask: one request, or two when the full request is over budget
-    const full: DecisionRequest = { state: doc.document(config.instructions, window, window > 0), questions: plan.questions };
+    // images in the state travel as references, listed once in `images` (and are not part of the token estimate)
+    const requestOf = (shown: number, questions: Record<string, Question>): DecisionRequest => {
+      const { value: state, images } = extractImages(doc.document(config.instructions, shown, window > 0));
+      return { state, questions, ...(Object.keys(images).length ? { images } : {}) };
+    };
+    const full = requestOf(window, plan.questions);
     const sent: StepRecord["requests"] = [];
     const answers: Record<string, Answer> = {};
     let current: Phase = "single";
@@ -151,7 +157,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
       current = phase;
       let fitted: ReturnType<typeof fitRequest>;
       try {
-        fitted = fitRequest((n) => ({ state: doc.document(config.instructions, n, window > 0), questions }), Math.min(window, doc.actionCount()), budget);
+        fitted = fitRequest((n) => requestOf(n, questions), Math.min(window, doc.actionCount()), budget);
       } catch (e) {
         if (e instanceof BudgetError && e.dropped > 0) emit({ type: "trimmed", step, phase, dropped: e.dropped, estimatedTokens: e.estimatedTokens, budget });
         throw e;

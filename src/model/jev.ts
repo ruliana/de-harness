@@ -16,6 +16,13 @@ export type JevModelOptions = {
   fetch?: typeof fetch;
 };
 
+/** Box questions need Jev 1.14 or later. */
+const BOX_MODEL = "jev-1.14.0";
+function supportsBox(model: string): boolean {
+  const m = /^jev-1\.(\d+)(\.|$)/.exec(model);
+  return !m || Number(m[1]) >= 14;
+}
+
 export class JevModel implements DecisionModel {
   readonly id: string;
   protected readonly baseUrl: string;
@@ -40,9 +47,11 @@ export class JevModel implements DecisionModel {
 
   async ask(request: DecisionRequest): Promise<DecisionResponse> {
     const images = request.images ?? {};
-    const hasImages = Object.keys(images).length > 0 || Object.values(request.questions).some((q) => q.type === "box");
+    const hasBox = Object.values(request.questions).some((q) => q.type === "box");
+    const hasImages = Object.keys(images).length > 0 || hasBox;
     const body = {
-      model: this.id,
+      // Box questions need Jev 1.14: a pinned older version is switched for the request, and answers report the model that answered
+      model: hasBox && !supportsBox(this.id) ? BOX_MODEL : this.id,
       state: request.state,
       questions: request.questions,
       ...(Object.keys(images).length
