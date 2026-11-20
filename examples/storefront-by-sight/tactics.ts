@@ -8,12 +8,14 @@
  */
 import type { DecisionModel, DecisionRequest, Image, Question } from "../../src/index.js";
 import { readNoul } from "../../src/index.js";
+import { plainTask } from "../storefront-browser/shopping.js";
 
 /** The tactics, in the order the model sees them. The keys are the answers; the values are what each one means (the model reads these). */
 export const TACTICS = {
   open_menu: "Point at an entry in the row of menus at the top of the page, so that a menu opens under it. Right on the front page of a site when what `instructions` ask for is not visible yet and no menu is open.",
   pick_menu_entry: "Click the entry of the open menu that leads to what `instructions` ask for. Right when a menu is open.",
   scroll: "Scroll down to bring more of this page into view. Right only on a list of items, when what `instructions` ask for is not visible in it yet and the list goes on below.",
+  filter: "Narrow a list of items with its filters (a Filter or Colour control, in a side bar or above the items), so that items of the kind that `instructions` ask for are shown. Right on a list that offers filters, when that item is not visible in it.",
   click_item: "Click the item that `instructions` ask for in a list of items, to open its own page. Right when that item is visible in a list.",
   select_option: "Choose the option that `instructions` ask for (a size, a colour) on the page of one item. Right on an item's page when that option is not chosen yet.",
   read_value: "Read the value that `instructions` ask to get (a price, a number) from the page. Right when that value is visible and the options `instructions` ask for are chosen.",
@@ -29,6 +31,7 @@ export const DONE = {
   open_menu: "pointed at an entry at the top of the page, so that its menu opened",
   pick_menu_entry: "clicked an entry of the open menu",
   scroll: "scrolled down",
+  filter: "used a filter of the list",
   click_item: "clicked an item of a list, to open its page",
   select_option: "chose an option on the item's page",
   read_value: "read the value into `state.price`",
@@ -113,6 +116,7 @@ export const GOALS: Record<Exclude<Tactic, "end">, string> = {
   open_menu: "Point the mouse at the entry in the row of menus at the top of the page that is most likely to lead to what the task asks for, so that its menu opens. Then stop.",
   pick_menu_entry: "Click the entry of the open menu that leads to what the task asks for. Then stop.",
   scroll: "Scroll down once, to see more of this page. Then stop.",
+  filter: "Use the filters of this list to narrow it to the item that the task asks for. If the filter for a feature that the task names (such as a colour, but not the kind of item) is closed, click it to open it. If it is open, click the value that matches the item. If the filter you need is not in view (a long side bar goes on below), scroll down once instead. Then stop.",
   click_item: "Click the item that the task asks for. Then stop.",
   select_option: "Click the option that the task asks for (such as the size) on this page. Then stop.",
   read_value: "Point at the value that the task asks to get, to read it. Then stop.",
@@ -120,11 +124,57 @@ export const GOALS: Record<Exclude<Tactic, "end">, string> = {
   close_overlay: "Close what is in the way, by clicking its close button or pressing Escape. Then stop.",
 };
 
+/**
+ * The task as the deciding level and the navigating level each get it. The deciding level reads all of it (`text`). The navigating
+ * level carries out one step at a time, and a clause that is not about that step draws its click to the wrong place (a task that says
+ * "size 10" has the item-picking click land on a size filter in the side bar), so each tactic gets only the clauses it needs, below.
+ * The person's words are not rewritten: whoever starts the run supplies the parts, and a task given as one string is every part.
+ */
+export type SightTask = {
+  /** The whole task, as the person said it. */
+  text: string;
+  /** The clause that says what to find. */
+  item: string;
+  /** The clause that says which option to choose on its page (a size, a colour). */
+  option?: string;
+  /** The clause that says what to get from the page. */
+  value?: string;
+};
+export const sightTask = (task: string | SightTask): SightTask => (typeof task === "string" ? { text: task, item: task, option: task, value: task } : task);
+
+/** The plain shopping sentence of `plainTask`, with its three clauses. */
+export const shopTask = (shop: string, what: string, size: string): SightTask => ({
+  text: plainTask(shop, what, size),
+  item: `Find ${what}.`,
+  option: `Select size ${size}.`,
+  value: `Get the price of ${what}.`,
+});
+
+/** Which clauses of the task the navigator of a tactic reads. The ones not listed (going back, closing a pop-up) need none. */
+export const TASK_PARTS: Record<Exclude<Tactic, "end">, ("item" | "option" | "value")[]> = {
+  open_menu: ["item"],
+  pick_menu_entry: ["item"],
+  scroll: ["item"],
+  filter: ["item"],
+  click_item: ["item"],
+  select_option: ["option"],
+  read_value: ["value"],
+  go_back: [],
+  close_overlay: [],
+};
+
+/** The `instructions` of the navigator of a tactic: the clauses of the task it needs, then its goal. */
+export function navigatorInstructions(tactic: Exclude<Tactic, "end">, task: SightTask): string {
+  const clauses = TASK_PARTS[tactic].map((part) => task[part] ?? task.text);
+  return [...clauses, GOALS[tactic]].join(" ");
+}
+
 /** The browser tools (by name) that the navigator of a tactic is given, out of those of `shoppingTools`. */
 export const NAVIGATOR_TOOLS: Record<Exclude<Tactic, "end">, string[]> = {
   open_menu: ["hover"],
   pick_menu_entry: ["click"],
   scroll: ["scroll"],
+  filter: ["click", "scroll"],
   click_item: ["click"],
   select_option: ["click"],
   read_value: ["read_price"],
@@ -140,6 +190,7 @@ export const CHECKS: Record<Exclude<Tactic, "end">, { changed: boolean; holds?: 
   open_menu: { changed: true, holds: (j) => j.menuOpen },
   pick_menu_entry: { changed: true, holds: (j) => (j.menuOpen === "unsure" ? "unsure" : !j.menuOpen) },
   scroll: { changed: true },
+  filter: { changed: true },
   click_item: { changed: true, holds: (j) => j.pageKind === "item" },
   select_option: { changed: true, holds: (j) => j.optionChosen },
   read_value: { changed: false },

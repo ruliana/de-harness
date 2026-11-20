@@ -3,11 +3,12 @@
  * is offered, what code does with a tactic that did not work, and that the navigating level does one thing and stops.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { ScriptedModel, TOOL_QUESTION, say, type DecisionRequest } from "../../../src/index.js";
+import { ScriptedModel, TOOL_QUESTION, say, type DecisionRequest, type ScriptStep } from "../../../src/index.js";
 import type { BrowserSession } from "../../../src/browser/index.js";
 import { launchFixture, startFixture } from "../../../examples/storefront-browser/run.js";
 import type { ShopSite } from "../../../examples/storefront-browser/shop-site.js";
 import { runBySight } from "../../../examples/storefront-by-sight/run.js";
+import { shopTask } from "../../../examples/storefront-by-sight/tactics.js";
 
 let site: ShopSite;
 let browser: BrowserSession;
@@ -65,5 +66,47 @@ describe("storefront by sight: mechanics", () => {
     const navigator = model.requests.find((r) => !isPlanner(r) && r.questions[TOOL_QUESTION])!;
     expect((navigator.state as { instructions: string }).instructions).toMatch(/blue sweatshirt.*Point the mouse at the entry in the row of menus/);
     expect(offered(navigator)).toEqual(["hover"]); // only what the tactic needs, and no way to stop before moving
+  });
+
+  /** The judgments request has no tool question; answer it as `kind` and `itemVisible`, and let the deciding level pick scroll, scroll... */
+  const judged = (kind: string, itemVisible: number) => (request: DecisionRequest): ScriptStep => {
+    if (isPlanner(request)) return { [TOOL_QUESTION]: "scroll" };
+    if (request.questions.itemVisible) return { itemVisible: say.noul(itemVisible), pageKind: kind };
+    if (request.questions[TOOL_QUESTION]) return { [TOOL_QUESTION]: "scroll", "scroll.direction": "down" };
+    return {};
+  };
+  /** What the deciding level is offered on its first step, when the judgments of the first screenshot say `kind` and `itemVisible`. */
+  async function offeredFirst(kind: string, itemVisible: number) {
+    const model = new ScriptedModel([judged(kind, itemVisible)]);
+    await runBySight({ kind: "fixture", browser, home: `${site.url}/`, model, maxSteps: 1 });
+    return offered(model.requests.find(isPlanner)!);
+  }
+
+  it("offers the filter tactic only on a list where the item is not in view, and not more than three times", async () => {
+    expect(await offeredFirst("list", 0.01)).toContain("filter");
+    expect(await offeredFirst("list", 0.99), "the item is in view: nothing to filter").not.toContain("filter");
+    expect(await offeredFirst("home", 0.01), "not a list").not.toContain("filter");
+  });
+
+  it("tells the navigating level of each tactic only the clauses of the task it needs", async () => {
+    const task = shopTask("the shop", "a blue sweatshirt", "large");
+    const tactics = ["scroll", "select_option", "read_value", "close_overlay"];
+    const model = new ScriptedModel([
+      (request: DecisionRequest): ScriptStep => {
+        if (isPlanner(request)) return { [TOOL_QUESTION]: tactics[Math.min(model.requests.filter(isPlanner).length - 1, tactics.length - 1)]! };
+        const criteria = (request.questions[TOOL_QUESTION] as { criteria: Record<string, string> } | undefined)?.criteria;
+        return criteria ? { [TOOL_QUESTION]: Object.keys(criteria)[0]! } : {};
+      },
+    ]);
+    await runBySight({ kind: "fixture", browser, home: `${site.url}/`, model, task, maxSteps: 4, rules: false });
+    const instructions = model.requests.filter((r) => !isPlanner(r) && r.questions[TOOL_QUESTION]).map((r) => (r.state as { instructions: string }).instructions);
+    const of = (goal: RegExp) => instructions.find((i) => goal.test(i)) ?? "";
+    expect(of(/Scroll down once/)).toMatch(/blue sweatshirt/);
+    expect(of(/Scroll down once/)).not.toMatch(/size|large/i);
+    expect(of(/Click the option/)).toMatch(/size large/);
+    expect(of(/Click the option/)).not.toMatch(/sweatshirt/);
+    expect(of(/Point at the value/)).toMatch(/price of a blue sweatshirt/);
+    expect(of(/Point at the value/)).not.toMatch(/size|large/i);
+    expect(of(/Close what is in the way/)).not.toMatch(/sweatshirt|size|price/i); // nothing of the task
   });
 });

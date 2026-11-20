@@ -62,19 +62,19 @@
       "answers": {
         "itemVisible": {
           "type": "noul",
-          "noul": 0.96
+          "noul": 0.88
         },
         "menuOpen": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0.02
         },
         "optionChosen": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0.02
         },
         "valueVisible": {
           "type": "noul",
-          "noul": 0.92
+          "noul": 0.93
         },
         "pageKind": {
           "type": "choice",

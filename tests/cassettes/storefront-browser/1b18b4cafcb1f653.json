@@ -115,12 +115,12 @@
         "__tool__": {
           "type": "choice",
           "choice": "hover",
-          "confidence": 0.85,
+          "confidence": 0.87,
           "probabilities": {
             "navigate": 0,
-            "click": 0.06,
-            "hover": 0.87,
-            "scroll": 0.06,
+            "click": 0.07,
+            "hover": 0.89,
+            "scroll": 0.03,
             "press_key": 0,
             "go_back": 0,
             "read_price": 0,
@@ -141,54 +141,54 @@
             "top": 0.1,
             "bottom": 0.13,
             "left": 0.22,
-            "right": 0.3
+            "right": 0.29
           },
-          "confidence": 0.74
+          "confidence": 0.75
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.45
+          "noul": 0.48
         },
         "hover.target": {
           "type": "box",
           "box": {
             "top": 0.1,
             "bottom": 0.13,
-            "left": 0.21,
-            "right": 0.3
+            "left": 0.22,
+            "right": 0.29
           },
-          "confidence": 0.72
+          "confidence": 0.76
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.62
+          "noul": 0.68
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.76,
+          "confidence": 0.86,
           "probabilities": {
-            "down": 0.88,
-            "bottom": 0.12
+            "down": 0.93,
+            "bottom": 0.07
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Tab",
-          "confidence": 0.73,
+          "confidence": 0.76,
           "probabilities": {
-            "Enter": 0.1,
-            "Tab": 0.82,
-            "Escape": 0.08
+            "Enter": 0.09,
+            "Tab": 0.84,
+            "Escape": 0.07
           }
         },
         "read_price.target": {
           "type": "box",
           "box": {
-            "top": 0.09,
+            "top": 0.05,
             "bottom": 0.53,
-            "left": 0.05,
-            "right": 0.34
+            "left": 0.04,
+            "right": 0.44
           },
           "confidence": 0.03
         },
