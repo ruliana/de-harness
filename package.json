@@ -11,7 +11,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:live": "HARNESS_CASSETTE=record NODE_USE_ENV_PROXY=1 vitest run"
+    "test:live": "HARNESS_CASSETTE=record NODE_USE_ENV_PROXY=1 vitest run",
+    "example:rooms": "NODE_USE_ENV_PROXY=1 tsx examples/rooms/main.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",

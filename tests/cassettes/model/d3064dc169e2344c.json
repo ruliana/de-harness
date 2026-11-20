@@ -28,7 +28,7 @@
       "answers": {
         "greeting": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         }
       },
       "usage": {
