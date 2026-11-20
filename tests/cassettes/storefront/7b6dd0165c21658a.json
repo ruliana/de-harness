@@ -1,0 +1,1215 @@
+{
+  "hash": "7b6dd0165c21658a",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Find a blue sweatshirt in the shop, select size large, and get the price. Stop once `state.price` shows the price of a blue sweatshirt in size large.",
+        "state": {
+          "page": "collection",
+          "collection": {
+            "section": "Women > Clothing > Sweatshirts & Hoodies",
+            "products": 273,
+            "colour_filter": null,
+            "products_matching": 273
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "open_collection",
+            "args": {
+              "collection": "womens-sweatshirts-hoodies"
+            },
+            "summary": "opened the collection \"Sweatshirts & Hoodies\" (273 products)"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_collection": "Opens one section of the shop menu and lists its products.",
+            "filter_colour": "Keeps only the products of the open collection that come in a colour the instructions ask for.",
+            "open_product": "Opens one product of the open collection.",
+            "go_back": "Goes back to the page before this one, because this page leads nowhere useful.",
+            "end": "Stops, because `state.price` shows the price that `instructions` ask for."
+          }
+        },
+        "open_collection.collection": {
+          "type": "choice",
+          "instructions": "Which of these sections of the shop is the best place to look for the item that `instructions` ask for?",
+          "criteria": {
+            "bestsellers": "Women > Featured Shops > Best Sellers",
+            "new-arrivals": "Women > Featured Shops > New Arrivals",
+            "travel-in-alo": "Women > Featured Shops > Travel in Alo",
+            "as-seen-on-the-jenners": "Women > Featured Shops > As Seen on Kendall & Kylie",
+            "lounge-shop": "Women > Featured Shops > Loungewear Edit",
+            "womens-sale-all": "Women > Featured Shops > Sale",
+            "best-sets-1": "Women > Clothing > Matching Sets",
+            "tops": "Women > Clothing > Tops",
+            "womens-sweatshirts-hoodies": "Women > Clothing > Sweatshirts & Hoodies",
+            "womens-leggings": "Women > Clothing > Leggings",
+            "womens-jackets": "Women > Clothing > Jackets & Coats",
+            "pants": "Women > Clothing > Pants & Trousers",
+            "bras": "Women > Clothing > Sports Bras",
+            "womens-shorts": "Women > Clothing > Shorts",
+            "skirts": "Women > Clothing > Skirts",
+            "sweatpants": "Women > Clothing > Sweatpants",
+            "sweaters": "Women > Clothing > Sweaters & Knitwear",
+            "dresses": "Women > Clothing > Dresses",
+            "onesies": "Women > Clothing > Onesies",
+            "underwear": "Women > Clothing > Intimates",
+            "yoga": "Women > Shop by Activity > Yoga",
+            "train": "Women > Shop by Activity > Train",
+            "pilates": "Women > Shop by Activity > Pilates",
+            "run": "Women > Shop by Activity > Run",
+            "tennis-inspired": "Women > Shop by Activity > Tennis",
+            "steel-grey": "Women > Shop by Color > Steel Grey",
+            "toasted-almond": "Women > Shop by Color > Toasted Almond",
+            "eclipse-blue": "Women > Shop by Color > Eclipse Blue",
+            "raisinette": "Women > Shop by Color > Raisinette",
+            "oatmeal-heather": "Women > Shop by Color > Oatmeal Heather",
+            "ballet-pink": "Women > Shop by Color > Ballet Pink",
+            "gravel": "Women > Shop by Color > Gravel",
+            "white": "Women > Shop by Color > White",
+            "black": "Women > Shop by Color > Black",
+            "womens-navy": "Women > Shop by Color > Navy",
+            "espresso-1": "Women > Shop by Color > Espresso",
+            "grey": "Women > Shop by Color > Grey",
+            "hats": "Women > Accessories > Hats",
+            "bags-1": "Women > Accessories > Bags",
+            "yoga-gear": "Women > Accessories > Yoga Mats & Equipment",
+            "socks": "Women > Accessories > Socks",
+            "hair-accessories": "Women > Accessories > Hair Accessories",
+            "shoes": "Women > Accessories > Shoes",
+            "sunglasses": "Women > Accessories > Sunglasses",
+            "jewelry": "Women > Accessories > Jewelry",
+            "beauty-shop-all": "Women > Wellness > Shop All",
+            "haircare": "Women > Wellness > Haircare",
+            "face": "Women > Wellness > Skincare",
+            "body": "Women > Wellness > Bodycare",
+            "homecare": "Women > Wellness > Home Essentials",
+            "gels": "Women > Wellness > Supplements",
+            "mens-bestsellers": "Men > Featured Shops > Best Sellers",
+            "mens-new-arrivals": "Men > Featured Shops > New Arrivals",
+            "performance-heros": "Men > Featured Shops > Performance",
+            "mens-lounge-shop": "Men > Featured Shops > Recovery",
+            "mens-sale": "Men > Featured Shops > Sale",
+            "mens-sweatshirts-hoodies": "Men > Clothing > Sweatshirts & Hoodies",
+            "tees-tanks": "Men > Clothing > Shirts",
+            "mens-shorts": "Men > Clothing > Shorts",
+            "mens-pants": "Men > Clothing > Pants",
+            "mens-sweatpants": "Men > Clothing > Sweatpants",
+            "mens-jackets": "Men > Clothing > Jackets",
+            "mens-underwear": "Men > Clothing > Boxers",
+            "mens-train": "Men > Shop by Activity > Train",
+            "mens-run": "Men > Shop by Activity > Run",
+            "mens-yoga": "Men > Shop by Activity > Yoga",
+            "mens-tennis": "Men > Shop by Activity > Tennis",
+            "gift-cards": "Accessories > Shop All > Gift Cards",
+            "sneakers": "Shoes > Shop All > Sneakers",
+            "slides": "Shoes > Shop All > Slides"
+          }
+        },
+        "filter_colour.colours[Black]": {
+          "type": "noul",
+          "instructions": "Is Black a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Ivory]": {
+          "type": "noul",
+          "instructions": "Is Ivory a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Athletic Heather Grey]": {
+          "type": "noul",
+          "instructions": "Is Athletic Heather Grey a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Navy]": {
+          "type": "noul",
+          "instructions": "Is Navy a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Espresso]": {
+          "type": "noul",
+          "instructions": "Is Espresso a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Bone]": {
+          "type": "noul",
+          "instructions": "Is Bone a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[White]": {
+          "type": "noul",
+          "instructions": "Is White a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Deep Gravel]": {
+          "type": "noul",
+          "instructions": "Is Deep Gravel a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Gravel]": {
+          "type": "noul",
+          "instructions": "Is Gravel a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Oatmeal Heather]": {
+          "type": "noul",
+          "instructions": "Is Oatmeal Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Olive Tree]": {
+          "type": "noul",
+          "instructions": "Is Olive Tree a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[White Heather]": {
+          "type": "noul",
+          "instructions": "Is White Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Anthracite]": {
+          "type": "noul",
+          "instructions": "Is Anthracite a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Winter Frost]": {
+          "type": "noul",
+          "instructions": "Is Winter Frost a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Frosted Pearl]": {
+          "type": "noul",
+          "instructions": "Is Frosted Pearl a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Platinum Grey]": {
+          "type": "noul",
+          "instructions": "Is Platinum Grey a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Light Provence Blue]": {
+          "type": "noul",
+          "instructions": "Is Light Provence Blue a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Java Brown]": {
+          "type": "noul",
+          "instructions": "Is Java Brown a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Paradise Pink]": {
+          "type": "noul",
+          "instructions": "Is Paradise Pink a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Light Cocoa]": {
+          "type": "noul",
+          "instructions": "Is Light Cocoa a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Vintage Pink]": {
+          "type": "noul",
+          "instructions": "Is Vintage Pink a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Sunshine]": {
+          "type": "noul",
+          "instructions": "Is Sunshine a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Azure Blue]": {
+          "type": "noul",
+          "instructions": "Is Azure Blue a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Pink Marshmallow]": {
+          "type": "noul",
+          "instructions": "Is Pink Marshmallow a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[California Blue]": {
+          "type": "noul",
+          "instructions": "Is California Blue a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Bamboo Green]": {
+          "type": "noul",
+          "instructions": "Is Bamboo Green a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Rich Bordeaux]": {
+          "type": "noul",
+          "instructions": "Is Rich Bordeaux a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Ivory/Bone/Gravel]": {
+          "type": "noul",
+          "instructions": "Is Ivory/Bone/Gravel a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Sunset Pink Tonal]": {
+          "type": "noul",
+          "instructions": "Is Sunset Pink Tonal a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Athletic Heather Grey Tonal]": {
+          "type": "noul",
+          "instructions": "Is Athletic Heather Grey Tonal a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Grey Triblend]": {
+          "type": "noul",
+          "instructions": "Is Grey Triblend a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Bluestone]": {
+          "type": "noul",
+          "instructions": "Is Bluestone a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Burgundy]": {
+          "type": "noul",
+          "instructions": "Is Burgundy a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Brownstone]": {
+          "type": "noul",
+          "instructions": "Is Brownstone a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Candy Heart Pink]": {
+          "type": "noul",
+          "instructions": "Is Candy Heart Pink a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Plum Kiss]": {
+          "type": "noul",
+          "instructions": "Is Plum Kiss a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Dune Grass]": {
+          "type": "noul",
+          "instructions": "Is Dune Grass a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Moonshadow Blue]": {
+          "type": "noul",
+          "instructions": "Is Moonshadow Blue a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Charcoal Green Tonal]": {
+          "type": "noul",
+          "instructions": "Is Charcoal Green Tonal a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Gravel Heather]": {
+          "type": "noul",
+          "instructions": "Is Gravel Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Dark Heather Grey]": {
+          "type": "noul",
+          "instructions": "Is Dark Heather Grey a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Navy Tonal]": {
+          "type": "noul",
+          "instructions": "Is Navy Tonal a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Espresso Tonal]": {
+          "type": "noul",
+          "instructions": "Is Espresso Tonal a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Gravel Wash]": {
+          "type": "noul",
+          "instructions": "Is Gravel Wash a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Vintage Black Tonal]": {
+          "type": "noul",
+          "instructions": "Is Vintage Black Tonal a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Celestial Blue Granite Heather]": {
+          "type": "noul",
+          "instructions": "Is Celestial Blue Granite Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Black Wash]": {
+          "type": "noul",
+          "instructions": "Is Black Wash a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Woodrose Wash]": {
+          "type": "noul",
+          "instructions": "Is Woodrose Wash a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Dark Heather Grey Tonal]": {
+          "type": "noul",
+          "instructions": "Is Dark Heather Grey Tonal a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Macadamia Blush]": {
+          "type": "noul",
+          "instructions": "Is Macadamia Blush a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Bone Heather]": {
+          "type": "noul",
+          "instructions": "Is Bone Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[White Heather Grey]": {
+          "type": "noul",
+          "instructions": "Is White Heather Grey a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Chai Latte]": {
+          "type": "noul",
+          "instructions": "Is Chai Latte a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Black Pinstripe]": {
+          "type": "noul",
+          "instructions": "Is Black Pinstripe a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Espresso Pinstripe]": {
+          "type": "noul",
+          "instructions": "Is Espresso Pinstripe a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Bright Red]": {
+          "type": "noul",
+          "instructions": "Is Bright Red a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Candlelight Yellow]": {
+          "type": "noul",
+          "instructions": "Is Candlelight Yellow a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Bone Pinstripe]": {
+          "type": "noul",
+          "instructions": "Is Bone Pinstripe a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Blue Breeze]": {
+          "type": "noul",
+          "instructions": "Is Blue Breeze a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Sun Kissed Brown]": {
+          "type": "noul",
+          "instructions": "Is Sun Kissed Brown a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Summer Romance Red]": {
+          "type": "noul",
+          "instructions": "Is Summer Romance Red a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Espresso Multi]": {
+          "type": "noul",
+          "instructions": "Is Espresso Multi a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Satsuma Breeze]": {
+          "type": "noul",
+          "instructions": "Is Satsuma Breeze a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Vintage Athletic Heather]": {
+          "type": "noul",
+          "instructions": "Is Vintage Athletic Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Warm Butter]": {
+          "type": "noul",
+          "instructions": "Is Warm Butter a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Java Brown Heather]": {
+          "type": "noul",
+          "instructions": "Is Java Brown Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Black Multi]": {
+          "type": "noul",
+          "instructions": "Is Black Multi a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Rich Bordeaux Multi]": {
+          "type": "noul",
+          "instructions": "Is Rich Bordeaux Multi a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Black Marl]": {
+          "type": "noul",
+          "instructions": "Is Black Marl a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Frosted Pearl Marl]": {
+          "type": "noul",
+          "instructions": "Is Frosted Pearl Marl a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Frosted Pearl Heather]": {
+          "type": "noul",
+          "instructions": "Is Frosted Pearl Heather a shade of the colour that `instructions` ask for?"
+        },
+        "filter_colour.colours[Black Heather]": {
+          "type": "noul",
+          "instructions": "Is Black Heather a shade of the colour that `instructions` ask for?"
+        },
+        "open_product.product": {
+          "type": "choice",
+          "instructions": "Which of these products of the open collection in `state.collection` is the item that `instructions` ask for?",
+          "criteria": {
+            "Waffle Chenille Edition Hoodie - Black": "Women: Hoodies, colour Black",
+            "Cropped Accolade Crewneck - Paradise Pink": "Women: Pullovers, colour Paradise Pink",
+            "Make Waves Hoodie - Charcoal Green Tonal": "Women: Hoodies, colour Charcoal Green Tonal",
+            "Cropped Mountain Peak Full-Zip Hoodie - Ivory": "Women: Hoodies, colour Ivory",
+            "Cropped Serenity Coverup - Black": "Women: Pullovers, colour Black",
+            "Accolade Full Zip Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Accolade Crew Neck Pullover - Espresso": "Women: Pullovers, colour Espresso",
+            "Accolade Hoodie - Navy": "Women: Hoodies, colour Navy",
+            "Accolade 1/4 Zip Pullover - Black": "Women: Pullovers, colour Black",
+            "Make Waves Hoodie - Ivory/Bone/Gravel": "Women: Hoodies, colour Ivory/Bone/Gravel",
+            "Cropped Mountain Peak Full-Zip Hoodie - Black": "Women: Hoodies, colour Black",
+            "Muse Hoodie - Gravel Heather": "Women: Hoodies, colour Gravel Heather",
+            "Unisex Wool Cashmere New Class Crewneck Sweater - Black": "Women: Sweaters, colour Black",
+            "Accolade Hoodie - Bone": "Women: Hoodies, colour Bone",
+            "Soho Pullover - Ivory": "Women: Pullovers, colour Ivory",
+            "Make Waves Crew Neck Pullover - Sunset Pink Tonal": "Women: Pullovers, colour Sunset Pink Tonal",
+            "Bae Hoodie - Ivory": "Women: Hoodies, colour Ivory",
+            "Accolade Full Zip Hoodie - Black": "Women: Hoodies, colour Black",
+            "Muse Hoodie - Ivory": "Women: Hoodies, colour Ivory",
+            "Wool Cashmere New Class Full Zip Hoodie - Platinum Grey": "Women: Hoodies, colour Platinum Grey",
+            "Unisex Wool Cashmere New Class Crewneck Sweater - Platinum Grey": "Women: Sweaters, colour Platinum Grey",
+            "Make Waves Hoodie - Sunset Pink Tonal": "Women: Hoodies, colour Sunset Pink Tonal",
+            "Sweet Escape Zip Up Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Cropped Accolade Crewneck - Black": "Women: Pullovers, colour Black",
+            "Alosoft 1/2 Zip Rapid Pullover - Black": "Women: Long Sleeves, colour Black",
+            "Accolade 1/4 Zip Pullover - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Accolade Crew Neck Pullover - Black": "Women: Pullovers, colour Black",
+            "Wool Cashmere New Class Full Zip Hoodie - Black": "Women: Hoodies, colour Black",
+            "Accolade Crew Neck Pullover - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Hazy Mock Neck Pullover - Ivory": "Women: Pullovers, colour Ivory",
+            "Hazy Mock Neck Pullover - Black": "Women: Pullovers, colour Black",
+            "Accolade Hoodie - Black": "Women: Hoodies, colour Black",
+            "Accolade Crew Neck Pullover - Gravel": "Women: Pullovers, colour Gravel",
+            "Soho Pullover - Black": "Women: Pullovers, colour Black",
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Dark Heather Grey": "Women: Pullovers, colour Dark Heather Grey",
+            "Accolade Hoodie - Espresso": "Women: Hoodies, colour Espresso",
+            "Muse Hoodie - Navy": "Women: Hoodies, colour Navy",
+            "Accolade Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Muse Hoodie - Black": "Women: Hoodies, colour Black",
+            "Make Waves Hoodie - Navy Tonal": "Women: Hoodies, colour Navy Tonal",
+            "Bae Hoodie - Black": "Women: Hoodies, colour Black",
+            "Alosoft 1/2 Zip Rapid Pullover - White": "Women: Long Sleeves, colour White",
+            "Muse Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Accolade Hoodie - Ivory": "Women: Hoodies, colour Ivory",
+            "Cable Knit Winter Bliss Hoodie - Black": "Women: Hoodies, colour Black",
+            "Chill Crew Neck Pullover - Black": "Women: Pullovers, colour Black",
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Ivory": "Women: Pullovers, colour Ivory",
+            "Sweet Escape Zip Up Hoodie - Ivory": "Women: Hoodies, colour Ivory",
+            "Make Waves Hoodie - Espresso Tonal": "Women: Hoodies, colour Espresso Tonal",
+            "Scholar Hooded Sweater - Espresso": "Women: Hoodies, colour Espresso",
+            "Bae Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Make Waves Hoodie - Athletic Heather Grey Tonal": "Women: Hoodies, colour Athletic Heather Grey Tonal",
+            "Waffle Weekend Escape Mock Neck Long Sleeve - Black": "Women: Pullovers, colour Black",
+            "Sweet Escape Zip Up Hoodie - Black": "Women: Hoodies, colour Black",
+            "Accolade Hoodie - White": "Women: Hoodies, colour White",
+            "Chill Vintage Wash Hoodie - Gravel Wash": "Women: Hoodies, colour Gravel Wash",
+            "Soho Pullover - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Make Waves Hoodie - Vintage Black Tonal": "Women: Hoodies, colour Vintage Black Tonal",
+            "Wool Cashmere New Class Hoodie - Platinum Grey": "Women: Hoodies, colour Platinum Grey",
+            "Triumph Restore Crew Neck Sweatshirt - Black": "Women: Pullovers, colour Black",
+            "Wool Cashmere New Class Hoodie - Celestial Blue Granite Heather": "Women: Hoodies, colour Celestial Blue Granite Heather",
+            "Wool Cashmere New Class Hoodie - Black": "Women: Hoodies, colour Black",
+            "Chill Crew Neck Pullover - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Black": "Women: Pullovers, colour Black",
+            "Double Take Hoodie - Black": "Women: Hoodies, colour Black",
+            "Chill Crew Neck Pullover - Bone": "Women: Pullovers, colour Bone",
+            "Scholar Hooded Sweater - Ivory": "Women: Hoodies, colour Ivory",
+            "Renown Heavy Weight Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Renown Heavy Weight Full Zip Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Renown Heavy Weight Hoodie - Black": "Women: Hoodies, colour Black",
+            "Cropped 1/4 Zip Alumni Pullover - White": "Women: Pullovers, colour White",
+            "Scholar Hooded Sweater - Black": "Women: Hoodies, colour Black",
+            "Double Take Hoodie - Bone": "Women: Hoodies, colour Bone",
+            "Triumph Restore Hoodie - Black": "Women: Hoodies, colour Black",
+            "Triumph Restore Hoodie - Bone": "Women: Hoodies, colour Bone",
+            "Light Weight Takeaway Track Pullover - Black": "Women: Pullovers, colour Black",
+            "Triumph Restore Hoodie - Grey Triblend": "Women: Hoodies, colour Grey Triblend",
+            "Triumph Restore Crew Neck Sweatshirt - Grey Triblend": "Women: Pullovers, colour Grey Triblend",
+            "Cashmere Plush Waffle Full Zip Hoodie - Ivory": "Women: Hoodies, colour Ivory",
+            "Cashmere Plush Waffle Full Zip Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Cashmere Plush Waffle Full Zip Hoodie - Black": "Women: Hoodies, colour Black",
+            "Chill Vintage Wash Hoodie - Black Wash": "Women: Hoodies, colour Black Wash",
+            "Cable Knit Winter Bliss Hoodie - Ivory": "Women: Hoodies, colour Ivory",
+            "Hazy Mock Neck Pullover - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Light Weight Takeaway Track Pullover - Navy": "Women: Pullovers, colour Navy",
+            "Cropped 1/4 Zip Alumni Pullover - Black": "Women: Pullovers, colour Black",
+            "Alosoft 1/2 Zip Rapid Pullover - Anthracite": "Women: Long Sleeves, colour Anthracite",
+            "Accolade Crew Neck Pullover - Oatmeal Heather": "Women: Pullovers, colour Oatmeal Heather",
+            "Chill Vintage Wash Hoodie - Woodrose Wash": "Women: Hoodies, colour Woodrose Wash",
+            "Accolade Crew Neck Pullover - Bluestone": "Women: Pullovers, colour Bluestone",
+            "Waffle Weekend Escape Mock Neck Long Sleeve - Ivory": "Women: Pullovers, colour Ivory",
+            "Renown Full Zip Hoodie - Gravel": "Women: Hoodies, colour Gravel",
+            "Renown Heavy Weight Full Zip Hoodie - Black": "Women: Hoodies, colour Black",
+            "Cropped Serenity Coverup - Ivory": "Women: Pullovers, colour Ivory",
+            "Chill Hoodie - Black": "Women: Hoodies, colour Black",
+            "Chill Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Make Waves Crew Neck Pullover - Dark Heather Grey Tonal": "Women: Pullovers, colour Dark Heather Grey Tonal",
+            "Chill Hoodie - Navy": "Women: Hoodies, colour Navy",
+            "Make Waves Crew Neck Pullover - Athletic Heather Grey Tonal": "Women: Pullovers, colour Athletic Heather Grey Tonal",
+            "Make Waves Crew Neck Pullover - Ivory/Bone/Gravel": "Women: Pullovers, colour Ivory/Bone/Gravel",
+            "Cashmere Plush Waffle Full Zip Hoodie - Macadamia Blush": "Women: Hoodies, colour Macadamia Blush",
+            "Sheer Cashmere Cropped Cardigan - Black": "Women: Sweaters, colour Black",
+            "Sheer Cashmere Cropped Cardigan - Ivory": "Women: Sweaters, colour Ivory",
+            "Cropped Sway Crew Neck Pullover - Black": "Women: Pullovers, colour Black",
+            "Cropped Sway Crew Neck Pullover - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Accolade 1/4 Zip Pullover - Navy": "Women: Pullovers, colour Navy",
+            "Cropped Serenity Coverup - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Cropped Accolade Crewneck - Navy": "Women: Pullovers, colour Navy",
+            "Cropped Accolade Crewneck - White": "Women: Pullovers, colour White",
+            "Cropped Accolade Crewneck - Ivory": "Women: Pullovers, colour Ivory",
+            "Wool Cashmere New Class Hoodie - Bone Heather": "Women: Hoodies, colour Bone Heather",
+            "Double Take Long Sleeve 1/4 Zip - Bone": "Women: Long Sleeves, colour Bone",
+            "Accolade Crew Neck Pullover - Navy": "Women: Pullovers, colour Navy",
+            "Cropped Serenity Coverup - Navy": "Women: Pullovers, colour Navy",
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Burgundy": "Women: Pullovers, colour Burgundy",
+            "Double Take Long Sleeve 1/4 Zip - Espresso": "Women: Long Sleeves, colour Espresso",
+            "Double Take Long Sleeve 1/4 Zip - Black": "Women: Long Sleeves, colour Black",
+            "Accolade Crew Neck Pullover - Bone": "Women: Pullovers, colour Bone",
+            "Cable Knit Winter Bliss Hoodie - Light Cocoa": "Women: Hoodies, colour Light Cocoa",
+            "Hazy Mock Neck Pullover - Espresso": "Women: Pullovers, colour Espresso",
+            "Cropped Serenity Coverup - Light Cocoa": "Women: Pullovers, colour Light Cocoa",
+            "Scholar Hooded Sweater - Light Cocoa": "Women: Hoodies, colour Light Cocoa",
+            "Scholar Hooded Sweater - Burgundy": "Women: Hoodies, colour Burgundy",
+            "Accolade 1/4 Zip Pullover - Bluestone": "Women: Pullovers, colour Bluestone",
+            "Cable Knit Winter Bliss Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Muse Crew Neck Pullover - Black": "Women: Pullovers, colour Black",
+            "Muse Crew Neck Pullover - Navy": "Women: Pullovers, colour Navy",
+            "Cropped Accolade Crewneck - Winter Frost": "Women: Pullovers, colour Winter Frost",
+            "Cropped Serenity Coverup - Winter Frost": "Women: Pullovers, colour Winter Frost",
+            "Polar Fleece Retreat Cover Up - Black": "Women: Pullovers, colour Black",
+            "Polar Fleece Retreat Cover Up - White Heather Grey": "Women: Pullovers, colour White Heather Grey",
+            "Cable Knit Winter Bliss Hoodie - Winter Frost": "Women: Hoodies, colour Winter Frost",
+            "Polar Fleece Hazy Pullover - Ivory": "Women: Pullovers, colour Ivory",
+            "Sway Full Zip Hoodie - Black": "Women: Hoodies, colour Black",
+            "Sway Full Zip Hoodie - Brownstone": "Women: Hoodies, colour Brownstone",
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Black": "Women: Hoodies, colour Black",
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Platinum Grey": "Women: Hoodies, colour Platinum Grey",
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Chai Latte": "Women: Hoodies, colour Chai Latte",
+            "Wool Cashmere New Class Hoodie - Winter Frost": "Women: Hoodies, colour Winter Frost",
+            "Renown Heavy Weight Hoodie - Winter Frost": "Women: Hoodies, colour Winter Frost",
+            "Cropped Serenity Coverup - Espresso": "Women: Pullovers, colour Espresso",
+            "Wool Cashmere New Class 1/4 Zip Pullover - Black": "Women: Sweaters, colour Black",
+            "Pinstripe Hoodie - Black Pinstripe": "Women: Hoodies, colour Black Pinstripe",
+            "Pinstripe Hoodie - Espresso Pinstripe": "Women: Hoodies, colour Espresso Pinstripe",
+            "Chill Hoodie - Brownstone": "Women: Hoodies, colour Brownstone",
+            "Wool Cashmere New Class 1/4 Zip Pullover - Navy": "Women: Sweaters, colour Navy",
+            "Cropped Accolade Crewneck - Bright Red": "Women: Pullovers, colour Bright Red",
+            "Cropped Accolade Crewneck - Anthracite": "Women: Pullovers, colour Anthracite",
+            "Hazy Mock Neck Pullover - Anthracite": "Women: Pullovers, colour Anthracite",
+            "Cropped Sway Crew Neck Pullover - Navy": "Women: Pullovers, colour Navy",
+            "Wool Cashmere Cropped New Class Crewneck Sweater - Navy": "Women: Pullovers, colour Navy",
+            "Sway Full Zip Hoodie - Athletic Heather Grey": "Women: Hoodies, colour Athletic Heather Grey",
+            "Cropped Accolade Crewneck - Candlelight Yellow": "Women: Pullovers, colour Candlelight Yellow",
+            "Renown Heavy Weight Crew Neck Pullover - Bone": "Women: Pullovers, colour Bone",
+            "Renown Heavy Weight Crew Neck Pullover - Athletic Heather Grey": "Women: Pullovers, colour Athletic Heather Grey",
+            "Double Take Hoodie - Anthracite": "Women: Hoodies, colour Anthracite",
+            "Scholar Hooded Sweater - Anthracite": "Women: Hoodies, colour Anthracite",
+            "Cropped Accolade Crewneck - Candy Heart Pink": "Women: Pullovers, colour Candy Heart Pink",
+            "Alosoft Sincere Fitted Jacket - Candy Heart Pink": "Women: Jackets, colour Candy Heart Pink",
+            "Alosoft Sincere Fitted Jacket - Black": "Women: Jackets, colour Black",
+            "Sway Full Zip Hoodie - Plum Kiss": "Women: Hoodies, colour Plum Kiss",
+            "Sway Full Zip Hoodie - Espresso": "Women: Hoodies, colour Espresso",
+            "Accolade Crew Neck Pullover - Plum Kiss": "Women: Pullovers, colour Plum Kiss",
+            "Scholar Hooded Sweater - Gravel": "Women: Hoodies, colour Gravel",
+            "Pinstripe Hoodie - Bone Pinstripe": "Women: Hoodies, colour Bone Pinstripe",
+            "Double Take Hoodie - Gravel": "Women: Hoodies, colour Gravel",
+            "Accolade Full Zip Hoodie - Olive Tree": "Women: Hoodies, colour Olive Tree",
+            "Hazy Mock Neck Pullover - Olive Tree": "Women: Pullovers, colour Olive Tree",
+            "Cropped Serenity Coverup - Olive Tree": "Women: Pullovers, colour Olive Tree",
+            "Cropped Sway Crew Neck Pullover - Olive Tree": "Women: Pullovers, colour Olive Tree",
+            "Polar Fleece Retreat Cover Up - Olive Tree": "Women: Pullovers, colour Olive Tree",
+            "Accolade Crew Neck Pullover - Vintage Pink": "Women: Pullovers, colour Vintage Pink",
+            "Sweet Escape Zip Up Hoodie - Vintage Pink": "Women: Hoodies, colour Vintage Pink",
+            "Cropped Accolade Crewneck - Vintage Pink": "Women: Pullovers, colour Vintage Pink",
+            "Accolade 1/4 Zip Pullover - Oatmeal Heather": "Women: Pullovers, colour Oatmeal Heather",
+            "Accolade Full Zip Hoodie - Gravel": "Women: Hoodies, colour Gravel",
+            "Cropped Serenity Coverup - Oatmeal Heather": "Women: Pullovers, colour Oatmeal Heather",
+            "Scholar Knit Cropped Full Zip Jacket - Oatmeal Heather": "Women: Jackets, colour Oatmeal Heather",
+            "Cropped Accolade Crewneck - Sunshine": "Women: Pullovers, colour Sunshine",
+            "Take It Easy Long Sleeve Henley Pullover - Black": "Women: Pullovers, colour Black",
+            "Take It Easy Long Sleeve Henley Pullover - White": "Women: Pullovers, colour White",
+            "Cropped 1/4 Zip Alumni Pullover - Sunshine": "Women: Pullovers, colour Sunshine",
+            "Accolade Crew Neck Pullover - Sunshine": "Women: Pullovers, colour Sunshine",
+            "Wool Cashmere New Class Full Zip Hoodie - Oatmeal Heather": "Women: Hoodies, colour Oatmeal Heather",
+            "Wool Cashmere New Class 1/4 Zip Pullover - Oatmeal Heather": "Women: Sweaters, colour Oatmeal Heather",
+            "Chill Crew Neck Pullover - Olive Tree": "Women: Pullovers, colour Olive Tree",
+            "Accolade Crew Neck Pullover - Light Provence Blue": "Women: Pullovers, colour Light Provence Blue",
+            "Cropped 1/4 Zip Alumni Pullover - Navy": "Women: Pullovers, colour Navy",
+            "Cropped 1/4 Zip Alumni Pullover - Light Provence Blue": "Women: Pullovers, colour Light Provence Blue",
+            "Accolade Crew Neck Pullover - Paradise Pink": "Women: Pullovers, colour Paradise Pink",
+            "Wool Cashmere New Class Full Zip Hoodie - Navy": "Women: Hoodies, colour Navy",
+            "Cropped Accolade Crewneck - Light Provence Blue": "Women: Pullovers, colour Light Provence Blue",
+            "Alosoft Sincere Fitted Jacket - Navy": "Women: Jackets, colour Navy",
+            "Alosoft Sincere Fitted Jacket - Light Provence Blue": "Women: Jackets, colour Light Provence Blue",
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Paradise Pink": "Women: Hoodies, colour Paradise Pink",
+            "Wool Cashmere New Class Full Zip Hoodie - White Heather": "Women: Hoodies, colour White Heather",
+            "Double Take Hoodie - White Heather": "Women: Hoodies, colour White Heather",
+            "Axis Hooded Pullover - Blue Breeze": "Women: Pullovers, colour Blue Breeze",
+            "Accolade Crew Neck Pullover - Sun Kissed Brown": "Women: Pullovers, colour Sun Kissed Brown",
+            "Accolade Full Zip Hoodie - Navy": "Women: Hoodies, colour Navy"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "filter_colour",
+          "confidence": 1,
+          "probabilities": {
+            "open_collection": 0,
+            "filter_colour": 1,
+            "open_product": 0,
+            "go_back": 0,
+            "end": 0
+          }
+        },
+        "open_collection.collection": {
+          "type": "choice",
+          "choice": "womens-sweatshirts-hoodies",
+          "confidence": 0.99,
+          "probabilities": {
+            "bestsellers": 0,
+            "new-arrivals": 0,
+            "travel-in-alo": 0,
+            "as-seen-on-the-jenners": 0,
+            "lounge-shop": 0,
+            "womens-sale-all": 0,
+            "best-sets-1": 0,
+            "tops": 0,
+            "womens-sweatshirts-hoodies": 0.99,
+            "womens-leggings": 0,
+            "womens-jackets": 0,
+            "pants": 0,
+            "bras": 0,
+            "womens-shorts": 0,
+            "skirts": 0,
+            "sweatpants": 0,
+            "sweaters": 0,
+            "dresses": 0,
+            "onesies": 0,
+            "underwear": 0,
+            "yoga": 0,
+            "train": 0,
+            "pilates": 0,
+            "run": 0,
+            "tennis-inspired": 0,
+            "steel-grey": 0,
+            "toasted-almond": 0,
+            "eclipse-blue": 0.01,
+            "raisinette": 0,
+            "oatmeal-heather": 0,
+            "ballet-pink": 0,
+            "gravel": 0,
+            "white": 0,
+            "black": 0,
+            "womens-navy": 0,
+            "espresso-1": 0,
+            "grey": 0,
+            "hats": 0,
+            "bags-1": 0,
+            "yoga-gear": 0,
+            "socks": 0,
+            "hair-accessories": 0,
+            "shoes": 0,
+            "sunglasses": 0,
+            "jewelry": 0,
+            "beauty-shop-all": 0,
+            "haircare": 0,
+            "face": 0,
+            "body": 0,
+            "homecare": 0,
+            "gels": 0,
+            "mens-bestsellers": 0,
+            "mens-new-arrivals": 0,
+            "performance-heros": 0,
+            "mens-lounge-shop": 0,
+            "mens-sale": 0,
+            "mens-sweatshirts-hoodies": 0,
+            "tees-tanks": 0,
+            "mens-shorts": 0,
+            "mens-pants": 0,
+            "mens-sweatpants": 0,
+            "mens-jackets": 0,
+            "mens-underwear": 0,
+            "mens-train": 0,
+            "mens-run": 0,
+            "mens-yoga": 0,
+            "mens-tennis": 0,
+            "gift-cards": 0,
+            "sneakers": 0,
+            "slides": 0
+          }
+        },
+        "filter_colour.colours[Black]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Ivory]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Athletic Heather Grey]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[Navy]": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "filter_colour.colours[Espresso]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Bone]": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "filter_colour.colours[White]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Deep Gravel]": {
+          "type": "noul",
+          "noul": 0.19
+        },
+        "filter_colour.colours[Gravel]": {
+          "type": "noul",
+          "noul": 0.19
+        },
+        "filter_colour.colours[Oatmeal Heather]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Olive Tree]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[White Heather]": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "filter_colour.colours[Anthracite]": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "filter_colour.colours[Winter Frost]": {
+          "type": "noul",
+          "noul": 0.58
+        },
+        "filter_colour.colours[Frosted Pearl]": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "filter_colour.colours[Platinum Grey]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Light Provence Blue]": {
+          "type": "noul",
+          "noul": 0.85
+        },
+        "filter_colour.colours[Java Brown]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Paradise Pink]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Light Cocoa]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Vintage Pink]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Sunshine]": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "filter_colour.colours[Azure Blue]": {
+          "type": "noul",
+          "noul": 0.92
+        },
+        "filter_colour.colours[Pink Marshmallow]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[California Blue]": {
+          "type": "noul",
+          "noul": 0.91
+        },
+        "filter_colour.colours[Bamboo Green]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Rich Bordeaux]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Ivory/Bone/Gravel]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Sunset Pink Tonal]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Athletic Heather Grey Tonal]": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "filter_colour.colours[Grey Triblend]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[Bluestone]": {
+          "type": "noul",
+          "noul": 0.82
+        },
+        "filter_colour.colours[Burgundy]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Brownstone]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[Candy Heart Pink]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Plum Kiss]": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "filter_colour.colours[Dune Grass]": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "filter_colour.colours[Moonshadow Blue]": {
+          "type": "noul",
+          "noul": 0.88
+        },
+        "filter_colour.colours[Charcoal Green Tonal]": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "filter_colour.colours[Gravel Heather]": {
+          "type": "noul",
+          "noul": 0.14
+        },
+        "filter_colour.colours[Dark Heather Grey]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Navy Tonal]": {
+          "type": "noul",
+          "noul": 0.81
+        },
+        "filter_colour.colours[Espresso Tonal]": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "filter_colour.colours[Gravel Wash]": {
+          "type": "noul",
+          "noul": 0.26
+        },
+        "filter_colour.colours[Vintage Black Tonal]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[Celestial Blue Granite Heather]": {
+          "type": "noul",
+          "noul": 0.79
+        },
+        "filter_colour.colours[Black Wash]": {
+          "type": "noul",
+          "noul": 0.16
+        },
+        "filter_colour.colours[Woodrose Wash]": {
+          "type": "noul",
+          "noul": 0.31
+        },
+        "filter_colour.colours[Dark Heather Grey Tonal]": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "filter_colour.colours[Macadamia Blush]": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "filter_colour.colours[Bone Heather]": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "filter_colour.colours[White Heather Grey]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Chai Latte]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Black Pinstripe]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Espresso Pinstripe]": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "filter_colour.colours[Bright Red]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Candlelight Yellow]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Bone Pinstripe]": {
+          "type": "noul",
+          "noul": 0.18
+        },
+        "filter_colour.colours[Blue Breeze]": {
+          "type": "noul",
+          "noul": 0.84
+        },
+        "filter_colour.colours[Sun Kissed Brown]": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "filter_colour.colours[Summer Romance Red]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "filter_colour.colours[Espresso Multi]": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "filter_colour.colours[Satsuma Breeze]": {
+          "type": "noul",
+          "noul": 0.21
+        },
+        "filter_colour.colours[Vintage Athletic Heather]": {
+          "type": "noul",
+          "noul": 0.24
+        },
+        "filter_colour.colours[Warm Butter]": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "filter_colour.colours[Java Brown Heather]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[Black Multi]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[Rich Bordeaux Multi]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "filter_colour.colours[Black Marl]": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "filter_colour.colours[Frosted Pearl Marl]": {
+          "type": "noul",
+          "noul": 0.18
+        },
+        "filter_colour.colours[Frosted Pearl Heather]": {
+          "type": "noul",
+          "noul": 0.21
+        },
+        "filter_colour.colours[Black Heather]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "open_product.product": {
+          "type": "choice",
+          "choice": "Axis Hooded Pullover - Blue Breeze",
+          "confidence": 0.29,
+          "probabilities": {
+            "Waffle Chenille Edition Hoodie - Black": 0,
+            "Cropped Accolade Crewneck - Paradise Pink": 0,
+            "Make Waves Hoodie - Charcoal Green Tonal": 0,
+            "Cropped Mountain Peak Full-Zip Hoodie - Ivory": 0,
+            "Cropped Serenity Coverup - Black": 0,
+            "Accolade Full Zip Hoodie - Athletic Heather Grey": 0,
+            "Accolade Crew Neck Pullover - Espresso": 0,
+            "Accolade Hoodie - Navy": 0.12,
+            "Accolade 1/4 Zip Pullover - Black": 0,
+            "Make Waves Hoodie - Ivory/Bone/Gravel": 0,
+            "Cropped Mountain Peak Full-Zip Hoodie - Black": 0,
+            "Muse Hoodie - Gravel Heather": 0,
+            "Unisex Wool Cashmere New Class Crewneck Sweater - Black": 0,
+            "Accolade Hoodie - Bone": 0,
+            "Soho Pullover - Ivory": 0,
+            "Make Waves Crew Neck Pullover - Sunset Pink Tonal": 0,
+            "Bae Hoodie - Ivory": 0,
+            "Accolade Full Zip Hoodie - Black": 0,
+            "Muse Hoodie - Ivory": 0,
+            "Wool Cashmere New Class Full Zip Hoodie - Platinum Grey": 0,
+            "Unisex Wool Cashmere New Class Crewneck Sweater - Platinum Grey": 0,
+            "Make Waves Hoodie - Sunset Pink Tonal": 0,
+            "Sweet Escape Zip Up Hoodie - Athletic Heather Grey": 0,
+            "Cropped Accolade Crewneck - Black": 0,
+            "Alosoft 1/2 Zip Rapid Pullover - Black": 0,
+            "Accolade 1/4 Zip Pullover - Athletic Heather Grey": 0,
+            "Accolade Crew Neck Pullover - Black": 0,
+            "Wool Cashmere New Class Full Zip Hoodie - Black": 0,
+            "Accolade Crew Neck Pullover - Athletic Heather Grey": 0,
+            "Hazy Mock Neck Pullover - Ivory": 0,
+            "Hazy Mock Neck Pullover - Black": 0,
+            "Accolade Hoodie - Black": 0,
+            "Accolade Crew Neck Pullover - Gravel": 0,
+            "Soho Pullover - Black": 0,
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Dark Heather Grey": 0,
+            "Accolade Hoodie - Espresso": 0,
+            "Muse Hoodie - Navy": 0.03,
+            "Accolade Hoodie - Athletic Heather Grey": 0,
+            "Muse Hoodie - Black": 0,
+            "Make Waves Hoodie - Navy Tonal": 0,
+            "Bae Hoodie - Black": 0,
+            "Alosoft 1/2 Zip Rapid Pullover - White": 0,
+            "Muse Hoodie - Athletic Heather Grey": 0,
+            "Accolade Hoodie - Ivory": 0,
+            "Cable Knit Winter Bliss Hoodie - Black": 0,
+            "Chill Crew Neck Pullover - Black": 0,
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Ivory": 0,
+            "Sweet Escape Zip Up Hoodie - Ivory": 0,
+            "Make Waves Hoodie - Espresso Tonal": 0,
+            "Scholar Hooded Sweater - Espresso": 0,
+            "Bae Hoodie - Athletic Heather Grey": 0,
+            "Make Waves Hoodie - Athletic Heather Grey Tonal": 0,
+            "Waffle Weekend Escape Mock Neck Long Sleeve - Black": 0,
+            "Sweet Escape Zip Up Hoodie - Black": 0,
+            "Accolade Hoodie - White": 0,
+            "Chill Vintage Wash Hoodie - Gravel Wash": 0,
+            "Soho Pullover - Athletic Heather Grey": 0,
+            "Make Waves Hoodie - Vintage Black Tonal": 0,
+            "Wool Cashmere New Class Hoodie - Platinum Grey": 0,
+            "Triumph Restore Crew Neck Sweatshirt - Black": 0,
+            "Wool Cashmere New Class Hoodie - Celestial Blue Granite Heather": 0.16,
+            "Wool Cashmere New Class Hoodie - Black": 0,
+            "Chill Crew Neck Pullover - Athletic Heather Grey": 0,
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Black": 0,
+            "Double Take Hoodie - Black": 0,
+            "Chill Crew Neck Pullover - Bone": 0,
+            "Scholar Hooded Sweater - Ivory": 0,
+            "Renown Heavy Weight Hoodie - Athletic Heather Grey": 0,
+            "Renown Heavy Weight Full Zip Hoodie - Athletic Heather Grey": 0,
+            "Renown Heavy Weight Hoodie - Black": 0,
+            "Cropped 1/4 Zip Alumni Pullover - White": 0,
+            "Scholar Hooded Sweater - Black": 0,
+            "Double Take Hoodie - Bone": 0,
+            "Triumph Restore Hoodie - Black": 0,
+            "Triumph Restore Hoodie - Bone": 0,
+            "Light Weight Takeaway Track Pullover - Black": 0,
+            "Triumph Restore Hoodie - Grey Triblend": 0,
+            "Triumph Restore Crew Neck Sweatshirt - Grey Triblend": 0,
+            "Cashmere Plush Waffle Full Zip Hoodie - Ivory": 0,
+            "Cashmere Plush Waffle Full Zip Hoodie - Athletic Heather Grey": 0,
+            "Cashmere Plush Waffle Full Zip Hoodie - Black": 0,
+            "Chill Vintage Wash Hoodie - Black Wash": 0,
+            "Cable Knit Winter Bliss Hoodie - Ivory": 0,
+            "Hazy Mock Neck Pullover - Athletic Heather Grey": 0,
+            "Light Weight Takeaway Track Pullover - Navy": 0,
+            "Cropped 1/4 Zip Alumni Pullover - Black": 0,
+            "Alosoft 1/2 Zip Rapid Pullover - Anthracite": 0,
+            "Accolade Crew Neck Pullover - Oatmeal Heather": 0,
+            "Chill Vintage Wash Hoodie - Woodrose Wash": 0,
+            "Accolade Crew Neck Pullover - Bluestone": 0.05,
+            "Waffle Weekend Escape Mock Neck Long Sleeve - Ivory": 0,
+            "Renown Full Zip Hoodie - Gravel": 0,
+            "Renown Heavy Weight Full Zip Hoodie - Black": 0,
+            "Cropped Serenity Coverup - Ivory": 0,
+            "Chill Hoodie - Black": 0,
+            "Chill Hoodie - Athletic Heather Grey": 0,
+            "Make Waves Crew Neck Pullover - Dark Heather Grey Tonal": 0,
+            "Chill Hoodie - Navy": 0.03,
+            "Make Waves Crew Neck Pullover - Athletic Heather Grey Tonal": 0,
+            "Make Waves Crew Neck Pullover - Ivory/Bone/Gravel": 0,
+            "Cashmere Plush Waffle Full Zip Hoodie - Macadamia Blush": 0,
+            "Sheer Cashmere Cropped Cardigan - Black": 0,
+            "Sheer Cashmere Cropped Cardigan - Ivory": 0,
+            "Cropped Sway Crew Neck Pullover - Black": 0,
+            "Cropped Sway Crew Neck Pullover - Athletic Heather Grey": 0,
+            "Accolade 1/4 Zip Pullover - Navy": 0.02,
+            "Cropped Serenity Coverup - Athletic Heather Grey": 0,
+            "Cropped Accolade Crewneck - Navy": 0,
+            "Cropped Accolade Crewneck - White": 0,
+            "Cropped Accolade Crewneck - Ivory": 0,
+            "Wool Cashmere New Class Hoodie - Bone Heather": 0,
+            "Double Take Long Sleeve 1/4 Zip - Bone": 0,
+            "Accolade Crew Neck Pullover - Navy": 0.04,
+            "Cropped Serenity Coverup - Navy": 0,
+            "Cashmere Plush Waffle 1/4 Zip Pullover - Burgundy": 0,
+            "Double Take Long Sleeve 1/4 Zip - Espresso": 0,
+            "Double Take Long Sleeve 1/4 Zip - Black": 0,
+            "Accolade Crew Neck Pullover - Bone": 0,
+            "Cable Knit Winter Bliss Hoodie - Light Cocoa": 0,
+            "Hazy Mock Neck Pullover - Espresso": 0,
+            "Cropped Serenity Coverup - Light Cocoa": 0,
+            "Scholar Hooded Sweater - Light Cocoa": 0,
+            "Scholar Hooded Sweater - Burgundy": 0,
+            "Accolade 1/4 Zip Pullover - Bluestone": 0.03,
+            "Cable Knit Winter Bliss Hoodie - Athletic Heather Grey": 0,
+            "Muse Crew Neck Pullover - Black": 0,
+            "Muse Crew Neck Pullover - Navy": 0,
+            "Cropped Accolade Crewneck - Winter Frost": 0,
+            "Cropped Serenity Coverup - Winter Frost": 0,
+            "Polar Fleece Retreat Cover Up - Black": 0,
+            "Polar Fleece Retreat Cover Up - White Heather Grey": 0,
+            "Cable Knit Winter Bliss Hoodie - Winter Frost": 0,
+            "Polar Fleece Hazy Pullover - Ivory": 0,
+            "Sway Full Zip Hoodie - Black": 0,
+            "Sway Full Zip Hoodie - Brownstone": 0,
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Black": 0,
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Platinum Grey": 0,
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Chai Latte": 0,
+            "Wool Cashmere New Class Hoodie - Winter Frost": 0,
+            "Renown Heavy Weight Hoodie - Winter Frost": 0.02,
+            "Cropped Serenity Coverup - Espresso": 0,
+            "Wool Cashmere New Class 1/4 Zip Pullover - Black": 0,
+            "Pinstripe Hoodie - Black Pinstripe": 0,
+            "Pinstripe Hoodie - Espresso Pinstripe": 0,
+            "Chill Hoodie - Brownstone": 0,
+            "Wool Cashmere New Class 1/4 Zip Pullover - Navy": 0,
+            "Cropped Accolade Crewneck - Bright Red": 0,
+            "Cropped Accolade Crewneck - Anthracite": 0,
+            "Hazy Mock Neck Pullover - Anthracite": 0,
+            "Cropped Sway Crew Neck Pullover - Navy": 0,
+            "Wool Cashmere Cropped New Class Crewneck Sweater - Navy": 0,
+            "Sway Full Zip Hoodie - Athletic Heather Grey": 0,
+            "Cropped Accolade Crewneck - Candlelight Yellow": 0,
+            "Renown Heavy Weight Crew Neck Pullover - Bone": 0,
+            "Renown Heavy Weight Crew Neck Pullover - Athletic Heather Grey": 0,
+            "Double Take Hoodie - Anthracite": 0,
+            "Scholar Hooded Sweater - Anthracite": 0,
+            "Cropped Accolade Crewneck - Candy Heart Pink": 0,
+            "Alosoft Sincere Fitted Jacket - Candy Heart Pink": 0,
+            "Alosoft Sincere Fitted Jacket - Black": 0,
+            "Sway Full Zip Hoodie - Plum Kiss": 0,
+            "Sway Full Zip Hoodie - Espresso": 0,
+            "Accolade Crew Neck Pullover - Plum Kiss": 0,
+            "Scholar Hooded Sweater - Gravel": 0,
+            "Pinstripe Hoodie - Bone Pinstripe": 0,
+            "Double Take Hoodie - Gravel": 0,
+            "Accolade Full Zip Hoodie - Olive Tree": 0,
+            "Hazy Mock Neck Pullover - Olive Tree": 0,
+            "Cropped Serenity Coverup - Olive Tree": 0,
+            "Cropped Sway Crew Neck Pullover - Olive Tree": 0,
+            "Polar Fleece Retreat Cover Up - Olive Tree": 0,
+            "Accolade Crew Neck Pullover - Vintage Pink": 0,
+            "Sweet Escape Zip Up Hoodie - Vintage Pink": 0,
+            "Cropped Accolade Crewneck - Vintage Pink": 0,
+            "Accolade 1/4 Zip Pullover - Oatmeal Heather": 0,
+            "Accolade Full Zip Hoodie - Gravel": 0,
+            "Cropped Serenity Coverup - Oatmeal Heather": 0,
+            "Scholar Knit Cropped Full Zip Jacket - Oatmeal Heather": 0,
+            "Cropped Accolade Crewneck - Sunshine": 0,
+            "Take It Easy Long Sleeve Henley Pullover - Black": 0,
+            "Take It Easy Long Sleeve Henley Pullover - White": 0,
+            "Cropped 1/4 Zip Alumni Pullover - Sunshine": 0,
+            "Accolade Crew Neck Pullover - Sunshine": 0,
+            "Wool Cashmere New Class Full Zip Hoodie - Oatmeal Heather": 0,
+            "Wool Cashmere New Class 1/4 Zip Pullover - Oatmeal Heather": 0,
+            "Chill Crew Neck Pullover - Olive Tree": 0,
+            "Accolade Crew Neck Pullover - Light Provence Blue": 0.11,
+            "Cropped 1/4 Zip Alumni Pullover - Navy": 0,
+            "Cropped 1/4 Zip Alumni Pullover - Light Provence Blue": 0,
+            "Accolade Crew Neck Pullover - Paradise Pink": 0,
+            "Wool Cashmere New Class Full Zip Hoodie - Navy": 0.02,
+            "Cropped Accolade Crewneck - Light Provence Blue": 0.02,
+            "Alosoft Sincere Fitted Jacket - Navy": 0,
+            "Alosoft Sincere Fitted Jacket - Light Provence Blue": 0,
+            "Wool Cashmere Ribbed Noble Full Zip Hoodie - Paradise Pink": 0,
+            "Wool Cashmere New Class Full Zip Hoodie - White Heather": 0,
+            "Double Take Hoodie - White Heather": 0.02,
+            "Axis Hooded Pullover - Blue Breeze": 0.29,
+            "Accolade Crew Neck Pullover - Sun Kissed Brown": 0,
+            "Accolade Full Zip Hoodie - Navy": 0.04
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 9736,
+        "output_tokens": 5959
+      }
+    }
+  }
+}

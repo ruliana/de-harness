@@ -1,0 +1,710 @@
+{
+  "hash": "1333230dd7c0fc3b",
+  "request": {
+    "method": "GET",
+    "url": "https://www.aloyoga.com/collections/womens-sweatshirts-hoodies/products.json?limit=250&page=2",
+    "headers": {},
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "products": [
+        {
+          "handle": "w31162r-marl-sweater-rewind-full-zip-hoodie-black",
+          "title": "Marl Sweater Rewind Full Zip Hoodie - Black Marl",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black Marl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31162r-marl-sweater-rewind-full-zip-hoodie-frosted-pearl",
+          "title": "Marl Sweater Rewind Full Zip Hoodie - Frosted Pearl Marl",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl Marl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": false
+            }
+          ]
+        },
+        {
+          "handle": "w3678r-waffle-weekend-escape-mock-neck-long-sleeve-frosted-pearl",
+          "title": "Waffle Weekend Escape Mock Neck Long Sleeve - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3924rg-cropped-accolade-crewneck-frosted-pearl",
+          "title": "Cropped Accolade Crewneck - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Cropped"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3013r-renown-heavy-weight-hoodie-frosted-pearl",
+          "title": "Renown Heavy Weight Hoodie - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31179r-seamless-cable-knit-full-zip-hooded-jacket-frosted-pearl-heather",
+          "title": "Seamless Cable Knit Full Zip Hooded Jacket - Frosted Pearl Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31179r-seamless-cable-knit-full-zip-hooded-jacket-black-heather",
+          "title": "Seamless Cable Knit Full Zip Hooded Jacket - Black Heather",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black Heather"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3031rg-accolade-crew-neck-pullover-moonshadow-blue",
+          "title": "Accolade Crew Neck Pullover - Moonshadow Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Moonshadow Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            },
+            {
+              "name": "Length",
+              "values": [
+                "Regular"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-moonshadow-blue",
+          "title": "Accolade 1/4 Zip Pullover - Moonshadow Blue",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Moonshadow Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3064r-cashmere-superfine-knit-hoodie-black",
+          "title": "Cashmere Superfine Knit Hoodie - Black",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "268",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3064r-cashmere-superfine-knit-hoodie-ivory",
+          "title": "Cashmere Superfine Knit Hoodie - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "268",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3064r-cashmere-superfine-knit-hoodie-espresso",
+          "title": "Cashmere Superfine Knit Hoodie - Espresso",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Espresso"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "268",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "u3040rg-accolade-1-4-zip-pullover-deep-gravel",
+          "title": "Accolade 1/4 Zip Pullover - Deep Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Deep Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31136r-mantra-mock-neck-pullover-black",
+          "title": "Mantra Mock Neck Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31136r-mantra-mock-neck-pullover-ivory",
+          "title": "Mantra Mock Neck Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31136r-mantra-mock-neck-pullover-deep-gravel",
+          "title": "Mantra Mock Neck Pullover - Deep Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Deep Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31149r-muse-polo-cover-up-ivory",
+          "title": "Muse Polo Cover Up - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31149r-muse-polo-cover-up-black",
+          "title": "Muse Polo Cover Up - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31149r-muse-polo-cover-up-deep-gravel",
+          "title": "Muse Polo Cover Up - Deep Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Deep Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "118",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3845r-hazy-mock-neck-pullover-deep-gravel",
+          "title": "Hazy Mock Neck Pullover - Deep Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Deep Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3875r-cropped-serenity-coverup-deep-gravel",
+          "title": "Cropped Serenity Coverup - Deep Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Deep Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3950r-muse-crew-neck-pullover-deep-gravel",
+          "title": "Muse Crew Neck Pullover - Deep Gravel",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Deep Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "108",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w3980r-sway-full-zip-hoodie-deep-gravel",
+          "title": "Sway Full Zip Hoodie - Deep Gravel",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Deep Gravel"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
