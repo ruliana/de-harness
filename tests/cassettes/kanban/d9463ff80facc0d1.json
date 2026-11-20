@@ -1,0 +1,40 @@
+{
+  "hash": "d9463ff80facc0d1",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Move the 'Review pricing page' card to Done"
+      },
+      "questions": {
+        "assignee": {
+          "type": "noul",
+          "instructions": "Do `instructions` tell the assistant to ask the person who a card is to be assigned to, or to assign it to someone without saying who?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "assignee": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "usage": {
+        "input_tokens": 312,
+        "output_tokens": 21
+      }
+    }
+  }
+}

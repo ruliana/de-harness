@@ -5,6 +5,10 @@ question per tool name and per parameter. See `CLAUDE.md` for principles and com
 
 ![The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled](docs/media/wikipedia-demo.png)
 
+![An assistant panel beside a Kanban board: the person types "Move the Fix login card to Done and assign it to Sam", and the agent drags the card, opens it and picks Sam](docs/media/kanban-demo.png)
+
+*An assistant that lives on the page ([Kanban example](examples/kanban/)): the person types an instruction into the panel, the agent operates the board by sight, and asks back when the instruction leaves something open. Also as [MP4](docs/media/kanban-demo.mp4) or [WebM](docs/media/kanban-demo.webm).*
+
 ```sh
 npm ci
 npm run typecheck
@@ -29,6 +33,7 @@ Each one has a README that says what it shows and how to run it.
 - [Screen](examples/screen/): a sign-up form seen only as a picture, with a box around the button to click.
 - [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
 - [Page overlay](examples/page-overlay/): an assistant panel laid over a page: you tell it what to do, and it operates the page behind it.
+- [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who.
 
 ## How it works
 
@@ -171,6 +176,7 @@ An assistant that lives *on* the page (`PageOverlay`, `src/browser/overlay.ts`) 
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
 | `src/browser/overlay.ts` | `PageOverlay`: the assistant panel over a page (`install`, `say`, `working`, `nextInstruction`, `input`), hidden from the model's screenshots |
+| `examples/kanban/` | an assistant panel beside a Kanban board (drag and drop, card dialog), with the demo that renders the README media (`npm run example:kanban`, `npm run example:kanban:demo`) |
 | `examples/page-overlay/` | an assistant panel over a checkout page that fills in a form, asks a question and places the order (`npm run example:page-overlay`) |
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |

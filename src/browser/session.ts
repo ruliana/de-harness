@@ -34,6 +34,10 @@ export type BrowserOptions = {
    * More can be added later with `hideFromModel`.
    */
   hide?: string[];
+  /** Record the first page as a WebM video into this directory (the file is complete once the session is closed; see `videoPath`). For demos. */
+  video?: { dir: string; size?: { width: number; height: number } };
+  /** Pause between the small moves of `dragBox`, so that a recording shows the card travelling. Default 0. */
+  dragStepMs?: number;
   /** Wait after an action before the screenshot, for animations and scripts to run. Default 250. */
   settleMs?: number;
   /** Upper bound for waiting on the network to go quiet after an action. Default 1500. */
@@ -70,6 +74,7 @@ export class BrowserSession {
   private page: Page;
   /** The tabs the agent left behind by following a link that opened a new one, oldest first: where `back` returns when the new tab has no history. */
   private readonly openers: Page[] = [];
+  private recorded: Page | undefined;
   private blockedUrl: string | null = null;
   /** The page-loading request that the page has started and not yet received (a click on a link), so that `settle` can wait for it. */
   private pendingNavigation: Request | null = null;
@@ -78,7 +83,7 @@ export class BrowserSession {
   private noise: Region[] = [];
   private readonly allowed: string[] | undefined;
   private readonly hidden: string[];
-  private readonly opts: Required<Pick<BrowserOptions, "settleMs" | "networkIdleMs" | "navigationTimeoutMs">>;
+  private readonly opts: Required<Pick<BrowserOptions, "settleMs" | "networkIdleMs" | "navigationTimeoutMs" | "dragStepMs">>;
 
   private constructor(
     private readonly browser: Browser,
@@ -88,10 +93,11 @@ export class BrowserSession {
     opts: BrowserOptions,
   ) {
     this.page = page;
+    this.recorded = opts.video ? page : undefined;
     this.viewport = viewport;
     this.allowed = opts.allowedHosts?.map((h) => h.toLowerCase());
     this.hidden = [...(opts.hide ?? [])];
-    this.opts = { settleMs: opts.settleMs ?? 250, networkIdleMs: opts.networkIdleMs ?? 1500, navigationTimeoutMs: opts.navigationTimeoutMs ?? 30_000 };
+    this.opts = { settleMs: opts.settleMs ?? 250, networkIdleMs: opts.networkIdleMs ?? 1500, navigationTimeoutMs: opts.navigationTimeoutMs ?? 30_000, dragStepMs: opts.dragStepMs ?? 0 };
     const watch = (p: Page) => {
       p.on("dialog", (d) => void d.dismiss().catch(() => {})); // an alert must never freeze the agent
       p.setDefaultTimeout(this.opts.navigationTimeoutMs);
@@ -134,7 +140,14 @@ export class BrowserSession {
     const launch = opts.launch ?? {};
     const browser = await playwright.chromium.launch({ headless: true, ...launch, args: [...STABLE_RENDERING, ...(launch.args ?? [])] });
     try {
-      const context = await browser.newContext({ viewport, deviceScaleFactor: 1, userAgent: opts.userAgent, reducedMotion: "reduce", serviceWorkers: "block" });
+      const context = await browser.newContext({
+        viewport,
+        deviceScaleFactor: 1,
+        userAgent: opts.userAgent,
+        reducedMotion: "reduce",
+        serviceWorkers: "block",
+        ...(opts.video ? { recordVideo: { dir: opts.video.dir, size: opts.video.size ?? viewport } } : {}),
+      });
       // Code a page runs (`evaluate`) may be compiled by a tool that wraps named functions in a helper (esbuild's `__name`, as under tsx): the page has none.
       await context.addInitScript({ content: "globalThis.__name = globalThis.__name || ((fn) => fn);" });
       const session = new BrowserSession(browser, context, await context.newPage(), viewport, opts);
@@ -225,6 +238,29 @@ export class BrowserSession {
     const blocked = this.blockedUrl ?? undefined;
     if (blocked && this.page.url().startsWith("chrome-error:")) await this.back(); // the browser shows an error page for a blocked address: leave it
     return { x, y, element, ...(blocked ? { blocked } : {}) };
+  }
+
+  /**
+   * Drag what is under the centre of one Box onto the centre of another, as a person does: press, move in steps, let go. For boards and
+   * lists whose items are moved by dragging. Reports what was picked up and what it was dropped on.
+   */
+  async dragBox(from: Box, to: Box): Promise<{ from: Clicked; to: Clicked }> {
+    const a = this.pointOf(from);
+    const b = this.pointOf(to);
+    const picked = { ...a, element: await this.describeAt(a.x, a.y) };
+    const dropped = { ...b, element: await this.describeAt(b.x, b.y) };
+    await this.page.mouse.move(a.x, a.y);
+    await this.page.mouse.down();
+    const steps = 16;
+    for (let i = 1; i <= steps; i++) {
+      await this.page.mouse.move(a.x + ((b.x - a.x) * i) / steps, a.y + ((b.y - a.y) * i) / steps);
+      if (this.opts.dragStepMs) await sleep(this.opts.dragStepMs);
+    }
+    await this.page.mouse.up();
+    this.pointer = b;
+    this.noise = [];
+    await this.settle();
+    return { from: picked, to: dropped };
   }
 
   /** Move the pointer onto a Box (the point is chosen as in `clickBox`), for menus that open when hovered, and wait for the page to settle. Reports what is under the pointer. */
@@ -529,6 +565,11 @@ export class BrowserSession {
     if (!r) return null;
     const { width, height } = this.viewport;
     return { top: r.top / height, bottom: r.bottom / height, left: r.left / width, right: r.right / width };
+  }
+
+  /** Where the video of the first page is (when `video` was set); complete after `close()`. */
+  async videoPath(): Promise<string | null> {
+    return (await this.recorded?.video()?.path()) ?? null;
   }
 
   async close(): Promise<void> {
