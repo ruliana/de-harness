@@ -3,7 +3,8 @@
  * `runBySight` without its aloyoga.com page facts (which read Shopify's `.js` product feed): here the facts are whatever the page
  * says about itself in generic markup, and the person scoring a run looks at the screenshots as well.
  */
-import { createAgent, BrowserSession, type DecisionModel, type HarnessEvent } from "../../src/index.js";
+import { createAgent, type DecisionModel, type HarnessEvent } from "../../src/index.js";
+import { BrowserSession } from "../../src/browser/index.js";
 import { plainTask } from "../storefront-browser/shopping.js";
 import { judgeScreen, sightTools } from "../storefront-by-sight/planner.js";
 import { DONE_OPENED } from "../storefront-by-sight/tactics.js";
