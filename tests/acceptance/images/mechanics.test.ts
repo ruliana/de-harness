@@ -34,6 +34,15 @@ describe("images in state", () => {
     expect(model.requests[0]!.images).toBeUndefined();
   });
 
+  it("does not count image bytes against the context budget: a large picture stays a single request", async () => {
+    const model = new ScriptedModel([{ "point.target?present": 0.9 }]);
+    const big = new Canvas(1500, 1500, [255, 255, 255]);
+    for (let i = 0; i < 1500; i += 7) big.fill({ left: i, top: 0, right: i + 3, bottom: 1500 }, [i % 255, 40, 90]); // noisy enough not to compress away
+    const result = await createAgent({ model, instructions: "Point at it", tools: [pointer("state.nested.view")], initialState: { nested: { view: image(big.png()) } }, maxSteps: 1 }).run();
+    expect(result.events.some((e) => e.type === "two_phase" || e.type === "budget_exceeded")).toBe(false);
+    expect(model.requests).toHaveLength(1);
+  });
+
   it("refuses a PNG outside 280-1568 px per side with a message that says so", () => {
     expect(() => image(png(100, 100))).toThrow(/100x100.*280-1568/);
     expect(() => image(png(1600, 400))).toThrow(/1600x400/);
