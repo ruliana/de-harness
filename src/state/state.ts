@@ -32,6 +32,11 @@ export class StateDocument {
     return slot in this.slots;
   }
 
+  /** How many previous actions are recorded (the window decides how many are shown). */
+  actionCount(): number {
+    return this.actions.length;
+  }
+
   record(action: PreviousAction): void {
     this.actions.push(structuredClone(action));
   }
@@ -41,11 +46,12 @@ export class StateDocument {
     return structuredClone(this.slots);
   }
 
-  document(instructions: string, window: number): Record<string, unknown> {
+  /** `show` newest previous actions; `withActions` false leaves the field out (previous actions disabled). */
+  document(instructions: string, show: number, withActions = show > 0): Record<string, unknown> {
     return {
       instructions,
       state: structuredClone(this.slots),
-      ...(window > 0 ? { previous_actions: this.actions.slice(-window) } : {}),
+      ...(withActions ? { previous_actions: show > 0 ? this.actions.slice(-show) : [] } : {}),
     };
   }
 }

@@ -52,6 +52,21 @@ const delegate = delegateTool({
 });
 ```
 
+### Scale: many tools and a context budget
+
+Every request is kept under `contextBudget` tokens (default 48 000, estimated from characters; Jev takes about 64k).
+When the one-request fan-out of a step would not fit (say 40 tools with 5 parameters each), the step goes **two-phase**:
+first the state and `__tool__` alone, then the state and only the chosen tool's parameter questions (skipped for a tool
+without parameters). Each `request` and `answers` event carries a `phase` (`single`, `tool`, `params`, `order_check`),
+and `StepRecord.requests` lists them all. A request still over budget loses its oldest `previous_actions`
+(a `trimmed` event); with none left the run ends with `status: "error"`, a `budget_exceeded` event and an error naming
+the largest part, e.g. `state.page`. Cut big slots and long option lists in code: a Choice takes at most 255 options.
+
+`orderCheck: true` is an opt-in guard against option-order bias: each step also asks `__tool__` with its options reversed,
+and a different answer emits `order_disagreement` (the step still goes on with the normal order's answer).
+Cassette keys ignore key order, so the reversed request replays the same recording: test the check with `ScriptedModel`.
+
+
 Try it live: `npm run example:rooms -- "Leave the room through the red door"`.
 
 ### Sets, optional values and thresholds
@@ -81,6 +96,8 @@ params: {
 | `src/loop/` | `createAgent(config).run()` |
 | `src/input/` | `ctx.input.ask` holds the loop until an `InputProvider` replies: `StdinInput` (terminal), `ScriptedInput` (tests) |
 | `src/events/` | typed events and the JSONL trace |
+| `src/budget/` | token estimate, the context budget, previous-actions trimming |
 | `examples/rooms/`, `examples/pizza/` | the example domains |
 | `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |
 | `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
+| `examples/office/` | thirty tools, the many-tools domain |
