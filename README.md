@@ -61,5 +61,7 @@ Try it live: `npm run example:rooms -- "Leave the room through the red door"`.
 | `src/questions/` | the question map for a step and answer parsing (the `__tool__` wording lives here) |
 | `src/state/` | the state document, slot merging, previous-actions window |
 | `src/loop/` | `createAgent(config).run()` |
+| `src/input/` | `ctx.input.ask` holds the loop until an `InputProvider` replies: `StdinInput` (terminal), `ScriptedInput` (tests) |
 | `src/events/` | typed events and the JSONL trace |
 | `examples/rooms/` | the example domain |
+| `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |

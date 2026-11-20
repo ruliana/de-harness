@@ -3,11 +3,11 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { ScriptedModel, TOOL_QUESTION, createAgent, defineTool, delegateTool, type HarnessEvent } from "../../../src/index.js";
+import { ScriptedInput, ScriptedModel, TOOL_QUESTION, createAgent, defineTool, delegateTool, type HarnessEvent } from "../../../src/index.js";
 
 const noop = defineTool({ name: "noop", description: "Does nothing.", run: () => ({ summary: "did nothing" }) });
 const tasks = { "Do the chores": "The helper does the chores" };
-const delegate = (agent: Parameters<typeof delegateTool>[0]["agent"]) => delegateTool({ tasks, agent });
+const delegate = (agent: Parameters<typeof delegateTool>[0]["agent"], result?: Parameters<typeof delegateTool>[0]["result"]) => delegateTool({ tasks, agent, ...(result ? { result } : {}) });
 const slotOf = (request: { state?: unknown }) => (request.state as { state: Record<string, any> }).state.delegated;
 
 describe("sub-agents", () => {
@@ -74,9 +74,11 @@ describe("sub-agents", () => {
       return { [TOOL_QUESTION]: "noop" };
     }]);
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }]);
-    const result = await createAgent({ model: parent, instructions: "Delegate", tools: [delegate(() => ({ model: child, instructions: "Chores", tools: [noop] }))], signal: controller.signal, maxSteps: 5 }).run();
+    let childStatus: string | undefined;
+    const tool = delegate(() => ({ model: child, instructions: "Chores", tools: [noop] }), (_task, r) => ({ status: (childStatus = r.status) }));
+    const result = await createAgent({ model: parent, instructions: "Delegate", tools: [tool], signal: controller.signal, maxSteps: 5 }).run();
     expect(result.status).toBe("aborted");
-    expect(result.state.delegated).toMatchObject({ status: "aborted" });
+    expect(childStatus).toBe("aborted");
     expect(child.requests).toHaveLength(1); // the child did not start another step
     expect(parent.requests).toHaveLength(1);
     const childEnd = result.events.find((e) => e.type === "child" && e.event.type === "run_end");
@@ -96,9 +98,11 @@ describe("sub-agents", () => {
     });
     const child = new ScriptedModel([{ [TOOL_QUESTION]: "wait_for_user" }]);
     const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }]);
-    const result = await createAgent({ model: parent, instructions: "Delegate", tools: [delegate(() => ({ model: child, instructions: "Wait", tools: [waiting] }))], signal: controller.signal }).run();
+    let childRun: { status: string; steps: number } | undefined;
+    const tool = delegate(() => ({ model: child, instructions: "Wait", tools: [waiting] }), (_task, r) => ({ status: (childRun = { status: r.status, steps: r.steps.length }).status }));
+    const result = await createAgent({ model: parent, instructions: "Delegate", tools: [tool], signal: controller.signal }).run();
     expect(result.status).toBe("aborted");
-    expect(result.state.delegated).toMatchObject({ status: "aborted", steps: 1 });
+    expect(childRun?.status).toBe("aborted");
   });
 
   it("lets any tool call ctx.runAgent directly and use the child's result", async () => {
@@ -114,5 +118,20 @@ describe("sub-agents", () => {
     const result = await createAgent({ model, instructions: "Ask", tools: [asker] }).run();
     // parent step 1, then the helper uses the same scripted model for its single step, so the script advances
     expect(result.steps[0]!.summary).toBe("helper ended");
+  });
+
+  it("lets a child ask the user through the parent's input provider", async () => {
+    const ask = defineTool({
+      name: "ask_size",
+      description: "Asks the user for a size.",
+      run: async (_a, ctx) => ({ state: { user_reply: await ctx.input.ask("What size?") }, summary: "asked the size" }),
+    });
+    const input = new ScriptedInput(["large please"]);
+    const child = new ScriptedModel([{ [TOOL_QUESTION]: "ask_size" }, { [TOOL_QUESTION]: "end" }]);
+    const parent = new ScriptedModel([{ [TOOL_QUESTION]: "delegate" }, { [TOOL_QUESTION]: "end" }]);
+    const result = await createAgent({ model: parent, instructions: "Delegate", input, tools: [delegate(() => ({ model: child, instructions: "Ask", tools: [ask] }))] }).run();
+    expect(result.status).toBe("ended");
+    expect(input.asked).toEqual(["What size?"]);
+    expect(slotOf(parent.requests[1]!)).toMatchObject({ status: "ended", output: { user_reply: "large please" } });
   });
 });
