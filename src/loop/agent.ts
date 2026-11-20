@@ -8,11 +8,16 @@
  * Code reads `__tool__`, converts only that tool's answers to typed args, runs the tool, and merges its result
  * into the state. Repeats until a tool ends the run, the step limit is hit, the run is aborted, or the model fails.
  * The model never writes text.
+ *
+ * Scale: when that request would be over the context budget, the step goes two-phase instead: first the state
+ * and `__tool__` alone, then the state and only the chosen tool's parameter questions. A request still over budget
+ * loses its oldest previous actions; with none left the run fails, naming the largest part.
  */
 import { TraceWriter } from "../events/trace.js";
-import type { EventInput, HarnessEvent } from "../events/events.js";
-import { DecisionModelError, type Answer, type DecisionModel, type DecisionRequest } from "../model/types.js";
-import { AnswerError, buildQuestions, parseArgs, pickedTool } from "../questions/build.js";
+import { BudgetError, DEFAULT_CONTEXT_BUDGET, fitRequest, requestTokens } from "../budget/budget.js";
+import type { EventInput, HarnessEvent, Phase } from "../events/events.js";
+import { DecisionModelError, type Answer, type DecisionModel, type DecisionRequest, type DecisionResponse, type Question } from "../model/types.js";
+import { AnswerError, TOOL_QUESTION, buildQuestions, paramQuestions, parseArgs, pickedTool, toolQuestionOnly } from "../questions/build.js";
 import { createInputPort, type InputProvider } from "../input/provider.js";
 import { StateDocument, type Json } from "../state/state.js";
 import { endTool } from "../tools/builtin.js";
@@ -28,6 +33,17 @@ export type AgentConfig = {
   maxSteps?: number;
   /** How many previous actions are shown to the model. Default 5, 0 disables. */
   previousActions?: number;
+  /**
+   * Most tokens (estimated from characters) one request may hold. Default 48 000, under Jev's 64k limit.
+   * Over it, a step goes two-phase; a request still over it drops its oldest previous actions, then the run fails.
+   */
+  contextBudget?: number;
+  /**
+   * Opt-in check for option-order bias: also ask `__tool__` with its options in reverse order. When the two answers
+   * differ an `order_disagreement` event is emitted; the step still proceeds with the answer to the normal order.
+   * One extra request per step.
+   */
+  orderCheck?: boolean;
   /** State slots before the first step. */
   initialState?: Record<string, Json>;
   /** Write every event to this file as JSONL. */
@@ -46,8 +62,10 @@ export type StepRecord = {
   args: Record<string, unknown>;
   /** Raw answers for the chosen tool's parameters. */
   answers: Record<string, Answer>;
-  /** The exact request sent to the model this step. */
+  /** The first request sent to the model this step. */
   request: DecisionRequest;
+  /** Every request of this step with its phase: one in a normal step, two in a two-phase step, plus one for the order check. */
+  requests: { phase: Phase; request: DecisionRequest }[];
   summary?: string;
   /** Set when the tool threw. */
   error?: string;
@@ -80,6 +98,7 @@ export function createAgent(config: AgentConfig): Agent {
 async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult> {
   const maxSteps = config.maxSteps ?? 20;
   const window = config.previousActions ?? 5;
+  const budget = config.contextBudget ?? DEFAULT_CONTEXT_BUDGET;
   const signal = config.signal ?? new AbortController().signal;
   const doc = new StateDocument(config.initialState);
   const trace = config.trace ? new TraceWriter(config.trace) : undefined;
@@ -115,19 +134,54 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     emit({ type: "step_start", step, tools: plan.tools.map((t) => t.name), skipped: plan.skipped });
     if (plan.tools.length === 0) return finish("error", { error: new Error("No tool is available") });
 
-    // 2. one request
-    const request: DecisionRequest = { state: doc.document(config.instructions, window), questions: plan.questions };
-    emit({ type: "request", step, request });
-    let answers: Record<string, Answer>;
+    // 2. ask: one request, or two when the full request is over budget
+    const full: DecisionRequest = { state: doc.document(config.instructions, window, window > 0), questions: plan.questions };
+    const sent: StepRecord["requests"] = [];
+    const answers: Record<string, Answer> = {};
+    let current: Phase = "single";
+    const ask = async (phase: Phase, questions: Record<string, Question>): Promise<DecisionResponse> => {
+      current = phase;
+      let fitted: ReturnType<typeof fitRequest>;
+      try {
+        fitted = fitRequest((n) => ({ state: doc.document(config.instructions, n, window > 0), questions }), Math.min(window, doc.actionCount()), budget);
+      } catch (e) {
+        if (e instanceof BudgetError && e.dropped > 0) emit({ type: "trimmed", step, phase, dropped: e.dropped, estimatedTokens: e.estimatedTokens, budget });
+        throw e;
+      }
+      if (fitted.dropped > 0) emit({ type: "trimmed", step, phase, dropped: fitted.dropped, estimatedTokens: fitted.tokens, budget });
+      emit({ type: "request", step, phase, estimatedTokens: fitted.tokens, request: fitted.request });
+      sent.push({ phase, request: fitted.request });
+      const response = await config.model.ask(fitted.request);
+      emit({ type: "answers", step, phase, model: response.model, answers: response.answers, usage: response.usage });
+      return response;
+    };
     try {
-      const response = await config.model.ask(request);
-      answers = response.answers;
-      emit({ type: "answers", step, model: response.model, answers, usage: response.usage });
+      const fullTokens = requestTokens(full);
+      if (fullTokens <= budget) {
+        Object.assign(answers, (await ask("single", plan.questions)).answers);
+      } else {
+        emit({ type: "two_phase", step, estimatedTokens: fullTokens, budget });
+        Object.assign(answers, (await ask("tool", toolQuestionOnly(plan))).answers);
+        const chosen = pickedTool(answers, plan);
+        if (Object.keys(chosen.params ?? {}).length > 0) Object.assign(answers, (await ask("params", paramQuestions(plan, chosen))).answers);
+      }
+      if (config.orderCheck && plan.tools.length > 1) {
+        const reversed = (await ask("order_check", toolQuestionOnly(plan, true))).answers[TOOL_QUESTION];
+        const forward = answers[TOOL_QUESTION];
+        if (forward?.type === "choice" && reversed?.type === "choice" && forward.choice !== reversed.choice) {
+          emit({ type: "order_disagreement", step, forward: forward.choice, reversed: reversed.choice });
+        }
+      }
     } catch (e) {
       const error = e instanceof Error ? e : new Error(String(e));
-      emit({ type: "model_error", step, message: error.message, status: error instanceof DecisionModelError ? error.status : undefined });
+      if (error instanceof BudgetError) {
+        emit({ type: "budget_exceeded", step, phase: current, message: error.message, largest: error.largest.name, estimatedTokens: error.estimatedTokens, budget });
+      } else {
+        emit({ type: "model_error", step, message: error.message, status: error instanceof DecisionModelError ? error.status : undefined });
+      }
       return finish("error", { error });
     }
+    const request = sent[0]!.request;
 
     // 3. read the chosen tool's answers only
     let tool: AnyTool;
@@ -170,7 +224,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     if (result.state) doc.merge(result.state);
     const summary = error ? `failed: ${error}` : result.summary;
     doc.record({ tool: tool.name, args: parsed.args, ...(summary !== undefined ? { summary } : {}) });
-    steps.push({ step, tool: tool.name, args: parsed.args, answers: parsed.raw, request, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}) });
+    steps.push({ step, tool: tool.name, args: parsed.args, answers: parsed.raw, request, requests: sent, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}) });
     emit({ type: "tool_result", step, tool: tool.name, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}), ...(result.end ? { end: true } : {}) });
 
     if (result.end) return finish("ended", { output: result.output });

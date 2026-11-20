@@ -74,6 +74,23 @@ export function buildQuestions(tools: AnyTool[], ctx: ParamContext): QueryPlan {
   };
 }
 
+/** Phase one of a two-phase step: only the `__tool__` Choice, its options optionally in reverse order (the order check). */
+export function toolQuestionOnly(plan: QueryPlan, reverse = false): Record<string, Question> {
+  const q = plan.questions[TOOL_QUESTION] as Extract<Question, { type: "choice" }>;
+  if (!reverse) return { [TOOL_QUESTION]: q };
+  return { [TOOL_QUESTION]: { ...q, criteria: Object.fromEntries(Object.entries(q.criteria).reverse()) } };
+}
+
+/** Phase two of a two-phase step: only the questions of the chosen tool's parameters. */
+export function paramQuestions(plan: QueryPlan, tool: AnyTool): Record<string, Question> {
+  const out: Record<string, Question> = {};
+  for (const name of Object.keys(tool.params ?? {})) {
+    const id = questionId(tool.name, name);
+    out[id] = plan.questions[id]!;
+  }
+  return out;
+}
+
 export class AnswerError extends Error {}
 
 /** The tool the model picked. */

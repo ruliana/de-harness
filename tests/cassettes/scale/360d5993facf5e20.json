@@ -1,0 +1,59 @@
+{
+  "hash": "360d5993facf5e20",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Dr. Okafor has just arrived at the front desk for her ten o'clock meeting. Sign her in, then stop.",
+        "state": {
+          "expected_visitors": [
+            "Dr. Okafor",
+            "Mr. Lindqvist",
+            "Ms. Tanaka"
+          ]
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "register_visitor.choice": {
+          "type": "choice",
+          "instructions": "Which of the visitors in `state.expected_visitors` do `instructions` ask to sign in?",
+          "criteria": {
+            "Dr. Okafor": "",
+            "Mr. Lindqvist": "",
+            "Ms. Tanaka": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "register_visitor.choice": {
+          "type": "choice",
+          "choice": "Dr. Okafor",
+          "confidence": 1,
+          "probabilities": {
+            "Dr. Okafor": 1,
+            "Mr. Lindqvist": 0,
+            "Ms. Tanaka": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 396,
+        "output_tokens": 56
+      }
+    }
+  }
+}

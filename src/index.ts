@@ -9,3 +9,5 @@ export { endTool } from "./tools/builtin.js";
 export { TOOL_QUESTION, questionId, thresholds } from "./questions/build.js";
 export type { HarnessEvent } from "./events/events.js";
 export type { Json, StateView } from "./state/state.js";
+export { DEFAULT_CONTEXT_BUDGET, CHARS_PER_TOKEN, estimateTokens, requestTokens, BudgetError } from "./budget/budget.js";
+export type { Phase } from "./events/events.js";
