@@ -92,7 +92,12 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     config.onEvent?.(event);
   };
 
+  // step 0 is before the first step (tools added through `agent.tools` before `run`)
+  let currentStep = 0;
+  const stopListening = tools.onChange((c) => emit({ type: "tools_changed", step: currentStep, change: c.change, tool: c.tool, tools: tools.list().map((t) => t.name) }));
+
   const finish = (status: RunResult["status"], extra: { output?: unknown; error?: Error } = {}): RunResult => {
+    stopListening();
     emit({ type: "run_end", status, steps: steps.length });
     return { status, steps, state: doc.view(), events, ...extra };
   };
@@ -100,6 +105,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
   emit({ type: "run_start", instructions: config.instructions, tools: tools.list().map((t) => t.name), maxSteps });
 
   for (let step = 1; step <= maxSteps; step++) {
+    currentStep = step;
     if (signal.aborted) return finish("aborted");
 
     // 1. which tools are available now (code only), and their questions

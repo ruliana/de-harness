@@ -4,7 +4,7 @@ export { createAgent, type Agent, type AgentConfig, type RunResult, type StepRec
 export { defineTool, type Tool, type AnyTool, type ToolContext, type ToolResult, type AvailabilityContext } from "./tools/tool.js";
 export { param, type ParamSpec, type Params, type ArgsOf, type Options, type ParamContext } from "./tools/param.js";
 export * from "./input/index.js";
-export { ToolRegistry } from "./tools/registry.js";
+export { ToolRegistry, type ToolChange } from "./tools/registry.js";
 export { endTool } from "./tools/builtin.js";
 export { TOOL_QUESTION, questionId, thresholds } from "./questions/build.js";
 export type { HarnessEvent } from "./events/events.js";

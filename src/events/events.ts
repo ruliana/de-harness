@@ -12,6 +12,7 @@ export type HarnessEvent = { ts: string } & (
   | { type: "input_requested"; step: number; tool: string; prompt: string; choices?: readonly string[] }
   | { type: "input_received"; step: number; tool: string; reply: string }
   | { type: "input_failed"; step: number; tool: string; reason: "timeout" | "aborted" | "error"; message: string }
+  | { type: "tools_changed"; step: number; change: "added" | "removed"; tool: string; tools: string[] }
   | { type: "custom"; step: number; name: string; data?: unknown }
   | { type: "run_end"; status: string; steps: number }
 );

@@ -32,6 +32,11 @@ const result = await createAgent({ model: new JevModel(), instructions: "Leave t
 // result.status: 'ended' | 'step_limit' | 'aborted' | 'error'; result.steps, result.state, result.output, result.events
 ```
 
+Tools can be added and removed while the agent runs: `ctx.tools.add(tool)` / `ctx.tools.remove(name)` inside a tool (or
+`agent.tools` from outside). The registry is read fresh every step, so a change shows from the next request, and each
+change emits a `tools_changed` event. A duplicate name and removing the built-in `end` throw (inside a tool: an `error`
+slot, registry unchanged). See `examples/chest/`.
+
 Try it live: `npm run example:rooms -- "Leave the room through the red door"`.
 
 | Where | What |
