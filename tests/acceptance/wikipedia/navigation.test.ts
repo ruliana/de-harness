@@ -6,7 +6,7 @@
  * reports how many of the pairs it solves; the recordings of a live run replace the old ones.
  */
 import { beforeAll, describe, expect, it } from "vitest";
-import { ScriptedModel, TOOL_QUESTION, cassetteMode, createAgent, type DecisionRequest, type RunResult } from "../../../src/index.js";
+import { DEFAULT_CONTEXT_BUDGET, ScriptedModel, TOOL_QUESTION, cassetteMode, createAgent, requestTokens, type RunResult } from "../../../src/index.js";
 import { wikipediaFetch } from "../../../examples/wikipedia/http.js";
 import { createWikipedia, instructionsFor } from "../../../examples/wikipedia/wikipedia.js";
 import { jevFor } from "../../support/models.js";
@@ -17,9 +17,8 @@ const LIVE_TIMEOUT = 2 * 60 * 60 * 1000;
 const timeout = live ? LIVE_TIMEOUT : 60_000;
 const http = () => wikipediaFetch({ dir: "tests/cassettes/wikipedia-http" });
 
-/** The default request budget of the harness (tokens, estimated from characters). */
-const BUDGET_TOKENS = 48_000;
-const estimateTokens = (request: DecisionRequest) => Math.ceil(JSON.stringify(request).length / 4);
+const BUDGET_TOKENS = DEFAULT_CONTEXT_BUDGET;
+const estimateTokens = requestTokens;
 
 type Pair = { from: string; to: string; why: string };
 
@@ -92,7 +91,10 @@ describe("wikipedia: several hops", () => {
 describe("wikipedia: the request budget", () => {
   it("no request to Jev exceeds the budget, and neither does one on the largest page of the set", async () => {
     const all = [...outcomes.values()];
-    for (const o of all) for (const step of o.result.steps) expect(estimateTokens(step.request)).toBeLessThanOrEqual(BUDGET_TOKENS);
+    for (const o of all) {
+      for (const step of o.result.steps) expect(estimateTokens(step.request)).toBeLessThanOrEqual(BUDGET_TOKENS);
+      expect(o.result.events.filter((e) => e.type === "two_phase" || e.type === "trimmed" || e.type === "budget_exceeded")).toEqual([]); // links are cut in code, so the harness never has to
+    }
 
     const largest = all.flatMap((o) => o.pages).reduce((a, b) => (b.links > a.links ? b : a));
     const wiki = await createWikipedia({ start: largest.title, fetch: http() });

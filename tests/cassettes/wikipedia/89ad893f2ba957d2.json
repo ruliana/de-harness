@@ -262,7 +262,7 @@
           "probabilities": {
             "Free and open-source software": 0,
             "Unix-like": 0,
-            "Linux kernel": 0.02,
+            "Linux kernel": 0.01,
             "Linus Torvalds": 0.64,
             "Package manager": 0,
             "Linux distribution": 0,
@@ -367,7 +367,7 @@
             "Andrew S. Tanenbaum": 0,
             "Computer science": 0,
             "Source-available software": 0,
-            "University of Helsinki": 0.33,
+            "University of Helsinki": 0.34,
             "MicroVAX": 0,
             "Minicomputer": 0,
             "Ultrix": 0,

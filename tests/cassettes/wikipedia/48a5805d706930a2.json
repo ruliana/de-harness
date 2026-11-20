@@ -259,27 +259,27 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_link",
-          "confidence": 0.94,
+          "confidence": 0.96,
           "probabilities": {
-            "open_link": 0.96,
-            "go_back": 0.04,
+            "open_link": 0.97,
+            "go_back": 0.03,
             "end": 0
           }
         },
         "open_link.link": {
           "type": "choice",
           "choice": "Planets",
-          "confidence": 0.5,
+          "confidence": 0.46,
           "probabilities": {
             "Natural science": 0,
-            "Astronomical object": 0.01,
+            "Astronomical object": 0.02,
             "Phenomena": 0,
             "Cosmos": 0,
             "Mathematics": 0,
             "Physics": 0,
             "Chemistry": 0,
             "Chronology of the Universe": 0,
-            "Planets": 0.5,
+            "Planets": 0.46,
             "Natural satellite": 0,
             "Star": 0,
             "Nebulae": 0,
@@ -370,7 +370,7 @@
             "Richard of Wallingford": 0,
             "Rectangulus": 0,
             "Equatorium": 0,
-            "Planet": 0.27,
+            "Planet": 0.3,
             "Longitude": 0,
             "Nicole Oresme": 0,
             "Jean Buridan": 0,
