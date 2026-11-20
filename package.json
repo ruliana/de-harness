@@ -25,6 +25,7 @@
     "example:browser": "NODE_USE_ENV_PROXY=1 tsx examples/browser/main.ts",
     "example:storefront-browser": "NODE_USE_ENV_PROXY=1 tsx examples/storefront-browser/main.ts",
     "example:by-sight": "NODE_USE_ENV_PROXY=1 tsx examples/storefront-by-sight/main.ts",
+    "example:shops": "NODE_USE_ENV_PROXY=1 tsx examples/shop-sweep/main.ts",
     "example:probe": "NODE_USE_ENV_PROXY=1 tsx examples/storefront-by-sight/probe-main.ts"
   },
   "devDependencies": {
