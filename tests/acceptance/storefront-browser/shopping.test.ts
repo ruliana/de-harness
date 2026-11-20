@@ -9,7 +9,8 @@
  * the price the shop lists for that colour and size (looked up by the test, not trusted from the run), and nothing was added to the bag.
  */
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { CassetteModel, cassetteMode, type BrowserSession } from "../../../src/index.js";
+import { CassetteModel, cassetteMode } from "../../../src/index.js";
+import type { BrowserSession } from "../../../src/browser/index.js";
 import { FIXTURE_PORT, launchFixture, problems, runOnce, startFixture, type Outcome } from "../../../examples/storefront-browser/run.js";
 import type { ShopSite } from "../../../examples/storefront-browser/shop-site.js";
 

@@ -9,7 +9,8 @@
  *
  * Code removes tactics that make no sense at this point (`rules`) and, from `src/browser`, a tool that changed nothing three times.
  */
-import { isStuck, nextStuck, defineTool, type AnyTool, type BrowserSession, type DecisionModel, type Json } from "../../src/index.js";
+import { defineTool, type AnyTool, type DecisionModel, type Json } from "../../src/index.js";
+import { isStuck, nextStuck, type BrowserSession } from "../../src/browser/index.js";
 import { extractImages } from "../../src/state/images.js";
 import { shoppingTools } from "../storefront-browser/shopping.js";
 import { CHECKS, DONE, GOALS, judge, NAVIGATOR_TOOLS, TACTICS, type Judgments, type Tactic } from "./tactics.js";
