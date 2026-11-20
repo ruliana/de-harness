@@ -14,6 +14,8 @@ export type HarnessEvent = { ts: string } & (
   | { type: "input_failed"; step: number; tool: string; reason: "timeout" | "aborted" | "error"; message: string }
   | { type: "tools_changed"; step: number; change: "added" | "removed"; tool: string; tools: string[] }
   | { type: "custom"; step: number; name: string; data?: unknown }
+  /** An event of a sub-agent started by `ctx.runAgent` during `step`. Sub-agents of sub-agents nest further. */
+  | { type: "child"; step: number; event: HarnessEvent }
   | { type: "run_end"; status: string; steps: number }
 );
 

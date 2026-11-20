@@ -37,12 +37,27 @@ Tools can be added and removed while the agent runs: `ctx.tools.add(tool)` / `ct
 change emits a `tools_changed` event. A duplicate name and removing the built-in `end` throw (inside a tool: an `error`
 slot, registry unchanged). See `examples/chest/`.
 
+### Sub-agents
+
+A tool can run a whole nested agent with `ctx.runAgent(config)` and the loop simply waits for it. The child has its own
+tools, instructions and step limit, uses the parent's model unless it brings one, stops when the parent run is aborted,
+and its events are written to the parent's trace as `child` events under the step that called it (deeper children nest
+further). `delegateTool` is the ready-made version: the parent *picks* the task from candidates (Jev cannot write it), the
+child runs, and its `{ task, status, steps, output }` lands in a state slot, also when the child hit its step limit.
+
+```ts
+const delegate = delegateTool({
+  tasks: { "Leave the room through the red door": "The helper finds the red door and walks out through it" },
+  agent: (task) => ({ instructions: task, tools: rooms.tools, initialState: rooms.initialState, maxSteps: 4 }),
+});
+```
+
 Try it live: `npm run example:rooms -- "Leave the room through the red door"`.
 
 | Where | What |
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
-| `src/tools/` | `defineTool`, `param.*`, `ToolRegistry`, built-in `end` |
+| `src/tools/` | `defineTool`, `param.*`, `ToolRegistry`, built-in `end`, `delegateTool` |
 | `src/questions/` | the question map for a step and answer parsing (the `__tool__` wording lives here) |
 | `src/state/` | the state document, slot merging, previous-actions window |
 | `src/loop/` | `createAgent(config).run()` |

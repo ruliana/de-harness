@@ -40,6 +40,14 @@ export type AgentConfig = {
   onEvent?: (event: HarnessEvent) => void;
 };
 
+/** The config of an agent started by a tool through `ctx.runAgent`. */
+export type SubAgentConfig = Omit<AgentConfig, "model" | "signal" | "onEvent"> & {
+  /** Defaults to the model of the agent that runs the tool. */
+  model?: DecisionModel;
+  /** Extra signal; the child also stops when the parent run is aborted. */
+  signal?: AbortSignal;
+};
+
 export type StepRecord = {
   step: number;
   tool: string;
@@ -152,7 +160,16 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
         failed: (reason, message) => emit({ type: "input_failed", step, tool: tool.name, reason, message }),
       },
     });
-    const ctx: ToolContext = { state: view, answers: parsed.raw, step, signal, tools, input, emit: (name, data) => emit({ type: "custom", step, name, data }) };
+    const runAgent = (child: SubAgentConfig) =>
+      createAgent({
+        ...child,
+        model: child.model ?? config.model,
+        ...(child.input ?? config.input ? { input: child.input ?? config.input } : {}),
+        ...(child.inputTimeoutMs ?? config.inputTimeoutMs !== undefined ? { inputTimeoutMs: child.inputTimeoutMs ?? config.inputTimeoutMs } : {}),
+        signal: child.signal ? AbortSignal.any([signal, child.signal]) : signal,
+        onEvent: (event) => emit({ type: "child", step, event }),
+      }).run();
+    const ctx: ToolContext = { state: view, answers: parsed.raw, step, signal, tools, input, emit: (name, data) => emit({ type: "custom", step, name, data }), runAgent };
     let result: ToolResult;
     let error: string | undefined;
     try {
