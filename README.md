@@ -151,9 +151,9 @@ the real browser, so CI installs Chromium.
 
 ## Example: Wikipedia navigation
 
-![The agent goes from Telescope to Jupiter, one link at a time](docs/media/wikipedia-demo.png)
+![The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled](docs/media/wikipedia-demo.png)
 
-*Telescope to Jupiter in four steps: each step shows the article, the links on offer, the tool the model chose and what came back. Also as [MP4](docs/media/wikipedia-demo.mp4) and [WebM](docs/media/wikipedia-demo.webm), rendered from a recorded run by `npm run example:wikipedia:demo` (needs ffmpeg and Chromium; article text from Wikipedia, CC BY-SA 4.0).*
+*Telescope to Jupiter in four steps, on the real Wikipedia pages (revisions pinned at the snapshot). At each step the links the agent may follow are boxed and the one it chose is circled, with the tool call underneath. Also as [MP4](docs/media/wikipedia-demo.mp4). Made from a recorded run by `npm run example:wikipedia:demo` (needs network access to Wikipedia, Chromium and ffmpeg; screenshots show Wikipedia, CC BY-SA 4.0).*
 
 `npm run example:wikipedia -- --from "Alan Turing" --to "Enigma machine"` walks from one article to another by following
 links and prints the path. `open_link(link)` offers the links of the article body (references, info boxes, navboxes,
