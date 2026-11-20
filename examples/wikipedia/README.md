@@ -12,8 +12,10 @@ npm run example:wikipedia -- --from "Alan Turing" --to "Enigma machine" [--max-s
 
 Exits 0 only if the run ended on the target article.
 
+Demo media (`docs/media/wikipedia-demo.{mp4,webm,png}`): `npm run example:wikipedia:demo -- [--from Telescope --to Jupiter] [--out docs/media] [--live]` replays the recorded run, draws one frame per moment of each step with Chromium and encodes with ffmpeg.
+
 **Needs:** Jev: `TYPESAFE_API_KEY` in the environment (the cloud proxy supplies it in cloud sessions) and network access to Wikipedia (rate-limited; slow articles can answer 504). Pages already recorded in
 `tests/cassettes/wikipedia-http` are reused. No browser.
 
-**Files:** `wikipedia.ts` (tools), `article.ts` and `client.ts` (parsing, snapshot), `http.ts` (recording fetch), `main.ts` (runner).
+**Files:** `wikipedia.ts` (tools), `article.ts` and `client.ts` (parsing, snapshot), `http.ts` (recording fetch), `main.ts` (runner), `demo.ts` (video and animated PNG).
 **Acceptance tests:** `tests/acceptance/wikipedia/`, replayed from `tests/cassettes/wikipedia` and `wikipedia-http`.
