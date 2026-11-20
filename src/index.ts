@@ -13,3 +13,4 @@ export type { Json, StateView } from "./state/state.js";
 export { DEFAULT_CONTEXT_BUDGET, CHARS_PER_TOKEN, estimateTokens, requestTokens, BudgetError } from "./budget/budget.js";
 export type { Phase } from "./events/events.js";
 export { image, imageFile, isImageValue, IMAGE_LIMITS, type ImageValue } from "./state/images.js";
+export { openApiTools, resolveBaseUrl, type OpenApiTools, type OpenApiToolsOptions, type OperationInfo } from "./openapi/openapi.js";
