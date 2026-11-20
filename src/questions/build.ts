@@ -3,6 +3,7 @@
  * The wording of the tool question is fixed here; the wording of each parameter question lives with its tool.
  */
 import type { Answer, Question } from "../model/types.js";
+import { isImageValue } from "../state/images.js";
 import { MEMBER, defaultThresholds, normalizeOptions, readNoul, type ParamContext, type ParamSpec } from "../tools/param.js";
 import type { AnyTool } from "../tools/tool.js";
 
@@ -12,6 +13,17 @@ export const questionId = (tool: string, param: string) => `${tool}.${param}`;
 export const memberKey = (param: string, member: string) => `${param}[${member}]`;
 /** Question key (without the tool) of the "is it stated at all" Noul of an optional parameter: `delivery_time?stated`. */
 export const statedKey = (param: string) => `${param}?stated`;
+/** Question key (without the tool) of the companion Noul of a Box parameter, "is the target in the image at all?": `target?present`. */
+export const presentKey = (param: string) => `${param}?present`;
+
+/** The value at a state path such as `state.screen` or `state.page.screenshot`. */
+function atPath(state: Readonly<Record<string, any>>, path: string): unknown {
+  const parts = path.split(".");
+  if (parts[0] === "state") parts.shift();
+  let v: unknown = state;
+  for (const p of parts) v = v && typeof v === "object" ? (v as Record<string, unknown>)[p] : undefined;
+  return v;
+}
 
 /** Most options a Choice accepts. */
 const MAX_OPTIONS = 255;
@@ -53,6 +65,13 @@ export function buildQuestions(tools: AnyTool[], ctx: ParamContext): QueryPlan {
         if (keys.length > MAX_OPTIONS) throw new Error(`Parameter "${name}" of tool "${tool.name}" has ${keys.length} options, more than ${MAX_OPTIONS}. Narrow them in code first.`);
         own[id] = { type: "choice", instructions: spec.question, criteria: resolved };
         options[id] = keys;
+      } else if (spec.kind === "box") {
+        if (!isImageValue(atPath(ctx.state, spec.image))) {
+          reason = `parameter "${name}" needs an image at \`${spec.image}\``;
+          break;
+        }
+        own[id] = { type: "box", instructions: spec.question };
+        own[questionId(tool.name, presentKey(name))] = { type: "noul", instructions: spec.present ?? `Is there anything in \`${spec.image}\` that matches this description: ${spec.question}?` };
       } else if (spec.kind === "noul") {
         own[id] = { type: "noul", instructions: spec.question, ...(spec.criteria ? { criteria: spec.criteria } : {}) };
       } else if (spec.kind === "set") {
@@ -140,6 +159,11 @@ export function parseArgs(tool: AnyTool, answers: Record<string, Answer>, plan: 
       const a = take(name, "choice") as Extract<Answer, { type: "choice" }>;
       if (!plan.options[id]?.includes(a.choice)) throw new AnswerError(`The model chose "${a.choice}" for "${id}", which is not one of its options`);
       value = a.choice;
+    } else if (spec.kind === "box") {
+      const a = take(name, "box") as Extract<Answer, { type: "box" }>;
+      // a Box always answers; only the companion Noul says whether the target is there ('unsure' counts as not found)
+      const present = readNoul((take(presentKey(name), "noul") as Extract<Answer, { type: "noul" }>).noul, spec.thresholds);
+      value = present === true ? a.box : null;
     } else if (spec.kind === "noul") {
       value = readNoul((take(name, "noul") as Extract<Answer, { type: "noul" }>).noul, spec.thresholds);
     } else if (spec.kind === "set") {

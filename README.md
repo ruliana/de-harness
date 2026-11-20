@@ -87,6 +87,10 @@ params: {
 `ctx.answers` (`toppings[olives]`, `delivery_time?stated`) for code that wants another rule. Try it:
 `npm run example:pizza -- "A large pizza with mushrooms and olives, deliver at 7pm"`.
 
+### Images and boxes
+
+A tool can put a picture into the state with `image(pngOrJpegBytes)` (PNG 280-1568 px per side). The model sees it wherever a question names the slot by path, and requests that carry images are sent with `TypeSafe-Danger-Zone-Images: true`. `param.box({ question, image })` asks Jev where something is (a Box) and, in the same request, whether it is there at all (a companion Noul, `<param>?present` in `ctx.answers`); the tool receives `{ top, bottom, left, right }` as fractions of the image, or `null` when the Noul says the target is absent. Box answers are approximate: compare overlap, not exact edges. Box requests always go to Jev 1.14 or later. Try it: `npm run example:screen -- "Click the Submit button" --out proof.png` (`HARNESS_CASSETTE=replay` uses the recordings).
+
 | Where | What |
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
@@ -101,3 +105,4 @@ params: {
 | `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |
 | `examples/tickets/` | stateful API operations: an in-process support-ticket API and the tools that work its queue (`npm run example:tickets`) |
 | `examples/office/` | thirty tools, the many-tools domain |
+| `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |

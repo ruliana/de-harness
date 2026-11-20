@@ -1,0 +1,83 @@
+{
+  "hash": "f2e32434bd3d9f43",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json",
+      "typesafe-danger-zone-images": "true"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Click the Submit button",
+        "state": {
+          "screen": "img-7520822f789bd196"
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "click": "Clicks one element of the screen, which is the picture in `state.screen`.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "click.target": {
+          "type": "box",
+          "instructions": "the element that `instructions` say to click, in `state.screen`"
+        },
+        "click.target?present": {
+          "type": "noul",
+          "instructions": "Is the element that `instructions` say to click visible in `state.screen`?"
+        }
+      },
+      "assets": {
+        "img-7520822f789bd196": {
+          "type": "image",
+          "format": "png",
+          "data_base64": "iVBORw0KGgoAAAANSUhEUgAAAoAAAAG4CAIAAABabsEpAAAJC0lEQVR42u3dvW0iURiGUSohc0ANlOOW6IAm6MmRAwdEOLBEgozm/s693z2vToTNDIu9+6yEGR++f+4AQGcHTwEACDAACDAAIMAAIMAAgAADgAADAAIMAAIMAAgwAAgwAAgwACDAACDAAIAAA4AAAwACDAACDAAIMAAIMAAIMAAgwAAgwACAAAOAAAMAAgwAAgwACDAACDAACDAAIMAAIMAAgAADgAADAAIMAAIMAAgwAAgwAAgwACDAWxxP52wVD/X+yN0ec8lTt9eXrOJ9233JAARYgAVYgAEBFmABFmAAARZgARZgQIAFWIAFGCBQgONlo93/PxYP8BTfV4AAC7AAC7AAAwIswAIswIAAC7AACzCAAAuwAAswIMACPFKAu+VKgAEEWIAFWIABARZgARZgAAEWYAEWYECABViABRjgvuKlKKcIcLtLUQ5yLUaXogQQYAEWYAEGBFiABViAAQEWYAEWYAABFmABFmBAgKPUOsB9/T5gP8kMCLAAC7AAAwiwAAuwv+SAAAuwAAswgAALsAADCLAAC7AAAwIswAIswAACLMACLMCAAAuwAAswgAALsAALMCDAu0W04uUGS47c7UQBAlzybEzxJwIQYAEWYAABFmABFmAAARZgAQYQYAEWYAEGBBgAEGAAEGAAQIABQIABAAEGAAEGAAQYAAQYAAQYABBgABBgAECAAUCAAQABBgABBgAEGAAEGAAEGAAQYAAQYABAgAFAgAEAAQYAAQYABBgABBgABBgAEGAAEGAAQIABQIABAAEGAAEGAAQYAAQYAAQYABDgN46n85+8z3l+6FWtc705xZaTAiDAAizAAAiwAAMgwLsHOCmctVKa9CHfYQAIsAADIMACDIAAz/4acN4t7Y4swAAIsAADIMACDADx3oaU9JLtlrcGFd7i3UcACLAAAyDAAuz7D0CAwwS4w2vAte4FgAALsAADIMACDIAAC7AAAyDAAgyAAAuwAAMgwAMG2PuRABBgAQZAgAVYgAEEGAAQYAAQYABAgAFAgAEAAQYAAQYAQgX4cr0BwJMACzAAAhw9wA8zM1t+AizAZmYmwAJsZmYCLMACbGZmAizAZmYmwAIswGZmJsACbGZmAizAAmxmZgIswGZmJsACLMBmZibAAmxmZgIswGZmJsACLMBmZibAAmxmZgIswAJsZmYCLMBmZibAAizAZmYmwAJsZmYCLMACbGZmAizAZmYmwAJsZmYCLMACbGZmAizAZmYmwAIswGZmJsACbGZmAizAAmxmZgIswGZmJsACLMBmZibAAmxmZgIswGZmJsACLMBmZibAAmxmZgIswAJsZmYCLMBmZibAAizAZmYmwAJsZmYCLMACbGZmAizAZmYmwAJsZmYCLMACbGZmAhwzwAAgwAIMgABHDzAAzE6AAUCAAUCAAQABBgABBgAEGAAEGAAQYAAQYABAgAFAgAFAgAEAAQYAAQYABBgABBgAEGAAEGAAQIABQIBTHE/n7V7vteXISSft+QgBEGABFmAABFiAARDgPgEuzHbShwofT63PAUCABViAARBgAQZAgEcOcOEtAgyAAAswAAIswAIMwAoBzntrUN4teScVYAAEWIABEGABFmAAAV7zNeC8SHsNGAABFmAABFiABRgAARZgAARYgAUYAAEWYAAEODvAHX4fcOG98h5h4VueABBgARZgAARYgAEQYAAQYABAgAFAgAEAAQYAAQYABBgABLiVy/UGAE8CLMAACHD0AD/MzGz5CbAAm5mZAAuwmZkJsAALsJmZCbAAm5mZAAuwAJuZmQALsJmZCbAAC7CZmQmwAJuZmQALsACbmZkAC7CZmQmwAJuZmQALsACbmZkAC7CZmQmwAAuwmZkJsACbmZkAC7AAm5mZAAuwmZkJsAALsJmZCbAAm5mZAAuwmZkJsAALsJmZCbAAm5mZAAuwAJuZmQALsJmZCbAAC7CZmQmwAJuZmQALsACbmZkAC7CZmQmwAJuZmQALsACbmZkAC7CZmQmwAAuwmZkJsACbmZkAC7AAm5mZAAuwmZkJsAALsJmZCbAAm5mZAAuwmZkJsAALsJmZCXDMAAOAAAswAAIcPcAAMDsBBgABBgABBgAEGAAEGAAQYAAQYABAgAFAgAEAAQYAAQYAAQYABBgABBgAEGAAEGAAQIABQIABAAEGAAEGAAEGAAQYAAQYABBgABBgAECAAUCAAQABBgABBgABBgAEGAAEGAAQYAAQYABAgAFAgAEAAQYAAQYAAQYABBgABBgAEGAAEGAAIHqAPz6/oDr/HAACLMAIMCDAAowAAwiwACPAgAALMAIMIMAgwIAACzACDCDAIMCAAAswAgwIsACDAAMCLMAIMCDAAowAAwiwACPAgAALMAIMIMC1PRL3331Tz1XrMYzweFofR4ABARZgARZgAAEWYAEWYECABViABRhAgHPC0/o4e4U89XNGe94EGBBgARZgAQYQYAEWYAEGBFiABViAAQR49QD3PK8AAwiwAAuwAAMCLMACLMCAAAuwAAuwAAMCPNOFOEa78EXrMAswgAALsAALMCDAAizAAgwgwAIswAIMCPCsAR75h6f2Oo4AAwiwAAuwAAMCLMACLMAAAizAAizAgAALsAALMIAAC7AACzAgwAIswAIMCLAAC7AAAwjwHgGudeGLFhf0mPHCIHuFXIABARZgARZgAAEWYAEWYECABViABRgQYAFmdf45AARYgBFgQIAFGAEGEGABRoABARZgBBhAgEGAAQEWYAQYQIBBgAEBFmAEGBBgAQYBBgRYgBFgQIAFGAEGEGABRoABARZgBBhgpQADgAADAAIMAAIMAAgwAAgwAAgwACDAACDAAIAAA4AAAwACDAACDAAIMAAIMAAIMAAgwAAgwACAAAOAAAMAAgwAAgwACDAACDAACLCnAAAEGAAEGAAQYAAQYABAgAFAgAEAAQYAAQYABBgABBgABBgAEGAAEGAAQIABQIABAAEGAAEGAAQYAAQYAAQYABBgABBgAECAAUCAAQABBgABBgAEGAAEGAAEGAAQYAAQYABAgAFAgAEAAQYAAQYABBgABBgABBgAEGAACOkX6b/950weJzAAAAAASUVORK5CYII="
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "click",
+          "confidence": 0.98,
+          "probabilities": {
+            "click": 0.99,
+            "end": 0.01
+          }
+        },
+        "click.target": {
+          "type": "box",
+          "box": {
+            "top": 0.72,
+            "bottom": 0.85,
+            "left": 0.1,
+            "right": 0.41
+          },
+          "confidence": 0.88
+        },
+        "click.target?present": {
+          "type": "noul",
+          "noul": 1
+        }
+      },
+      "usage": {
+        "input_tokens": 1187,
+        "output_tokens": 73
+      }
+    }
+  }
+}
