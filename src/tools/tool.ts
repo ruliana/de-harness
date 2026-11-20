@@ -19,7 +19,10 @@ import type { ArgsOf, Params } from "./param.js";
 export type ToolContext = {
   /** Read-only copy of the state slots. */
   state: StateView;
-  /** Raw answers for this tool's questions, keyed by parameter name (probabilities, confidence), so code can apply its own thresholds. */
+  /**
+   * Raw answers for this tool's questions (probabilities, confidence), so code can apply its own thresholds. Keyed by parameter name;
+   * a set's members are keyed `toppings[olives]` and an optional parameter's stated question `delivery_time?stated`.
+   */
   answers: Record<string, Answer>;
   /** 1-based number of the current step. */
   step: number;
