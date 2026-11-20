@@ -2,7 +2,7 @@
 
 A sample: the same shopping task as `storefront/`, done the way a person would, in a headless browser.
 
-**Shows:** a page that is only a screenshot. The model points with boxes (`hover` to open the menu, `click`, `scroll`) and with
+**Shows:** the generic browser module (`src/browser`) on a real task: a page that is only a screenshot. The model points with boxes (`hover` to open the menu, `click`, `scroll`) and with
 a box around the price: `read_price` lets code read the text inside it. Instructions spell out the steps; the one-sentence
 task is the harder variant (`--plain`), which `storefront-by-sight/` addresses.
 
