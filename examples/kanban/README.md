@@ -2,7 +2,7 @@
 
 An assistant that lives next to a Kanban board: a chat panel beside a small board (To Do, Doing, Done). You type "Move the 'Fix login' card to Done and assign it to Sam"; the agent operates the board by sight, at full speed, and the board moves while it works: the cards fly to their new places, an assignee fades in, the dialog grows in. The panel says nothing until the result (or a question).
 
-![The agent drags the card, opens it and picks Sam](../../docs/media/kanban-demo.png)
+<video src="https://github.com/ruliana/de-harness/raw/main/docs/media/kanban-demo.mp4" aria-label="The agent drags the card, opens it and picks Sam" width="100%" controls muted loop autoplay playsinline></video>
 
 **Shows:** the page-overlay pattern (`PageOverlay`, see [page-overlay](../page-overlay/)) on an app with real interaction, not a form:
 
@@ -15,7 +15,7 @@ An assistant that lives next to a Kanban board: a chat panel beside a small boar
 ```sh
 npm run example:kanban -- [--scenario move-assign|ask-assignee|move-only] [--runs 1]   # a scripted person types into the panel, headless
 npm run example:kanban -- --headed                                                       # you type into the panel yourself (needs a display)
-npm run example:kanban:demo -- [--out docs/media]                                        # renders the README video (MP4, WebM) and animated PNG
+npm run example:kanban:demo -- [--out docs/media]                                        # renders the README video (a small MP4)
 ```
 
 The scenarios: `move-assign` ("Move the 'Fix login' card to Done and assign it to Sam"), `ask-assignee` ("Move the 'Update docs' card to Doing and ask me who to assign it to"; the scripted person answers "Priya") and `move-only` ("Move the 'Review pricing page' card to Done": no question, nobody reassigned). A run exits 0 only if the board is the start with exactly that card changed and the panel stayed quiet until the result.
@@ -24,5 +24,5 @@ The demo replays the recorded runs of `move-assign` and `ask-assignee` (no key, 
 
 **Needs:** Jev: `TYPESAFE_API_KEY` in the environment (the cloud proxy supplies it in cloud sessions) and Chromium (`npm ci`, `npx playwright install chromium`). The demo also needs ffmpeg. `--headed` needs a display. The board is on loopback; no other network.
 
-**Files:** `kanban-site.ts` and `page/` (the board: `index.html`, `board.css` the theme, `board.js` the cards and their animations), `assistant.ts` (tools, questions, the loop behind the panel), `run.ts` (a scripted person, scenarios, checks), `main.ts` (runner), `demo.ts` (video and animated PNG).
+**Files:** `kanban-site.ts` and `page/` (the board: `index.html`, `board.css` the theme, `board.js` the cards and their animations), `assistant.ts` (tools, questions, the loop behind the panel), `run.ts` (a scripted person, scenarios, checks), `main.ts` (runner), `demo.ts` (the README video).
 **Acceptance tests:** `tests/acceptance/kanban/`: `mechanics.test.ts` (drag, dialog, the panel kept out of the model's picture, with a scripted model) and `assistant.test.ts` (Jev, replayed from `tests/cassettes/kanban`).
