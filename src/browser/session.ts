@@ -489,6 +489,17 @@ export class BrowserSession {
     if (key) await field.press(key);
   }
 
+  /**
+   * Like `userTypes`, but with real key presses, one every `delayMs`, so that the page sees the text grow letter by letter and nothing is
+   * ever selected (`fill` selects the field's text before it replaces it, which shows in a recording). For demos.
+   */
+  async userTypesSlowly(selector: string, text: string, opts: { delayMs?: number; key?: string } = {}): Promise<void> {
+    const field = this.page.locator(selector).first();
+    await field.focus();
+    await field.pressSequentially(text, { delay: opts.delayMs ?? 40 });
+    if (opts.key) await field.press(opts.key);
+  }
+
   /** Run `fn` while the elements that the model must not see are hidden. Their layout stays (they are only made invisible), so nothing around them moves. */
   private async withoutHidden<T>(fn: () => Promise<T>): Promise<T> {
     if (this.hidden.length === 0) return await fn();

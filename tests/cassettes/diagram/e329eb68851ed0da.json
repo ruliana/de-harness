@@ -1,0 +1,453 @@
+{
+  "hash": "e329eb68851ed0da",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Rename 'Build image' to 'Package app', call the 'Pass' arrow 'Green', and remove the 'Notify team' step",
+        "state": {
+          "diagram": "flowchart TD\n  n1[\"Push code\"]\n  n2[\"Run tests\"]\n  n3[\"Package app\"]\n  n4[\"Deploy\"]\n  n5[\"Notify team\"]\n  n1 --> n2\n  n2 -->|Pass| n3\n  n3 --> n4\n  n4 --> n5",
+          "done": false,
+          "open_questions": []
+        },
+        "previous_actions": [
+          {
+            "tool": "rename_node",
+            "args": {
+              "node": "Build image",
+              "label": "Package app"
+            },
+            "summary": "Renamed \"Build image\" to \"Package app\""
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_node": "Adds one node to the diagram in `state.diagram`: a step of a flowchart, or a participant of a sequence diagram, which `instructions` ask for and which the diagram does not have yet.",
+            "remove_node": "Removes one node, with all its arrows or messages, from the diagram in `state.diagram`.",
+            "rename_node": "Gives one node of the diagram in `state.diagram` another label.",
+            "connect": "Draws one new arrow in the flowchart in `state.diagram`, from one step to another, with a label if `instructions` give it one.",
+            "disconnect": "Takes one arrow or message out of the diagram in `state.diagram`; the nodes stay.",
+            "relabel_edge": "Gives one arrow or message of the diagram in `state.diagram` another label."
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "instructions": "Which step or participant that `instructions` ask for is still missing from the diagram in `state.diagram`? If more than one is missing, the one that comes first in the flow, or the one furthest to the left.",
+          "criteria": {
+            "Build image": "",
+            "Pass": "",
+            "Green": "",
+            "Enter credentials": "",
+            "Check password": "",
+            "Show dashboard": "",
+            "Show error message": "",
+            "Send verification code": "",
+            "Verify code": "",
+            "Reset password": "",
+            "Lock account": "",
+            "Fill in sign-up form": "",
+            "Validate email": "",
+            "Create account": "",
+            "Send welcome email": "",
+            "Add to cart": "",
+            "Enter payment details": "",
+            "Charge card": "",
+            "Confirm order": "",
+            "Payment failed": "",
+            "Retry payment": "",
+            "Cancel order": "",
+            "Roll back": "",
+            "Open ticket": "",
+            "Triage": "",
+            "Assign agent": "",
+            "Escalate": "",
+            "Resolve ticket": "",
+            "Close ticket": "",
+            "Review": "",
+            "Approve": "",
+            "Reject": ""
+          }
+        },
+        "remove_node.node": {
+          "type": "choice",
+          "instructions": "Which node of the diagram in `state.diagram` do `instructions` say to remove? A node is a step of a flowchart or a participant of a sequence diagram.",
+          "criteria": {
+            "Push code": "",
+            "Run tests": "",
+            "Package app": "",
+            "Deploy": "",
+            "Notify team": ""
+          }
+        },
+        "rename_node.node": {
+          "type": "choice",
+          "instructions": "Which node of the diagram in `state.diagram` do `instructions` say to rename? A node is a step of a flowchart or a participant of a sequence diagram.",
+          "criteria": {
+            "Push code": "",
+            "Run tests": "",
+            "Package app": "",
+            "Deploy": "",
+            "Notify team": ""
+          }
+        },
+        "rename_node.label": {
+          "type": "choice",
+          "instructions": "What do `instructions` say that node is to be called now?",
+          "criteria": {
+            "Build image": "",
+            "Pass": "",
+            "Green": "",
+            "Enter credentials": "",
+            "Check password": "",
+            "Show dashboard": "",
+            "Show error message": "",
+            "Send verification code": "",
+            "Verify code": "",
+            "Reset password": "",
+            "Lock account": "",
+            "Fill in sign-up form": "",
+            "Validate email": "",
+            "Create account": "",
+            "Send welcome email": "",
+            "Add to cart": "",
+            "Enter payment details": "",
+            "Charge card": "",
+            "Confirm order": "",
+            "Payment failed": "",
+            "Retry payment": "",
+            "Cancel order": "",
+            "Roll back": "",
+            "Open ticket": "",
+            "Triage": "",
+            "Assign agent": "",
+            "Escalate": "",
+            "Resolve ticket": "",
+            "Close ticket": "",
+            "Review": "",
+            "Approve": "",
+            "Reject": ""
+          }
+        },
+        "connect.arrow": {
+          "type": "choice",
+          "instructions": "Which arrow that `instructions` ask for is still missing from the flowchart in `state.diagram`? If more than one is missing, the one that comes first in the flow. An arrow is written `from -> to`.",
+          "criteria": {
+            "Push code -> Package app": "",
+            "Push code -> Deploy": "",
+            "Push code -> Notify team": "",
+            "Run tests -> Push code": "",
+            "Run tests -> Deploy": "",
+            "Run tests -> Notify team": "",
+            "Package app -> Push code": "",
+            "Package app -> Run tests": "",
+            "Package app -> Notify team": "",
+            "Deploy -> Push code": "",
+            "Deploy -> Run tests": "",
+            "Deploy -> Package app": "",
+            "Notify team -> Push code": "",
+            "Notify team -> Run tests": "",
+            "Notify team -> Package app": "",
+            "Notify team -> Deploy": ""
+          }
+        },
+        "connect.label": {
+          "type": "choice",
+          "instructions": "Which label do `instructions` give that arrow?",
+          "criteria": {
+            "Build image": "",
+            "Package app": "",
+            "Pass": "",
+            "Green": "",
+            "Notify team": "",
+            "Yes": "",
+            "No": "",
+            "Valid": "",
+            "Invalid": "",
+            "Success": "",
+            "Failure": "",
+            "Fail": "",
+            "Retry": "",
+            "Approved": "",
+            "Rejected": ""
+          }
+        },
+        "connect.label?stated": {
+          "type": "noul",
+          "instructions": "Do `instructions` give a label to that arrow, such as Yes, No, Valid, Invalid or a text in quotes?"
+        },
+        "disconnect.edge": {
+          "type": "choice",
+          "instructions": "Which arrow or message of the diagram in `state.diagram` do `instructions` say to take out, or to replace with another? A flowchart's arrow is written `from --label--> to`, a sequence diagram's message `number. from -> to: text`.",
+          "criteria": {
+            "Push code --> Run tests": "",
+            "Run tests --Pass--> Package app": "",
+            "Package app --> Deploy": "",
+            "Deploy --> Notify team": ""
+          }
+        },
+        "relabel_edge.edge": {
+          "type": "choice",
+          "instructions": "Which arrow or message of the diagram in `state.diagram` do `instructions` say to relabel? A flowchart's arrow is written `from --label--> to`, a sequence diagram's message `number. from -> to: text`.",
+          "criteria": {
+            "Push code --> Run tests": "",
+            "Run tests --Pass--> Package app": "",
+            "Package app --> Deploy": "",
+            "Deploy --> Notify team": ""
+          }
+        },
+        "relabel_edge.label": {
+          "type": "choice",
+          "instructions": "What label do `instructions` give that arrow or message now?",
+          "criteria": {
+            "Build image": "",
+            "Package app": "",
+            "Pass": "",
+            "Green": "",
+            "Notify team": "",
+            "Yes": "",
+            "No": "",
+            "Valid": "",
+            "Invalid": "",
+            "Success": "",
+            "Failure": "",
+            "Fail": "",
+            "Retry": "",
+            "Approved": "",
+            "Rejected": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "relabel_edge",
+          "confidence": 0.96,
+          "probabilities": {
+            "add_node": 0,
+            "remove_node": 0.03,
+            "rename_node": 0,
+            "connect": 0,
+            "disconnect": 0,
+            "relabel_edge": 0.97
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "choice": "Green",
+          "confidence": 0.71,
+          "probabilities": {
+            "Build image": 0,
+            "Pass": 0.28,
+            "Green": 0.72,
+            "Enter credentials": 0,
+            "Check password": 0,
+            "Show dashboard": 0,
+            "Show error message": 0,
+            "Send verification code": 0,
+            "Verify code": 0,
+            "Reset password": 0,
+            "Lock account": 0,
+            "Fill in sign-up form": 0,
+            "Validate email": 0,
+            "Create account": 0,
+            "Send welcome email": 0,
+            "Add to cart": 0,
+            "Enter payment details": 0,
+            "Charge card": 0,
+            "Confirm order": 0,
+            "Payment failed": 0,
+            "Retry payment": 0,
+            "Cancel order": 0,
+            "Roll back": 0,
+            "Open ticket": 0,
+            "Triage": 0,
+            "Assign agent": 0,
+            "Escalate": 0,
+            "Resolve ticket": 0,
+            "Close ticket": 0,
+            "Review": 0,
+            "Approve": 0,
+            "Reject": 0
+          }
+        },
+        "remove_node.node": {
+          "type": "choice",
+          "choice": "Notify team",
+          "confidence": 1,
+          "probabilities": {
+            "Push code": 0,
+            "Run tests": 0,
+            "Package app": 0,
+            "Deploy": 0,
+            "Notify team": 1
+          }
+        },
+        "rename_node.node": {
+          "type": "choice",
+          "choice": "Package app",
+          "confidence": 0.99,
+          "probabilities": {
+            "Push code": 0,
+            "Run tests": 0.01,
+            "Package app": 0.99,
+            "Deploy": 0,
+            "Notify team": 0
+          }
+        },
+        "rename_node.label": {
+          "type": "choice",
+          "choice": "Green",
+          "confidence": 0.41,
+          "probabilities": {
+            "Build image": 0.36,
+            "Pass": 0.11,
+            "Green": 0.43,
+            "Enter credentials": 0,
+            "Check password": 0,
+            "Show dashboard": 0,
+            "Show error message": 0,
+            "Send verification code": 0,
+            "Verify code": 0,
+            "Reset password": 0,
+            "Lock account": 0,
+            "Fill in sign-up form": 0,
+            "Validate email": 0,
+            "Create account": 0,
+            "Send welcome email": 0,
+            "Add to cart": 0,
+            "Enter payment details": 0,
+            "Charge card": 0,
+            "Confirm order": 0.02,
+            "Payment failed": 0,
+            "Retry payment": 0,
+            "Cancel order": 0,
+            "Roll back": 0,
+            "Open ticket": 0.01,
+            "Triage": 0.01,
+            "Assign agent": 0.01,
+            "Escalate": 0.01,
+            "Resolve ticket": 0.01,
+            "Close ticket": 0.01,
+            "Review": 0.01,
+            "Approve": 0.01,
+            "Reject": 0
+          }
+        },
+        "connect.arrow": {
+          "type": "choice",
+          "choice": "Run tests -> Deploy",
+          "confidence": 0.4,
+          "probabilities": {
+            "Push code -> Package app": 0.22,
+            "Push code -> Deploy": 0.01,
+            "Push code -> Notify team": 0,
+            "Run tests -> Push code": 0.05,
+            "Run tests -> Deploy": 0.44,
+            "Run tests -> Notify team": 0.14,
+            "Package app -> Push code": 0,
+            "Package app -> Run tests": 0.01,
+            "Package app -> Notify team": 0.11,
+            "Deploy -> Push code": 0,
+            "Deploy -> Run tests": 0,
+            "Deploy -> Package app": 0.01,
+            "Notify team -> Push code": 0,
+            "Notify team -> Run tests": 0,
+            "Notify team -> Package app": 0,
+            "Notify team -> Deploy": 0.01
+          }
+        },
+        "connect.label": {
+          "type": "choice",
+          "choice": "Green",
+          "confidence": 1,
+          "probabilities": {
+            "Build image": 0,
+            "Package app": 0,
+            "Pass": 0,
+            "Green": 1,
+            "Notify team": 0,
+            "Yes": 0,
+            "No": 0,
+            "Valid": 0,
+            "Invalid": 0,
+            "Success": 0,
+            "Failure": 0,
+            "Fail": 0,
+            "Retry": 0,
+            "Approved": 0,
+            "Rejected": 0
+          }
+        },
+        "connect.label?stated": {
+          "type": "noul",
+          "noul": 0.93
+        },
+        "disconnect.edge": {
+          "type": "choice",
+          "choice": "Run tests --Pass--> Package app",
+          "confidence": 0.92,
+          "probabilities": {
+            "Push code --> Run tests": 0,
+            "Run tests --Pass--> Package app": 0.94,
+            "Package app --> Deploy": 0,
+            "Deploy --> Notify team": 0.06
+          }
+        },
+        "relabel_edge.edge": {
+          "type": "choice",
+          "choice": "Run tests --Pass--> Package app",
+          "confidence": 1,
+          "probabilities": {
+            "Push code --> Run tests": 0,
+            "Run tests --Pass--> Package app": 1,
+            "Package app --> Deploy": 0,
+            "Deploy --> Notify team": 0
+          }
+        },
+        "relabel_edge.label": {
+          "type": "choice",
+          "choice": "Green",
+          "confidence": 1,
+          "probabilities": {
+            "Build image": 0,
+            "Package app": 0,
+            "Pass": 0,
+            "Green": 1,
+            "Notify team": 0,
+            "Yes": 0,
+            "No": 0,
+            "Valid": 0,
+            "Invalid": 0,
+            "Success": 0,
+            "Failure": 0,
+            "Fail": 0,
+            "Retry": 0,
+            "Approved": 0,
+            "Rejected": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 2091,
+        "output_tokens": 1324
+      }
+    }
+  }
+}

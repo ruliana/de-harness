@@ -1,0 +1,45 @@
+{
+  "hash": "3bec845d56314ce6",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Draw a sequence diagram of a login. The user enters credentials in the browser, the browser sends a login request to the server, the server looks the user up in the database, the database returns the user record, and the server checks the password. If the password is right, the server sends a session token and the browser shows the dashboard. If it is wrong, the server sends invalid credentials and the browser shows an error message.",
+        "state": {
+          "diagram": "sequenceDiagram",
+          "user_reply": null
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "done": {
+          "type": "noul",
+          "instructions": "Does the sequence diagram in `state.diagram` have every message that `instructions` describe, in the order in which they are sent, with a branch (`alt` and `else`) for each case that they describe, and no message that neither `instructions` nor `state.user_reply` describe? Its participants are the ones that the messages need. If `instructions` ask for the person's answer, the diagram follows `state.user_reply`. "
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "done": {
+          "type": "noul",
+          "noul": 0.07
+        }
+      },
+      "usage": {
+        "input_tokens": 483,
+        "output_tokens": 20
+      }
+    }
+  }
+}

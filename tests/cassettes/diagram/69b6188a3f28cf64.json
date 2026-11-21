@@ -1,0 +1,45 @@
+{
+  "hash": "69b6188a3f28cf64",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Add a 'Build image' step between 'Run tests' and 'Deploy'",
+        "state": {
+          "diagram": "flowchart TD\n  n1[\"Push code\"]\n  n2[\"Run tests\"]\n  n3[\"Deploy\"]\n  n4[\"Build image\"]\n  n1 --> n2\n  n2 --> n3",
+          "user_reply": null
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "done": {
+          "type": "noul",
+          "instructions": "Is the flowchart in `state.diagram` exactly what `instructions` ask for? Every step that `instructions` ask to add must be in it, every step they ask to remove must be gone, and every rename and arrow label they ask for must be there. If `instructions` give a number of steps, it has that many, besides the steps of a branch that they ask for; a branch is a step with two arrows leaving it. The steps are joined by arrows in the order of the flow, and no step is left without an arrow. A step that `instructions` put between two others sits on the way from one to the other, so the arrow that joined those two directly is gone. If `instructions` ask for the person's answer, the diagram follows `state.user_reply`. "
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "done": {
+          "type": "noul",
+          "noul": 0.01
+        }
+      },
+      "usage": {
+        "input_tokens": 526,
+        "output_tokens": 20
+      }
+    }
+  }
+}

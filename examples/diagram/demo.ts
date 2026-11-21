@@ -3,7 +3,7 @@
  *
  *   npm run example:diagram:demo -- --out docs/media
  *
- * It runs three of the scenarios of the test (`login-flow`, `tidy`, `ask-failure`), by default replayed from the recordings in
+ * It runs three of the scenarios of the test (`login-sequence`, `tidy`, `ask-wrong-password`), by default replayed from the recordings in
  * tests/cassettes/diagram (no key, no network), in a Chromium that records the page. What a viewer sees besides the page: the person
  * types into the panel letter by letter, the model "thinks" a moment before each step (the replay would otherwise be instant), and a caption
  * names the tool the model chose and what it chose for each parameter. The captions are drawn into an element that the session hides from
@@ -11,15 +11,16 @@
  * The animated PNG is made from screenshots taken after each step. ffmpeg encodes. Needs Playwright's Chromium and ffmpeg.
  */
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { parseArgs } from "node:util";
 import { chromium } from "playwright";
 import { CassetteModel, JevModel, type DecisionModel, type DecisionRequest, type DecisionResponse } from "../../src/index.js";
 import { OVERLAY_FIELD, type BrowserSession } from "../../src/browser/index.js";
+import { FONTS } from "./diagram-site.js";
 import { SCENARIOS, problems, runScenario, type Scenario } from "./run.js";
 
-const { values } = parseArgs({ options: { out: { type: "string", default: "docs/media" }, live: { type: "boolean", default: false }, "think-ms": { type: "string", default: "650" } } });
+const { values } = parseArgs({ options: { out: { type: "string", default: "docs/media" }, live: { type: "boolean", default: false }, "think-ms": { type: "string", default: "350" } } });
 const out = resolve(values.out!); // absolute: ffmpeg reads the frame list relative to the list file
 const work = join(out, ".frames");
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -41,10 +42,10 @@ const FX = "#demo-fx";
 const FX_SCRIPT = `(() => {
   const css = \`
     #demo-fx { position: fixed; inset: 0; pointer-events: none; z-index: 2147483646; }
-    #demo-fx .cap { position: absolute; left: 48px; bottom: 44px; max-width: 800px; background: #0f172a; color: #e2e8f0; border-left: 8px solid #f59e0b; padding: 10px 18px; font: 400 17px/24px "Test Sans", sans-serif; animation: fade 3.4s ease-in forwards; }
-    #demo-fx .cap b { color: #fbbf24; font-weight: 700; }
-    #demo-fx .cap i { color: #7ee0a8; font-style: normal; }
-    @keyframes fade { 0%, 75% { opacity: 1; } 100% { opacity: 0; } }
+    #demo-fx .cap { position: absolute; left: 52px; bottom: 44px; max-width: 800px; background: rgba(15, 18, 38, .94); color: #cbd5f5; border-radius: 14px; padding: 11px 18px; font: 500 15px/22px "Inter", sans-serif; box-shadow: 0 14px 34px rgba(15, 18, 38, .35); animation: cap 3.4s ease forwards; }
+    #demo-fx .cap b { color: #c4b5fd; font-weight: 700; }
+    #demo-fx .cap i { color: #a7f3d0; font-style: normal; font-family: "JetBrains Mono", monospace; font-size: 14px; }
+    @keyframes cap { 0% { opacity: 0; transform: translateY(8px); } 8% { opacity: 1; transform: none; } 75% { opacity: 1; } 100% { opacity: 0; } }
   \`;
   const mount = () => {
     if (document.getElementById('demo-fx')) return;
@@ -63,20 +64,20 @@ const FX_SCRIPT = `(() => {
   if (document.documentElement) mount(); else addEventListener('DOMContentLoaded', mount);
 })();`;
 
-/** The person types into the panel's field letter by letter. */
+/** The person types into the panel's field, key by key, and presses Enter. */
 async function typeSlowly(text: string, browser: BrowserSession) {
-  for (let i = 1; i <= text.length; i++) {
-    await browser.userTypes(OVERLAY_FIELD, text.slice(0, i));
-    await sleep(38);
-  }
+  await browser.userTypesSlowly(OVERLAY_FIELD, text, { delayMs: 38 });
   await sleep(450);
+  await browser.userTypesSlowly(OVERLAY_FIELD, "", { key: "Enter" });
 }
 
+const face = (weight: number, key: string) => `@font-face{font-family:"Inter";font-weight:${weight};src:url(data:font/woff2;base64,${readFileSync(FONTS[key]!).toString("base64")}) format("woff2")}`;
 const titleCard = (kicker: string, big: string, quote: string) => `<style>
+${face(400, "inter-400.woff2")}${face(600, "inter-600.woff2")}${face(700, "inter-700.woff2")}
 *{box-sizing:border-box;margin:0}
-body{width:1280px;height:800px;background:#0f1419;color:#e6edf3;font:20px/1.4 "DejaVu Sans",system-ui,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:24px}
-b{font-size:22px;color:#7ee0a8;font-weight:700}.big{font:700 50px/1.2 "DejaVu Sans",sans-serif;max-width:1000px}.q{max-width:900px;color:#c7d1dc;font-size:26px}.dim{color:#8b98a9;font-size:18px;max-width:820px}
-</style><b>${kicker}</b><div class="big">${big}</div><div class="q">${quote}</div><div class="dim">The model never writes text. At each step it answers closed questions: which tool, which node, which arrow, which label.</div>`;
+body{width:1280px;height:800px;background:radial-gradient(900px 600px at 15% 0%,#312e81 0%,transparent 70%),radial-gradient(800px 560px at 100% 100%,#581c87 0%,transparent 65%),#0f1226;color:#e0e7ff;font:400 20px/1.45 "Inter",sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:26px}
+b{font:600 15px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:#a5b4fc}.big{font:700 58px/1.15 "Inter";letter-spacing:-.03em;max-width:1000px;color:#fff}.q{max-width:900px;color:#c7d2fe;font-size:26px}.dim{color:#8187c4;font-size:17px;max-width:820px}
+</style><b>${kicker}</b><div class="big">${big}</div><div class="q" style="font-size:${quote.length > 200 ? 20 : 26}px">${quote}</div><div class="dim">The model never writes text. At each step it answers closed questions: which tool, which node, which arrow, which label.</div>`;
 
 type Segment = { video: string; trimSeconds: number; frames: string[]; scenario: Scenario };
 
@@ -133,7 +134,7 @@ async function main() {
   rmSync(work, { recursive: true, force: true });
   mkdirSync(work, { recursive: true });
   const segments: Segment[] = [];
-  for (const [i, name] of ["login-flow", "tidy", "ask-failure"].entries()) segments.push(await record(SCENARIOS.find((s) => s.name === name)!, i));
+  for (const [i, name] of ["login-sequence", "tidy", "ask-wrong-password"].entries()) segments.push(await record(SCENARIOS.find((s) => s.name === name)!, i));
 
   // The title cards, as pictures of a page.
   const browser = await chromium.launch();

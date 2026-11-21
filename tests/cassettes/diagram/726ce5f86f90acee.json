@@ -1,0 +1,72 @@
+{
+  "hash": "726ce5f86f90acee",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Draw a sequence diagram of a login. The user enters credentials in the browser, the browser sends a login request to the server, the server looks the user up in the database, the database returns the user record, and the server checks the password. If the password is right, the server sends a session token and the browser shows the dashboard. If it is wrong, the server sends invalid credentials and the browser shows an error message."
+      },
+      "questions": {
+        "wrong-password": {
+          "type": "noul",
+          "instructions": "Do `instructions` tell the assistant to ask the person what the server sends, or does, when a password is wrong?"
+        },
+        "remove_node": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask to remove a step or a participant from a diagram?"
+        },
+        "rename_node": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask to give a step or a participant another name?"
+        },
+        "disconnect": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask to take out an arrow or a message, or to put a step between two that are joined already?"
+        },
+        "relabel_edge": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask to give an arrow or a message another label?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "wrong-password": {
+          "type": "noul",
+          "noul": 0.1
+        },
+        "remove_node": {
+          "type": "noul",
+          "noul": 0.01
+        },
+        "rename_node": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "disconnect": {
+          "type": "noul",
+          "noul": 0.08
+        },
+        "relabel_edge": {
+          "type": "noul",
+          "noul": 0.08
+        }
+      },
+      "usage": {
+        "input_tokens": 484,
+        "output_tokens": 89
+      }
+    }
+  }
+}
