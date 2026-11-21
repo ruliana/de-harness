@@ -179,23 +179,23 @@
         "__tool__": {
           "type": "choice",
           "choice": "end",
-          "confidence": 0.44,
+          "confidence": 0.57,
           "probabilities": {
-            "assign": 0.35,
-            "set_status": 0.06,
-            "tag": 0.01,
-            "end": 0.58
+            "assign": 0.24,
+            "set_status": 0.08,
+            "tag": 0,
+            "end": 0.68
           }
         },
         "assign.team": {
           "type": "choice",
           "choice": "general",
-          "confidence": 0.92,
+          "confidence": 0.93,
           "probabilities": {
-            "billing": 0.05,
+            "billing": 0.04,
             "technical": 0.01,
             "accounts": 0,
-            "general": 0.94
+            "general": 0.95
           }
         },
         "assign.instructed": {
@@ -219,12 +219,12 @@
         "tag.tag": {
           "type": "choice",
           "choice": "bug",
-          "confidence": 0.64,
+          "confidence": 0.67,
           "probabilities": {
-            "refund": 0.21,
+            "refund": 0.19,
             "urgent": 0.05,
             "vip": 0.01,
-            "bug": 0.73
+            "bug": 0.75
           }
         }
       },

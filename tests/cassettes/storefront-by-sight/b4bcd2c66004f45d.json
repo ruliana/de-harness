@@ -62,7 +62,7 @@
       "answers": {
         "itemVisible": {
           "type": "noul",
-          "noul": 0.95
+          "noul": 0.96
         },
         "menuOpen": {
           "type": "noul",
@@ -70,7 +70,7 @@
         },
         "optionChosen": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.01
         },
         "valueVisible": {
           "type": "noul",

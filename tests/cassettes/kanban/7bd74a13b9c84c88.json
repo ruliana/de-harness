@@ -1,5 +1,5 @@
 {
-  "hash": "e3af81dbcbb970c0",
+  "hash": "7bd74a13b9c84c88",
   "request": {
     "method": "POST",
     "url": "https://api.typesafe.ai/v1/systemone",
@@ -21,8 +21,9 @@
             }
           },
           "done": false,
-          "open_questions": [],
-          "user_reply": "Priya"
+          "open_questions": [
+            "Who should I assign it to: Ada, Sam, Priya or Lee?"
+          ]
         },
         "previous_actions": [
           {
@@ -30,7 +31,7 @@
             "args": {
               "card": {
                 "top": 0.29,
-                "bottom": 0.38,
+                "bottom": 0.37,
                 "left": 0.03,
                 "right": 0.23
               },
@@ -38,17 +39,10 @@
                 "top": 0.11,
                 "bottom": 0.98,
                 "left": 0.24,
-                "right": 0.47
+                "right": 0.46
               }
             },
             "summary": "Dragged: \"Update docs\" moved from To Do to Doing"
-          },
-          {
-            "tool": "ask_user",
-            "args": {
-              "question": "Who should I assign it to: Ada, Sam, Priya or Lee?"
-            },
-            "summary": "asked \"Who should I assign it to: Ada, Sam, Priya or Lee?\" and the person replied"
           }
         ]
       },
@@ -58,7 +52,8 @@
           "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
           "criteria": {
             "click": "Clicks one element of the web page, which is the picture in `state.screen`.",
-            "drag": "Drags one card of the board in `state.screen` onto a column, which moves the card to that column."
+            "drag": "Drags one card of the board in `state.screen` onto a column, which moves the card to that column.",
+            "ask_user": "Asks the person one of the open questions in `state.open_questions` in the assistant panel and waits for their answer, which is saved in `state.user_reply`."
           }
         },
         "click.target": {
@@ -84,6 +79,13 @@
         "drag.column?present": {
           "type": "noul",
           "instructions": "Is the column that `instructions` say the card is to go to visible in `state.screen`?"
+        },
+        "ask_user.question": {
+          "type": "choice",
+          "instructions": "Which of the open questions in `state.open_questions` should be asked of the person now?",
+          "criteria": {
+            "Who should I assign it to: Ada, Sam, Priya or Lee?": "Still open: the person has not answered it"
+          }
         }
       },
       "assets": {
@@ -103,36 +105,37 @@
       "answers": {
         "__tool__": {
           "type": "choice",
-          "choice": "click",
+          "choice": "ask_user",
           "confidence": 0.98,
           "probabilities": {
-            "click": 0.99,
-            "drag": 0.01
+            "click": 0.01,
+            "drag": 0,
+            "ask_user": 0.99
           }
         },
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.42,
-            "bottom": 0.49,
-            "left": 0.26,
-            "right": 0.46
-          },
-          "confidence": 0.71
-        },
-        "click.target?present": {
-          "type": "noul",
-          "noul": 1
-        },
-        "drag.card": {
-          "type": "box",
-          "box": {
-            "top": 0.42,
+            "top": 0.43,
             "bottom": 0.5,
             "left": 0.26,
             "right": 0.46
           },
-          "confidence": 0.73
+          "confidence": 0.46
+        },
+        "click.target?present": {
+          "type": "noul",
+          "noul": 0.99
+        },
+        "drag.card": {
+          "type": "box",
+          "box": {
+            "top": 0.41,
+            "bottom": 0.5,
+            "left": 0.25,
+            "right": 0.46
+          },
+          "confidence": 0.67
         },
         "drag.card?present": {
           "type": "noul",
@@ -146,16 +149,24 @@
             "left": 0.25,
             "right": 0.47
           },
-          "confidence": 0.66
+          "confidence": 0.62
         },
         "drag.column?present": {
           "type": "noul",
           "noul": 1
+        },
+        "ask_user.question": {
+          "type": "choice",
+          "choice": "Who should I assign it to: Ada, Sam, Priya or Lee?",
+          "confidence": 1,
+          "probabilities": {
+            "Who should I assign it to: Ada, Sam, Priya or Lee?": 1
+          }
         }
       },
       "usage": {
-        "input_tokens": 3558,
-        "output_tokens": 147
+        "input_tokens": 3613,
+        "output_tokens": 208
       }
     }
   }

@@ -67,15 +67,15 @@
           "type": "box",
           "box": {
             "top": 0.03,
-            "bottom": 0.05,
+            "bottom": 0.06,
             "left": 0.19,
             "right": 0.24
           },
-          "confidence": 0.84
+          "confidence": 0.86
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.98
+          "noul": 0.97
         }
       },
       "usage": {

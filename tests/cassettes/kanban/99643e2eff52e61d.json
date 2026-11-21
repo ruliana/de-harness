@@ -1,5 +1,5 @@
 {
-  "hash": "19e3b7d00cfd9d2c",
+  "hash": "99643e2eff52e61d",
   "request": {
     "method": "POST",
     "url": "https://api.typesafe.ai/v1/systemone",
@@ -34,9 +34,9 @@
                 "right": 0.23
               },
               "column": {
-                "top": 0.1,
+                "top": 0.11,
                 "bottom": 0.97,
-                "left": 0.49,
+                "left": 0.5,
                 "right": 0.7
               }
             },
@@ -46,8 +46,8 @@
             "tool": "click",
             "args": {
               "target": {
-                "top": 0.41,
-                "bottom": 0.51,
+                "top": 0.42,
+                "bottom": 0.5,
                 "left": 0.51,
                 "right": 0.69
               }
@@ -61,7 +61,7 @@
                 "top": 0.39,
                 "bottom": 0.44,
                 "left": 0.21,
-                "right": 0.27
+                "right": 0.28
               }
             },
             "summary": "Pressed \"Sam\""
@@ -130,11 +130,11 @@
           "type": "box",
           "box": {
             "top": 0.45,
-            "bottom": 0.51,
+            "bottom": 0.5,
             "left": 0.2,
             "right": 0.52
           },
-          "confidence": 0.83
+          "confidence": 0.86
         },
         "click.target?present": {
           "type": "noul",
@@ -143,34 +143,34 @@
         "drag.card": {
           "type": "box",
           "box": {
-            "top": 0.41,
+            "top": 0.37,
             "bottom": 0.47,
             "left": 0.17,
             "right": 0.54
           },
-          "confidence": 0.37
+          "confidence": 0.31
         },
         "drag.card?present": {
           "type": "noul",
-          "noul": 0.16
+          "noul": 0.14
         },
         "drag.column": {
           "type": "box",
           "box": {
-            "top": 0.1,
+            "top": 0.34,
             "bottom": 0.45,
             "left": 0.49,
-            "right": 0.7
+            "right": 0.68
           },
-          "confidence": 0.18
+          "confidence": 0.2
         },
         "drag.column?present": {
           "type": "noul",
-          "noul": 0.98
+          "noul": 0.99
         }
       },
       "usage": {
-        "input_tokens": 3615,
+        "input_tokens": 3614,
         "output_tokens": 147
       }
     }

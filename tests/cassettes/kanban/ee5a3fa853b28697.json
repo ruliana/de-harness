@@ -87,22 +87,22 @@
         "__tool__": {
           "type": "choice",
           "choice": "drag",
-          "confidence": 0.94,
+          "confidence": 0.96,
           "probabilities": {
             "click": 0.01,
-            "drag": 0.96,
-            "ask_user": 0.03
+            "drag": 0.97,
+            "ask_user": 0.02
           }
         },
         "click.target": {
           "type": "box",
           "box": {
             "top": 0.31,
-            "bottom": 0.4,
+            "bottom": 0.38,
             "left": 0.04,
             "right": 0.23
           },
-          "confidence": 0.55
+          "confidence": 0.47
         },
         "click.target?present": {
           "type": "noul",
@@ -112,11 +112,11 @@
           "type": "box",
           "box": {
             "top": 0.29,
-            "bottom": 0.38,
+            "bottom": 0.37,
             "left": 0.03,
             "right": 0.23
           },
-          "confidence": 0.87
+          "confidence": 0.83
         },
         "drag.card?present": {
           "type": "noul",
@@ -128,9 +128,9 @@
             "top": 0.11,
             "bottom": 0.98,
             "left": 0.24,
-            "right": 0.47
+            "right": 0.46
           },
-          "confidence": 0.43
+          "confidence": 0.3
         },
         "drag.column?present": {
           "type": "noul",

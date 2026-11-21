@@ -102,10 +102,10 @@
         "move.station": {
           "type": "choice",
           "choice": "Central",
-          "confidence": 0.98,
+          "confidence": 0.97,
           "probabilities": {
-            "Central": 0.99,
-            "Northgate": 0.01,
+            "Central": 0.98,
+            "Northgate": 0.02,
             "Old Town": 0
           }
         }

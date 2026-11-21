@@ -53,10 +53,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_chest",
-          "confidence": 0.98,
+          "confidence": 1,
           "probabilities": {
-            "end": 0.01,
-            "open_chest": 0.99
+            "end": 0,
+            "open_chest": 1
           }
         },
         "open_chest.with": {

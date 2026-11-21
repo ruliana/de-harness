@@ -61,12 +61,12 @@
         "__tool__": {
           "type": "choice",
           "choice": "filter",
-          "confidence": 0.94,
+          "confidence": 0.96,
           "probabilities": {
             "open_menu": 0,
-            "scroll": 0.04,
-            "filter": 0.95,
-            "click_item": 0.01,
+            "scroll": 0.03,
+            "filter": 0.97,
+            "click_item": 0,
             "go_back": 0,
             "close_overlay": 0
           }

@@ -163,13 +163,13 @@
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#3 Refund for my cancelled subscription",
-          "confidence": 0.45,
+          "confidence": 0.27,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.09,
-            "#3 Refund for my cancelled subscription": 0.56,
+            "#2 Password reset email never arrives": 0.13,
+            "#3 Refund for my cancelled subscription": 0.42,
             "#4 How do I export my data to CSV?": 0.01,
-            "#5 App crashes when I open the settings page": 0.06,
-            "#8 Password reset email never arrives": 0.28
+            "#5 App crashes when I open the settings page": 0.05,
+            "#8 Password reset email never arrives": 0.39
           }
         },
         "tag.tag": {

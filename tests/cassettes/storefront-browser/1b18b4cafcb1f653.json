@@ -115,12 +115,12 @@
         "__tool__": {
           "type": "choice",
           "choice": "hover",
-          "confidence": 0.85,
+          "confidence": 0.82,
           "probabilities": {
             "navigate": 0,
-            "click": 0.07,
-            "hover": 0.87,
-            "scroll": 0.05,
+            "click": 0.06,
+            "hover": 0.84,
+            "scroll": 0.09,
             "press_key": 0,
             "go_back": 0,
             "read_price": 0,
@@ -139,15 +139,15 @@
           "type": "box",
           "box": {
             "top": 0.1,
-            "bottom": 0.13,
+            "bottom": 0.14,
             "left": 0.22,
             "right": 0.3
           },
-          "confidence": 0.72
+          "confidence": 0.69
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.42
+          "noul": 0.38
         },
         "hover.target": {
           "type": "box",
@@ -157,40 +157,40 @@
             "left": 0.21,
             "right": 0.3
           },
-          "confidence": 0.68
+          "confidence": 0.67
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.65
+          "noul": 0.62
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.86,
+          "confidence": 0.74,
           "probabilities": {
-            "down": 0.93,
-            "bottom": 0.07
+            "down": 0.87,
+            "bottom": 0.13
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Tab",
-          "confidence": 0.64,
+          "confidence": 0.74,
           "probabilities": {
-            "Enter": 0.11,
-            "Tab": 0.76,
-            "Escape": 0.13
+            "Enter": 0.09,
+            "Tab": 0.83,
+            "Escape": 0.08
           }
         },
         "read_price.target": {
           "type": "box",
           "box": {
-            "top": 0.09,
+            "top": 0.05,
             "bottom": 0.53,
             "left": 0.05,
-            "right": 0.33
+            "right": 0.34
           },
-          "confidence": 0.04
+          "confidence": 0.03
         },
         "read_price.target?present": {
           "type": "noul",

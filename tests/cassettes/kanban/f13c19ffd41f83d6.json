@@ -1,5 +1,5 @@
 {
-  "hash": "2bc83ed395cf4769",
+  "hash": "f13c19ffd41f83d6",
   "request": {
     "method": "POST",
     "url": "https://api.typesafe.ai/v1/systemone",
@@ -30,7 +30,7 @@
             "args": {
               "card": {
                 "top": 0.29,
-                "bottom": 0.38,
+                "bottom": 0.37,
                 "left": 0.03,
                 "right": 0.23
               },
@@ -38,7 +38,7 @@
                 "top": 0.11,
                 "bottom": 0.98,
                 "left": 0.24,
-                "right": 0.47
+                "right": 0.46
               }
             },
             "summary": "Dragged: \"Update docs\" moved from To Do to Doing"
@@ -55,7 +55,7 @@
             "args": {
               "target": {
                 "top": 0.42,
-                "bottom": 0.49,
+                "bottom": 0.5,
                 "left": 0.26,
                 "right": 0.46
               }
@@ -130,43 +130,43 @@
             "left": 0.28,
             "right": 0.34
           },
-          "confidence": 0.94
+          "confidence": 0.95
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.99
+          "noul": 0.98
         },
         "drag.card": {
           "type": "box",
           "box": {
             "top": 0.36,
             "bottom": 0.46,
-            "left": 0.19,
-            "right": 0.35
+            "left": 0.2,
+            "right": 0.34
           },
-          "confidence": 0.42
+          "confidence": 0.5
         },
         "drag.card?present": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.1
         },
         "drag.column": {
           "type": "box",
           "box": {
             "top": 0.1,
-            "bottom": 0.43,
+            "bottom": 0.45,
             "left": 0.25,
             "right": 0.45
           },
-          "confidence": 0.63
+          "confidence": 0.58
         },
         "drag.column?present": {
           "type": "noul",
-          "noul": 0.99
+          "noul": 0.96
         }
       },
       "usage": {
-        "input_tokens": 3628,
+        "input_tokens": 3627,
         "output_tokens": 147
       }
     }

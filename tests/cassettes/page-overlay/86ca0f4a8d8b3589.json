@@ -85,21 +85,21 @@
         "__tool__": {
           "type": "choice",
           "choice": "type_text",
-          "confidence": 0.84,
+          "confidence": 0.9,
           "probabilities": {
-            "click": 0.08,
-            "type_text": 0.92
+            "click": 0.05,
+            "type_text": 0.95
           }
         },
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.34,
-            "bottom": 0.41,
+            "top": 0.33,
+            "bottom": 0.38,
             "left": 0.06,
-            "right": 0.51
+            "right": 0.52
           },
-          "confidence": 0.48
+          "confidence": 0.45
         },
         "click.target?present": {
           "type": "noul",

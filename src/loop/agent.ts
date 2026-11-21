@@ -13,7 +13,7 @@
  * and `__tool__` alone, then the state and only the chosen tool's parameter questions. A request still over budget
  * loses its oldest previous actions; with none left the run fails, naming the largest part.
  */
-import { TraceWriter } from "../events/trace.js";
+import { openTrace } from "../events/trace.js";
 import { BudgetError, DEFAULT_CONTEXT_BUDGET, fitRequest, requestTokens } from "../budget/budget.js";
 import type { EventInput, HarnessEvent, Phase } from "../events/events.js";
 import { DecisionModelError, type Answer, type DecisionModel, type DecisionRequest, type DecisionResponse, type Question } from "../model/types.js";
@@ -47,7 +47,7 @@ export type AgentConfig = {
   orderCheck?: boolean;
   /** State slots before the first step. */
   initialState?: Record<string, Json>;
-  /** Write every event to this file as JSONL. */
+  /** Write every event to this file as JSONL (Node only; in a browser use `onEvent`). */
   trace?: string;
   signal?: AbortSignal;
   /** Who answers `ctx.input.ask`: a terminal (`StdinInput`), a script (`ScriptedInput`), a web hook. Without one, asking throws. */
@@ -110,7 +110,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
   const budget = config.contextBudget ?? DEFAULT_CONTEXT_BUDGET;
   const signal = config.signal ?? new AbortController().signal;
   const doc = new StateDocument(config.initialState);
-  const trace = config.trace ? new TraceWriter(config.trace) : undefined;
+  const trace = config.trace ? await openTrace(config.trace) : undefined;
   const events: HarnessEvent[] = [];
   const steps: StepRecord[] = [];
   const emit = (e: EventInput) => {

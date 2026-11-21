@@ -99,7 +99,7 @@
         },
         "list_tickets.status?stated": {
           "type": "noul",
-          "noul": 0.94
+          "noul": 0.93
         },
         "list_tickets.assignee": {
           "type": "choice",

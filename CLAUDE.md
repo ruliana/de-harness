@@ -15,12 +15,15 @@ step limit is reached.
 4. **All question wording in one place per tool**, plain, one judgment each, naming state by path in backticks.
 5. **Tools are easy to add and remove at runtime**, and a tool may hold the loop (user input, sub-agents).
 6. API failures are errors, never answers.
+7. **`src/core.ts` stays browser-safe**: nothing it reaches imports a Node module (the build fails if one does). Node-only
+   parts (cassettes, stdin, files) are exported from `src/index.ts`; keep `src/version.ts` equal to `package.json`.
 
 ## Commands
 
 | Command | What |
 | - | - |
 | `npm run typecheck` | `tsc --noEmit`, strict, over `src`, `examples`, `tests` |
+| `npm run build` | `dist/`: compiled sources + `.d.ts`, and the browser bundles of `src/core.ts` (ESM, minified ESM, IIFE `DeHarness`) |
 | `npm test` | acceptance tests in **replay** mode: Jev and external HTTP answered from `tests/cassettes/`; no network |
 | `npm run test:live` | same tests against live Jev and HTTP, re-recording cassettes (`HARNESS_CASSETTE=record`) |
 

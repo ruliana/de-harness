@@ -38,10 +38,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "pick_up_key",
-          "confidence": 0.96,
+          "confidence": 0.94,
           "probabilities": {
-            "pick_up_key": 0.98,
-            "end": 0.02
+            "pick_up_key": 0.97,
+            "end": 0.03
           }
         }
       },

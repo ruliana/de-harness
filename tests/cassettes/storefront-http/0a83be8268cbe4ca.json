@@ -41,41 +41,6 @@
           ]
         },
         {
-          "handle": "w3924rg-cropped-accolade-crewneck-paradise-pink",
-          "title": "Cropped Accolade Crewneck - Paradise Pink",
-          "product_type": "Women:Outerwear:Coverups:Pullovers",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Paradise Pink"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L"
-              ]
-            },
-            {
-              "name": "Length",
-              "values": [
-                "Cropped"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "128",
-              "available": true
-            }
-          ]
-        },
-        {
           "handle": "u3039r-make-waves-hoodie-charcoal-green-tonal",
           "title": "Make Waves Hoodie - Charcoal Green Tonal",
           "product_type": "Women:Outerwear:Coverups:Hoodies",
@@ -2686,7 +2651,7 @@
           "variants": [
             {
               "price": "138",
-              "available": false
+              "available": true
             }
           ]
         },
@@ -3922,6 +3887,35 @@
           ]
         },
         {
+          "handle": "w3987r-polar-fleece-hazy-pullover-ivory",
+          "title": "Polar Fleece Hazy Pullover - Ivory",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Ivory"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
           "handle": "w3980r-sway-full-zip-hoodie-black",
           "title": "Sway Full Zip Hoodie - Black",
           "product_type": "Women:Outerwear:Coverups:Hoodies",
@@ -4642,41 +4636,6 @@
           ]
         },
         {
-          "handle": "w3924rg-cropped-accolade-crewneck-candy-heart-pink",
-          "title": "Cropped Accolade Crewneck - Candy Heart Pink",
-          "product_type": "Women:Outerwear:Coverups:Pullovers",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Candy Heart Pink"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L"
-              ]
-            },
-            {
-              "name": "Length",
-              "values": [
-                "Cropped"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "128",
-              "available": true
-            }
-          ]
-        },
-        {
           "handle": "w4736r-alosoft-sincere-fitted-jacket-candy-heart-pink",
           "title": "Alosoft Sincere Fitted Jacket - Candy Heart Pink",
           "product_type": "Women:Outerwear:Jackets",
@@ -4970,7 +4929,7 @@
           "variants": [
             {
               "price": "138",
-              "available": false
+              "available": true
             }
           ]
         },
@@ -5313,38 +5272,7 @@
           "variants": [
             {
               "price": "128",
-              "available": true
-            }
-          ]
-        },
-        {
-          "handle": "u3055r-take-it-easy-long-sleeve-henley-pullover-black",
-          "title": "Take It Easy Long Sleeve Henley Pullover - Black",
-          "product_type": "Women:Outerwear:Coverups:Pullovers",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Black"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L",
-                "XL",
-                "2XL"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "138",
-              "available": true
+              "available": false
             }
           ]
         },
@@ -6092,6 +6020,64 @@
           ]
         },
         {
+          "handle": "w3980r-sway-full-zip-hoodie-azure-blue",
+          "title": "Sway Full Zip Hoodie - Azure Blue",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Azure Blue"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "128",
+              "available": true
+            }
+          ]
+        },
+        {
+          "handle": "w31047r-1-4-zip-go-time-pullover-black",
+          "title": "1/4 Zip Go Time Pullover - Black",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Black"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "168",
+              "available": true
+            }
+          ]
+        },
+        {
           "handle": "w31047r-1-4-zip-go-time-pullover-azure-blue",
           "title": "1/4 Zip Go Time Pullover - Azure Blue",
           "product_type": "Women:Outerwear:Coverups:Pullovers",
@@ -6702,6 +6688,35 @@
           ]
         },
         {
+          "handle": "w3845r-hazy-mock-neck-pullover-navy",
+          "title": "Hazy Mock Neck Pullover - Navy",
+          "product_type": "Women:Outerwear:Coverups:Pullovers",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Navy"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "138",
+              "available": true
+            }
+          ]
+        },
+        {
           "handle": "u3031rg-accolade-crew-neck-pullover-warm-butter",
           "title": "Accolade Crew Neck Pullover - Warm Butter",
           "product_type": "Women:Outerwear:Coverups:Pullovers",
@@ -6920,7 +6935,7 @@
           "variants": [
             {
               "price": "108",
-              "available": false
+              "available": true
             }
           ]
         },
@@ -7462,7 +7477,7 @@
           "variants": [
             {
               "price": "168",
-              "available": true
+              "available": false
             }
           ]
         },
@@ -7491,7 +7506,7 @@
           "variants": [
             {
               "price": "168",
-              "available": false
+              "available": true
             }
           ]
         },
@@ -7555,37 +7570,6 @@
           "variants": [
             {
               "price": "128",
-              "available": true
-            }
-          ]
-        },
-        {
-          "handle": "u3013r-renown-heavy-weight-hoodie-frosted-pearl",
-          "title": "Renown Heavy Weight Hoodie - Frosted Pearl",
-          "product_type": "Women:Outerwear:Coverups:Hoodies",
-          "options": [
-            {
-              "name": "Color",
-              "values": [
-                "Frosted Pearl"
-              ]
-            },
-            {
-              "name": "Size",
-              "values": [
-                "XXS",
-                "XS",
-                "S",
-                "M",
-                "L",
-                "XL",
-                "2XL"
-              ]
-            }
-          ],
-          "variants": [
-            {
-              "price": "148",
               "available": true
             }
           ]
