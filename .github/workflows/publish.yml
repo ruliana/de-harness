@@ -1,0 +1,64 @@
+name: publish
+# Publishes to npm whenever main carries a package.json version that npm does not have yet, then tags it v<version>.
+# jsDelivr and unpkg serve every npm version on their own.
+#
+# Auth, one of:
+#   - npm trusted publishing (no secret): on npmjs.com, package settings -> Trusted publisher -> GitHub Actions,
+#     repository ruliana/de-harness, workflow publish.yml. For the very first version the package does not exist yet,
+#     so publish 0.1.0 with a token, then switch.
+#   - an npm automation token in the repository secret NPM_TOKEN.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write # push the v<version> tag
+  id-token: write # npm provenance and trusted publishing
+concurrency: publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, registry-url: "https://registry.npmjs.org" }
+      - id: version
+        run: |
+          name=$(node -p "require('./package.json').name")
+          version=$(node -p "require('./package.json').version")
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          if npm view "$name@$version" version >/dev/null 2>&1; then
+            echo "new=false" >> "$GITHUB_OUTPUT"
+            echo "$name@$version is already on npm; nothing to publish." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "new=true" >> "$GITHUB_OUTPUT"
+          fi
+      # trusted publishing needs npm 11.5.1 or later; Node 22 ships npm 10
+      - if: steps.version.outputs.new == 'true'
+        run: npm install -g npm@11
+      - if: steps.version.outputs.new == 'true'
+        run: npm ci
+      - if: steps.version.outputs.new == 'true'
+        run: npm run typecheck
+      # prepublishOnly runs npm run build (dist/, types, browser bundles)
+      - if: steps.version.outputs.new == 'true'
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - if: steps.version.outputs.new == 'true'
+        name: tag and summary with SRI hashes
+        env:
+          NAME: ${{ steps.version.outputs.name }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git tag "v$VERSION" && git push origin "v$VERSION"
+          {
+            echo "Published $NAME@$VERSION"
+            echo
+            echo '| File | URL | integrity |'
+            echo '| - | - | - |'
+            for f in dist/de-harness.iife.min.js dist/de-harness.browser.min.js dist/de-harness.browser.js; do
+              echo "| $(basename "$f") | https://cdn.jsdelivr.net/npm/$NAME@$VERSION/$f | sha384-$(openssl dgst -sha384 -binary "$f" | openssl base64 -A) |"
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
