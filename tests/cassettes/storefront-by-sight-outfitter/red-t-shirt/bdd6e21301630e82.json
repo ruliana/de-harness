@@ -60,7 +60,7 @@
           "type": "box",
           "box": {
             "top": 0.59,
-            "bottom": 0.63,
+            "bottom": 0.64,
             "left": 0.09,
             "right": 0.17
           },
@@ -68,7 +68,7 @@
         },
         "locate.target?present": {
           "type": "noul",
-          "noul": 0.95
+          "noul": 0.97
         }
       },
       "usage": {

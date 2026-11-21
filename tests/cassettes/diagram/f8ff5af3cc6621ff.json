@@ -260,11 +260,11 @@
         "add_node.label": {
           "type": "choice",
           "choice": "Green",
-          "confidence": 0.81,
+          "confidence": 0.87,
           "probabilities": {
             "Build image": 0,
-            "Pass": 0.18,
-            "Green": 0.82,
+            "Pass": 0.13,
+            "Green": 0.87,
             "Enter credentials": 0,
             "Check password": 0,
             "Show dashboard": 0,
@@ -311,11 +311,11 @@
         "rename_node.node": {
           "type": "choice",
           "choice": "Package app",
-          "confidence": 1,
+          "confidence": 0.99,
           "probabilities": {
             "Push code": 0,
-            "Run tests": 0,
-            "Package app": 1,
+            "Run tests": 0.01,
+            "Package app": 0.99,
             "Deploy": 0,
             "Notify team": 0
           }
@@ -326,7 +326,7 @@
           "confidence": 0.88,
           "probabilities": {
             "Build image": 0.04,
-            "Pass": 0.08,
+            "Pass": 0.07,
             "Green": 0.88,
             "Enter credentials": 0,
             "Check password": 0,
@@ -355,31 +355,31 @@
             "Resolve ticket": 0,
             "Close ticket": 0,
             "Review": 0,
-            "Approve": 0,
+            "Approve": 0.01,
             "Reject": 0
           }
         },
         "connect.arrow": {
           "type": "choice",
           "choice": "Run tests --> Deploy",
-          "confidence": 0.45,
+          "confidence": 0.38,
           "probabilities": {
-            "Push code --> Package app": 0.2,
+            "Push code --> Package app": 0.18,
             "Push code --> Deploy": 0,
             "Push code --> Notify team": 0,
             "Run tests --> Push code": 0.02,
-            "Run tests --> Deploy": 0.48,
-            "Run tests --> Notify team": 0.12,
+            "Run tests --> Deploy": 0.42,
+            "Run tests --> Notify team": 0.15,
             "Package app --> Push code": 0,
             "Package app --> Run tests": 0.01,
-            "Package app --> Notify team": 0.14,
-            "Deploy --> Push code": 0.01,
+            "Package app --> Notify team": 0.19,
+            "Deploy --> Push code": 0,
             "Deploy --> Run tests": 0,
             "Deploy --> Package app": 0.02,
             "Notify team --> Push code": 0,
             "Notify team --> Run tests": 0,
             "Notify team --> Package app": 0,
-            "Notify team --> Deploy": 0
+            "Notify team --> Deploy": 0.01
           }
         },
         "connect.label": {
@@ -411,12 +411,12 @@
         "disconnect.edge": {
           "type": "choice",
           "choice": "Run tests --Pass--> Package app",
-          "confidence": 0.93,
+          "confidence": 0.97,
           "probabilities": {
             "Push code --> Run tests": 0,
-            "Run tests --Pass--> Package app": 0.95,
+            "Run tests --Pass--> Package app": 0.98,
             "Package app --> Deploy": 0,
-            "Deploy --> Notify team": 0.05
+            "Deploy --> Notify team": 0.02
           }
         },
         "relabel_edge.edge": {

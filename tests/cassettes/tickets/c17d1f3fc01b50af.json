@@ -200,12 +200,12 @@
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#8 Password reset email never arrives",
-          "confidence": 0.57,
+          "confidence": 0.43,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.16,
+            "#2 Password reset email never arrives": 0.18,
             "#4 How do I export my data to CSV?": 0.02,
-            "#5 App crashes when I open the settings page": 0.14,
-            "#8 Password reset email never arrives": 0.68
+            "#5 App crashes when I open the settings page": 0.23,
+            "#8 Password reset email never arrives": 0.57
           }
         },
         "assign.team": {
@@ -221,16 +221,16 @@
         },
         "assign.instructed": {
           "type": "noul",
-          "noul": 0.83
+          "noul": 0.81
         },
         "set_status.status": {
           "type": "choice",
           "choice": "open",
-          "confidence": 0.86,
+          "confidence": 0.89,
           "probabilities": {
-            "open": 0.91,
+            "open": 0.93,
             "pending": 0,
-            "closed": 0.09
+            "closed": 0.07
           }
         },
         "set_status.repeats_another": {

@@ -159,13 +159,13 @@
         "add_node.label": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.85,
+          "confidence": 0.87,
           "probabilities": {
-            "Check password": 0.85,
+            "Check password": 0.87,
             "Show dashboard": 0.02,
             "Show error message": 0.02,
-            "Send verification code": 0.03,
-            "Verify code": 0.06,
+            "Send verification code": 0.02,
+            "Verify code": 0.05,
             "Reset password": 0,
             "Lock account": 0,
             "Fill in sign-up form": 0,
@@ -215,13 +215,13 @@
         "rename_node.label": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.52,
+          "confidence": 0.5,
           "probabilities": {
-            "Check password": 0.53,
-            "Show dashboard": 0.03,
-            "Show error message": 0.24,
+            "Check password": 0.52,
+            "Show dashboard": 0.04,
+            "Show error message": 0.28,
             "Send verification code": 0.01,
-            "Verify code": 0.1,
+            "Verify code": 0.07,
             "Reset password": 0,
             "Lock account": 0,
             "Fill in sign-up form": 0,
@@ -235,10 +235,10 @@
             "Payment failed": 0,
             "Retry payment": 0,
             "Cancel order": 0,
-            "Push code": 0.04,
+            "Push code": 0.03,
             "Run tests": 0,
             "Build image": 0,
-            "Deploy": 0,
+            "Deploy": 0.01,
             "Roll back": 0,
             "Notify team": 0,
             "Open ticket": 0,
@@ -248,7 +248,7 @@
             "Resolve ticket": 0,
             "Close ticket": 0,
             "Review": 0.01,
-            "Approve": 0.01,
+            "Approve": 0,
             "Reject": 0.01
           }
         }

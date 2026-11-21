@@ -268,12 +268,12 @@
         "add_node.label": {
           "type": "choice",
           "choice": "Notify team",
-          "confidence": 0.61,
+          "confidence": 0.57,
           "probabilities": {
-            "Build image": 0.15,
+            "Build image": 0.18,
             "Pass": 0.06,
-            "Green": 0.03,
-            "Notify team": 0.62,
+            "Green": 0.06,
+            "Notify team": 0.58,
             "Enter credentials": 0.01,
             "Check password": 0.01,
             "Show dashboard": 0,
@@ -291,14 +291,14 @@
             "Charge card": 0.01,
             "Confirm order": 0,
             "Payment failed": 0,
-            "Retry payment": 0.01,
+            "Retry payment": 0,
             "Cancel order": 0.01,
             "Roll back": 0.01,
             "Open ticket": 0.01,
             "Triage": 0.01,
             "Assign agent": 0,
             "Escalate": 0.01,
-            "Resolve ticket": 0.01,
+            "Resolve ticket": 0,
             "Close ticket": 0.01,
             "Review": 0.01,
             "Approve": 0.01,
@@ -307,13 +307,13 @@
         },
         "remove_node.node": {
           "type": "choice",
-          "choice": "Deploy",
-          "confidence": 0.31,
+          "choice": "Package app",
+          "confidence": 0.27,
           "probabilities": {
             "Push code": 0.01,
-            "Run tests": 0.14,
-            "Package app": 0.37,
-            "Deploy": 0.48
+            "Run tests": 0.1,
+            "Package app": 0.45,
+            "Deploy": 0.44
           }
         },
         "rename_node.node": {
@@ -330,12 +330,12 @@
         "rename_node.label": {
           "type": "choice",
           "choice": "Build image",
-          "confidence": 0.57,
+          "confidence": 0.45,
           "probabilities": {
-            "Build image": 0.58,
-            "Pass": 0.04,
-            "Green": 0.26,
-            "Notify team": 0.03,
+            "Build image": 0.47,
+            "Pass": 0.03,
+            "Green": 0.32,
+            "Notify team": 0.01,
             "Enter credentials": 0,
             "Check password": 0,
             "Show dashboard": 0,
@@ -344,42 +344,42 @@
             "Verify code": 0.01,
             "Reset password": 0,
             "Lock account": 0,
-            "Fill in sign-up form": 0,
+            "Fill in sign-up form": 0.01,
             "Validate email": 0,
             "Create account": 0.01,
             "Send welcome email": 0,
             "Add to cart": 0,
             "Enter payment details": 0,
             "Charge card": 0.01,
-            "Confirm order": 0,
+            "Confirm order": 0.01,
             "Payment failed": 0,
             "Retry payment": 0,
-            "Cancel order": 0,
-            "Roll back": 0,
-            "Open ticket": 0.01,
-            "Triage": 0.01,
-            "Assign agent": 0,
-            "Escalate": 0,
+            "Cancel order": 0.01,
+            "Roll back": 0.01,
+            "Open ticket": 0,
+            "Triage": 0.02,
+            "Assign agent": 0.01,
+            "Escalate": 0.01,
             "Resolve ticket": 0.01,
             "Close ticket": 0,
             "Review": 0.02,
-            "Approve": 0.01,
-            "Reject": 0
+            "Approve": 0.02,
+            "Reject": 0.01
           }
         },
         "connect.arrow": {
           "type": "choice",
           "choice": "Run tests --> Deploy",
-          "confidence": 0.47,
+          "confidence": 0.53,
           "probabilities": {
-            "Push code --> Package app": 0.41,
+            "Push code --> Package app": 0.35,
             "Push code --> Deploy": 0.01,
             "Run tests --> Push code": 0.01,
-            "Run tests --> Deploy": 0.53,
+            "Run tests --> Deploy": 0.58,
             "Package app --> Push code": 0,
             "Package app --> Run tests": 0.02,
             "Deploy --> Push code": 0,
-            "Deploy --> Run tests": 0,
+            "Deploy --> Run tests": 0.01,
             "Deploy --> Package app": 0.02
           }
         },
@@ -407,16 +407,16 @@
         },
         "connect.label?stated": {
           "type": "noul",
-          "noul": 0.97
+          "noul": 0.96
         },
         "disconnect.edge": {
           "type": "choice",
           "choice": "Run tests --Green--> Package app",
-          "confidence": 0.97,
+          "confidence": 0.94,
           "probabilities": {
             "Push code --> Run tests": 0,
-            "Run tests --Green--> Package app": 0.98,
-            "Package app --> Deploy": 0.02
+            "Run tests --Green--> Package app": 0.96,
+            "Package app --> Deploy": 0.04
           }
         },
         "relabel_edge.edge": {
@@ -454,7 +454,7 @@
       },
       "usage": {
         "input_tokens": 4714,
-        "output_tokens": 1234
+        "output_tokens": 1235
       }
     }
   }

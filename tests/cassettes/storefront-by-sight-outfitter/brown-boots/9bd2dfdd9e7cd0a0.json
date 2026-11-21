@@ -59,12 +59,12 @@
         "__tool__": {
           "type": "choice",
           "choice": "click_item",
-          "confidence": 0.32,
+          "confidence": 0.55,
           "probabilities": {
-            "open_menu": 0.05,
-            "scroll": 0.44,
-            "click_item": 0.46,
-            "go_back": 0.02,
+            "open_menu": 0.07,
+            "scroll": 0.25,
+            "click_item": 0.64,
+            "go_back": 0.01,
             "close_overlay": 0.03
           }
         }

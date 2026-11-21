@@ -82,11 +82,11 @@
         "__tool__": {
           "type": "choice",
           "choice": "ask_user",
-          "confidence": 0.67,
+          "confidence": 0.72,
           "probabilities": {
-            "click": 0.1,
-            "type_text": 0.12,
-            "ask_user": 0.78
+            "click": 0.11,
+            "type_text": 0.08,
+            "ask_user": 0.81
           }
         },
         "click.target": {
@@ -95,9 +95,9 @@
             "top": 0.3,
             "bottom": 0.36,
             "left": 0.06,
-            "right": 0.52
+            "right": 0.51
           },
-          "confidence": 0.87
+          "confidence": 0.89
         },
         "click.target?present": {
           "type": "noul",
@@ -106,12 +106,12 @@
         "type_text.text": {
           "type": "choice",
           "choice": "Ada Lovelace",
-          "confidence": 0.93,
+          "confidence": 0.92,
           "probabilities": {
-            "Ada Lovelace": 0.95,
+            "Ada Lovelace": 0.94,
             "12 Analytical Row": 0.04,
             "London": 0.01,
-            "EC1A 1BB": 0
+            "EC1A 1BB": 0.01
           }
         },
         "ask_user.question": {

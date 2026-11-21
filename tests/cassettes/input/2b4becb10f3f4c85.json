@@ -74,11 +74,11 @@
         "ask_customer.question": {
           "type": "choice",
           "choice": "What name should I put on the order?",
-          "confidence": 0.58,
+          "confidence": 0.61,
           "probabilities": {
             "What size would you like: small, medium or large?": 0.01,
-            "What name should I put on the order?": 0.72,
-            "Would you like anything with your coffee?": 0.27
+            "What name should I put on the order?": 0.74,
+            "Would you like anything with your coffee?": 0.25
           }
         },
         "place_order.size": {

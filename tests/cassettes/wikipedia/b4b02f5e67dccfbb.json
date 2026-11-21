@@ -238,7 +238,7 @@
         "open_link.link": {
           "type": "choice",
           "choice": "Pompeii",
-          "confidence": 0.78,
+          "confidence": 0.74,
           "probabilities": {
             "Somma volcano": 0,
             "Stratovolcano": 0,
@@ -249,9 +249,9 @@
             "Campanian volcanic arc": 0,
             "Volcanic cone": 0,
             "Caldera": 0,
-            "Eruption of Mount Vesuvius in 79 AD": 0.2,
+            "Eruption of Mount Vesuvius in 79 AD": 0.24,
             "Roman Empire": 0,
-            "Pompeii": 0.78,
+            "Pompeii": 0.74,
             "Herculaneum": 0,
             "Oplontis": 0,
             "Stabiae": 0,

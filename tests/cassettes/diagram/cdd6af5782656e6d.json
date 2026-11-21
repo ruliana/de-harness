@@ -245,14 +245,14 @@
         "__tool__": {
           "type": "choice",
           "choice": "connect",
-          "confidence": 0.66,
+          "confidence": 0.74,
           "probabilities": {
-            "add_node": 0.28,
+            "add_node": 0.21,
             "remove_node": 0,
             "rename_node": 0,
-            "connect": 0.72,
+            "connect": 0.78,
             "disconnect": 0,
-            "relabel_edge": 0
+            "relabel_edge": 0.01
           }
         },
         "add_node.label": {
@@ -296,21 +296,21 @@
         "remove_node.node": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.19,
+          "confidence": 0.24,
           "probabilities": {
-            "Enter credentials": 0.25,
-            "Check password": 0.46,
-            "Show dashboard": 0.29
+            "Enter credentials": 0.21,
+            "Check password": 0.49,
+            "Show dashboard": 0.3
           }
         },
         "rename_node.node": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.49,
+          "confidence": 0.35,
           "probabilities": {
-            "Enter credentials": 0.24,
-            "Check password": 0.66,
-            "Show dashboard": 0.1
+            "Enter credentials": 0.3,
+            "Check password": 0.57,
+            "Show dashboard": 0.13
           }
         },
         "rename_node.label": {
@@ -331,7 +331,7 @@
             "Enter payment details": 0,
             "Charge card": 0,
             "Confirm order": 0,
-            "Payment failed": 0,
+            "Payment failed": 0.01,
             "Retry payment": 0,
             "Cancel order": 0,
             "Push code": 0,
@@ -346,7 +346,7 @@
             "Escalate": 0,
             "Resolve ticket": 0,
             "Close ticket": 0,
-            "Review": 0.01,
+            "Review": 0,
             "Approve": 0,
             "Reject": 0
           }
@@ -365,16 +365,16 @@
         "connect.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.68,
+          "confidence": 0.63,
           "probabilities": {
             "Yes": 0,
-            "No": 0.02,
+            "No": 0.04,
             "Valid": 0,
             "Invalid": 0.04,
             "Success": 0.01,
-            "Failure": 0.71,
+            "Failure": 0.66,
             "Pass": 0,
-            "Fail": 0.22,
+            "Fail": 0.25,
             "Retry": 0,
             "Approved": 0,
             "Rejected": 0
@@ -387,34 +387,34 @@
         "disconnect.edge": {
           "type": "choice",
           "choice": "Check password --> Show dashboard",
-          "confidence": 0.96,
+          "confidence": 0.98,
           "probabilities": {
-            "Enter credentials --> Check password": 0.02,
-            "Check password --> Show dashboard": 0.98
+            "Enter credentials --> Check password": 0.01,
+            "Check password --> Show dashboard": 0.99
           }
         },
         "relabel_edge.edge": {
           "type": "choice",
           "choice": "Check password --> Show dashboard",
-          "confidence": 0.88,
+          "confidence": 0.82,
           "probabilities": {
-            "Enter credentials --> Check password": 0.06,
-            "Check password --> Show dashboard": 0.94
+            "Enter credentials --> Check password": 0.09,
+            "Check password --> Show dashboard": 0.91
           }
         },
         "relabel_edge.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.63,
+          "confidence": 0.59,
           "probabilities": {
             "Yes": 0,
-            "No": 0.06,
+            "No": 0.11,
             "Valid": 0,
             "Invalid": 0.05,
             "Success": 0.01,
-            "Failure": 0.66,
+            "Failure": 0.63,
             "Pass": 0,
-            "Fail": 0.21,
+            "Fail": 0.19,
             "Retry": 0.01,
             "Approved": 0,
             "Rejected": 0

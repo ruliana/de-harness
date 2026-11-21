@@ -238,24 +238,24 @@
         "__tool__": {
           "type": "choice",
           "choice": "rename_node",
-          "confidence": 0.69,
+          "confidence": 0.68,
           "probabilities": {
             "add_node": 0,
-            "remove_node": 0.11,
-            "rename_node": 0.74,
+            "remove_node": 0.09,
+            "rename_node": 0.73,
             "connect": 0,
             "disconnect": 0,
-            "relabel_edge": 0.15
+            "relabel_edge": 0.18
           }
         },
         "add_node.label": {
           "type": "choice",
           "choice": "Package app",
-          "confidence": 0.71,
+          "confidence": 0.45,
           "probabilities": {
-            "Package app": 0.72,
-            "Pass": 0.04,
-            "Green": 0.24,
+            "Package app": 0.47,
+            "Pass": 0.12,
+            "Green": 0.41,
             "Enter credentials": 0,
             "Check password": 0,
             "Show dashboard": 0,
@@ -353,17 +353,17 @@
         "connect.arrow": {
           "type": "choice",
           "choice": "Run tests --> Deploy",
-          "confidence": 0.59,
+          "confidence": 0.65,
           "probabilities": {
-            "Push code --> Build image": 0.06,
+            "Push code --> Build image": 0.04,
             "Push code --> Deploy": 0,
             "Push code --> Notify team": 0,
-            "Run tests --> Push code": 0.08,
-            "Run tests --> Deploy": 0.62,
-            "Run tests --> Notify team": 0.09,
+            "Run tests --> Push code": 0.03,
+            "Run tests --> Deploy": 0.67,
+            "Run tests --> Notify team": 0.06,
             "Build image --> Push code": 0,
-            "Build image --> Run tests": 0.03,
-            "Build image --> Notify team": 0.09,
+            "Build image --> Run tests": 0.02,
+            "Build image --> Notify team": 0.15,
             "Deploy --> Push code": 0,
             "Deploy --> Run tests": 0,
             "Deploy --> Build image": 0.02,
@@ -402,12 +402,12 @@
         "disconnect.edge": {
           "type": "choice",
           "choice": "Run tests --Pass--> Build image",
-          "confidence": 0.93,
+          "confidence": 0.89,
           "probabilities": {
             "Push code --> Run tests": 0,
-            "Run tests --Pass--> Build image": 0.95,
+            "Run tests --Pass--> Build image": 0.92,
             "Build image --> Deploy": 0,
-            "Deploy --> Notify team": 0.05
+            "Deploy --> Notify team": 0.08
           }
         },
         "relabel_edge.edge": {

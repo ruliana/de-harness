@@ -165,24 +165,24 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_ticket",
-          "confidence": 0.8,
+          "confidence": 0.68,
           "probabilities": {
-            "open_ticket": 0.87,
-            "set_status": 0.13,
+            "open_ticket": 0.79,
+            "set_status": 0.21,
             "tag": 0
           }
         },
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#7 App crashes when I open the settings page",
-          "confidence": 0.42,
+          "confidence": 0.38,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.07,
-            "#3 Refund for my cancelled subscription": 0.3,
+            "#2 Password reset email never arrives": 0.09,
+            "#3 Refund for my cancelled subscription": 0.28,
             "#4 How do I export my data to CSV?": 0,
-            "#5 App crashes when I open the settings page": 0.04,
-            "#7 App crashes when I open the settings page": 0.52,
-            "#8 Password reset email never arrives": 0.07
+            "#5 App crashes when I open the settings page": 0.06,
+            "#7 App crashes when I open the settings page": 0.48,
+            "#8 Password reset email never arrives": 0.09
           }
         },
         "set_status.status": {
@@ -197,17 +197,17 @@
         },
         "set_status.repeats_another": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "tag.tag": {
           "type": "choice",
           "choice": "refund",
-          "confidence": 0.28,
+          "confidence": 0.33,
           "probabilities": {
-            "refund": 0.46,
-            "urgent": 0.37,
+            "refund": 0.5,
+            "urgent": 0.36,
             "vip": 0.03,
-            "bug": 0.14
+            "bug": 0.11
           }
         }
       },

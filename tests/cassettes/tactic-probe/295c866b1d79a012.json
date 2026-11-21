@@ -59,9 +59,9 @@
           "choice": "pick_menu_entry",
           "confidence": 0.48,
           "probabilities": {
-            "open_menu": 0.34,
+            "open_menu": 0.37,
             "pick_menu_entry": 0.53,
-            "scroll": 0.06,
+            "scroll": 0.03,
             "filter": 0.01,
             "click_item": 0.01,
             "select_option": 0.01,

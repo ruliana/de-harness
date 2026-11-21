@@ -241,9 +241,9 @@
           "confidence": 0.56,
           "probabilities": {
             "Show dashboard": 0.57,
-            "Show error message": 0.4,
+            "Show error message": 0.38,
             "Send verification code": 0,
-            "Verify code": 0.02,
+            "Verify code": 0.03,
             "Reset password": 0,
             "Lock account": 0,
             "Fill in sign-up form": 0,
@@ -271,25 +271,25 @@
             "Close ticket": 0,
             "Review": 0,
             "Approve": 0,
-            "Reject": 0.01
+            "Reject": 0.02
           }
         },
         "remove_node.node": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.18,
+          "confidence": 0.08,
           "probabilities": {
-            "Enter credentials": 0.41,
-            "Check password": 0.59
+            "Enter credentials": 0.46,
+            "Check password": 0.54
           }
         },
         "rename_node.node": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.1,
+          "confidence": 0.06,
           "probabilities": {
-            "Enter credentials": 0.45,
-            "Check password": 0.55
+            "Enter credentials": 0.47,
+            "Check password": 0.53
           }
         },
         "rename_node.label": {
@@ -297,10 +297,10 @@
           "choice": "Show error message",
           "confidence": 0.85,
           "probabilities": {
-            "Show dashboard": 0.07,
+            "Show dashboard": 0.08,
             "Show error message": 0.85,
             "Send verification code": 0,
-            "Verify code": 0.02,
+            "Verify code": 0.01,
             "Reset password": 0,
             "Lock account": 0,
             "Fill in sign-up form": 0,
@@ -311,7 +311,7 @@
             "Enter payment details": 0,
             "Charge card": 0,
             "Confirm order": 0,
-            "Payment failed": 0.01,
+            "Payment failed": 0.02,
             "Retry payment": 0,
             "Cancel order": 0,
             "Push code": 0,
@@ -328,7 +328,7 @@
             "Close ticket": 0,
             "Review": 0,
             "Approve": 0,
-            "Reject": 0.05
+            "Reject": 0.04
           }
         },
         "connect.arrow": {
@@ -342,16 +342,16 @@
         "connect.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.52,
+          "confidence": 0.44,
           "probabilities": {
             "Yes": 0.01,
-            "No": 0.27,
+            "No": 0.3,
             "Valid": 0.01,
-            "Invalid": 0.04,
-            "Success": 0.04,
-            "Failure": 0.56,
+            "Invalid": 0.05,
+            "Success": 0.05,
+            "Failure": 0.49,
             "Pass": 0,
-            "Fail": 0.07,
+            "Fail": 0.09,
             "Retry": 0,
             "Approved": 0,
             "Rejected": 0
@@ -380,14 +380,14 @@
         "relabel_edge.label": {
           "type": "choice",
           "choice": "No",
-          "confidence": 0.52,
+          "confidence": 0.53,
           "probabilities": {
             "Yes": 0.01,
-            "No": 0.56,
+            "No": 0.57,
             "Valid": 0.01,
-            "Invalid": 0.03,
-            "Success": 0.04,
-            "Failure": 0.27,
+            "Invalid": 0.04,
+            "Success": 0.03,
+            "Failure": 0.26,
             "Pass": 0.01,
             "Fail": 0.07,
             "Retry": 0,

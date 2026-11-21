@@ -246,76 +246,18 @@
         "__tool__": {
           "type": "choice",
           "choice": "connect",
-          "confidence": 0.51,
+          "confidence": 0.49,
           "probabilities": {
-            "add_node": 0.12,
+            "add_node": 0.14,
             "remove_node": 0,
             "rename_node": 0,
-            "connect": 0.58,
+            "connect": 0.56,
             "disconnect": 0,
             "relabel_edge": 0,
             "ask_user": 0.3
           }
         },
         "add_node.label": {
-          "type": "choice",
-          "choice": "Show error message",
-          "confidence": 0.99,
-          "probabilities": {
-            "Show error message": 0.99,
-            "Send verification code": 0,
-            "Verify code": 0,
-            "Reset password": 0,
-            "Lock account": 0,
-            "Fill in sign-up form": 0,
-            "Validate email": 0,
-            "Create account": 0,
-            "Send welcome email": 0,
-            "Add to cart": 0,
-            "Enter payment details": 0,
-            "Charge card": 0,
-            "Confirm order": 0,
-            "Payment failed": 0,
-            "Retry payment": 0,
-            "Cancel order": 0,
-            "Push code": 0,
-            "Run tests": 0,
-            "Build image": 0,
-            "Deploy": 0,
-            "Roll back": 0,
-            "Notify team": 0,
-            "Open ticket": 0,
-            "Triage": 0,
-            "Assign agent": 0,
-            "Escalate": 0,
-            "Resolve ticket": 0,
-            "Close ticket": 0,
-            "Review": 0,
-            "Approve": 0,
-            "Reject": 0.01
-          }
-        },
-        "remove_node.node": {
-          "type": "choice",
-          "choice": "Show dashboard",
-          "confidence": 0.4,
-          "probabilities": {
-            "Enter credentials": 0.11,
-            "Check password": 0.29,
-            "Show dashboard": 0.6
-          }
-        },
-        "rename_node.node": {
-          "type": "choice",
-          "choice": "Check password",
-          "confidence": 0.16,
-          "probabilities": {
-            "Enter credentials": 0.3,
-            "Check password": 0.44,
-            "Show dashboard": 0.26
-          }
-        },
-        "rename_node.label": {
           "type": "choice",
           "choice": "Show error message",
           "confidence": 0.99,
@@ -353,6 +295,64 @@
             "Reject": 0
           }
         },
+        "remove_node.node": {
+          "type": "choice",
+          "choice": "Show dashboard",
+          "confidence": 0.43,
+          "probabilities": {
+            "Enter credentials": 0.1,
+            "Check password": 0.28,
+            "Show dashboard": 0.62
+          }
+        },
+        "rename_node.node": {
+          "type": "choice",
+          "choice": "Check password",
+          "confidence": 0.18,
+          "probabilities": {
+            "Enter credentials": 0.26,
+            "Check password": 0.45,
+            "Show dashboard": 0.29
+          }
+        },
+        "rename_node.label": {
+          "type": "choice",
+          "choice": "Show error message",
+          "confidence": 0.99,
+          "probabilities": {
+            "Show error message": 0.99,
+            "Send verification code": 0,
+            "Verify code": 0,
+            "Reset password": 0,
+            "Lock account": 0,
+            "Fill in sign-up form": 0,
+            "Validate email": 0,
+            "Create account": 0,
+            "Send welcome email": 0,
+            "Add to cart": 0,
+            "Enter payment details": 0,
+            "Charge card": 0,
+            "Confirm order": 0,
+            "Payment failed": 0,
+            "Retry payment": 0,
+            "Cancel order": 0,
+            "Push code": 0,
+            "Run tests": 0,
+            "Build image": 0,
+            "Deploy": 0,
+            "Roll back": 0,
+            "Notify team": 0,
+            "Open ticket": 0,
+            "Triage": 0,
+            "Assign agent": 0,
+            "Escalate": 0,
+            "Resolve ticket": 0,
+            "Close ticket": 0,
+            "Review": 0.01,
+            "Approve": 0,
+            "Reject": 0
+          }
+        },
         "connect.arrow": {
           "type": "choice",
           "choice": "Check password --> Show dashboard",
@@ -368,16 +368,16 @@
         "connect.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.38,
+          "confidence": 0.35,
           "probabilities": {
             "Yes": 0.01,
             "No": 0.38,
-            "Valid": 0.01,
+            "Valid": 0.02,
             "Invalid": 0.03,
             "Success": 0.06,
-            "Failure": 0.44,
+            "Failure": 0.41,
             "Pass": 0,
-            "Fail": 0.07,
+            "Fail": 0.09,
             "Retry": 0,
             "Approved": 0,
             "Rejected": 0
@@ -406,16 +406,16 @@
         "relabel_edge.label": {
           "type": "choice",
           "choice": "No",
-          "confidence": 0.64,
+          "confidence": 0.68,
           "probabilities": {
             "Yes": 0.01,
-            "No": 0.67,
+            "No": 0.71,
             "Valid": 0.01,
-            "Invalid": 0.03,
-            "Success": 0.04,
-            "Failure": 0.19,
+            "Invalid": 0.02,
+            "Success": 0.03,
+            "Failure": 0.16,
             "Pass": 0,
-            "Fail": 0.05,
+            "Fail": 0.06,
             "Retry": 0,
             "Approved": 0,
             "Rejected": 0

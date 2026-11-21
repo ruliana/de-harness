@@ -187,11 +187,11 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_ticket",
-          "confidence": 0.37,
+          "confidence": 0.24,
           "probabilities": {
-            "open_ticket": 0.53,
-            "assign": 0.3,
-            "set_status": 0.15,
+            "open_ticket": 0.43,
+            "assign": 0.36,
+            "set_status": 0.19,
             "tag": 0.02
           }
         },
@@ -216,21 +216,21 @@
         },
         "assign.instructed": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.05
         },
         "set_status.status": {
           "type": "choice",
           "choice": "closed",
-          "confidence": 0.89,
+          "confidence": 0.76,
           "probabilities": {
-            "open": 0.07,
+            "open": 0.16,
             "pending": 0,
-            "closed": 0.93
+            "closed": 0.84
           }
         },
         "set_status.repeats_another": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.04
         },
         "tag.tag": {
           "type": "choice",

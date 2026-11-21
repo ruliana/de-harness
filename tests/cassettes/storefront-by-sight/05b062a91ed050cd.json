@@ -63,12 +63,12 @@
         "__tool__": {
           "type": "choice",
           "choice": "scroll",
-          "confidence": 0.54,
+          "confidence": 0.57,
           "probabilities": {
-            "open_menu": 0.04,
-            "scroll": 0.63,
-            "click_item": 0.31,
-            "go_back": 0.01,
+            "open_menu": 0.12,
+            "scroll": 0.66,
+            "click_item": 0.18,
+            "go_back": 0.03,
             "close_overlay": 0.01
           }
         }

@@ -90,12 +90,12 @@
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.31,
+            "top": 0.3,
             "bottom": 0.37,
             "left": 0.06,
             "right": 0.51
           },
-          "confidence": 0.73
+          "confidence": 0.8
         },
         "click.target?present": {
           "type": "noul",
@@ -104,12 +104,12 @@
         "type_text.text": {
           "type": "choice",
           "choice": "Ada Lovelace",
-          "confidence": 0.92,
+          "confidence": 0.79,
           "probabilities": {
-            "Ada Lovelace": 0.94,
-            "12 Analytical Row": 0.03,
-            "London": 0.02,
-            "EC1A 1BB": 0.01
+            "Ada Lovelace": 0.84,
+            "12 Analytical Row": 0.06,
+            "London": 0.07,
+            "EC1A 1BB": 0.03
           }
         }
       },

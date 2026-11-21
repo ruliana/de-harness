@@ -97,19 +97,19 @@
         "__tool__": {
           "type": "choice",
           "choice": "add_node",
-          "confidence": 0.86,
+          "confidence": 0.88,
           "probabilities": {
-            "add_node": 0.93,
-            "ask_user": 0.07
+            "add_node": 0.94,
+            "ask_user": 0.06
           }
         },
         "add_node.label": {
           "type": "choice",
           "choice": "Enter credentials",
-          "confidence": 0.96,
+          "confidence": 0.97,
           "probabilities": {
-            "Enter credentials": 0.96,
-            "Check password": 0.01,
+            "Enter credentials": 0.97,
+            "Check password": 0,
             "Show dashboard": 0,
             "Show error message": 0.02,
             "Send verification code": 0,

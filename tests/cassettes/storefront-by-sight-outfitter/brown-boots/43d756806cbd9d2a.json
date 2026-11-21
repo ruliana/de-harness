@@ -67,11 +67,11 @@
           "type": "box",
           "box": {
             "top": 0.17,
-            "bottom": 0.2,
+            "bottom": 0.21,
             "left": 0.41,
             "right": 0.47
           },
-          "confidence": 0.96
+          "confidence": 0.95
         },
         "read_price.target?present": {
           "type": "noul",

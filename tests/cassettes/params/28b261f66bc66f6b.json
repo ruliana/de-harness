@@ -144,7 +144,7 @@
         },
         "place_order.toppings[basil]": {
           "type": "noul",
-          "noul": 0.01
+          "noul": 0.02
         },
         "place_order.delivery_time": {
           "type": "choice",

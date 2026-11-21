@@ -106,10 +106,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "place_order",
-          "confidence": 0.94,
+          "confidence": 0.92,
           "probabilities": {
-            "place_order": 0.97,
-            "end": 0.03
+            "place_order": 0.96,
+            "end": 0.04
           }
         },
         "place_order.size": {
@@ -149,12 +149,12 @@
         "place_order.delivery_time": {
           "type": "choice",
           "choice": "evening",
-          "confidence": 0.2,
+          "confidence": 0.21,
           "probabilities": {
-            "morning": 0.26,
-            "lunch": 0.28,
-            "afternoon": 0.07,
-            "evening": 0.36,
+            "morning": 0.24,
+            "lunch": 0.3,
+            "afternoon": 0.06,
+            "evening": 0.37,
             "late": 0.03
           }
         },

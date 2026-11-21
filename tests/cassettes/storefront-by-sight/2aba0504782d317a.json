@@ -68,14 +68,14 @@
           "box": {
             "top": 0.1,
             "bottom": 0.45,
-            "left": 0.52,
+            "left": 0.51,
             "right": 0.74
           },
-          "confidence": 0.47
+          "confidence": 0.4
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.88
+          "noul": 0.83
         }
       },
       "usage": {

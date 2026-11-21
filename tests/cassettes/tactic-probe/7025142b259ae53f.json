@@ -56,13 +56,13 @@
         "tactic": {
           "type": "choice",
           "choice": "open_menu",
-          "confidence": 0.82,
+          "confidence": 0.76,
           "probabilities": {
-            "open_menu": 0.84,
-            "pick_menu_entry": 0.01,
-            "scroll": 0.13,
+            "open_menu": 0.78,
+            "pick_menu_entry": 0.02,
+            "scroll": 0.17,
             "filter": 0.01,
-            "click_item": 0.01,
+            "click_item": 0.02,
             "select_option": 0,
             "read_value": 0,
             "go_back": 0,

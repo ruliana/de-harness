@@ -249,9 +249,9 @@
         "add_node.label": {
           "type": "choice",
           "choice": "Show error message",
-          "confidence": 0.97,
+          "confidence": 0.99,
           "probabilities": {
-            "Show error message": 0.97,
+            "Show error message": 0.99,
             "Send verification code": 0,
             "Verify code": 0,
             "Reset password": 0,
@@ -276,43 +276,43 @@
             "Open ticket": 0,
             "Triage": 0,
             "Assign agent": 0,
-            "Escalate": 0.01,
+            "Escalate": 0,
             "Resolve ticket": 0,
             "Close ticket": 0,
             "Review": 0,
             "Approve": 0,
-            "Reject": 0.02
+            "Reject": 0.01
           }
         },
         "remove_node.node": {
           "type": "choice",
           "choice": "Show dashboard",
-          "confidence": 0.55,
+          "confidence": 0.44,
           "probabilities": {
-            "Enter credentials": 0.12,
-            "Check password": 0.18,
-            "Show dashboard": 0.7
+            "Enter credentials": 0.14,
+            "Check password": 0.23,
+            "Show dashboard": 0.63
           }
         },
         "rename_node.node": {
           "type": "choice",
-          "choice": "Enter credentials",
-          "confidence": 0.01,
+          "choice": "Show dashboard",
+          "confidence": 0.02,
           "probabilities": {
-            "Enter credentials": 0.34,
-            "Check password": 0.33,
-            "Show dashboard": 0.33
+            "Enter credentials": 0.31,
+            "Check password": 0.34,
+            "Show dashboard": 0.35
           }
         },
         "rename_node.label": {
           "type": "choice",
           "choice": "Show error message",
-          "confidence": 0.89,
+          "confidence": 0.9,
           "probabilities": {
-            "Show error message": 0.89,
+            "Show error message": 0.9,
             "Send verification code": 0,
             "Verify code": 0,
-            "Reset password": 0,
+            "Reset password": 0.01,
             "Lock account": 0,
             "Fill in sign-up form": 0,
             "Validate email": 0,
@@ -334,10 +334,10 @@
             "Open ticket": 0,
             "Triage": 0,
             "Assign agent": 0,
-            "Escalate": 0.02,
+            "Escalate": 0.01,
             "Resolve ticket": 0,
             "Close ticket": 0,
-            "Review": 0.01,
+            "Review": 0,
             "Approve": 0,
             "Reject": 0.05
           }
@@ -357,14 +357,14 @@
         "connect.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.43,
+          "confidence": 0.46,
           "probabilities": {
             "Yes": 0.01,
-            "No": 0.3,
+            "No": 0.28,
             "Valid": 0.01,
             "Invalid": 0.03,
-            "Success": 0.06,
-            "Failure": 0.48,
+            "Success": 0.05,
+            "Failure": 0.51,
             "Pass": 0,
             "Fail": 0.11,
             "Retry": 0,
@@ -400,13 +400,13 @@
             "Yes": 0.01,
             "No": 0.46,
             "Valid": 0.01,
-            "Invalid": 0.02,
-            "Success": 0.04,
-            "Failure": 0.35,
+            "Invalid": 0.03,
+            "Success": 0.05,
+            "Failure": 0.34,
             "Pass": 0,
             "Fail": 0.1,
             "Retry": 0,
-            "Approved": 0.01,
+            "Approved": 0,
             "Rejected": 0
           }
         }

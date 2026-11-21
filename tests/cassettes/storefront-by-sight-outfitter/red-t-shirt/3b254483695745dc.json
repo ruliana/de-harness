@@ -67,33 +67,33 @@
         "__tool__": {
           "type": "choice",
           "choice": "click",
-          "confidence": 0.96,
+          "confidence": 0.98,
           "probabilities": {
-            "click": 0.98,
-            "scroll": 0.02
+            "click": 0.99,
+            "scroll": 0.01
           }
         },
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.85,
-            "bottom": 0.89,
+            "top": 0.84,
+            "bottom": 0.88,
             "left": 0.03,
             "right": 0.06
           },
-          "confidence": 0.86
+          "confidence": 0.85
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.95
+          "noul": 0.94
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.54,
+          "confidence": 0.62,
           "probabilities": {
-            "down": 0.77,
-            "bottom": 0.23
+            "down": 0.81,
+            "bottom": 0.19
           }
         }
       },

@@ -98,7 +98,7 @@
             "left": 0.3,
             "right": 0.46
           },
-          "confidence": 0.51
+          "confidence": 0.54
         },
         "click.target?present": {
           "type": "noul",
@@ -107,10 +107,10 @@
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.36,
+          "confidence": 0.32,
           "probabilities": {
-            "down": 0.68,
-            "bottom": 0.32
+            "down": 0.66,
+            "bottom": 0.34
           }
         },
         "press_key.key": {

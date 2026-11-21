@@ -42,7 +42,7 @@
       "answers": {
         "done": {
           "type": "noul",
-          "noul": 0
+          "noul": 0.01
         }
       },
       "usage": {

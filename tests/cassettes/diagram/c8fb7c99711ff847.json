@@ -263,70 +263,70 @@
         "add_node.label": {
           "type": "choice",
           "choice": "Reject",
-          "confidence": 0.5,
+          "confidence": 0.43,
           "probabilities": {
-            "Send verification code": 0.01,
-            "Verify code": 0.02,
-            "Reset password": 0.08,
+            "Send verification code": 0.02,
+            "Verify code": 0.03,
+            "Reset password": 0.07,
             "Lock account": 0.05,
             "Fill in sign-up form": 0,
             "Validate email": 0.01,
-            "Create account": 0,
+            "Create account": 0.01,
             "Send welcome email": 0,
             "Add to cart": 0,
-            "Enter payment details": 0,
-            "Charge card": 0,
+            "Enter payment details": 0.01,
+            "Charge card": 0.01,
             "Confirm order": 0,
-            "Payment failed": 0.16,
+            "Payment failed": 0.14,
             "Retry payment": 0.02,
-            "Cancel order": 0,
-            "Push code": 0,
+            "Cancel order": 0.01,
+            "Push code": 0.01,
             "Run tests": 0,
             "Build image": 0.01,
             "Deploy": 0.01,
             "Roll back": 0.01,
             "Notify team": 0.01,
-            "Open ticket": 0.01,
+            "Open ticket": 0.02,
             "Triage": 0.02,
             "Assign agent": 0,
-            "Escalate": 0.02,
+            "Escalate": 0.03,
             "Resolve ticket": 0.01,
             "Close ticket": 0.01,
-            "Review": 0.01,
+            "Review": 0.02,
             "Approve": 0.01,
-            "Reject": 0.52
+            "Reject": 0.45
           }
         },
         "remove_node.node": {
           "type": "choice",
           "choice": "Show error message",
-          "confidence": 0.95,
+          "confidence": 0.93,
           "probabilities": {
             "Enter credentials": 0.01,
-            "Check password": 0.01,
+            "Check password": 0.02,
             "Show dashboard": 0.02,
-            "Show error message": 0.96
+            "Show error message": 0.95
           }
         },
         "rename_node.node": {
           "type": "choice",
           "choice": "Show error message",
-          "confidence": 0.27,
+          "confidence": 0.28,
           "probabilities": {
-            "Enter credentials": 0.2,
-            "Check password": 0.23,
+            "Enter credentials": 0.18,
+            "Check password": 0.24,
             "Show dashboard": 0.12,
-            "Show error message": 0.45
+            "Show error message": 0.46
           }
         },
         "rename_node.label": {
           "type": "choice",
-          "choice": "Reject",
-          "confidence": 0.28,
+          "choice": "Payment failed",
+          "confidence": 0.32,
           "probabilities": {
             "Send verification code": 0.02,
-            "Verify code": 0.03,
-            "Reset password": 0.05,
+            "Verify code": 0.02,
+            "Reset password": 0.07,
             "Lock account": 0.04,
             "Fill in sign-up form": 0,
             "Validate email": 0.01,
@@ -336,7 +336,7 @@
             "Enter payment details": 0.01,
             "Charge card": 0.01,
             "Confirm order": 0,
-            "Payment failed": 0.28,
+            "Payment failed": 0.34,
             "Retry payment": 0.02,
             "Cancel order": 0,
             "Push code": 0,
@@ -344,16 +344,16 @@
             "Build image": 0.01,
             "Deploy": 0.01,
             "Roll back": 0,
-            "Notify team": 0.03,
+            "Notify team": 0.02,
             "Open ticket": 0.01,
-            "Triage": 0.05,
+            "Triage": 0.04,
             "Assign agent": 0,
-            "Escalate": 0.04,
+            "Escalate": 0.03,
             "Resolve ticket": 0.01,
             "Close ticket": 0.01,
             "Review": 0.02,
-            "Approve": 0.02,
-            "Reject": 0.3
+            "Approve": 0.01,
+            "Reject": 0.27
           }
         },
         "connect.arrow": {
@@ -376,16 +376,16 @@
         "connect.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.59,
+          "confidence": 0.62,
           "probabilities": {
             "Yes": 0,
-            "No": 0.13,
+            "No": 0.12,
             "Valid": 0,
             "Invalid": 0.05,
             "Success": 0.01,
-            "Failure": 0.63,
+            "Failure": 0.65,
             "Pass": 0,
-            "Fail": 0.18,
+            "Fail": 0.17,
             "Retry": 0,
             "Approved": 0,
             "Rejected": 0
@@ -393,39 +393,39 @@
         },
         "connect.label?stated": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.08
         },
         "disconnect.edge": {
           "type": "choice",
           "choice": "Check password --> Show dashboard",
-          "confidence": 0.96,
+          "confidence": 0.98,
           "probabilities": {
-            "Enter credentials --> Check password": 0.02,
-            "Check password --> Show dashboard": 0.98
+            "Enter credentials --> Check password": 0.01,
+            "Check password --> Show dashboard": 0.99
           }
         },
         "relabel_edge.edge": {
           "type": "choice",
           "choice": "Check password --> Show dashboard",
-          "confidence": 0.72,
+          "confidence": 0.8,
           "probabilities": {
-            "Enter credentials --> Check password": 0.14,
-            "Check password --> Show dashboard": 0.86
+            "Enter credentials --> Check password": 0.1,
+            "Check password --> Show dashboard": 0.9
           }
         },
         "relabel_edge.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.44,
+          "confidence": 0.47,
           "probabilities": {
             "Yes": 0.01,
             "No": 0.26,
             "Valid": 0,
-            "Invalid": 0.05,
+            "Invalid": 0.04,
             "Success": 0.01,
-            "Failure": 0.49,
+            "Failure": 0.52,
             "Pass": 0,
-            "Fail": 0.18,
+            "Fail": 0.16,
             "Retry": 0,
             "Approved": 0,
             "Rejected": 0
@@ -434,7 +434,7 @@
       },
       "usage": {
         "input_tokens": 4623,
-        "output_tokens": 1118
+        "output_tokens": 1119
       }
     }
   }

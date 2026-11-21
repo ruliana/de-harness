@@ -236,35 +236,35 @@
         "__tool__": {
           "type": "choice",
           "choice": "connect",
-          "confidence": 0.95,
+          "confidence": 0.92,
           "probabilities": {
             "add_node": 0,
             "remove_node": 0,
             "rename_node": 0,
-            "connect": 0.96,
-            "disconnect": 0.04,
+            "connect": 0.93,
+            "disconnect": 0.07,
             "relabel_edge": 0
           }
         },
         "add_node.label": {
           "type": "choice",
           "choice": "Review",
-          "confidence": 0.3,
+          "confidence": 0.34,
           "probabilities": {
             "Enter credentials": 0.01,
             "Check password": 0.01,
             "Show dashboard": 0.02,
-            "Show error message": 0.02,
+            "Show error message": 0.01,
             "Send verification code": 0.01,
-            "Verify code": 0.03,
+            "Verify code": 0.02,
             "Reset password": 0,
             "Lock account": 0.01,
             "Fill in sign-up form": 0.01,
             "Validate email": 0.01,
-            "Create account": 0.02,
+            "Create account": 0.01,
             "Send welcome email": 0.01,
             "Add to cart": 0.02,
-            "Enter payment details": 0.01,
+            "Enter payment details": 0.02,
             "Charge card": 0.02,
             "Confirm order": 0.04,
             "Payment failed": 0.01,
@@ -273,46 +273,46 @@
             "Roll back": 0.04,
             "Notify team": 0.05,
             "Open ticket": 0.01,
-            "Triage": 0.06,
+            "Triage": 0.05,
             "Assign agent": 0.01,
-            "Escalate": 0.03,
+            "Escalate": 0.04,
             "Resolve ticket": 0.05,
-            "Close ticket": 0.03,
-            "Review": 0.32,
-            "Approve": 0.09,
-            "Reject": 0.02
+            "Close ticket": 0.05,
+            "Review": 0.36,
+            "Approve": 0.06,
+            "Reject": 0.01
           }
         },
         "remove_node.node": {
           "type": "choice",
           "choice": "Build image",
-          "confidence": 0.59,
+          "confidence": 0.75,
           "probabilities": {
             "Push code": 0.01,
-            "Run tests": 0.07,
-            "Deploy": 0.23,
-            "Build image": 0.69
+            "Run tests": 0.05,
+            "Deploy": 0.13,
+            "Build image": 0.81
           }
         },
         "rename_node.node": {
           "type": "choice",
           "choice": "Build image",
-          "confidence": 0.89,
+          "confidence": 0.87,
           "probabilities": {
-            "Push code": 0,
-            "Run tests": 0.04,
+            "Push code": 0.01,
+            "Run tests": 0.05,
             "Deploy": 0.04,
-            "Build image": 0.92
+            "Build image": 0.9
           }
         },
         "rename_node.label": {
           "type": "choice",
           "choice": "Review",
-          "confidence": 0.36,
+          "confidence": 0.33,
           "probabilities": {
             "Enter credentials": 0.01,
             "Check password": 0,
-            "Show dashboard": 0,
+            "Show dashboard": 0.01,
             "Show error message": 0.01,
             "Send verification code": 0.01,
             "Verify code": 0.02,
@@ -320,25 +320,25 @@
             "Lock account": 0.01,
             "Fill in sign-up form": 0.01,
             "Validate email": 0.01,
-            "Create account": 0.06,
+            "Create account": 0.08,
             "Send welcome email": 0.01,
-            "Add to cart": 0.04,
+            "Add to cart": 0.03,
             "Enter payment details": 0.01,
-            "Charge card": 0.01,
-            "Confirm order": 0.03,
+            "Charge card": 0.02,
+            "Confirm order": 0.04,
             "Payment failed": 0.01,
             "Retry payment": 0.01,
             "Cancel order": 0.01,
             "Roll back": 0.01,
-            "Notify team": 0.05,
+            "Notify team": 0.04,
             "Open ticket": 0.01,
-            "Triage": 0.13,
+            "Triage": 0.14,
             "Assign agent": 0.01,
             "Escalate": 0.01,
             "Resolve ticket": 0.03,
             "Close ticket": 0.02,
-            "Review": 0.38,
-            "Approve": 0.06,
+            "Review": 0.35,
+            "Approve": 0.05,
             "Reject": 0.01
           }
         },
@@ -361,20 +361,20 @@
         "connect.label": {
           "type": "choice",
           "choice": "Build image",
-          "confidence": 0.46,
+          "confidence": 0.43,
           "probabilities": {
-            "Build image": 0.5,
-            "Run tests": 0.05,
-            "Deploy": 0.03,
-            "Yes": 0.01,
-            "No": 0.26,
-            "Valid": 0.05,
+            "Build image": 0.47,
+            "Run tests": 0.06,
+            "Deploy": 0.04,
+            "Yes": 0.02,
+            "No": 0.25,
+            "Valid": 0.04,
             "Invalid": 0.01,
             "Success": 0.01,
             "Failure": 0.04,
             "Pass": 0.01,
-            "Fail": 0.03,
-            "Retry": 0,
+            "Fail": 0.04,
+            "Retry": 0.01,
             "Approved": 0,
             "Rejected": 0
           }
@@ -386,40 +386,40 @@
         "disconnect.edge": {
           "type": "choice",
           "choice": "Run tests --> Deploy",
-          "confidence": 0.85,
+          "confidence": 0.77,
           "probabilities": {
             "Push code --> Run tests": 0,
-            "Run tests --> Deploy": 0.9,
-            "Run tests --> Build image": 0.1
+            "Run tests --> Deploy": 0.85,
+            "Run tests --> Build image": 0.15
           }
         },
         "relabel_edge.edge": {
           "type": "choice",
-          "choice": "Run tests --> Build image",
-          "confidence": 0.3,
+          "choice": "Run tests --> Deploy",
+          "confidence": 0.26,
           "probabilities": {
-            "Push code --> Run tests": 0.01,
-            "Run tests --> Deploy": 0.46,
-            "Run tests --> Build image": 0.53
+            "Push code --> Run tests": 0,
+            "Run tests --> Deploy": 0.51,
+            "Run tests --> Build image": 0.49
           }
         },
         "relabel_edge.label": {
           "type": "choice",
           "choice": "Build image",
-          "confidence": 0.33,
+          "confidence": 0.5,
           "probabilities": {
-            "Build image": 0.38,
-            "Run tests": 0.03,
-            "Deploy": 0.09,
-            "Yes": 0.02,
-            "No": 0.25,
-            "Valid": 0.04,
+            "Build image": 0.54,
+            "Run tests": 0.02,
+            "Deploy": 0.07,
+            "Yes": 0.01,
+            "No": 0.2,
+            "Valid": 0.03,
             "Invalid": 0.03,
             "Success": 0.01,
-            "Failure": 0.05,
+            "Failure": 0.03,
             "Pass": 0.01,
-            "Fail": 0.07,
-            "Retry": 0.01,
+            "Fail": 0.04,
+            "Retry": 0,
             "Approved": 0,
             "Rejected": 0.01
           }
@@ -427,7 +427,7 @@
       },
       "usage": {
         "input_tokens": 4538,
-        "output_tokens": 1159
+        "output_tokens": 1158
       }
     }
   }

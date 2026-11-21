@@ -196,24 +196,24 @@
         "__tool__": {
           "type": "choice",
           "choice": "add_node",
-          "confidence": 0.27,
+          "confidence": 0.31,
           "probabilities": {
-            "add_node": 0.42,
+            "add_node": 0.45,
             "remove_node": 0,
             "rename_node": 0,
-            "connect": 0.41,
-            "ask_user": 0.17
+            "connect": 0.35,
+            "ask_user": 0.2
           }
         },
         "add_node.label": {
           "type": "choice",
           "choice": "Show dashboard",
-          "confidence": 0.68,
+          "confidence": 0.76,
           "probabilities": {
-            "Show dashboard": 0.69,
-            "Show error message": 0.25,
-            "Send verification code": 0.01,
-            "Verify code": 0.05,
+            "Show dashboard": 0.77,
+            "Show error message": 0.21,
+            "Send verification code": 0,
+            "Verify code": 0.02,
             "Reset password": 0,
             "Lock account": 0,
             "Fill in sign-up form": 0,
@@ -247,28 +247,28 @@
         "remove_node.node": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.38,
+          "confidence": 0.28,
           "probabilities": {
-            "Enter credentials": 0.31,
-            "Check password": 0.69
+            "Enter credentials": 0.36,
+            "Check password": 0.64
           }
         },
         "rename_node.node": {
           "type": "choice",
           "choice": "Check password",
-          "confidence": 0.06,
+          "confidence": 0.1,
           "probabilities": {
-            "Enter credentials": 0.47,
-            "Check password": 0.53
+            "Enter credentials": 0.45,
+            "Check password": 0.55
           }
         },
         "rename_node.label": {
           "type": "choice",
           "choice": "Show error message",
-          "confidence": 0.94,
+          "confidence": 0.93,
           "probabilities": {
             "Show dashboard": 0.05,
-            "Show error message": 0.94,
+            "Show error message": 0.93,
             "Send verification code": 0,
             "Verify code": 0,
             "Reset password": 0,
@@ -296,7 +296,7 @@
             "Escalate": 0,
             "Resolve ticket": 0,
             "Close ticket": 0,
-            "Review": 0,
+            "Review": 0.01,
             "Approve": 0,
             "Reject": 0.01
           }
@@ -313,14 +313,14 @@
         "connect.label": {
           "type": "choice",
           "choice": "Failure",
-          "confidence": 0.67,
+          "confidence": 0.7,
           "probabilities": {
-            "Yes": 0,
-            "No": 0.14,
+            "Yes": 0.01,
+            "No": 0.08,
             "Valid": 0,
-            "Invalid": 0.03,
+            "Invalid": 0.05,
             "Success": 0.01,
-            "Failure": 0.7,
+            "Failure": 0.73,
             "Pass": 0,
             "Fail": 0.12,
             "Retry": 0,
@@ -330,7 +330,7 @@
         },
         "connect.label?stated": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.06
         },
         "ask_user.question": {
           "type": "choice",
