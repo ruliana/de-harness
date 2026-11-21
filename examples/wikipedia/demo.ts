@@ -1,12 +1,12 @@
 /**
- * Renders a Wikipedia run as a short video and an animated PNG (the media of the README).
+ * Renders a Wikipedia run as a short video (the MP4 of the README).
  *
  *   npm run example:wikipedia:demo -- --from Linux --to Helsinki --out docs/media
  *
  * It runs the same agent as `main.ts`, by default replayed from the recordings in tests/cassettes (no key), then opens
  * each article the agent visited on en.wikipedia.org at the pinned revision and screenshots it with headless Chromium:
  * first the page, then the links the agent may follow boxed, then the link it chose circled, with the tool call as a
- * caption. ffmpeg makes the MP4, WebM and APNG. Needs network access to Wikipedia, Playwright's Chromium and ffmpeg.
+ * caption. ffmpeg makes the small MP4 (960 px, 10 fps, no audio). Needs network access to Wikipedia, Playwright's Chromium and ffmpeg.
  * Screenshots show Wikipedia (CC BY-SA 4.0).
  */
 import { execFileSync } from "node:child_process";
@@ -196,9 +196,8 @@ async function main() {
   writeFileSync(join(work, "frames.txt"), list.join("\n") + "\n");
 
   const ff = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", join(work, "frames.txt"), ...args], { stdio: "inherit" });
-  ff("-vf", "fps=30,format=yuv420p", "-c:v", "libx264", "-crf", "26", "-movflags", "+faststart", join(out, "wikipedia-demo.mp4"));
-  ff("-vf", "fps=30", "-c:v", "libvpx-vp9", "-crf", "42", "-b:v", "0", "-cpu-used", "4", join(out, "wikipedia-demo.webm"));
-  ff("-vf", "scale=800:-1:flags=lanczos", "-fps_mode", "vfr", "-plays", "0", "-f", "apng", join(out, "wikipedia-demo.png"));
+  // Small on purpose: 960 px wide, 10 fps, no audio (a README video, a few hundred KB).
+  ff("-vf", "fps=10,scale=960:-2:flags=lanczos,format=yuv420p", "-c:v", "libx264", "-crf", "38", "-preset", "veryslow", "-tune", "animation", "-g", "250", "-movflags", "+faststart", join(out, "wikipedia-demo.mp4"));
   rmSync(work, { recursive: true, force: true });
   console.log(`${from} > ${to}: ${steps.length} steps, ${shots.length} frames, written to ${out}`);
 }

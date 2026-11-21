@@ -1,5 +1,5 @@
 /**
- * Renders the assistant on the diagram studio as a short video (MP4, WebM) and an animated PNG, the media of the README.
+ * Renders the assistant on the diagram studio as a short video (a small MP4), the media of the README.
  *
  *   npm run example:diagram:demo -- --out docs/media
  *
@@ -8,7 +8,7 @@
  * types into the panel letter by letter, the model "thinks" a moment before each step (the replay would otherwise be instant), and a caption
  * names the tool the model chose and what it chose for each parameter. The captions are drawn into an element that the session hides from
  * the model (`hideFromModel`), so the pictures the model gets are the ones of the recordings.
- * The animated PNG is made from screenshots taken after each step. ffmpeg encodes. Needs Playwright's Chromium and ffmpeg.
+ * ffmpeg encodes (960 px, 10 fps, no audio). Needs Playwright's Chromium and ffmpeg.
  */
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
@@ -153,24 +153,17 @@ async function main() {
   }
   await browser.close();
 
-  // MP4 and WebM: card, run, card, run, card, run.
+  // MP4: card, run, card, run, card, run.
   const cardClip = (n: number) => ["-loop", "1", "-framerate", "25", "-t", "2.6", "-i", cards[n]!];
   const inputs = segments.flatMap((s, n) => [...cardClip(n), "-ss", String(s.trimSeconds), "-i", s.video]);
   const count = segments.length * 2;
-  const norm = (i: number) => `[${i}:v]scale=1280:800,fps=25,format=yuv420p,setsar=1[v${i}]`;
+  const norm = (i: number) => `[${i}:v]scale=1280:800,fps=25,scale=960:-2:flags=lanczos,fps=10,format=yuv420p,setsar=1[v${i}]`;
   const ids = [...Array(count).keys()];
   const filter = `${ids.map(norm).join(";")};${ids.map((i) => `[v${i}]`).join("")}concat=n=${count}:v=1:a=0[v]`;
   const encode = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...inputs, "-filter_complex", filter, "-map", "[v]", ...args], { stdio: "inherit" });
-  encode("-c:v", "libx264", "-crf", "27", "-preset", "slow", "-movflags", "+faststart", join(out, "diagram-demo.mp4"));
-  encode("-c:v", "libvpx-vp9", "-crf", "40", "-b:v", "0", "-cpu-used", "4", join(out, "diagram-demo.webm"));
+  // Small on purpose: 960 px wide, 10 fps, no audio (a README video, a few hundred KB).
+  encode("-c:v", "libx264", "-crf", "38", "-preset", "veryslow", "-tune", "animation", "-g", "250", "-movflags", "+faststart", join(out, "diagram-demo.mp4"));
 
-  // The animated PNG: the cards and a screenshot after each step.
-  const stills = (s: Segment) => s.frames.map((file, i) => ({ file, seconds: i === s.frames.length - 1 ? 3 : 1.1 }));
-  const seq: { file: string; seconds: number }[] = segments.flatMap((s, n) => [{ file: cards[n]!, seconds: 2.4 }, ...stills(s)]);
-  const list = seq.flatMap((f) => [`file '${f.file}'`, `duration ${f.seconds}`]);
-  list.push(list[list.length - 2]!);
-  writeFileSync(join(work, "frames.txt"), list.join("\n") + "\n");
-  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", join(work, "frames.txt"), "-vf", "scale=900:-1:flags=lanczos", "-fps_mode", "vfr", "-plays", "0", "-f", "apng", join(out, "diagram-demo.png")], { stdio: "inherit" });
   const steps = segments.map((s) => s.frames.length);
   rmSync(work, { recursive: true, force: true });
   console.log(`diagram demo: ${steps.join(" + ")} frames, written to ${out}`);
