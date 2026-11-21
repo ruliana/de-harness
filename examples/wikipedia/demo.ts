@@ -198,8 +198,8 @@ async function main() {
   const ff = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", join(work, "frames.txt"), ...args], { stdio: "inherit" });
   // Small on purpose: 960 px wide, 10 fps, no audio (a README video, a few hundred KB).
   ff("-vf", "fps=10,scale=960:-2:flags=lanczos,format=yuv420p", "-c:v", "libx264", "-crf", "38", "-preset", "veryslow", "-tune", "animation", "-g", "250", "-movflags", "+faststart", join(out, "wikipedia-demo.mp4"));
-  // The animated WebP the README shows (GitHub does not play video in a README): same frames, 800 px, 8 fps.
-  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", join(out, "wikipedia-demo.mp4"), "-vf", "fps=8,scale=800:-2:flags=lanczos", "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", "30", "-compression_level", "6", "-loop", "0", join(out, "wikipedia-demo.webp")], { stdio: "inherit" });
+  // The animated WebP the README shows (GitHub does not play video in a README): 800 px wide (the width GitHub shows it at), 8 fps, from the frames, not from the MP4.
+  ff("-vf", "fps=8,scale=800:-2:flags=lanczos", "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", "80", "-compression_level", "6", "-loop", "0", join(out, "wikipedia-demo.webp"));
   rmSync(work, { recursive: true, force: true });
   console.log(`${from} > ${to}: ${steps.length} steps, ${shots.length} frames, written to ${out}`);
 }

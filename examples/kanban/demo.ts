@@ -161,13 +161,17 @@ async function main() {
   // MP4: card, run, card, run.
   const cardClip = (n: number) => ["-loop", "1", "-framerate", "25", "-t", "2.6", "-i", cards[n]!];
   const inputs = [...cardClip(0), "-ss", String(segments[0]!.trimSeconds), "-i", segments[0]!.video, ...cardClip(1), "-ss", String(segments[1]!.trimSeconds), "-i", segments[1]!.video];
-  const norm = (i: number) => `[${i}:v]scale=1280:800,fps=25,scale=960:-2:flags=lanczos,fps=10,format=yuv420p,setsar=1[v${i}]`;
+  const norm = (i: number) => `[${i}:v]scale=1280:800,fps=25,format=yuv420p,setsar=1[v${i}]`;
   const filter = `${[0, 1, 2, 3].map(norm).join(";")};[v0][v1][v2][v3]concat=n=4:v=1:a=0[v]`;
   const encode = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...inputs, "-filter_complex", filter, "-map", "[v]", ...args], { stdio: "inherit" });
-  // Small on purpose: 960 px wide, 10 fps, no audio (a README video, a few hundred KB).
-  encode("-c:v", "libx264", "-crf", "38", "-preset", "veryslow", "-tune", "animation", "-g", "250", "-movflags", "+faststart", join(out, "kanban-demo.mp4"));
-  // The animated WebP the README shows (GitHub does not play video in a README): same frames, 800 px, 8 fps.
-  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", join(out, "kanban-demo.mp4"), "-vf", "fps=8,scale=800:-2:flags=lanczos", "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", "30", "-compression_level", "6", "-loop", "0", join(out, "kanban-demo.webp")], { stdio: "inherit" });
+  // A near-lossless 1280 px master, then two small files made from it (never from each other, so the animation is not compressed twice).
+  const master = join(work, "master.mp4");
+  encode("-c:v", "libx264", "-crf", "16", "-preset", "fast", master);
+  const ffmpeg = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", master, ...args], { stdio: "inherit" });
+  // The MP4: 960 px, 10 fps, no audio (a few hundred KB).
+  ffmpeg("-vf", "scale=960:-2:flags=lanczos,fps=10", "-c:v", "libx264", "-crf", "38", "-preset", "veryslow", "-tune", "animation", "-g", "250", "-movflags", "+faststart", join(out, "kanban-demo.mp4"));
+  // The animated WebP the README shows (GitHub does not play video in a README): 800 px wide (the width GitHub shows it at), 8 fps.
+  ffmpeg("-vf", "fps=8,scale=800:-2:flags=lanczos", "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", "80", "-compression_level", "6", "-loop", "0", join(out, "kanban-demo.webp"));
 
   const steps = segments.map((s) => s.frames.length);
   rmSync(work, { recursive: true, force: true });
