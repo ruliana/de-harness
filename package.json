@@ -34,11 +34,14 @@
     "example:shops": "NODE_USE_ENV_PROXY=1 tsx examples/shop-sweep/main.ts",
     "example:kanban": "NODE_USE_ENV_PROXY=1 tsx examples/kanban/main.ts",
     "example:kanban:demo": "tsx examples/kanban/demo.ts",
+    "example:diagram": "NODE_USE_ENV_PROXY=1 tsx examples/diagram/main.ts",
+    "example:diagram:demo": "tsx examples/diagram/demo.ts",
     "example:page-overlay": "NODE_USE_ENV_PROXY=1 tsx examples/page-overlay/main.ts",
     "example:probe": "NODE_USE_ENV_PROXY=1 tsx examples/storefront-by-sight/probe-main.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
+    "mermaid": "^12.3.0",
     "node-html-parser": "^9.0.7",
     "playwright": "1.63.0",
     "tsx": "^4.23.15",

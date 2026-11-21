@@ -9,6 +9,10 @@ question per tool name and per parameter. See `CLAUDE.md` for principles and com
 
 *An assistant that lives on the page ([Kanban example](examples/kanban/)): the person types an instruction into the panel, the agent operates the board by sight, and asks back when the instruction leaves something open. Also as [MP4](docs/media/kanban-demo.mp4) or [WebM](docs/media/kanban-demo.webm).*
 
+![An assistant panel beside a diagram: the person types "Draw a login flow with 3 steps and a failure branch", and the agent builds the Mermaid diagram one tool call at a time](docs/media/diagram-demo.png)
+
+*An assistant that draws ([Diagram example](examples/diagram/)): the state is the Mermaid text, every tool result is the whole current diagram, and the panel beside it takes instructions in plain English. Also as [MP4](docs/media/diagram-demo.mp4) or [WebM](docs/media/diagram-demo.webm).*
+
 ```sh
 npm ci
 npm run typecheck
@@ -34,6 +38,7 @@ Each one has a README that says what it shows and how to run it.
 - [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
 - [Page overlay](examples/page-overlay/): an assistant panel laid over a page: you tell it what to do, and it operates the page behind it.
 - [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who.
+- [Diagram](examples/diagram/): the same panel beside a Mermaid diagram: the diagram text is the state, and it adds, renames, connects and removes steps, and asks you where a failure should lead.
 
 ## How it works
 
@@ -177,6 +182,7 @@ An assistant that lives *on* the page (`PageOverlay`, `src/browser/overlay.ts`) 
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
 | `src/browser/overlay.ts` | `PageOverlay`: the assistant panel over a page (`install`, `say`, `working`, `nextInstruction`, `input`), hidden from the model's screenshots |
 | `examples/kanban/` | an assistant panel beside a Kanban board (drag and drop, card dialog), with the demo that renders the README media (`npm run example:kanban`, `npm run example:kanban:demo`) |
+| `examples/diagram/` | an assistant panel beside a Mermaid diagram: the Mermaid text is the state, tools come and go with what the diagram holds, labels are chosen from candidates, with the demo that renders the README media (`npm run example:diagram`, `npm run example:diagram:demo`) |
 | `examples/page-overlay/` | an assistant panel over a checkout page that fills in a form, asks a question and places the order (`npm run example:page-overlay`) |
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
