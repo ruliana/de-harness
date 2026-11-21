@@ -6,7 +6,7 @@
 import type { DecisionModel, HarnessEvent } from "../../src/index.js";
 import { BrowserSession, PageOverlay, type BrowserOptions, type OverlayMessage } from "../../src/browser/index.js";
 import { serve, type Handled } from "./assistant.js";
-import { START, startKanbanSite, type Card } from "./kanban-site.js";
+import { MODEL_STYLE, START, startKanbanSite, type Card } from "./kanban-site.js";
 
 /** What the person says, what they answer when asked, and the one card that has to be different on the board afterwards. */
 export type Scenario = { name: string; instruction: string; answer?: string; expected: { title: string; column: Card["column"]; assignee: string | null } };
@@ -55,7 +55,7 @@ export type RunOptions = {
 export async function runScenario(opts: RunOptions): Promise<Outcome> {
   const { scenario } = opts;
   const site = await startKanbanSite();
-  const browser = await BrowserSession.launch({ allowedHosts: ["127.0.0.1"], ...opts.browser });
+  const browser = await BrowserSession.launch({ allowedHosts: ["127.0.0.1"], screenshotStyle: MODEL_STYLE, ...opts.browser });
   try {
     const overlay = await PageOverlay.install(browser, { title: "Board assistant", placeholder: "Tell me what to do on the board" });
     await browser.goto(site.url);
@@ -123,7 +123,8 @@ export function problems(o: Outcome): string[] {
   if (last?.kind !== "result") out.push(`the panel does not end with the result: ${last ? `[${last.kind}] ${last.text}` : "nothing"}`);
   const asked = o.messages.filter((m) => m.kind === "question").length;
   if (asked !== (scenario.answer ? 1 : 0)) out.push(`the panel asked ${asked} questions`);
-  if (o.messages.filter((m) => m.kind === "progress").length < 1) out.push("the panel shows no steps");
+  const chatter = o.messages.filter((m) => m.kind === "progress");
+  if (chatter.length) out.push(`the panel narrates the steps, it should stay quiet until the result: ${chatter.map((m) => m.text).join(" | ")}`);
   if (o.fieldLeftOver !== "") out.push(`something was typed into the panel's field: "${o.fieldLeftOver}"`);
   return out;
 }

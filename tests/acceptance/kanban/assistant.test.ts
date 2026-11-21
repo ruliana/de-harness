@@ -1,12 +1,12 @@
 /**
  * The assistant behind the panel, with Jev (through a cassette): a small Kanban board with the panel beside it. A scripted person types an
  * instruction into the panel; the agent sees only a screenshot of the board (without the panel), drags cards between columns, opens a card
- * to assign it, and the panel shows the steps, a question when it has one, and the result. Jev's answers are in tests/cassettes/kanban:
+ * to assign it, and the panel stays quiet but for a question, when it has one, and the result. Jev's answers are in tests/cassettes/kanban:
  * `npm test` replays one run of each scenario offline, `npm run test:live` records them and runs two more of each, then prints how many
  * of them came out right.
  *
- * Right means: the board (as the server holds it) is the start with exactly the card the person talked about changed, the panel shows the
- * steps and ends with the result, and nothing was typed into the panel itself. A question holds the loop: while it is open, the model gets
+ * Right means: the board (as the server holds it) is the start with exactly the card the person talked about changed, the panel stays quiet
+ * until it ends with the result, and nothing was typed into the panel itself. A question holds the loop: while it is open, the model gets
  * no new request and the board does not change.
  */
 import { beforeAll, describe, expect, it } from "vitest";
@@ -39,14 +39,12 @@ describe("kanban assistant: an instruction typed into the panel operates the boa
     expect(o.handled!.result.status).toBe("ended");
   });
 
-  it("shows the person each step in the panel, then a result that says what changed", () => {
+  it("keeps the panel quiet while it works at full speed: the person's line, then a result that says what changed, and nothing in between", () => {
     const o = first("move-assign");
     const kinds = o.messages.map((m) => m.kind);
-    expect(kinds[0]).toBe("user");
+    expect(kinds).toEqual(["user", "result"]); // the steps (a drag, the card opened, the name, Close) are on the board, not in the panel
     expect(o.messages[0]!.text).toBe(scenario("move-assign").instruction);
-    expect(kinds.filter((k) => k === "progress").length).toBeGreaterThanOrEqual(3); // the move, the card opened, the name, Close
-    expect(o.messages.filter((m) => m.kind === "progress").map((m) => m.text)).toEqual(expect.arrayContaining(['Dragged: "Fix login" moved from To Do to Done', 'Pressed "Sam"']));
-    expect(kinds.at(-1)).toBe("result");
+    expect(o.handled!.result.steps.length).toBeGreaterThanOrEqual(3);
     expect(o.messages.at(-1)!.text).toBe('Done: "Fix login" moved from To Do to Done, assigned to Sam.');
     expect(o.panel).toContain(o.messages.at(-1)!.text); // what the person reads in the panel
     expect(kinds).not.toContain("question"); // nothing was left open
@@ -78,9 +76,8 @@ describe("kanban assistant: an instruction typed into the panel operates the boa
     expect(o.cards.find((c) => c.title === "Update docs")).toMatchObject({ column: "Doing", assignee: "Priya" });
     // held: while the question was open, no request went to the model
     expect(o.held!.requestsAfterWaiting).toBe(o.held!.requestsWhenAsked);
-    // and it went on after the answer, to the end
-    expect(kinds.slice(asked + 2).filter((k) => k === "progress").length).toBeGreaterThanOrEqual(1);
-    expect(kinds.at(-1)).toBe("result");
+    // and it went on after the answer, to the end, without a word until the result
+    expect(kinds).toEqual(["user", "question", "user", "result"]);
   });
 
   it(`is reliable: every replayed run is correct, and at least ${RUNS === 1 ? "all" : "two of three"} live ones of each scenario`, () => {

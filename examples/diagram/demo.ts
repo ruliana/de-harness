@@ -17,7 +17,7 @@ import { parseArgs } from "node:util";
 import { chromium } from "playwright";
 import { CassetteModel, JevModel, type DecisionModel, type DecisionRequest, type DecisionResponse } from "../../src/index.js";
 import { OVERLAY_FIELD, type BrowserSession } from "../../src/browser/index.js";
-import { FONTS } from "./diagram-site.js";
+import { FONTS } from "../shared/fonts.js";
 import { SCENARIOS, problems, runScenario, type Scenario } from "./run.js";
 
 const { values } = parseArgs({ options: { out: { type: "string", default: "docs/media" }, live: { type: "boolean", default: false }, "think-ms": { type: "string", default: "350" } } });

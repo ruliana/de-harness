@@ -7,7 +7,7 @@ question per tool name and per parameter. See `CLAUDE.md` for principles and com
 
 ![An assistant panel beside a Kanban board: the person types "Move the Fix login card to Done and assign it to Sam", and the agent drags the card, opens it and picks Sam](docs/media/kanban-demo.png)
 
-*An assistant that lives on the page ([Kanban example](examples/kanban/)): the person types an instruction into the panel, the agent operates the board by sight, and asks back when the instruction leaves something open. Also as [MP4](docs/media/kanban-demo.mp4) or [WebM](docs/media/kanban-demo.webm).*
+*An assistant that lives on the page ([Kanban example](examples/kanban/)): the person types an instruction into the panel, the agent operates the board by sight at full speed (the cards fly to their new places, animated with CSS transitions), and asks back when the instruction leaves something open. Also as [MP4](docs/media/kanban-demo.mp4) or [WebM](docs/media/kanban-demo.webm).*
 
 ![An assistant panel beside a diagram: the person types a description of a login, and the agent draws it as a Mermaid sequence diagram, one tool call at a time](docs/media/diagram-demo.png)
 
@@ -37,7 +37,7 @@ Each one has a README that says what it shows and how to run it.
 - [Screen](examples/screen/): a sign-up form seen only as a picture, with a box around the button to click.
 - [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
 - [Page overlay](examples/page-overlay/): an assistant panel laid over a page: you tell it what to do, and it operates the page behind it.
-- [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who.
+- [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who. The panel says nothing until the result.
 - [Web page](examples/web-page/): the browser bundle in a plain web page, with `JevModel` pointed at a small proxy on the page's own server that holds the key.
 - [Diagram](examples/diagram/): the same panel beside a Mermaid diagram (flowchart or sequence): the diagram text is the state, it draws, edits and asks you what a failure should do, and the page animates every change with CSS transitions.
 
@@ -195,7 +195,7 @@ An assistant that lives *on* the page (`PageOverlay`, `src/browser/overlay.ts`) 
 | `examples/screen/` | a form seen as a picture: `click(target)` with a Box (fixtures drawn by code, `npm run example:screen:fixtures`) |
 | `src/browser/` | `BrowserSession` (headless Chromium, screenshots as state, box to click) and `browserTools` (`click`, `scroll`, `type_text`, `press_key`, `navigate`, `go_back`; a tool that changed nothing three times in a row is no longer offered; `pageText: false` leaves the address and title out of the state) |
 | `src/browser/overlay.ts` | `PageOverlay`: the assistant panel over a page (`install`, `say`, `working`, `nextInstruction`, `input`), hidden from the model's screenshots |
-| `examples/kanban/` | an assistant panel beside a Kanban board (drag and drop, card dialog), with the demo that renders the README media (`npm run example:kanban`, `npm run example:kanban:demo`) |
+| `examples/kanban/` | an assistant panel beside an animated Kanban board (drag and drop, card dialog), with the demo that renders the README media (`npm run example:kanban`, `npm run example:kanban:demo`) |
 | `examples/diagram/` | an assistant panel beside a Mermaid diagram: the Mermaid text is the state (no screenshots), tools come and go with what the diagram holds, labels are chosen from candidates, an animated page, with the demo that renders the README media (`npm run example:diagram`, `npm run example:diagram:demo`) |
 | `examples/page-overlay/` | an assistant panel over a checkout page that fills in a form, asks a question and places the order (`npm run example:page-overlay`) |
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |

@@ -1,12 +1,12 @@
 // npm run example:kanban -- [--scenario move-assign|ask-assignee|move-only] [--runs 1]     a scripted person, headless
 // npm run example:kanban -- --headed                                                       you type into the panel yourself (needs a display)
 // A small Kanban board with the assistant's panel beside it. The person types an instruction into the panel, the agent operates the
-// board by sight (drags cards between columns, opens a card to assign it), and the panel shows the steps, a question when it has one, and the result.
+// board by sight (drags cards between columns, opens a card to assign it), and the panel stays quiet until there is a question or the result.
 import { parseArgs } from "node:util";
 import { JevModel } from "../../src/index.js";
 import { BrowserSession, PageOverlay } from "../../src/browser/index.js";
 import { serve } from "./assistant.js";
-import { startKanbanSite } from "./kanban-site.js";
+import { MODEL_STYLE, startKanbanSite } from "./kanban-site.js";
 import { SCENARIOS, problems, runScenario, type Outcome } from "./run.js";
 
 const { values } = parseArgs({ options: { scenario: { type: "string", default: "move-assign" }, runs: { type: "string", default: "1" }, headed: { type: "boolean", default: false } } });
@@ -15,7 +15,7 @@ const model = () => new JevModel({ apiKey: process.env.TYPESAFE_API_KEY });
 if (values.headed) {
   // A person at a visible window: no scripted instruction, the panel is the only way in.
   const site = await startKanbanSite();
-  const browser = await BrowserSession.launch({ allowedHosts: ["127.0.0.1"], launch: { headless: false } });
+  const browser = await BrowserSession.launch({ allowedHosts: ["127.0.0.1"], launch: { headless: false }, screenshotStyle: MODEL_STYLE });
   const overlay = await PageOverlay.install(browser, { title: "Board assistant", placeholder: "Tell me what to do on the board" });
   await browser.goto(site.url);
   serve({ browser, overlay, model: model(), input: overlay.input, onEvent: (e) => e.type === "tool_call" && console.log(`step ${e.step}: ${e.tool}(${JSON.stringify(e.args).slice(0, 110)})`) });

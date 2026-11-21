@@ -34,6 +34,12 @@ export type BrowserOptions = {
    * More can be added later with `hideFromModel`.
    */
   hide?: string[];
+  /**
+   * CSS applied while a screenshot or a zoom for the model is taken (and only then), on top of `hide`. For pages that are drawn with effects
+   * that are not pixel-for-pixel the same from one machine to the next (blurred shadows, filters): the person sees the effects, the model
+   * a flat version of the same page, so that recordings keyed on the picture stay valid.
+   */
+  screenshotStyle?: string;
   /** Record the first page as a WebM video into this directory (the file is complete once the session is closed; see `videoPath`). For demos. */
   video?: { dir: string; size?: { width: number; height: number } };
   /** Pause between the small moves of `dragBox`, so that a recording shows the card travelling. Default 0. */
@@ -83,6 +89,7 @@ export class BrowserSession {
   private noise: Region[] = [];
   private readonly allowed: string[] | undefined;
   private readonly hidden: string[];
+  private readonly screenshotStyle: string;
   private readonly opts: Required<Pick<BrowserOptions, "settleMs" | "networkIdleMs" | "navigationTimeoutMs" | "dragStepMs">>;
 
   private constructor(
@@ -97,6 +104,7 @@ export class BrowserSession {
     this.viewport = viewport;
     this.allowed = opts.allowedHosts?.map((h) => h.toLowerCase());
     this.hidden = [...(opts.hide ?? [])];
+    this.screenshotStyle = opts.screenshotStyle ?? "";
     this.opts = { settleMs: opts.settleMs ?? 250, networkIdleMs: opts.networkIdleMs ?? 1500, navigationTimeoutMs: opts.navigationTimeoutMs ?? 30_000, dragStepMs: opts.dragStepMs ?? 0 };
     const watch = (p: Page) => {
       p.on("dialog", (d) => void d.dismiss().catch(() => {})); // an alert must never freeze the agent
@@ -456,8 +464,10 @@ export class BrowserSession {
    * `{ everything: true }` keeps those elements in, for a person who wants to see the page as it looks to them (a demo, a bug report).
    */
   async screenshot(opts: { everything?: boolean } = {}): Promise<Uint8Array> {
-    const take = () => this.page.screenshot({ type: "png", scale: "css", animations: "disabled", caret: "initial" });
-    return opts.everything ? await take() : await this.withoutHidden(take);
+    // The stylesheet goes in with the screenshot call itself (Playwright applies it for the capture and takes it out again), so the page
+    // is hidden for as short a time as possible: there is nothing to see of it, in a recording or in a window.
+    const style = opts.everything ? undefined : this.modelStyle();
+    return await this.page.screenshot({ type: "png", scale: "css", animations: "disabled", caret: "initial", ...(style ? { style } : {}) });
   }
 
   /** From now on, never show the elements matching this CSS selector in a screenshot or zoom (see `BrowserOptions.hide`). Idempotent. */
@@ -500,10 +510,15 @@ export class BrowserSession {
     if (opts.key) await field.press(opts.key);
   }
 
+  /** The stylesheet for the picture the model sees: what is hidden from it, and the flat version of the page, if there is one. */
+  private modelStyle(): string {
+    return [...this.hidden.map((s) => `${s} { visibility: hidden !important; }`), this.screenshotStyle].filter(Boolean).join("\n");
+  }
+
   /** Run `fn` while the elements that the model must not see are hidden. Their layout stays (they are only made invisible), so nothing around them moves. */
   private async withoutHidden<T>(fn: () => Promise<T>): Promise<T> {
-    if (this.hidden.length === 0) return await fn();
-    const css = this.hidden.map((s) => `${s} { visibility: hidden !important; }`).join("\n");
+    const css = this.modelStyle();
+    if (!css) return await fn();
     await this.page.evaluate((text) => {
       const style = document.createElement("style");
       style.setAttribute("data-harness-hide", "");

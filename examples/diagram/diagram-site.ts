@@ -15,20 +15,11 @@ import { readFileSync } from "node:fs";
 import { createServer, type Server } from "node:http";
 import type { AddressInfo } from "node:net";
 import { createRequire } from "node:module";
-import { dirname, join } from "node:path";
+import { join } from "node:path";
+import { FONTS } from "../shared/fonts.js";
 
 const here = join(import.meta.dirname, "page");
 const mermaidFile = createRequire(import.meta.url).resolve("mermaid/dist/mermaid.min.js");
-const fontsource = (name: string) => join(dirname(createRequire(import.meta.url).resolve(`@fontsource/${name}/package.json`)), "files");
-/** The fonts of the page, by the name the page asks for: Inter for the text, JetBrains Mono for the source pane (both from node_modules, so there is no network). */
-export const FONTS: Record<string, string> = {
-  "inter-400.woff2": join(fontsource("inter"), "inter-latin-400-normal.woff2"),
-  "inter-500.woff2": join(fontsource("inter"), "inter-latin-500-normal.woff2"),
-  "inter-600.woff2": join(fontsource("inter"), "inter-latin-600-normal.woff2"),
-  "inter-700.woff2": join(fontsource("inter"), "inter-latin-700-normal.woff2"),
-  "mono-400.woff2": join(fontsource("jetbrains-mono"), "jetbrains-mono-latin-400-normal.woff2"),
-  "mono-500.woff2": join(fontsource("jetbrains-mono"), "jetbrains-mono-latin-500-normal.woff2"),
-};
 const PAGE: Record<string, [file: string, type: string]> = {
   "/": ["index.html", "text/html; charset=utf-8"],
   "/studio.css": ["studio.css", "text/css; charset=utf-8"],
