@@ -2,7 +2,7 @@
 
 An assistant that draws diagrams: a chat panel beside a small diagram studio. You type "Draw a sequence diagram of a login ... with a failure case"; the agent builds a Mermaid diagram one tool call at a time, at full speed, and the drawing beside the panel changes as it works: what was there moves to its new place, what is new grows or draws itself in, what is gone fades out. The panel says nothing until there is a result (or a question).
 
-<video src="https://github.com/ruliana/de-harness/raw/main/docs/media/diagram-demo.mp4" aria-label="The person types an instruction into the panel, and the agent draws a sequence diagram of a login, with its failure case" width="100%" controls muted loop autoplay playsinline></video>
+[![The person types an instruction into the panel, and the agent draws a sequence diagram of a login, with its failure case (click to play the video)](../../docs/media/diagram-demo-poster.jpg)](../../docs/media/diagram-demo.mp4)
 
 **Shows:** the page-overlay pattern ([page-overlay](../page-overlay/), [kanban](../kanban/)) on an agent whose **state is a document**:
 

@@ -2,7 +2,7 @@
 
 An assistant that lives next to a Kanban board: a chat panel beside a small board (To Do, Doing, Done). You type "Move the 'Fix login' card to Done and assign it to Sam"; the agent operates the board by sight, at full speed, and the board moves while it works: the cards fly to their new places, an assignee fades in, the dialog grows in. The panel says nothing until the result (or a question).
 
-<video src="https://github.com/ruliana/de-harness/raw/main/docs/media/kanban-demo.mp4" aria-label="The agent drags the card, opens it and picks Sam" width="100%" controls muted loop autoplay playsinline></video>
+[![The agent drags the card, opens it and picks Sam (click to play the video)](../../docs/media/kanban-demo-poster.jpg)](../../docs/media/kanban-demo.mp4)
 
 **Shows:** the page-overlay pattern (`PageOverlay`, see [page-overlay](../page-overlay/)) on an app with real interaction, not a form:
 

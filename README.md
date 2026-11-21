@@ -3,13 +3,13 @@
 A harness for decision models. The agent has tools; the model (Jev by default) is used only to call them, one
 question per tool name and per parameter. See `CLAUDE.md` for principles and commands.
 
-<video src="https://github.com/ruliana/de-harness/raw/main/docs/media/wikipedia-demo.mp4" aria-label="The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled" width="100%" controls muted loop autoplay playsinline></video>
+[![The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled (click to play the video)](docs/media/wikipedia-demo-poster.jpg)](docs/media/wikipedia-demo.mp4)
 
-<video src="https://github.com/ruliana/de-harness/raw/main/docs/media/kanban-demo.mp4" aria-label="An assistant panel beside a Kanban board: the person types &quot;Move the Fix login card to Done and assign it to Sam&quot;, and the agent drags the card, opens it and picks Sam" width="100%" controls muted loop autoplay playsinline></video>
+[![An assistant panel beside a Kanban board: the person types "Move the Fix login card to Done and assign it to Sam", and the agent drags the card, opens it and picks Sam (click to play the video)](docs/media/kanban-demo-poster.jpg)](docs/media/kanban-demo.mp4)
 
 *An assistant that lives on the page ([Kanban example](examples/kanban/)): the person types an instruction into the panel, the agent operates the board by sight at full speed (the cards fly to their new places, animated with CSS transitions), and asks back when the instruction leaves something open. Video: [MP4](docs/media/kanban-demo.mp4).*
 
-<video src="https://github.com/ruliana/de-harness/raw/main/docs/media/diagram-demo.mp4" aria-label="An assistant panel beside a diagram: the person types a description of a login, and the agent draws it as a Mermaid sequence diagram, one tool call at a time" width="100%" controls muted loop autoplay playsinline></video>
+[![An assistant panel beside a diagram: the person types a description of a login, and the agent draws it as a Mermaid sequence diagram, one tool call at a time (click to play the video)](docs/media/diagram-demo-poster.jpg)](docs/media/diagram-demo.mp4)
 
 *An assistant that draws ([Diagram example](examples/diagram/)): the state is the Mermaid text, the agent works at full speed while the diagram animates, and the panel beside it takes instructions in plain English. Video: [MP4](docs/media/diagram-demo.mp4).*
 
