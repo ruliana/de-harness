@@ -1,0 +1,159 @@
+{
+  "hash": "d50d92381605590c",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Draw a sequence diagram of a login. The user enters credentials in the browser, the browser sends a login request to the server, and the server sends a session token to the browser when the password is right. Ask me what the server sends to the browser when the password is wrong.",
+        "state": {
+          "diagram": "sequenceDiagram\n  participant n1 as User\n  participant n2 as Browser",
+          "done": false,
+          "open_questions": [],
+          "user_reply": "Account locked"
+        },
+        "previous_actions": [
+          {
+            "tool": "start_diagram",
+            "args": {
+              "kind": "sequence diagram"
+            },
+            "summary": "Started a sequence diagram"
+          },
+          {
+            "tool": "ask_user",
+            "args": {
+              "question": "When the password is wrong, what should the server send to the browser: invalid credentials, or account locked?"
+            },
+            "summary": "asked \"When the password is wrong, what should the server send to the browser: invalid credentials, or account locked?\" and the person replied"
+          },
+          {
+            "tool": "add_node",
+            "args": {
+              "label": "User"
+            },
+            "summary": "Added \"User\""
+          },
+          {
+            "tool": "add_node",
+            "args": {
+              "label": "Browser"
+            },
+            "summary": "Added \"Browser\""
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_node": "Adds one node to the diagram in `state.diagram`: a step of a flowchart, or a participant of a sequence diagram, which `instructions` ask for and which the diagram does not have yet.",
+            "add_message": "Adds one message to the end of the sequence diagram in `state.diagram`: one that the exchange in `instructions` has and the diagram does not have yet. The participants of the message join the diagram if they are not in it. A message that only happens in one case goes into that case's branch, and a reply is drawn as one when it goes back the way a request came."
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "instructions": "Which step or participant that `instructions` ask for is still missing from the diagram in `state.diagram`? If more than one is missing, the one that comes first in the flow, or the one furthest to the left.",
+          "criteria": {
+            "Server": "",
+            "Database": "",
+            "Cache": "",
+            "API": "",
+            "Auth service": "",
+            "Email service": "",
+            "Payment provider": "",
+            "Admin": ""
+          }
+        },
+        "add_message.message": {
+          "type": "choice",
+          "instructions": "Which message that `instructions` describe is not in the sequence diagram in `state.diagram` yet? If more than one is missing, the one that is sent first. A message is written `from -> to: text`.",
+          "criteria": {
+            "User -> Browser: Enter credentials": "in every case",
+            "Browser -> Server: Send login request": "in every case",
+            "Server -> Database: Look up user": "in every case",
+            "Database -> Server: User record": "in every case",
+            "Server -> Server: Check password": "in every case",
+            "Server -> Browser: Session token": "only when: Credentials valid",
+            "Browser -> User: Show dashboard": "only when: Credentials valid",
+            "Server -> Browser: Invalid credentials": "only when: Credentials invalid",
+            "Browser -> User: Show error message": "only when: Credentials invalid",
+            "Server -> Database: Record failed attempt": "only when: Credentials invalid",
+            "Server -> Database: Lock account": "only when: Credentials invalid",
+            "Server -> Browser: Account locked": "only when: Credentials invalid",
+            "Browser -> User: Show account locked": "only when: Credentials invalid",
+            "Server -> Email service: Send verification code": "in every case",
+            "Email service -> User: Verification code": "in every case",
+            "User -> Browser: Enter code": "in every case"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "add_node",
+          "confidence": 0.9,
+          "probabilities": {
+            "add_node": 0.95,
+            "add_message": 0.05
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "choice": "Server",
+          "confidence": 1,
+          "probabilities": {
+            "Server": 1,
+            "Database": 0,
+            "Cache": 0,
+            "API": 0,
+            "Auth service": 0,
+            "Email service": 0,
+            "Payment provider": 0,
+            "Admin": 0
+          }
+        },
+        "add_message.message": {
+          "type": "choice",
+          "choice": "User -> Browser: Enter credentials",
+          "confidence": 0.97,
+          "probabilities": {
+            "User -> Browser: Enter credentials": 0.97,
+            "Browser -> Server: Send login request": 0.03,
+            "Server -> Database: Look up user": 0,
+            "Database -> Server: User record": 0,
+            "Server -> Server: Check password": 0,
+            "Server -> Browser: Session token": 0,
+            "Browser -> User: Show dashboard": 0,
+            "Server -> Browser: Invalid credentials": 0,
+            "Browser -> User: Show error message": 0,
+            "Server -> Database: Record failed attempt": 0,
+            "Server -> Database: Lock account": 0,
+            "Server -> Browser: Account locked": 0,
+            "Browser -> User: Show account locked": 0,
+            "Server -> Email service: Send verification code": 0,
+            "Email service -> User: Verification code": 0,
+            "User -> Browser: Enter code": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1258,
+        "output_tokens": 334
+      }
+    }
+  }
+}

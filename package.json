@@ -64,6 +64,8 @@
     "example:web-page": "NODE_USE_ENV_PROXY=1 tsx examples/web-page/main.ts"
   },
   "devDependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
     "@types/node": "^26.6.6",
     "esbuild": "0.28.2",
     "mermaid": "^12.3.0",
