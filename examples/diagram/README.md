@@ -2,7 +2,7 @@
 
 An assistant that draws diagrams: a chat panel beside a small diagram studio. You type "Draw a sequence diagram of a login ... with a failure case"; the agent builds a Mermaid diagram one tool call at a time, at full speed, and the drawing beside the panel changes as it works: what was there moves to its new place, what is new grows or draws itself in, what is gone fades out. The panel says nothing until there is a result (or a question).
 
-[![The person types an instruction into the panel, and the agent draws a sequence diagram of a login, with its failure case (click to play the video)](../../docs/media/diagram-demo-poster.jpg)](../../docs/media/diagram-demo.mp4)
+![The person types an instruction into the panel, and the agent draws a sequence diagram of a login, with its failure case](../../docs/media/diagram-demo.webp)
 
 **Shows:** the page-overlay pattern ([page-overlay](../page-overlay/), [kanban](../kanban/)) on an agent whose **state is a document**:
 
@@ -17,7 +17,7 @@ The page is built to look good, not only to work: an indigo theme (Inter for tex
 ```sh
 npm run example:diagram -- [--scenario login-sequence|ask-wrong-password|insert-step|tidy] [--runs 1]   # a scripted person types into the panel, headless
 npm run example:diagram -- --headed                                                                    # you type into the panel yourself (needs a display)
-npm run example:diagram:demo -- [--out docs/media]                                                     # renders the README video (a small MP4)
+npm run example:diagram:demo -- [--out docs/media]                                                     # renders the README video (a small MP4 and an animated WebP)
 ```
 
 The scenarios: `login-sequence` (a sequence diagram of a login between a user, a browser, a server and a database, with the database lookup and both the right and the wrong password, from nothing), `ask-wrong-password` (the same, shorter, "ask me what the server sends when the password is wrong"; the scripted person answers "Account locked", so that is what the failure case says), `insert-step` (on a flowchart of three steps: "Add a 'Build image' step between 'Run tests' and 'Deploy'", which takes `add_node`, two `connect`s and a `disconnect`) and `tidy` (on a flowchart of five steps: "Rename 'Build image' to 'Package app', call the 'Pass' arrow 'Green', and remove the 'Notify team' step"). A run exits 0 only if the Mermaid text has the structure the scenario asks for (who talks to whom, in what order, the failure case; or exactly the old diagram with the asked changes and nothing else) and the panel was quiet until the result.
@@ -26,5 +26,5 @@ The demo replays the recorded runs of `login-sequence`, `tidy` and `ask-wrong-pa
 
 **Needs:** Jev: `TYPESAFE_API_KEY` in the environment (the cloud proxy supplies it in cloud sessions) and Chromium (`npm ci`, `npx playwright install chromium`). The demo also needs ffmpeg. `--headed` needs a display. The page is on loopback; no other network.
 
-**Files:** `graph.ts` (the diagram as Mermaid text, flowchart or sequence: read it, change it, write it), `diagram-site.ts` and `page/` (the page: `index.html`, `studio.css` the theme, `studio.js` the drawing and its animations), `assistant.ts` (tools, candidates, questions, the loop behind the panel), `run.ts` (a scripted person, scenarios, checks), `main.ts` (runner), `demo.ts` (the README video).
+**Files:** `graph.ts` (the diagram as Mermaid text, flowchart or sequence: read it, change it, write it), `diagram-site.ts` and `page/` (the page: `index.html`, `studio.css` the theme, `studio.js` the drawing and its animations), `assistant.ts` (tools, candidates, questions, the loop behind the panel), `run.ts` (a scripted person, scenarios, checks), `main.ts` (runner), `demo.ts` (the README animation).
 **Acceptance tests:** `tests/acceptance/diagram/`: `mechanics.test.ts` (the tools and the page, with a scripted model) and `assistant.test.ts` (Jev, replayed from `tests/cassettes/diagram`).

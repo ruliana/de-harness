@@ -1,5 +1,5 @@
 /**
- * Renders the assistant on the Kanban board as a short video (a small MP4), the media of the README.
+ * Renders the assistant on the Kanban board as a short video (a small MP4 and an animated WebP), the media of the README.
  *
  *   npm run example:kanban:demo -- --out docs/media
  *
@@ -166,6 +166,8 @@ async function main() {
   const encode = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", ...inputs, "-filter_complex", filter, "-map", "[v]", ...args], { stdio: "inherit" });
   // Small on purpose: 960 px wide, 10 fps, no audio (a README video, a few hundred KB).
   encode("-c:v", "libx264", "-crf", "38", "-preset", "veryslow", "-tune", "animation", "-g", "250", "-movflags", "+faststart", join(out, "kanban-demo.mp4"));
+  // The animated WebP the README shows (GitHub does not play video in a README): same frames, 800 px, 8 fps.
+  execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", join(out, "kanban-demo.mp4"), "-vf", "fps=8,scale=800:-2:flags=lanczos", "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", "30", "-compression_level", "6", "-loop", "0", join(out, "kanban-demo.webp")], { stdio: "inherit" });
 
   const steps = segments.map((s) => s.frames.length);
   rmSync(work, { recursive: true, force: true });

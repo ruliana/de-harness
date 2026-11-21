@@ -3,15 +3,15 @@
 A harness for decision models. The agent has tools; the model (Jev by default) is used only to call them, one
 question per tool name and per parameter. See `CLAUDE.md` for principles and commands.
 
-[![The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled (click to play the video)](docs/media/wikipedia-demo-poster.jpg)](docs/media/wikipedia-demo.mp4)
+![The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled](docs/media/wikipedia-demo.webp)
 
-[![An assistant panel beside a Kanban board: the person types "Move the Fix login card to Done and assign it to Sam", and the agent drags the card, opens it and picks Sam (click to play the video)](docs/media/kanban-demo-poster.jpg)](docs/media/kanban-demo.mp4)
+![An assistant panel beside a Kanban board: the person types "Move the Fix login card to Done and assign it to Sam", and the agent drags the card, opens it and picks Sam](docs/media/kanban-demo.webp)
 
-*An assistant that lives on the page ([Kanban example](examples/kanban/)): the person types an instruction into the panel, the agent operates the board by sight at full speed (the cards fly to their new places, animated with CSS transitions), and asks back when the instruction leaves something open. Video: [MP4](docs/media/kanban-demo.mp4).*
+*An assistant that lives on the page ([Kanban example](examples/kanban/)): the person types an instruction into the panel, the agent operates the board by sight at full speed (the cards fly to their new places, animated with CSS transitions), and asks back when the instruction leaves something open. Also as [MP4](docs/media/kanban-demo.mp4).*
 
-[![An assistant panel beside a diagram: the person types a description of a login, and the agent draws it as a Mermaid sequence diagram, one tool call at a time (click to play the video)](docs/media/diagram-demo-poster.jpg)](docs/media/diagram-demo.mp4)
+![An assistant panel beside a diagram: the person types a description of a login, and the agent draws it as a Mermaid sequence diagram, one tool call at a time](docs/media/diagram-demo.webp)
 
-*An assistant that draws ([Diagram example](examples/diagram/)): the state is the Mermaid text, the agent works at full speed while the diagram animates, and the panel beside it takes instructions in plain English. Video: [MP4](docs/media/diagram-demo.mp4).*
+*An assistant that draws ([Diagram example](examples/diagram/)): the state is the Mermaid text, the agent works at full speed while the diagram animates, and the panel beside it takes instructions in plain English. Also as [MP4](docs/media/diagram-demo.mp4).*
 
 ```sh
 npm ci
@@ -203,7 +203,7 @@ An assistant that lives *on* the page (`PageOverlay`, `src/browser/overlay.ts`) 
 
 ## Example: Wikipedia navigation
 
-*The animation at the top of this page: Telescope to Jupiter in four steps, on the real Wikipedia pages (revisions pinned at the snapshot). At each step the links the agent may follow are boxed and the one it chose is circled, with the tool call underneath. Video: [MP4](docs/media/wikipedia-demo.mp4). Made from a recorded run by `npm run example:wikipedia:demo` (needs network access to Wikipedia, Chromium and ffmpeg; screenshots show Wikipedia, CC BY-SA 4.0).*
+*The animation at the top of this page: Telescope to Jupiter in four steps, on the real Wikipedia pages (revisions pinned at the snapshot). At each step the links the agent may follow are boxed and the one it chose is circled, with the tool call underneath. Also as [MP4](docs/media/wikipedia-demo.mp4). Made from a recorded run by `npm run example:wikipedia:demo` (needs network access to Wikipedia, Chromium and ffmpeg; screenshots show Wikipedia, CC BY-SA 4.0).*
 
 `npm run example:wikipedia -- --from "Alan Turing" --to "Enigma machine"` walks from one article to another by following
 links and prints the path. `open_link(link)` offers the links of the article body (references, info boxes, navboxes,
