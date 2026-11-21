@@ -1,0 +1,40 @@
+{
+  "hash": "8e5311eed44eb5c7",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Rename 'Build image' to 'Package app', call the 'Pass' arrow 'Green', and remove the 'Notify team' step"
+      },
+      "questions": {
+        "failure": {
+          "type": "noul",
+          "instructions": "Do `instructions` tell the assistant to ask the person where a failure, such as a failed login, is to lead?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "failure": {
+          "type": "noul",
+          "noul": 0.02
+        }
+      },
+      "usage": {
+        "input_tokens": 324,
+        "output_tokens": 20
+      }
+    }
+  }
+}
