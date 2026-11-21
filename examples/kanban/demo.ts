@@ -170,8 +170,8 @@ async function main() {
   const ffmpeg = (...args: string[]) => execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", master, ...args], { stdio: "inherit" });
   // The MP4: 960 px, 10 fps, no audio (a few hundred KB).
   ffmpeg("-vf", "scale=960:-2:flags=lanczos,fps=10", "-c:v", "libx264", "-crf", "38", "-preset", "veryslow", "-tune", "animation", "-g", "250", "-movflags", "+faststart", join(out, "kanban-demo.mp4"));
-  // The animated WebP the README shows (GitHub does not play video in a README): full 1280 px width, 8 fps.
-  ffmpeg("-vf", "fps=8,scale=1280:-2:flags=lanczos", "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", "70", "-compression_level", "6", "-loop", "0", join(out, "kanban-demo.webp"));
+  // The animated WebP the README shows (GitHub does not play video in a README): 800 px wide (the width GitHub shows it at), 8 fps.
+  ffmpeg("-vf", "fps=8,scale=800:-2:flags=lanczos", "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", "80", "-compression_level", "6", "-loop", "0", join(out, "kanban-demo.webp"));
 
   const steps = segments.map((s) => s.frames.length);
   rmSync(work, { recursive: true, force: true });
