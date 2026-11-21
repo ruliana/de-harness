@@ -11,16 +11,17 @@
  * The animated PNG is made from screenshots taken after each step. ffmpeg encodes. Needs Playwright's Chromium and ffmpeg.
  */
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { join, resolve } from "node:path";
 import { parseArgs } from "node:util";
 import { chromium } from "playwright";
 import { CassetteModel, JevModel, type DecisionModel, type DecisionRequest, type DecisionResponse } from "../../src/index.js";
 import { OVERLAY_FIELD, type BrowserSession } from "../../src/browser/index.js";
+import { FONTS } from "../shared/fonts.js";
 import { SCENARIOS, problems, runScenario, type Scenario } from "./run.js";
 
 const { values } = parseArgs({ options: { out: { type: "string", default: "docs/media" }, live: { type: "boolean", default: false }, "think-ms": { type: "string", default: "650" } } });
-const out = values.out!;
+const out = resolve(values.out!); // absolute: ffmpeg reads the frame list relative to the list file
 const work = join(out, ".frames");
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -41,12 +42,12 @@ const FX = "#demo-fx";
 const FX_SCRIPT = `(() => {
   const css = \`
     #demo-fx { position: fixed; inset: 0; pointer-events: none; z-index: 2147483646; }
-    #demo-fx .dot { position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; background: #ef4444; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #ef4444, 0 2px 8px rgba(0,0,0,.5); border-radius: 50% !important; }
-    #demo-fx .ring { position: absolute; width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 4px solid #ef4444; border-radius: 50% !important; animation: ring .6s ease-out forwards; }
-    #demo-fx .box { position: absolute; border: 4px solid #f59e0b; background: rgba(245,158,11,.16); animation: fade 1.6s ease-in forwards; }
-    #demo-fx .box.to { border-style: dashed; border-color: #22c55e; background: rgba(34,197,94,.12); }
+    #demo-fx .dot { position: absolute; width: 20px; height: 20px; margin: -10px 0 0 -10px; background: #6366f1; border: 3px solid #ffffff; box-shadow: 0 0 0 2px #6366f1, 0 4px 12px rgba(15,18,38,.45); border-radius: 50%; transition: transform .15s ease; }
+    #demo-fx .ring { position: absolute; width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 3px solid #8b5cf6; border-radius: 50%; animation: ring .6s ease-out forwards; }
+    #demo-fx .box { position: absolute; border: 3px solid #f59e0b; background: rgba(245,158,11,.14); border-radius: 14px; animation: fade 1.6s ease forwards; }
+    #demo-fx .box.to { border-style: dashed; border-color: #10b981; background: rgba(16,185,129,.12); border-radius: 22px; }
     @keyframes ring { to { transform: scale(4); opacity: 0; } }
-    @keyframes fade { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes fade { 0% { opacity: 0; } 10%, 70% { opacity: 1; } 100% { opacity: 0; } }
   \`;
   const mount = () => {
     if (document.getElementById('demo-fx')) return;
@@ -70,19 +71,18 @@ const boxes = (args: Record<string, unknown>): [Box, string][] => {
   return out;
 };
 
-/** The person types into the panel's field letter by letter. */
+/** The person types into the panel's field, key by key (nothing is ever shown as selected). */
 async function typeSlowly(text: string, browser: BrowserSession) {
-  for (let i = 1; i <= text.length; i++) {
-    await browser.userTypes(OVERLAY_FIELD, text.slice(0, i));
-    await sleep(38);
-  }
+  await browser.userTypesSlowly(OVERLAY_FIELD, text, { delayMs: 38 });
   await sleep(450);
 }
 
+const face = (weight: number, key: string) => `@font-face{font-family:"Inter";font-weight:${weight};src:url(data:font/woff2;base64,${readFileSync(FONTS[key]!).toString("base64")}) format("woff2")}`;
 const titleCard = (kicker: string, big: string, quote: string) => `<style>
+${face(400, "inter-400.woff2")}${face(600, "inter-600.woff2")}${face(700, "inter-700.woff2")}
 *{box-sizing:border-box;margin:0}
-body{width:1280px;height:800px;background:#0f1419;color:#e6edf3;font:20px/1.4 "DejaVu Sans",system-ui,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:24px}
-b{font-size:22px;color:#7ee0a8;font-weight:700}.big{font:700 50px/1.2 "DejaVu Sans",sans-serif;max-width:1000px}.q{max-width:900px;color:#c7d1dc;font-size:26px}.dim{color:#8b98a9;font-size:18px;max-width:820px}
+body{width:1280px;height:800px;background:radial-gradient(900px 600px at 15% 0%,#312e81 0%,transparent 70%),radial-gradient(800px 560px at 100% 100%,#581c87 0%,transparent 65%),#0f1226;color:#e0e7ff;font:400 20px/1.45 "Inter",sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:26px}
+b{font:600 15px/1 "Inter";letter-spacing:.14em;text-transform:uppercase;color:#a5b4fc}.big{font:700 58px/1.15 "Inter";letter-spacing:-.03em;max-width:1000px;color:#fff}.q{max-width:900px;color:#c7d2fe;font-size:26px}.dim{color:#8187c4;font-size:17px;max-width:820px}
 </style><b>${kicker}</b><div class="big">${big}</div><div class="q">${quote}</div><div class="dim">The model never writes text. At each step it answers closed questions: which tool, which card, which column, which button.</div>`;
 
 type Segment = { video: string; trimSeconds: number; frames: string[]; scenario: Scenario };

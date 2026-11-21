@@ -5,7 +5,8 @@
  * The agent sees the board only as a screenshot without the panel (`PageOverlay` hides it from the model). Its tools: `click` (a card, which
  * opens its dialog; a button in the dialog), `drag` (a card onto a column: two Boxes, which card and which column), `ask_user` (holds the
  * loop: it puts a question into the panel and waits for the answer there) and `end`. Jev cannot write, so a question the assistant asks
- * comes from a list that code supplies (`GAPS`). The lines in the panel are written by code from what the board did, not by the model.
+ * comes from a list that code supplies (`GAPS`). The agent works at full speed and the panel stays quiet while it does (the person watches the
+ * board, where every move is animated); the one line it writes is the result, written by code from what the board did, not by the model.
  */
 import { createAgent, defineTool, param, readNoul, type AnyTool, type DecisionModel, type HarnessEvent, type InputProvider, type Json, type RunResult } from "../../src/index.js";
 import { extractImages } from "../../src/state/images.js";
@@ -195,7 +196,7 @@ export function resultLine(before: Shown[], after: Shown[], result: RunResult, d
   return { ok: false, text: `I ${why}${done.length ? ` after ${done.join("; ")}` : " and left the board as it was"}${dialog ? ", with a card still open" : ""}.` };
 }
 
-/** One instruction, start to end: the agent works on the board while the panel shows the steps; the result closes it. */
+/** One instruction, start to end: the agent works on the board while the panel stays quiet (a question aside); the result closes it. */
 export async function carryOut(opts: AssistantOptions & { overlay: PageOverlay; instruction: string }): Promise<RunResult & { line: { ok: boolean; text: string } }> {
   const { browser, overlay } = opts;
   await overlay.working(true);
@@ -208,10 +209,7 @@ export async function carryOut(opts: AssistantOptions & { overlay: PageOverlay; 
       input: opts.input,
       initialState: { ...(await snapshotOf(browser, "screen", false)), done: false, user_reply: null, open_questions: await openQuestions(opts.model, opts.instruction) },
       maxSteps: opts.maxSteps ?? 10,
-      onEvent: (e) => {
-        opts.onEvent?.(e);
-        if (e.type === "tool_result" && e.summary && e.tool !== "ask_user" && e.tool !== "end") void overlay.say(e.summary, "progress");
-      },
+      onEvent: (e) => opts.onEvent?.(e),
     }).run();
     const line = resultLine(before, await readBoard(browser), result, await dialogOpen(browser));
     await overlay.say(line.text, line.ok ? "result" : "error");

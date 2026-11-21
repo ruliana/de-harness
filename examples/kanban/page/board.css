@@ -1,0 +1,62 @@
+/* Tern Board: the Kanban page, in the same indigo-and-slate theme as the diagram studio. Everything that moves does so with CSS transitions
+ * (board.js sets the first and the last state). Fonts are bundled (Inter), so that screenshots look the same wherever it runs. */
+@font-face { font-family: "Inter"; font-weight: 400; src: url(/fonts/inter-400.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 500; src: url(/fonts/inter-500.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url(/fonts/inter-600.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url(/fonts/inter-700.woff2) format("woff2"); }
+
+:root { --ink: #1e1b4b; --muted: #64748b; --line: #e3e7fb; --accent: #6366f1; --accent-2: #8b5cf6; --ease: cubic-bezier(.22, .8, .24, 1); }
+* { box-sizing: border-box; }
+body { margin: 0; width: 1280px; height: 800px; overflow: hidden; user-select: none; font: 400 16px/24px "Inter", sans-serif; color: var(--ink);
+  background: radial-gradient(900px 520px at 12% -8%, #e0e7ff 0%, transparent 70%), radial-gradient(800px 520px at 100% 100%, #f3e8ff 0%, transparent 65%), #f6f7fd; }
+
+header { height: 64px; display: flex; align-items: center; gap: 14px; padding: 0 32px; }
+header .logo { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 6px 16px rgba(99, 102, 241, .35); }
+header .title { font: 700 20px/1 "Inter"; letter-spacing: -.02em; }
+header .sub { font: 400 14px/1 "Inter"; color: var(--muted); }
+
+/* The right 356 px are left free for the assistant's panel (340 px + 16 px margin). */
+#board { display: flex; gap: 18px; padding: 8px 376px 28px 32px; }
+.column { flex: 1; min-width: 0; height: 692px; background: rgba(255, 255, 255, .62); border: 1px solid var(--line); border-radius: 22px; padding: 16px 14px; box-shadow: 0 1px 2px rgba(30, 27, 75, .04), 0 18px 40px rgba(79, 70, 229, .07);
+  transition: background-color .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease); }
+.column.over { background: rgba(238, 242, 255, .95); border-color: #a5b4fc; box-shadow: 0 0 0 4px rgba(129, 140, 248, .22), 0 18px 40px rgba(79, 70, 229, .12); }
+.column h2 { margin: 0 4px 14px; display: flex; align-items: center; gap: 10px; font: 700 16px/24px "Inter"; letter-spacing: -.01em; }
+.column h2 i { width: 10px; height: 10px; border-radius: 50%; background: #94a3b8; }
+.column[data-column="Doing"] h2 i { background: #f59e0b; } .column[data-column="Done"] h2 i { background: #10b981; }
+.column h2 span { margin-left: auto; min-width: 26px; text-align: center; font: 600 12px/22px "Inter"; color: #4f46e5; background: #eef2ff; border: 1px solid var(--line); border-radius: 999px; padding: 0 8px; }
+
+.card { position: relative; background: #ffffff; border: 1px solid #e8eaf9; border-radius: 14px; padding: 13px 16px 13px 18px; margin-bottom: 12px; cursor: grab; box-shadow: 0 1px 2px rgba(30, 27, 75, .05), 0 6px 14px rgba(79, 70, 229, .07);
+  transition: box-shadow .2s ease, border-color .2s ease, opacity .2s ease; animation: rise .55s var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+.card::before { content: ""; position: absolute; left: 0; top: 14px; bottom: 14px; width: 4px; border-radius: 0 4px 4px 0; background: linear-gradient(180deg, var(--accent), var(--accent-2)); }
+.card:hover { border-color: #c7d2fe; box-shadow: 0 2px 4px rgba(30, 27, 75, .06), 0 12px 24px rgba(79, 70, 229, .16); }
+.card:focus { outline: none; }
+.card.lifted { opacity: .4; border-style: dashed; border-color: #a5b4fc; box-shadow: none; }
+.card b { display: block; font: 600 16.5px/24px "Inter"; letter-spacing: -.01em; margin-bottom: 8px; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+.who { display: flex; align-items: center; gap: 9px; font: 500 14px/24px "Inter"; color: #475569; transition: opacity .35s ease, transform .35s var(--ease); }
+.who.enter { opacity: 0; transform: translateX(-6px); }
+.who i { width: 24px; height: 24px; border-radius: 50%; display: inline-block; text-align: center; font: 600 12px/24px "Inter"; font-style: normal; color: #ffffff; flex: none; }
+.who.none { color: #94a3b8; }
+.who.none i { background: #f1f5f9; color: #94a3b8; border: 1.5px dashed #cbd5e1; line-height: 21px; }
+.Ada i { background: linear-gradient(135deg, #fbbf24, #ea580c); } .Sam i { background: linear-gradient(135deg, #2dd4bf, #059669); }
+.Priya i { background: linear-gradient(135deg, #a78bfa, #c026d3); } .Lee i { background: linear-gradient(135deg, #fb7185, #e11d48); }
+
+.ghost { position: fixed; z-index: 50; pointer-events: none; margin: 0; opacity: .97; animation: none; border-color: #a5b4fc; transform: rotate(2.2deg) scale(1.04); transition: transform .2s var(--ease);
+  box-shadow: 0 4px 8px rgba(30, 27, 75, .12), 0 26px 44px rgba(79, 70, 229, .30); }
+.ghost.picked { transform: none; }
+
+#backdrop { position: fixed; inset: 0; z-index: 20; background: rgba(15, 18, 38, .42); backdrop-filter: blur(3px); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .28s ease, visibility 0s .28s; }
+#backdrop.open { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .28s ease, visibility 0s; }
+#dialog { position: absolute; left: 170px; top: 110px; width: 520px; background: #ffffff; border: 1px solid var(--line); border-radius: 24px; padding: 26px 30px 30px; box-shadow: 0 30px 70px rgba(15, 18, 38, .35);
+  opacity: 0; transform: translateY(18px) scale(.97); transition: opacity .28s ease, transform .38s var(--ease); }
+#backdrop.open #dialog { opacity: 1; transform: none; }
+#dialog h1 { margin: 0 0 2px; font: 700 28px/36px "Inter"; letter-spacing: -.02em; }
+#dialog h3 { margin: 20px 0 10px; font: 600 12px/18px "Inter"; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts button { font: 500 16px "Inter"; height: 42px; padding: 0 18px; border: 1px solid #dde1f7; border-radius: 12px; background: #f8f9ff; color: var(--ink); cursor: pointer; transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .15s ease; }
+.opts button:hover { border-color: #a5b4fc; background: #eef2ff; }
+.opts button:active { transform: scale(.97); }
+.opts button.on { background: linear-gradient(135deg, #4f46e5, #7c3aed); border-color: transparent; color: #ffffff; font-weight: 600; box-shadow: 0 6px 14px rgba(99, 102, 241, .35); }
+#close { margin-top: 26px; width: 100%; height: 50px; border: 0; border-radius: 14px; background: #1e1b4b; color: #ffffff; font: 600 17px "Inter"; cursor: pointer; transition: background-color .2s ease, transform .15s ease; }
+#close:hover { background: #312e81; } #close:active { transform: scale(.985); }
