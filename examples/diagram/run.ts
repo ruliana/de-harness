@@ -5,68 +5,81 @@
  */
 import type { DecisionModel, HarnessEvent } from "../../src/index.js";
 import { BrowserSession, PageOverlay, type BrowserOptions, type OverlayMessage } from "../../src/browser/index.js";
-import { ARROWS, STEPS, draw, drawn, quoted, serve, shown, type Handled } from "./assistant.js";
+import { ARROWS, MESSAGES, PARTICIPANTS, STEPS, draw, drawn, quoted, serve, shown, type Handled } from "./assistant.js";
 import { startDiagramSite } from "./diagram-site.js";
-import { EMPTY, parse, shape, type Graph } from "./graph.js";
+import { EMPTY, HEADER, labelOf, parse, shape, type Graph } from "./graph.js";
 
 /** What the person says, what they answer when asked, the diagram the page starts with, and what the diagram has to be afterwards (`check`: what is wrong with it; empty when right). */
 export type Scenario = { name: string; start: string; instruction: string; answer?: string; check(g: Graph): string[] };
 
-const text = (...lines: string[]) => [EMPTY, ...lines.map((l) => `  ${l}`)].join("\n");
+const flowchart = (...lines: string[]) => [HEADER.flowchart, ...lines.map((l) => `  ${l}`)].join("\n");
 
-/** Every node is reachable from every other when the arrows are read both ways: nothing is left lying around. */
-export function connected(g: Graph): boolean {
-  if (g.nodes.length === 0) return true;
-  const seen = new Set([g.nodes[0]!.id]);
-  for (let grew = true; grew; ) {
-    grew = false;
-    for (const e of g.edges) {
-      if (seen.has(e.from) !== seen.has(e.to)) {
-        seen.add(e.from).add(e.to);
-        grew = true;
-      }
-    }
-  }
-  return seen.size === g.nodes.length;
-}
-/** Does an arrow lead back to a step from which the flow came? */
-export function hasCycle(g: Graph): boolean {
-  const reach = (from: string, seen = new Set<string>()): Set<string> => {
-    for (const e of g.edges) if (e.from === from && !seen.has(e.to)) reach(e.to, seen.add(e.to));
-    return seen;
-  };
-  return g.nodes.some((n) => reach(n.id).has(n.id));
-}
-export const branches = (g: Graph): string[] => g.nodes.filter((n) => g.edges.filter((e) => e.from === n.id).length >= 2).map((n) => n.label);
-const FAILURE = /error|fail|reject|invalid|lock|retry|cancel|roll ?back/i;
+/** The messages of a sequence diagram as `from|text|to`, in order. */
+const messages = (g: Graph) => g.edges.map((e) => `${labelOf(g, e.from)}|${e.label}|${labelOf(g, e.to)}`);
+const FAILURE = /invalid|error|fail|wrong|denied|reject/i;
+/** The branches (cases) that the messages of a sequence diagram are in. */
+const cases = (g: Graph) => [...new Set(g.edges.map((e) => e.case).filter((c): c is string => !!c))];
 
-/** What every drawing from nothing must be: a handful of steps, joined into one flow, with a branch and a step for the failure. */
-function drawing(g: Graph, { loop }: { loop: boolean }): string[] {
-  const min = loop ? 3 : 4; // a loop back needs no step of its own for the failure
+/** What every sequence diagram of an exchange must be: those participants and no others, each in the exchange, started by the user, with the whole exchange between them. */
+function exchange(g: Graph, who: string[], { atLeast, failure }: { atLeast: number; failure: RegExp }): string[] {
   const out: string[] = [];
-  if (g.nodes.length < min || g.nodes.length > 7) out.push(`${g.nodes.length} steps, expected ${min} to 7`);
-  if (!connected(g)) out.push("the diagram is in pieces");
-  if (branches(g).length < 1) out.push("no step has two ways out, so there is no failure branch");
-  if (loop ? !hasCycle(g) : !g.nodes.some((n) => FAILURE.test(n.label))) out.push(loop ? "no arrow leads back, as the person answered" : "no step is a failure");
+  if (g.kind !== "sequence") return ["it is not a sequence diagram"];
+  const got = g.nodes.map((n) => n.label);
+  if (JSON.stringify([...got].sort()) !== JSON.stringify([...who].sort())) out.push(`the participants are ${JSON.stringify(got)}, expected ${JSON.stringify(who)}`);
+  if (g.edges.length < atLeast || g.edges.length > 16) out.push(`${g.edges.length} messages, expected ${atLeast} to 16`);
+  for (const n of g.nodes) if (!g.edges.some((e) => e.from === n.id || e.to === n.id)) out.push(`"${n.label}" takes no part in the exchange`);
+  if (g.edges[0] && labelOf(g, g.edges[0].from) !== "User") out.push("the exchange is not started by the user");
+  if (!g.edges.some((e) => failure.test(e.label ?? ""))) out.push(`no message covers the failure (${failure})`);
+  if (cases(g).length < 2) out.push(`the exchange has ${cases(g).length} branches, expected the one that works and the failure`);
   return out;
 }
 const sameShape = (g: Graph, want: { nodes: string[]; edges: string[] }): string[] => {
   const got = shape(g);
-  return JSON.stringify(got) === JSON.stringify({ nodes: [...want.nodes].sort(), edges: [...want.edges].sort() }) ? [] : [`the diagram is ${JSON.stringify(got)}, expected ${JSON.stringify(want)}`];
+  return JSON.stringify(got) === JSON.stringify({ kind: "flowchart", nodes: [...want.nodes].sort(), edges: [...want.edges].sort() }) ? [] : [`the diagram is ${JSON.stringify(got)}, expected ${JSON.stringify(want)}`];
 };
 
 export const SCENARIOS: Scenario[] = [
-  { name: "login-flow", start: EMPTY, instruction: "Draw a login flow with 3 steps and a failure branch", check: (g) => drawing(g, { loop: false }) },
-  { name: "ask-failure", start: EMPTY, instruction: "Draw a login flow with 3 steps and a failure branch, and ask me where a failure should lead", answer: "Back to the first step", check: (g) => drawing(g, { loop: true }) },
+  {
+    name: "login-sequence",
+    start: EMPTY,
+    instruction:
+      "Draw a sequence diagram of a login. The user enters credentials in the browser, the browser sends a login request to the server, the server looks the user up in the database, the database returns the user record, and the server checks the password. " +
+      "If the password is right, the server sends a session token and the browser shows the dashboard. If it is wrong, the server sends invalid credentials and the browser shows an error message.",
+    check: (g) => {
+      const out = exchange(g, ["User", "Browser", "Server", "Database"], { atLeast: 7, failure: FAILURE });
+      const m = messages(g);
+      const at = (from: string, to: string) => m.findIndex((x) => x.startsWith(`${from}|`) && x.endsWith(`|${to}`));
+      if (g.kind === "sequence") {
+        if (at("Server", "Database") < 0 || at("Database", "Server") < 0) out.push("the server does not ask the database, or the database does not answer");
+        else if (at("Server", "Database") > at("Database", "Server")) out.push("the database answers before the server asks");
+        if (at("Browser", "Server") < 0 || at("Browser", "Server") > at("Server", "Database")) out.push("the browser does not ask the server before the server asks the database");
+        if (!m.some((x) => x.endsWith("|User"))) out.push("nothing is shown to the user");
+      }
+      return out;
+    },
+  },
+  {
+    name: "ask-wrong-password",
+    start: EMPTY,
+    instruction:
+      "Draw a sequence diagram of a login. The user enters credentials in the browser, the browser sends a login request to the server, and the server sends a session token to the browser when the password is right. " +
+      "Ask me what the server sends to the browser when the password is wrong.",
+    answer: "Account locked",
+    check: (g) => {
+      const out = exchange(g, ["User", "Browser", "Server"], { atLeast: 4, failure: /lock/i }); // the person's answer decides the failure case
+      if (g.edges.some((e) => /invalid/i.test(e.label ?? ""))) out.push("the server sends invalid credentials, but the person answered account locked");
+      return out;
+    },
+  },
   {
     name: "insert-step",
-    start: text('n1["Push code"]', 'n2["Run tests"]', 'n3["Deploy"]', "n1 --> n2", "n2 --> n3"),
+    start: flowchart('n1["Push code"]', 'n2["Run tests"]', 'n3["Deploy"]', "n1 --> n2", "n2 --> n3"),
     instruction: "Add a 'Build image' step between 'Run tests' and 'Deploy'",
     check: (g) => sameShape(g, { nodes: ["Push code", "Run tests", "Build image", "Deploy"], edges: ["Push code||Run tests", "Run tests||Build image", "Build image||Deploy"] }),
   },
   {
     name: "tidy",
-    start: text('n1["Push code"]', 'n2["Run tests"]', 'n3["Build image"]', 'n4["Deploy"]', 'n5["Notify team"]', "n1 --> n2", "n2 -->|Pass| n3", "n3 --> n4", "n4 --> n5"),
+    start: flowchart('n1["Push code"]', 'n2["Run tests"]', 'n3["Build image"]', 'n4["Deploy"]', 'n5["Notify team"]', "n1 --> n2", "n2 -->|Pass| n3", "n3 --> n4", "n4 --> n5"),
     instruction: "Rename 'Build image' to 'Package app', call the 'Pass' arrow 'Green', and remove the 'Notify team' step",
     check: (g) => sameShape(g, { nodes: ["Push code", "Run tests", "Package app", "Deploy"], edges: ["Push code||Run tests", "Run tests|Green|Package app", "Package app||Deploy"] }),
   },
@@ -103,7 +116,7 @@ export type RunOptions = {
   onFinish?: (browser: BrowserSession, overlay: PageOverlay) => Promise<void>;
   /** Called with every event as it happens. */
   onEvent?: (e: HarnessEvent, browser: BrowserSession) => void;
-  /** How the person's lines get into the panel (default: all at once; the demo types them letter by letter). */
+  /** How the person types a line into the panel and sends it (default: all at once; the demo types it letter by letter and presses Enter). */
   type?: (text: string, browser: BrowserSession, overlay: PageOverlay) => Promise<void>;
   /** How long the person thinks before answering a question; the loop must stay quiet that long. */
   thinkMs?: number;
@@ -134,8 +147,8 @@ export async function runScenario(opts: RunOptions): Promise<Outcome> {
     });
     let held: Outcome["held"];
 
-    await opts.type?.(scenario.instruction, browser, overlay);
-    await overlay.send(scenario.instruction); // as the person does: into the panel
+    const say = opts.type ?? ((text: string, _browser: BrowserSession, panel: PageOverlay) => panel.send(text));
+    await say(scenario.instruction, browser, overlay); // as the person does: into the panel
     const until = Date.now() + (opts.maxWaitMs ?? 20 * 60_000);
     while (assistant.handled.length === 0 && Date.now() < until) {
       await new Promise((r) => setTimeout(r, 200));
@@ -143,10 +156,7 @@ export async function runScenario(opts: RunOptions): Promise<Outcome> {
         const requestsWhenAsked = requests();
         await new Promise((r) => setTimeout(r, opts.thinkMs ?? 700)); // the person thinks about it
         held = { requestsWhenAsked, requestsAfterWaiting: requests() };
-        if (scenario.answer) {
-          await opts.type?.(scenario.answer, browser, overlay);
-          await overlay.send(scenario.answer);
-        }
+        if (scenario.answer) await say(scenario.answer, browser, overlay);
       }
     }
     await new Promise((r) => setTimeout(r, 100));
@@ -184,13 +194,14 @@ export function problems(o: Outcome): string[] {
   const labels = g.edges.map((e) => e.label).filter((l): l is string => !!l);
   if (JSON.stringify([...o.drawn.edgeLabels].sort()) !== JSON.stringify([...labels].sort())) out.push(`the page drew the arrow labels ${JSON.stringify(o.drawn.edgeLabels)}, not those of the text`);
   // Jev does not write: every label is one that code offered.
-  const offered = new Set([...STEPS, ...ARROWS, ...quoted(scenario.instruction)]);
+  const offered = new Set([...STEPS, ...ARROWS, ...PARTICIPANTS, ...MESSAGES.map((m) => m.text), ...quoted(scenario.instruction)]);
   for (const l of [...g.nodes.map((n) => n.label), ...labels]) if (!offered.has(l)) out.push(`"${l}" is not a label that was offered`);
   const last = o.messages.at(-1);
   if (last?.kind !== "result") out.push(`the panel does not end with the result: ${last ? `[${last.kind}] ${last.text}` : "nothing"}`);
   const asked = o.messages.filter((m) => m.kind === "question").length;
   if (asked !== (scenario.answer ? 1 : 0)) out.push(`the panel asked ${asked} questions`);
-  if (o.messages.filter((m) => m.kind === "progress").length < 1) out.push("the panel shows no steps");
+  const narrated = o.messages.filter((m) => m.kind === "progress").length;
+  if (narrated > 0) out.push(`the panel narrated ${narrated} steps; it should be quiet until the result`);
   if (o.fieldLeftOver !== "") out.push(`something was typed into the panel's field: "${o.fieldLeftOver}"`);
   return out;
 }

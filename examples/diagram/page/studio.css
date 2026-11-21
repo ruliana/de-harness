@@ -1,0 +1,74 @@
+/* Diagram Studio: an indigo-and-slate theme. The drawing is Mermaid's; this file restyles it, and studio.js animates it (everything that
+ * moves does so with CSS transitions). Fonts are bundled (Inter, JetBrains Mono), so that screenshots look the same wherever it runs. */
+@font-face { font-family: "Inter"; font-weight: 400; src: url(/fonts/inter-400.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 500; src: url(/fonts/inter-500.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url(/fonts/inter-600.woff2) format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 700; src: url(/fonts/inter-700.woff2) format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; src: url(/fonts/mono-400.woff2) format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; src: url(/fonts/mono-500.woff2) format("woff2"); }
+
+:root {
+  --ink: #1e1b4b; --muted: #64748b; --line: #818cf8; --line-soft: #c7d2fe; --accent: #6366f1; --accent-2: #8b5cf6;
+  --ease: cubic-bezier(.22, .8, .24, 1);
+}
+* { box-sizing: border-box; }
+body { margin: 0; width: 1280px; height: 800px; overflow: hidden; user-select: none; font: 400 16px/24px "Inter", sans-serif; color: var(--ink);
+  background: radial-gradient(900px 520px at 12% -8%, #e0e7ff 0%, transparent 70%), radial-gradient(800px 520px at 100% 100%, #f3e8ff 0%, transparent 65%), #f6f7fd; }
+
+header { height: 64px; display: flex; align-items: center; gap: 14px; padding: 0 32px; }
+header .logo { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 6px 16px rgba(99, 102, 241, .35); }
+header .title { font: 700 20px/1 "Inter"; letter-spacing: -.02em; }
+header .sub { font: 400 14px/1 "Inter"; color: var(--muted); }
+header .pill { margin-left: auto; margin-right: 356px; font: 600 12px/1 "Inter"; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: #eef2ff; border: 1px solid var(--line-soft); padding: 7px 12px; border-radius: 999px; opacity: 0; transform: translateY(-4px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
+header .pill.on { opacity: 1; transform: none; }
+
+/* The right 356 px are left for the source pane and the assistant's panel (340 px + 16 px margin). */
+#canvas, #ghosts { position: absolute; left: 32px; top: 88px; width: 872px; height: 688px; border-radius: 22px; }
+#canvas { background-color: #ffffff; background-image: radial-gradient(#dfe3f7 1.2px, transparent 1.3px); background-size: 26px 26px; border: 1px solid #e3e7fb;
+  box-shadow: 0 1px 2px rgba(30, 27, 75, .05), 0 18px 48px rgba(79, 70, 229, .10); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+#ghosts { pointer-events: none; overflow: hidden; }
+#ghosts svg { position: absolute; transition: opacity .35s ease-out; }
+#canvas svg { max-width: none; max-height: none; overflow: visible; }
+
+#canvas .empty { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--muted); font-size: 15px; animation: rise .8s var(--ease) both; }
+#canvas .empty svg { width: 76px; height: 76px; margin-bottom: 6px; animation: float 4.5s ease-in-out infinite; }
+#canvas .empty b { font: 600 20px/28px "Inter"; color: var(--ink); letter-spacing: -.01em; }
+#canvas .error { color: #9f1239; background: #fff1f2; border: 1px solid #fda4af; border-radius: 14px; padding: 16px 20px; max-width: 760px; white-space: pre-wrap; font: 400 14px/20px "JetBrains Mono", monospace; animation: rise .4s var(--ease) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes float { 50% { transform: translateY(-6px); } }
+
+/* The source pane: the Mermaid text the page was given, a line that is new lights up and fades. */
+#source { position: absolute; left: 924px; top: 88px; width: 340px; height: 264px; background: #0f1226; border-radius: 16px; overflow: hidden; box-shadow: 0 18px 40px rgba(15, 18, 38, .28); display: flex; flex-direction: column; }
+#source .bar { height: 34px; flex: none; display: flex; align-items: center; gap: 7px; padding: 0 14px; background: #171a35; border-bottom: 1px solid #23274a; }
+#source .bar i { width: 10px; height: 10px; border-radius: 50%; background: #3b4070; }
+#source .bar i:nth-child(1) { background: #fb7185; } #source .bar i:nth-child(2) { background: #fbbf24; } #source .bar i:nth-child(3) { background: #34d399; }
+#source .bar b { margin-left: 8px; font: 500 12px/1 "JetBrains Mono", monospace; color: #94a3d8; }
+#source .body { flex: 1; overflow: hidden; padding: 10px 0; font: 400 12px/18px "JetBrains Mono", monospace; color: #cbd5f5; }
+#source code { display: block; white-space: pre; }
+#source .ln { display: block; padding: 0 14px; background: transparent; transition: background 1.6s ease-out; }
+#source .ln.fresh { background: rgba(129, 140, 248, .42); transition: none; }
+#source .kw { color: #c4b5fd; } #source .str { color: #7dd3fc; } #source .arrow { color: #f0abfc; } #source .id { color: #fcd34d; } #source .txt { color: #a7f3d0; } #source .case { color: #fda4af; }
+
+/* The drawing. Mermaid's own styles are in its svg, so these win with !important. */
+:is(#canvas, #ghosts) .nodeLabel, :is(#canvas, #ghosts) .nodeLabel p { font: 500 17px/1.4 "Inter", sans-serif !important; color: var(--ink) !important; margin: 0; }
+:is(#canvas, #ghosts) g.node rect, :is(#canvas, #ghosts) g.node polygon, :is(#canvas, #ghosts) g.node path { fill: url(#g-node) !important; stroke: var(--line-soft) !important; stroke-width: 1.6px !important; rx: 14px; ry: 14px; }
+:is(#canvas, #ghosts) g.node polygon { fill: url(#g-choice) !important; stroke: var(--line) !important; }
+:is(#canvas, #ghosts) g.node { filter: drop-shadow(0 8px 14px rgba(79, 70, 229, .14)); }
+:is(#canvas, #ghosts) g.node .label rect { fill: none !important; stroke: none !important; }
+:is(#canvas, #ghosts) path.flowchart-link { stroke: var(--line) !important; stroke-width: 2.2px !important; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+:is(#canvas, #ghosts) .arrowMarkerPath { fill: var(--accent) !important; stroke: var(--accent) !important; }
+:is(#canvas, #ghosts) g.edgeLabel rect.background, :is(#canvas, #ghosts) g.edgeLabel rect { fill: #eef2ff !important; stroke: var(--line-soft) !important; stroke-width: 1px; rx: 10px; ry: 10px; opacity: 1; }
+:is(#canvas, #ghosts) g.edgeLabel text, :is(#canvas, #ghosts) g.edgeLabel tspan, :is(#canvas, #ghosts) g.edgeLabel p, :is(#canvas, #ghosts) g.edgeLabel span { font: 600 14px "Inter", sans-serif !important; fill: #4338ca !important; color: #4338ca !important; }
+:is(#canvas, #ghosts) g.node, :is(#canvas, #ghosts) g.edgeLabel, :is(#canvas, #ghosts) g[data-et="participant"] { transform-box: fill-box; transform-origin: center; }
+
+:is(#canvas, #ghosts) rect.actor { fill: url(#g-actor) !important; stroke: none !important; rx: 14px; ry: 14px; filter: drop-shadow(0 8px 14px rgba(99, 102, 241, .35)); }
+:is(#canvas, #ghosts) text.actor, :is(#canvas, #ghosts) text.actor tspan { fill: #ffffff !important; font: 600 17px "Inter", sans-serif !important; letter-spacing: -.01em; }
+:is(#canvas, #ghosts) line.actor-line { stroke: var(--line-soft) !important; stroke-width: 1.5px !important; stroke-dasharray: 3 7 !important; stroke-linecap: round; }
+:is(#canvas, #ghosts) line[data-et="message"] { stroke: var(--accent) !important; stroke-width: 2.2px !important; stroke-linecap: round; }
+:is(#canvas, #ghosts) line.messageLine1 { stroke: #94a3b8 !important; }
+:is(#canvas, #ghosts) text.messageText { fill: #334155 !important; font: 500 15px "Inter", sans-serif !important; paint-order: stroke; stroke: #ffffff; stroke-width: 7px; stroke-linejoin: round; }
+:is(#canvas, #ghosts) marker path, :is(#canvas, #ghosts) defs path[id^="arrowhead"], :is(#canvas, #ghosts) [id$="arrowhead"] path { fill: var(--accent) !important; stroke: var(--accent) !important; }
+:is(#canvas, #ghosts) .loopLine { stroke: var(--line) !important; stroke-width: 1.3px !important; stroke-dasharray: 5 5 !important; }
+:is(#canvas, #ghosts) .labelBox { fill: #eef2ff !important; stroke: var(--line) !important; stroke-width: 1.3px !important; }
+:is(#canvas, #ghosts) text.labelText, :is(#canvas, #ghosts) text.labelText tspan { fill: #4338ca !important; font: 700 14px "Inter", sans-serif !important; }
+:is(#canvas, #ghosts) text.loopText, :is(#canvas, #ghosts) text.loopText tspan { fill: var(--muted) !important; font: 500 14px "Inter", sans-serif !important; }

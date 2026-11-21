@@ -1,0 +1,219 @@
+{
+  "hash": "78776a0641a66dc6",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Add a 'Build image' step between 'Run tests' and 'Deploy'",
+        "state": {
+          "diagram": "flowchart TD\n  n1[\"Push code\"]\n  n2[\"Run tests\"]\n  n3[\"Deploy\"]\n  n1 --> n2\n  n2 --> n3",
+          "done": false,
+          "open_questions": []
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_node": "Adds one node to the diagram in `state.diagram`: a step of a flowchart, or a participant of a sequence diagram, which `instructions` ask for and which the diagram does not have yet.",
+            "connect": "Draws one new arrow in the flowchart in `state.diagram`, from one step to another, with a label if `instructions` give it one.",
+            "disconnect": "Takes one arrow or message out of the diagram in `state.diagram`; the nodes stay."
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "instructions": "Which step or participant that `instructions` ask for is still missing from the diagram in `state.diagram`? If more than one is missing, the one that comes first in the flow, or the one furthest to the left.",
+          "criteria": {
+            "Build image": "",
+            "Enter credentials": "",
+            "Check password": "",
+            "Show dashboard": "",
+            "Show error message": "",
+            "Send verification code": "",
+            "Verify code": "",
+            "Reset password": "",
+            "Lock account": "",
+            "Fill in sign-up form": "",
+            "Validate email": "",
+            "Create account": "",
+            "Send welcome email": "",
+            "Add to cart": "",
+            "Enter payment details": "",
+            "Charge card": "",
+            "Confirm order": "",
+            "Payment failed": "",
+            "Retry payment": "",
+            "Cancel order": "",
+            "Roll back": "",
+            "Notify team": "",
+            "Open ticket": "",
+            "Triage": "",
+            "Assign agent": "",
+            "Escalate": "",
+            "Resolve ticket": "",
+            "Close ticket": "",
+            "Review": "",
+            "Approve": "",
+            "Reject": ""
+          }
+        },
+        "connect.arrow": {
+          "type": "choice",
+          "instructions": "Which arrow that `instructions` ask for is still missing from the flowchart in `state.diagram`? If more than one is missing, the one that comes first in the flow. An arrow is written `from -> to`.",
+          "criteria": {
+            "Push code -> Deploy": "",
+            "Run tests -> Push code": "",
+            "Deploy -> Push code": "",
+            "Deploy -> Run tests": ""
+          }
+        },
+        "connect.label": {
+          "type": "choice",
+          "instructions": "Which label do `instructions` give that arrow?",
+          "criteria": {
+            "Build image": "",
+            "Run tests": "",
+            "Deploy": "",
+            "Yes": "",
+            "No": "",
+            "Valid": "",
+            "Invalid": "",
+            "Success": "",
+            "Failure": "",
+            "Pass": "",
+            "Fail": "",
+            "Retry": "",
+            "Approved": "",
+            "Rejected": ""
+          }
+        },
+        "connect.label?stated": {
+          "type": "noul",
+          "instructions": "Do `instructions` give a label to that arrow, such as Yes, No, Valid, Invalid or a text in quotes?"
+        },
+        "disconnect.edge": {
+          "type": "choice",
+          "instructions": "Which arrow or message of the diagram in `state.diagram` do `instructions` say to take out, or to replace with another? A flowchart's arrow is written `from --label--> to`, a sequence diagram's message `number. from -> to: text`.",
+          "criteria": {
+            "Push code --> Run tests": "",
+            "Run tests --> Deploy": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "add_node",
+          "confidence": 1,
+          "probabilities": {
+            "add_node": 1,
+            "connect": 0,
+            "disconnect": 0
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "choice": "Build image",
+          "confidence": 1,
+          "probabilities": {
+            "Build image": 1,
+            "Enter credentials": 0,
+            "Check password": 0,
+            "Show dashboard": 0,
+            "Show error message": 0,
+            "Send verification code": 0,
+            "Verify code": 0,
+            "Reset password": 0,
+            "Lock account": 0,
+            "Fill in sign-up form": 0,
+            "Validate email": 0,
+            "Create account": 0,
+            "Send welcome email": 0,
+            "Add to cart": 0,
+            "Enter payment details": 0,
+            "Charge card": 0,
+            "Confirm order": 0,
+            "Payment failed": 0,
+            "Retry payment": 0,
+            "Cancel order": 0,
+            "Roll back": 0,
+            "Notify team": 0,
+            "Open ticket": 0,
+            "Triage": 0,
+            "Assign agent": 0,
+            "Escalate": 0,
+            "Resolve ticket": 0,
+            "Close ticket": 0,
+            "Review": 0,
+            "Approve": 0,
+            "Reject": 0
+          }
+        },
+        "connect.arrow": {
+          "type": "choice",
+          "choice": "Run tests -> Push code",
+          "confidence": 0.41,
+          "probabilities": {
+            "Push code -> Deploy": 0.19,
+            "Run tests -> Push code": 0.56,
+            "Deploy -> Push code": 0.01,
+            "Deploy -> Run tests": 0.24
+          }
+        },
+        "connect.label": {
+          "type": "choice",
+          "choice": "Build image",
+          "confidence": 0.7,
+          "probabilities": {
+            "Build image": 0.72,
+            "Run tests": 0.05,
+            "Deploy": 0,
+            "Yes": 0.01,
+            "No": 0.2,
+            "Valid": 0.01,
+            "Invalid": 0.01,
+            "Success": 0,
+            "Failure": 0,
+            "Pass": 0,
+            "Fail": 0,
+            "Retry": 0,
+            "Approved": 0,
+            "Rejected": 0
+          }
+        },
+        "connect.label?stated": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "disconnect.edge": {
+          "type": "choice",
+          "choice": "Run tests --> Deploy",
+          "confidence": 1,
+          "probabilities": {
+            "Push code --> Run tests": 0,
+            "Run tests --> Deploy": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1121,
+        "output_tokens": 551
+      }
+    }
+  }
+}
