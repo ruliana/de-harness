@@ -2,11 +2,9 @@ name: publish
 # Publishes to npm whenever main carries a package.json version that npm does not have yet, then tags it v<version>.
 # jsDelivr and unpkg serve every npm version on their own.
 #
-# Auth, one of:
-#   - npm trusted publishing (no secret): on npmjs.com, package settings -> Trusted publisher -> GitHub Actions,
-#     repository ruliana/de-harness, workflow publish.yml. For the very first version the package does not exist yet,
-#     so publish 0.1.0 with a token, then switch.
-#   - an npm automation token in the repository secret NPM_TOKEN.
+# Auth: npm trusted publishing (OIDC), no token or secret. On npmjs.com, package de-harness -> Settings -> Trusted
+# publisher -> GitHub Actions: user ruliana, repository de-harness, workflow publish.yml, no environment.
+# The package must exist on npm before a trusted publisher can be added, so 0.1.0 is published once by hand.
 on:
   push:
     branches: [main]
@@ -36,16 +34,15 @@ jobs:
           fi
       # trusted publishing needs npm 11.5.1 or later; Node 22 ships npm 10
       - if: steps.version.outputs.new == 'true'
-        run: npm install -g npm@11
+        run: npm install -g npm@latest
       - if: steps.version.outputs.new == 'true'
         run: npm ci
       - if: steps.version.outputs.new == 'true'
         run: npm run typecheck
-      # prepublishOnly runs npm run build (dist/, types, browser bundles)
+      # prepublishOnly runs npm run build (dist/, types, browser bundles). npm exchanges the job's OIDC token for a
+      # short-lived publish credential and adds provenance on its own.
       - if: steps.version.outputs.new == 'true'
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
       - if: steps.version.outputs.new == 'true'
         name: tag and summary with SRI hashes
         env:
