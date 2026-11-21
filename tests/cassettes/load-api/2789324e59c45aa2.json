@@ -217,7 +217,7 @@
         },
         "list_tickets.assignee?stated": {
           "type": "noul",
-          "noul": 0.9
+          "noul": 0.92
         },
         "get_ticket.id": {
           "type": "choice",
@@ -247,7 +247,7 @@
         },
         "update_ticket.assignee?stated": {
           "type": "noul",
-          "noul": 0.65
+          "noul": 0.63
         },
         "update_ticket.labels[billing]": {
           "type": "noul",
@@ -297,7 +297,7 @@
         },
         "close_ticket.notify": {
           "type": "noul",
-          "noul": 0.05
+          "noul": 0.06
         },
         "close_ticket.notify?stated": {
           "type": "noul",

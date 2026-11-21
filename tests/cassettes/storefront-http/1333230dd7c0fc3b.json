@@ -12,6 +12,37 @@
     "body": {
       "products": [
         {
+          "handle": "u3013r-renown-heavy-weight-hoodie-frosted-pearl",
+          "title": "Renown Heavy Weight Hoodie - Frosted Pearl",
+          "product_type": "Women:Outerwear:Coverups:Hoodies",
+          "options": [
+            {
+              "name": "Color",
+              "values": [
+                "Frosted Pearl"
+              ]
+            },
+            {
+              "name": "Size",
+              "values": [
+                "XXS",
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "2XL"
+              ]
+            }
+          ],
+          "variants": [
+            {
+              "price": "148",
+              "available": true
+            }
+          ]
+        },
+        {
           "handle": "w31179r-seamless-cable-knit-full-zip-hooded-jacket-frosted-pearl-heather",
           "title": "Seamless Cable Knit Full Zip Hooded Jacket - Frosted Pearl Heather",
           "product_type": "Women:Outerwear:Coverups:Hoodies",

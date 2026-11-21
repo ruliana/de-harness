@@ -101,20 +101,20 @@
         "__tool__": {
           "type": "choice",
           "choice": "move",
-          "confidence": 1,
+          "confidence": 0.98,
           "probabilities": {
-            "move": 1,
-            "end": 0
+            "move": 0.99,
+            "end": 0.01
           }
         },
         "move.station": {
           "type": "choice",
           "choice": "Central",
-          "confidence": 0.82,
+          "confidence": 0.8,
           "probabilities": {
             "Westfield": 0,
-            "Central": 0.88,
-            "Old Town": 0.12
+            "Central": 0.87,
+            "Old Town": 0.13
           }
         }
       },

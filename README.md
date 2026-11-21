@@ -38,7 +38,21 @@ Each one has a README that says what it shows and how to run it.
 - [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
 - [Page overlay](examples/page-overlay/): an assistant panel laid over a page: you tell it what to do, and it operates the page behind it.
 - [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who.
+- [Web page](examples/web-page/): the browser bundle in a plain web page, with `JevModel` pointed at a small proxy on the page's own server that holds the key.
 - [Diagram](examples/diagram/): the same panel beside a Mermaid diagram (flowchart or sequence): the diagram text is the state, it draws, edits and asks you what a failure should do, and the page animates every change with CSS transitions.
+
+## In a web page
+
+`npm run build` writes `dist/`: the compiled sources with types (Node and bundlers), and the browser-safe core
+(`src/core.ts`: loop, tools, params, `JevModel`, `ScriptedModel`, `ScriptedInput`, `openApiTools`) as
+`de-harness.browser.js`, `de-harness.browser.min.js` (ES modules) and `de-harness.iife.min.js` (a classic script, global
+`DeHarness`), about 10 KB gzipped. Bundlers import `de-harness/core`; `de-harness` is the Node entry and adds cassettes,
+`StdinInput` and `imageFile`; `de-harness/browser` is the Playwright tools, which run in Node.
+
+Jev refuses requests from browser origins, and a key in page code is public, so a page never calls Jev directly: it
+points `JevModel` at its own server, which adds the key (`new JevModel({ baseUrl: location.origin + "/api/jev" })`).
+[`examples/web-page/proxy.ts`](examples/web-page/proxy.ts) is that proxy. Once published to npm, jsDelivr and unpkg serve
+the files at `https://cdn.jsdelivr.net/npm/de-harness@<version>/dist/de-harness.iife.min.js`.
 
 ## How it works
 

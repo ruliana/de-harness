@@ -60,13 +60,13 @@
         "__tool__": {
           "type": "choice",
           "choice": "filter",
-          "confidence": 0.87,
+          "confidence": 0.88,
           "probabilities": {
-            "open_menu": 0.02,
-            "scroll": 0.05,
-            "filter": 0.89,
+            "open_menu": 0.01,
+            "scroll": 0.06,
+            "filter": 0.9,
             "click_item": 0.03,
-            "go_back": 0.01,
+            "go_back": 0,
             "close_overlay": 0
           }
         }

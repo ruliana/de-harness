@@ -93,21 +93,21 @@
         "__tool__": {
           "type": "choice",
           "choice": "click",
-          "confidence": 0.9,
+          "confidence": 0.88,
           "probabilities": {
-            "click": 0.95,
-            "type_text": 0.05
+            "click": 0.94,
+            "type_text": 0.06
           }
         },
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.38,
-            "bottom": 0.46,
+            "top": 0.37,
+            "bottom": 0.45,
             "left": 0.06,
             "right": 0.52
           },
-          "confidence": 0.93
+          "confidence": 0.89
         },
         "click.target?present": {
           "type": "noul",
@@ -116,10 +116,10 @@
         "type_text.text": {
           "type": "choice",
           "choice": "12 Analytical Row",
-          "confidence": 0.89,
+          "confidence": 0.91,
           "probabilities": {
-            "12 Analytical Row": 0.93,
-            "London": 0.04,
+            "12 Analytical Row": 0.94,
+            "London": 0.03,
             "EC1A 1BB": 0.03
           }
         }

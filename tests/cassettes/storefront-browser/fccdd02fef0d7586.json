@@ -134,11 +134,11 @@
         "__tool__": {
           "type": "choice",
           "choice": "click",
-          "confidence": 0.79,
+          "confidence": 0.82,
           "probabilities": {
             "navigate": 0,
-            "click": 0.82,
-            "hover": 0.18,
+            "click": 0.84,
+            "hover": 0.16,
             "scroll": 0,
             "press_key": 0,
             "go_back": 0,
@@ -159,61 +159,61 @@
           "box": {
             "top": 0.32,
             "bottom": 0.37,
-            "left": 0.06,
-            "right": 0.19
+            "left": 0.07,
+            "right": 0.2
           },
-          "confidence": 0.89
+          "confidence": 0.87
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.86
+          "noul": 0.87
         },
         "hover.target": {
           "type": "box",
           "box": {
             "top": 0.12,
-            "bottom": 0.33,
-            "left": 0.18,
-            "right": 0.23
+            "bottom": 0.34,
+            "left": 0.17,
+            "right": 0.24
           },
-          "confidence": 0.35
+          "confidence": 0.37
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.91
+          "noul": 0.93
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.7,
+          "confidence": 0.58,
           "probabilities": {
-            "down": 0.85,
-            "bottom": 0.15
+            "down": 0.79,
+            "bottom": 0.21
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Enter",
-          "confidence": 0.38,
+          "confidence": 0.48,
           "probabilities": {
-            "Enter": 0.59,
-            "Tab": 0.34,
-            "Escape": 0.07
+            "Enter": 0.65,
+            "Tab": 0.29,
+            "Escape": 0.06
           }
         },
         "read_price.target": {
           "type": "box",
           "box": {
-            "top": 0.33,
-            "bottom": 0.36,
+            "top": 0.05,
+            "bottom": 0.35,
             "left": 0.05,
             "right": 0.23
           },
-          "confidence": 0.08
+          "confidence": 0.06
         },
         "read_price.target?present": {
           "type": "noul",
-          "noul": 0
+          "noul": 0.01
         }
       },
       "usage": {

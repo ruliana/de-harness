@@ -72,10 +72,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "click",
-          "confidence": 0.44,
+          "confidence": 0.48,
           "probabilities": {
-            "click": 0.72,
-            "type_text": 0.28
+            "click": 0.74,
+            "type_text": 0.26
           }
         },
         "click.target": {
@@ -86,7 +86,7 @@
             "left": 0.06,
             "right": 0.51
           },
-          "confidence": 0.84
+          "confidence": 0.82
         },
         "click.target?present": {
           "type": "noul",
@@ -95,12 +95,12 @@
         "type_text.text": {
           "type": "choice",
           "choice": "Ada Lovelace",
-          "confidence": 0.61,
+          "confidence": 0.69,
           "probabilities": {
-            "Ada Lovelace": 0.71,
-            "12 Analytical Row": 0.15,
-            "London": 0.07,
-            "EC1A 1BB": 0.07
+            "Ada Lovelace": 0.77,
+            "12 Analytical Row": 0.13,
+            "London": 0.05,
+            "EC1A 1BB": 0.05
           }
         }
       },

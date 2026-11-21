@@ -6,8 +6,7 @@
  * When the request is built, every image value is replaced by a reference string and listed once in the request's
  * `images`. The reference is a hash of the image bytes, so identical requests stay identical (cassettes replay).
  */
-import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { sha256Hex, toBase64 } from "./sha256.js";
 import type { Image } from "../model/types.js";
 
 export type ImageValue = { $image: { format: "png" | "jpg"; base64: string } };
@@ -40,11 +39,7 @@ export function image(bytes: Uint8Array): ImageValue {
       throw new Error(`image: ${width}x${height} px is outside the ${min}-${max} px per side that Jev accepts`);
     }
   }
-  return { $image: { format, base64: Buffer.from(bytes).toString("base64") } };
-}
-
-export function imageFile(path: string): ImageValue {
-  return image(readFileSync(path));
+  return { $image: { format, base64: toBase64(bytes) } };
 }
 
 export function isImageValue(value: unknown): value is ImageValue {
@@ -55,7 +50,7 @@ export function isImageValue(value: unknown): value is ImageValue {
 
 /** The reference string standing for an image in a request. Unlikely to occur in text by accident. */
 export function imageRef(value: ImageValue): string {
-  return `img-${createHash("sha256").update(value.$image.base64).digest("hex").slice(0, 16)}`;
+  return `img-${sha256Hex(value.$image.base64).slice(0, 16)}`;
 }
 
 /** Copy of `value` with every image replaced by its reference, and the images found. */

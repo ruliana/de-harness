@@ -55,10 +55,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_door",
-          "confidence": 0.97,
+          "confidence": 0.98,
           "probabilities": {
-            "open_door": 0.98,
-            "turn_on_light": 0.02,
+            "open_door": 0.99,
+            "turn_on_light": 0.01,
             "end": 0
           }
         },

@@ -124,10 +124,10 @@
           "choice": "hover",
           "confidence": 0.83,
           "probabilities": {
-            "navigate": 0,
+            "navigate": 0.01,
             "click": 0.03,
             "hover": 0.85,
-            "scroll": 0.1,
+            "scroll": 0.09,
             "press_key": 0,
             "go_back": 0,
             "read_price": 0,
@@ -150,11 +150,11 @@
             "left": 0.21,
             "right": 0.3
           },
-          "confidence": 0.57
+          "confidence": 0.62
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.2
+          "noul": 0.26
         },
         "hover.target": {
           "type": "box",
@@ -162,42 +162,42 @@
             "top": 0.1,
             "bottom": 0.13,
             "left": 0.2,
-            "right": 0.29
+            "right": 0.3
           },
-          "confidence": 0.65
+          "confidence": 0.58
         },
         "hover.target?present": {
           "type": "noul",
-          "noul": 0.7
+          "noul": 0.74
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.84,
+          "confidence": 0.74,
           "probabilities": {
-            "down": 0.92,
-            "bottom": 0.08
+            "down": 0.87,
+            "bottom": 0.13
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Tab",
-          "confidence": 0.72,
+          "confidence": 0.77,
           "probabilities": {
-            "Enter": 0.11,
-            "Tab": 0.81,
+            "Enter": 0.07,
+            "Tab": 0.85,
             "Escape": 0.08
           }
         },
         "read_price.target": {
           "type": "box",
           "box": {
-            "top": 0.09,
-            "bottom": 0.14,
-            "left": 0.21,
+            "top": 0.05,
+            "bottom": 0.54,
+            "left": 0.05,
             "right": 0.33
           },
-          "confidence": 0.05
+          "confidence": 0.03
         },
         "read_price.target?present": {
           "type": "noul",

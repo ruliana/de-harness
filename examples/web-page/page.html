@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Support inbox</title>
+  <style>
+    body { font: 16px/1.4 system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    textarea { width: 100%; height: 6rem; font: inherit; }
+    #team { font-weight: bold; }
+  </style>
+  <!-- From a CDN: https://cdn.jsdelivr.net/npm/de-harness@<version>/dist/de-harness.iife.min.js -->
+  <script src="/de-harness.iife.min.js"></script>
+</head>
+<body>
+  <h1>Support inbox</h1>
+  <p>Paste a customer message; the agent sends it to a team.</p>
+  <textarea id="message">I was charged twice for my subscription this month. Please refund the extra charge.</textarea>
+  <p><button id="go">Route it</button> <span id="team"></span></p>
+  <script>
+    const { createAgent, defineTool, param, JevModel } = window.DeHarness;
+
+    // No key here: the page talks to its own server, which adds the key (proxy.ts).
+    const model = new JevModel({ baseUrl: location.origin + "/api/jev" });
+
+    const TEAMS = ["billing", "technical", "sales"];
+    const route = defineTool({
+      name: "route",
+      description: "Sends the message to one team and finishes.",
+      params: { team: param.choice({ question: "Which team should handle `state.message`?", options: TEAMS }) },
+      run: ({ team }) => ({ end: true, output: { team } }),
+    });
+
+    async function triage(message) {
+      const result = await createAgent({ model, instructions: "Send the customer message to the team that should handle it.", tools: [route], initialState: { message }, maxSteps: 2 }).run();
+      return { status: result.status, team: result.output && result.output.team, error: result.error && result.error.message };
+    }
+    window.triage = triage;
+
+    document.getElementById("go").addEventListener("click", async () => {
+      const out = document.getElementById("team");
+      out.textContent = "…";
+      const r = await triage(document.getElementById("message").value);
+      out.textContent = r.team ? "→ " + r.team : "failed: " + (r.error || r.status);
+    });
+  </script>
+</body>
+</html>

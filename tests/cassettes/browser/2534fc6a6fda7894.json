@@ -107,33 +107,33 @@
           "type": "box",
           "box": {
             "top": 0.26,
-            "bottom": 0.38,
+            "bottom": 0.4,
             "left": 0.3,
             "right": 0.46
           },
-          "confidence": 0.47
+          "confidence": 0.49
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.96
+          "noul": 0.97
         },
         "scroll.direction": {
           "type": "choice",
           "choice": "down",
-          "confidence": 0.34,
+          "confidence": 0.3,
           "probabilities": {
-            "down": 0.67,
-            "bottom": 0.33
+            "down": 0.65,
+            "bottom": 0.35
           }
         },
         "press_key.key": {
           "type": "choice",
           "choice": "Escape",
-          "confidence": 0.38,
+          "confidence": 0.37,
           "probabilities": {
-            "Enter": 0.39,
+            "Enter": 0.4,
             "Tab": 0.02,
-            "Escape": 0.59
+            "Escape": 0.58
           }
         }
       },

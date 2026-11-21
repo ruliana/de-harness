@@ -65,16 +65,16 @@
         "tactic": {
           "type": "choice",
           "choice": "open_menu",
-          "confidence": 0.68,
+          "confidence": 0.59,
           "probabilities": {
-            "open_menu": 0.71,
-            "pick_menu_entry": 0.23,
-            "scroll": 0.04,
+            "open_menu": 0.63,
+            "pick_menu_entry": 0.31,
+            "scroll": 0.02,
             "filter": 0,
             "click_item": 0,
             "select_option": 0,
             "read_value": 0,
-            "go_back": 0.01,
+            "go_back": 0.03,
             "close_overlay": 0.01,
             "end": 0
           }

@@ -66,8 +66,8 @@
         "click.target": {
           "type": "box",
           "box": {
-            "top": 0.29,
-            "bottom": 0.6,
+            "top": 0.3,
+            "bottom": 0.59,
             "left": 0.24,
             "right": 0.45
           },
@@ -75,7 +75,7 @@
         },
         "click.target?present": {
           "type": "noul",
-          "noul": 0.98
+          "noul": 0.99
         }
       },
       "usage": {

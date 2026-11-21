@@ -171,32 +171,32 @@
         "__tool__": {
           "type": "choice",
           "choice": "open_ticket",
-          "confidence": 0.74,
+          "confidence": 0.72,
           "probabilities": {
-            "open_ticket": 0.83,
-            "set_status": 0.17,
-            "tag": 0
+            "open_ticket": 0.81,
+            "set_status": 0.18,
+            "tag": 0.01
           }
         },
         "open_ticket.ticket": {
           "type": "choice",
           "choice": "#8 Password reset email never arrives",
-          "confidence": 0.48,
+          "confidence": 0.6,
           "probabilities": {
-            "#2 Password reset email never arrives": 0.15,
+            "#2 Password reset email never arrives": 0.13,
             "#4 How do I export my data to CSV?": 0.01,
-            "#5 App crashes when I open the settings page": 0.23,
-            "#8 Password reset email never arrives": 0.61
+            "#5 App crashes when I open the settings page": 0.16,
+            "#8 Password reset email never arrives": 0.7
           }
         },
         "set_status.status": {
           "type": "choice",
           "choice": "open",
-          "confidence": 0.91,
+          "confidence": 0.92,
           "probabilities": {
-            "open": 0.94,
+            "open": 0.95,
             "pending": 0,
-            "closed": 0.06
+            "closed": 0.05
           }
         },
         "set_status.repeats_another": {

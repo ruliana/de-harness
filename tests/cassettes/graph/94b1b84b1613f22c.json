@@ -107,10 +107,10 @@
         "__tool__": {
           "type": "choice",
           "choice": "move",
-          "confidence": 0.98,
+          "confidence": 1,
           "probabilities": {
-            "move": 0.99,
-            "end": 0.01
+            "move": 1,
+            "end": 0
           }
         },
         "move.station": {

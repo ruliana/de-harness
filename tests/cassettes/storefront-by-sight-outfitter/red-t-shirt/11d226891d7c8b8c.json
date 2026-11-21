@@ -64,10 +64,10 @@
           "confidence": 0.8,
           "probabilities": {
             "open_menu": 0,
-            "scroll": 0.13,
+            "scroll": 0.15,
             "click_item": 0.84,
-            "go_back": 0.02,
-            "close_overlay": 0.01
+            "go_back": 0.01,
+            "close_overlay": 0
           }
         }
       },

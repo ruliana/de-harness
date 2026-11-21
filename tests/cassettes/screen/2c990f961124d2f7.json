@@ -61,11 +61,11 @@
           "type": "box",
           "box": {
             "top": 0.44,
-            "bottom": 0.91,
+            "bottom": 0.9,
             "left": 0.09,
             "right": 0.42
           },
-          "confidence": 0.19
+          "confidence": 0.18
         },
         "click.target?present": {
           "type": "noul",
