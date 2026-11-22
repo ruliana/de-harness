@@ -1,9 +1,17 @@
 # de-harness
 
-A harness for decision models. The agent has tools; the model (Jev by default) is used only to call them, one
-question per tool name and per parameter. See `CLAUDE.md` for principles and commands.
+**Agents whose model never writes a word: it only answers questions.** de-harness is a TypeScript harness for decision
+models (Jev by TypeSafe by default). The agent has tools; the model is used only to call them, one question per tool
+name and per parameter, and code does the rest.
 
 ![The agent goes from Telescope to Jupiter on Wikipedia, with each chosen link circled](docs/media/wikipedia-demo.webp)
+
+*Telescope to Jupiter in four steps, on the real Wikipedia pages. At each step the links the agent may follow are boxed and the one it chose is circled, with the tool call underneath. Also as [MP4](docs/media/wikipedia-demo.mp4).*
+
+[See it work](#see-it-work) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Examples](#examples) ·
+[Going further](#going-further) · [Reference](#reference) · [Development](#development)
+
+## See it work
 
 ![An assistant panel beside a Kanban board: the person types "Move the Fix login card to Done and assign it to Sam", and the agent drags the card, opens it and picks Sam](docs/media/kanban-demo.webp)
 
@@ -13,65 +21,15 @@ question per tool name and per parameter. See `CLAUDE.md` for principles and com
 
 *An assistant that draws ([Diagram example](examples/diagram/)): the state is the Mermaid text, the agent works at full speed while the diagram animates, and the panel beside it takes instructions in plain English. Also as [MP4](docs/media/diagram-demo.mp4).*
 
+## Quick start
+
 ```sh
 npm ci
-npm run typecheck
-npm test            # replay mode, no network
-npm run test:live   # live Jev, re-records cassettes
+npm run example:rooms -- "Leave the room through the red door"   # the smallest agent, live
 ```
 
-## Examples
-
-Each one has a README that says what it shows and how to run it.
-
-- [Rooms](examples/rooms/): the smallest agent, a hall with coloured doors, to see the core loop.
-- [Pizza](examples/pizza/): ordering from a menu, with choices, sets and an optional parameter.
-- [Coffee](examples/coffee/): a tool that holds the loop and waits for the customer to answer.
-- [Chest](examples/chest/): tools that appear and disappear while the agent runs.
-- [Tickets](examples/tickets/): working a support-ticket queue through an HTTP API.
-- [Office](examples/office/): thirty tools at once, which makes each step two-phase.
-- [Load API](examples/load-api/): a tool that reads an OpenAPI document and adds one tool per endpoint.
-- [Graph](examples/graph/): riding a transit map from one station to another.
-- [Tree](examples/tree/): filing an item by walking a taxonomy of a few hundred categories.
-- [Wikipedia](examples/wikipedia/): getting from one article to another by following links.
-- [Screen](examples/screen/): a sign-up form seen only as a picture, with a box around the button to click.
-- [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
-- [Page overlay](examples/page-overlay/): an assistant panel laid over a page: you tell it what to do, and it operates the page behind it.
-- [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who. The panel says nothing until the result.
-- [Web page](examples/web-page/): the browser bundle in a plain web page, with `JevModel` pointed at a small proxy on the page's own server that holds the key.
-- [Diagram](examples/diagram/): the same panel beside a Mermaid diagram (flowchart or sequence): the diagram text is the state, it draws, edits and asks you what a failure should do, and the page animates every change with CSS transitions.
-
-## Reviewing the model's choices
-
-Left alone, the model does what looks plausible: it does more than it was asked, or stops when the last step matches a phrase of
-the instructions. `createAgent({ review })` adds checks, each one extra Jev judgment that code acts on (`src/review/review.ts`):
-
-```ts
-createAgent({ model, instructions, tools, review: { end: true, actions: true } })
-```
-
-- `end`: before the run ends, ask whether anything doable is left; if so the end is refused and the model chooses again.
-- `actions`: before a tool marked `effect: "change"` runs, ask whether `instructions` ask for this very call; if not it does not run
-  (the model sees why for one step), and after two refusals in a row the run ends. A `final: true` tool also waits until the
-  other parts are done.
-- `wording`: ask the tool question as "exactly what `instructions` ask, no more and no less".
-- A tool can word its own checks: `summarize` (what this call does), `wanted` (is its work still called for, used by `end`),
-  `confirm` (the question to ask before it runs).
-
-It is off by default, so existing recordings stay valid. [`tests/acceptance/behaviour`](tests/acceptance/behaviour/) shows what each check fixes.
-
-## In a web page
-
-`npm run build` writes `dist/`: the compiled sources with types (Node and bundlers), and the browser-safe core
-(`src/core.ts`: loop, tools, params, `JevModel`, `ScriptedModel`, `ScriptedInput`, `openApiTools`) as
-`de-harness.browser.js`, `de-harness.browser.min.js` (ES modules) and `de-harness.iife.min.js` (a classic script, global
-`DeHarness`), about 10 KB gzipped. Bundlers import `de-harness/core`; `de-harness` is the Node entry and adds cassettes,
-`StdinInput` and `imageFile`; `de-harness/browser` is the Playwright tools, which run in Node.
-
-Jev refuses requests from browser origins, and a key in page code is public, so a page never calls Jev directly: it
-points `JevModel` at its own server, which adds the key (`new JevModel({ baseUrl: location.origin + "/api/jev" })`).
-[`examples/web-page/proxy.ts`](examples/web-page/proxy.ts) is that proxy. Once published to npm, jsDelivr and unpkg serve
-the files at `https://cdn.jsdelivr.net/npm/de-harness@<version>/dist/de-harness.iife.min.js`.
+Every example has its own `npm run example:<name>` (see [Examples](#examples)). Live runs call Jev; the tests replay
+recorded answers, so they need no network (see [Development](#development)).
 
 ## How it works
 
@@ -100,38 +58,6 @@ Tools can be added and removed while the agent runs: `ctx.tools.add(tool)` / `ct
 change emits a `tools_changed` event. A duplicate name and removing the built-in `end` throw (inside a tool: an `error`
 slot, registry unchanged). See `examples/chest/`.
 
-### Sub-agents
-
-A tool can run a whole nested agent with `ctx.runAgent(config)` and the loop simply waits for it. The child has its own
-tools, instructions and step limit, uses the parent's model unless it brings one, stops when the parent run is aborted,
-and its events are written to the parent's trace as `child` events under the step that called it (deeper children nest
-further). `delegate` is the ready-made version: the parent *picks* the task from candidates (Jev cannot write it), the
-child runs, and its `{ task, status, steps, output }` lands in a state slot, also when the child hit its step limit.
-
-```ts
-const helper = delegate({
-  tasks: { "Leave the room through the red door": "The helper finds the red door and walks out through it" },
-  agent: (task) => ({ instructions: task, tools: rooms.tools, initialState: rooms.initialState, maxSteps: 4 }),
-});
-```
-
-### Scale: many tools and a context budget
-
-Every request is kept under `contextBudget` tokens (default 48 000, estimated from characters; Jev takes about 64k).
-When the one-request fan-out of a step would not fit (say 40 tools with 5 parameters each), the step goes **two-phase**:
-first the state and `__tool__` alone, then the state and only the chosen tool's parameter questions (skipped for a tool
-without parameters). Each `request` and `answers` event carries a `phase` (`single`, `tool`, `params`, `order_check`),
-and `StepRecord.requests` lists them all. A request still over budget loses its oldest `previous_actions`
-(a `trimmed` event); with none left the run ends with `status: "error"`, a `budget_exceeded` event and an error naming
-the largest part, e.g. `state.page`. Cut big slots and long option lists in code: a Choice takes at most 255 options.
-
-`orderCheck: true` is an opt-in guard against option-order bias: each step also asks `__tool__` with its options reversed,
-and a different answer emits `order_disagreement` (the step still goes on with the normal order's answer).
-Cassette keys ignore key order, so the reversed request replays the same recording: test the check with `ScriptedModel`.
-
-
-Try it live: `npm run example:rooms -- "Leave the room through the red door"`.
-
 ### Sets, optional values and thresholds
 
 ```ts
@@ -150,9 +76,58 @@ params: {
 `ctx.answers` (`toppings[olives]`, `delivery_time?stated`) for code that wants another rule. Try it:
 `npm run example:pizza -- "A large pizza with mushrooms and olives, deliver at 7pm"`.
 
+### Sub-agents
+
+A tool can run a whole nested agent with `ctx.runAgent(config)` and the loop simply waits for it. The child has its own
+tools, instructions and step limit, uses the parent's model unless it brings one, stops when the parent run is aborted,
+and its events are written to the parent's trace as `child` events under the step that called it (deeper children nest
+further). `delegate` is the ready-made version: the parent *picks* the task from candidates (Jev cannot write it), the
+child runs, and its `{ task, status, steps, output }` lands in a state slot, also when the child hit its step limit.
+
+```ts
+const helper = delegate({
+  tasks: { "Leave the room through the red door": "The helper finds the red door and walks out through it" },
+  agent: (task) => ({ instructions: task, tools: rooms.tools, initialState: rooms.initialState, maxSteps: 4 }),
+});
+```
+
 ### Images and boxes
 
 A tool can put a picture into the state with `image(pngOrJpegBytes)` (PNG 280-1568 px per side). The model sees it wherever a question names the slot by path, and requests that carry images are sent with `TypeSafe-Danger-Zone-Images: true`. `param.box({ question, image })` asks Jev where something is (a Box) and, in the same request, whether it is there at all (a companion Noul, `<param>?present` in `ctx.answers`); the tool receives `{ top, bottom, left, right }` as fractions of the image, or `null` when the Noul says the target is absent. Box answers are approximate: compare overlap, not exact edges. Box requests always go to Jev 1.14 or later. Try it: `npm run example:screen -- "Click the Submit button" --out proof.png` (`HARNESS_CASSETTE=replay` uses the recordings).
+
+## Examples
+
+Each one has a README that says what it shows and how to run it.
+
+- [Rooms](examples/rooms/): the smallest agent, a hall with coloured doors, to see the core loop.
+- [Pizza](examples/pizza/): ordering from a menu, with choices, sets and an optional parameter.
+- [Coffee](examples/coffee/): a tool that holds the loop and waits for the customer to answer.
+- [Chest](examples/chest/): tools that appear and disappear while the agent runs.
+- [Tickets](examples/tickets/): working a support-ticket queue through an HTTP API.
+- [Office](examples/office/): thirty tools at once, which makes each step two-phase.
+- [Load API](examples/load-api/): a tool that reads an OpenAPI document and adds one tool per endpoint.
+- [Graph](examples/graph/): riding a transit map from one station to another.
+- [Tree](examples/tree/): filing an item by walking a taxonomy of a few hundred categories.
+- [Wikipedia](examples/wikipedia/): getting from one article to another by following links.
+- [Screen](examples/screen/): a sign-up form seen only as a picture, with a box around the button to click.
+- [Browser](examples/browser/): any web page by address, in a headless Chromium that the agent only sees.
+- [Page overlay](examples/page-overlay/): an assistant panel laid over a page: you tell it what to do, and it operates the page behind it.
+- [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who. The panel says nothing until the result.
+- [Web page](examples/web-page/): the browser bundle in a plain web page, with `JevModel` pointed at a small proxy on the page's own server that holds the key.
+- [Diagram](examples/diagram/): the same panel beside a Mermaid diagram (flowchart or sequence): the diagram text is the state, it draws, edits and asks you what a failure should do, and the page animates every change with CSS transitions.
+
+### Wikipedia navigation
+
+The animation at the top of this page is this example (revisions pinned at the snapshot), made from a recorded run by `npm run example:wikipedia:demo` (needs network access to Wikipedia, Chromium and ffmpeg; screenshots show Wikipedia, CC BY-SA 4.0).
+
+`npm run example:wikipedia -- --from "Alan Turing" --to "Enigma machine"` walks from one article to another by following
+links and prints the path. `open_link(link)` offers the links of the article body (references, info boxes, navboxes,
+other namespaces and redlinks are left out in code, and the list is cut to a budget), keyed by article title and
+described by their anchor text; `go_back` returns to the previous article and never offers the abandoned one again.
+Articles are fetched as they were at a fixed snapshot (`SNAPSHOT` in `examples/wikipedia/client.ts`), so a recording
+never goes stale. Wikipedia rate-limits shared addresses: the live run waits as asked and keeps what is already recorded.
+
+## Going further
 
 ### A browser as the state
 
@@ -195,6 +170,54 @@ the real browser, so CI installs Chromium.
 
 An assistant that lives *on* the page (`PageOverlay`, `src/browser/overlay.ts`) puts a chat panel over it: the person types an instruction there, the agent operates the page behind it, and the panel shows the steps, the questions (`overlay.input` is an `InputProvider`, so `ctx.input.ask` holds the loop until the person answers in the panel) and the result. The panel is hidden from every screenshot and zoom the model sees (`hide` / `hideFromModel` on the session), lets the pointer through to the page while the agent works, and keeps its transcript across navigations. See [examples/page-overlay](examples/page-overlay/).
 
+### Reviewing the model's choices
+
+Left alone, the model does what looks plausible: it does more than it was asked, or stops when the last step matches a phrase of
+the instructions. `createAgent({ review })` adds checks, each one extra Jev judgment that code acts on (`src/review/review.ts`):
+
+```ts
+createAgent({ model, instructions, tools, review: { end: true, actions: true } })
+```
+
+- `end`: before the run ends, ask whether anything doable is left; if so the end is refused and the model chooses again.
+- `actions`: before a tool marked `effect: "change"` runs, ask whether `instructions` ask for this very call; if not it does not run
+  (the model sees why for one step), and after two refusals in a row the run ends. A `final: true` tool also waits until the
+  other parts are done.
+- `wording`: ask the tool question as "exactly what `instructions` ask, no more and no less".
+- A tool can word its own checks: `summarize` (what this call does), `wanted` (is its work still called for, used by `end`),
+  `confirm` (the question to ask before it runs).
+
+It is off by default, so existing recordings stay valid. [`tests/acceptance/behaviour`](tests/acceptance/behaviour/) shows what each check fixes.
+
+### Scale: many tools and a context budget
+
+Every request is kept under `contextBudget` tokens (default 48 000, estimated from characters; Jev takes about 64k).
+When the one-request fan-out of a step would not fit (say 40 tools with 5 parameters each), the step goes **two-phase**:
+first the state and `__tool__` alone, then the state and only the chosen tool's parameter questions (skipped for a tool
+without parameters). Each `request` and `answers` event carries a `phase` (`single`, `tool`, `params`, `order_check`),
+and `StepRecord.requests` lists them all. A request still over budget loses its oldest `previous_actions`
+(a `trimmed` event); with none left the run ends with `status: "error"`, a `budget_exceeded` event and an error naming
+the largest part, e.g. `state.page`. Cut big slots and long option lists in code: a Choice takes at most 255 options.
+
+`orderCheck: true` is an opt-in guard against option-order bias: each step also asks `__tool__` with its options reversed,
+and a different answer emits `order_disagreement` (the step still goes on with the normal order's answer).
+Cassette keys ignore key order, so the reversed request replays the same recording: test the check with `ScriptedModel`.
+
+### In a web page
+
+`npm run build` writes `dist/`: the compiled sources with types (Node and bundlers), and the browser-safe core
+(`src/core.ts`: loop, tools, params, `JevModel`, `ScriptedModel`, `ScriptedInput`, `openApiTools`) as
+`de-harness.browser.js`, `de-harness.browser.min.js` (ES modules) and `de-harness.iife.min.js` (a classic script, global
+`DeHarness`), about 10 KB gzipped. Bundlers import `de-harness/core`; `de-harness` is the Node entry and adds cassettes,
+`StdinInput` and `imageFile`; `de-harness/browser` is the Playwright tools, which run in Node.
+
+Jev refuses requests from browser origins, and a key in page code is public, so a page never calls Jev directly: it
+points `JevModel` at its own server, which adds the key (`new JevModel({ baseUrl: location.origin + "/api/jev" })`).
+[`examples/web-page/proxy.ts`](examples/web-page/proxy.ts) is that proxy. Once published to npm, jsDelivr and unpkg serve
+the files at `https://cdn.jsdelivr.net/npm/de-harness@<version>/dist/de-harness.iife.min.js`.
+
+## Reference
+
 | Where | What |
 | - | - |
 | `src/model/` | `DecisionModel`, `JevModel` (pinned `jev-1.14.0`), `CassetteModel` / `cassetteFetch` (record/replay), `ScriptedModel` |
@@ -220,13 +243,14 @@ An assistant that lives *on* the page (`PageOverlay`, `src/browser/overlay.ts`) 
 | `examples/browser/` | any page by address: `npm run example:browser -- --url <address> "<what to do>"` |
 | `examples/wikipedia/` | navigating Wikipedia by following links (`open_link`, `go_back`, `end`) |
 
-## Example: Wikipedia navigation
+## Development
 
-*The animation at the top of this page: Telescope to Jupiter in four steps, on the real Wikipedia pages (revisions pinned at the snapshot). At each step the links the agent may follow are boxed and the one it chose is circled, with the tool call underneath. Also as [MP4](docs/media/wikipedia-demo.mp4). Made from a recorded run by `npm run example:wikipedia:demo` (needs network access to Wikipedia, Chromium and ffmpeg; screenshots show Wikipedia, CC BY-SA 4.0).*
+```sh
+npm ci
+npm run typecheck
+npm test            # replay mode, no network
+npm run test:live   # live Jev, re-records cassettes
+```
 
-`npm run example:wikipedia -- --from "Alan Turing" --to "Enigma machine"` walks from one article to another by following
-links and prints the path. `open_link(link)` offers the links of the article body (references, info boxes, navboxes,
-other namespaces and redlinks are left out in code, and the list is cut to a budget), keyed by article title and
-described by their anchor text; `go_back` returns to the previous article and never offers the abandoned one again.
-Articles are fetched as they were at a fixed snapshot (`SNAPSHOT` in `examples/wikipedia/client.ts`), so a recording
-never goes stale. Wikipedia rate-limits shared addresses: the live run waits as asked and keeps what is already recorded.
+See [`CLAUDE.md`](CLAUDE.md) for the principles (acceptance tests only, Jev judges and code decides), all commands and
+the PR flow.
