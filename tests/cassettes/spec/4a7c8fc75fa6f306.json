@@ -1,0 +1,126 @@
+{
+  "hash": "4a7c8fc75fa6f306",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "You are at Airport station. Get to Southpark station, then stop.",
+        "state": {
+          "network": {
+            "Red line": [
+              "Airport",
+              "Northgate",
+              "Central",
+              "Riverside",
+              "Harbour"
+            ],
+            "Blue line": [
+              "Westfield",
+              "Museum",
+              "Central",
+              "Market",
+              "Stadium"
+            ],
+            "Green line": [
+              "Northgate",
+              "Museum",
+              "Old Town",
+              "Market",
+              "Southpark"
+            ],
+            "Yellow line": [
+              "Riverside",
+              "Old Town",
+              "Hillcrest"
+            ]
+          },
+          "location": {
+            "station": "Southpark",
+            "next": {}
+          },
+          "visited": [
+            "Airport",
+            "Northgate",
+            "Museum",
+            "Old Town",
+            "Market",
+            "Southpark"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "move",
+            "args": {
+              "station": "Northgate"
+            },
+            "summary": "rode the Red line to Northgate"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Museum"
+            },
+            "summary": "rode the Green line to Museum"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Old Town"
+            },
+            "summary": "rode the Green line to Old Town"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Market"
+            },
+            "summary": "rode the Green line to Market"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Southpark"
+            },
+            "summary": "rode the Green line to Southpark"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "end",
+          "confidence": 1,
+          "probabilities": {
+            "end": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 745,
+        "output_tokens": 28
+      }
+    }
+  }
+}

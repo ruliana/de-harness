@@ -1,0 +1,169 @@
+{
+  "hash": "3f76fef684803c00",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Tickets that complain about payments go to billing.",
+        "state": {
+          "queue": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "closed"
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "closed"
+            }
+          ],
+          "open_ticket": {
+            "id": 7,
+            "subject": "App crashes when I open the settings page",
+            "body": "Duplicate of ticket 5: I sent this a second time because nobody answered the first one.",
+            "status": "closed",
+            "team": "unassigned",
+            "tags": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "set_status",
+            "args": {
+              "status": "closed",
+              "repeats_another": true
+            },
+            "summary": "set ticket 8 to closed"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#4 How do I export my data to CSV?"
+            },
+            "summary": "opened ticket 4"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#5 App crashes when I open the settings page"
+            },
+            "summary": "opened ticket 5"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#7 App crashes when I open the settings page"
+            },
+            "summary": "opened ticket 7"
+          },
+          {
+            "tool": "set_status",
+            "args": {
+              "status": "closed",
+              "repeats_another": true
+            },
+            "summary": "set ticket 7 to closed"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "tag": "Adds one tag to the open ticket (`state.open_ticket`). Use it only when `instructions` ask for tags.",
+            "end": "Stops, because every ticket of `state.queue` has been looked at and handled as `instructions` say."
+          }
+        },
+        "tag.tag": {
+          "type": "choice",
+          "instructions": "Which tag should be added to the ticket in `state.open_ticket` to carry out `instructions`?",
+          "criteria": {
+            "refund": "the customer wants money back",
+            "urgent": "the customer cannot work until it is fixed",
+            "vip": "the customer is a key account",
+            "bug": "the product misbehaves"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "end",
+          "confidence": 0.94,
+          "probabilities": {
+            "tag": 0.03,
+            "end": 0.97
+          }
+        },
+        "tag.tag": {
+          "type": "choice",
+          "choice": "bug",
+          "confidence": 0.84,
+          "probabilities": {
+            "refund": 0.11,
+            "urgent": 0.01,
+            "vip": 0,
+            "bug": 0.88
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1124,
+        "output_tokens": 78
+      }
+    }
+  }
+}

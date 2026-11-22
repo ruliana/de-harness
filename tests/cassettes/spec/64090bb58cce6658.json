@@ -1,0 +1,104 @@
+{
+  "hash": "64090bb58cce6658",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "You are at Airport station. Get to Southpark station by a route through Museum, then stop.",
+        "state": {
+          "network": {
+            "Red line": [
+              "Airport",
+              "Northgate",
+              "Central",
+              "Riverside",
+              "Harbour"
+            ],
+            "Blue line": [
+              "Westfield",
+              "Museum",
+              "Central",
+              "Market",
+              "Stadium"
+            ],
+            "Green line": [
+              "Northgate",
+              "Museum",
+              "Old Town",
+              "Market",
+              "Southpark"
+            ],
+            "Yellow line": [
+              "Riverside",
+              "Old Town",
+              "Hillcrest"
+            ]
+          },
+          "location": {
+            "station": "Airport",
+            "next": {
+              "Northgate": "Red line"
+            }
+          },
+          "visited": [
+            "Airport"
+          ]
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "move": "Rides one stop along a line to a neighbouring station that has not been visited yet, to get closer to the destination.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "move.station": {
+          "type": "choice",
+          "instructions": "Which of the stations in `state.location.next` is on the shortest route from `state.location.station` to the destination named in `instructions`, going by `state.network`?",
+          "criteria": {
+            "Northgate": "Red line"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "move",
+          "confidence": 1,
+          "probabilities": {
+            "move": 1,
+            "end": 0
+          }
+        },
+        "move.station": {
+          "type": "choice",
+          "choice": "Northgate",
+          "confidence": 1,
+          "probabilities": {
+            "Northgate": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 641,
+        "output_tokens": 61
+      }
+    }
+  }
+}

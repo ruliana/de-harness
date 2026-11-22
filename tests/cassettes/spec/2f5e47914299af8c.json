@@ -1,0 +1,77 @@
+{
+  "hash": "2f5e47914299af8c",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Order the striped shirt and the blue mug.",
+        "state": {
+          "page": {
+            "title": "Home",
+            "text": "Welcome to Harbour Goods.",
+            "links": {
+              "Mugs": "mugs and cups",
+              "Shirts": "t-shirts"
+            }
+          }
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_link": "Follows one link of the open page and opens the page it leads to.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "instructions": "Which link of the page in `state.page` leads towards what `instructions` ask for?",
+          "criteria": {
+            "Mugs": "mugs and cups",
+            "Shirts": "t-shirts"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "open_link",
+          "confidence": 0.98,
+          "probabilities": {
+            "open_link": 0.99,
+            "end": 0.01
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "choice": "Shirts",
+          "confidence": 0.22,
+          "probabilities": {
+            "Mugs": 0.39,
+            "Shirts": 0.61
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 504,
+        "output_tokens": 70
+      }
+    }
+  }
+}
