@@ -1,0 +1,127 @@
+{
+  "hash": "4ea9d2579e22c679",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Order the striped shirt and the blue mug.",
+        "state": {
+          "page": {
+            "title": "Shirts",
+            "text": "Our t-shirts.",
+            "links": {
+              "Home": "back to the front page",
+              "Striped shirt": "a striped cotton t-shirt"
+            }
+          },
+          "seen": {
+            "Striped shirt": "25 EUR"
+          },
+          "basket": [
+            "Striped shirt"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Shirts"
+            },
+            "summary": "opened the page \"Shirts\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Striped shirt"
+            },
+            "summary": "opened the page \"Striped shirt\""
+          },
+          {
+            "tool": "add_to_basket",
+            "args": {},
+            "summary": "put \"Striped shirt\" into the basket"
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Shirts"
+            },
+            "summary": "opened the page \"Shirts\""
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_link": "Follows one link of the open page and opens the page it leads to.",
+            "remove_from_basket": "Takes one item out of the basket.",
+            "checkout": "Pays for everything in the basket and places the order."
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "instructions": "Which link of the page in `state.page` leads towards what `instructions` ask for?",
+          "criteria": {
+            "Home": "back to the front page",
+            "Striped shirt": "a striped cotton t-shirt"
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "instructions": "Which item of `state.basket` should be taken out of the basket, going by `instructions`?",
+          "criteria": {
+            "Striped shirt": "the Striped shirt in the basket"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "open_link",
+          "confidence": 0.89,
+          "probabilities": {
+            "open_link": 0.93,
+            "remove_from_basket": 0.01,
+            "checkout": 0.06
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "choice": "Home",
+          "confidence": 0.76,
+          "probabilities": {
+            "Home": 0.88,
+            "Striped shirt": 0.12
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "choice": "Striped shirt",
+          "confidence": 1,
+          "probabilities": {
+            "Striped shirt": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 773,
+        "output_tokens": 110
+      }
+    }
+  }
+}

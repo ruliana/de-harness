@@ -1,0 +1,143 @@
+{
+  "hash": "0ce3adb8b9c66c4f",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Tickets that complain about payments go to billing.",
+        "state": {
+          "queue": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            }
+          ],
+          "open_ticket": {
+            "id": 6,
+            "subject": "Invoice shows the wrong VAT number",
+            "body": "The VAT number printed on our latest invoice is not ours. Please correct the invoice.",
+            "status": "open",
+            "team": "unassigned",
+            "tags": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#1 Charged twice for the March invoice"
+            },
+            "summary": "opened ticket 1"
+          },
+          {
+            "tool": "assign",
+            "args": {
+              "team": "billing",
+              "instructed": true
+            },
+            "summary": "assigned ticket 1 to billing"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#3 Refund for my cancelled subscription"
+            },
+            "summary": "opened ticket 3"
+          },
+          {
+            "tool": "assign",
+            "args": {
+              "team": "billing",
+              "instructed": true
+            },
+            "summary": "assigned ticket 3 to billing"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#6 Invoice shows the wrong VAT number"
+            },
+            "summary": "opened ticket 6"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for this: assigns the ticket 6 (Invoice shows the wrong VAT number) to the billing team?",
+          "criteria": {
+            "true": "`instructions` ask for it, or it is a plain part of getting what they ask for done and finished (choosing, confirming, paying), on this very item and with these values",
+            "false": "`instructions` do not ask for it: they name another item, team, status or tag, or say nothing about this kind of change"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.87
+        }
+      },
+      "usage": {
+        "input_tokens": 1022,
+        "output_tokens": 24
+      }
+    }
+  }
+}

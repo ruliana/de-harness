@@ -75,7 +75,9 @@ const idOf = (key: string) => Number(/^#(\d+) /.exec(key)![1]);
     }),
     defineTool({
       name: "assign",
+      effect: "change",
       description: "Assigns the open ticket (`state.open_ticket`), which has no team yet, to a team.",
+      summarize: ({ team }, ctx) => `assigns the ticket ${ctx.state.open_ticket?.id} (${ctx.state.open_ticket?.subject}) to the ${team} team`,
       params: {
         team: param.choice({
           question: "Which team should the ticket in `state.open_ticket` go to to carry out `instructions`?",
@@ -102,6 +104,9 @@ const idOf = (key: string) => Number(/^#(\d+) /.exec(key)![1]);
     }),
     defineTool({
       name: "set_status",
+      effect: "change",
+      final: true,
+      summarize: ({ status }, ctx) => `sets the ticket ${ctx.state.open_ticket?.id} (${ctx.state.open_ticket?.subject}) to ${status}`,
       description: "Sets the status of the open ticket (`state.open_ticket`), for instance closes it. A ticket is a duplicate only when its own body says it repeats another ticket, for instance 'Duplicate of ticket 5'; a ticket nobody repeats is not a duplicate.",
       params: {
         status: param.choice({
@@ -125,6 +130,8 @@ const idOf = (key: string) => Number(/^#(\d+) /.exec(key)![1]);
     }),
     defineTool({
       name: "tag",
+      effect: "change",
+      summarize: ({ tag }, ctx) => `adds the tag ${tag} to the ticket ${ctx.state.open_ticket?.id} (${ctx.state.open_ticket?.subject})`,
       description: "Adds one tag to the open ticket (`state.open_ticket`). Use it only when `instructions` ask for tags.",
       params: {
         tag: param.choice({

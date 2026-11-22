@@ -1,0 +1,96 @@
+{
+  "hash": "875a13f3d4374c38",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Order the striped shirt and the blue mug.",
+        "state": {
+          "page": {
+            "title": "Blue mug",
+            "text": "A blue enamel mug, 350 ml. In stock.",
+            "links": {
+              "Mugs": "all mugs"
+            },
+            "price": "8 EUR"
+          },
+          "seen": {
+            "Striped shirt": "25 EUR",
+            "Blue mug": "8 EUR"
+          },
+          "basket": [
+            "Striped shirt"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "add_to_basket",
+            "args": {},
+            "summary": "put \"Striped shirt\" into the basket"
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Shirts"
+            },
+            "summary": "opened the page \"Shirts\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Home"
+            },
+            "summary": "opened the page \"Home\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Mugs"
+            },
+            "summary": "opened the page \"Mugs\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Blue mug"
+            },
+            "summary": "opened the page \"Blue mug\""
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for this: puts the Blue mug on the open page into the basket?",
+          "criteria": {
+            "true": "`instructions` ask for it, or it is a plain part of getting what they ask for done and finished (choosing, confirming, paying), on this very item and with these values",
+            "false": "`instructions` do not ask for it: they name another item, team, status or tag, or say nothing about this kind of change"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 698,
+        "output_tokens": 24
+      }
+    }
+  }
+}

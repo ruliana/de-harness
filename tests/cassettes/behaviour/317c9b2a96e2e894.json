@@ -1,0 +1,270 @@
+{
+  "hash": "317c9b2a96e2e894",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Assign ticket 7 to the technical team, and after that close ticket 7.",
+        "state": {
+          "tickets": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "body": "My card was charged two times for the March invoice. Please look into the payment.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "body": "I click reset password but the email never arrives, so I cannot log in to my account.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "body": "I cancelled my subscription last week and was still billed. I would like a refund.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "body": "Where in the app can I download all my records as a CSV file?",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "body": "The app shuts down every time I tap settings. Version 4.2 on Android.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "body": "The VAT number printed on our latest invoice is not ours. Please correct the invoice.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "body": "Duplicate of ticket 5: I sent this a second time because nobody answered the first one.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "body": "Duplicate of ticket 2: still waiting for the reset email, sending this again.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            }
+          ]
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "assign": "Assigns a ticket to a team. A closed ticket cannot be assigned any more.",
+            "set_status": "Sets the status of a ticket, for instance closes it.",
+            "tag": "Adds a tag to a ticket.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "assign.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.tickets` should be assigned to a team, going by `instructions`?",
+          "criteria": {
+            "#1 Charged twice for the March invoice": "ticket 1",
+            "#2 Password reset email never arrives": "ticket 2",
+            "#3 Refund for my cancelled subscription": "ticket 3",
+            "#4 How do I export my data to CSV?": "ticket 4",
+            "#5 App crashes when I open the settings page": "ticket 5",
+            "#6 Invoice shows the wrong VAT number": "ticket 6",
+            "#7 App crashes when I open the settings page": "ticket 7",
+            "#8 Password reset email never arrives": "ticket 8"
+          }
+        },
+        "assign.team": {
+          "type": "choice",
+          "instructions": "Which team should the ticket be assigned to, going by `instructions`?",
+          "criteria": {
+            "billing": "the billing team",
+            "technical": "the technical team",
+            "accounts": "the accounts team",
+            "general": "the general team"
+          }
+        },
+        "set_status.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.tickets` should get a new status, going by `instructions`?",
+          "criteria": {
+            "#1 Charged twice for the March invoice": "ticket 1",
+            "#2 Password reset email never arrives": "ticket 2",
+            "#3 Refund for my cancelled subscription": "ticket 3",
+            "#4 How do I export my data to CSV?": "ticket 4",
+            "#5 App crashes when I open the settings page": "ticket 5",
+            "#6 Invoice shows the wrong VAT number": "ticket 6",
+            "#7 App crashes when I open the settings page": "ticket 7",
+            "#8 Password reset email never arrives": "ticket 8"
+          }
+        },
+        "set_status.status": {
+          "type": "choice",
+          "instructions": "Which status should the ticket get, going by `instructions`?",
+          "criteria": {
+            "open": "the ticket is open",
+            "pending": "the ticket is pending",
+            "closed": "the ticket is closed"
+          }
+        },
+        "tag.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.tickets` should get a tag, going by `instructions`?",
+          "criteria": {
+            "#1 Charged twice for the March invoice": "ticket 1",
+            "#2 Password reset email never arrives": "ticket 2",
+            "#3 Refund for my cancelled subscription": "ticket 3",
+            "#4 How do I export my data to CSV?": "ticket 4",
+            "#5 App crashes when I open the settings page": "ticket 5",
+            "#6 Invoice shows the wrong VAT number": "ticket 6",
+            "#7 App crashes when I open the settings page": "ticket 7",
+            "#8 Password reset email never arrives": "ticket 8"
+          }
+        },
+        "tag.tag": {
+          "type": "choice",
+          "instructions": "Which tag should the ticket get, going by `instructions`?",
+          "criteria": {
+            "refund": "the tag refund",
+            "urgent": "the tag urgent",
+            "vip": "the tag vip",
+            "bug": "the tag bug"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "assign",
+          "confidence": 1,
+          "probabilities": {
+            "assign": 1,
+            "set_status": 0,
+            "tag": 0,
+            "end": 0
+          }
+        },
+        "assign.ticket": {
+          "type": "choice",
+          "choice": "#7 App crashes when I open the settings page",
+          "confidence": 1,
+          "probabilities": {
+            "#1 Charged twice for the March invoice": 0,
+            "#2 Password reset email never arrives": 0,
+            "#3 Refund for my cancelled subscription": 0,
+            "#4 How do I export my data to CSV?": 0,
+            "#5 App crashes when I open the settings page": 0,
+            "#6 Invoice shows the wrong VAT number": 0,
+            "#7 App crashes when I open the settings page": 1,
+            "#8 Password reset email never arrives": 0
+          }
+        },
+        "assign.team": {
+          "type": "choice",
+          "choice": "technical",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "technical": 1,
+            "accounts": 0,
+            "general": 0
+          }
+        },
+        "set_status.ticket": {
+          "type": "choice",
+          "choice": "#7 App crashes when I open the settings page",
+          "confidence": 1,
+          "probabilities": {
+            "#1 Charged twice for the March invoice": 0,
+            "#2 Password reset email never arrives": 0,
+            "#3 Refund for my cancelled subscription": 0,
+            "#4 How do I export my data to CSV?": 0,
+            "#5 App crashes when I open the settings page": 0,
+            "#6 Invoice shows the wrong VAT number": 0,
+            "#7 App crashes when I open the settings page": 1,
+            "#8 Password reset email never arrives": 0
+          }
+        },
+        "set_status.status": {
+          "type": "choice",
+          "choice": "closed",
+          "confidence": 1,
+          "probabilities": {
+            "open": 0,
+            "pending": 0,
+            "closed": 1
+          }
+        },
+        "tag.ticket": {
+          "type": "choice",
+          "choice": "#7 App crashes when I open the settings page",
+          "confidence": 0.98,
+          "probabilities": {
+            "#1 Charged twice for the March invoice": 0,
+            "#2 Password reset email never arrives": 0,
+            "#3 Refund for my cancelled subscription": 0,
+            "#4 How do I export my data to CSV?": 0,
+            "#5 App crashes when I open the settings page": 0.02,
+            "#6 Invoice shows the wrong VAT number": 0,
+            "#7 App crashes when I open the settings page": 0.98,
+            "#8 Password reset email never arrives": 0
+          }
+        },
+        "tag.tag": {
+          "type": "choice",
+          "choice": "bug",
+          "confidence": 1,
+          "probabilities": {
+            "refund": 0,
+            "urgent": 0,
+            "vip": 0,
+            "bug": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1890,
+        "output_tokens": 603
+      }
+    }
+  }
+}

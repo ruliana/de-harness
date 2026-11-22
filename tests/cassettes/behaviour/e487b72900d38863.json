@@ -1,0 +1,158 @@
+{
+  "hash": "e487b72900d38863",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Assign ticket 1 to the billing team.",
+        "state": {
+          "tickets": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "body": "My card was charged two times for the March invoice. Please look into the payment.",
+              "status": "open",
+              "team": "billing",
+              "tags": []
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "body": "I click reset password but the email never arrives, so I cannot log in to my account.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "body": "I cancelled my subscription last week and was still billed. I would like a refund.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "body": "Where in the app can I download all my records as a CSV file?",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "body": "The app shuts down every time I tap settings. Version 4.2 on Android.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "body": "The VAT number printed on our latest invoice is not ours. Please correct the invoice.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "body": "Duplicate of ticket 5: I sent this a second time because nobody answered the first one.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "body": "Duplicate of ticket 2: still waiting for the reset email, sending this again.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            }
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "assign",
+            "args": {
+              "ticket": "#1 Charged twice for the March invoice",
+              "team": "billing"
+            },
+            "summary": "assigned ticket 1 to billing"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Looking at `state` and `previous_actions`, would one of these actions carry `instructions` further than they already are: assign (Assigns a ticket to a team. A closed ticket cannot be assigned any more.); set_status (Sets the status of a ticket, for instance closes it.); tag (Adds a tag to a ticket.)?",
+          "criteria": {
+            "true": "An action would take it further: a part of `instructions` is missing from `state`, or was only started or prepared (chosen but not confirmed, put aside but not paid, compared but not acted on, passed through but not reached)",
+            "false": "`state` shows everything that `instructions` ask for as done and finished, or no action could do what is left; any action left would be something `instructions` do not ask for"
+          }
+        },
+        "__wanted__.assign": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for any ticket of `state.tickets` to be assigned to a team that it is not assigned to yet?",
+          "criteria": {
+            "true": "Yes, `instructions` call for it",
+            "false": "No, `instructions` do not call for it"
+          }
+        },
+        "__wanted__.set_status": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for any ticket of `state.tickets` to get a status that it does not have yet, such as closed?",
+          "criteria": {
+            "true": "Yes, `instructions` call for it",
+            "false": "No, `instructions` do not call for it"
+          }
+        },
+        "__wanted__.tag": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for any ticket of `state.tickets` to get a tag that it does not have yet?",
+          "criteria": {
+            "true": "Yes, `instructions` call for it",
+            "false": "No, `instructions` do not call for it"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "__wanted__.assign": {
+          "type": "noul",
+          "noul": 0.13
+        },
+        "__wanted__.set_status": {
+          "type": "noul",
+          "noul": 0.11
+        },
+        "__wanted__.tag": {
+          "type": "noul",
+          "noul": 0.09
+        }
+      },
+      "usage": {
+        "input_tokens": 1299,
+        "output_tokens": 82
+      }
+    }
+  }
+}

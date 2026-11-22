@@ -39,8 +39,6 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:live": "HARNESS_CASSETTE=record NODE_USE_ENV_PROXY=1 vitest run",
-    "test:spec": "vitest run --config vitest.spec.config.ts",
-    "test:spec:live": "HARNESS_CASSETTE=record NODE_USE_ENV_PROXY=1 vitest run --config vitest.spec.config.ts",
     "example:tree": "NODE_USE_ENV_PROXY=1 tsx examples/tree/main.ts",
     "example:graph": "NODE_USE_ENV_PROXY=1 tsx examples/graph/main.ts",
     "example:rooms": "NODE_USE_ENV_PROXY=1 tsx examples/rooms/main.ts",

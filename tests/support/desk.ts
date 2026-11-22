@@ -37,7 +37,10 @@ export async function createDesk(baseUrl: string) {
   const tools: AnyTool[] = [
     defineTool({
       name: "assign",
-      description: "Assigns a ticket to a team.",
+      effect: "change",
+      description: "Assigns a ticket to a team. A closed ticket cannot be assigned any more.",
+      wanted: "Do `instructions` ask for any ticket of `state.tickets` to be assigned to a team that it is not assigned to yet?",
+      summarize: ({ ticket, team }) => `assigns the ticket ${JSON.stringify(ticket)} to the ${team} team`,
       params: {
         ticket: ticketParam("Which ticket of `state.tickets` should be assigned to a team, going by `instructions`?"),
         team: param.choice({
@@ -53,7 +56,11 @@ export async function createDesk(baseUrl: string) {
     }),
     defineTool({
       name: "set_status",
+      effect: "change",
+      final: true,
       description: "Sets the status of a ticket, for instance closes it.",
+      wanted: "Do `instructions` ask for any ticket of `state.tickets` to get a status that it does not have yet, such as closed?",
+      summarize: ({ ticket, status }) => `sets the ticket ${JSON.stringify(ticket)} to ${status}`,
       params: {
         ticket: ticketParam("Which ticket of `state.tickets` should get a new status, going by `instructions`?"),
         status: param.choice({
@@ -69,7 +76,10 @@ export async function createDesk(baseUrl: string) {
     }),
     defineTool({
       name: "tag",
+      effect: "change",
       description: "Adds a tag to a ticket.",
+      wanted: "Do `instructions` ask for any ticket of `state.tickets` to get a tag that it does not have yet?",
+      summarize: ({ ticket, tag }) => `adds the tag ${tag} to the ticket ${JSON.stringify(ticket)}`,
       params: {
         ticket: ticketParam("Which ticket of `state.tickets` should get a tag, going by `instructions`?"),
         tag: param.choice({

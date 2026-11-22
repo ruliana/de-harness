@@ -15,6 +15,7 @@ export { ScriptedInput, type ScriptedReply } from "./input/scripted.js";
 export { ToolRegistry, type ToolChange } from "./tools/registry.js";
 export { delegate, type DelegateOptions } from "./tools/delegate.js";
 export { endTool } from "./tools/builtin.js";
+export { REVIEW_QUESTION, READY_QUESTION, wantedId, type ReviewConfig } from "./review/review.js";
 export { TOOL_QUESTION, questionId, memberKey, statedKey, presentKey, thresholds } from "./questions/build.js";
 export type { HarnessEvent } from "./events/events.js";
 export type { Json, StateView } from "./state/state.js";

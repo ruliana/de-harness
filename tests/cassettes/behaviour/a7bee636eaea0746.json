@@ -1,0 +1,122 @@
+{
+  "hash": "a7bee636eaea0746",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Send the ticket about being charged twice to the money team.",
+        "state": {
+          "tickets": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "body": "My card was charged two times for the March invoice. Please look into the payment.",
+              "status": "open",
+              "team": "billing",
+              "tags": []
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "body": "I click reset password but the email never arrives, so I cannot log in to my account.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "body": "I cancelled my subscription last week and was still billed. I would like a refund.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "body": "Where in the app can I download all my records as a CSV file?",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "body": "The app shuts down every time I tap settings. Version 4.2 on Android.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "body": "The VAT number printed on our latest invoice is not ours. Please correct the invoice.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "body": "Duplicate of ticket 5: I sent this a second time because nobody answered the first one.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "body": "Duplicate of ticket 2: still waiting for the reset email, sending this again.",
+              "status": "open",
+              "team": "unassigned",
+              "tags": []
+            }
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "assign",
+            "args": {
+              "ticket": "#1 Charged twice for the March invoice",
+              "team": "billing"
+            },
+            "summary": "assigned ticket 1 to billing"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for this: assigns the ticket \"#1 Charged twice for the March invoice\" to the billing team?",
+          "criteria": {
+            "true": "`instructions` ask for it, or it is a plain part of getting what they ask for done and finished (choosing, confirming, paying), on this very item and with these values",
+            "false": "`instructions` do not ask for it: they name another item, team, status or tag, or say nothing about this kind of change"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.06
+        }
+      },
+      "usage": {
+        "input_tokens": 1036,
+        "output_tokens": 24
+      }
+    }
+  }
+}
