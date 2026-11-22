@@ -15,9 +15,9 @@ npm run example:web-page -- --serve                 # the page on http://127.0.0
 From a CDN, once the package is on npm:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/de-harness@0.1.0/dist/de-harness.iife.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/de-harness@0.2.0/dist/de-harness.iife.min.js"></script>
 <script type="module">
-  import { createAgent, JevModel } from "https://cdn.jsdelivr.net/npm/de-harness@0.1.0/dist/de-harness.browser.min.js";
+  import { createAgent, JevModel } from "https://cdn.jsdelivr.net/npm/de-harness@0.2.0/dist/de-harness.browser.min.js";
 </script>
 ```
 
