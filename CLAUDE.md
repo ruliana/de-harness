@@ -26,7 +26,6 @@ step limit is reached.
 | `npm run build` | `dist/`: compiled sources + `.d.ts`, and the browser bundles of `src/core.ts` (ESM, minified ESM, IIFE `DeHarness`) |
 | `npm test` | acceptance tests in **replay** mode: Jev and external HTTP answered from `tests/cassettes/`; no network |
 | `npm run test:live` | same tests against live Jev and HTTP, re-recording cassettes (`HARNESS_CASSETTE=record`) |
-| `npm run test:spec` | the behaviour spec (`tests/spec`): how the agent reads instructions. Some tests fail on purpose until fixed, so it is not part of `npm test` or the Premerge check. `test:spec:live` re-records `tests/cassettes/spec` |
 
 ## PR flow
 

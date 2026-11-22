@@ -6,8 +6,9 @@ import type { Answer, DecisionRequest } from "../model/types.js";
  *   tool         two-phase, first request: only the `__tool__` Choice (the full fan-out was over budget)
  *   params       two-phase, second request: only the chosen tool's parameter questions
  *   order_check  the opt-in check: only `__tool__`, with its options in reverse order
+ *   review       the opt-in review of a choice (`AgentConfig.review`): one Noul judgment
  */
-export type Phase = "single" | "tool" | "params" | "order_check";
+export type Phase = "single" | "tool" | "params" | "order_check" | "review";
 
 /** Everything the loop reports. Events are plain JSON-serialisable objects, one per line in the JSONL trace. */
 export type HarnessEvent = { ts: string } & (
@@ -19,6 +20,10 @@ export type HarnessEvent = { ts: string } & (
   | { type: "trimmed"; step: number; phase: Phase; dropped: number; estimatedTokens: number; budget: number }
   | { type: "budget_exceeded"; step: number; phase: Phase; message: string; largest: string; estimatedTokens: number; budget: number }
   | { type: "order_disagreement"; step: number; forward: string; reversed: string }
+  /** A review judgment (`AgentConfig.review`): `p` is the Noul answer, `refused` is the code's decision on it. */
+  | { type: "review"; step: number; check: "end" | "action"; tool: string; call?: string; p: number; /** actions only: is this the right moment */ ready?: number; refused: boolean }
+  /** `review.maxRefusals` calls in a row were refused: the model keeps asking for what `instructions` do not ask for, so the run ends. */
+  | { type: "review_stop"; step: number; refusals: number }
   | { type: "model_error"; step: number; message: string; status?: number }
   | { type: "tool_call"; step: number; tool: string; args: Record<string, unknown> }
   | { type: "tool_result"; step: number; tool: string; summary?: string; error?: string; end?: boolean }

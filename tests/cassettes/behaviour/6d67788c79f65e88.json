@@ -1,0 +1,143 @@
+{
+  "hash": "6d67788c79f65e88",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "You are at Airport station. Get to Southpark station by a route through Museum, then stop.",
+        "state": {
+          "network": {
+            "Red line": [
+              "Airport",
+              "Northgate",
+              "Central",
+              "Riverside",
+              "Harbour"
+            ],
+            "Blue line": [
+              "Westfield",
+              "Museum",
+              "Central",
+              "Market",
+              "Stadium"
+            ],
+            "Green line": [
+              "Northgate",
+              "Museum",
+              "Old Town",
+              "Market",
+              "Southpark"
+            ],
+            "Yellow line": [
+              "Riverside",
+              "Old Town",
+              "Hillcrest"
+            ]
+          },
+          "location": {
+            "station": "Market",
+            "next": {
+              "Central": "Blue line",
+              "Stadium": "Blue line",
+              "Southpark": "Green line"
+            }
+          },
+          "visited": [
+            "Airport",
+            "Northgate",
+            "Museum",
+            "Old Town",
+            "Market"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "move",
+            "args": {
+              "station": "Northgate"
+            },
+            "summary": "rode the Red line to Northgate"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Museum"
+            },
+            "summary": "rode the Green line to Museum"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Old Town"
+            },
+            "summary": "rode the Green line to Old Town"
+          },
+          {
+            "tool": "move",
+            "args": {
+              "station": "Market"
+            },
+            "summary": "rode the Green line to Market"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "move": "Rides one stop along a line to a neighbouring station that has not been visited yet, to get closer to the destination.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "move.station": {
+          "type": "choice",
+          "instructions": "Which of the stations in `state.location.next` is on the shortest route from `state.location.station` to the destination named in `instructions`, going by `state.network`?",
+          "criteria": {
+            "Central": "Blue line",
+            "Stadium": "Blue line",
+            "Southpark": "Green line"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "move",
+          "confidence": 0.66,
+          "probabilities": {
+            "move": 0.83,
+            "end": 0.17
+          }
+        },
+        "move.station": {
+          "type": "choice",
+          "choice": "Southpark",
+          "confidence": 1,
+          "probabilities": {
+            "Central": 0,
+            "Stadium": 0,
+            "Southpark": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 863,
+        "output_tokens": 77
+      }
+    }
+  }
+}

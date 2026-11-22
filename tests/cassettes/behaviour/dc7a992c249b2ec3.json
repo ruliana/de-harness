@@ -1,0 +1,58 @@
+{
+  "hash": "dc7a992c249b2ec3",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Take the blue mug out of the basket, then put the red mug in the basket and pay for it.",
+        "state": {
+          "page": {
+            "title": "Home",
+            "text": "Welcome to Harbour Goods.",
+            "links": {
+              "Mugs": "mugs and cups",
+              "Shirts": "t-shirts"
+            }
+          },
+          "basket": [
+            "Blue mug"
+          ]
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for this: takes the Blue mug out of the basket?",
+          "criteria": {
+            "true": "`instructions` ask for it, or it is a plain part of getting what they ask for done and finished (choosing, confirming, paying), on this very item and with these values",
+            "false": "`instructions` do not ask for it: they name another item, team, status or tag, or say nothing about this kind of change"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.99
+        }
+      },
+      "usage": {
+        "input_tokens": 477,
+        "output_tokens": 24
+      }
+    }
+  }
+}

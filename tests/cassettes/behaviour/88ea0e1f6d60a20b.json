@@ -1,0 +1,138 @@
+{
+  "hash": "88ea0e1f6d60a20b",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Order the striped shirt and the blue mug.",
+        "state": {
+          "page": {
+            "title": "Blue mug",
+            "text": "A blue enamel mug, 350 ml. In stock.",
+            "links": {
+              "Mugs": "all mugs"
+            },
+            "price": "8 EUR"
+          },
+          "seen": {
+            "Striped shirt": "25 EUR",
+            "Blue mug": "8 EUR"
+          },
+          "basket": [
+            "Striped shirt",
+            "Blue mug"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Shirts"
+            },
+            "summary": "opened the page \"Shirts\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Home"
+            },
+            "summary": "opened the page \"Home\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Mugs"
+            },
+            "summary": "opened the page \"Mugs\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Blue mug"
+            },
+            "summary": "opened the page \"Blue mug\""
+          },
+          {
+            "tool": "add_to_basket",
+            "args": {},
+            "summary": "put \"Blue mug\" into the basket"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_link": "Follows one link of the open page and opens the page it leads to.",
+            "add_to_basket": "Puts the product of the open page into the basket.",
+            "remove_from_basket": "Takes one item out of the basket.",
+            "checkout": "Pays for everything in the basket and places the order."
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "instructions": "Which link of the page in `state.page` leads towards what `instructions` ask for?",
+          "criteria": {
+            "Mugs": "all mugs"
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "instructions": "Which item of `state.basket` should be taken out of the basket, going by `instructions`?",
+          "criteria": {
+            "Striped shirt": "the Striped shirt in the basket",
+            "Blue mug": "the Blue mug in the basket"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "checkout",
+          "confidence": 0.99,
+          "probabilities": {
+            "open_link": 0.01,
+            "add_to_basket": 0,
+            "remove_from_basket": 0,
+            "checkout": 0.99
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "choice": "Mugs",
+          "confidence": 1,
+          "probabilities": {
+            "Mugs": 1
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "choice": "Striped shirt",
+          "confidence": 0.14,
+          "probabilities": {
+            "Striped shirt": 0.57,
+            "Blue mug": 0.43
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 853,
+        "output_tokens": 121
+      }
+    }
+  }
+}

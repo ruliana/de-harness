@@ -65,6 +65,35 @@ export type Tool<P extends Params = Params> = {
   /** What the tool does, concretely and distinctly from the others. Sent to the model as the criterion of this tool's option. */
   description: string;
   params?: P;
+  /**
+   * `change` marks a tool that changes something outside the agent (an order, a ticket, a record). With `review.actions`
+   * the agent checks that `instructions` ask for the call before it runs. Default `read`: never checked.
+   */
+  effect?: "read" | "change";
+  /**
+   * A yes/no question in the tool's own wording, true while `instructions` still call for this tool's work
+   * (`Do \`instructions\` ask for what is in \`state.basket\` to be bought, ordered or paid for?`). Name the state it is
+   * about by path, and make it a plain judgment that does not depend on the model's habit of what a verb means. With
+   * `review.end` the run does not end while the answer is yes for an available tool.
+   */
+  wanted?: string;
+  /**
+   * With `review.actions`: the yes/no question asked before this call runs, in place of the generic "do `instructions`
+   * ask for this" built from `summarize`. For a call whose plain phrase the model reads wrongly (it does not take
+   * "buy" for "pay"); same rules as `wanted`.
+   */
+  confirm?(args: ArgsOf<P>, ctx: AvailabilityContext): string;
+  /**
+   * With `review.actions`: this tool can close the door on other changes or cannot be undone (an order, closing a
+   * ticket), so before it runs the agent also checks that every other part of `instructions` can still be done
+   * afterwards, and otherwise does those parts first. Only meaningful on a `change` tool.
+   */
+  final?: boolean;
+  /**
+   * What this call does, in one phrase naming the item and the values, for the review of a `change` tool
+   * (`puts the Blue mug into the basket`). Without it the review shows `name(args)` and the description.
+   */
+  summarize?(args: ArgsOf<P>, ctx: AvailabilityContext): string;
   available?(ctx: AvailabilityContext): boolean;
   /** May be async and wait on anything (user input, another agent): the loop simply awaits it. A throw does not stop the run: it becomes the `error` slot. */
   run(args: ArgsOf<P>, ctx: ToolContext): ToolResult | Promise<ToolResult>;

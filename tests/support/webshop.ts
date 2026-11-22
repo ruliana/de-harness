@@ -24,10 +24,12 @@ const PAGES: Record<string, Page> = {
 };
 
 export function createWebshop() {
-  const world = { at: "Home", trail: ["Home"], basket: [] as string[], orders: [] as string[][] };
+  const world = { at: "Home", trail: ["Home"], basket: [] as string[], orders: [] as string[][], seen: {} as Record<string, string> };
   const slots = (): Record<string, Json | null> => {
     const page = PAGES[world.at]!;
+    if (page.product) world.seen[page.product.name] = `${page.product.price} EUR`;
     return {
+      seen: Object.keys(world.seen).length ? { ...world.seen } : null,
       page: { title: page.title, text: page.text, links: page.links, ...(page.product ? { price: `${page.product.price} EUR` } : {}) },
       basket: world.basket.length ? [...world.basket] : null,
       orders: world.orders.length ? world.orders.map((o) => [...o]) : null,
@@ -52,7 +54,9 @@ export function createWebshop() {
     }),
     defineTool({
       name: "add_to_basket",
+      effect: "change",
       description: "Puts the product of the open page into the basket.",
+      summarize: (_args, ctx) => `puts the ${ctx.state.page?.title} on the open page into the basket`,
       available: (ctx) => ctx.state.page?.price !== undefined,
       run: () => {
         world.basket.push(PAGES[world.at]!.product!.name);
@@ -61,7 +65,9 @@ export function createWebshop() {
     }),
     defineTool({
       name: "remove_from_basket",
+      effect: "change",
       description: "Takes one item out of the basket.",
+      summarize: ({ item }) => `takes the ${item} out of the basket`,
       params: {
         item: param.choice({
           question: "Which item of `state.basket` should be taken out of the basket, going by `instructions`?",
@@ -76,7 +82,12 @@ export function createWebshop() {
     }),
     defineTool({
       name: "checkout",
+      effect: "change",
+      final: true,
+      wanted: "Do `instructions` ask for every item in `state.basket` to be bought, ordered or paid for?",
+      confirm: () => "Do `instructions` ask for every item in `state.basket` to be bought, ordered or paid for?",
       description: "Pays for everything in the basket and places the order.",
+      summarize: (_args, ctx) => `pays for everything in the basket (${(ctx.state.basket as string[]).join(", ")}) and places the order`,
       available: (ctx) => ctx.state.basket != null,
       run: () => {
         world.orders.push([...world.basket]);

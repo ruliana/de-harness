@@ -22,6 +22,7 @@ import { createInputPort, type InputProvider } from "../input/provider.js";
 import { extractImages } from "../state/images.js";
 import { StateDocument, type Json } from "../state/state.js";
 import { endTool } from "../tools/builtin.js";
+import { DEFAULT_MAX_REFUSALS, DEFAULT_REVIEW_THRESHOLD, REVIEW_QUESTION, STRICT_END_DESCRIPTION, STRICT_TOOL_QUESTION_TEXT, READY_QUESTION, askedQuestion, wantedId, wantedQuestion, callPhrase, describeCall, readyQuestion, remainingQuestion, type ReviewConfig } from "../review/review.js";
 import { ToolRegistry } from "../tools/registry.js";
 import type { AnyTool, ToolContext, ToolResult } from "../tools/tool.js";
 
@@ -45,6 +46,11 @@ export type AgentConfig = {
    * One extra request per step.
    */
   orderCheck?: boolean;
+  /**
+   * Opt-in review of the model's own choices: stricter wording, a check before the run ends, a check before a tool
+   * marked `effect: "change"` runs. Each check is one extra Noul request; see `src/review/review.ts`.
+   */
+  review?: ReviewConfig;
   /** State slots before the first step. */
   initialState?: Record<string, Json>;
   /** Write every event to this file as JSONL (Node only; in a browser use `onEvent`). */
@@ -78,6 +84,10 @@ export type StepRecord = {
   summary?: string;
   /** Set when the tool threw. */
   error?: string;
+  /** Set when `review.actions` found that `instructions` do not ask for this call: the tool did not run. */
+  refused?: string;
+  /** Tools whose choice `review.end` turned down this step (`end`), after which the model chose again. */
+  vetoed?: string[];
 };
 
 export type RunResult = {
@@ -100,7 +110,7 @@ export type Agent = {
 
 export function createAgent(config: AgentConfig): Agent {
   const tools = new ToolRegistry([...config.tools]);
-  if (!tools.has("end")) tools.add(endTool());
+  if (!tools.has("end")) tools.add(endTool(config.review?.wording ? { description: STRICT_END_DESCRIPTION } : {}));
   return { tools, run: () => run(config, tools) };
 }
 
@@ -120,6 +130,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     config.onEvent?.(event);
   };
 
+  let refusals = 0;
   // step 0 is before the first step (tools added through `agent.tools` before `run`)
   let currentStep = 0;
   const stopListening = tools.onChange((c) => emit({ type: "tools_changed", step: currentStep, change: c.change, tool: c.tool, tools: tools.list().map((t) => t.name) }));
@@ -136,12 +147,9 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     currentStep = step;
     if (signal.aborted) return finish("aborted");
 
-    // 1. which tools are available now (code only), and their questions
+    // 1. which tools are available now (code only)
     const view = doc.view();
     const candidates = tools.list().filter((t) => t.available?.({ state: view, step, tools }) ?? true);
-    const plan = buildQuestions(candidates, { state: view, step });
-    emit({ type: "step_start", step, tools: plan.tools.map((t) => t.name), skipped: plan.skipped });
-    if (plan.tools.length === 0) return finish("error", { error: new Error("No tool is available") });
 
     // 2. ask: one request, or two when the full request is over budget
     // images in the state travel as references, listed once in `images` (and are not part of the token estimate)
@@ -149,7 +157,6 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
       const { value: state, images } = extractImages(doc.document(config.instructions, shown, window > 0));
       return { state, questions, ...(Object.keys(images).length ? { images } : {}) };
     };
-    const full = requestOf(window, plan.questions);
     const sent: StepRecord["requests"] = [];
     const answers: Record<string, Answer> = {};
     let current: Phase = "single";
@@ -169,45 +176,92 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
       emit({ type: "answers", step, phase, model: response.model, answers: response.answers, usage: response.usage });
       return response;
     };
-    try {
-      const fullTokens = requestTokens(full);
-      if (fullTokens <= budget) {
-        Object.assign(answers, (await ask("single", plan.questions)).answers);
-      } else {
-        emit({ type: "two_phase", step, estimatedTokens: fullTokens, budget });
-        Object.assign(answers, (await ask("tool", toolQuestionOnly(plan))).answers);
-        const chosen = pickedTool(answers, plan);
-        if (Object.keys(chosen.params ?? {}).length > 0) Object.assign(answers, (await ask("params", paramQuestions(plan, chosen))).answers);
+    /** One review judgment (a Noul over the same state document). */
+    const judge = async (questions: Record<string, Question>): Promise<Record<string, number>> => {
+      const response = await ask("review", questions);
+      return Object.fromEntries(
+        Object.keys(questions).map((id) => {
+          const a = response.answers[id];
+          if (a?.type !== "noul") throw new AnswerError(`The model did not answer the review question "${id}"`);
+          return [id, a.noul];
+        }),
+      );
+    };
+    const cut = config.review?.threshold ?? DEFAULT_REVIEW_THRESHOLD;
+
+    // the choice of this step; with `review.end` an end that still leaves work is refused and the model chooses again
+    const vetoed: string[] = [];
+    let plan!: ReturnType<typeof buildQuestions>;
+    let tool!: AnyTool;
+    let parsed!: ReturnType<typeof parseArgs>;
+    for (let attempt = 0; ; attempt++) {
+      plan = buildQuestions(candidates.filter((t) => !vetoed.includes(t.name)), { state: view, step }, config.review?.wording ? { toolQuestion: STRICT_TOOL_QUESTION_TEXT } : {});
+      if (attempt === 0) emit({ type: "step_start", step, tools: plan.tools.map((t) => t.name), skipped: plan.skipped });
+      if (plan.tools.length === 0) return finish("error", { error: new Error("No tool is available") });
+      try {
+        const fullTokens = requestTokens(requestOf(window, plan.questions));
+        if (fullTokens <= budget) {
+          Object.assign(answers, (await ask("single", plan.questions)).answers);
+        } else {
+          emit({ type: "two_phase", step, estimatedTokens: fullTokens, budget });
+          Object.assign(answers, (await ask("tool", toolQuestionOnly(plan))).answers);
+          const chosen = pickedTool(answers, plan);
+          if (Object.keys(chosen.params ?? {}).length > 0) Object.assign(answers, (await ask("params", paramQuestions(plan, chosen))).answers);
+        }
+        if (config.orderCheck && plan.tools.length > 1 && attempt === 0) {
+          const reversed = (await ask("order_check", toolQuestionOnly(plan, true))).answers[TOOL_QUESTION];
+          const forward = answers[TOOL_QUESTION];
+          if (forward?.type === "choice" && reversed?.type === "choice" && forward.choice !== reversed.choice) {
+            emit({ type: "order_disagreement", step, forward: forward.choice, reversed: reversed.choice });
+          }
+        }
+      } catch (e) {
+        const error = e instanceof Error ? e : new Error(String(e));
+        if (error instanceof BudgetError) {
+          emit({ type: "budget_exceeded", step, phase: current, message: error.message, largest: error.largest.name, estimatedTokens: error.estimatedTokens, budget });
+        } else {
+          emit({ type: "model_error", step, message: error.message, status: error instanceof DecisionModelError ? error.status : undefined });
+        }
+        return finish("error", { error });
       }
-      if (config.orderCheck && plan.tools.length > 1) {
-        const reversed = (await ask("order_check", toolQuestionOnly(plan, true))).answers[TOOL_QUESTION];
-        const forward = answers[TOOL_QUESTION];
-        if (forward?.type === "choice" && reversed?.type === "choice" && forward.choice !== reversed.choice) {
-          emit({ type: "order_disagreement", step, forward: forward.choice, reversed: reversed.choice });
+
+      // 3. read the chosen tool's answers only
+      try {
+        tool = pickedTool(answers, plan);
+        parsed = parseArgs(tool, answers, plan);
+      } catch (e) {
+        if (!(e instanceof AnswerError)) throw e;
+        emit({ type: "model_error", step, message: e.message });
+        return finish("error", { error: e });
+      }
+
+      // 3b. review.end: Jev judges whether anything doable is left; code refuses the end when it says so
+      if (config.review?.end && tool.name === "end" && plan.tools.length > 1) {
+        let left: number;
+        const others = plan.tools.filter((t) => t.name !== "end");
+        const wanted = others.filter((t) => t.wanted);
+        try {
+          const verdict = await judge({
+            [REVIEW_QUESTION]: remainingQuestion(others),
+            ...Object.fromEntries(wanted.map((t) => [wantedId(t.name), wantedQuestion(t.wanted!)])),
+          });
+          // something is left when the general question says so, or any available tool's own question does
+          left = Math.max(...Object.values(verdict));
+        } catch (e) {
+          const error = e instanceof Error ? e : new Error(String(e));
+          emit({ type: "model_error", step, message: error.message, status: error instanceof DecisionModelError ? error.status : undefined });
+          return finish("error", { error });
+        }
+        const refused = left >= cut;
+        emit({ type: "review", step, check: "end", tool: "end", p: left, refused });
+        if (refused) {
+          vetoed.push("end");
+          continue;
         }
       }
-    } catch (e) {
-      const error = e instanceof Error ? e : new Error(String(e));
-      if (error instanceof BudgetError) {
-        emit({ type: "budget_exceeded", step, phase: current, message: error.message, largest: error.largest.name, estimatedTokens: error.estimatedTokens, budget });
-      } else {
-        emit({ type: "model_error", step, message: error.message, status: error instanceof DecisionModelError ? error.status : undefined });
-      }
-      return finish("error", { error });
+      break;
     }
     const request = sent[0]!.request;
-
-    // 3. read the chosen tool's answers only
-    let tool: AnyTool;
-    let parsed: ReturnType<typeof parseArgs>;
-    try {
-      tool = pickedTool(answers, plan);
-      parsed = parseArgs(tool, answers, plan);
-    } catch (e) {
-      if (!(e instanceof AnswerError)) throw e;
-      emit({ type: "model_error", step, message: e.message });
-      return finish("error", { error: e });
-    }
 
     // 4. run it (it may await anything)
     emit({ type: "tool_call", step, tool: tool.name, args: parsed.args });
@@ -232,11 +286,38 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     const ctx: ToolContext = { state: view, answers: parsed.raw, step, instructions: config.instructions, signal, tools, input, emit: (name, data) => emit({ type: "custom", step, name, data }), runAgent };
     let result: ToolResult;
     let error: string | undefined;
-    try {
-      result = await tool.run(parsed.args as never, ctx);
-    } catch (e) {
-      error = e instanceof Error ? e.message : String(e);
-      result = { state: { error } };
+    let refused: string | undefined;
+    // review.actions: Jev judges whether `instructions` ask for this call; code refuses it when they do not
+    if (config.review?.actions && tool.effect === "change") {
+      const at = { state: view, step, tools };
+      const phrase = callPhrase(tool, parsed.args, at);
+      let verdict: Record<string, number>;
+      try {
+        verdict = await judge({
+          [REVIEW_QUESTION]: tool.confirm ? wantedQuestion(tool.confirm(parsed.args as never, at)) : askedQuestion(phrase),
+          ...(tool.final ? { [READY_QUESTION]: readyQuestion(phrase, candidates.filter((t) => t.name !== "end")) } : {}),
+        });
+      } catch (e) {
+        const err = e instanceof Error ? e : new Error(String(e));
+        emit({ type: "model_error", step, message: err.message, status: err instanceof DecisionModelError ? err.status : undefined });
+        return finish("error", { error: err });
+      }
+      const asked = verdict[REVIEW_QUESTION]!;
+      const ready = verdict[READY_QUESTION];
+      const call = tool.summarize?.(parsed.args as never, at) ?? describeCall(tool, parsed.args);
+      emit({ type: "review", step, check: "action", tool: tool.name, call, p: asked, ...(ready !== undefined ? { ready } : {}), refused: asked < cut || (ready ?? 1) < cut });
+      if (asked < cut) refused = `Not done: ${call}. \`instructions\` do not ask for it.`;
+      else if (ready !== undefined && ready < cut) refused = `Not done yet: ${call}. Doing it now would stop another part of \`instructions\` from being done: do the other parts first.`;
+    }
+    if (refused) {
+      result = { state: { error: refused }, summary: `not done, not asked for: ${tool.summarize?.(parsed.args as never, { state: view, step, tools }) ?? describeCall(tool, parsed.args)}` };
+    } else {
+      try {
+        result = await tool.run(parsed.args as never, ctx);
+      } catch (e) {
+        error = e instanceof Error ? e.message : String(e);
+        result = { state: { error } };
+      }
     }
 
     // an abort while the tool was waiting (user input, a sub-agent) ends the run; the half-done step is not recorded
@@ -247,10 +328,16 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     if (result.state) doc.merge(result.state);
     const summary = error ? `failed: ${error}` : result.summary;
     doc.record({ tool: tool.name, args: parsed.args, ...(summary !== undefined ? { summary } : {}) });
-    steps.push({ step, tool: tool.name, args: parsed.args, answers: parsed.raw, request, requests: sent, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}) });
+    steps.push({ step, tool: tool.name, args: parsed.args, answers: parsed.raw, request, requests: sent, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}), ...(refused ? { refused } : {}), ...(vetoed.length ? { vetoed: [...vetoed] } : {}) });
     emit({ type: "tool_result", step, tool: tool.name, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}), ...(result.end ? { end: true } : {}) });
 
     if (result.end) return finish("ended", { output: result.output });
+    if (refused) {
+      if (++refusals >= (config.review?.maxRefusals ?? DEFAULT_MAX_REFUSALS)) {
+        emit({ type: "review_stop", step, refusals });
+        return finish("ended", { output: doc.view() });
+      }
+    } else refusals = 0;
   }
   return finish("step_limit");
 }

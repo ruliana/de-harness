@@ -6,6 +6,7 @@ import type { Answer, Question } from "../model/types.js";
 import { isImageValue } from "../state/images.js";
 import { MEMBER, defaultThresholds, normalizeOptions, readNoul, type ParamContext, type ParamSpec } from "../tools/param.js";
 import type { AnyTool } from "../tools/tool.js";
+import { TOOL_QUESTION_TEXT } from "../review/review.js";
 
 export const TOOL_QUESTION = "__tool__";
 export const questionId = (tool: string, param: string) => `${tool}.${param}`;
@@ -43,7 +44,7 @@ export type QueryPlan = {
   members: Record<string, string[]>;
 };
 
-export function buildQuestions(tools: AnyTool[], ctx: ParamContext): QueryPlan {
+export function buildQuestions(tools: AnyTool[], ctx: ParamContext, opts: { toolQuestion?: string } = {}): QueryPlan {
   const questions: Record<string, Question> = {};
   const options: Record<string, string[]> = {};
   const members: Record<string, string[]> = {};
@@ -100,7 +101,7 @@ export function buildQuestions(tools: AnyTool[], ctx: ParamContext): QueryPlan {
     questions: {
       [TOOL_QUESTION]: {
         type: "choice",
-        instructions: "Which action best advances `instructions`, given `state` and `previous_actions`?",
+        instructions: opts.toolQuestion ?? TOOL_QUESTION_TEXT,
         criteria: Object.fromEntries(used.map((t) => [t.name, t.description])),
       },
       ...questions,

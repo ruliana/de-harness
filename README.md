@@ -18,7 +18,6 @@ npm ci
 npm run typecheck
 npm test            # replay mode, no network
 npm run test:live   # live Jev, re-records cassettes
-npm run test:spec   # behaviour spec: tests that fail on purpose until the agent stops being too literal or overreaching
 ```
 
 ## Examples
@@ -41,6 +40,25 @@ Each one has a README that says what it shows and how to run it.
 - [Kanban](examples/kanban/): the same kind of panel beside a Kanban board: it drags cards between columns, opens a card to assign it, and asks you when the instruction does not say who. The panel says nothing until the result.
 - [Web page](examples/web-page/): the browser bundle in a plain web page, with `JevModel` pointed at a small proxy on the page's own server that holds the key.
 - [Diagram](examples/diagram/): the same panel beside a Mermaid diagram (flowchart or sequence): the diagram text is the state, it draws, edits and asks you what a failure should do, and the page animates every change with CSS transitions.
+
+## Reviewing the model's choices
+
+Left alone, the model does what looks plausible: it does more than it was asked, or stops when the last step matches a phrase of
+the instructions. `createAgent({ review })` adds checks, each one extra Jev judgment that code acts on (`src/review/review.ts`):
+
+```ts
+createAgent({ model, instructions, tools, review: { end: true, actions: true } })
+```
+
+- `end`: before the run ends, ask whether anything doable is left; if so the end is refused and the model chooses again.
+- `actions`: before a tool marked `effect: "change"` runs, ask whether `instructions` ask for this very call; if not it does not run
+  (the model sees why for one step), and after two refusals in a row the run ends. A `final: true` tool also waits until the
+  other parts are done.
+- `wording`: ask the tool question as "exactly what `instructions` ask, no more and no less".
+- A tool can word its own checks: `summarize` (what this call does), `wanted` (is its work still called for, used by `end`),
+  `confirm` (the question to ask before it runs).
+
+It is off by default, so existing recordings stay valid. [`tests/acceptance/behaviour`](tests/acceptance/behaviour/) shows what each check fixes.
 
 ## In a web page
 

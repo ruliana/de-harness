@@ -1,0 +1,129 @@
+{
+  "hash": "b0c4eba08f7dfdae",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Tickets that complain about payments go to billing.",
+        "state": {
+          "queue": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            }
+          ]
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_ticket": "Opens the next ticket of `state.queue` that has not been looked at yet, so that its body can be read and handled. Use it when the open ticket needs nothing more."
+          }
+        },
+        "open_ticket.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.queue` should be looked at next to carry out `instructions`?",
+          "criteria": {
+            "#1 Charged twice for the March invoice": "Ticket 1, currently unassigned and open",
+            "#2 Password reset email never arrives": "Ticket 2, currently unassigned and open",
+            "#3 Refund for my cancelled subscription": "Ticket 3, currently unassigned and open",
+            "#4 How do I export my data to CSV?": "Ticket 4, currently unassigned and open",
+            "#5 App crashes when I open the settings page": "Ticket 5, currently unassigned and open",
+            "#6 Invoice shows the wrong VAT number": "Ticket 6, currently unassigned and open",
+            "#7 App crashes when I open the settings page": "Ticket 7, currently unassigned and open",
+            "#8 Password reset email never arrives": "Ticket 8, currently unassigned and open"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "open_ticket",
+          "confidence": 1,
+          "probabilities": {
+            "open_ticket": 1
+          }
+        },
+        "open_ticket.ticket": {
+          "type": "choice",
+          "choice": "#1 Charged twice for the March invoice",
+          "confidence": 0.98,
+          "probabilities": {
+            "#1 Charged twice for the March invoice": 0.98,
+            "#2 Password reset email never arrives": 0,
+            "#3 Refund for my cancelled subscription": 0.01,
+            "#4 How do I export my data to CSV?": 0,
+            "#5 App crashes when I open the settings page": 0,
+            "#6 Invoice shows the wrong VAT number": 0.01,
+            "#7 App crashes when I open the settings page": 0,
+            "#8 Password reset email never arrives": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 962,
+        "output_tokens": 173
+      }
+    }
+  }
+}
