@@ -1,0 +1,195 @@
+{
+  "hash": "0b47cbc852f89505",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Mark the ticket about the settings crash as urgent.",
+        "state": {
+          "queue": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "closed"
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            }
+          ],
+          "open_ticket": {
+            "id": 7,
+            "subject": "App crashes when I open the settings page",
+            "body": "Duplicate of ticket 5: I sent this a second time because nobody answered the first one.",
+            "status": "closed",
+            "team": "unassigned",
+            "tags": [
+              "urgent"
+            ]
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#5 App crashes when I open the settings page"
+            },
+            "summary": "opened ticket 5"
+          },
+          {
+            "tool": "tag",
+            "args": {
+              "tag": "urgent"
+            },
+            "summary": "tagged ticket 5 as urgent"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#7 App crashes when I open the settings page"
+            },
+            "summary": "opened ticket 7"
+          },
+          {
+            "tool": "tag",
+            "args": {
+              "tag": "urgent"
+            },
+            "summary": "tagged ticket 7 as urgent"
+          },
+          {
+            "tool": "set_status",
+            "args": {
+              "status": "closed",
+              "repeats_another": true
+            },
+            "summary": "set ticket 7 to closed"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_ticket": "Opens the next ticket of `state.queue` that has not been looked at yet, so that its body can be read and handled. Use it when the open ticket needs nothing more.",
+            "tag": "Adds one tag to the open ticket (`state.open_ticket`). Use it only when `instructions` ask for tags."
+          }
+        },
+        "open_ticket.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.queue` should be looked at next to carry out `instructions`?",
+          "criteria": {
+            "#1 Charged twice for the March invoice": "Ticket 1, currently unassigned and open",
+            "#2 Password reset email never arrives": "Ticket 2, currently unassigned and open",
+            "#3 Refund for my cancelled subscription": "Ticket 3, currently unassigned and open",
+            "#4 How do I export my data to CSV?": "Ticket 4, currently unassigned and open",
+            "#6 Invoice shows the wrong VAT number": "Ticket 6, currently unassigned and open",
+            "#8 Password reset email never arrives": "Ticket 8, currently unassigned and open"
+          }
+        },
+        "tag.tag": {
+          "type": "choice",
+          "instructions": "Which tag should be added to the ticket in `state.open_ticket` to carry out `instructions`?",
+          "criteria": {
+            "refund": "the customer wants money back",
+            "urgent": "the customer cannot work until it is fixed",
+            "vip": "the customer is a key account",
+            "bug": "the product misbehaves"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "tag",
+          "confidence": 0.1,
+          "probabilities": {
+            "open_ticket": 0.45,
+            "tag": 0.55
+          }
+        },
+        "open_ticket.ticket": {
+          "type": "choice",
+          "choice": "#1 Charged twice for the March invoice",
+          "confidence": 0.11,
+          "probabilities": {
+            "#1 Charged twice for the March invoice": 0.26,
+            "#2 Password reset email never arrives": 0.24,
+            "#3 Refund for my cancelled subscription": 0.09,
+            "#4 How do I export my data to CSV?": 0.13,
+            "#6 Invoice shows the wrong VAT number": 0.18,
+            "#8 Password reset email never arrives": 0.1
+          }
+        },
+        "tag.tag": {
+          "type": "choice",
+          "choice": "urgent",
+          "confidence": 1,
+          "probabilities": {
+            "refund": 0,
+            "urgent": 1,
+            "vip": 0,
+            "bug": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1338,
+        "output_tokens": 190
+      }
+    }
+  }
+}

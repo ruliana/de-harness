@@ -18,6 +18,7 @@ npm ci
 npm run typecheck
 npm test            # replay mode, no network
 npm run test:live   # live Jev, re-records cassettes
+npm run test:spec   # behaviour spec: tests that fail on purpose until the agent stops being too literal or overreaching
 ```
 
 ## Examples
