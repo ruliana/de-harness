@@ -109,11 +109,11 @@
       "answers": {
         "__review__": {
           "type": "noul",
-          "noul": 0.69
+          "noul": 0.71
         },
         "__ready__": {
           "type": "noul",
-          "noul": 0.81
+          "noul": 0.82
         }
       },
       "usage": {

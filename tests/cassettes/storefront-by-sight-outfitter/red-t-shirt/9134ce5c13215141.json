@@ -70,11 +70,11 @@
         },
         "optionChosen": {
           "type": "noul",
-          "noul": 0.03
+          "noul": 0.02
         },
         "valueVisible": {
           "type": "noul",
-          "noul": 0.93
+          "noul": 0.95
         },
         "pageKind": {
           "type": "choice",

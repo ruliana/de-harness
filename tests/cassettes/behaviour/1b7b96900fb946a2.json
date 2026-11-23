@@ -146,15 +146,15 @@
         },
         "__wanted__.assign": {
           "type": "noul",
-          "noul": 0.22
+          "noul": 0.2
         },
         "__wanted__.set_status": {
           "type": "noul",
-          "noul": 0.25
+          "noul": 0.23
         },
         "__wanted__.tag": {
           "type": "noul",
-          "noul": 0.1
+          "noul": 0.09
         }
       },
       "usage": {

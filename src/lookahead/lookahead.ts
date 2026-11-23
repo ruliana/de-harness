@@ -28,7 +28,7 @@ import type { PreviousAction, StateView, Json } from "../state/state.js";
 import { readNoul, type ChoiceSpec, type ParamSpec, type Thresholds } from "../tools/param.js";
 import type { ToolRegistry } from "../tools/registry.js";
 import type { AnyTool } from "../tools/tool.js";
-import { describeCall, TOOL_QUESTION_TEXT } from "../review/review.js";
+import { describeCall } from "../review/review.js";
 
 /** A requirement or a constraint: a plain statement about `state` for Jev to judge, optionally with a check in code that decides instead. */
 export type Criterion = string | { text: string; check?: (state: StateView) => boolean };
@@ -64,6 +64,8 @@ export type LookaheadConfig = {
 export type PlanRound = {
   step: number;
   instructions: string;
+  /** The wording of the tool question in the shortlist (the same as a greedy step's: the task quoted in it, unless `quoteTask` is off). */
+  toolQuestion: string;
   /** The real state. */
   view: StateView;
   /** The real previous actions that are shown (already windowed). */
@@ -192,7 +194,7 @@ export class Planner {
 
   /** The legal (tool, arguments) pairs worth looking at in a state: the most probable by Jev's Choices, with the tools that cannot be previewed apart. */
   private async shortlist(round: PlanRound, slots: Record<string, Json>, path: Move[], tools: AnyTool[]): Promise<{ moves: Move[]; plan: QueryPlan; answers: Record<string, Answer> } | undefined> {
-    const plan = buildQuestions(tools, { state: slots, step: round.step }, { toolQuestion: TOOL_QUESTION_TEXT });
+    const plan = buildQuestions(tools, { state: slots, step: round.step }, { toolQuestion: round.toolQuestion });
     if (plan.tools.length === 0) return undefined;
     const shown = [...round.history, ...path.map((m) => ({ tool: m.tool.name, args: m.args, summary: m.summary ?? m.call }))].slice(-Math.max(round.window, path.length));
     const doc: Record<string, unknown> = { instructions: round.instructions, state: slots, ...(round.window > 0 ? { previous_actions: shown } : {}) };

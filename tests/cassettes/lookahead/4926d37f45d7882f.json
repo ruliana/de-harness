@@ -1,0 +1,64 @@
+{
+  "hash": "4926d37f45d7882f",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Print the signed contract in colour.",
+        "state": {
+          "desk": {
+            "document": "unsigned",
+            "printer": "online",
+            "output": "nothing printed yet",
+            "files": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "connect_printer",
+            "args": {},
+            "summary": "connected to the printer"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Print the signed contract in colour.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "sign_document": "Signs the contract.",
+            "export_pdf": "Saves the contract as a PDF file."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "sign_document",
+          "confidence": 1,
+          "probabilities": {
+            "sign_document": 1,
+            "export_pdf": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 437,
+        "output_tokens": 38
+      }
+    }
+  }
+}

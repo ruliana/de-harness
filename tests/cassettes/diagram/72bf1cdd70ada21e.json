@@ -44,11 +44,11 @@
       "answers": {
         "wrong-password": {
           "type": "noul",
-          "noul": 0.92
+          "noul": 0.91
         },
         "remove_node": {
           "type": "noul",
-          "noul": 0.02
+          "noul": 0.03
         },
         "rename_node": {
           "type": "noul",
@@ -56,11 +56,11 @@
         },
         "disconnect": {
           "type": "noul",
-          "noul": 0.16
+          "noul": 0.12
         },
         "relabel_edge": {
           "type": "noul",
-          "noul": 0.18
+          "noul": 0.17
         }
       },
       "usage": {

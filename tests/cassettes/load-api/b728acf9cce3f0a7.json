@@ -1,0 +1,375 @@
+{
+  "hash": "b728acf9cce3f0a7",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Close Ben's open ticket about the printer as won't fix and email the requester",
+        "state": {
+          "loaded": {
+            "api": "helpdesk",
+            "tools": [
+              "list_tickets",
+              "get_ticket",
+              "update_ticket",
+              "delete_ticket",
+              "close_ticket"
+            ],
+            "not_loaded": [
+              "create_ticket: parameter \"title\" is free text, which the model cannot write, and no candidates were supplied"
+            ]
+          },
+          "api": {
+            "list_tickets": [
+              {
+                "id": 3,
+                "title": "Invoice 4417 shows the wrong VAT number",
+                "status": "open",
+                "assignee": "carla"
+              },
+              {
+                "id": 4,
+                "title": "Badge reader at the front door is offline",
+                "status": "open",
+                "assignee": "ana"
+              },
+              {
+                "id": 5,
+                "title": "Welcome pack for the new hire, to be prepared with Ana",
+                "status": "open",
+                "assignee": "ben"
+              },
+              {
+                "id": 6,
+                "title": "Old laptop to be recycled",
+                "status": "open",
+                "assignee": null
+              }
+            ],
+            "close_ticket": {
+              "id": 1,
+              "title": "Printer on floor 2 jams on every page",
+              "status": "closed",
+              "assignee": "ben",
+              "priority": 2,
+              "labels": [
+                "bug"
+              ],
+              "resolution": "wontfix",
+              "notified": true
+            }
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "load_api",
+            "args": {
+              "api": "helpdesk"
+            },
+            "summary": "loaded the helpdesk API: 5 tools"
+          },
+          {
+            "tool": "list_tickets",
+            "args": {
+              "status": "open"
+            },
+            "summary": "GET /tickets -> list_tickets"
+          },
+          {
+            "tool": "close_ticket",
+            "args": {
+              "id": "1",
+              "resolution": "wontfix",
+              "notify": true
+            },
+            "summary": "POST /tickets/{id}/close -> close_ticket"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Close Ben's open ticket about the printer as won't fix and email the requester\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out.",
+            "list_tickets": "List tickets (GET /tickets). Lists the tickets, newest last. Each has an id, title, status and assignee. The response is put in `state.api.list_tickets`.",
+            "get_ticket": "Read a ticket (GET /tickets/{id}). Returns one ticket with its labels, priority and resolution. The response is put in `state.api.get_ticket`.",
+            "update_ticket": "Reassign or label a ticket (PATCH /tickets/{id}). Changes who a ticket is assigned to, or which labels it carries. The response is put in `state.api.update_ticket`.",
+            "delete_ticket": "Delete a ticket (DELETE /tickets/{id}). Removes the ticket for good. The response is put in `state.api.delete_ticket`.",
+            "close_ticket": "Close a ticket (POST /tickets/{id}/close). Marks an open ticket as closed. Closing a closed ticket is a conflict. The response is put in `state.api.close_ticket`."
+          }
+        },
+        "list_tickets.status": {
+          "type": "choice",
+          "instructions": "For the action \"List tickets\", which `status` (open or closed) do `instructions` call for?",
+          "criteria": {
+            "open": "",
+            "closed": ""
+          }
+        },
+        "list_tickets.status?stated": {
+          "type": "noul",
+          "instructions": "For the action \"List tickets\", do `instructions` state `status` (open or closed)?"
+        },
+        "list_tickets.assignee": {
+          "type": "choice",
+          "instructions": "For the action \"List tickets\", which `assignee` (who the ticket is assigned to) do `instructions` call for?",
+          "criteria": {
+            "ana": "",
+            "ben": "",
+            "carla": ""
+          }
+        },
+        "list_tickets.assignee?stated": {
+          "type": "noul",
+          "instructions": "For the action \"List tickets\", do `instructions` state `assignee` (who the ticket is assigned to)?"
+        },
+        "get_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Read a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "3": "title: Invoice 4417 shows the wrong VAT number, status: open, assignee: carla",
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana",
+            "5": "title: Welcome pack for the new hire, to be prepared with Ana, status: open, assignee: ben",
+            "6": "title: Old laptop to be recycled, status: open"
+          }
+        },
+        "update_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Reassign or label a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "3": "title: Invoice 4417 shows the wrong VAT number, status: open, assignee: carla",
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana",
+            "5": "title: Welcome pack for the new hire, to be prepared with Ana, status: open, assignee: ben",
+            "6": "title: Old laptop to be recycled, status: open"
+          }
+        },
+        "update_ticket.assignee": {
+          "type": "choice",
+          "instructions": "For the action \"Reassign or label a ticket\", which `assignee` (who the ticket is assigned to) do `instructions` call for?",
+          "criteria": {
+            "ana": "",
+            "ben": "",
+            "carla": ""
+          }
+        },
+        "update_ticket.assignee?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` state `assignee` (who the ticket is assigned to)?"
+        },
+        "update_ticket.labels[billing]": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` call for billing as `labels` (the labels the ticket should carry)?"
+        },
+        "update_ticket.labels[bug]": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` call for bug as `labels` (the labels the ticket should carry)?"
+        },
+        "update_ticket.labels[urgent]": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` call for urgent as `labels` (the labels the ticket should carry)?"
+        },
+        "update_ticket.labels?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Reassign or label a ticket\", do `instructions` state `labels` (the labels the ticket should carry)?"
+        },
+        "delete_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Delete a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "3": "title: Invoice 4417 shows the wrong VAT number, status: open, assignee: carla",
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana",
+            "5": "title: Welcome pack for the new hire, to be prepared with Ana, status: open, assignee: ben",
+            "6": "title: Old laptop to be recycled, status: open"
+          }
+        },
+        "close_ticket.id": {
+          "type": "choice",
+          "instructions": "Which entry of `state.api.list_tickets` is the id for the action \"Close a ticket\", to carry out `instructions`?",
+          "criteria": {
+            "3": "title: Invoice 4417 shows the wrong VAT number, status: open, assignee: carla",
+            "4": "title: Badge reader at the front door is offline, status: open, assignee: ana",
+            "5": "title: Welcome pack for the new hire, to be prepared with Ana, status: open, assignee: ben",
+            "6": "title: Old laptop to be recycled, status: open"
+          }
+        },
+        "close_ticket.resolution": {
+          "type": "choice",
+          "instructions": "For the action \"Close a ticket\", which `resolution` (how the ticket was resolved) do `instructions` call for?",
+          "criteria": {
+            "fixed": "",
+            "wontfix": "",
+            "duplicate": ""
+          }
+        },
+        "close_ticket.resolution?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Close a ticket\", do `instructions` state `resolution` (how the ticket was resolved)?"
+        },
+        "close_ticket.notify": {
+          "type": "noul",
+          "instructions": "For the action \"Close a ticket\", do `instructions` call for this: email the requester that the ticket is closed?"
+        },
+        "close_ticket.notify?stated": {
+          "type": "noul",
+          "instructions": "For the action \"Close a ticket\", do `instructions` state `notify` (email the requester that the ticket is closed)?"
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "end",
+          "confidence": 0.99,
+          "probabilities": {
+            "end": 0.99,
+            "list_tickets": 0,
+            "get_ticket": 0.01,
+            "update_ticket": 0,
+            "delete_ticket": 0,
+            "close_ticket": 0
+          }
+        },
+        "list_tickets.status": {
+          "type": "choice",
+          "choice": "open",
+          "confidence": 0.98,
+          "probabilities": {
+            "open": 0.99,
+            "closed": 0.01
+          }
+        },
+        "list_tickets.status?stated": {
+          "type": "noul",
+          "noul": 0.46
+        },
+        "list_tickets.assignee": {
+          "type": "choice",
+          "choice": "ben",
+          "confidence": 1,
+          "probabilities": {
+            "ana": 0,
+            "ben": 1,
+            "carla": 0
+          }
+        },
+        "list_tickets.assignee?stated": {
+          "type": "noul",
+          "noul": 0.53
+        },
+        "get_ticket.id": {
+          "type": "choice",
+          "choice": "5",
+          "confidence": 0.75,
+          "probabilities": {
+            "3": 0.11,
+            "4": 0.01,
+            "5": 0.81,
+            "6": 0.07
+          }
+        },
+        "update_ticket.id": {
+          "type": "choice",
+          "choice": "5",
+          "confidence": 0.77,
+          "probabilities": {
+            "3": 0.07,
+            "4": 0.01,
+            "5": 0.83,
+            "6": 0.09
+          }
+        },
+        "update_ticket.assignee": {
+          "type": "choice",
+          "choice": "ben",
+          "confidence": 1,
+          "probabilities": {
+            "ana": 0,
+            "ben": 1,
+            "carla": 0
+          }
+        },
+        "update_ticket.assignee?stated": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "update_ticket.labels[billing]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "update_ticket.labels[bug]": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "update_ticket.labels[urgent]": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "update_ticket.labels?stated": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "delete_ticket.id": {
+          "type": "choice",
+          "choice": "5",
+          "confidence": 0.49,
+          "probabilities": {
+            "3": 0.12,
+            "4": 0.01,
+            "5": 0.62,
+            "6": 0.25
+          }
+        },
+        "close_ticket.id": {
+          "type": "choice",
+          "choice": "5",
+          "confidence": 0.79,
+          "probabilities": {
+            "3": 0.05,
+            "4": 0.01,
+            "5": 0.84,
+            "6": 0.1
+          }
+        },
+        "close_ticket.resolution": {
+          "type": "choice",
+          "choice": "wontfix",
+          "confidence": 1,
+          "probabilities": {
+            "fixed": 0,
+            "wontfix": 1,
+            "duplicate": 0
+          }
+        },
+        "close_ticket.resolution?stated": {
+          "type": "noul",
+          "noul": 0.95
+        },
+        "close_ticket.notify": {
+          "type": "noul",
+          "noul": 0.94
+        },
+        "close_ticket.notify?stated": {
+          "type": "noul",
+          "noul": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 2317,
+        "output_tokens": 617
+      }
+    }
+  }
+}

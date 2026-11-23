@@ -168,7 +168,7 @@ describe("review: actions", () => {
 describe("review: wording", () => {
   it("rewords the tool question and the built-in end only when asked to", async () => {
     const plain = new ScriptedModel([{ [TOOL_QUESTION]: "end" }]);
-    await createAgent({ model: plain, instructions: "x", tools: makeTools() }).run();
+    await createAgent({ model: plain, instructions: "x", tools: makeTools(), quoteTask: false }).run();
     const strict = new ScriptedModel([{ [TOOL_QUESTION]: "end" }]);
     await createAgent({ model: strict, instructions: "x", tools: makeTools(), review: { wording: true } }).run();
 

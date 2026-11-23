@@ -1,0 +1,75 @@
+{
+  "hash": "9eb242c5a5a492da",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Deploy build 41 to production and tell the team.",
+        "state": {
+          "release": {
+            "staging": "nothing deployed",
+            "smoke_tests": "not run",
+            "production": "nothing deployed",
+            "team": "told: staging nothing deployed, production nothing deployed"
+          },
+          "error": "Not done: deploy_staging(). `instructions` do not ask for it."
+        },
+        "previous_actions": [
+          {
+            "tool": "deploy_staging",
+            "args": {},
+            "summary": "not done, not asked for: deploy_staging()"
+          },
+          {
+            "tool": "notify_team",
+            "args": {},
+            "summary": "posted the release status"
+          },
+          {
+            "tool": "deploy_staging",
+            "args": {},
+            "summary": "not done, not asked for: deploy_staging()"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Deploy build 41 to production and tell the team.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "deploy_staging": "Deploys build 41 to the staging environment.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "end",
+          "confidence": 0.56,
+          "probabilities": {
+            "deploy_staging": 0.22,
+            "end": 0.78
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 578,
+        "output_tokens": 37
+      }
+    }
+  }
+}

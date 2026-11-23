@@ -36,8 +36,10 @@ recorded answers, so they need no network (see [Development](#development)).
 Each step is **one** request to the model: the state document (`instructions`, `state`, `previous_actions`), a Choice
 `__tool__` over the available tools, and one question `<tool>.<param>` per parameter of every available tool
 (speculative fan-out). Code reads only the chosen tool's answers, runs it, and merges its result into the state.
-The model never writes text, so parameters are closed sets (`param.choice` options come from code, often from the state),
-a Noul (`boolean | 'unsure'`) or a Score (a level label).
+The tool question quotes the task ("The task is: \"...\". Which action best advances this task, given `state` and `previous_actions`?"):
+Jev reads facts well but is far more likely to pick the action the task calls for when the task sits in the question itself
+(`quoteTask`, on by default; `quoteTask: false` keeps the plain wording). The model never writes text, so parameters are closed
+sets (`param.choice` options come from code, often from the state), a Noul (`boolean | 'unsure'`) or a Score (a level label).
 
 ```ts
 import { createAgent, defineTool, param, JevModel } from "./src/index.js";
@@ -183,7 +185,7 @@ createAgent({ model, instructions, tools, review: { end: true, actions: true } }
 - `actions`: before a tool marked `effect: "change"` runs, ask whether `instructions` ask for this very call; if not it does not run
   (the model sees why for one step), and after two refusals in a row the run ends. A `final: true` tool also waits until the
   other parts are done.
-- `wording`: ask the tool question as "exactly what `instructions` ask, no more and no less".
+- `wording`: ask the tool question as "exactly what `instructions` ask, no more and no less" (it replaces the quoted-task question).
 - A tool can word its own checks: `summarize` (what this call does), `wanted` (is its work still called for, used by `end`),
   `confirm` (the question to ask before it runs).
 
@@ -212,6 +214,8 @@ every resulting state against the same criteria, rechecking what was already met
 run the first action of the best sequence for real, observe, and plan again. A sequence that breaks a constraint is dropped; so is
 a state already seen (loops). When nothing improves on the unchanged state the run ends and says which requirements are unmet and
 why (`output: { complete, unmet, blocker }`), or with `onNoGain: "greedy"` takes Jev's most probable safe action and observes.
+
+The shortlist is the greedy tool question, so it quotes the task too (`quoteTask`).
 
 A criterion is a statement that names state by path, judged by Jev with a Yes / No cut in code (`thresholds`); give it a `check`
 function and code decides instead, at no cost. A tool without `preview` is tried for real only when nothing previewed helps. The

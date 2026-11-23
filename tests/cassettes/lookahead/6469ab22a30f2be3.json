@@ -1,0 +1,81 @@
+{
+  "hash": "6469ab22a30f2be3",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "yes",
+            "flight": "Thursday 16:45 to Vienna",
+            "hotel": "Hotel Ring, Vienna",
+            "transfer": "pick-up for Thursday 16:45 to Vienna"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "added the passport details"
+          },
+          {
+            "tool": "book_flight",
+            "args": {
+              "flight": "Thursday 16:45 to Vienna"
+            },
+            "summary": "booked the flight Thursday 16:45 to Vienna"
+          },
+          {
+            "tool": "book_hotel",
+            "args": {
+              "hotel": "Hotel Ring, Vienna"
+            },
+            "summary": "booked Hotel Ring, Vienna"
+          },
+          {
+            "tool": "book_transfer",
+            "args": {},
+            "summary": "arranged the transfer"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "end",
+          "confidence": 1,
+          "probabilities": {
+            "end": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 601,
+        "output_tokens": 28
+      }
+    }
+  }
+}

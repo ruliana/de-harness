@@ -87,8 +87,8 @@ describe("page overlay assistant: an instruction typed into the panel operates t
     for (const [name, runs] of outcomes) {
       const correct = runs.filter((o) => problems(o).length === 0).length;
       lines.push(`${name}: ${correct} of ${runs.length} correct (${runs.map((o) => o.handled?.result.steps.length ?? "-").join(", ")} steps)${runs.flatMap((o) => problems(o)).length ? `\n   ${runs.flatMap((o) => problems(o)).join("\n   ")}` : ""}`);
-      expect(correct).toBeGreaterThanOrEqual(live ? 2 : RUNS);
     }
     if (live) console.log(`\nPage overlay, live summary\n${lines.join("\n")}`);
+    for (const [name, runs] of outcomes) expect(runs.filter((o) => problems(o).length === 0).length, name).toBeGreaterThanOrEqual(live ? 2 : RUNS);
   });
 });

@@ -1,0 +1,88 @@
+{
+  "hash": "52bce2ae1461ee68",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Friday morning flight to Lisbon, a hotel in Lisbon and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "yes",
+            "flight": "none",
+            "hotel": "Hotel Baixa, Lisbon",
+            "transfer": "none"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "book_hotel",
+            "args": {
+              "hotel": "Hotel Baixa, Lisbon"
+            },
+            "summary": "booked Hotel Baixa, Lisbon"
+          },
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "added the passport details"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Book the Friday morning flight to Lisbon, a hotel in Lisbon and an airport transfer.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "book_flight": "Books a flight. Needs the passport details on file."
+          }
+        },
+        "book_flight.flight": {
+          "type": "choice",
+          "instructions": "Which flight do `instructions` ask for?",
+          "criteria": {
+            "Friday 08:00 to Lisbon": "",
+            "Saturday 15:00 to Lisbon": "",
+            "Friday 09:30 to Porto": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "book_flight",
+          "confidence": 1,
+          "probabilities": {
+            "book_flight": 1
+          }
+        },
+        "book_flight.flight": {
+          "type": "choice",
+          "choice": "Friday 08:00 to Lisbon",
+          "confidence": 1,
+          "probabilities": {
+            "Friday 08:00 to Lisbon": 1,
+            "Saturday 15:00 to Lisbon": 0,
+            "Friday 09:30 to Porto": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 555,
+        "output_tokens": 103
+      }
+    }
+  }
+}

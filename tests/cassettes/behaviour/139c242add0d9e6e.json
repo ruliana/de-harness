@@ -1,0 +1,226 @@
+{
+  "hash": "139c242add0d9e6e",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Tickets that complain about payments go to billing.",
+        "state": {
+          "queue": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "team": "billing",
+              "status": "open"
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            }
+          ],
+          "open_ticket": {
+            "id": 6,
+            "subject": "Invoice shows the wrong VAT number",
+            "body": "The VAT number printed on our latest invoice is not ours. Please correct the invoice.",
+            "status": "open",
+            "team": "billing",
+            "tags": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "assign",
+            "args": {
+              "team": "billing",
+              "instructed": true
+            },
+            "summary": "assigned ticket 1 to billing"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#3 Refund for my cancelled subscription"
+            },
+            "summary": "opened ticket 3"
+          },
+          {
+            "tool": "assign",
+            "args": {
+              "team": "billing",
+              "instructed": true
+            },
+            "summary": "assigned ticket 3 to billing"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#6 Invoice shows the wrong VAT number"
+            },
+            "summary": "opened ticket 6"
+          },
+          {
+            "tool": "assign",
+            "args": {
+              "team": "billing",
+              "instructed": true
+            },
+            "summary": "assigned ticket 6 to billing"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Tickets that complain about payments go to billing.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_ticket": "Opens the next ticket of `state.queue` that has not been looked at yet, so that its body can be read and handled. Use it when the open ticket needs nothing more.",
+            "set_status": "Sets the status of the open ticket (`state.open_ticket`), for instance closes it. A ticket is a duplicate only when its own body says it repeats another ticket, for instance 'Duplicate of ticket 5'; a ticket nobody repeats is not a duplicate.",
+            "tag": "Adds one tag to the open ticket (`state.open_ticket`). Use it only when `instructions` ask for tags."
+          }
+        },
+        "open_ticket.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.queue` should be looked at next to carry out `instructions`?",
+          "criteria": {
+            "#2 Password reset email never arrives": "Ticket 2, currently unassigned and open",
+            "#4 How do I export my data to CSV?": "Ticket 4, currently unassigned and open",
+            "#5 App crashes when I open the settings page": "Ticket 5, currently unassigned and open",
+            "#7 App crashes when I open the settings page": "Ticket 7, currently unassigned and open",
+            "#8 Password reset email never arrives": "Ticket 8, currently unassigned and open"
+          }
+        },
+        "set_status.status": {
+          "type": "choice",
+          "instructions": "Which status should the ticket in `state.open_ticket` have to carry out `instructions`?",
+          "criteria": {
+            "open": "the ticket still needs work",
+            "pending": "the ticket waits for the customer",
+            "closed": "the ticket is done with: it repeats another ticket"
+          }
+        },
+        "set_status.repeats_another": {
+          "type": "noul",
+          "instructions": "Does the body of `state.open_ticket` say that this ticket repeats, or is a duplicate of, another ticket?",
+          "criteria": {
+            "true": "The body names another ticket it duplicates, for instance 'Duplicate of ticket 5'",
+            "false": "The body describes a problem or a request and does not say it repeats another ticket"
+          }
+        },
+        "tag.tag": {
+          "type": "choice",
+          "instructions": "Which tag should be added to the ticket in `state.open_ticket` to carry out `instructions`?",
+          "criteria": {
+            "refund": "the customer wants money back",
+            "urgent": "the customer cannot work until it is fixed",
+            "vip": "the customer is a key account",
+            "bug": "the product misbehaves"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "open_ticket",
+          "confidence": 0.89,
+          "probabilities": {
+            "open_ticket": 0.93,
+            "set_status": 0.06,
+            "tag": 0.01
+          }
+        },
+        "open_ticket.ticket": {
+          "type": "choice",
+          "choice": "#2 Password reset email never arrives",
+          "confidence": 0.68,
+          "probabilities": {
+            "#2 Password reset email never arrives": 0.74,
+            "#4 How do I export my data to CSV?": 0.13,
+            "#5 App crashes when I open the settings page": 0.07,
+            "#7 App crashes when I open the settings page": 0.03,
+            "#8 Password reset email never arrives": 0.03
+          }
+        },
+        "set_status.status": {
+          "type": "choice",
+          "choice": "open",
+          "confidence": 0.98,
+          "probabilities": {
+            "open": 0.99,
+            "pending": 0,
+            "closed": 0.01
+          }
+        },
+        "set_status.repeats_another": {
+          "type": "noul",
+          "noul": 0.02
+        },
+        "tag.tag": {
+          "type": "choice",
+          "choice": "refund",
+          "confidence": 0.75,
+          "probabilities": {
+            "refund": 0.81,
+            "urgent": 0.08,
+            "vip": 0.01,
+            "bug": 0.1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1552,
+        "output_tokens": 245
+      }
+    }
+  }
+}

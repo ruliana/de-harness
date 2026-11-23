@@ -1,0 +1,67 @@
+{
+  "hash": "dcf378c9b53fe76d",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Deploy build 41 to production and tell the team.",
+        "state": {
+          "release": {
+            "staging": "nothing deployed",
+            "smoke_tests": "not run",
+            "production": "nothing deployed",
+            "team": "not told"
+          },
+          "error": "Not done: deploy_staging(). `instructions` do not ask for it."
+        },
+        "previous_actions": [
+          {
+            "tool": "deploy_staging",
+            "args": {},
+            "summary": "not done, not asked for: deploy_staging()"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Deploy build 41 to production and tell the team.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "deploy_staging": "Deploys build 41 to the staging environment.",
+            "notify_team": "Posts the release status in the team channel.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "notify_team",
+          "confidence": 0.46,
+          "probabilities": {
+            "deploy_staging": 0.1,
+            "notify_team": 0.64,
+            "end": 0.26
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 525,
+        "output_tokens": 46
+      }
+    }
+  }
+}

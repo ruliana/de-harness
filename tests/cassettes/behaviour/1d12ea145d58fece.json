@@ -1,0 +1,142 @@
+{
+  "hash": "1d12ea145d58fece",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Mark the ticket about the settings crash as urgent.",
+        "state": {
+          "queue": [
+            {
+              "id": 1,
+              "subject": "Charged twice for the March invoice",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 2,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 3,
+              "subject": "Refund for my cancelled subscription",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 4,
+              "subject": "How do I export my data to CSV?",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 5,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 6,
+              "subject": "Invoice shows the wrong VAT number",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 7,
+              "subject": "App crashes when I open the settings page",
+              "team": "unassigned",
+              "status": "open"
+            },
+            {
+              "id": 8,
+              "subject": "Password reset email never arrives",
+              "team": "unassigned",
+              "status": "open"
+            }
+          ],
+          "open_ticket": {
+            "id": 4,
+            "subject": "How do I export my data to CSV?",
+            "body": "Where in the app can I download all my records as a CSV file?",
+            "status": "open",
+            "team": "unassigned",
+            "tags": []
+          },
+          "error": "Not done: adds the tag urgent to the ticket 4 (How do I export my data to CSV?). `instructions` do not ask for it."
+        },
+        "previous_actions": [
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#8 Password reset email never arrives"
+            },
+            "summary": "opened ticket 8"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#6 Invoice shows the wrong VAT number"
+            },
+            "summary": "opened ticket 6"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#3 Refund for my cancelled subscription"
+            },
+            "summary": "opened ticket 3"
+          },
+          {
+            "tool": "open_ticket",
+            "args": {
+              "ticket": "#4 How do I export my data to CSV?"
+            },
+            "summary": "opened ticket 4"
+          },
+          {
+            "tool": "tag",
+            "args": {
+              "tag": "urgent"
+            },
+            "summary": "not done, not asked for: adds the tag urgent to the ticket 4 (How do I export my data to CSV?)"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for this: adds the tag urgent to the ticket 4 (How do I export my data to CSV?)?",
+          "criteria": {
+            "true": "`instructions` ask for it, or it is a plain part of getting what they ask for done and finished (choosing, confirming, paying), on this very item and with these values",
+            "false": "`instructions` do not ask for it: they name another item, team, status or tag, or say nothing about this kind of change"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.02
+        }
+      },
+      "usage": {
+        "input_tokens": 1079,
+        "output_tokens": 24
+      }
+    }
+  }
+}

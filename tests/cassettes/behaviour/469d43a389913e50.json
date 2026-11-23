@@ -1,0 +1,116 @@
+{
+  "hash": "469d43a389913e50",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "You are at Airport station. Get to Southpark station, then stop.",
+        "state": {
+          "network": {
+            "Red line": [
+              "Airport",
+              "Northgate",
+              "Central",
+              "Riverside",
+              "Harbour"
+            ],
+            "Blue line": [
+              "Westfield",
+              "Museum",
+              "Central",
+              "Market",
+              "Stadium"
+            ],
+            "Green line": [
+              "Northgate",
+              "Museum",
+              "Old Town",
+              "Market",
+              "Southpark"
+            ],
+            "Yellow line": [
+              "Riverside",
+              "Old Town",
+              "Hillcrest"
+            ]
+          },
+          "location": {
+            "station": "Northgate",
+            "next": {
+              "Central": "Red line",
+              "Museum": "Green line"
+            }
+          },
+          "visited": [
+            "Airport",
+            "Northgate"
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "move",
+            "args": {
+              "station": "Northgate"
+            },
+            "summary": "rode the Red line to Northgate"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"You are at Airport station. Get to Southpark station, then stop.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "move": "Rides one stop along a line to a neighbouring station that has not been visited yet, to get closer to the destination.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "move.station": {
+          "type": "choice",
+          "instructions": "Which of the stations in `state.location.next` is on the shortest route from `state.location.station` to the destination named in `instructions`, going by `state.network`?",
+          "criteria": {
+            "Central": "Red line",
+            "Museum": "Green line"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "move",
+          "confidence": 1,
+          "probabilities": {
+            "move": 1,
+            "end": 0
+          }
+        },
+        "move.station": {
+          "type": "choice",
+          "choice": "Museum",
+          "confidence": 0.98,
+          "probabilities": {
+            "Central": 0.01,
+            "Museum": 0.99
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 725,
+        "output_tokens": 66
+      }
+    }
+  }
+}

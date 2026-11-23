@@ -23,7 +23,7 @@ import { createInputPort, type InputProvider } from "../input/provider.js";
 import { extractImages } from "../state/images.js";
 import { StateDocument, type Json, type PreviousAction } from "../state/state.js";
 import { endTool } from "../tools/builtin.js";
-import { DEFAULT_MAX_REFUSALS, DEFAULT_REVIEW_THRESHOLD, REVIEW_QUESTION, STRICT_END_DESCRIPTION, STRICT_TOOL_QUESTION_TEXT, READY_QUESTION, askedQuestion, wantedId, wantedQuestion, callPhrase, describeCall, readyQuestion, remainingQuestion, type ReviewConfig } from "../review/review.js";
+import { DEFAULT_MAX_REFUSALS, DEFAULT_REVIEW_THRESHOLD, REVIEW_QUESTION, STRICT_END_DESCRIPTION, STRICT_TOOL_QUESTION_TEXT, TOOL_QUESTION_TEXT, READY_QUESTION, askedQuestion, quotedToolQuestion, wantedId, wantedQuestion, callPhrase, describeCall, readyQuestion, remainingQuestion, type ReviewConfig } from "../review/review.js";
 import { ToolRegistry } from "../tools/registry.js";
 import type { AnyTool, ToolContext, ToolResult } from "../tools/tool.js";
 
@@ -60,6 +60,13 @@ export type AgentConfig = {
    * `src/lookahead/lookahead.ts`.
    */
   lookahead?: LookaheadConfig;
+  /**
+   * Quote `instructions` inside the tool question ("The task is: \"...\". Which action best advances this task, ..."), in
+   * every step and in the lookahead shortlist. Default true: it makes the model's choice of action much more likely to be the
+   * one the task calls for, at no extra request. Set false to keep the old wording (recordings made before it do not replay with it).
+   * `review.wording` replaces the question either way.
+   */
+  quoteTask?: boolean;
   /** State slots before the first step. */
   initialState?: Record<string, Json>;
   /** Write every event to this file as JSONL (Node only; in a browser use `onEvent`). */
@@ -228,6 +235,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
           {
             step,
             instructions: config.instructions,
+            toolQuestion: config.quoteTask === false ? TOOL_QUESTION_TEXT : quotedToolQuestion(config.instructions),
             view,
             history: doc.document(config.instructions, window, window > 0).previous_actions as PreviousAction[] ?? [],
             window,
@@ -252,7 +260,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
       planned = { sequence: decision.sequence, why: decision.why };
     }
     else for (let attempt = 0; ; attempt++) {
-      plan = buildQuestions(candidates.filter((t) => !vetoed.includes(t.name)), { state: view, step }, config.review?.wording ? { toolQuestion: STRICT_TOOL_QUESTION_TEXT } : {});
+      plan = buildQuestions(candidates.filter((t) => !vetoed.includes(t.name)), { state: view, step }, config.review?.wording ? { toolQuestion: STRICT_TOOL_QUESTION_TEXT } : config.quoteTask === false ? {} : { toolQuestion: quotedToolQuestion(config.instructions) });
       if (attempt === 0) emit({ type: "step_start", step, tools: plan.tools.map((t) => t.name), skipped: plan.skipped });
       if (plan.tools.length === 0) return finish("error", { error: new Error("No tool is available") });
       try {

@@ -159,6 +159,8 @@ export async function carryOut(opts: AssistantOptions & { overlay: PageOverlay; 
       input: opts.input,
       initialState: { ...(await snapshotOf(browser, "screen", false)), typed: [], done: false, open_questions: await openQuestions(opts.model, opts.instruction) },
       maxSteps: opts.maxSteps ?? 14,
+      // quoting the task made Jev put the typing before the clicks that move to the next field (it kept re-typing the name in 5 of 12 live runs against 0 of 12), so this agent keeps the plain question
+      quoteTask: false,
       onEvent: (e) => {
         opts.onEvent?.(e);
         if (e.type === "tool_result" && e.summary && e.tool !== "ask_user" && e.tool !== "end") void overlay.say(say(e.summary), "progress");
