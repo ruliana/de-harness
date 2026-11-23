@@ -1,0 +1,75 @@
+{
+  "hash": "899fd1216fccce2f",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Close ticket 7 and assign it to the technical team.",
+        "state": {
+          "tickets": [
+            {
+              "id": 3,
+              "subject": "Login page times out",
+              "status": "open",
+              "team": "unassigned"
+            },
+            {
+              "id": 7,
+              "subject": "Invoice shows the wrong VAT",
+              "status": "closed",
+              "team": "unassigned"
+            },
+            {
+              "id": 9,
+              "subject": "Cannot export data",
+              "status": "open",
+              "team": "unassigned"
+            }
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "close_ticket",
+            "args": {
+              "ticket": "#7 Invoice shows the wrong VAT"
+            },
+            "summary": "closed ticket 7"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Looking at `state` and `previous_actions`, would one of these actions carry `instructions` further than they already are: assign (Assigns a ticket to a team. A closed ticket cannot be assigned any more.); close_ticket (Closes a ticket.)?",
+          "criteria": {
+            "true": "An action would take it further: a part of `instructions` is missing from `state`, or was only started or prepared (chosen but not confirmed, put aside but not paid, compared but not acted on, passed through but not reached)",
+            "false": "`state` shows everything that `instructions` ask for as done and finished, or no action could do what is left; any action left would be something `instructions` do not ask for"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.2
+        }
+      },
+      "usage": {
+        "input_tokens": 613,
+        "output_tokens": 24
+      }
+    }
+  }
+}

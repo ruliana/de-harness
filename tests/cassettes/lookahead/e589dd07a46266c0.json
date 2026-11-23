@@ -1,0 +1,72 @@
+{
+  "hash": "e589dd07a46266c0",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Order the red mug.",
+        "state": {
+          "page": {
+            "title": "Home",
+            "text": "Welcome to Harbour Goods.",
+            "links": {
+              "Mugs": "mugs and cups",
+              "Shirts": "t-shirts"
+            }
+          },
+          "basket": [
+            "Red mug"
+          ],
+          "seen": {
+            "Red mug": "6 EUR"
+          }
+        }
+      },
+      "questions": {
+        "req.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: `state.orders` has an order that includes the Red mug",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        },
+        "con.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, does this hold: Every item of every order in `state.orders` is the Red mug",
+          "criteria": {
+            "true": "Yes: it holds, or nothing in `state` contradicts it",
+            "false": "No: `state` shows that it is broken"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "req.0": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "con.0": {
+          "type": "noul",
+          "noul": 0.83
+        }
+      },
+      "usage": {
+        "input_tokens": 501,
+        "output_tokens": 40
+      }
+    }
+  }
+}

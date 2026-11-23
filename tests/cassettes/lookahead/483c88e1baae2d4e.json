@@ -1,0 +1,77 @@
+{
+  "hash": "483c88e1baae2d4e",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Share the Q4 report with Dana.",
+        "state": {
+          "workspace": {
+            "users": {
+              "Dana": "not verified",
+              "Sam": "verified"
+            },
+            "reports": {
+              "Q4 report": "private",
+              "Q3 report": "private"
+            },
+            "shared_with": {},
+            "links_sent": [
+              "Q4 report to Dana"
+            ]
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "verify_user",
+            "args": {
+              "user": "Dana"
+            },
+            "summary": "not done, not asked for: verify_user(user=\"Dana\")"
+          },
+          {
+            "tool": "send_link",
+            "args": {
+              "report": "Q4 report",
+              "user": "Dana"
+            },
+            "summary": "emailed Dana a link to the Q4 report"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Looking at `state` and `previous_actions`, would one of these actions carry `instructions` further than they already are: verify_user (Verifies a user's account.); share_report (Gives a verified user access to a report.); send_link (Emails a view-only link to a report.)?",
+          "criteria": {
+            "true": "An action would take it further: a part of `instructions` is missing from `state`, or was only started or prepared (chosen but not confirmed, put aside but not paid, compared but not acted on, passed through but not reached)",
+            "false": "`state` shows everything that `instructions` ask for as done and finished, or no action could do what is left; any action left would be something `instructions` do not ask for"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.36
+        }
+      },
+      "usage": {
+        "input_tokens": 635,
+        "output_tokens": 24
+      }
+    }
+  }
+}

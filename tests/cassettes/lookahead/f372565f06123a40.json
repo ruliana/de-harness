@@ -1,0 +1,70 @@
+{
+  "hash": "f372565f06123a40",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Buy the red mug and the blue mug.",
+        "state": {
+          "page": {
+            "title": "Mugs",
+            "text": "Our mugs.",
+            "links": {
+              "Home": "back to the front page",
+              "Blue mug": "a blue enamel mug",
+              "Red mug": "a red enamel mug"
+            }
+          },
+          "seen": {
+            "Red mug": "6 EUR"
+          }
+        }
+      },
+      "questions": {
+        "req.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: `state.orders` has an order that includes the Red mug",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        },
+        "req.1": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: `state.orders` has an order that includes the Blue mug",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "req.0": {
+          "type": "noul",
+          "noul": 0.06
+        },
+        "req.1": {
+          "type": "noul",
+          "noul": 0.04
+        }
+      },
+      "usage": {
+        "input_tokens": 510,
+        "output_tokens": 40
+      }
+    }
+  }
+}

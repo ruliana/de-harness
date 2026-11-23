@@ -1,0 +1,154 @@
+{
+  "hash": "7c0277e45fe88556",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Move the design review to Wednesday at 10:00. The Wednesday standup stays at 09:00 and the 1:1 with Sam stays on Tuesday.",
+        "state": {
+          "calendar": {
+            "Monday": [],
+            "Tuesday": [
+              {
+                "event": "Design review",
+                "time": "10:00"
+              },
+              {
+                "event": "1:1 with Sam",
+                "time": "14:00"
+              }
+            ],
+            "Wednesday": [
+              {
+                "event": "Standup",
+                "time": "09:00"
+              }
+            ],
+            "Thursday": []
+          }
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "move_event": "Moves one event to another day and time.",
+            "shift_day": "Moves everything on one day to the next working day, keeping the times.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "move_event.event": {
+          "type": "choice",
+          "instructions": "Which event of `state.calendar` should be moved, going by `instructions`?",
+          "criteria": {
+            "Design review": "",
+            "1:1 with Sam": "",
+            "Standup": ""
+          }
+        },
+        "move_event.day": {
+          "type": "choice",
+          "instructions": "To which day should it be moved, going by `instructions`?",
+          "criteria": {
+            "Monday": "",
+            "Tuesday": "",
+            "Wednesday": "",
+            "Thursday": ""
+          }
+        },
+        "move_event.time": {
+          "type": "choice",
+          "instructions": "At which time should it be, going by `instructions`?",
+          "criteria": {
+            "09:00": "",
+            "10:00": "",
+            "11:00": "",
+            "14:00": ""
+          }
+        },
+        "shift_day.day": {
+          "type": "choice",
+          "instructions": "Which day of `state.calendar` should be shifted to the next one, going by `instructions`?",
+          "criteria": {
+            "Monday": "",
+            "Tuesday": "",
+            "Wednesday": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "move_event",
+          "confidence": 1,
+          "probabilities": {
+            "move_event": 1,
+            "shift_day": 0,
+            "end": 0
+          }
+        },
+        "move_event.event": {
+          "type": "choice",
+          "choice": "Design review",
+          "confidence": 1,
+          "probabilities": {
+            "Design review": 1,
+            "1:1 with Sam": 0,
+            "Standup": 0
+          }
+        },
+        "move_event.day": {
+          "type": "choice",
+          "choice": "Wednesday",
+          "confidence": 1,
+          "probabilities": {
+            "Monday": 0,
+            "Tuesday": 0,
+            "Wednesday": 1,
+            "Thursday": 0
+          }
+        },
+        "move_event.time": {
+          "type": "choice",
+          "choice": "10:00",
+          "confidence": 1,
+          "probabilities": {
+            "09:00": 0,
+            "10:00": 1,
+            "11:00": 0,
+            "14:00": 0
+          }
+        },
+        "shift_day.day": {
+          "type": "choice",
+          "choice": "Tuesday",
+          "confidence": 0.94,
+          "probabilities": {
+            "Monday": 0,
+            "Tuesday": 0.96,
+            "Wednesday": 0.04
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 751,
+        "output_tokens": 234
+      }
+    }
+  }
+}

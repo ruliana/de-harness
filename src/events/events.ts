@@ -1,4 +1,5 @@
 import type { Answer, DecisionRequest } from "../model/types.js";
+import type { SearchEvent } from "../lookahead/lookahead.js";
 
 /**
  * Which request of a step this is:
@@ -7,8 +8,10 @@ import type { Answer, DecisionRequest } from "../model/types.js";
  *   params       two-phase, second request: only the chosen tool's parameter questions
  *   order_check  the opt-in check: only `__tool__`, with its options in reverse order
  *   review       the opt-in review of a choice (`AgentConfig.review`): one Noul judgment
+ *   shortlist    the opt-in lookahead (`AgentConfig.lookahead`): the `__tool__` Choice and parameter questions over a real or imagined state
+ *   evaluate     the opt-in lookahead: one Noul per requirement and constraint over a real or imagined state
  */
-export type Phase = "single" | "tool" | "params" | "order_check" | "review";
+export type Phase = "single" | "tool" | "params" | "order_check" | "review" | "shortlist" | "evaluate";
 
 /** Everything the loop reports. Events are plain JSON-serialisable objects, one per line in the JSONL trace. */
 export type HarnessEvent = { ts: string } & (
@@ -24,6 +27,8 @@ export type HarnessEvent = { ts: string } & (
   | { type: "review"; step: number; check: "end" | "action"; tool: string; call?: string; p: number; /** actions only: is this the right moment */ ready?: number; refused: boolean }
   /** `review.maxRefusals` calls in a row were refused: the model keeps asking for what `instructions` do not ask for, so the run ends. */
   | { type: "review_stop"; step: number; refusals: number }
+  /** One lookahead search (`AgentConfig.lookahead`): the unchanged state, every explored sequence with its score, and what the planner decided. */
+  | { type: "lookahead"; step: number; search: SearchEvent }
   | { type: "model_error"; step: number; message: string; status?: number }
   | { type: "tool_call"; step: number; tool: string; args: Record<string, unknown> }
   | { type: "tool_result"; step: number; tool: string; summary?: string; error?: string; end?: boolean }

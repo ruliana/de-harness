@@ -1,0 +1,147 @@
+{
+  "hash": "305b34069f2f4e08",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Share the Q4 report with Dana.",
+        "state": {
+          "workspace": {
+            "users": {
+              "Dana": "not verified",
+              "Sam": "verified"
+            },
+            "reports": {
+              "Q4 report": "private",
+              "Q3 report": "private"
+            },
+            "shared_with": {},
+            "links_sent": []
+          }
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "verify_user": "Verifies a user's account.",
+            "share_report": "Gives a verified user access to a report.",
+            "send_link": "Emails a view-only link to a report."
+          }
+        },
+        "verify_user.user": {
+          "type": "choice",
+          "instructions": "Which user of `state.workspace.users` should be verified, going by `instructions`?",
+          "criteria": {
+            "Dana": ""
+          }
+        },
+        "share_report.report": {
+          "type": "choice",
+          "instructions": "Which report of `state.workspace.reports` should be shared, going by `instructions`?",
+          "criteria": {
+            "Q4 report": "",
+            "Q3 report": ""
+          }
+        },
+        "share_report.user": {
+          "type": "choice",
+          "instructions": "Who should get access, going by `instructions`?",
+          "criteria": {
+            "Sam": ""
+          }
+        },
+        "send_link.report": {
+          "type": "choice",
+          "instructions": "Which report of `state.workspace.reports` should the link point to, going by `instructions`?",
+          "criteria": {
+            "Q4 report": "",
+            "Q3 report": ""
+          }
+        },
+        "send_link.user": {
+          "type": "choice",
+          "instructions": "Who should get the link, going by `instructions`?",
+          "criteria": {
+            "Dana": "",
+            "Sam": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "verify_user",
+          "confidence": 0.79,
+          "probabilities": {
+            "verify_user": 0.86,
+            "share_report": 0.02,
+            "send_link": 0.12
+          }
+        },
+        "verify_user.user": {
+          "type": "choice",
+          "choice": "Dana",
+          "confidence": 1,
+          "probabilities": {
+            "Dana": 1
+          }
+        },
+        "share_report.report": {
+          "type": "choice",
+          "choice": "Q4 report",
+          "confidence": 1,
+          "probabilities": {
+            "Q4 report": 1,
+            "Q3 report": 0
+          }
+        },
+        "share_report.user": {
+          "type": "choice",
+          "choice": "Sam",
+          "confidence": 1,
+          "probabilities": {
+            "Sam": 1
+          }
+        },
+        "send_link.report": {
+          "type": "choice",
+          "choice": "Q4 report",
+          "confidence": 1,
+          "probabilities": {
+            "Q4 report": 1,
+            "Q3 report": 0
+          }
+        },
+        "send_link.user": {
+          "type": "choice",
+          "choice": "Dana",
+          "confidence": 1,
+          "probabilities": {
+            "Dana": 1,
+            "Sam": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 647,
+        "output_tokens": 194
+      }
+    }
+  }
+}

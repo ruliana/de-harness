@@ -1,0 +1,76 @@
+{
+  "hash": "cc0202e38800fec6",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "no",
+            "flight": "none",
+            "hotel": "Hotel Ring, Vienna",
+            "transfer": "none"
+          }
+        }
+      },
+      "questions": {
+        "req.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: `state.trip.flight` is the Thursday afternoon flight to Vienna",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        },
+        "req.1": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: `state.trip.hotel` is a hotel in Vienna",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        },
+        "req.2": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: `state.trip.transfer` is arranged (not none)",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "req.0": {
+          "type": "noul",
+          "noul": 0.04
+        },
+        "req.1": {
+          "type": "noul",
+          "noul": 0.98
+        },
+        "req.2": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "usage": {
+        "input_tokens": 549,
+        "output_tokens": 58
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "hash": "5b65675fd61fb9c4",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Print the signed contract in colour.",
+        "state": {
+          "desk": {
+            "document": "signed",
+            "printer": "offline",
+            "output": "nothing printed yet",
+            "files": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "sign_document",
+            "args": {},
+            "summary": "signed the contract"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "connect_printer": "Connects to the office printer.",
+            "export_pdf": "Saves the contract as a PDF file.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "connect_printer",
+          "confidence": 0.98,
+          "probabilities": {
+            "connect_printer": 0.99,
+            "export_pdf": 0,
+            "end": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 460,
+        "output_tokens": 47
+      }
+    }
+  }
+}

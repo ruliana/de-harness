@@ -1,0 +1,154 @@
+{
+  "hash": "bc435527c4cdc4c4",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Move the product demo to Thursday at 11:00. Keep the Thursday retro at 14:00 and the budget call on Wednesday.",
+        "state": {
+          "calendar": {
+            "Monday": [],
+            "Tuesday": [],
+            "Wednesday": [
+              {
+                "event": "Product demo",
+                "time": "11:00"
+              },
+              {
+                "event": "Budget call",
+                "time": "09:00"
+              }
+            ],
+            "Thursday": [
+              {
+                "event": "Retro",
+                "time": "14:00"
+              }
+            ]
+          }
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "move_event": "Moves one event to another day and time.",
+            "shift_day": "Moves everything on one day to the next working day, keeping the times.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "move_event.event": {
+          "type": "choice",
+          "instructions": "Which event of `state.calendar` should be moved, going by `instructions`?",
+          "criteria": {
+            "Product demo": "",
+            "Budget call": "",
+            "Retro": ""
+          }
+        },
+        "move_event.day": {
+          "type": "choice",
+          "instructions": "To which day should it be moved, going by `instructions`?",
+          "criteria": {
+            "Monday": "",
+            "Tuesday": "",
+            "Wednesday": "",
+            "Thursday": ""
+          }
+        },
+        "move_event.time": {
+          "type": "choice",
+          "instructions": "At which time should it be, going by `instructions`?",
+          "criteria": {
+            "09:00": "",
+            "10:00": "",
+            "11:00": "",
+            "14:00": ""
+          }
+        },
+        "shift_day.day": {
+          "type": "choice",
+          "instructions": "Which day of `state.calendar` should be shifted to the next one, going by `instructions`?",
+          "criteria": {
+            "Monday": "",
+            "Tuesday": "",
+            "Wednesday": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "move_event",
+          "confidence": 1,
+          "probabilities": {
+            "move_event": 1,
+            "shift_day": 0,
+            "end": 0
+          }
+        },
+        "move_event.event": {
+          "type": "choice",
+          "choice": "Product demo",
+          "confidence": 1,
+          "probabilities": {
+            "Product demo": 1,
+            "Budget call": 0,
+            "Retro": 0
+          }
+        },
+        "move_event.day": {
+          "type": "choice",
+          "choice": "Thursday",
+          "confidence": 1,
+          "probabilities": {
+            "Monday": 0,
+            "Tuesday": 0,
+            "Wednesday": 0,
+            "Thursday": 1
+          }
+        },
+        "move_event.time": {
+          "type": "choice",
+          "choice": "11:00",
+          "confidence": 1,
+          "probabilities": {
+            "09:00": 0,
+            "10:00": 0,
+            "11:00": 1,
+            "14:00": 0
+          }
+        },
+        "shift_day.day": {
+          "type": "choice",
+          "choice": "Wednesday",
+          "confidence": 1,
+          "probabilities": {
+            "Monday": 0,
+            "Tuesday": 0,
+            "Wednesday": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 739,
+        "output_tokens": 231
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "hash": "555ffe2418393a51",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Add the red mug and the blue mug to the basket. The basket total must stay under 40 EUR.",
+        "state": {
+          "catalogue": {
+            "Striped shirt": "25 EUR",
+            "Red mug": "6 EUR",
+            "Blue mug": "8 EUR",
+            "Mug duo": "a red mug and a blue mug together, 18 EUR"
+          },
+          "basket": {
+            "lines": [
+              {
+                "item": "Striped shirt",
+                "price": "25 EUR"
+              },
+              {
+                "item": "Red mug",
+                "price": "6 EUR"
+              },
+              {
+                "item": "Blue mug",
+                "price": "8 EUR"
+              }
+            ],
+            "total": "39 EUR"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "add_to_basket",
+            "args": {
+              "product": "Mug duo"
+            },
+            "summary": "not done, not asked for: add_to_basket(product=\"Mug duo\")"
+          },
+          {
+            "tool": "add_to_basket",
+            "args": {
+              "product": "Red mug"
+            },
+            "summary": "added Red mug to the basket"
+          },
+          {
+            "tool": "add_to_basket",
+            "args": {
+              "product": "Blue mug"
+            },
+            "summary": "added Blue mug to the basket"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Looking at `state` and `previous_actions`, would one of these actions carry `instructions` further than they already are: add_to_basket (Puts a product from the catalogue into the basket.); remove_from_basket (Takes one item out of the basket.)?",
+          "criteria": {
+            "true": "An action would take it further: a part of `instructions` is missing from `state`, or was only started or prepared (chosen but not confirmed, put aside but not paid, compared but not acted on, passed through but not reached)",
+            "false": "`state` shows everything that `instructions` ask for as done and finished, or no action could do what is left; any action left would be something `instructions` do not ask for"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.03
+        }
+      },
+      "usage": {
+        "input_tokens": 755,
+        "output_tokens": 24
+      }
+    }
+  }
+}

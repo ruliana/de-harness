@@ -23,6 +23,26 @@ const PAGES: Record<string, Page> = {
   "Striped shirt": { title: "Striped shirt", text: "A striped cotton t-shirt. In stock.", links: { Shirts: "all t-shirts" }, product: { name: "Striped shirt", price: 25 } },
 };
 
+/** The state slots of a shop in some situation: pure, so `preview` can render a shop that does not exist yet. */
+function render(w: { at: string; basket: string[]; orders: string[][]; seen: Record<string, string> }): Record<string, Json | null> {
+  const page = PAGES[w.at]!;
+  const seen = { ...w.seen, ...(page.product ? { [page.product.name]: `${page.product.price} EUR` } : {}) };
+  return {
+    seen: Object.keys(seen).length ? seen : null,
+    page: { title: page.title, text: page.text, links: page.links, ...(page.product ? { price: `${page.product.price} EUR` } : {}) },
+    basket: w.basket.length ? [...w.basket] : null,
+    orders: w.orders.length ? w.orders.map((o) => [...o]) : null,
+  };
+}
+
+/** The shop as the slots of `state` describe it. */
+const shopOf = (state: Readonly<Record<string, any>>) => ({
+  at: (state.page?.title ?? "Home") as string,
+  basket: [...((state.basket ?? []) as string[])],
+  orders: ((state.orders ?? []) as string[][]).map((o) => [...o]),
+  seen: { ...((state.seen ?? {}) as Record<string, string>) },
+});
+
 export function createWebshop() {
   const world = { at: "Home", trail: ["Home"], basket: [] as string[], orders: [] as string[][], seen: {} as Record<string, string> };
   const slots = (): Record<string, Json | null> => {
@@ -46,6 +66,7 @@ export function createWebshop() {
           options: (ctx) => ctx.state.page?.links ?? {},
         }),
       },
+      preview: ({ link }, ctx) => ({ state: render({ ...shopOf(ctx.state), at: link }), summary: `opened the page "${link}"` }),
       run: ({ link }) => {
         world.at = link;
         world.trail.push(link);
@@ -58,6 +79,10 @@ export function createWebshop() {
       description: "Puts the product of the open page into the basket.",
       summarize: (_args, ctx) => `puts the ${ctx.state.page?.title} on the open page into the basket`,
       available: (ctx) => ctx.state.page?.price !== undefined,
+      preview: (_args, ctx) => {
+        const w = shopOf(ctx.state);
+        return { state: render({ ...w, basket: [...w.basket, w.at] }), summary: `put "${w.at}" into the basket` };
+      },
       run: () => {
         world.basket.push(PAGES[world.at]!.product!.name);
         return { state: slots(), summary: `put "${world.at}" into the basket` };
@@ -75,6 +100,11 @@ export function createWebshop() {
         }),
       },
       available: (ctx) => ctx.state.basket != null,
+      preview: ({ item }, ctx) => {
+        const w = shopOf(ctx.state);
+        w.basket.splice(w.basket.indexOf(item), 1);
+        return { state: render(w), summary: `took "${item}" out of the basket` };
+      },
       run: ({ item }) => {
         world.basket.splice(world.basket.indexOf(item), 1);
         return { state: slots(), summary: `took "${item}" out of the basket` };
@@ -89,6 +119,10 @@ export function createWebshop() {
       description: "Pays for everything in the basket and places the order.",
       summarize: (_args, ctx) => `pays for everything in the basket (${(ctx.state.basket as string[]).join(", ")}) and places the order`,
       available: (ctx) => ctx.state.basket != null,
+      preview: (_args, ctx) => {
+        const w = shopOf(ctx.state);
+        return { state: render({ ...w, orders: [...w.orders, w.basket], basket: [] }), summary: "paid and placed the order" };
+      },
       run: () => {
         world.orders.push([...world.basket]);
         world.basket = [];
