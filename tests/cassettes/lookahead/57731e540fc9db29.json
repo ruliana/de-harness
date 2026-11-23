@@ -1,0 +1,148 @@
+{
+  "hash": "57731e540fc9db29",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Close ticket 7 and assign it to the technical team.",
+        "state": {
+          "tickets": [
+            {
+              "id": 3,
+              "subject": "Login page times out",
+              "status": "open",
+              "team": "unassigned"
+            },
+            {
+              "id": 7,
+              "subject": "Invoice shows the wrong VAT",
+              "status": "open",
+              "team": "billing"
+            },
+            {
+              "id": 9,
+              "subject": "Cannot export data",
+              "status": "open",
+              "team": "unassigned"
+            }
+          ]
+        },
+        "previous_actions": [
+          {
+            "tool": "assign",
+            "args": {
+              "ticket": "#7 Invoice shows the wrong VAT",
+              "team": "technical"
+            },
+            "summary": "assigned ticket 7 to technical"
+          },
+          {
+            "tool": "assign",
+            "args": {
+              "ticket": "#7 Invoice shows the wrong VAT",
+              "team": "billing"
+            },
+            "summary": "assigned ticket 7 to billing"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "assign": "Assigns a ticket to a team. A closed ticket cannot be assigned any more.",
+            "close_ticket": "Closes a ticket."
+          }
+        },
+        "assign.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.tickets` should be assigned to a team, going by `instructions`?",
+          "criteria": {
+            "#3 Login page times out": "",
+            "#7 Invoice shows the wrong VAT": "",
+            "#9 Cannot export data": ""
+          }
+        },
+        "assign.team": {
+          "type": "choice",
+          "instructions": "Which team should the ticket be assigned to, going by `instructions`?",
+          "criteria": {
+            "billing": "",
+            "technical": "",
+            "accounts": "",
+            "general": ""
+          }
+        },
+        "close_ticket.ticket": {
+          "type": "choice",
+          "instructions": "Which ticket of `state.tickets` should be closed, going by `instructions`?",
+          "criteria": {
+            "#3 Login page times out": "",
+            "#7 Invoice shows the wrong VAT": "",
+            "#9 Cannot export data": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "close_ticket",
+          "confidence": 0.74,
+          "probabilities": {
+            "assign": 0.13,
+            "close_ticket": 0.87
+          }
+        },
+        "assign.ticket": {
+          "type": "choice",
+          "choice": "#7 Invoice shows the wrong VAT",
+          "confidence": 1,
+          "probabilities": {
+            "#3 Login page times out": 0,
+            "#7 Invoice shows the wrong VAT": 1,
+            "#9 Cannot export data": 0
+          }
+        },
+        "assign.team": {
+          "type": "choice",
+          "choice": "technical",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "technical": 1,
+            "accounts": 0,
+            "general": 0
+          }
+        },
+        "close_ticket.ticket": {
+          "type": "choice",
+          "choice": "#7 Invoice shows the wrong VAT",
+          "confidence": 1,
+          "probabilities": {
+            "#3 Login page times out": 0,
+            "#7 Invoice shows the wrong VAT": 1,
+            "#9 Cannot export data": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 763,
+        "output_tokens": 197
+      }
+    }
+  }
+}

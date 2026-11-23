@@ -1,0 +1,78 @@
+{
+  "hash": "435e3a2eb6318cbc",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Friday morning flight to Lisbon, a hotel in Lisbon and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "yes",
+            "flight": "Friday 08:00 to Lisbon",
+            "hotel": "Hotel Baixa, Lisbon",
+            "transfer": "none"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "added the passport details"
+          },
+          {
+            "tool": "book_flight",
+            "args": {
+              "flight": "Friday 08:00 to Lisbon"
+            },
+            "summary": "booked the flight Friday 08:00 to Lisbon"
+          },
+          {
+            "tool": "book_hotel",
+            "args": {
+              "hotel": "Hotel Baixa, Lisbon"
+            },
+            "summary": "booked Hotel Baixa, Lisbon"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "book_transfer": "Arranges an airport transfer for the booked flight.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "book_transfer",
+          "confidence": 1,
+          "probabilities": {
+            "book_transfer": 1,
+            "end": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 564,
+        "output_tokens": 37
+      }
+    }
+  }
+}

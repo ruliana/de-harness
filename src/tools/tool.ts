@@ -94,6 +94,13 @@ export type Tool<P extends Params = Params> = {
    * (`puts the Blue mug into the basket`). Without it the review shows `name(args)` and the description.
    */
   summarize?(args: ArgsOf<P>, ctx: AvailabilityContext): string;
+  /**
+   * With `lookahead`: what this call would leave in the state, without doing it. It sees a state that may not be the real
+   * one (`ctx.state` is a copy several imagined actions ahead) and must not touch the outside world. Returns the same
+   * `state` slots (and `summary`) that `run` would. A tool without it cannot be looked ahead through: the planner only
+   * tries it for real, when no previewed sequence helps.
+   */
+  preview?(args: ArgsOf<P>, ctx: AvailabilityContext): ToolResult | Promise<ToolResult>;
   available?(ctx: AvailabilityContext): boolean;
   /** May be async and wait on anything (user input, another agent): the loop simply awaits it. A throw does not stop the run: it becomes the `error` slot. */
   run(args: ArgsOf<P>, ctx: ToolContext): ToolResult | Promise<ToolResult>;

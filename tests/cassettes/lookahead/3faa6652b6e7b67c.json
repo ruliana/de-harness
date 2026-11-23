@@ -1,0 +1,63 @@
+{
+  "hash": "3faa6652b6e7b67c",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Turn notifications off and switch to the dark theme. The language must stay German.",
+        "state": {
+          "settings": {
+            "theme": "light",
+            "language": "German",
+            "notifications": "on",
+            "sync": "on",
+            "font_size": "normal"
+          },
+          "error": "Not done: apply_preset(preset=\"night\"). `instructions` do not ask for it."
+        },
+        "previous_actions": [
+          {
+            "tool": "apply_preset",
+            "args": {
+              "preset": "night"
+            },
+            "summary": "not done, not asked for: apply_preset(preset=\"night\")"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for this: apply_preset(preset=\"night\"), which applies a named settings preset in one go.?",
+          "criteria": {
+            "true": "`instructions` ask for it, or it is a plain part of getting what they ask for done and finished (choosing, confirming, paying), on this very item and with these values",
+            "false": "`instructions` do not ask for it: they name another item, team, status or tag, or say nothing about this kind of change"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.08
+        }
+      },
+      "usage": {
+        "input_tokens": 536,
+        "output_tokens": 24
+      }
+    }
+  }
+}

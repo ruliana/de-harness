@@ -1,0 +1,88 @@
+{
+  "hash": "fbde87d23df91eea",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Print the signed lease in black and white.",
+        "state": {
+          "desk": {
+            "document": "signed",
+            "printer": "online",
+            "output": "nothing printed yet",
+            "files": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "sign_document",
+            "args": {},
+            "summary": "signed the lease"
+          },
+          {
+            "tool": "connect_printer",
+            "args": {},
+            "summary": "connected to the printer"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "print_document": "Prints the lease on the connected printer. Needs the printer online and the lease signed.",
+            "export_pdf": "Saves the lease as a PDF file.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "print_document.mode": {
+          "type": "choice",
+          "instructions": "In which mode do `instructions` ask for the lease to be printed?",
+          "criteria": {
+            "black and white": "",
+            "colour": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "print_document",
+          "confidence": 1,
+          "probabilities": {
+            "print_document": 1,
+            "export_pdf": 0,
+            "end": 0
+          }
+        },
+        "print_document.mode": {
+          "type": "choice",
+          "choice": "black and white",
+          "confidence": 1,
+          "probabilities": {
+            "black and white": 1,
+            "colour": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 542,
+        "output_tokens": 79
+      }
+    }
+  }
+}

@@ -189,6 +189,36 @@ createAgent({ model, instructions, tools, review: { end: true, actions: true } }
 
 It is off by default, so existing recordings stay valid. [`tests/acceptance/behaviour`](tests/acceptance/behaviour/) shows what each check fixes.
 
+### Looking ahead before acting
+
+A greedy step asks "which action looks best now?". `createAgent({ lookahead })` asks "which short sequence of actions gives the best
+verifiable state, and what is its first action?" and runs only that first action (`src/lookahead/lookahead.ts`):
+
+```ts
+createAgent({
+  model, instructions, tools,
+  lookahead: {
+    requirements: ["`state.trip.flight` is the Friday morning flight to Lisbon", "`state.trip.hotel` is a hotel in Lisbon"],
+    constraints: ["`state.basket.total` is under 40 EUR"], // must hold after every action
+    width: 3, depth: 2,
+  },
+})
+```
+
+Each step: judge the real state against the `requirements` (all met: the run ends); ask Jev for the `width` most probable
+(tool, arguments) pairs, from the probabilities of the `__tool__` Choice and of each Choice parameter; apply each to a copy of the
+state through the tool's `preview` (code that returns the `state` the call would leave, without touching the outside world); judge
+every resulting state against the same criteria, rechecking what was already met; expand the best states to `depth` actions;
+run the first action of the best sequence for real, observe, and plan again. A sequence that breaks a constraint is dropped; so is
+a state already seen (loops). When nothing improves on the unchanged state the run ends and says which requirements are unmet and
+why (`output: { complete, unmet, blocker }`), or with `onNoGain: "greedy"` takes Jev's most probable safe action and observes.
+
+A criterion is a statement that names state by path, judged by Jev with a Yes / No cut in code (`thresholds`); give it a `check`
+function and code decides instead, at no cost. A tool without `preview` is tried for real only when nothing previewed helps. The
+cost is requests: about 4x greedy at width 3, depth 2 (they run in parallel, so about 2x the time). It is opt-in and off by default.
+[`docs/lookahead`](docs/lookahead/README.md) has the experiment: greedy against `review` against lookahead, same tasks, same
+external verifier.
+
 ### Scale: many tools and a context budget
 
 Every request is kept under `contextBudget` tokens (default 48 000, estimated from characters; Jev takes about 64k).
@@ -228,6 +258,7 @@ the files at `https://cdn.jsdelivr.net/npm/de-harness@<version>/dist/de-harness.
 | `src/loop/` | `createAgent(config).run()` |
 | `src/input/` | `ctx.input.ask` holds the loop until an `InputProvider` replies: `StdinInput` (terminal), `ScriptedInput` (tests) |
 | `src/events/` | typed events and the JSONL trace |
+| `src/lookahead/` | the opt-in planner behind `createAgent({ lookahead })`: shortlist, preview, judge, deepen, commit one action |
 | `src/budget/` | token estimate, the context budget, previous-actions trimming |
 | `examples/rooms/`, `examples/pizza/` | the example domains |
 | `examples/coffee/` | a tool that asks the customer and waits (`npm run example:coffee`) |

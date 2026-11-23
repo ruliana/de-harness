@@ -1,0 +1,72 @@
+{
+  "hash": "328e7ee5ef11d4c7",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Share the Q4 report with Dana.",
+        "state": {
+          "workspace": {
+            "users": {
+              "Dana": "verified",
+              "Sam": "verified"
+            },
+            "reports": {
+              "Q4 report": "private",
+              "Q3 report": "private"
+            },
+            "shared_with": {},
+            "links_sent": [
+              "Q4 report to Dana"
+            ]
+          }
+        }
+      },
+      "questions": {
+        "req.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: In `state.workspace.shared_with`, the Q4 report is shared with Dana (a link emailed to Dana is not the same as access)",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        },
+        "con.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, does this hold: `state.workspace.shared_with` gives nobody access to the Q3 report",
+          "criteria": {
+            "true": "Yes: it holds, or nothing in `state` contradicts it",
+            "false": "No: `state` shows that it is broken"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "req.0": {
+          "type": "noul",
+          "noul": 0.07
+        },
+        "con.0": {
+          "type": "noul",
+          "noul": 0.98
+        }
+      },
+      "usage": {
+        "input_tokens": 516,
+        "output_tokens": 40
+      }
+    }
+  }
+}

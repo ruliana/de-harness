@@ -1,0 +1,71 @@
+{
+  "hash": "e577af3c301e87c2",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Friday morning flight to Lisbon, a hotel in Lisbon and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "no",
+            "flight": "none",
+            "hotel": "Hotel Baixa, Lisbon",
+            "transfer": "none"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "not done, not asked for: add_passport()"
+          },
+          {
+            "tool": "book_hotel",
+            "args": {
+              "hotel": "Hotel Baixa, Lisbon"
+            },
+            "summary": "booked Hotel Baixa, Lisbon"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_passport": "Adds the traveller's passport details to the booking profile.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "add_passport",
+          "confidence": 0.44,
+          "probabilities": {
+            "add_passport": 0.72,
+            "end": 0.28
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 511,
+        "output_tokens": 39
+      }
+    }
+  }
+}

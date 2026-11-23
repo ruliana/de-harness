@@ -14,13 +14,14 @@
  * loses its oldest previous actions; with none left the run fails, naming the largest part.
  */
 import { openTrace } from "../events/trace.js";
-import { BudgetError, DEFAULT_CONTEXT_BUDGET, fitRequest, requestTokens } from "../budget/budget.js";
+import { BudgetError, DEFAULT_CONTEXT_BUDGET, fitRequest, largestPart, requestTokens } from "../budget/budget.js";
+import { Planner, type LookaheadConfig } from "../lookahead/lookahead.js";
 import type { EventInput, HarnessEvent, Phase } from "../events/events.js";
 import { DecisionModelError, type Answer, type DecisionModel, type DecisionRequest, type DecisionResponse, type Question } from "../model/types.js";
 import { AnswerError, TOOL_QUESTION, buildQuestions, paramQuestions, parseArgs, pickedTool, toolQuestionOnly } from "../questions/build.js";
 import { createInputPort, type InputProvider } from "../input/provider.js";
 import { extractImages } from "../state/images.js";
-import { StateDocument, type Json } from "../state/state.js";
+import { StateDocument, type Json, type PreviousAction } from "../state/state.js";
 import { endTool } from "../tools/builtin.js";
 import { DEFAULT_MAX_REFUSALS, DEFAULT_REVIEW_THRESHOLD, REVIEW_QUESTION, STRICT_END_DESCRIPTION, STRICT_TOOL_QUESTION_TEXT, READY_QUESTION, askedQuestion, wantedId, wantedQuestion, callPhrase, describeCall, readyQuestion, remainingQuestion, type ReviewConfig } from "../review/review.js";
 import { ToolRegistry } from "../tools/registry.js";
@@ -51,6 +52,14 @@ export type AgentConfig = {
    * marked `effect: "change"` runs. Each check is one extra Noul request; see `src/review/review.ts`.
    */
   review?: ReviewConfig;
+  /**
+   * Opt-in short-horizon lookahead with replanning: before each action Jev shortlists a few, code previews them on
+   * copies of the state (`preview` on the tool), judges the resulting states against `requirements` and `constraints`,
+   * looks `depth` actions ahead, and runs only the first action of the best sequence. The run ends by itself when every
+   * requirement is met, or when nothing explored improves on the current state. Several requests per step; see
+   * `src/lookahead/lookahead.ts`.
+   */
+  lookahead?: LookaheadConfig;
   /** State slots before the first step. */
   initialState?: Record<string, Json>;
   /** Write every event to this file as JSONL (Node only; in a browser use `onEvent`). */
@@ -88,6 +97,8 @@ export type StepRecord = {
   refused?: string;
   /** Tools whose choice `review.end` turned down this step (`end`), after which the model chose again. */
   vetoed?: string[];
+  /** With `lookahead`: the sequence this action is the first of, as calls, and whether it was planned or an exploratory try of a tool that cannot be previewed. */
+  planned?: { sequence: string[]; why: string };
 };
 
 export type RunResult = {
@@ -131,6 +142,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
   };
 
   let refusals = 0;
+  const planner = config.lookahead ? new Planner(config.lookahead) : undefined;
   // step 0 is before the first step (tools added through `agent.tools` before `run`)
   let currentStep = 0;
   const stopListening = tools.onChange((c) => emit({ type: "tools_changed", step: currentStep, change: c.change, tool: c.tool, tools: tools.list().map((t) => t.name) }));
@@ -191,10 +203,55 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
 
     // the choice of this step; with `review.end` an end that still leaves work is refused and the model chooses again
     const vetoed: string[] = [];
+    let planned: { sequence: string[]; why: string } | undefined;
     let plan!: ReturnType<typeof buildQuestions>;
     let tool!: AnyTool;
     let parsed!: ReturnType<typeof parseArgs>;
-    for (let attempt = 0; ; attempt++) {
+    if (planner) {
+      // lookahead: the planner searches over imagined states and returns the first action of the best sequence, or a stop
+      emit({ type: "step_start", step, tools: candidates.filter((t) => t.name !== "end").map((t) => t.name), skipped: [] });
+      const askDoc = async (phase: "shortlist" | "evaluate", doc: Record<string, unknown>, questions: Record<string, Question>): Promise<DecisionResponse> => {
+        current = phase;
+        const { value: state, images } = extractImages(doc);
+        const request: DecisionRequest = { state, questions, ...(Object.keys(images).length ? { images } : {}) };
+        const tokens = requestTokens(request);
+        if (tokens > budget) throw new BudgetError(tokens, budget, largestPart(request));
+        emit({ type: "request", step, phase, estimatedTokens: tokens, request });
+        sent.push({ phase, request });
+        const response = await config.model.ask(request);
+        emit({ type: "answers", step, phase, model: response.model, answers: response.answers, usage: response.usage });
+        return response;
+      };
+      let decision: Awaited<ReturnType<Planner["next"]>>;
+      try {
+        decision = await planner.next(
+          {
+            step,
+            instructions: config.instructions,
+            view,
+            history: doc.document(config.instructions, window, window > 0).previous_actions as PreviousAction[] ?? [],
+            window,
+            registry: tools,
+            tools: candidates,
+            available: (state) => tools.list().filter((t) => t.available?.({ state, step, tools }) ?? true),
+            ask: askDoc,
+          },
+          (search) => emit({ type: "lookahead", step, search }),
+        );
+      } catch (e) {
+        const error = e instanceof Error ? e : new Error(String(e));
+        if (error instanceof BudgetError) emit({ type: "budget_exceeded", step, phase: current, message: error.message, largest: error.largest.name, estimatedTokens: error.estimatedTokens, budget });
+        else emit({ type: "model_error", step, message: error.message, status: error instanceof DecisionModelError ? error.status : undefined });
+        return finish("error", { error });
+      }
+      if (decision.kind === "stop") {
+        return finish("ended", { output: { complete: decision.reason === "complete", unmet: decision.unmet, ...(decision.blocker ? { blocker: decision.blocker } : {}), ...(decision.broken ? { broken: decision.broken } : {}), state: doc.view() } });
+      }
+      tool = decision.tool;
+      parsed = { args: decision.args, raw: decision.raw };
+      planned = { sequence: decision.sequence, why: decision.why };
+    }
+    else for (let attempt = 0; ; attempt++) {
       plan = buildQuestions(candidates.filter((t) => !vetoed.includes(t.name)), { state: view, step }, config.review?.wording ? { toolQuestion: STRICT_TOOL_QUESTION_TEXT } : {});
       if (attempt === 0) emit({ type: "step_start", step, tools: plan.tools.map((t) => t.name), skipped: plan.skipped });
       if (plan.tools.length === 0) return finish("error", { error: new Error("No tool is available") });
@@ -261,7 +318,8 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
       }
       break;
     }
-    const request = sent[0]!.request;
+    // with lookahead every request of an earlier step may answer this one (equal states are asked about once)
+    const request = sent[0]?.request ?? { state: doc.document(config.instructions, window, window > 0), questions: {} };
 
     // 4. run it (it may await anything)
     emit({ type: "tool_call", step, tool: tool.name, args: parsed.args });
@@ -328,7 +386,7 @@ async function run(config: AgentConfig, tools: ToolRegistry): Promise<RunResult>
     if (result.state) doc.merge(result.state);
     const summary = error ? `failed: ${error}` : result.summary;
     doc.record({ tool: tool.name, args: parsed.args, ...(summary !== undefined ? { summary } : {}) });
-    steps.push({ step, tool: tool.name, args: parsed.args, answers: parsed.raw, request, requests: sent, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}), ...(refused ? { refused } : {}), ...(vetoed.length ? { vetoed: [...vetoed] } : {}) });
+    steps.push({ step, tool: tool.name, args: parsed.args, answers: parsed.raw, request, requests: sent, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}), ...(refused ? { refused } : {}), ...(vetoed.length ? { vetoed: [...vetoed] } : {}), ...(planned ? { planned } : {}) });
     emit({ type: "tool_result", step, tool: tool.name, ...(summary !== undefined ? { summary } : {}), ...(error ? { error } : {}), ...(result.end ? { end: true } : {}) });
 
     if (result.end) return finish("ended", { output: result.output });

@@ -1,0 +1,60 @@
+{
+  "hash": "75a402df47695977",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Friday morning flight to Lisbon, a hotel in Lisbon and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "no",
+            "flight": "none",
+            "hotel": "none",
+            "transfer": "none"
+          },
+          "error": "Not done: add_passport(). `instructions` do not ask for it."
+        },
+        "previous_actions": [
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "not done, not asked for: add_passport()"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Do `instructions` ask for this: book_hotel(hotel=\"Hotel Baixa, Lisbon\"), which books a hotel.?",
+          "criteria": {
+            "true": "`instructions` ask for it, or it is a plain part of getting what they ask for done and finished (choosing, confirming, paying), on this very item and with these values",
+            "false": "`instructions` do not ask for it: they name another item, team, status or tag, or say nothing about this kind of change"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.71
+        }
+      },
+      "usage": {
+        "input_tokens": 514,
+        "output_tokens": 24
+      }
+    }
+  }
+}

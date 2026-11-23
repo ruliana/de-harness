@@ -1,0 +1,183 @@
+{
+  "hash": "21ab6f3d14c74154",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Turn notifications off and switch to the dark theme. The language must stay German.",
+        "state": {
+          "settings": {
+            "theme": "dark",
+            "language": "English",
+            "notifications": "off",
+            "sync": "on",
+            "font_size": "normal"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "apply_preset",
+            "args": {
+              "preset": "night"
+            },
+            "summary": "applied the night preset"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "set_theme": "Switches the colour theme.",
+            "set_language": "Changes the interface language.",
+            "set_notifications": "Turns notifications on or off.",
+            "set_font_size": "Changes the text size.",
+            "set_sync": "Turns syncing with the cloud on or off.",
+            "apply_preset": "Applies a named settings preset in one go."
+          }
+        },
+        "set_theme.theme": {
+          "type": "choice",
+          "instructions": "Which theme do `instructions` ask for?",
+          "criteria": {
+            "light": "",
+            "dark": ""
+          }
+        },
+        "set_language.language": {
+          "type": "choice",
+          "instructions": "Which language do `instructions` ask for?",
+          "criteria": {
+            "English": "",
+            "German": "",
+            "French": ""
+          }
+        },
+        "set_notifications.mode": {
+          "type": "choice",
+          "instructions": "Should notifications be on or off, going by `instructions`?",
+          "criteria": {
+            "on": "",
+            "off": ""
+          }
+        },
+        "set_font_size.size": {
+          "type": "choice",
+          "instructions": "Which text size do `instructions` ask for?",
+          "criteria": {
+            "small": "",
+            "normal": "",
+            "large": ""
+          }
+        },
+        "set_sync.mode": {
+          "type": "choice",
+          "instructions": "Should syncing be on or off, going by `instructions`?",
+          "criteria": {
+            "on": "",
+            "off": ""
+          }
+        },
+        "apply_preset.preset": {
+          "type": "choice",
+          "instructions": "Which preset suits `instructions`?",
+          "criteria": {
+            "night": "a dark, quiet profile for working late",
+            "day": "a bright profile for the office",
+            "focus": "a distraction-free profile"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "set_language",
+          "confidence": 1,
+          "probabilities": {
+            "set_theme": 0,
+            "set_language": 1,
+            "set_notifications": 0,
+            "set_font_size": 0,
+            "set_sync": 0,
+            "apply_preset": 0
+          }
+        },
+        "set_theme.theme": {
+          "type": "choice",
+          "choice": "dark",
+          "confidence": 1,
+          "probabilities": {
+            "light": 0,
+            "dark": 1
+          }
+        },
+        "set_language.language": {
+          "type": "choice",
+          "choice": "German",
+          "confidence": 1,
+          "probabilities": {
+            "English": 0,
+            "German": 1,
+            "French": 0
+          }
+        },
+        "set_notifications.mode": {
+          "type": "choice",
+          "choice": "off",
+          "confidence": 1,
+          "probabilities": {
+            "on": 0,
+            "off": 1
+          }
+        },
+        "set_font_size.size": {
+          "type": "choice",
+          "choice": "normal",
+          "confidence": 1,
+          "probabilities": {
+            "small": 0,
+            "normal": 1,
+            "large": 0
+          }
+        },
+        "set_sync.mode": {
+          "type": "choice",
+          "choice": "on",
+          "confidence": 0.98,
+          "probabilities": {
+            "on": 0.99,
+            "off": 0.01
+          }
+        },
+        "apply_preset.preset": {
+          "type": "choice",
+          "choice": "night",
+          "confidence": 0.98,
+          "probabilities": {
+            "night": 0.99,
+            "day": 0,
+            "focus": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 787,
+        "output_tokens": 276
+      }
+    }
+  }
+}

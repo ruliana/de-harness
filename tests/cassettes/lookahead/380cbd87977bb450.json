@@ -1,0 +1,69 @@
+{
+  "hash": "380cbd87977bb450",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Turn notifications off and switch to the dark theme. The language must stay German.",
+        "state": {
+          "settings": {
+            "theme": "dark",
+            "language": "German",
+            "notifications": "off",
+            "sync": "on",
+            "font_size": "normal"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "set_theme",
+            "args": {
+              "theme": "dark"
+            },
+            "summary": "theme is now dark"
+          },
+          {
+            "tool": "set_notifications",
+            "args": {
+              "mode": "off"
+            },
+            "summary": "notifications are now off"
+          }
+        ]
+      },
+      "questions": {
+        "__review__": {
+          "type": "noul",
+          "instructions": "Looking at `state` and `previous_actions`, would one of these actions carry `instructions` further than they already are: set_theme (Switches the colour theme.); set_language (Changes the interface language.); set_notifications (Turns notifications on or off.); set_font_size (Changes the text size.); set_sync (Turns syncing with the cloud on or off.); apply_preset (Applies a named settings preset in one go.)?",
+          "criteria": {
+            "true": "An action would take it further: a part of `instructions` is missing from `state`, or was only started or prepared (chosen but not confirmed, put aside but not paid, compared but not acted on, passed through but not reached)",
+            "false": "`state` shows everything that `instructions` ask for as done and finished, or no action could do what is left; any action left would be something `instructions` do not ask for"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__review__": {
+          "type": "noul",
+          "noul": 0.02
+        }
+      },
+      "usage": {
+        "input_tokens": 617,
+        "output_tokens": 24
+      }
+    }
+  }
+}

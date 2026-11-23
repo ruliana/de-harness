@@ -1,0 +1,66 @@
+{
+  "hash": "39a16608f67fc273",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Order the cheaper of the two mugs.",
+        "state": {
+          "page": {
+            "title": "Home",
+            "text": "Welcome to Harbour Goods.",
+            "links": {
+              "Mugs": "mugs and cups",
+              "Shirts": "t-shirts"
+            }
+          }
+        }
+      },
+      "questions": {
+        "req.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, is this true: `state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`",
+          "criteria": {
+            "true": "Yes: `state` shows that it is true",
+            "false": "No: `state` shows that it is not true, or does not show that it is"
+          }
+        },
+        "con.0": {
+          "type": "noul",
+          "instructions": "Going by `state`, does this hold: `state.orders` has no order that includes the more expensive of the Red mug and the Blue mug",
+          "criteria": {
+            "true": "Yes: it holds, or nothing in `state` contradicts it",
+            "false": "No: `state` shows that it is broken"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "req.0": {
+          "type": "noul",
+          "noul": 0.03
+        },
+        "con.0": {
+          "type": "noul",
+          "noul": 0.96
+        }
+      },
+      "usage": {
+        "input_tokens": 502,
+        "output_tokens": 40
+      }
+    }
+  }
+}

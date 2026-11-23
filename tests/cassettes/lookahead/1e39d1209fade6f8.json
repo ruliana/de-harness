@@ -1,0 +1,117 @@
+{
+  "hash": "1e39d1209fade6f8",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Put a notebook and a pen into the basket. Keep the basket total under 30 EUR.",
+        "state": {
+          "catalogue": {
+            "Backpack": "20 EUR",
+            "Notebook": "4 EUR",
+            "Pen": "3 EUR",
+            "Desk starter set": "a notebook and a pen together, 12 EUR"
+          },
+          "basket": {
+            "lines": [
+              {
+                "item": "Backpack",
+                "price": "20 EUR"
+              },
+              {
+                "item": "Notebook",
+                "price": "4 EUR"
+              }
+            ],
+            "total": "24 EUR"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "add_to_basket",
+            "args": {
+              "product": "Notebook"
+            },
+            "summary": "added Notebook to the basket"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_to_basket": "Puts a product from the catalogue into the basket.",
+            "remove_from_basket": "Takes one item out of the basket."
+          }
+        },
+        "add_to_basket.product": {
+          "type": "choice",
+          "instructions": "Which product of `state.catalogue` should be added to the basket, going by `instructions`?",
+          "criteria": {
+            "Backpack": "20 EUR",
+            "Notebook": "4 EUR",
+            "Pen": "3 EUR",
+            "Desk starter set": "a notebook and a pen together, 12 EUR"
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "instructions": "Which item of `state.basket.lines` should be taken out, going by `instructions`?",
+          "criteria": {
+            "Backpack": "",
+            "Notebook": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "add_to_basket",
+          "confidence": 1,
+          "probabilities": {
+            "add_to_basket": 1,
+            "remove_from_basket": 0
+          }
+        },
+        "add_to_basket.product": {
+          "type": "choice",
+          "choice": "Pen",
+          "confidence": 0.99,
+          "probabilities": {
+            "Backpack": 0,
+            "Notebook": 0,
+            "Pen": 0.99,
+            "Desk starter set": 0.01
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "choice": "Backpack",
+          "confidence": 0.32,
+          "probabilities": {
+            "Backpack": 0.66,
+            "Notebook": 0.34
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 704,
+        "output_tokens": 139
+      }
+    }
+  }
+}

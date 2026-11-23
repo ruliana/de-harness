@@ -1,0 +1,74 @@
+{
+  "hash": "8f41468091fb2c01",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Deploy build 12 to production and tell the team.",
+        "state": {
+          "release": {
+            "staging": "build 12",
+            "smoke_tests": "passed",
+            "production": "build 12",
+            "team": "not told"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "deploy_staging",
+            "args": {},
+            "summary": "deployed build 12 to staging"
+          },
+          {
+            "tool": "run_smoke_tests",
+            "args": {},
+            "summary": "smoke tests passed on staging"
+          },
+          {
+            "tool": "deploy_production",
+            "args": {},
+            "summary": "deployed build 12 to production"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "Which action best advances `instructions`, given `state` and `previous_actions`?",
+          "criteria": {
+            "notify_team": "Posts the release status in the team channel.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "notify_team",
+          "confidence": 1,
+          "probabilities": {
+            "notify_team": 1,
+            "end": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 530,
+        "output_tokens": 37
+      }
+    }
+  }
+}
