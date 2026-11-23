@@ -56,11 +56,11 @@
       "answers": {
         "req.0": {
           "type": "noul",
-          "noul": 0.04
+          "noul": 0.03
         },
         "req.1": {
           "type": "noul",
-          "noul": 0.95
+          "noul": 0.97
         },
         "req.2": {
           "type": "noul",

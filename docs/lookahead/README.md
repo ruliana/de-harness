@@ -107,5 +107,37 @@ asked about once. A criterion with a `check` in code costs nothing.
 Keep `lookahead` opt-in and use `{ width: 3, depth: 2, onNoGain: "greedy" }` for agents whose tools can preview their effect and
 whose task can be written as requirements: it completed every task here with no limit broken, for about 5x the requests. Use
 depth 3, or list milestones as requirements, when a prerequisite chain has more than one step without visible progress. Next:
-quote the task in the shortlist question (the investigation's finding, which raised the right action's probability 0.13 to 0.39)
-and try the planner where previews are not exact (an API with a dry-run, the browser).
+try the planner where previews are not exact (an API with a dry-run, the browser).
+
+## Quoting the task in the tool question
+
+The shortlist question is the tool question a greedy step asks. The instruction-following investigation found that putting the
+task inside it ("The task is: \"...\". Which action best advances this task, given `state` and `previous_actions`?") raises Jev's
+probability for the right action on the decisions it got wrong from 0.13 to 0.39, at no extra request. `createAgent({ quoteTask })`
+does that and is **on by default** (`quoteTask: false` keeps the old wording), for the greedy step and for the shortlist; the
+judgments of states (`Going by \`state\`, is this true: ...`) do not mention the task and are unchanged.
+
+The same 21 tasks, 8 arms and 2 runs, run again one after the other on 2026-11-23 with the plain question and with the quoted one
+([`results-unquoted.json`](results-unquoted.json), [`results-quoted.json`](results-quoted.json)); completed / 42, then regressions,
+limit breaks, requests per run:
+
+| Arm | plain question | task quoted |
+| - | - | - |
+| greedy | 26, 10 reg, 8 breaks, 3.7 req | **29**, 10, 8, 4.0 |
+| greedy, told the requirements | 31, 10, 4, 4.2 | 32, 10, 4, 4.1 |
+| greedy + `review` | 14, 4, 6, 6.8 | 15, 3, 3, 6.5 |
+| lookahead 3 × 1 | 14, 0, 0, 6.2 | 14, 0, 0, 6.2 |
+| lookahead 1 × 2 | 29, 2, 0, 5.3 | 26, 2, 0, 5.3 |
+| lookahead 3 × 2 | 35, 2, 0, 14.3 | **36**, 2, 0, 14.4 |
+| lookahead 3 × 3 | 36, 2, 0, 21.1 | 36, 2, 0, 20.3 |
+| lookahead 3 × 2, `onNoGain: "greedy"` | 42, 2, 0, 19.0 | 41, 2, 0, 18.9 |
+
+- **Greedy gains where the task is plain navigation and the last step is the point**: the three shop tasks go from 0 of 6 to 3 of 6
+  (it now pays for the cheaper mug and for both mugs); the prerequisites and the traps do not move (16/20 and 10/16 both ways).
+- **Lookahead barely moves, as expected**: it takes its judgments from the requirements, and the shortlist only proposes. The
+  differences are single runs of single tasks (one more `deploy-41` for 3 × 2, one fewer for the greedy fallback, three fewer ticket
+  runs for width 1, which depends on Jev's first pick alone). Same-day repeats of the plain arms differ from the table above by as
+  much (3 × 2 got 34 there, 35 here).
+- **Cost**: none in requests (greedy 3.7 to 4.0 because more of its runs go on to the next step). The question is longer by the size of
+  the instructions.
+

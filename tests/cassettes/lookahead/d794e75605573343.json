@@ -1,0 +1,64 @@
+{
+  "hash": "d794e75605573343",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Print the signed lease in black and white.",
+        "state": {
+          "desk": {
+            "document": "unsigned",
+            "printer": "online",
+            "output": "nothing printed yet",
+            "files": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "connect_printer",
+            "args": {},
+            "summary": "connected to the printer"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Print the signed lease in black and white.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "sign_document": "Signs the lease.",
+            "export_pdf": "Saves the lease as a PDF file."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "sign_document",
+          "confidence": 0.98,
+          "probabilities": {
+            "sign_document": 0.99,
+            "export_pdf": 0.01
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 441,
+        "output_tokens": 38
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "hash": "1b32a296c169f905",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Where does a cordless drill belong? Walk down the product taxonomy to its category and select that category.",
+        "state": {
+          "location": {
+            "path": "Tools",
+            "children": [
+              "Power Tools",
+              "Hand Tools",
+              "Tool Accessories",
+              "Tool Storage",
+              "Measuring and Layout"
+            ]
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "descend",
+            "args": {
+              "child": "Tools"
+            },
+            "summary": "went down into Tools"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Where does a cordless drill belong? Walk down the product taxonomy to its category and select that category.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "descend": "Goes into one of the sub-categories of the current category, to narrow down where the item belongs.",
+            "ascend": "Goes back up to the parent of the current category, because the item does not belong in the current branch.",
+            "select": "Files the item that `instructions` ask about under the current category, because it is the most specific category that fits it.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "descend.child": {
+          "type": "choice",
+          "instructions": "Which of `state.location.children` is the best place to look for the item that `instructions` ask about?",
+          "criteria": {
+            "Power Tools": "",
+            "Hand Tools": "",
+            "Tool Accessories": "",
+            "Tool Storage": "",
+            "Measuring and Layout": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "descend",
+          "confidence": 1,
+          "probabilities": {
+            "descend": 1,
+            "ascend": 0,
+            "select": 0,
+            "end": 0
+          }
+        },
+        "descend.child": {
+          "type": "choice",
+          "choice": "Power Tools",
+          "confidence": 1,
+          "probabilities": {
+            "Power Tools": 1,
+            "Hand Tools": 0,
+            "Tool Accessories": 0,
+            "Tool Storage": 0,
+            "Measuring and Layout": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 654,
+        "output_tokens": 112
+      }
+    }
+  }
+}

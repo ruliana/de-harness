@@ -1,0 +1,72 @@
+{
+  "hash": "704d476af157ab68",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Send the customer message to the team that should handle it.",
+        "state": {
+          "message": "I was charged twice for my subscription this month. Please refund the extra charge."
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Send the customer message to the team that should handle it.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "route": "Sends the message to one team and finishes.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "route.team": {
+          "type": "choice",
+          "instructions": "Which team should handle `state.message`?",
+          "criteria": {
+            "billing": "",
+            "technical": "",
+            "sales": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "route",
+          "confidence": 0.98,
+          "probabilities": {
+            "route": 0.99,
+            "end": 0.01
+          }
+        },
+        "route.team": {
+          "type": "choice",
+          "choice": "billing",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 1,
+            "technical": 0,
+            "sales": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 457,
+        "output_tokens": 71
+      }
+    }
+  }
+}

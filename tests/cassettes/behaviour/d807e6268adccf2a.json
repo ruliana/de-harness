@@ -142,19 +142,19 @@
       "answers": {
         "__review__": {
           "type": "noul",
-          "noul": 0.38
+          "noul": 0.49
         },
         "__wanted__.assign": {
           "type": "noul",
-          "noul": 0.21
+          "noul": 0.22
         },
         "__wanted__.set_status": {
           "type": "noul",
-          "noul": 0.95
+          "noul": 0.96
         },
         "__wanted__.tag": {
           "type": "noul",
-          "noul": 0.11
+          "noul": 0.12
         }
       },
       "usage": {

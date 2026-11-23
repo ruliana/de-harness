@@ -36,6 +36,10 @@ One live run of the 18 tests per setting (Jev `jev-1.14.0`; a run differs a litt
 | `actions` | 6 |
 | `end` + `actions` | **0** (the recording run and one more at the default threshold, three at 0.4: 0 each time) |
 
+The task quoted in the tool question (`quoteTask`, on by default since 0.3.0) is a different kind of fix: it changes what the model is
+asked, not what code checks. With `review` off it took the suite from 12 to 9 failing in the same two live runs (the through-Museum
+route, buying both mugs and ordering the cheaper one now pass without `end`); with `end` + `actions` it stays at 0.
+
 Each setting fixes different tests: `wording` only the vague and the multi-rule ticket cases; `actions` the overreach cases
 and the "money team"; `end` the early stops (through Museum, two parts, cheaper mug, buy). They do not overlap, which is why
 the suite runs with both.

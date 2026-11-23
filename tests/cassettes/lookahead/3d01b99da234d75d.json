@@ -70,7 +70,7 @@
       "answers": {
         "req.0": {
           "type": "noul",
-          "noul": 0.99
+          "noul": 1
         },
         "req.1": {
           "type": "noul",

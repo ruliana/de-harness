@@ -1,0 +1,7496 @@
+{
+ "model": "jev-1.14.0",
+ "runs": 2,
+ "parallel": 1,
+ "results": [
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 484,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 346,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 605,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 7,
+   "ms": 775,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 564,
+   "trail": [
+    "set_notifications(off)",
+    "set_theme(dark)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 10,
+   "ms": 537,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 12,
+   "ms": 727,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 10,
+   "ms": 553,
+   "trail": [
+    "set_notifications(off)",
+    "set_theme(dark)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 189,
+   "trail": [
+    "set_font_size(large)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 237,
+   "trail": [
+    "set_font_size(large)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 371,
+   "trail": [
+    "set_font_size(large)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 4,
+   "ms": 503,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 3,
+   "ms": 289,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 527,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 9,
+   "ms": 618,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 506,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 310,
+   "trail": [
+    "add_to_basket(Mug duo)",
+    "remove_from_basket(Striped shirt)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 332,
+   "trail": [
+    "add_to_basket(Mug duo)",
+    "remove_from_basket(Striped shirt)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 8,
+   "ms": 726,
+   "trail": [
+    "add_to_basket(Mug duo)",
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 9,
+   "ms": 508,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "Red mug",
+    "Blue mug"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 3,
+   "ms": 284,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.basket.lines` includes Red mug",
+     "`state.basket.lines` includes Blue mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state without breaking a constraint"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 12,
+   "ms": 787,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 9,
+   "ms": 786,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 9,
+   "ms": 1145,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 327,
+   "trail": [
+    "add_to_basket(Desk starter set)",
+    "remove_from_basket(Backpack)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 339,
+   "trail": [
+    "add_to_basket(Desk starter set)",
+    "remove_from_basket(Backpack)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 8,
+   "ms": 830,
+   "trail": [
+    "add_to_basket(Desk starter set)",
+    "add_to_basket(Notebook)",
+    "add_to_basket(Pen)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 9,
+   "ms": 611,
+   "trail": [
+    "add_to_basket(Notebook)",
+    "add_to_basket(Pen)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "Notebook",
+    "Pen"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 3,
+   "ms": 255,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.basket.lines` includes Notebook",
+     "`state.basket.lines` includes Pen"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state without breaking a constraint"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 15,
+   "ms": 719,
+   "trail": [
+    "remove_from_basket(Backpack)",
+    "add_to_basket(Desk starter set)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 16,
+   "ms": 1061,
+   "trail": [
+    "add_to_basket(Notebook)",
+    "add_to_basket(Pen)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 16,
+   "ms": 1251,
+   "trail": [
+    "remove_from_basket(Backpack)",
+    "add_to_basket(Desk starter set)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 178,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 207,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 373,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 5,
+   "ms": 579,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 3,
+   "ms": 296,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 477,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 479,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 388,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 182,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 188,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 410,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 5,
+   "ms": 270,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 3,
+   "ms": 270,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 376,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 461,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 450,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "1:1 with Sam Tuesday "
+   ],
+   "regressions": 1,
+   "violations": 0,
+   "status": "step_limit",
+   "steps": 8,
+   "requests": 8,
+   "ms": 753,
+   "trail": [
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [
+    "Standup Wednesday 09:00",
+    "1:1 with Sam Tuesday "
+   ],
+   "regressions": 2,
+   "violations": 0,
+   "status": "step_limit",
+   "steps": 8,
+   "requests": 8,
+   "ms": 724,
+   "trail": [
+    "shift_day(Tuesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Wednesday)"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "1:1 with Sam Tuesday "
+   ],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 598,
+   "trail": [
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 279,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 371,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 8,
+   "ms": 638,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 10,
+   "ms": 605,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 8,
+   "ms": 796,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 320,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 320,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "dark",
+    "notifications off"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 376,
+   "trail": [
+    "apply_preset(night)",
+    "apply_preset(night)"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "dark",
+    "notifications off"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 262,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.settings.theme` is dark",
+     "`state.settings.notifications` is off"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 480,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 11,
+   "ms": 726,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 12,
+   "ms": 749,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 11,
+   "ms": 697,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 335,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 305,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "Dana has the Q4 report"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 533,
+   "trail": [
+    "verify_user(Dana)",
+    "send_link(Q4 report, Dana)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "Dana has the Q4 report"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 346,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.workspace.shared_with`, the Q4 report is shared with Dana (a link emailed to Dana is not the same as access)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 530,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 22,
+   "ms": 1429,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 39,
+   "ms": 2007,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 22,
+   "ms": 1341,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 291,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 414,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "Lee has the Budget plan"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 577,
+   "trail": [
+    "verify_user(Lee)",
+    "send_link(Budget plan, Lee)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "Lee has the Budget plan"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 384,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.workspace.shared_with`, the Budget plan is shared with Lee (a link emailed to Lee is not the same as access)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 458,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 19,
+   "ms": 1048,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 32,
+   "ms": 2081,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 19,
+   "ms": 996,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 571,
+   "trail": [
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 466,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 8,
+   "ms": 774,
+   "trail": [
+    "add_passport()",
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 844,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.trip.flight` is the Friday morning flight to Lisbon",
+     "`state.trip.transfer` is arranged (not none)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 9,
+   "ms": 1138,
+   "trail": [
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 1053,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 29,
+   "ms": 1660,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 1265,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 417,
+   "trail": [
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_hotel(Hotel Ring, Vienna)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 479,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 8,
+   "ms": 796,
+   "trail": [
+    "add_passport()",
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 483,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.trip.flight` is the Thursday afternoon flight to Vienna",
+     "`state.trip.transfer` is arranged (not none)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 9,
+   "ms": 805,
+   "trail": [
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_hotel(Hotel Ring, Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 1428,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 29,
+   "ms": 1253,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 1163,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 392,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 422,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "signed",
+    "printed in colour"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 381,
+   "trail": [
+    "sign_document()",
+    "connect_printer()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "printed in colour"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 8,
+   "ms": 486,
+   "trail": [
+    "sign_document()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.desk.output` says the contract was printed in colour (a PDF file is not a printout)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 7,
+   "ms": 656,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1782,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 33,
+   "ms": 1625,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1035,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 407,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 378,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "signed",
+    "printed in black and white"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 376,
+   "trail": [
+    "sign_document()",
+    "connect_printer()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "printed in black and white"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 8,
+   "ms": 480,
+   "trail": [
+    "sign_document()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.desk.output` says the lease was printed in black and white (a PDF file is not a printout)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 7,
+   "ms": 698,
+   "trail": [
+    "connect_printer()",
+    "sign_document()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1082,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 32,
+   "ms": 1768,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1133,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 183,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 185,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 382,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 9,
+   "ms": 547,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 7 is assigned to the technical team"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 592,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 7 is assigned to the technical team"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 14,
+   "ms": 871,
+   "trail": [
+    "assign(#7 Invoice shows the wrong VAT, technical)",
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 26,
+   "ms": 1616,
+   "trail": [
+    "assign(#7 Invoice shows the wrong VAT, technical)",
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 14,
+   "ms": 865,
+   "trail": [
+    "assign(#7 Invoice shows the wrong VAT, technical)",
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 172,
+   "trail": [
+    "close_ticket(#3 Login page times out)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 168,
+   "trail": [
+    "close_ticket(#3 Login page times out)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 361,
+   "trail": [
+    "close_ticket(#3 Login page times out)",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 9,
+   "ms": 820,
+   "trail": [
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 3 is assigned to the billing team"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 706,
+   "trail": [
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 3 is assigned to the billing team"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 15,
+   "ms": 920,
+   "trail": [
+    "assign(#3 Login page times out, billing)",
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 29,
+   "ms": 1492,
+   "trail": [
+    "assign(#3 Login page times out, billing)",
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 15,
+   "ms": 956,
+   "trail": [
+    "assign(#3 Login page times out, billing)",
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 698,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 418,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 10,
+   "ms": 965,
+   "trail": [
+    "deploy_staging()",
+    "notify_team()",
+    "deploy_staging()",
+    "deploy_staging()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 483,
+   "trail": [
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.release.production` is build 41"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "production runs the build",
+    "team told"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 423,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.release.production` is build 41",
+     "`state.release.team` says the team was told"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 17,
+   "ms": 1166,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 20,
+   "ms": 1017,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 13,
+   "ms": 935,
+   "trail": [
+    "notify_team()",
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 496,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 504,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 10,
+   "ms": 961,
+   "trail": [
+    "deploy_staging()",
+    "notify_team()",
+    "deploy_staging()",
+    "deploy_staging()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 467,
+   "trail": [
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.release.production` is build 12",
+     "`state.release.smoke_tests` is passed"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 9,
+   "ms": 894,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 17,
+   "ms": 945,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 19,
+   "ms": 1000,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 17,
+   "ms": 969,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "nothing else paid for"
+   ],
+   "regressions": 1,
+   "violations": 2,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 492,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 6,
+   "requests": 6,
+   "ms": 619,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "remove_from_basket(Blue mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 8,
+   "ms": 795,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "remove_from_basket(Blue mug)"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 351,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 505,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 12,
+   "ms": 586,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x3",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 22,
+   "ms": 1195,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 6,
+   "requests": 41,
+   "ms": 1951,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "remove_from_basket(Blue mug)",
+    "checkout()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 7,
+   "ms": 684,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 8,
+   "requests": 8,
+   "ms": 847,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 8,
+   "requests": 12,
+   "ms": 1109,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 291,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 433,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 9,
+   "ms": 570,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x3",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 18,
+   "ms": 905,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 48,
+   "ms": 2124,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "checkout()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 7,
+   "ms": 692,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 11,
+   "requests": 11,
+   "ms": 1099,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 10,
+   "ms": 894,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 308,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 477,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x2",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 9,
+   "ms": 663,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x3",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 18,
+   "ms": 1175,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state"
+   },
+   "run": 0
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 6,
+   "requests": 39,
+   "ms": 2231,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 0
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 339,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 291,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 630,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 7,
+   "ms": 504,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 478,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 10,
+   "ms": 565,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 12,
+   "ms": 699,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-night",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 10,
+   "ms": 587,
+   "trail": [
+    "set_theme(dark)",
+    "set_notifications(off)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 181,
+   "trail": [
+    "set_font_size(large)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 175,
+   "trail": [
+    "set_font_size(large)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 331,
+   "trail": [
+    "set_font_size(large)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 4,
+   "ms": 260,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 3,
+   "ms": 300,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 487,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 9,
+   "ms": 667,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-presentation",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 470,
+   "trail": [
+    "set_font_size(large)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 272,
+   "trail": [
+    "add_to_basket(Mug duo)",
+    "remove_from_basket(Striped shirt)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 260,
+   "trail": [
+    "add_to_basket(Mug duo)",
+    "remove_from_basket(Striped shirt)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 8,
+   "ms": 812,
+   "trail": [
+    "add_to_basket(Mug duo)",
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 9,
+   "ms": 842,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "Red mug",
+    "Blue mug"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 3,
+   "ms": 274,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.basket.lines` includes Red mug",
+     "`state.basket.lines` includes Blue mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state without breaking a constraint"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 12,
+   "ms": 715,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 9,
+   "ms": 531,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-mugs",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 12,
+   "ms": 816,
+   "trail": [
+    "add_to_basket(Red mug)",
+    "add_to_basket(Blue mug)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 268,
+   "trail": [
+    "add_to_basket(Desk starter set)",
+    "remove_from_basket(Backpack)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [],
+   "regressions": 1,
+   "violations": 1,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 264,
+   "trail": [
+    "add_to_basket(Desk starter set)",
+    "remove_from_basket(Backpack)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "under 30 EUR"
+   ],
+   "regressions": 1,
+   "violations": 3,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 581,
+   "trail": [
+    "add_to_basket(Desk starter set)",
+    "remove_from_basket(Backpack)",
+    "remove_from_basket(Backpack)"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 9,
+   "ms": 501,
+   "trail": [
+    "add_to_basket(Notebook)",
+    "add_to_basket(Pen)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "Notebook",
+    "Pen"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 3,
+   "ms": 322,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.basket.lines` includes Notebook",
+     "`state.basket.lines` includes Pen"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state without breaking a constraint"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 15,
+   "ms": 701,
+   "trail": [
+    "remove_from_basket(Backpack)",
+    "add_to_basket(Desk starter set)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 18,
+   "ms": 1325,
+   "trail": [
+    "add_to_basket(Notebook)",
+    "remove_from_basket(Backpack)",
+    "add_to_basket(Backpack)",
+    "add_to_basket(Pen)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "basket-stationery",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 15,
+   "ms": 887,
+   "trail": [
+    "remove_from_basket(Backpack)",
+    "add_to_basket(Desk starter set)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 253,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 190,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 407,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 5,
+   "ms": 434,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 3,
+   "ms": 331,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 584,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 436,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-review",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 393,
+   "trail": [
+    "move_event(Design review, Wednesday, 10:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 271,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 172,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 381,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 5,
+   "ms": 285,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 3,
+   "ms": 292,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 393,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 397,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-demo",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 410,
+   "trail": [
+    "move_event(Product demo, Thursday, 11:00)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "1:1 with Sam Tuesday "
+   ],
+   "regressions": 1,
+   "violations": 0,
+   "status": "step_limit",
+   "steps": 8,
+   "requests": 8,
+   "ms": 769,
+   "trail": [
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [
+    "Standup Wednesday 09:00",
+    "1:1 with Sam Tuesday "
+   ],
+   "regressions": 2,
+   "violations": 0,
+   "status": "step_limit",
+   "steps": 8,
+   "requests": 8,
+   "ms": 778,
+   "trail": [
+    "shift_day(Tuesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Tuesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Wednesday)",
+    "shift_day(Wednesday)"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "1:1 with Sam Tuesday "
+   ],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 580,
+   "trail": [
+    "shift_day(Tuesday)",
+    "shift_day(Tuesday)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 288,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 399,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 8,
+   "ms": 471,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 10,
+   "ms": 722,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "calendar-shift-only",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 8,
+   "ms": 544,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.calendar` has the Design review on Wednesday at 10:00"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 300,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 289,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "dark",
+    "notifications off"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 372,
+   "trail": [
+    "apply_preset(night)",
+    "apply_preset(night)"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "dark",
+    "notifications off"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 303,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.settings.theme` is dark",
+     "`state.settings.notifications` is off"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 451,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 11,
+   "ms": 662,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 12,
+   "ms": 753,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "settings-preset-only",
+   "kind": "regression",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 1,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 11,
+   "ms": 701,
+   "trail": [
+    "apply_preset(night)",
+    "set_language(German)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 258,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 276,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "Dana has the Q4 report"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 631,
+   "trail": [
+    "verify_user(Dana)",
+    "send_link(Q4 report, Dana)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "Dana has the Q4 report"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 549,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.workspace.shared_with`, the Q4 report is shared with Dana (a link emailed to Dana is not the same as access)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 475,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 19,
+   "ms": 1265,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 39,
+   "ms": 2020,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-q4",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 22,
+   "ms": 1865,
+   "trail": [
+    "verify_user(Dana)",
+    "share_report(Q4 report, Dana)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 313,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 3,
+   "ms": 287,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "Lee has the Budget plan"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 6,
+   "ms": 640,
+   "trail": [
+    "verify_user(Lee)",
+    "send_link(Budget plan, Lee)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "Lee has the Budget plan"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 324,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.workspace.shared_with`, the Budget plan is shared with Lee (a link emailed to Lee is not the same as access)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 5,
+   "ms": 473,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 19,
+   "ms": 967,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 31,
+   "ms": 2101,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "share-budget",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 19,
+   "ms": 911,
+   "trail": [
+    "verify_user(Lee)",
+    "share_report(Budget plan, Lee)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 1007,
+   "trail": [
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 525,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 8,
+   "ms": 850,
+   "trail": [
+    "add_passport()",
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 485,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.trip.flight` is the Friday morning flight to Lisbon",
+     "`state.trip.transfer` is arranged (not none)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 9,
+   "ms": 883,
+   "trail": [
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 1080,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 29,
+   "ms": 1757,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-lisbon",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 1040,
+   "trail": [
+    "book_hotel(Hotel Baixa, Lisbon)",
+    "add_passport()",
+    "book_flight(Friday 08:00 to Lisbon)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 488,
+   "trail": [
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_hotel(Hotel Ring, Vienna)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 508,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 8,
+   "ms": 864,
+   "trail": [
+    "add_passport()",
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "flight",
+    "transfer"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 7,
+   "ms": 524,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.trip.flight` is the Thursday afternoon flight to Vienna",
+     "`state.trip.transfer` is arranged (not none)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 9,
+   "ms": 932,
+   "trail": [
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_hotel(Hotel Ring, Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 1485,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 29,
+   "ms": 1869,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "trip-vienna",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 23,
+   "ms": 888,
+   "trail": [
+    "book_hotel(Hotel Ring, Vienna)",
+    "add_passport()",
+    "book_flight(Thursday 16:45 to Vienna)",
+    "book_transfer()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 384,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 371,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "signed",
+    "printed in colour"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 395,
+   "trail": [
+    "sign_document()",
+    "connect_printer()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "printed in colour"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 8,
+   "ms": 509,
+   "trail": [
+    "sign_document()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.desk.output` says the contract was printed in colour (a PDF file is not a printout)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 7,
+   "ms": 650,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1446,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 33,
+   "ms": 1705,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-contract",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1438,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(colour)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 362,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 4,
+   "ms": 403,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "signed",
+    "printed in black and white"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 373,
+   "trail": [
+    "sign_document()",
+    "connect_printer()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "printed in black and white"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 8,
+   "ms": 529,
+   "trail": [
+    "sign_document()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.desk.output` says the lease was printed in black and white (a PDF file is not a printout)"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 7,
+   "ms": 689,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1342,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 32,
+   "ms": 2175,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "print-lease",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 23,
+   "ms": 1709,
+   "trail": [
+    "sign_document()",
+    "connect_printer()",
+    "print_document(black and white)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 198,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 204,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 396,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 9,
+   "ms": 509,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 7 is assigned to the technical team"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "assigned to technical"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 550,
+   "trail": [
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 7 is assigned to the technical team"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 14,
+   "ms": 897,
+   "trail": [
+    "assign(#7 Invoice shows the wrong VAT, technical)",
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 24,
+   "ms": 1205,
+   "trail": [
+    "assign(#7 Invoice shows the wrong VAT, technical)",
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-7-technical",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 14,
+   "ms": 671,
+   "trail": [
+    "assign(#7 Invoice shows the wrong VAT, technical)",
+    "close_ticket(#7 Invoice shows the wrong VAT)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 200,
+   "trail": [
+    "close_ticket(#3 Login page times out)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 2,
+   "ms": 204,
+   "trail": [
+    "close_ticket(#3 Login page times out)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 4,
+   "ms": 394,
+   "trail": [
+    "close_ticket(#3 Login page times out)",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 9,
+   "ms": 784,
+   "trail": [
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 3 is assigned to the billing team"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "assigned to billing"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 608,
+   "trail": [
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "In `state.tickets`, ticket 3 is assigned to the billing team"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 15,
+   "ms": 861,
+   "trail": [
+    "assign(#3 Login page times out, billing)",
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 27,
+   "ms": 1295,
+   "trail": [
+    "assign(#3 Login page times out, billing)",
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "ticket-3-billing",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 2,
+   "requests": 15,
+   "ms": 948,
+   "trail": [
+    "assign(#3 Login page times out, billing)",
+    "close_ticket(#3 Login page times out)"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 480,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 553,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 10,
+   "ms": 957,
+   "trail": [
+    "deploy_staging()",
+    "notify_team()",
+    "deploy_staging()",
+    "deploy_staging()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 500,
+   "trail": [
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.release.production` is build 41"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "production runs the build",
+    "team told"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 477,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.release.production` is build 41",
+     "`state.release.team` says the team was told"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 17,
+   "ms": 960,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 20,
+   "ms": 1105,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-41",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 3,
+   "requests": 13,
+   "ms": 904,
+   "trail": [
+    "notify_team()",
+    "deploy_staging()",
+    "run_smoke_tests()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.release.production` is build 41"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 453,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 549,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 10,
+   "ms": 961,
+   "trail": [
+    "deploy_staging()",
+    "notify_team()",
+    "deploy_staging()",
+    "deploy_staging()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "production runs the build"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 1,
+   "requests": 6,
+   "ms": 511,
+   "trail": [
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.release.production` is build 12",
+     "`state.release.smoke_tests` is passed"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-1x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 9,
+   "ms": 874,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x2",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 17,
+   "ms": 888,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x3",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 19,
+   "ms": 992,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "deploy-12-milestones",
+   "kind": "prerequisite",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 4,
+   "requests": 17,
+   "ms": 921,
+   "trail": [
+    "deploy_staging()",
+    "run_smoke_tests()",
+    "deploy_production()",
+    "notify_team()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "greedy",
+   "complete": false,
+   "failed": [
+    "nothing else paid for"
+   ],
+   "regressions": 1,
+   "violations": 2,
+   "status": "ended",
+   "steps": 5,
+   "requests": 5,
+   "ms": 443,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 6,
+   "requests": 6,
+   "ms": 640,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "remove_from_basket(Blue mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "review",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 5,
+   "requests": 8,
+   "ms": 832,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "remove_from_basket(Blue mug)"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 331,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state without breaking a constraint"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 495,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 12,
+   "ms": 536,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x3",
+   "complete": false,
+   "failed": [
+    "red mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 22,
+   "ms": 1164,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state without breaking a constraint"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-order-red-mug",
+   "kind": "control",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 6,
+   "requests": 41,
+   "ms": 2214,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "remove_from_basket(Blue mug)",
+    "checkout()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 8,
+   "requests": 8,
+   "ms": 731,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 8,
+   "requests": 8,
+   "ms": 803,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 8,
+   "requests": 12,
+   "ms": 1265,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 293,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 510,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x2",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 9,
+   "ms": 448,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x3",
+   "complete": false,
+   "failed": [
+    "red mug ordered",
+    "blue mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 18,
+   "ms": 921,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the Red mug",
+     "`state.orders` has an order that includes the Blue mug"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-buy-two-mugs",
+   "kind": "control",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 48,
+   "ms": 2157,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "add_to_basket()",
+    "checkout()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "greedy",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 7,
+   "ms": 695,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "criteria",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 7,
+   "ms": 784,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "review",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 7,
+   "requests": 10,
+   "ms": 994,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()",
+    "end()"
+   ],
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x1",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 4,
+   "ms": 297,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 1 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-1x2",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 5,
+   "ms": 485,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x2",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 9,
+   "ms": 528,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 2 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x3",
+   "complete": false,
+   "failed": [
+    "cheaper mug ordered"
+   ],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 0,
+   "requests": 18,
+   "ms": 870,
+   "trail": [],
+   "stopped": {
+    "complete": false,
+    "unmet": [
+     "`state.orders` has an order that includes the cheaper of the Red mug and the Blue mug, going by the prices in `state.seen`"
+    ],
+    "blocker": "no sequence of up to 3 actions improves on the current state"
+   },
+   "run": 1
+  },
+  {
+   "scenario": "shop-cheaper-mug",
+   "kind": "control",
+   "arm": "la-3x2g",
+   "complete": true,
+   "failed": [],
+   "regressions": 0,
+   "violations": 0,
+   "status": "ended",
+   "steps": 6,
+   "requests": 39,
+   "ms": 1961,
+   "trail": [
+    "open_link(Mugs)",
+    "open_link(Blue mug)",
+    "open_link(Mugs)",
+    "open_link(Red mug)",
+    "add_to_basket()",
+    "checkout()"
+   ],
+   "stopped": {
+    "complete": true,
+    "unmet": []
+   },
+   "run": 1
+  }
+ ]
+}

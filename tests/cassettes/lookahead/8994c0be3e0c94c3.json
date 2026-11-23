@@ -1,0 +1,137 @@
+{
+  "hash": "8994c0be3e0c94c3",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Order the red mug.",
+        "state": {
+          "page": {
+            "title": "Mugs",
+            "text": "Our mugs.",
+            "links": {
+              "Home": "back to the front page",
+              "Blue mug": "a blue enamel mug",
+              "Red mug": "a red enamel mug"
+            }
+          },
+          "basket": [
+            "Red mug"
+          ],
+          "seen": {
+            "Red mug": "6 EUR"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Mugs"
+            },
+            "summary": "opened the page \"Mugs\""
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Red mug"
+            },
+            "summary": "opened the page \"Red mug\""
+          },
+          {
+            "tool": "add_to_basket",
+            "args": {},
+            "summary": "put \"Red mug\" into the basket"
+          },
+          {
+            "tool": "open_link",
+            "args": {
+              "link": "Mugs"
+            },
+            "summary": "opened the page \"Mugs\""
+          },
+          {
+            "tool": "remove_from_basket",
+            "args": {
+              "item": "Blue mug"
+            },
+            "summary": "took \"Blue mug\" out of the basket"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Order the red mug.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "open_link": "Follows one link of the open page and opens the page it leads to.",
+            "remove_from_basket": "Takes one item out of the basket.",
+            "checkout": "Pays for everything in the basket and places the order."
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "instructions": "Which link of the page in `state.page` leads towards what `instructions` ask for?",
+          "criteria": {
+            "Home": "back to the front page",
+            "Blue mug": "a blue enamel mug",
+            "Red mug": "a red enamel mug"
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "instructions": "Which item of `state.basket` should be taken out of the basket, going by `instructions`?",
+          "criteria": {
+            "Red mug": "the Red mug in the basket"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "checkout",
+          "confidence": 0.98,
+          "probabilities": {
+            "open_link": 0.01,
+            "remove_from_basket": 0,
+            "checkout": 0.99
+          }
+        },
+        "open_link.link": {
+          "type": "choice",
+          "choice": "Red mug",
+          "confidence": 1,
+          "probabilities": {
+            "Home": 0,
+            "Blue mug": 0,
+            "Red mug": 1
+          }
+        },
+        "remove_from_basket.item": {
+          "type": "choice",
+          "choice": "Red mug",
+          "confidence": 1,
+          "probabilities": {
+            "Red mug": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 841,
+        "output_tokens": 115
+      }
+    }
+  }
+}

@@ -96,7 +96,7 @@
         },
         "__wanted__.checkout": {
           "type": "noul",
-          "noul": 0.07
+          "noul": 0.08
         }
       },
       "usage": {

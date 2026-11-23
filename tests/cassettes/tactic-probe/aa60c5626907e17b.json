@@ -53,7 +53,7 @@
         "tactic": {
           "type": "choice",
           "choice": "read_value",
-          "confidence": 0.83,
+          "confidence": 0.81,
           "probabilities": {
             "open_menu": 0,
             "pick_menu_entry": 0,
@@ -61,10 +61,10 @@
             "filter": 0,
             "click_item": 0,
             "select_option": 0,
-            "read_value": 0.85,
+            "read_value": 0.83,
             "go_back": 0,
             "close_overlay": 0,
-            "end": 0.15
+            "end": 0.17
           }
         }
       },

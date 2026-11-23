@@ -1,0 +1,67 @@
+{
+  "hash": "6b898f7878578b82",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Deploy build 41 to production and tell the team.",
+        "state": {
+          "release": {
+            "staging": "build 41",
+            "smoke_tests": "not run",
+            "production": "nothing deployed",
+            "team": "told: staging build 41, production nothing deployed"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "deploy_staging",
+            "args": {},
+            "summary": "deployed build 41 to staging"
+          },
+          {
+            "tool": "notify_team",
+            "args": {},
+            "summary": "posted the release status"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Deploy build 41 to production and tell the team.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "run_smoke_tests": "Runs the smoke tests against staging."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "run_smoke_tests",
+          "confidence": 1,
+          "probabilities": {
+            "run_smoke_tests": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 483,
+        "output_tokens": 34
+      }
+    }
+  }
+}

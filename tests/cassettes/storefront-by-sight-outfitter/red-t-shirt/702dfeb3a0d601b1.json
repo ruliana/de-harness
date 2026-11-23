@@ -70,7 +70,7 @@
         },
         "optionChosen": {
           "type": "noul",
-          "noul": 0.99
+          "noul": 0.98
         },
         "valueVisible": {
           "type": "noul",

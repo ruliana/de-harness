@@ -1,0 +1,119 @@
+{
+  "hash": "0bd880a98ec8c6d7",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Move the design review to Wednesday at 10:00. The Wednesday standup stays at 09:00 and the 1:1 with Sam stays on Tuesday.",
+        "state": {
+          "calendar": {
+            "Monday": [],
+            "Tuesday": [],
+            "Wednesday": [
+              {
+                "event": "Standup",
+                "time": "09:00"
+              },
+              {
+                "event": "Design review",
+                "time": "10:00"
+              },
+              {
+                "event": "1:1 with Sam",
+                "time": "14:00"
+              }
+            ],
+            "Thursday": []
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "shift_day",
+            "args": {
+              "day": "Tuesday"
+            },
+            "summary": "shifted Tuesday to Wednesday"
+          },
+          {
+            "tool": "shift_day",
+            "args": {
+              "day": "Tuesday"
+            },
+            "summary": "shifted Tuesday to Wednesday"
+          },
+          {
+            "tool": "shift_day",
+            "args": {
+              "day": "Tuesday"
+            },
+            "summary": "shifted Tuesday to Wednesday"
+          },
+          {
+            "tool": "shift_day",
+            "args": {
+              "day": "Tuesday"
+            },
+            "summary": "shifted Tuesday to Wednesday"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Move the design review to Wednesday at 10:00. The Wednesday standup stays at 09:00 and the 1:1 with Sam stays on Tuesday.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "shift_day": "Moves everything on one day to the next working day, keeping the times.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "shift_day.day": {
+          "type": "choice",
+          "instructions": "Which day of `state.calendar` should be shifted to the next one, going by `instructions`?",
+          "criteria": {
+            "Monday": "",
+            "Tuesday": "",
+            "Wednesday": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "shift_day",
+          "confidence": 0.64,
+          "probabilities": {
+            "shift_day": 0.82,
+            "end": 0.18
+          }
+        },
+        "shift_day.day": {
+          "type": "choice",
+          "choice": "Tuesday",
+          "confidence": 0.58,
+          "probabilities": {
+            "Monday": 0.02,
+            "Tuesday": 0.72,
+            "Wednesday": 0.26
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 760,
+        "output_tokens": 74
+      }
+    }
+  }
+}

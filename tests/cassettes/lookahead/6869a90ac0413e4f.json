@@ -1,0 +1,77 @@
+{
+  "hash": "6869a90ac0413e4f",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "no",
+            "flight": "none",
+            "hotel": "Hotel Ring, Vienna",
+            "transfer": "none"
+          },
+          "error": "Not done: add_passport(). `instructions` do not ask for it."
+        },
+        "previous_actions": [
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "not done, not asked for: add_passport()"
+          },
+          {
+            "tool": "book_hotel",
+            "args": {
+              "hotel": "Hotel Ring, Vienna"
+            },
+            "summary": "booked Hotel Ring, Vienna"
+          },
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "not done, not asked for: add_passport()"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_passport": "Adds the traveller's passport details to the booking profile.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "end",
+          "confidence": 0.68,
+          "probabilities": {
+            "add_passport": 0.16,
+            "end": 0.84
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 590,
+        "output_tokens": 37
+      }
+    }
+  }
+}

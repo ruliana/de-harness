@@ -57,14 +57,14 @@
           "probabilities": {
             "open_menu": 0,
             "pick_menu_entry": 0,
-            "scroll": 0.07,
+            "scroll": 0.04,
             "filter": 0.01,
             "click_item": 0.84,
-            "select_option": 0.03,
-            "read_value": 0.04,
+            "select_option": 0.02,
+            "read_value": 0.07,
             "go_back": 0,
             "close_overlay": 0,
-            "end": 0.01
+            "end": 0.02
           }
         }
       },

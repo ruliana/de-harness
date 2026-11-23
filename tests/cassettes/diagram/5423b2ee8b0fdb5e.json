@@ -1,0 +1,237 @@
+{
+  "hash": "5423b2ee8b0fdb5e",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Add a 'Build image' step between 'Run tests' and 'Deploy'",
+        "state": {
+          "diagram": "flowchart TD\n  n1[\"Push code\"]\n  n2[\"Run tests\"]\n  n3[\"Deploy\"]\n  n4[\"Build image\"]\n  n1 --> n2\n  n2 --> n3",
+          "done": false,
+          "open_questions": []
+        },
+        "previous_actions": [
+          {
+            "tool": "add_node",
+            "args": {
+              "label": "Build image"
+            },
+            "summary": "Added \"Build image\""
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Add a 'Build image' step between 'Run tests' and 'Deploy'\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_node": "Adds one node to the diagram in `state.diagram`: a step of a flowchart, or a participant of a sequence diagram, which `instructions` ask for and which the diagram does not have yet.",
+            "connect": "Draws one new arrow in the flowchart in `state.diagram`, from one step to another, with a label if `instructions` give it one.",
+            "disconnect": "Takes one arrow or message out of the diagram in `state.diagram`; the nodes stay."
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "instructions": "Which step or participant that `instructions` ask for is still missing from the diagram in `state.diagram`? If more than one is missing, the one that comes first in the flow, or the one furthest to the left.",
+          "criteria": {
+            "Enter credentials": "",
+            "Check password": "",
+            "Show dashboard": "",
+            "Show error message": "",
+            "Send verification code": "",
+            "Verify code": "",
+            "Reset password": "",
+            "Lock account": "",
+            "Fill in sign-up form": "",
+            "Validate email": "",
+            "Create account": "",
+            "Send welcome email": "",
+            "Add to cart": "",
+            "Enter payment details": "",
+            "Charge card": "",
+            "Confirm order": "",
+            "Payment failed": "",
+            "Retry payment": "",
+            "Cancel order": "",
+            "Roll back": "",
+            "Notify team": "",
+            "Open ticket": "",
+            "Triage": "",
+            "Assign agent": "",
+            "Escalate": "",
+            "Resolve ticket": "",
+            "Close ticket": "",
+            "Review": "",
+            "Approve": "",
+            "Reject": ""
+          }
+        },
+        "connect.arrow": {
+          "type": "choice",
+          "instructions": "Which arrow that `instructions` ask for is still missing from the flowchart in `state.diagram`? If more than one is missing, the one that comes first in the flow. An arrow is written `from -> to`.",
+          "criteria": {
+            "Push code -> Deploy": "",
+            "Push code -> Build image": "",
+            "Run tests -> Push code": "",
+            "Run tests -> Build image": "",
+            "Deploy -> Push code": "",
+            "Deploy -> Run tests": "",
+            "Deploy -> Build image": "",
+            "Build image -> Push code": "",
+            "Build image -> Run tests": "",
+            "Build image -> Deploy": ""
+          }
+        },
+        "connect.label": {
+          "type": "choice",
+          "instructions": "Which label do `instructions` give that arrow?",
+          "criteria": {
+            "Build image": "",
+            "Run tests": "",
+            "Deploy": "",
+            "Yes": "",
+            "No": "",
+            "Valid": "",
+            "Invalid": "",
+            "Success": "",
+            "Failure": "",
+            "Pass": "",
+            "Fail": "",
+            "Retry": "",
+            "Approved": "",
+            "Rejected": ""
+          }
+        },
+        "connect.label?stated": {
+          "type": "noul",
+          "instructions": "Do `instructions` give a label to that arrow, such as Yes, No, Valid, Invalid or a text in quotes?"
+        },
+        "disconnect.edge": {
+          "type": "choice",
+          "instructions": "Which arrow or message of the diagram in `state.diagram` do `instructions` say to take out, or to replace with another? A flowchart's arrow is written `from --label--> to`, a sequence diagram's message `number. from -> to: text`.",
+          "criteria": {
+            "Push code --> Run tests": "",
+            "Run tests --> Deploy": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "connect",
+          "confidence": 0.58,
+          "probabilities": {
+            "add_node": 0,
+            "connect": 0.72,
+            "disconnect": 0.28
+          }
+        },
+        "add_node.label": {
+          "type": "choice",
+          "choice": "Review",
+          "confidence": 0.24,
+          "probabilities": {
+            "Enter credentials": 0.01,
+            "Check password": 0.01,
+            "Show dashboard": 0.02,
+            "Show error message": 0.02,
+            "Send verification code": 0.01,
+            "Verify code": 0.03,
+            "Reset password": 0,
+            "Lock account": 0.01,
+            "Fill in sign-up form": 0.02,
+            "Validate email": 0.01,
+            "Create account": 0.05,
+            "Send welcome email": 0.01,
+            "Add to cart": 0.05,
+            "Enter payment details": 0.02,
+            "Charge card": 0.02,
+            "Confirm order": 0.03,
+            "Payment failed": 0.01,
+            "Retry payment": 0.01,
+            "Cancel order": 0.01,
+            "Roll back": 0.05,
+            "Notify team": 0.06,
+            "Open ticket": 0.01,
+            "Triage": 0.08,
+            "Assign agent": 0.01,
+            "Escalate": 0.03,
+            "Resolve ticket": 0.04,
+            "Close ticket": 0.03,
+            "Review": 0.27,
+            "Approve": 0.06,
+            "Reject": 0.01
+          }
+        },
+        "connect.arrow": {
+          "type": "choice",
+          "choice": "Run tests -> Build image",
+          "confidence": 0.99,
+          "probabilities": {
+            "Push code -> Deploy": 0,
+            "Push code -> Build image": 0,
+            "Run tests -> Push code": 0,
+            "Run tests -> Build image": 0.99,
+            "Deploy -> Push code": 0,
+            "Deploy -> Run tests": 0,
+            "Deploy -> Build image": 0,
+            "Build image -> Push code": 0,
+            "Build image -> Run tests": 0,
+            "Build image -> Deploy": 0.01
+          }
+        },
+        "connect.label": {
+          "type": "choice",
+          "choice": "Build image",
+          "confidence": 0.46,
+          "probabilities": {
+            "Build image": 0.5,
+            "Run tests": 0.06,
+            "Deploy": 0.01,
+            "Yes": 0.01,
+            "No": 0.37,
+            "Valid": 0.02,
+            "Invalid": 0.01,
+            "Success": 0.01,
+            "Failure": 0,
+            "Pass": 0.01,
+            "Fail": 0,
+            "Retry": 0,
+            "Approved": 0,
+            "Rejected": 0
+          }
+        },
+        "connect.label?stated": {
+          "type": "noul",
+          "noul": 0.05
+        },
+        "disconnect.edge": {
+          "type": "choice",
+          "choice": "Run tests --> Deploy",
+          "confidence": 1,
+          "probabilities": {
+            "Push code --> Run tests": 0,
+            "Run tests --> Deploy": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1238,
+        "output_tokens": 605
+      }
+    }
+  }
+}

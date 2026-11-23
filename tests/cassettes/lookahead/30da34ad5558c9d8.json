@@ -20,12 +20,12 @@
             },
             "price": "6 EUR"
           },
-          "basket": [
-            "Red mug"
-          ],
           "seen": {
             "Red mug": "6 EUR"
-          }
+          },
+          "basket": [
+            "Red mug"
+          ]
         }
       },
       "questions": {
@@ -56,11 +56,11 @@
       "answers": {
         "req.0": {
           "type": "noul",
-          "noul": 0.09
+          "noul": 0.08
         },
         "con.0": {
           "type": "noul",
-          "noul": 0.8
+          "noul": 0.86
         }
       },
       "usage": {

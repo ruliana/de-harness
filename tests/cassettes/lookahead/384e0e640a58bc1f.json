@@ -69,7 +69,7 @@
         },
         "req.1": {
           "type": "noul",
-          "noul": 1
+          "noul": 0.99
         },
         "req.2": {
           "type": "noul",

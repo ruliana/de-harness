@@ -1,0 +1,70 @@
+{
+  "hash": "0b8f0fe6935afdd6",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Draw a sequence diagram of a login. The user enters credentials in the browser, the browser sends a login request to the server, the server looks the user up in the database, the database returns the user record, and the server checks the password. If the password is right, the server sends a session token and the browser shows the dashboard. If it is wrong, the server sends invalid credentials and the browser shows an error message.",
+        "state": {
+          "diagram": "",
+          "done": false,
+          "open_questions": []
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Draw a sequence diagram of a login. The user enters credentials in the browser, the browser sends a login request to the server, the server looks the user up in the database, the database returns the user record, and the server checks the password. If the password is right, the server sends a session token and the browser shows the dashboard. If it is wrong, the server sends invalid credentials and the browser shows an error message.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "start_diagram": "Starts the diagram that `instructions` ask for, which nothing has been drawn of yet, as a flowchart or as a sequence diagram."
+          }
+        },
+        "start_diagram.kind": {
+          "type": "choice",
+          "instructions": "Which kind of diagram do `instructions` ask for?",
+          "criteria": {
+            "sequence diagram": "participants, and the messages that they send each other, in the order in which they are sent",
+            "flowchart": "steps, joined by arrows"
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "start_diagram",
+          "confidence": 1,
+          "probabilities": {
+            "start_diagram": 1
+          }
+        },
+        "start_diagram.kind": {
+          "type": "choice",
+          "choice": "sequence diagram",
+          "confidence": 1,
+          "probabilities": {
+            "sequence diagram": 1,
+            "flowchart": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 631,
+        "output_tokens": 66
+      }
+    }
+  }
+}

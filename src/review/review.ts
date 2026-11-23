@@ -40,6 +40,13 @@ export const DEFAULT_MAX_REFUSALS = 2;
 
 /** The default wording of the question every step asks. */
 export const TOOL_QUESTION_TEXT = "Which action best advances `instructions`, given `state` and `previous_actions`?";
+/**
+ * The default wording with the task quoted in it (`AgentConfig.quoteTask`, on by default). Jev reads each fact it needs but
+ * combines them into the next action poorly when the task is only a field of the state document; quoted in the question it
+ * is far more likely to choose the action the task calls for (the instruction-following investigation, 0.13 to 0.39 on the
+ * decisions that went wrong). Only this question quotes it: the others already name `instructions` where they need it.
+ */
+export const quotedToolQuestion = (instructions: string) => `The task is: "${instructions}". Which action best advances this task, given \`state\` and \`previous_actions\`?`;
 /** The reworded one: carry out what is asked, nothing more, and stop when it is done or cannot be done. */
 export const STRICT_TOOL_QUESTION_TEXT = "Which single action should come next to carry out exactly what `instructions` ask, no more and no less, given `state` and `previous_actions`? Choose `end` only when everything that `instructions` ask for has been done, or cannot be done with the other actions.";
 export const STRICT_END_DESCRIPTION = "Stops, because everything that `instructions` ask for has been done according to `state`, or because none of the other actions can do what is left.";

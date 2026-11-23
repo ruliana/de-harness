@@ -56,7 +56,7 @@
         },
         "disconnect": {
           "type": "noul",
-          "noul": 0.51
+          "noul": 0.55
         },
         "relabel_edge": {
           "type": "noul",

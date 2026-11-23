@@ -77,7 +77,7 @@
         },
         "req.1": {
           "type": "noul",
-          "noul": 0.99
+          "noul": 1
         },
         "con.0": {
           "type": "noul",

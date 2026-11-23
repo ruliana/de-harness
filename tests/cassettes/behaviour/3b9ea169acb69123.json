@@ -84,11 +84,11 @@
       "answers": {
         "__review__": {
           "type": "noul",
-          "noul": 0.63
+          "noul": 0.55
         },
         "__wanted__.checkout": {
           "type": "noul",
-          "noul": 0.83
+          "noul": 0.82
         }
       },
       "usage": {

@@ -53,18 +53,18 @@
         "tactic": {
           "type": "choice",
           "choice": "select_option",
-          "confidence": 0.92,
+          "confidence": 0.94,
           "probabilities": {
             "open_menu": 0,
             "pick_menu_entry": 0,
             "scroll": 0,
             "filter": 0,
             "click_item": 0,
-            "select_option": 0.93,
-            "read_value": 0.04,
+            "select_option": 0.95,
+            "read_value": 0.03,
             "go_back": 0,
             "close_overlay": 0,
-            "end": 0.03
+            "end": 0.02
           }
         }
       },

@@ -1,0 +1,77 @@
+{
+  "hash": "dc48fa8832ad4be6",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "no",
+            "flight": "none",
+            "hotel": "none",
+            "transfer": "none"
+          }
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "add_passport": "Adds the traveller's passport details to the booking profile.",
+            "book_hotel": "Books a hotel.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        },
+        "book_hotel.hotel": {
+          "type": "choice",
+          "instructions": "Which hotel do `instructions` ask for?",
+          "criteria": {
+            "Hotel Ring, Vienna": "",
+            "Hotel Altstadt, Salzburg": ""
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "add_passport",
+          "confidence": 0.34,
+          "probabilities": {
+            "add_passport": 0.56,
+            "book_hotel": 0.41,
+            "end": 0.03
+          }
+        },
+        "book_hotel.hotel": {
+          "type": "choice",
+          "choice": "Hotel Ring, Vienna",
+          "confidence": 1,
+          "probabilities": {
+            "Hotel Ring, Vienna": 1,
+            "Hotel Altstadt, Salzburg": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 506,
+        "output_tokens": 91
+      }
+    }
+  }
+}

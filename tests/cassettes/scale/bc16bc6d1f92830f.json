@@ -1,0 +1,115 @@
+{
+  "hash": "bc16bc6d1f92830f",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Dr. Okafor has just arrived at the front desk for her ten o'clock meeting. Sign her in, then stop.",
+        "state": {
+          "expected_visitors": [
+            "Dr. Okafor",
+            "Mr. Lindqvist",
+            "Ms. Tanaka"
+          ]
+        },
+        "previous_actions": []
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Dr. Okafor has just arrived at the front desk for her ten o'clock meeting. Sign her in, then stop.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "book_meeting_room": "Reserves a meeting room for a team meeting.",
+            "order_catering": "Orders food and drinks from a caterer for an event in the office.",
+            "print_document": "Sends a document to one of the office printers.",
+            "reset_password": "Resets the password of an employee account and emails a temporary one.",
+            "request_laptop": "Requests a new laptop for an employee from IT procurement.",
+            "report_broken_light": "Reports a broken light bulb or lamp to facilities.",
+            "set_thermostat": "Changes the target temperature of a heating zone.",
+            "register_visitor": "Signs a visitor in at the front desk: prints a visitor badge and tells their host that they have arrived.",
+            "reserve_parking_spot": "Reserves a parking spot in the company car park for a day.",
+            "submit_expense": "Files an expense report for money an employee spent.",
+            "request_leave": "Requests time off for an employee.",
+            "order_office_supplies": "Orders stationery and small supplies for the office.",
+            "schedule_cleaning": "Schedules an extra cleaning of part of the office.",
+            "open_it_ticket": "Opens a ticket with the IT helpdesk about a problem with a computer or a service.",
+            "book_travel": "Books a business trip for an employee.",
+            "update_directory_entry": "Changes one detail of an employee in the company directory.",
+            "send_company_announcement": "Sends an announcement by email to a group of employees.",
+            "grant_building_access": "Gives a badge access to a restricted zone of the building.",
+            "order_taxi": "Orders a taxi to pick someone up at the office.",
+            "book_desk": "Books a desk in the shared open space for a day.",
+            "recycle_electronics": "Arranges the pickup of old electronics for recycling.",
+            "subscribe_newsletter": "Subscribes an employee to an internal mailing list.",
+            "request_badge": "Requests a new or replacement access badge for an employee.",
+            "file_complaint": "Files a complaint with the facilities team about the workplace.",
+            "rent_bike": "Reserves a company bike for a trip around town.",
+            "refill_coffee_machine": "Asks for the coffee machine to be refilled with beans and water.",
+            "start_fire_drill": "Starts the scheduled fire evacuation drill for a building.",
+            "archive_documents": "Sends old paper documents to long-term storage.",
+            "renew_software_license": "Renews a paid software licence before it expires.",
+            "schedule_interview": "Schedules a job interview with a candidate.",
+            "end": "Stops, because `instructions` have been carried out according to `state`, or cannot be carried out."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "register_visitor",
+          "confidence": 1,
+          "probabilities": {
+            "book_meeting_room": 0,
+            "order_catering": 0,
+            "print_document": 0,
+            "reset_password": 0,
+            "request_laptop": 0,
+            "report_broken_light": 0,
+            "set_thermostat": 0,
+            "register_visitor": 1,
+            "reserve_parking_spot": 0,
+            "submit_expense": 0,
+            "request_leave": 0,
+            "order_office_supplies": 0,
+            "schedule_cleaning": 0,
+            "open_it_ticket": 0,
+            "book_travel": 0,
+            "update_directory_entry": 0,
+            "send_company_announcement": 0,
+            "grant_building_access": 0,
+            "order_taxi": 0,
+            "book_desk": 0,
+            "recycle_electronics": 0,
+            "subscribe_newsletter": 0,
+            "request_badge": 0,
+            "file_complaint": 0,
+            "rent_bike": 0,
+            "refill_coffee_machine": 0,
+            "start_fire_drill": 0,
+            "archive_documents": 0,
+            "renew_software_license": 0,
+            "schedule_interview": 0,
+            "end": 0
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 1203,
+        "output_tokens": 325
+      }
+    }
+  }
+}

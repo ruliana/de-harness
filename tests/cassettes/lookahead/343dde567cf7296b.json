@@ -1,0 +1,76 @@
+{
+  "hash": "343dde567cf7296b",
+  "request": {
+    "method": "POST",
+    "url": "https://api.typesafe.ai/v1/systemone",
+    "headers": {
+      "authorization": "Bearer dummy",
+      "content-type": "application/json"
+    },
+    "body": {
+      "model": "jev-1.14.0",
+      "state": {
+        "instructions": "Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.",
+        "state": {
+          "trip": {
+            "passport_on_file": "yes",
+            "flight": "Thursday 09:30 to Salzburg",
+            "hotel": "Hotel Ring, Vienna",
+            "transfer": "none"
+          }
+        },
+        "previous_actions": [
+          {
+            "tool": "book_hotel",
+            "args": {
+              "hotel": "Hotel Ring, Vienna"
+            },
+            "summary": "booked Hotel Ring, Vienna"
+          },
+          {
+            "tool": "add_passport",
+            "args": {},
+            "summary": "added the passport details"
+          },
+          {
+            "tool": "book_flight",
+            "args": {
+              "flight": "Thursday 09:30 to Salzburg"
+            },
+            "summary": "booked the flight Thursday 09:30 to Salzburg"
+          }
+        ]
+      },
+      "questions": {
+        "__tool__": {
+          "type": "choice",
+          "instructions": "The task is: \"Book the Thursday afternoon flight to Vienna, a hotel in Vienna and an airport transfer.\". Which action best advances this task, given `state` and `previous_actions`?",
+          "criteria": {
+            "book_transfer": "Arranges an airport transfer for the booked flight."
+          }
+        }
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "contentType": "application/json",
+    "body": {
+      "model": "jev-1.14.0",
+      "answers": {
+        "__tool__": {
+          "type": "choice",
+          "choice": "book_transfer",
+          "confidence": 1,
+          "probabilities": {
+            "book_transfer": 1
+          }
+        }
+      },
+      "usage": {
+        "input_tokens": 550,
+        "output_tokens": 30
+      }
+    }
+  }
+}

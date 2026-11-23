@@ -47,10 +47,10 @@
         "tone": {
           "type": "choice",
           "choice": "calm",
-          "confidence": 0.91,
+          "confidence": 0.89,
           "probabilities": {
-            "angry": 0.06,
-            "calm": 0.94,
+            "angry": 0.07,
+            "calm": 0.93,
             "excited": 0
           }
         },
